@@ -1,0 +1,12 @@
+{
+  "name": "TopMonks-webs",
+  "version": "1.0.0",
+  "description": "TopMonks Webs",
+  "main": "indes.html",
+  "repository": "https://github.com/topmonks/topmonks-webs.git",
+  "author": "TopMonks",
+  "license": "MIT",
+  "dependencies": {
+    "blendid": "^4.4.3"
+  }
+}
