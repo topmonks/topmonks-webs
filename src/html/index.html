@@ -6,8 +6,20 @@
 
 {% extends 'layouts/application.html' %}
 
+{% block navigation %}
+  !! HLAVNI Navigace !!
+
+  {% include 'components/navigation/index.html' %}
+{% endblock %}
+
 {% block content %}
   <h1 data-module="example">{{ message }}</h1>
 
   {% include 'components/example-component/index.html' %}
+{% endblock %}
+
+
+{% block footer %}
+  !! PATICKA !!
+  {% include 'components/footer/index.html' %}
 {% endblock %}
