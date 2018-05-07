@@ -1,4 +1,6 @@
-var globImporter = require('node-sass-glob-importer');
+var globImporter   = require('node-sass-glob-importer')
+var markdown       = require('nunjucks-markdown')
+var marked         = require('marked')
 
 module.exports = {
   html        : true,
@@ -20,6 +22,15 @@ module.exports = {
   stylesheets: {
     sass: {
       importer: globImporter()
+    }
+  },
+
+  html: {
+    nunjucksRender: {
+      manageEnv: function(environment) {
+          // The second argument can be any function that renders markdown
+            markdown.register(environment, marked);
+        }
     }
   },
 
