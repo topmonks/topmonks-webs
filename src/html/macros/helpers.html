@@ -8,3 +8,17 @@
 {% macro css(stylesheet) -%}
 	<link rel="stylesheet" href="{{ 'stylesheets/components/' ~ stylesheet ~ '/index.css' }}">
 {%- endmacro %}
+
+{% macro navigation(activePage) %}
+<link rel="stylesheet" href="{{ 'stylesheets/components/navigation/index.css' }}">
+  <h3>Navigation</h3>
+  <nav>
+    <ul>
+      <li><a href="/" class="{% if activePage == 'home' %}active{% endif %}">home</a></li>
+      <li><a href="startup.html" class="{% if activePage == 'startup' %}active{% endif %}">startup Studio</a></li>
+      <li><a href="about.html" class="{% if activePage == 'about' %}active{% endif %}">about us</a></li>
+      <li><a href="references.html" class="{% if activePage == 'references' %}active{% endif %}">meet us</a></li>
+      <li><a href="contacts.html" class="{% if activePage == 'contacts' %}active{% endif %}">contacts</a></li>
+    </ul>
+  </nav>
+{% endmacro %}
