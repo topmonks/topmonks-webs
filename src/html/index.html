@@ -12,7 +12,8 @@
 {% endblock %}
 
 {% block content %}
-  <h1 data-module="example">{{ message }}</h1>
+
+  {{ macros.pageHeader('Developers for your startup','We are your software development partners, experienced with both startup and corporate environment.') }}
 
   {% include 'components/example-component/index.html' %}
 {% endblock %}

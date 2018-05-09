@@ -5,9 +5,8 @@
 {% endblock %}
 
 {% block content %}
-  <h1 data-module="example">{{ startup }}</h1>
+  {{ macros.pageHeader('We are a startup studio!','Do you have an idea for the next big thing?','<a data-scroll="" class="btn" href="#how-it-works">Come and Pitch Us</a>') }}
 
-  {% include 'components/example-component/index.html' %}
 {% endblock %}
 
 

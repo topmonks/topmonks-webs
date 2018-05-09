@@ -24,14 +24,34 @@
       {% if isFooterNav == true %}
       <li><a href="teamasservice.html">Teams As Service</a></li>
       <li><a href="https://prodeti.topmonks.cz/">Programming for Kids</a></li>
+      <li><a href="references.html" class="{% if activePage == 'references' %}active{% endif %}">References</a></li>
       {% endif %}
 
       {% if isFooterNav != true %}
       <li><a href="about.html" class="{% if activePage == 'about' %}active{% endif %}">About Us</a></li>
+      <li><a href="meetus.html" class="{% if activePage == 'meetus' %}active{% endif %}">Meet Us</a></li>
       {% endif %}
 
-      <li><a href="references.html" class="{% if activePage == 'references' %}active{% endif %}">Meet Us</a></li>
       <li><a href="contacts.html" class="{% if activePage == 'contacts' %}active{% endif %}">Contacts</a></li>
     </ul>
   </nav>
+{% endmacro %}
+
+{% macro pageHeader(title, intro, scrollButton) %}
+  <header>
+    <section class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h1>{{ title | upper  }}</h1>
+          {% if intro != '' %}
+          <p>{{ intro }}</p>
+          {% endif %}
+
+          {% if scrollButton != '' %}
+          {{ scrollButton | safe  }}
+          {% endif %}
+        </div>
+      </div>
+    </section>
+  </header>
 {% endmacro %}
