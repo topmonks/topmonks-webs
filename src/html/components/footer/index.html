@@ -1,3 +1,4 @@
+{%- import 'macros/helpers.html' as macros -%}
 <footer id="footer">
   <div class="nav-and-contacts">
     <div class="wrapper mdc-layout-grid">
@@ -10,16 +11,9 @@
           </p>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
-          <h3>Navigation</h3>
-          <nav>
-            <ul>
-              <li><a href="/">home</a></li>
-              <li><a href="https://studio.topmonks.com/">Startup Studio</a></li>
-              <li><a href="https://teams.topmonks.com/">Teams as Service</a></li>
-              <li><a href="/references/">references</a></li>
-              <li><a href="/contact/">contacts</a></li>
-            </ul>
-          </nav>
+
+          {{ macros.navigation('', true) }}
+
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
           <h3>Contact</h3>
