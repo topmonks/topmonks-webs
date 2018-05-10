@@ -1,0 +1,57 @@
+:root {
+  --mdc-theme-primary: #24292e;
+  --mdc-theme-accent: #91a8d2;
+  --mdc-theme-text-primary-on-primary: white;
+  --insight-negative-color: #e13c1e;
+  --insight-positive-color: #7e9204;
+  --nav-active: #FFAA00;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-display: optional;
+  font-family: Dosis, sans-serif;
+  font-kerning: normal;
+  font-variant-numeric: lining-nums slashed-zero;
+  font-variant-ligatures: common-ligatures contextual;
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+.mdc-tab,
+.mdc-typography,
+.mdc-typography--display1,
+.mdc-typography--display2,
+.mdc-typography--display3,
+.mdc-typography--display4,
+.mdc-typography--headline,
+.mdc-typography--title,
+.mdc-typography--subheading1,
+.mdc-typography--subheading2,
+.mdc-typography--body1,
+.mdc-typography--body2,
+.mdc-toolbar__title,
+.mdc-card__title,
+.mdc-card__title--large,
+.mdc-card__subtitle,
+.mdc-card__supporting-text,
+.mdc-list,
+.mdc-list-item,
+.mdc-list-item__text__secondary {
+  font-family: inherit !important;
+}
+
+nav {
+  .active {
+    color: var(--nav-active);
+    font-weight: bold;
+  }
+}
