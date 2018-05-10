@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'layouts/application.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@0.24.0/dist/material-components-web.min.css" media="screen">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:300,400,700&amp;subset=latin-ext" media="screen">
-    <link rel="stylesheet" href="../common/style.css">
-</head>
+{% block navigation %}
+{{ macros.navigation('4days') }}
+{% endblock %}
 
-<body>
+{% block content %}
+{{ macros.pageHeader('4 days') }}
+
+
     <section id="service" class="section how-it-works">
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
@@ -177,6 +173,5 @@
             </div>
         </div>
     </section>
-</body>
 
-</html>
+    {% endblock %}

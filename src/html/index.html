@@ -6,7 +6,6 @@
 
 {% extends 'layouts/application.html' %}
 
-
 {% block navigation %}
   {{ macros.navigation('home') }}
 {% endblock %}
@@ -16,9 +15,4 @@
   {{ macros.pageHeader('Developers for your startup','We are your software development partners, experienced with both startup and corporate environment.') }}
 
   {% include 'components/example-component/index.html' %}
-{% endblock %}
-
-
-{% block footer %}
-  {% include 'components/footer/index.html' %}
 {% endblock %}

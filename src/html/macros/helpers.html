@@ -1,56 +1,58 @@
 {% macro sprite(id, viewBox, classes) %}
-  {% set viewBox = viewBox or "0 0 1 1"%}
-  <span class='sprite -{{id}} {{classes}}'>
+{% set viewBox = viewBox or "0 0 1 1"%}
+<span class='sprite -{{id}} {{classes}}'>
     <svg viewBox="{{viewBox}}"><use xlink:href='images/icons.svg#{{id}}'></use></svg>
   </span>
 {% endmacro %}
 
 {% macro css(stylesheet) -%}
-	<link rel="stylesheet" href="{{ 'stylesheets/components/' ~ stylesheet ~ '/index.css' }}">
+<link rel="stylesheet" href="{{ 'stylesheets/components/' ~ stylesheet ~ '/index.css' }}">
 {%- endmacro %}
 
 {% macro navigation(activePage, isFooterNav) %}
-  {% if isFooterNav == true %}
-  <h3>Footer Navigation</h3>
-  {% else %}
-  <h3>Navigation</h3>
-  {% endif %}
-  <nav>
-    <ul>
-      <li><a href="/" class="{% if activePage == 'home' %}active{% endif %}">Home</a></li>
-      <li><a href="startup.html" class="{% if activePage == 'startup' %}active{% endif %}">Startup Studio</a></li>
+{% if isFooterNav != true %}
+<h3>TOPMONKS</h3>
+{% endif %}
+<nav>
+  <ul>
+    <li><a href="/" class="{% if activePage == 'home' %}active{% endif %}">Home</a></li>
+    <li><a href="/studio/" class="{% if activePage == 'studio' %}active{% endif %}">Startup Studio</a></li>
 
-      {% if isFooterNav == true %}
-      <li><a href="teamasservice.html">Teams As Service</a></li>
-      <li><a href="https://prodeti.topmonks.cz/">Programming for Kids</a></li>
-      <li><a href="references.html" class="{% if activePage == 'references' %}active{% endif %}">References</a></li>
-      {% endif %}
+    {% if isFooterNav == true %}
+    <li><a href="/teams/">Teams As Service</a></li>
+    <li><a href="https://prodeti.topmonks.cz/">Programming for Kids</a></li>
+    <li><a href="/references/" class="{% if activePage == 'references' %}active{% endif %}">References</a></li>
+    {% endif %}
 
-      {% if isFooterNav != true %}
-      <li><a href="about.html" class="{% if activePage == 'about' %}active{% endif %}">About Us</a></li>
-      <li><a href="meetus.html" class="{% if activePage == 'meetus' %}active{% endif %}">Meet Us</a></li>
-      {% endif %}
+    {% if isFooterNav != true %}
+    <li><a href="/about-us/" class="{% if activePage == 'about-us' %}active{% endif %}">About Us</a></li>
+    <li><a href="/community/" class="{% if activePage == 'community' %}active{% endif %}">Meet Us</a></li>
+    {% endif %}
 
-      <li><a href="contacts.html" class="{% if activePage == 'contacts' %}active{% endif %}">Contacts</a></li>
-    </ul>
-  </nav>
+    <li><a href="/contacts/" class="{% if activePage == 'contacts' %}active{% endif %}">Contacts</a></li>
+    <li><a href="/4days/" class="{% if activePage == '4days' %}active{% endif %}">4 days</a></li>
+    <li><a href="/caffe/" class="{% if activePage == 'caffe' %}active{% endif %}">caffe</a></li>
+    <li><a href="/topmonks-cz/" class="{% if activePage == 'cz' %}active{% endif %}">topmonks.cz</a></li>
+  </ul>
+</nav>
 {% endmacro %}
 
 {% macro pageHeader(title, intro, scrollButton) %}
-  <header>
-    <section class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h1>{{ title | upper  }}</h1>
-          {% if intro != '' %}
-          <p>{{ intro }}</p>
-          {% endif %}
+<header>
+  <section class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h1>{{ title | upper  }}</h1>
+        {% if intro != '' %}
+        <p>{{ intro }}</p>
+        {% endif %}
 
-          {% if scrollButton != '' %}
-          {{ scrollButton | safe  }}
-          {% endif %}
-        </div>
+        {% if scrollButton != '' %}
+        {{ scrollButton | safe  }}
+        {% endif %}
       </div>
-    </section>
-  </header>
+    </div>
+  </section>
+</header>
 {% endmacro %}
+

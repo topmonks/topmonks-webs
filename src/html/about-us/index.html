@@ -1,0 +1,86 @@
+{% extends 'layouts/application.html' %}
+
+{% block navigation %}
+  {{ macros.navigation('about-us') }}
+{% endblock %}
+
+{% block content %}
+{{ macros.pageHeader('About Us') }}
+
+
+<main id="company-values">
+
+  <section id="how-we-work" class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>How we work</h2>
+        <blockquote>
+          <p>"Success is a delivery not the time spent."</p>
+        </blockquote>
+        <p> We don't need you messing around from 9 to 5 in the office, we want to deliver the perfection! As our
+          team is mostly distributed, we've worked diligently to improve the ways we work together, and with
+          our clients. Don't count hours, deliver!</p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
+        <h3>Slack</h3>
+        <p>Effective communication is the essence of cooperation- not only across our projects, but also with some
+          of our customers. We don't care where do you sit, but once you are working, you should be available.</p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
+        <h3>GitHub</h3>
+        <p>All our projects are running in GitHub. Many of them also use GitHub Issues for tracking the progress.
+          Together with Slack it is the alpha and omega of our cooperation.</p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
+        <h3>Youtrack</h3>
+        <p>Here we are tracking various issues, starting with the project tasks, ending with the hiring of our new
+          team members.</p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
+        <h3>Quip</h3>
+        <p>Here we share all the projects documentation, invoices, even our company library, basically our whole
+          knowledge. Ask Rarous for his amazing cookery book!</p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
+        <h3>Docker Cloud</h3>
+        <p></p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
+        <h3>Aws</h3>
+        <p></p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
+        <h3>Monksheets</h3>
+        <p>Now let's shake-off all the useless administration! If you need to controll your project costs, ask for
+          time- off or refund your expenses, you can do it online wherever and whenever you want from.</p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <h3>Trello</h3>
+        <p>Trello is a powerful tool to track the teams' progress and to delegate the work.</p>
+      </div>
+
+    </div>
+  </section>
+  <section id="company-values" class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 wrapper">
+        <h2>Company values</h2>
+        <ul>
+          <li><b>导</b> Learn or die. Teach or die. Only learning and teaching brains flourish.</li>
+          <li><b>灵</b> Have an entrepreneurial mind. Spin-offs of our former team members are welcome.</li>
+          <li><b>勇</b> Be brave. Provide a sincere feedback regardless of the circumstances.</li>
+          <li><b>自由</b> Your freedom can’t affect the freedom of others.</li>
+          <li><b>看板</b> Success is a delivery not the time spent. Don’t wait to be asked for your next task, find
+            it yourself.</li>
+          <li><b>改善</b> Life is a constant change. Embrace it.</li>
+          <li><b>无国界</b> Our company is a living organism interconnected with our partners, customers, and community.
+            There are no borders.</li>
+          <li><b>共享</b> Give and you shall receive.</li>
+          <li><b>怪事</b> Weirdness, non-conformity is welcome.</li>
+        </ul>
+        <p>If you like these ideas, come <a href="mailto:jobs@topmonks.com">join us</a>. Or, <a href="mailto:sales@topmonks.com">have your project</a>                        delivered by us. Or, simply <a href="/contact/">visit us</a>. We enjoy meeting interesting people.</p>
+      </div>
+  </section>
+</main>
+
+{% endblock %}
