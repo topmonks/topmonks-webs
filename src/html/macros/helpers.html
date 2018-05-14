@@ -16,23 +16,19 @@
 <nav>
   <ul>
     <li><a href="/" class="{% if activePage == 'home' %}active{% endif %}">Home</a></li>
-    <li><a href="/studio/" class="{% if activePage == 'studio' %}active{% endif %}">Startup Studio</a></li>
-
+    <li><a href="/4days.topmonks.com/" class="{% if activePage == '4days' %}active{% endif %}">4days.topmonks.com</a></li>
+    <li><a href="/caffe.topmonks.cz/" class="{% if activePage == 'caffe' %}active{% endif %}">caffe.topmonks.cz</a></li>
+    <li><a href="/references.topmonks.com/" class="{% if activePage == 'references' %}active{% endif %}">references.topmonks.com</a></li>
+    <li><a href="/studio.topmonks.com/" class="{% if activePage == 'studio' %}active{% endif %}">studio.topmonks.com</a></li>
+    <li><a href="/teams.topmonks.com/">teams.topmonks.com</a></li>
+    <li><a href="/www.topmonks.cz/" class="{% if activePage == 'topmonks.cz' %}active{% endif %}">www.topmonks.cz</a></li>
+    <li><a href="/www.topmonks.com/" class="{% if activePage == 'topmonks.com' %}active{% endif %}">www.topmonks.com</a></li>
+    <li><a href="/www.topmonks.com/about-us/" class="{% if activePage == 'about-us' %}active{% endif %}"> About Us</a></li>
+    <li><a href="/www.topmonks.com/contacts/" class="{% if activePage == 'contacts' %}active{% endif %}"> Contacts</a></li>
+    <li><a href="/www.topmonks.com/meet-us/" class="{% if activePage == 'meet-us' %}active{% endif %}"> Meet Us</a></li>
     {% if isFooterNav == true %}
-    <li><a href="/teams/">Teams As Service</a></li>
-    <li><a href="https://prodeti.topmonks.cz/">Programming for Kids</a></li>
-    <li><a href="/references/" class="{% if activePage == 'references' %}active{% endif %}">References</a></li>
+      <li><a href="https://prodeti.topmonks.cz/">Programming for Kids</a></li>
     {% endif %}
-
-    {% if isFooterNav != true %}
-    <li><a href="/about-us/" class="{% if activePage == 'about-us' %}active{% endif %}">About Us</a></li>
-    <li><a href="/community/" class="{% if activePage == 'community' %}active{% endif %}">Meet Us</a></li>
-    {% endif %}
-
-    <li><a href="/contacts/" class="{% if activePage == 'contacts' %}active{% endif %}">Contacts</a></li>
-    <li><a href="/4days/" class="{% if activePage == '4days' %}active{% endif %}">4 days</a></li>
-    <li><a href="/caffe/" class="{% if activePage == 'caffe' %}active{% endif %}">caffe</a></li>
-    <li><a href="/topmonks-cz/" class="{% if activePage == 'cz' %}active{% endif %}">topmonks.cz</a></li>
   </ul>
 </nav>
 {% endmacro %}
