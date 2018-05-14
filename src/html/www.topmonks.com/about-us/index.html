@@ -1,5 +1,6 @@
 {% extends 'layouts/application.html' %}
 {% block title %} About Us - www.topmonks.com{% endblock %}
+{% block rootPath %}../{% endblock %}
 
 {% block navigation %}
   {{ macros.navigation('about-us') }}
@@ -9,7 +10,6 @@
 {{ macros.pageHeader('About Us') }}
 
 
-<main id="company-values">
 
   <section id="how-we-work" class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner">
@@ -82,6 +82,5 @@
         <p>If you like these ideas, come <a href="mailto:jobs@topmonks.com">join us</a>. Or, <a href="mailto:sales@topmonks.com">have your project</a>                        delivered by us. Or, simply <a href="/contact/">visit us</a>. We enjoy meeting interesting people.</p>
       </div>
   </section>
-</main>
 
 {% endblock %}

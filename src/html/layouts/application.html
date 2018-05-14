@@ -1,25 +1,33 @@
 {%- import 'macros/helpers.html' as macros -%}
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>{% block title %}{{ title }}{% endblock %}</title>
-  <link rel="stylesheet" href="../stylesheets/global/typography.css">
+  <link rel="stylesheet" href="{% block rootPath %}{% endblock %}../stylesheets/global/typography.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% include "shared/app-icons.html" %}
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@v0.35.0/dist/material-components-web.min.css">
   {% block head %}{% endblock %}
+  {% include "shared/app-icons.html" %}
 </head>
 <body>
 
-{% block navigation %}{% endblock %}
-{% block content %}{% endblock %}
+  <header>
+  {% block navigation %}{% endblock %}
+  </header>
 
-{% include '../shared/footer.html' %}
+  <main>
+  {% block content %}{% endblock %}
+  </main>
 
-{% block javascript %}
-<script src="javascripts/app.js"></script>
-{% endblock %}
+  <footer>
+  {% include '../shared/footer.html' %}
+  </footer>
+
+  {% block javascript %}
+  <script src="javascripts/app.js"></script>
+  {% endblock %}
+
 </body>
 </html>
 

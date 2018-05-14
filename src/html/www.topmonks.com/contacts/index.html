@@ -1,5 +1,6 @@
 {% extends 'layouts/application.html' %}
 {% block title %}Contacts - www.topmonks.com{% endblock %}
+{% block rootPath %}../{% endblock %}
 
 {% block navigation %}
   {{ macros.navigation('contacts') }}
@@ -7,8 +8,6 @@
 
 {% block content %}
   {{ macros.pageHeader('Contacts') }}
-
-<main id="contact">
 
   <div class="mainBody" itemscope="" itemtype="https://schema.org/Organization">
     <section class="mdc-layout-grid">
@@ -170,7 +169,6 @@
       </div>
     </section>
   </div>
-</main>
 
 
 {% endblock %}

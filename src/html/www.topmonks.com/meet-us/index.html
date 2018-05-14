@@ -1,5 +1,6 @@
 {% extends 'layouts/application.html' %}
 {% block title %}Meet Us - www.topmonks.com{% endblock %}
+{% block rootPath %}../{% endblock %}
 
 {% block navigation %}
 {{ macros.navigation('meet-us') }}
@@ -8,8 +9,6 @@
 {% block content %}
   {{ macros.pageHeader('Community','Learn or die. Teach or die. Only learning and teaching brains flourish.') }}
 
-
-<main id="community">
 
   <section class="principles">
     <div class="mdc-layout-grid mainBody">
@@ -146,7 +145,6 @@
         </div>
       </article>
   </section>
-</main>
 
 
 {% endblock %}
