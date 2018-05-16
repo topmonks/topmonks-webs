@@ -3,8 +3,9 @@
 {% block rootPath %}../{% endblock %}
 
 {% block navigation %}
-  {{ macros.navigation('about-us') }}
+{% include 'shared/top-menu.html' %}
 {% endblock %}
+
 
 {% block content %}
 {{ macros.pageHeader('About Us') }}

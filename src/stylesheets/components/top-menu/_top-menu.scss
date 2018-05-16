@@ -1,0 +1,19 @@
+.top-menu {
+  border: dashed 1px red;
+  margin: 1em;
+
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+  li a {
+    padding: 1.5em 1em;
+    text-align: center;
+    line-height: 34px;
+    border-bottom: 2px solid transparent;
+    color: #444;
+  }
+}

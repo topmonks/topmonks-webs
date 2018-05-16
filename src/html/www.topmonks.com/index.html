@@ -2,9 +2,10 @@
 {% block title %}www.topmonks.com{% endblock %}
 
 {% block navigation %}
-{{ macros.navigation('topmonks.com') }}
+{% include 'shared/top-menu.html' %}
 {% endblock %}
 
+
 {% block content %}
-{{ macros.pageHeader('www.topmonks.com') }}
+{{ macros.pageHeader('Developers for your startup', 'We are your software development partners, experienced with both startup and corporate environment.') }}
 {% endblock %}
