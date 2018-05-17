@@ -2,11 +2,11 @@
 {% block title %}studio.topmonks.com{% endblock %}
 
 {% block navigation %}
-  {{ macros.navigation('studio') }}
+{% include 'shared/top-menu.html' %}
 {% endblock %}
 
 {% block content %}
-  {{ macros.pageHeader('We are a startup studio!','Do you have an idea for the next big thing?','<a data-scroll="" class="btn" href="#how-it-works">Come and Pitch Us</a>') }}
+  {{ macros.pageHeader('We are a startup studio!','Do you have an idea for the next big thing?','<a data-scroll="" class="action-button" href="#how-it-works">Come and Pitch Us</a>') }}
 
 
 

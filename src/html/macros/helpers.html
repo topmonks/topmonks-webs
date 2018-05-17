@@ -9,10 +9,10 @@
 <link rel="stylesheet" href="{{ 'stylesheets/components/' ~ stylesheet ~ '/index.css' }}">
 {%- endmacro %}
 
-{% macro navigation(activePage, isFooterNav) %}
-{% if isFooterNav != true %}
-<h3>TOPMONKS</h3>
-{% endif %}
+{% macro navigation(activePage) %}
+<link rel="stylesheet" href="../../stylesheets/components/top-menu/index.css">
+
+<div class="top-menu">
 <nav>
   <ul>
     <li><a href="/" class="{% if activePage == 'home' %}active{% endif %}">Home</a></li>
@@ -26,11 +26,9 @@
     <li><a href="/www.topmonks.com/about-us/" class="{% if activePage == 'about-us' %}active{% endif %}"> About Us</a></li>
     <li><a href="/www.topmonks.com/contacts/" class="{% if activePage == 'contacts' %}active{% endif %}"> Contacts</a></li>
     <li><a href="/www.topmonks.com/meet-us/" class="{% if activePage == 'meet-us' %}active{% endif %}"> Meet Us</a></li>
-    {% if isFooterNav == true %}
-      <li><a href="https://prodeti.topmonks.cz/">Programming for Kids</a></li>
-    {% endif %}
   </ul>
 </nav>
+</div>
 {% endmacro %}
 
 {% macro pageHeader(title, intro, scrollButton) %}

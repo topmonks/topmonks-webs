@@ -1,10 +1,11 @@
+
 body {
-  background-color: #fff;
-  color: #000;
-  font-size: 18px;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 100%;
+  padding:0;
+  margin:0 auto;
+  max-width:100%;
+  font-family: Avenir;
+  font-size:18px;
+  background-color: #ffffff;
 }
 
 header,
@@ -12,4 +13,52 @@ footer,
 main {
   max-width: 980px;
   margin: 0 auto;
+}
+
+a,body {
+  color:#000000;
+}
+.action-button,h1,h2,h3,h4,h5,nav a {
+  text-transform:uppercase
+}
+
+h1,h2,h3,h4,h5 {
+  font-size:1em
+}
+h1,h2 {
+  font-size:1.6em;
+}
+
+a {
+  text-decoration:none
+}
+a:hover {
+  text-decoration:underline
+}
+.action-button {
+  display:inline-block;
+  border-radius: 26px;
+  color: #fff;
+  background-color: var(--orange-background);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
+  padding:.7em;
+  margin:0 1em;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+ul,ul li {
+  padding:0
+}
+
+h1,h2,h3,p {
+  margin:1.5em auto
+}
+ul {
+  margin:1em 0
+}
+ul li {
+  list-style:none;
+  margin:0
 }
