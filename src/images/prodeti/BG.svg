@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1439px" height="716px" viewBox="0 0 1439 716" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>BG</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="101.999998%" y2="100.999999%" id="linearGradient-1">
+            <stop stop-color="#3023AE" offset="0%"></stop>
+            <stop stop-color="#C86DD7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="101.999998%" y2="100.999999%" id="linearGradient-2">
+            <stop stop-color="#3023AE" offset="0%"></stop>
+            <stop stop-color="#E475B9" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0,0 L1439,0 L1439,595.470748 C1439,595.470748 1190.11263,629.762996 1105.56649,643.218488 C1021.02036,656.673981 579.623665,747.418265 0,526.229963 L0,0 Z" id="path-3"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD">
+            <g id="BG">
+                <path d="M129.868585,503 C109.125458,645 261.084109,716 585.74454,716 C910.404971,716 1194.82346,665.830724 1439,565.492171 L129.868585,503 Z" id="Path-2" fill="#ABD2FF" opacity="0.50317029"></path>
+                <path d="M0,0 L1439,0 L1439,595.470748 C1439,595.470748 1190.11263,629.762996 1105.56649,643.218488 C1021.02036,656.673981 579.623665,747.418265 0,526.229963 L0,0 Z" id="Fill-1" fill="url(#linearGradient-1)"></path>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="Fill-1" fill="url(#linearGradient-2)" xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>

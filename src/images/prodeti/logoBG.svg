@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="196px" height="94px" viewBox="0 0 196 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-223.000000, 0.000000)" fill="#FFFFFF">
+            <g id="header" transform="translate(-427.000000, -259.000000)">
+                <g id="logo" transform="translate(650.000000, 153.000000)">
+                    <path d="M0,-0.0003 L0,191.0517 C0,197.1097 6.267,201.1367 11.777,198.6187 L94.542,160.8037 C96.738,159.8007 99.261,159.8007 101.457,160.8037 L184.223,198.6187 C189.733,201.1367 196,197.1097 196,191.0517 L196,8.3197 C196,3.7247 192.275,-0.0003 187.68,-0.0003 L0,-0.0003 Z" id="Fill-1"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

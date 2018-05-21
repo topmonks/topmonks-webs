@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="89px" height="100px" viewBox="0 0 89 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>ikonka</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M45.3809292,90.9200995 C42.2831428,92.3599668 38.7168572,92.3599668 35.6190708,90.9200995 L6.8041839,77.5388443 C2.65774751,75.612386 0,71.423279 0,66.8117224 L0,25.1882776 C0,20.576721 2.65774751,16.387614 6.8041839,14.4611557 L35.6190708,1.07990047 C38.7168572,-0.359966823 42.2831428,-0.359966823 45.3809292,1.07990047 L74.1958161,14.4611557 C78.3422525,16.387614 81,20.576721 81,25.1882776 L81,66.8117224 C81,71.423279 78.3422525,75.612386 74.1958161,77.5388443 L45.3809292,90.9200995 Z" id="path-1"></path>
+        <filter x="-9.9%" y="-4.3%" width="119.8%" height="117.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.835294118   0 0 0 0 0.91372549   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M55,36 L25,36 C23.1666667,36 21.6666667,37.5 21.6666667,39.3333333 L21.6666667,52.6666667 C21.6666667,54.5 23.1666667,56 25,56 L55,56 C56.8333333,56 58.3333333,54.5 58.3333333,52.6666667 L58.3333333,39.3333333 C58.3333333,37.5 56.8333333,36 55,36 L55,36 Z M38.3333333,47.6666667 L33.3333333,47.6666667 L33.3333333,52.6666667 L30,52.6666667 L30,47.6666667 L25,47.6666667 L25,44.3333333 L30,44.3333333 L30,39.3333333 L33.3333333,39.3333333 L33.3333333,44.3333333 L38.3333333,44.3333333 L38.3333333,47.6666667 L38.3333333,47.6666667 Z M45.8333333,51 C44.45,51 43.3333333,49.8833333 43.3333333,48.5 C43.3333333,47.1166667 44.45,46 45.8333333,46 C47.2166667,46 48.3333333,47.1166667 48.3333333,48.5 C48.3333333,49.8833333 47.2166667,51 45.8333333,51 L45.8333333,51 Z M52.5,46 C51.1166667,46 50,44.8833333 50,43.5 C50,42.1166667 51.1166667,41 52.5,41 C53.8833333,41 55,42.1166667 55,43.5 C55,44.8833333 53.8833333,46 52.5,46 L52.5,46 Z" id="path-3"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-355.000000, -970.000000)">
+            <g id="blok-1" transform="translate(250.000000, 970.000000)">
+                <g id="ikonka" transform="translate(109.000000, 0.000000)">
+                    <g id="Fill-1">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <use id="Mask" fill="#3324AE" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1439px" height="784px" viewBox="0 0 1439 784" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>footerBG</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="101.999998%" y2="100.999999%" id="linearGradient-1">
+            <stop stop-color="#3023AE" offset="0%"></stop>
+            <stop stop-color="#E475B9" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0,0 L1439,0 L1439,1030.7926 C1439,1030.7926 1190.11263,1090.15437 1105.56649,1113.44657 C1021.02036,1136.73876 579.623665,1293.82211 0,910.932997 L0,0 Z" id="path-2"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1.000000, -3978.000000)">
+            <g id="paticka" transform="translate(1.000000, 3978.000000)">
+                <g id="footerBG">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Fill-1-Copy-3" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <rect id="Rectangle-3-Copy-7" fill="#FFFFFF" opacity="0.160269475" mask="url(#mask-3)" transform="translate(-98.831386, 777.168614) rotate(45.000000) translate(98.831386, -777.168614) " x="-335.831386" y="540.168614" width="474" height="474" rx="64"></rect>
+                    <rect id="Rectangle-3-Copy-8" fill="#FFFFFF" opacity="0.234431612" mask="url(#mask-3)" transform="translate(1569.168614, 442.168614) rotate(45.000000) translate(-1569.168614, -442.168614) " x="1332.16861" y="205.168614" width="474" height="474" rx="64"></rect>
+                    <path d="M250.007812,595.35359 C564.080729,633.457549 876.583333,626.922241 1187.51562,575.747668" id="Path-5" stroke="#FFFFFF" opacity="0.40404212"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
