@@ -3,31 +3,34 @@
 <head>
   <meta charset="utf-8">
   <title>{% block title %}{{ title }}{% endblock %}</title>
-  <link rel="stylesheet" href="/stylesheets/global/typography.css">
-  <link rel="stylesheet" href="/stylesheets/global/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://unpkg.com/material-components-web@v0.35.0/dist/material-components-web.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/stylesheets/global/typography.css">
+  <link rel="stylesheet" href="/stylesheets/global/main.css">
   {% block head %}{% endblock %}
   {% include "shared/app-icons.html" %}
 </head>
 <body>
-
+<div class="wrapper-outer">
   <header>
-
-  {% block navigation %}{% endblock %}
+    {% block navigation %}{% endblock %}
   </header>
 
   <main>
-  {% block content %}{% endblock %}
+    {% block content %}{% endblock %}
   </main>
-
+</div>
+<div class="wrapper-outer footer">
   <footer>
-  {% include 'shared/footer.html' %}
+    {% include 'shared/footer.html' %}
   </footer>
+</div>
 
-  {% block javascript %}
-  <script src="/javascripts/app.js"></script>
-  {% endblock %}
+{% block javascript %}
+<script src="/javascripts/app.js"></script>
+{% endblock %}
 
 </body>
 </html>

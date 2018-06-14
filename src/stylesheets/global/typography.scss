@@ -4,15 +4,22 @@
   --mdc-theme-text-primary-on-primary: white;
   --insight-negative-color: #e13c1e;
   --insight-positive-color: #7e9204;
-  --nav-active: #FFAA00;
-  --orange-background: #fe664b;
+  --topmonks-orange: #fe664b;
+  --topmonks-grey: #9B9B9B;
+  --topmonks-black: #4a4a4a;
 }
 
+/*
+http://pxtoem.com/ - how to count px to em
+*/
+
 body {
+  font-size: 16px;
+  color: var(--topmonks-black);
   margin: 0;
   padding: 0;
   font-display: optional;
-  font-family: Dosis, sans-serif;
+  font-family: 'Lato', sans-serif;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
   font-variant-ligatures: common-ligatures contextual;
@@ -21,11 +28,72 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+
+
 }
 
-h1 {
-  text-transform: uppercase;
+h1, h2, h3, h4, h5 {
+  margin:1.5em auto
 }
+h1 {
+  font-family: "Lato Black", sans-serif;
+  font-size: 28px; /* TODO px -> em */
+}
+h2 {
+  font-family: "Lato Bold", sans-serif;
+  font-size: 24px;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+a {
+  color: var(--topmonks-orange);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul,ul li {
+  padding:0
+}
+ul {
+  margin:1em 0
+}
+ul li {
+  list-style:none;
+  margin:0
+}
+
+
+/* MD GRID DESKTOP BREAKPOINT*/
+@media (min-width: 840px) {
+
+}
+
+/* MD GRID TABLET AND ABOVE BREAKPOINT */
+@media (min-width: 480px) {
+  body {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 38px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+
+}
+
+/* MD GRID TABLET ONLY BREAKPOINT */
+@media (min-width: 480px) and (max-width: 839px) {
+
+}
+
 
 .mdc-tab,
 .mdc-typography,

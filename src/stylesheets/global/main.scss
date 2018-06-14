@@ -1,64 +1,61 @@
 
 body {
-  padding:0;
-  margin:0 auto;
-  max-width:100%;
-  font-family: Avenir;
-  font-size:18px;
   background-color: #ffffff;
+}
+
+.wrapper-outer {
+  max-width: 1440px;
+
+  &.footer {
+   /* TODO*/
+    background-image: linear-gradient(-215deg, #3023AE 0%, #53A0FD 47%, #B4EC51 100%);
+    background-image: linear-gradient(-205deg, #3023AE 0%, #53A0FD 47%, #B4EC51 100%);
+  }
 }
 
 header,
 footer,
 main {
-  max-width: 980px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
-a,body {
-  color:#000000;
-}
-.action-button,h1,h2,h3,h4,h5,nav a {
-  text-transform:uppercase
-}
 
-h1,h2,h3,h4,h5 {
-  font-size:1em
-}
-h1,h2 {
-  font-size:1.6em;
-}
-
-a {
-  text-decoration:none
-}
-a:hover {
-  text-decoration:underline
-}
 .action-button {
   display:inline-block;
-  border-radius: 26px;
+  border-radius: 100px;
   color: #fff;
-  background-color: var(--orange-background);
+  background-color: var(--topmonks-orange);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
   padding:.7em;
   margin:0 1em;
+  text-align: center;
+  text-transform:uppercase;
+
 
   &:hover {
     text-decoration: none;
   }
 }
-ul,ul li {
-  padding:0
+
+
+.sub-text {
+  color: var(--topmonks-grey);
+  margin: 0;
 }
 
-h1,h2,h3,p {
-  margin:1.5em auto
+
+/* MD GRID DESKTOP BREAKPOINT*/
+@media (min-width: 840px) {
+
 }
-ul {
-  margin:1em 0
+
+/* MD GRID TABLET AND ABOVE BREAKPOINT */
+@media (min-width: 480px) {
+
 }
-ul li {
-  list-style:none;
-  margin:0
+
+/* MD GRID TABLET ONLY BREAKPOINT */
+@media (min-width: 480px) and (max-width: 839px) {
+
 }
