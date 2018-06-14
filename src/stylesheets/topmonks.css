@@ -1,0 +1,81 @@
+
+body {
+  font-family: Lato, sans-serif;
+  font-weight: normal;
+  font-variant-numeric: lining-nums;
+  -webkit-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures;
+  -webkit-font-feature-settings: "kern","liga","clig","lnum";
+  font-feature-settings: "kern","liga","clig","lnum";
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 38px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 38px;
+  text-transform: uppercase;
+  text-align: center;
+}
+blockquote > h2 {
+  font-size: 18px;
+  text-transform: none;
+  font-weight: normal;
+}
+h3 {
+  font-size: 24px;
+  text-align: center;
+}
+h4 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 18px;
+}
+header, footer, main {
+  max-width: 980px;
+  margin: 0 auto;
+}
+a.btn{
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #FE664B;
+  border-radius: 80px;
+  height: 52px;
+  width: 186px;
+  border: none;
+  box-shadow: #9b9b9b;
+}
+
+.listen::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: url("/images/topmonks.com/listen_ic.svg") no-repeat;
+  margin-left: 105px;
+}
+.develop::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: url("/images/topmonks.com/develop_ic.svg") no-repeat;
+  margin-left: 112px;
+}
+.verify::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: url("/images/topmonks.com/verify_ic.svg") no-repeat;
+  margin-left: 112px;
+}
+
