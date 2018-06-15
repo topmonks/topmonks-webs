@@ -1,13 +1,14 @@
 :root {
-  --mdc-theme-primary: #24292e;
-  --mdc-theme-accent: #91a8d2;
-  --mdc-theme-text-primary-on-primary: white;
-  --insight-negative-color: #e13c1e;
-  --insight-positive-color: #7e9204;
-  --topmonks-orange: #fe664b;
-  --topmonks-grey: #9B9B9B;
-  --topmonks-black: #4a4a4a;
-}
+   --mdc-theme-primary: #24292e;
+   --mdc-theme-accent: #91a8d2;
+   --mdc-theme-text-primary-on-primary: white;
+   --insight-negative-color: #e13c1e;
+   --insight-positive-color: #7e9204;
+   --topmonks-orange: #fe664b;
+   --topmonks-grey: #9B9B9B;
+  --topmonks-article-background: #F8FBFC;
+   --topmonks-black: #4a4a4a;
+ }
 
 /*
 http://pxtoem.com/ - how to count px to em
@@ -19,6 +20,8 @@ body {
   margin: 0;
   padding: 0;
   font-display: optional;
+  letter-spacing: 0;
+  line-height: 26px;
   font-family: 'Lato', sans-serif;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
@@ -30,12 +33,10 @@ body {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
-
-
 }
 
 h1, h2, h3, h4, h5 {
-  margin:1.5em auto
+  margin: 1.5em auto;
 }
 h1 {
   font-family: "Lato Black", sans-serif;

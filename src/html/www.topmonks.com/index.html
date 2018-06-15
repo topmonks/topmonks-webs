@@ -1,213 +1,214 @@
-<!DOCTYPE html>
-<html lang="cs">
+{% extends 'layouts/topmonks.html' %}
 
-<head>
-  <meta charset="UTF-8">
-  <title>TopMonks</title>
+{# string with the current page #}
+{% set page = 'topmonks-index' %}
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.css">
-  <link rel="stylesheet" href="../../stylesheets/topmonks.css">
-</head>
-<body>
-<main>
-  <section class="main_info">
-    <div class="mdc-layout-grid wrapper">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h1>Team as a service</h1>
-          <blockquote>
-            <p>And they are perfectionists. Ask them to build you a product,
-              and they will not give you what you asked for. They will give you what you want</p>
-          </blockquote>
-          <a class="btn">How we work</a>
-        </div>
-        <div class="listen mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
+{# global object with localized strings #}
+{% set language = en %}
+
+{% block content %}
+
+<section class="main_info">
+  <div class="mdc-layout-grid wrapper">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+
+        <h1>Team as a service</h1>
+        <blockquote>
+          <p>And they are perfectionists. Ask them to build you a product,
+            and they will not give you what you asked for. They will give you what you want</p>
+        </blockquote>
+        <a class="action-button">How we work</a>
+      </div>
+
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
+        <article class="listen">
           <h3>We listen</h3>
           <p>We see the time devoted to your project as an investment into your future.
             We listen to your ideas and needs and think about the best solution to do the project right the first
             time.</p>
-        </div>
-        <div class="develop mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
+        </article>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
+        <article class="develop">
           <h3>We develop</h3>
           <p>We work with the latest technologies to get the best results. We don’t need lengthy training or
             explanations.
             We’ll provide you with a great team of senior developers who are ready to work immediately.</p>
-        </div>
-        <div class="verify mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
+        </article>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
+        <article class="verify">
           <h3>We verify</h3>
           <p>We closely examine and test every idea and every feature in every step of the project.
             We concentrate on the needs of the end user. We don’t take risks. We don’t launch anything we don’t stand
             by.</p>
-        </div>
+        </article>
       </div>
     </div>
-  </section>
-  <section class="cooperation">
+  </div>
+</section>
+
+<section class="cooperation">
+  <div class="mdc-layout-grid wrapper">
+    <div class="mdc-layout-grid__inner">
+      <div class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>You will love working with us</h2>
+        <p>Our long-standing experience has resulted in deep, broad knowledge of the B2B world and start-up scene,
+          and gives us the ability to apply various technology solutions, whether they are old or new.</p>
+      </div>
+      <div
+        class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
+        <p>We will bring start-up playfulness and a fresh point of view to your project.</p>
+      </div>
+      <div
+        class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
+        <p>We will guide you through and help you understand the world of IT.</p>
+      </div>
+
+      <div
+        class="purple mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
+        <p>We respect the processes. Your company, your rules.</p>
+      </div>
+      <div
+        class="purple mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
+        <p>We will help you stop worrying.</p>
+      </div>
+
+      <div
+        class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
+        <p>We are open and fair. We keep our promises.</p>
+      </div>
+      <div
+        class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
+        <p>We can anticipate and minimize the risks associated with technical IT solutions.</p>
+      </div>
+
+      <div
+        class="purple mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
+        <p>We keep educating ourselves, you, and your children.</p>
+      </div>
+      <div class="purple mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6">
+        <p>We think in the context of your business. With our help, your product will make sense to your end
+          users.</p>
+      </div>
+    </div>
+  </div>
+  <div class="product">
     <div class="mdc-layout-grid wrapper">
       <div class="mdc-layout-grid__inner">
-        <div class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>You will love working with us</h2>
-          <p>Our long-standing experience has resulted in deep, broad knowledge of the B2B world and start-up scene,
-            and gives us the ability to apply various technology solutions, whether they are old or new.</p>
+        <div
+          class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
+          <h3>Research</h3>
+          <p>blablablabla</p>
         </div>
         <div
           class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
-          <p>We will bring start-up playfulness and a fresh point of view to your project.</p>
+          <h3>Design</h3>
+          <p>blablablabla</p>
         </div>
         <div
           class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
-          <p>We will guide you through and help you understand the world of IT.</p>
-        </div>
-
-        <div
-          class="purple mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
-          <p>We respect the processes. Your company, your rules.</p>
-        </div>
-        <div
-          class="purple mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
-          <p>We will help you stop worrying.</p>
-        </div>
-
-        <div
-          class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
-          <p>We are open and fair. We keep our promises.</p>
+          <h3>Development</h3>
+          <p>blablablabla</p>
         </div>
         <div
           class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
-          <p>We can anticipate and minimize the risks associated with technical IT solutions.</p>
-        </div>
-
-        <div
-          class="purple mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
-          <p>We keep educating ourselves, you, and your children.</p>
-        </div>
-        <div class="purple mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6">
-          <p>We think in the context of your business. With our help, your product will make sense to your end
-            users.</p>
+          <h3>Sales</h3>
+          <p>blablablabla</p>
         </div>
       </div>
     </div>
-    <div class="product">
-      <div class="mdc-layout-grid wrapper">
-        <div class="mdc-layout-grid__inner">
-          <div
-            class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
-            <h3>Research</h3>
-            <p>blablablabla</p>
-          </div>
-          <div
-            class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
-            <h3>Design</h3>
-            <p>blablablabla</p>
-          </div>
-          <div
-            class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
-            <h3>Development</h3>
-            <p>blablablabla</p>
-          </div>
-          <div
-            class="white mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
-            <h3>Sales</h3>
-            <p>blablablabla</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="partners">
-      <div class="mdc-layout-grid wrapper">
-        <div class="mdc-layout-grid__inner">
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-            <h2>Who works with us</h2>
-          </div>
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-desktop">
-            <p>logo</p>
-          </div>
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-desktop">
-            <p>logo</p>
-          </div>
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-desktop">
-            <p>logo</p>
-          </div>
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-desktop">
-            <p>logo</p>
-          </div>
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-desktop">
-            <p>logo</p>
-          </div>
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-desktop">
-            <p>logo</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="studies">
+  </div>
+  <div class="partners">
     <div class="mdc-layout-grid wrapper">
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>Case studies</h2>
-          <p>We have learned something from every collaboration with our clients.</p>
+          <h2>Who works with us</h2>
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
-          <h3>Česká spořitelna</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-desktop">
+          <p>logo</p>
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
-          <h3>PriceFX</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-desktop">
+          <p>logo</p>
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
-          <h3>PurposeFly</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-desktop">
+          <p>logo</p>
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
-          <h3>Hearth.net</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-desktop">
+          <p>logo</p>
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
-          <h3>Techloop.io</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-desktop">
+          <p>logo</p>
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
-          <h3>GoRealEurope.com</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-desktop">
+          <p>logo</p>
         </div>
       </div>
     </div>
-  </section>
-  <section class="costumers">
-    <div class="mdc-layout-grid wrapper">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>Our customers say that…</h2>
-          <blockquote>
-            <p>Working with TopMonks was really awesome. Working with TopMonks was really awesome.
-              Working with TopMonks was absolutely awesome.</p>
-          </blockquote>
-          <p>Jan Sechovec</p>
-          <p>Universal Digital Punker</p>
-        </div>
+  </div>
+</section>
+
+<section class="studies">
+  <div class="mdc-layout-grid wrapper">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Case studies</h2>
+        <p>We have learned something from every collaboration with our clients.</p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
+        <h3>Česká spořitelna</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
+        <h3>PriceFX</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
+        <h3>PurposeFly</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
+        <h3>Hearth.net</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
+        <h3>Techloop.io</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-desktop">
+        <h3>GoRealEurope.com</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
       </div>
     </div>
-  </section>
-  <section class="contact">
-    <div class="mdc-layout-grid wrapper">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>Contact</h2>
-          <p>Do you have any questions? Are you interested in working with us? Contact us.</p>
-        </div>
+  </div>
+</section>
+
+<section class="costumers">
+  <div class="mdc-layout-grid wrapper">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Our customers say that…</h2>
+        <blockquote>
+          <p>Working with TopMonks was really awesome. Working with TopMonks was really awesome.
+            Working with TopMonks was absolutely awesome.</p>
+        </blockquote>
+        <p>Jan Sechovec</p>
+        <p>Universal Digital Punker</p>
       </div>
     </div>
-  </section>
-</main>
-</body>
-</html>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="mdc-layout-grid wrapper">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Contact</h2>
+        <p>Do you have any questions? Are you interested in working with us? Contact us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
