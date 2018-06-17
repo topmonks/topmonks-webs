@@ -274,6 +274,14 @@ h3::after {
   margin-top: 4em;
   overflow-x: hidden;
 }
+.price {
+  min-height: 280px;
+}
+.price p {
+  text-align: center;
+  font-size: 1.1em;
+}
+
 
 @media screen and (min-width: 1500px) {
   .illustration {
@@ -484,6 +492,9 @@ footer {
 .contact .contact_details p {
   margin: 0;
 }
+.contact a {
+  font-weight: 300;
+}
 
 .contact .mail {
   font-weight: lighter;
@@ -494,7 +505,7 @@ footer {
 .contact .mail::before {
   content: "";
   display: block;
-  background: url("/images/prodeti/monk.png") no-repeat;
+  background: url("/images/prodeti/rodice/jirka.jpg") no-repeat;
   background-size: contain;
   border-radius: 50%;
   width: 64px;
@@ -610,7 +621,7 @@ footer {
   }
 
   .courses p {
-    height: 7em;
+    height: auto;
   }
 
   .fill_1, .fill_2 {
@@ -629,15 +640,13 @@ footer {
   .form input {
     float: left;
     padding: 14px;
-    width: 98%;
   }
 
   .form button {
     float: right;
     font-size: 14px;
     box-shadow: 3px 3px #bbdbff;
-    padding: 16px 20px;
-    margin: 10px 0 0 28px !important;
+    padding: 16px 10px;
   }
 
   #agenda p {
