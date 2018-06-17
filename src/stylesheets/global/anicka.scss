@@ -2,6 +2,7 @@ h2 {
   font-size: 38px;
   text-transform: uppercase;
   text-align: center;
+  color: black;
 }
 
 .studies {
@@ -17,12 +18,40 @@ h2 {
     margin-top: 14px;
     margin-bottom: 0;
   }
-
   hr {
     width: 59px;
     height: 2px;
     border: none;
     background-color: #FE664B;
     display: inline-flex;
+  }
+}
+
+.costumers {
+  p {
+    text-align: center;
+  }
+  blockquote p{
+    color: #4A4A4A;
+  }
+  .name {
+    font-size: 15px;
+    color: #9B9B9B;
+    text-align: center;
+  }
+}
+
+.contact {
+  h2 {
+    margin-bottom: 18px;
+  }
+  .contact_title p {
+    color: #4A4A4A;
+  }
+  p {
+    text-align: center;
+  }
+  .photo {
+    border-radius: 50%;
   }
 }
