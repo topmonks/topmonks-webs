@@ -34,6 +34,20 @@ h2 {
   blockquote p{
     color: #4A4A4A;
   }
+  blockquote::before {
+    content: "";
+    display: block;
+    background-image: url("/images/topmonks.com/unquote.svg") no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+  blockquote::after {
+    content: "";
+    display: block;
+    background-image: url("/images/topmonks.com/quote.svg") no-repeat;
+    width: 24px;
+    height: 24px;
+  }
   .name {
     font-size: 15px;
     color: #9B9B9B;
@@ -42,16 +56,20 @@ h2 {
 }
 
 .contact {
+  text-align: center;
   h2 {
     margin-bottom: 18px;
   }
   .contact_title p {
     color: #4A4A4A;
   }
-  p {
-    text-align: center;
+  h4 {
+    margin-bottom: 4px;
   }
   .photo {
     border-radius: 50%;
+  }
+  svg {
+    margin-top: 8px;
   }
 }
