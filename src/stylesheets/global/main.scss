@@ -46,29 +46,27 @@ main {
 
 .sub-text {
   color: var(--topmonks-grey);
-  margin: 0;
 }
 
-article {
+.box {
   box-shadow: 0 2px 23px 0 rgba(0,0,0,0.10);
   border-radius: 20px;
   border: 1px solid var(--topmonks-grey);
   padding: 15px;
-}
 
-
-.main_info {
-  article {
-    padding-top: 120px;
+  &:before {
     background: url("/images/topmonks.com/listen_ic.svg") no-repeat;
-    background-position: center 40px;
+    background-position: center 30px;
     background-size: 82px 82px;
-    min-height: 300px;
+    content: "";
+    display: block;
+    height: 120px;
   }
-  .develop {
+
+  &.develop:before {
     background-image: url("/images/topmonks.com/develop_ic.svg");
   }
-  .verify {
+  &.verify:before {
     background-image: url("/images/topmonks.com/verify_ic.svg");
   }
 }
@@ -78,6 +76,9 @@ article {
 
 /* MD GRID DESKTOP BREAKPOINT*/
 @media (min-width: 840px) {
+  .box {
+    min-height: 450px;
+  }
 
 }
 

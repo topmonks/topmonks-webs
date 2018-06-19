@@ -1,29 +1,21 @@
-h2 {
-  font-size: 38px;
-  text-transform: uppercase;
-  text-align: center;
-  color: black;
-}
 
 .studies {
-  h2 {
-    color: #F5A623;
-    margin-bottom: 18px;
-  }
   .studies_title p {
-    color: #9B9B9B;
     text-align: center;
   }
   h3 {
+    text-align: left;
     margin-top: 14px;
     margin-bottom: 0;
-  }
-  hr {
-    width: 59px;
-    height: 2px;
-    border: none;
-    background-color: #FE664B;
-    display: inline-flex;
+    &:after
+    {
+      content: "";
+      width: 59px;
+      height: 2px;
+      background-color: var(--topmonks-orange);
+      display: block;
+      margin: 16px 0;
+    }
   }
 }
 
@@ -31,10 +23,11 @@ h2 {
   p {
     text-align: center;
   }
-  blockquote p{
-    color: #4A4A4A;
+  blockquote p {
+    color:  var(--topmonks-black);
   }
-  blockquote::before {
+  blockquote::before,
+  blockquote::after {
     content: "";
     display: block;
     background-image: url("/images/topmonks.com/unquote.svg") no-repeat;
@@ -42,29 +35,20 @@ h2 {
     height: 24px;
   }
   blockquote::after {
-    content: "";
-    display: block;
-    background-image: url("/images/topmonks.com/quote.svg") no-repeat;
-    width: 24px;
-    height: 24px;
+    background-image: url("/images/topmonks.com/quote.svg");
   }
   .name {
-    font-size: 15px;
-    color: #9B9B9B;
+    font-size: 16px;
+    color:  var(--topmonks-grey);
     text-align: center;
   }
 }
 
 .contact {
   text-align: center;
-  h2 {
-    margin-bottom: 18px;
-  }
+
   .contact_title p {
-    color: #4A4A4A;
-  }
-  h4 {
-    margin-bottom: 4px;
+    color: var(--topmonks-black);
   }
   .photo {
     border-radius: 50%;

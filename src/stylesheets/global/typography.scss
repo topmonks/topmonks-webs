@@ -21,7 +21,7 @@ body {
   padding: 0;
   font-display: optional;
   letter-spacing: 0;
-  line-height: 26px;
+  line-height: 28px;
   font-family: 'Lato', sans-serif;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
@@ -35,16 +35,23 @@ body {
   text-rendering: geometricPrecision;
 }
 
-h1, h2, h3, h4, h5 {
-  margin: 1.5em auto;
-}
-h1 {
+
+h1,h2 {
   font-family: "Lato Black", sans-serif;
-  font-size: 28px; /* TODO px -> em */
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 18px;
 }
-h2 {
+h3 {
   font-family: "Lato Bold", sans-serif;
   font-size: 24px;
+  text-align: center;
+}
+h4 {
+  font-size: 16px;
+  margin-bottom: 4px;
 }
 
 p {
@@ -60,14 +67,14 @@ a {
 }
 
 ul,ul li {
-  padding:0
+  padding: 0
 }
 ul {
-  margin:1em 0
+  margin: 1em 0
 }
 ul li {
-  list-style:none;
-  margin:0
+  list-style: none;
+  margin: 0
 }
 
 
@@ -79,15 +86,17 @@ ul li {
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
 @media (min-width: 480px) {
   body {
-    font-size: 18px;
+    font-size: 20px;
   }
-  h1 {
-    font-size: 38px;
+  h1, h2 {
+    font-size: 36px;
   }
-  h2 {
+  h3 {
     font-size: 28px;
   }
-
+  h4 {
+    font-size: 20px;
+  }
 }
 
 /* MD GRID TABLET ONLY BREAKPOINT */
