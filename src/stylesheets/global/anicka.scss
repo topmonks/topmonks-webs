@@ -23,20 +23,7 @@
   p {
     text-align: center;
   }
-  blockquote p {
-    color:  var(--topmonks-black);
-  }
-  blockquote::before,
-  blockquote::after {
-    content: "";
-    display: block;
-    background-image: url("/images/topmonks.com/unquote.svg") no-repeat;
-    width: 24px;
-    height: 24px;
-  }
-  blockquote::after {
-    background-image: url("/images/topmonks.com/quote.svg");
-  }
+
   .name {
     font-size: 16px;
     color:  var(--topmonks-grey);

@@ -11,6 +11,7 @@ body {
 
 .body-content-wrapper {
   max-width: 1440px;
+  margin: 0 auto;
 
   &.footer {
    /* TODO*/
@@ -27,12 +28,12 @@ main {
 }
 
 .action-button {
-  display:inline-block;
+  display:block;
   border-radius: 100px;
   color: #fff;
   background-color: var(--topmonks-orange);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
-  padding:.7em;
+  padding: 20px 28px;
   margin:0 1em;
   text-align: center;
   text-transform:uppercase;
@@ -48,12 +49,15 @@ main {
   color: var(--topmonks-grey);
 }
 
-.box {
-  box-shadow: 0 2px 23px 0 rgba(0,0,0,0.10);
+.box,
+.teambox {
+  box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.10);
   border-radius: 20px;
   border: 1px solid var(--topmonks-grey);
   padding: 15px;
+}
 
+.teambox {
   &:before {
     background: url("/images/topmonks.com/listen_ic.svg") no-repeat;
     background-position: center 30px;
@@ -73,6 +77,20 @@ main {
 
 
 
+blockquote::before,
+blockquote::after { /* TODO */
+  content: "";
+  display: block;
+  background: url("/images/topmonks.com/unquote.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+  background-position: top left;
+  background-size: 24px 24px;
+}
+blockquote::after {
+  background-image: url("/images/topmonks.com/quote.svg");
+}
+
 
 /* MD GRID DESKTOP BREAKPOINT*/
 @media (min-width: 840px) {
@@ -84,7 +102,9 @@ main {
 
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
 @media (min-width: 480px) {
-
+  .action-button {
+    display: inline-block;
+  }
 }
 
 /* MD GRID TABLET ONLY BREAKPOINT */
