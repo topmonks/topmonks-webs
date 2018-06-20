@@ -282,7 +282,6 @@ h3::after {
   font-size: 1.1em;
 }
 
-
 @media screen and (min-width: 1500px) {
   .illustration {
     background-size: cover;
@@ -618,7 +617,7 @@ footer {
 
   .nav_bar {
     display: block;
-    background: linear-gradient(#613AB2, #6B3FB2);
+    background: linear-gradient(#613ab2, #6b3fb2);
     height: 54px;
     z-index: 1;
   }
@@ -627,7 +626,8 @@ footer {
     height: auto;
   }
 
-  .fill_1, .fill_2 {
+  .fill_1,
+  .fill_2 {
     padding-bottom: 30px;
   }
 
@@ -703,8 +703,8 @@ footer {
 }
 
 @media (min-width: 768px) {
-.main_info {
-  width: 85%;
-  margin: 0 auto;
-}
+  .main_info {
+    width: 85%;
+    margin: 0 auto;
+  }
 }

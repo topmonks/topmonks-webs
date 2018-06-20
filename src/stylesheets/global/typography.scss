@@ -1,14 +1,14 @@
 :root {
-   --mdc-theme-primary: #24292e;
-   --mdc-theme-accent: #91a8d2;
-   --mdc-theme-text-primary-on-primary: white;
-   --insight-negative-color: #e13c1e;
-   --insight-positive-color: #7e9204;
-   --topmonks-orange: #fe664b;
-   --topmonks-grey: #9B9B9B;
-  --topmonks-article-background: #F8FBFC;
-   --topmonks-black: #4a4a4a;
- }
+  --mdc-theme-primary: #24292e;
+  --mdc-theme-accent: #91a8d2;
+  --mdc-theme-text-primary-on-primary: white;
+  --insight-negative-color: #e13c1e;
+  --insight-positive-color: #7e9204;
+  --topmonks-orange: #fe664b;
+  --topmonks-grey: #9b9b9b;
+  --topmonks-article-background: #f8fbfc;
+  --topmonks-black: #4a4a4a;
+}
 
 /*
 http://pxtoem.com/ - how to count px to em
@@ -22,7 +22,7 @@ body {
   font-display: optional;
   letter-spacing: 0;
   line-height: 28px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
   font-variant-ligatures: common-ligatures contextual;
@@ -35,8 +35,8 @@ body {
   text-rendering: geometricPrecision;
 }
 
-
-h1,h2 {
+h1,
+h2 {
   font-family: "Lato Black", sans-serif;
   font-size: 28px;
   text-transform: uppercase;
@@ -66,21 +66,20 @@ a {
   }
 }
 
-ul,ul li {
-  padding: 0
+ul,
+ul li {
+  padding: 0;
 }
 ul {
-  margin: 1em 0
+  margin: 1em 0;
 }
 ul li {
   list-style: none;
-  margin: 0
+  margin: 0;
 }
-
 
 /* MD GRID DESKTOP BREAKPOINT*/
 @media (min-width: 840px) {
-
 }
 
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
@@ -88,7 +87,8 @@ ul li {
   body {
     font-size: 20px;
   }
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 36px;
   }
   h3 {
@@ -101,9 +101,7 @@ ul li {
 
 /* MD GRID TABLET ONLY BREAKPOINT */
 @media (min-width: 480px) and (max-width: 839px) {
-
 }
-
 
 .mdc-tab,
 .mdc-typography,
