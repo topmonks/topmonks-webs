@@ -219,10 +219,6 @@ h3::after {
   margin: 0;
 }
 
-.courses p {
-  height: 13em;
-}
-
 .courses a.button {
   font-size: 18px;
   font-weight: bold;
@@ -282,6 +278,13 @@ h3::after {
   font-size: 1.1em;
 }
 
+/* DEVICES */
+
+@media (max-width: 1024px) {
+  #galerie .wrapper::after {
+    visibility: hidden;
+  }
+}
 
 @media screen and (min-width: 1500px) {
   .illustration {
@@ -332,9 +335,24 @@ h3::after {
 }
 
 /* Fotogalerie */
-.gallery {
+#galerie {
   background: #f8f8ff url("/images/prodeti/fotogalerieBG.svg") no-repeat;
-  background-position-x: 50%;
+  position: relative;
+  .wrapper::after {
+    content: "";
+    display: block;
+    background: url("/images/prodeti/shapeBlue.svg") no-repeat;
+    background-position-x: 50%;
+    position: absolute;
+    right: 0;
+    top: 400px;
+    width: 179px;
+    height: 412px;
+  }
+  .fotky{
+    width: auto;
+    text-align: center;
+  }
 }
 
 /*opinions:*/
@@ -457,7 +475,6 @@ footer {
 }
 
 .agenda p {
-  width: 90%;
   color: #4a4a4a;
 }
 
@@ -608,7 +625,7 @@ footer {
   }
 
   .main_info img {
-    max-width: 100%;
+    width: auto;
     padding-top: 2em;
   }
 
@@ -696,9 +713,6 @@ footer {
 @media (min-width: 481px) {
   .nav_bar {
     height: 72px;
-  }
-  .courses p {
-    height: 8em;
   }
 }
 
