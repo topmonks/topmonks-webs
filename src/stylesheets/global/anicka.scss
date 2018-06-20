@@ -1,4 +1,135 @@
+header {
 
+  a {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  .pure-menu-horizontal .pure-menu-list {
+    display: flex;
+    float: right;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo a {
+    font-size: 20px;
+    color: #5C5FD4;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+.main_info {
+  position: relative;
+  h2 {
+    text-align: left;
+  }
+  .service p {
+    color: #4A4A4A;
+    width: 400px;
+  }
+  blockquote::before,
+  blockquote::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  blockquote::after {
+    background-image: url("/images/topmonks.com/quote_small.svg");
+    left: 210px;
+    top: 200px;
+  }
+  blockquote::before{
+    background-image: url("/images/topmonks.com/unquote_small.svg");
+    left: 32px;
+    top: 100px;
+  }
+}
+.cooperation {
+  .white {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 30px;
+  }
+  .white-first  {
+    padding: 24px 14px 10px 24px;
+  }
+  .white-second {
+    padding: 24px 14px 10px 34px;
+  }
+  .white-third {
+    padding: 14px;
+  }
+  .white-fourth {
+    padding: 24px;
+  }
+  .purple {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 10);
+    border-radius: 30px;
+    background-color: #529CFB;
+  }
+}
+.product {
+  background-color: #F3F3F3;
+  background-size: cover;
+  position: relative;
+  h3 {
+    font-family: Avenir;
+    color: #529CFB;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  p {
+    width: 200px;
+  }
+  .wrapper {
+    background-image: url("/images/topmonks.com/background/product_bg.svg");
+    width: 654px;
+    height: 769px;
+    margin: 0 auto;
+  }
+  .research {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 130px;
+    right: 85px;
+  }
+  .research h3 {
+    text-align: left;
+  }
+  .design {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 230px;
+    left: 153px;
+  }
+  .design {
+    text-align: left;
+  }
+  .develop {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 330px;
+    right: 86px;
+  }
+  .develop h3 {
+    text-align: left;
+  }
+  .sales {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 114px;
+    left: 155px;
+  }
+  .sales h3 {
+    text-align: left;
+  }
+}
 .studies {
   .studies_title p {
     text-align: center;
@@ -65,5 +196,28 @@
   }
   svg {
     margin-top: 8px;
+  }
+}
+
+/* MOBILE LAYOUT*/
+@media (max-width: 480px) {
+  nav {
+    visibility: hidden;
+  }
+  .main_info h2 {
+    text-align: center;
+    border-radius: 50px;
+    background-color: white;
+  }
+  .main_info .service p {
+    width: 100%;
+  }
+  .action-button {
+    padding: 10px 80px;
+  }
+  .product .wrapper {
+    background-image: none;
+    width: 100%;
+    height: 100%;
   }
 }
