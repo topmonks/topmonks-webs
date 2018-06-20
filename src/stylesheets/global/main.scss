@@ -4,18 +4,28 @@
   --mdc-layout-grid-column-width-desktop: 60px;
 }
 
-
 body {
   background-color: #ffffff;
 }
 
 .body-content-wrapper {
   max-width: 1440px;
+  margin: 0 auto;
 
   &.footer {
-   /* TODO*/
-    background-image: linear-gradient(-215deg, #3023AE 0%, #53A0FD 47%, #B4EC51 100%);
-    background-image: linear-gradient(-205deg, #3023AE 0%, #53A0FD 47%, #B4EC51 100%);
+    /* TODO*/
+    background-image: linear-gradient(
+      -215deg,
+      #3023ae 0%,
+      #53a0fd 47%,
+      #b4ec51 100%
+    );
+    background-image: linear-gradient(
+      -205deg,
+      #3023ae 0%,
+      #53a0fd 47%,
+      #b4ec51 100%
+    );
   }
 }
 
@@ -27,33 +37,34 @@ main {
 }
 
 .action-button {
-  display:inline-block;
+  display: block;
   border-radius: 100px;
   color: #fff;
   background-color: var(--topmonks-orange);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
-  padding:.7em;
-  margin:0 1em;
+  padding: 20px 28px;
+  margin: 0 1em;
   text-align: center;
-  text-transform:uppercase;
-
+  text-transform: uppercase;
 
   &:hover {
     text-decoration: none;
   }
 }
 
-
 .sub-text {
   color: var(--topmonks-grey);
 }
 
-.box {
-  box-shadow: 0 2px 23px 0 rgba(0,0,0,0.10);
+.box,
+.teambox {
+  box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   border: 1px solid var(--topmonks-grey);
   padding: 15px;
+}
 
+.teambox {
   &:before {
     background: url("/images/topmonks.com/listen_ic.svg") no-repeat;
     background-position: center 30px;
@@ -71,23 +82,35 @@ main {
   }
 }
 
-
-
+blockquote::before,
+blockquote::after {
+  /* TODO */
+  content: "";
+  display: block;
+  background: url("/images/topmonks.com/unquote.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+  background-position: top left;
+  background-size: 24px 24px;
+}
+blockquote::after {
+  background-image: url("/images/topmonks.com/quote.svg");
+}
 
 /* MD GRID DESKTOP BREAKPOINT*/
 @media (min-width: 840px) {
   .box {
     min-height: 450px;
   }
-
 }
 
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
 @media (min-width: 480px) {
-
+  .action-button {
+    display: inline-block;
+  }
 }
 
 /* MD GRID TABLET ONLY BREAKPOINT */
 @media (min-width: 480px) and (max-width: 839px) {
-
 }
