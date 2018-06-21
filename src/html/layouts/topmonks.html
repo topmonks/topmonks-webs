@@ -17,7 +17,6 @@
   {% include "shared/app-icons.html" %}
 </head>
 <body id="page-{{page}}">
-<div class="body-content-wrapper">
   <header>
     {% block navigation %}{% endblock %}
   </header>
@@ -25,13 +24,10 @@
   <main>
     {% block content %}{% endblock %}
   </main>
-</div>
 
-<div class="body-content-wrapper footer">
   <footer>
     {% include 'shared/footer.html' %}
   </footer>
-</div>
 
 {% block javascript %}
 <script src="/javascripts/app.js"></script>
