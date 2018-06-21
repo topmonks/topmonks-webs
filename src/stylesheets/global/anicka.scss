@@ -28,46 +28,11 @@ header {
     color: #4A4A4A;
     width: 400px;
   }
-  blockquote::before,
-  blockquote::after {
-    content: "";
-    display: block;
-    width: 24px;
-    height: 34px;
-    position: absolute;
-  }
-  blockquote::after {
-    background-image: url("/images/topmonks.com/quote_small.svg");
-    left: 210px;
-    top: 200px;
-  }
-  blockquote::before{
-    background-image: url("/images/topmonks.com/unquote_small.svg");
-    left: 32px;
-    top: 100px;
-  }
 }
 .cooperation {
-  .white {
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
-    border-radius: 30px;
-  }
-  .white-first  {
-    padding: 24px 14px 10px 24px;
-  }
-  .white-second {
-    padding: 24px 14px 10px 34px;
-  }
-  .white-third {
-    padding: 14px;
-  }
-  .white-fourth {
-    padding: 24px;
-  }
-  .purple {
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 10);
-    border-radius: 30px;
+  p.box--purple {
     background-color: #529CFB;
+    color: white;
   }
 }
 .product {
@@ -156,17 +121,6 @@ header {
   }
   blockquote {
     position: relative;
-  }
-  blockquote p {
-    color:  var(--topmonks-black);
-  }
-  blockquote::before,
-  blockquote::after {
-    content: "";
-    display: block;
-    width: 28px;
-    height: 28px;
-    position: absolute;
   }
   blockquote::after {
     background-image: url("/images/topmonks.com/quote.svg");

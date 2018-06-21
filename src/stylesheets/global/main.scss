@@ -8,32 +8,88 @@ body {
   background-color: #ffffff;
 }
 
-.body-content-wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
-
-  &.footer {
-    /* TODO*/
-    background-image: linear-gradient(
+footer {
+  /* TODO*/
+  background-image: linear-gradient(
       -215deg,
       #3023ae 0%,
       #53a0fd 47%,
       #b4ec51 100%
-    );
-    background-image: linear-gradient(
+  );
+  background-image: linear-gradient(
       -205deg,
       #3023ae 0%,
       #53a0fd 47%,
       #b4ec51 100%
-    );
-  }
+  );
 }
 
 header,
-footer,
-main {
+main, .wrapper {
   max-width: 960px;
   margin: 0 auto;
+}
+
+header {
+  a {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  .pure-menu-horizontal .pure-menu-list {
+    display: flex;
+    float: right;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo a {
+    font-size: 20px;
+    color: #5C5FD4;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+blockquote::before,
+blockquote::after {
+  content: "";
+  display: block;
+  background: url("/images/topmonks.com/unquote.svg") no-repeat;
+  width: 24px;
+  height: 24px;
+  background-position: top left;
+  background-size: 24px 24px;
+  position: absolute;
+
+}
+
+blockquote::after {
+  background-image: url("/images/topmonks.com/quote.svg");
+}
+
+.main_info {
+  position: relative;
+  h2 {
+    text-align: left;
+  }
+  .jumbotron blockquote {
+    color: #4A4A4A;
+    width: 400px;
+  }
+  blockquote::before,
+  blockquote::after {
+    background-size: 16px 16px;
+  }
+  p.box--purple {
+    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    padding: 12px;
+    text-align: center;
+    width: 200px;
+    font-weight: bold;
+    margin: 0 auto;
+  }
 }
 
 .action-button {
@@ -60,8 +116,12 @@ main {
 .teambox {
   box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  border: 1px solid var(--topmonks-grey);
   padding: 15px;
+}
+
+.box img {
+  margin: 0 auto;
+  display: flex;
 }
 
 .teambox {
@@ -82,24 +142,143 @@ main {
   }
 }
 
-blockquote::before,
-blockquote::after {
-  /* TODO */
-  content: "";
-  display: block;
-  background: url("/images/topmonks.com/unquote.svg") no-repeat;
-  width: 24px;
-  height: 24px;
-  background-position: top left;
-  background-size: 24px 24px;
+.cooperation, .jumbotron {
+  p.box--purple {
+    background-color: #529CFB;
+    color: white;
+  }
 }
-blockquote::after {
-  background-image: url("/images/topmonks.com/quote.svg");
+
+.product {
+  background-color: #F3F3F3;
+  background-size: cover;
+  position: relative;
+  h3 {
+    font-family: Avenir;
+    color: #529CFB;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  p {
+    width: 200px;
+  }
+  .wrapper {
+    background-image: url("/images/topmonks.com/background/product_bg.svg");
+    width: 654px;
+    height: 769px;
+    margin: 0 auto;
+  }
+  .step_1 {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 130px;
+    right: 85px;
+  }
+  .step_2 {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 230px;
+    left: 153px;
+  }
+
+  .step_3 {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 330px;
+    right: 86px;
+  }
+
+  .step_4 {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 114px;
+    left: 155px;
+  }
+  .sales h3 {
+    text-align: left;
+  }
+}
+
+.studies {
+  .studies_title p {
+    text-align: center;
+  }
+  h3 {
+    text-align: left;
+    margin-top: 14px;
+    margin-bottom: 0;
+    &:after {
+      content: "";
+      width: 59px;
+      height: 2px;
+      background-color: var(--topmonks-orange);
+      display: block;
+      margin: 16px 0;
+    }
+  }
+}
+
+.costumers {
+  p {
+    text-align: center;
+  }
+  .name {
+    font-size: 16px;
+    color: var(--topmonks-grey);
+    text-align: center;
+  }
+}
+
+.contact {
+  text-align: center;
+
+  .contact_title p {
+    color: var(--topmonks-black);
+  }
+  .photo {
+    border-radius: 50%;
+  }
+  svg {
+    margin-top: 8px;
+  }
+}
+
+/* MOBILE LAYOUT*/
+@media (max-width: 480px) {
+  nav {
+    display: none;
+  }
+  .main_info {
+    h2 {
+      text-align: center;
+      border-radius: 50px;
+      background-color: white;
+    }
+    p.box--purple {
+      display: none;
+    }
+    .service p {
+      width: 100%;
+    }
+  }
+  .action-button {
+    padding: 10px 80px;
+  }
+  .product .wrapper {
+    background-image: none;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* MD GRID DESKTOP BREAKPOINT*/
 @media (min-width: 840px) {
-  .box {
+  .main_info .box {
     min-height: 450px;
   }
 }
