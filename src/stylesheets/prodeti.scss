@@ -196,7 +196,7 @@ h3::after {
   background-color: #d5e9ff;
 }
 
-/*Nabídka kurzů - 3 sloupce: */
+/*Nabídka kurzů - 4 sloupce: */
 .courses {
   text-align: center;
   display: block;
@@ -355,6 +355,21 @@ h3::after {
   }
 }
 
+/*TEACHERS*/
+section.teachers {
+  text-align: center;
+  min-height: 400px;
+  a {
+    text-decoration: none;
+    font-weight: 300;
+    color: #555;
+  }
+  a:hover {
+    font-weight: 500;
+  }
+}
+
+
 /*opinions:*/
 
 .opinions {
@@ -366,11 +381,11 @@ h3::after {
   background-color: #fff;
 }
 
-.opinions .photo img {
+.photo img {
   border-radius: 50%;
 }
 
-.opinions .name {
+.name {
   color: #555;
 }
 

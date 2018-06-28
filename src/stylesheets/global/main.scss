@@ -90,6 +90,9 @@ blockquote::after {
     font-weight: bold;
     margin: 0 auto;
   }
+  .box {
+    height: 440px;
+  }
 }
 
 .action-button {
@@ -223,6 +226,12 @@ blockquote::after {
   }
 }
 
+.studies {
+  .studies--clients {
+    width: 100%;
+  }
+}
+
 .costumers {
   p {
     text-align: center;
@@ -240,7 +249,7 @@ blockquote::after {
   .contact_title p {
     color: var(--topmonks-black);
   }
-  .photo {
+  .person--photo {
     border-radius: 50%;
   }
   svg {
@@ -274,12 +283,32 @@ blockquote::after {
     width: 100%;
     height: 100%;
   }
-}
+  /*HAMBURGER*/
+  .container {
+    display: inline-block;
+    cursor: pointer;
+  }
 
-/* MD GRID DESKTOP BREAKPOINT*/
-@media (min-width: 840px) {
-  .main_info .box {
-    min-height: 450px;
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #FE664B;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
   }
 }
 
@@ -288,8 +317,24 @@ blockquote::after {
   .action-button {
     display: inline-block;
   }
+  .product .wrapper {
+    width: auto;
+  }
 }
 
 /* MD GRID TABLET ONLY BREAKPOINT */
 @media (min-width: 480px) and (max-width: 839px) {
+  .studies--clients {
+    align-content: space-between;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+
+/* DESKTOP HAMBURGER NONE */
+@media (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
 }
