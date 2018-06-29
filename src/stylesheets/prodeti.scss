@@ -284,6 +284,9 @@ h3::after {
   #galerie .wrapper::after {
     visibility: hidden;
   }
+  .main_info img {
+    max-width: 500px;
+  }
 }
 
 @media screen and (min-width: 1500px) {
@@ -640,7 +643,7 @@ footer {
   }
 
   .main_info img {
-    width: auto;
+    width: 100%;
     padding-top: 2em;
   }
 
