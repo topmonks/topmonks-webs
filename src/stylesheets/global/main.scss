@@ -24,8 +24,7 @@ footer {
   );
 }
 
-header,
-main, .wrapper {
+.wrapper {
   max-width: 960px;
   margin: 0 auto;
 }
@@ -87,11 +86,11 @@ blockquote::after {
   }
   blockquote::before {
     top: 105px;
-    left: 38px;
+    left: 200px;
   }
   blockquote::after {
     top: 233px;
-    left: 160px;
+    left: 318px;
   }
   p.box--purple {
     box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
@@ -178,45 +177,31 @@ blockquote::after {
   p {
     width: 200px;
   }
-  .wrapper {
-    background-image: url("/images/topmonks.com/background/product_bg.svg");
-    width: 654px;
-    height: 769px;
+  .steps {
+    background: url(/images/topmonks.com/background/product_bg.svg) 50% no-repeat;
+    min-height: 769px;
     margin: 0 auto;
   }
-  .step_1 {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 130px;
-    right: 85px;
-  }
-  .step_2 {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 230px;
-    left: 153px;
-  }
-
-  .step_3 {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 330px;
-    right: 86px;
+  .steps__step {
+    position: relative;
+    &:nth-child(even){
+      top: 100px;
+      left: 100px;
+    }
+    &:nth-child(odd){
+      top: 160px;
+      left: 100px;
+    }
+    &.sales {
+      top: 60px;
+    }
   }
 
-  .step_4 {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 114px;
-    left: 155px;
-  }
+
   .sales h3 {
     text-align: left;
   }
+
 }
 
 .studies {
@@ -245,6 +230,7 @@ blockquote::after {
 }
 
 .costumers {
+  position: relative;
   p {
     text-align: center;
   }
@@ -252,6 +238,14 @@ blockquote::after {
     font-size: 16px;
     color: var(--topmonks-grey);
     text-align: center;
+  }
+  blockquote::before {
+    top: 100px;
+    left: 208px;
+  }
+  blockquote::after {
+    right: 390px;
+    bottom: 92px;
   }
 }
 
