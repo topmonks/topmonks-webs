@@ -6,6 +6,9 @@
 
 body {
   background-color: #ffffff;
+  background: url("/images/topmonks.com/background/header_bg.jpg") no-repeat;
+  background-position: right top;
+  background-size: 760px;
 }
 
 footer {
@@ -37,6 +40,10 @@ header {
   .pure-menu-horizontal .pure-menu-list {
     display: flex;
     float: right;
+  }
+  .pure-menu-list a {
+    color: #ffffff;
+    font-weight: bold;
   }
   .logo {
     display: flex;
@@ -94,15 +101,24 @@ blockquote::after {
   }
   p.box--purple {
     box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #529cfb 0%, #9966ff 78%);
     border-radius: 50px;
     padding: 12px;
     text-align: center;
     width: 200px;
     font-weight: bold;
     margin: 0 auto;
+    text-transform: uppercase;
   }
   .box {
     height: 440px;
+  }
+  .boxes::before {
+    content: "";
+    display: block;
+    background-image: url("/images/topmonks.com/background/bg_boxes.svg");
+    background-size: contain;
+    position: center;
   }
 }
 
@@ -128,9 +144,10 @@ blockquote::after {
 
 .box,
 .teambox {
+  background-color: white;
   box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  padding: 15px;
+  padding: 8px 16px;
 }
 
 .box img {
@@ -158,11 +175,21 @@ blockquote::after {
 
 .cooperation, .jumbotron {
   p.box--purple {
-    background-color: #529CFB;
+    background: linear-gradient(to bottom right, #529cfb 0%, #9966ff 78%);
     color: white;
   }
 }
+.cooperation {
+  background-image: url("/images/topmonks.com/background/bg_working.jpg") ,  url("/images/topmonks.com/background/path_bg.jpg");
+  background-position: left , center bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 490px;
+}
 
+.partners {
+  padding-top: 30px;
+  background: url("/images/topmonks.com/background/bg_who.jpg") no-repeat;
+}
 .product {
   background-color: #F3F3F3;
   background-size: cover;
@@ -231,6 +258,7 @@ blockquote::after {
 
 .costumers {
   position: relative;
+  background: url(/images/topmonks.com/background/costumers_bg.jpg) no-repeat;
   p {
     text-align: center;
   }
@@ -251,11 +279,12 @@ blockquote::after {
 
 .contact {
   text-align: center;
+  background: url(/images/topmonks.com/background/contact_bg.jpg) no-repeat;
 
   .contact_title p {
     color: var(--topmonks-black);
   }
-  .person--photo {
+  .person--photo img {
     border-radius: 50%;
   }
   svg {
@@ -272,10 +301,20 @@ blockquote::after {
     h2 {
       text-align: center;
       border-radius: 50px;
+      padding: 14px;
       background-color: white;
+    }
+    .box {
+      height: 340px;
+      padding-top: 20px;
     }
     p.box--purple {
       display: none;
+    }
+    .jumbotron__lead {
+      box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      padding: 8px 16px;
     }
     .service p {
       width: 100%;
