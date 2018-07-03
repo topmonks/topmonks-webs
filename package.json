@@ -12,6 +12,6 @@
     "nunjucks-markdown": "^2.0.1"
   },
   "devDependencies": {
-    "prettier": "^1.13.5"
+    "prettier": "^1.13.7"
   }
 }
