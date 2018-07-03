@@ -29,6 +29,8 @@ footer {
 .wrapper {
   max-width: 960px;
   margin: 0 auto;
+  padding: 16px;
+  --mdc-layout-grid-margin-desktop: 0;
 }
 
 header {
@@ -58,29 +60,29 @@ header {
 nav {
   display: none;
 }
-blockquote{
+blockquote {
   position: relative;
   margin: 0;
-}
-blockquote::before,
-blockquote::after {
-  font-family: "Lato Black", sans-serif;
-  color: #dadada;
-  content: open-quote;
-  font-size: 2.125em;
-  display: block;
-  width: 1em;
-  height: 0.5em;
-  position: absolute;
-}
-blockquote::before{
-  left: 0;
-  top: 0.2em;
-}
-blockquote::after {
-  content: close-quote;
-  bottom:0;
-  right: 0;
+  &::before,
+  &::after {
+    font-family: "Lato Black", sans-serif;
+    color: #dadada;
+    content: open-quote;
+    font-size: 2.125em;
+    display: block;
+    width: 1em;
+    height: 0.5em;
+    position: absolute;
+  }
+  &::before{
+    left: -0.4em;
+    top: 0em;
+  }
+  &::after {
+    content: close-quote;
+    bottom:0;
+    right: 0;
+  }
 }
 
 .main_info {
@@ -100,12 +102,13 @@ blockquote::after {
 }
 
 .action-button {
+  font-weight: 700;
   display: block;
   border-radius: 100px;
   color: #fff;
   background-color: var(--topmonks-orange);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
-  padding: 20px 28px;
+  padding: 10px 28px;
   margin: 0 1em;
   text-align: center;
   text-transform: uppercase;
@@ -294,8 +297,16 @@ blockquote::after {
   nav {
     display: block;
   }
+  .wrapper{
+    padding: 24px 0;
+  }
   .action-button {
     display: inline-block;
+    margin: 0;
+  }
+  blockquote::before {
+    left: 0;
+    top: 0.2em;
   }
   .product .steps {
     width: auto;
@@ -308,9 +319,9 @@ blockquote::after {
       background: none;
     }
     .jumbotron__lead {
-      color: #4A4A4A;
-      width: 400px;
+      max-width: 320px;
       box-shadow: none;
+      padding-left: 1em;
     }
     .jumbotron__lead p {
       max-width: 320px;
@@ -320,10 +331,9 @@ blockquote::after {
       box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
       background: linear-gradient(to bottom right, #529cfb 0%, #9966ff 78%);
       border-radius: 50px;
-      padding: 12px;
       text-align: center;
-      width: 200px;
-      font-weight: bold;
+      width: 8em;
+      font-weight: 700;
       margin: 0 auto;
       text-transform: uppercase;
     }
