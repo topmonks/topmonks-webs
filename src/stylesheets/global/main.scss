@@ -6,7 +6,7 @@
 
 body {
   background-color: #ffffff;
-  background: url("/images/topmonks.com/background/header_bg.jpg") no-repeat;
+  background: url("../../images/topmonks.com/background/header_bg.jpg") no-repeat;
   background-position: right top;
   background-size: 760px;
 }
@@ -18,8 +18,7 @@ footer {
       #3023ae 0%,
       #53a0fd 47%,
       #b4ec51 100%
-  );
-  background-image: linear-gradient(
+  ), linear-gradient(
       -205deg,
       #3023ae 0%,
       #53a0fd 47%,
@@ -56,69 +55,47 @@ header {
     text-decoration: none;
   }
 }
-
+nav {
+  display: none;
+}
+blockquote{
+  position: relative;
+  margin: 0;
+}
 blockquote::before,
 blockquote::after {
-  content: "";
+  font-family: "Lato Black", sans-serif;
+  color: #dadada;
+  content: open-quote;
+  font-size: 2.125em;
   display: block;
-  background: url("/images/topmonks.com/unquote.svg") no-repeat;
-  width: 24px;
-  height: 24px;
-  background-position: top left;
-  background-size: 24px 24px;
+  width: 1em;
+  height: 0.5em;
   position: absolute;
-
 }
-
+blockquote::before{
+  left: 0;
+  top: 0.2em;
+}
 blockquote::after {
-  background-image: url("/images/topmonks.com/quote.svg");
+  content: close-quote;
+  bottom:0;
+  right: 0;
 }
 
 .main_info {
-  position: relative;
   h2 {
-    text-align: left;
-  }
-  .jumbotron blockquote {
-    color: #4A4A4A;
-    width: 400px;
-  }
-  .jumbotron__lead p {
-    max-width: 320px;
-  }
-  blockquote::before,
-  blockquote::after {
-    background-size: 16px 16px;
-    position: absolute;
-  }
-  blockquote::before {
-    top: 105px;
-    left: 200px;
-  }
-  blockquote::after {
-    top: 233px;
-    left: 318px;
-  }
-  p.box--purple {
-    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to bottom right, #529cfb 0%, #9966ff 78%);
-    border-radius: 50px;
-    padding: 12px;
     text-align: center;
-    width: 200px;
-    font-weight: bold;
-    margin: 0 auto;
-    text-transform: uppercase;
+    border-radius: 50px;
+    padding: 14px;
+    background-color: white;
   }
   .box {
-    height: 440px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
-  .boxes::before {
-    content: "";
-    display: block;
-    background-image: url("/images/topmonks.com/background/bg_boxes.svg");
-    background-size: contain;
-    position: center;
+  p.box--purple {
+    display: none;
   }
 }
 
@@ -147,7 +124,7 @@ blockquote::after {
   background-color: white;
   box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  padding: 8px 16px;
+  padding: 8px 20px;
 }
 
 .box img {
@@ -157,7 +134,7 @@ blockquote::after {
 
 .teambox {
   &:before {
-    background: url("/images/topmonks.com/listen_ic.svg") no-repeat;
+    background: url("../../images/topmonks.com/listen_ic.svg") no-repeat;
     background-position: center 30px;
     background-size: 82px 82px;
     content: "";
@@ -166,10 +143,10 @@ blockquote::after {
   }
 
   &.develop:before {
-    background-image: url("/images/topmonks.com/develop_ic.svg");
+    background-image: url("../../images/topmonks.com/develop_ic.svg");
   }
   &.verify:before {
-    background-image: url("/images/topmonks.com/verify_ic.svg");
+    background-image: url("../../images/topmonks.com/verify_ic.svg");
   }
 }
 
@@ -180,7 +157,7 @@ blockquote::after {
   }
 }
 .cooperation {
-  background-image: url("/images/topmonks.com/background/bg_working.jpg") ,  url("/images/topmonks.com/background/path_bg.jpg");
+  background-image: url("../../images/topmonks.com/background/bg_working.jpg") ,  url("../../images/topmonks.com/background/path_bg.jpg");
   background-position: left , center bottom;
   background-repeat: no-repeat, no-repeat;
   background-size: 490px;
@@ -188,7 +165,7 @@ blockquote::after {
 
 .partners {
   padding-top: 30px;
-  background: url("/images/topmonks.com/background/bg_who.jpg") no-repeat;
+  background: url("../../images/topmonks.com/background/bg_who.jpg") no-repeat;
 }
 .product {
   background-color: #F3F3F3;
@@ -205,7 +182,9 @@ blockquote::after {
     width: 200px;
   }
   .steps {
-    background: url(/images/topmonks.com/background/product_bg.svg) 50% no-repeat;
+
+    width: 100%;
+    height: 100%;
     min-height: 769px;
     margin: 0 auto;
   }
@@ -223,8 +202,6 @@ blockquote::after {
       top: 60px;
     }
   }
-
-
   .sales h3 {
     text-align: left;
   }
@@ -258,7 +235,7 @@ blockquote::after {
 
 .costumers {
   position: relative;
-  background: url(/images/topmonks.com/background/costumers_bg.jpg) no-repeat;
+  background: url("../../images/topmonks.com/background/costumers_bg.jpg") no-repeat;
   p {
     text-align: center;
   }
@@ -267,19 +244,11 @@ blockquote::after {
     color: var(--topmonks-grey);
     text-align: center;
   }
-  blockquote::before {
-    top: 100px;
-    left: 208px;
-  }
-  blockquote::after {
-    right: 390px;
-    bottom: 92px;
-  }
 }
 
 .contact {
   text-align: center;
-  background: url(/images/topmonks.com/background/contact_bg.jpg) no-repeat;
+  background: url("../../images/topmonks.com/background/contact_bg.jpg") no-repeat;
 
   .contact_title p {
     color: var(--topmonks-black);
@@ -292,78 +261,87 @@ blockquote::after {
   }
 }
 
-/* MOBILE LAYOUT*/
-@media (max-width: 480px) {
-  nav {
-    display: none;
-  }
-  .main_info {
-    h2 {
-      text-align: center;
-      border-radius: 50px;
-      padding: 14px;
-      background-color: white;
-    }
-    .box {
-      height: 340px;
-      padding-top: 20px;
-    }
-    p.box--purple {
-      display: none;
-    }
-    .jumbotron__lead {
-      box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
-      padding: 8px 16px;
-    }
-    .service p {
-      width: 100%;
-    }
-  }
-  .action-button {
-    padding: 10px 80px;
-  }
-  .product .wrapper {
-    background-image: none;
-    width: 100%;
-    height: 100%;
-  }
-  /*HAMBURGER*/
-  .container {
-    display: inline-block;
-    cursor: pointer;
-  }
+/*HAMBURGER*/
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
 
-  .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #FE664B;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #FE664B;
+  margin: 6px 0;
+  transition: 0.4s;
+}
 
-  .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-  }
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
 
-  .change .bar2 {
-    opacity: 0;
-  }
+.change .bar2 {
+  opacity: 0;
+}
 
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
 @media (min-width: 480px) {
+  nav {
+    display: block;
+  }
   .action-button {
     display: inline-block;
   }
-  .product .wrapper {
+  .product .steps {
     width: auto;
+    background: url("../../images/topmonks.com/background/product_bg.svg") 50% no-repeat;
+  }
+  .main_info {
+    position: relative;
+    h2 {
+      text-align: left;
+      background: none;
+    }
+    .jumbotron__lead {
+      color: #4A4A4A;
+      width: 400px;
+      box-shadow: none;
+    }
+    .jumbotron__lead p {
+      max-width: 320px;
+    }
+    p.box--purple {
+      display: block;
+      box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
+      background: linear-gradient(to bottom right, #529cfb 0%, #9966ff 78%);
+      border-radius: 50px;
+      padding: 12px;
+      text-align: center;
+      width: 200px;
+      font-weight: bold;
+      margin: 0 auto;
+      text-transform: uppercase;
+    }
+    .box--lead {
+      background: none;
+      box-shadow: none;
+      height: auto;
+    }
+    .boxes::before {
+      content: "";
+      display: block;
+      background-image: url("../../images/topmonks.com/background/bg_boxes.svg");
+      background-size: contain;
+      position: center;
+    }
+  }
+  .hamburger {
+    display: none;
   }
 }
 
@@ -372,14 +350,5 @@ blockquote::after {
   .studies--clients {
     align-content: space-between;
   }
-  .hamburger {
-    display: none;
-  }
 }
 
-/* DESKTOP HAMBURGER NONE */
-@media (min-width: 1024px) {
-  .hamburger {
-    display: none;
-  }
-}

@@ -4,12 +4,21 @@
 <head>
   <meta charset="utf-8">
   <title>{% block title %}{{ title }}{% endblock %}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://unpkg.com/material-components-web@v0.35.0/dist/material-components-web.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Preload CDN assets -->
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Custom Fonts -->
+  <script>WebFontConfig={google:{families:["Lato:400,700:latin-ext"]}, async:true}</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async defer integrity="sha384-pvXSwSU09c+q9mPyY++ygUHWIYRoaxgnJ/JC5wcOzMb/NVVu+IDniiB9qWp3ZNWM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@v0.35.0/dist/material-components-web.min.css">
   <link rel="stylesheet" href="/stylesheets/global/typography.css">
   <link rel="stylesheet" href="/stylesheets/global/main.css">
+
   {% block head %}{% endblock %}
   {% include "shared/app-icons.html" %}
 </head>
