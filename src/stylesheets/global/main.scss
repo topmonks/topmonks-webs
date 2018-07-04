@@ -51,10 +51,11 @@ header {
     align-items: center;
   }
   .logo a {
-    font-size: 20px;
-    color: #5C5FD4;
-    font-weight: bold;
+    font-size: 1.25em;
+    color: #fff;
+    font-weight: 900;
     text-decoration: none;
+    display: flex;
   }
 }
 nav {
@@ -63,20 +64,19 @@ nav {
 blockquote {
   position: relative;
   margin: 0;
+  quotes: "“" "„" ;
   &::before,
   &::after {
-    font-family: "Lato Black", sans-serif;
     color: #dadada;
     content: open-quote;
     font-size: 2.125em;
+    font-weight: 900;
     display: block;
-    width: 1em;
-    height: 0.5em;
     position: absolute;
   }
   &::before{
     left: -0.4em;
-    top: 0em;
+    top: 0;
   }
   &::after {
     content: close-quote;
@@ -307,6 +307,10 @@ blockquote {
   blockquote::before {
     left: 0;
     top: 0.2em;
+  }
+  header .logo a{
+    font-size: 1.6em;
+    color: #5C5FD4;
   }
   .product .steps {
     width: auto;
