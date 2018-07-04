@@ -7,13 +7,11 @@ module.exports = {
   fonts: true,
   static: true,
   svgSprite: true,
-  ghPages: true,
+  ghPages: false,
 
   javascripts: {
     entry: {
-      // files paths are relative to
-      // javascripts.dest in path-config.json
-      app: ["./app.js"]
+      "app": ["./index.js"]
     }
   },
 
@@ -24,9 +22,9 @@ module.exports = {
   },
 
   html: {
+    dataFile: "../data/global.json",
     nunjucksRender: {
       manageEnv: function(environment) {
-        console.log(environment.loaders[0].searchPaths);
         // The second argument can be any function that renders markdown
         markdown.register(environment, marked);
       }
@@ -37,7 +35,7 @@ module.exports = {
     server: {
       // should match `dest` in
       // path-config.json
-      baseDir: "public"
+      baseDir: "./public/prodeti.topmonks.cz"
     }
   },
 

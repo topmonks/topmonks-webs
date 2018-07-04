@@ -5,9 +5,7 @@
 }
 
 body {
-  background-color: #ffffff;
-  background: url("../../images/topmonks.com/background/header_bg.jpg") no-repeat;
-  background-position: right top;
+  background: #fff url("/images/background/header_bg.jpg") no-repeat right top;
   background-size: 760px;
 }
 
@@ -38,11 +36,11 @@ header {
     text-transform: uppercase;
     font-size: 16px;
   }
-  .pure-menu-horizontal .pure-menu-list {
+  .menu.menu--horizontal .menu__list {
     display: flex;
     float: right;
   }
-  .pure-menu-list a {
+  .menu__list a {
     color: #ffffff;
     font-weight: bold;
   }
@@ -137,7 +135,7 @@ blockquote {
 
 .teambox {
   &:before {
-    background: url("../../images/topmonks.com/listen_ic.svg") no-repeat;
+    background: url("/images/listen_ic.svg") no-repeat;
     background-position: center 30px;
     background-size: 82px 82px;
     content: "";
@@ -146,10 +144,10 @@ blockquote {
   }
 
   &.develop:before {
-    background-image: url("../../images/topmonks.com/develop_ic.svg");
+    background-image: url("/images/develop_ic.svg");
   }
   &.verify:before {
-    background-image: url("../../images/topmonks.com/verify_ic.svg");
+    background-image: url("/images/verify_ic.svg");
   }
 }
 
@@ -160,7 +158,7 @@ blockquote {
   }
 }
 .cooperation {
-  background-image: url("../../images/topmonks.com/background/bg_working.jpg") ,  url("../../images/topmonks.com/background/path_bg.jpg");
+  background-image: url("/images/background/bg_working.jpg") ,  url("/images/background/path_bg.jpg");
   background-position: left , center bottom;
   background-repeat: no-repeat, no-repeat;
   background-size: 490px;
@@ -168,14 +166,13 @@ blockquote {
 
 .partners {
   padding-top: 30px;
-  background: url("../../images/topmonks.com/background/bg_who.jpg") no-repeat;
+  background: url("/images/background/bg_who.jpg") no-repeat;
 }
 .product {
   background-color: #F3F3F3;
   background-size: cover;
   position: relative;
   h3 {
-    font-family: Avenir;
     color: #529CFB;
     font-size: 18px;
     text-transform: uppercase;
@@ -238,7 +235,7 @@ blockquote {
 
 .costumers {
   position: relative;
-  background: url("../../images/topmonks.com/background/costumers_bg.jpg") no-repeat;
+  background: url("/images/background/costumers_bg.jpg") no-repeat;
   p {
     text-align: center;
   }
@@ -251,7 +248,7 @@ blockquote {
 
 .contact {
   text-align: center;
-  background: url("../../images/topmonks.com/background/contact_bg.jpg") no-repeat;
+  background: url("/images/background/contact_bg.jpg") no-repeat;
 
   .contact_title p {
     color: var(--topmonks-black);
@@ -314,7 +311,7 @@ blockquote {
   }
   .product .steps {
     width: auto;
-    background: url("../../images/topmonks.com/background/product_bg.svg") 50% no-repeat;
+    background: url("/images/background/product_bg.svg") 50% no-repeat;
   }
   .main_info {
     position: relative;
@@ -349,7 +346,7 @@ blockquote {
     .boxes::before {
       content: "";
       display: block;
-      background-image: url("../../images/topmonks.com/background/bg_boxes.svg");
+      background-image: url("/images/background/bg_boxes.svg");
       background-size: contain;
       position: center;
     }
@@ -366,3 +363,4 @@ blockquote {
   }
 }
 
+@import "@material/layout-grid/mdc-layout-grid";

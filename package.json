@@ -2,23 +2,25 @@
   "name": "TopMonks-webs",
   "version": "1.0.0",
   "description": "TopMonks Webs",
-  "main": "indes.html",
   "repository": "https://github.com/topmonks/topmonks-webs.git",
   "author": "TopMonks",
   "license": "MIT",
   "dependencies": {
-    "blendid": "^4.4.3",
-    "marked": "^0.3.19",
-    "nunjucks-markdown": "^2.0.1"
+    "@material/layout-grid": "^0.34.0"
   },
   "devDependencies": {
+    "blendid": "^4.4.3",
     "eslint": "^5.0.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.1",
+    "marked": "^0.3.19",
+    "nunjucks-markdown": "^2.0.1",
     "prettier": "^1.13.7"
   },
   "scripts": {
-    "start": "blendid",
-    "build": "blendid -- build"
+    "start:www.topmonks.com": "BLENDID_CONFIG_PATH=./www.topmonks.com/config/ blendid",
+    "start:prodeti.topmonks.cz": "BLENDID_CONFIG_PATH=./prodeti.topmonks.cz/config/ blendid",
+    "build:www.topmonks.com": "BLENDID_CONFIG_PATH=./www.topmonks.com/config/ blendid -- build",
+    "build:prodeti.topmonks.cz": "BLENDID_CONFIG_PATH=./prodeti.topmonks.cz/config/ blendid -- build"
   }
 }
