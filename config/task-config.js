@@ -1,15 +1,13 @@
-var globImporter   = require('node-sass-glob-importer')
-var markdown       = require('nunjucks-markdown')
-var marked         = require('marked')
+const globImporter = require("node-sass-glob-importer");
+const markdown = require("nunjucks-markdown");
+const marked = require("marked");
 
 module.exports = {
-  html        : true,
-  images      : true,
-  fonts       : true,
-  static      : true,
-  svgSprite   : true,
-  ghPages     : true,
-  stylesheets : true,
+  images: true,
+  fonts: true,
+  "static": true,
+  svgSprite: true,
+  ghPages: true,
 
   javascripts: {
     entry: {
@@ -28,9 +26,9 @@ module.exports = {
   html: {
     nunjucksRender: {
       manageEnv: function(environment) {
-          // The second argument can be any function that renders markdown
-            markdown.register(environment, marked);
-        }
+        // The second argument can be any function that renders markdown
+        markdown.register(environment, marked);
+      }
     }
   },
 
@@ -38,11 +36,11 @@ module.exports = {
     server: {
       // should match `dest` in
       // path-config.json
-      baseDir: 'public'
+      baseDir: "public"
     }
   },
 
   production: {
     rev: true
   }
-}
+};
