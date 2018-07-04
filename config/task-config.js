@@ -5,7 +5,7 @@ const marked = require("marked");
 module.exports = {
   images: true,
   fonts: true,
-  "static": true,
+  static: true,
   svgSprite: true,
   ghPages: true,
 

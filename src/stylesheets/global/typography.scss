@@ -21,7 +21,7 @@ body {
   padding: 0;
   font-display: optional;
   letter-spacing: 0;
-  line-height: 1.75em;    //28px
+  line-height: 1.75em; //28px
   font-family: "Lato", sans-serif;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
@@ -37,7 +37,7 @@ body {
 h1,
 h2 {
   font-family: "Lato Black", sans-serif;
-  font-size: 1.75em;      //28px
+  font-size: 1.75em; //28px
   text-transform: uppercase;
   text-align: center;
   color: #000000;
@@ -45,13 +45,13 @@ h2 {
 }
 h3 {
   font-family: "Lato Black", sans-serif;
-  font-size: 1.5em;       //24px
+  font-size: 1.5em; //24px
   text-align: center;
   color: #000000;
 }
 h4 {
-  font-size: 1em;         //16px
-  margin-bottom: 0.25em;  //4px
+  font-size: 1em; //16px
+  margin-bottom: 0.25em; //4px
 }
 
 p {
@@ -85,18 +85,18 @@ ul li {
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
 @media (min-width: 480px) {
   body {
-    font-size: 1.125em;  //20px
+    font-size: 1.125em; //20px
   }
   h1,
   h2 {
-    font-size: 2.25em;  //36px
+    font-size: 2.25em; //36px
     line-height: 32px;
   }
   h3 {
-    font-size: 1.5em;   //24px
+    font-size: 1.5em; //24px
   }
   h4 {
-    font-size: 20px;    //20px
+    font-size: 20px; //20px
   }
 }
 
