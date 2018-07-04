@@ -5,8 +5,12 @@
 }
 
 body {
-  background: #fff url("/images/background/header_bg.jpg") no-repeat right top;
-  background-size: 760px;
+  background: #fff url("https://res.cloudinary.com/topmonks/image/upload/w_670,dpr_auto,q_auto,f_auto/v1530724292/topmonks.com/bgnd_header.png") no-repeat;
+  background-position: right calc(50% - 270px) top -40px;
+  background-size: 670px auto;
+}
+svg {
+  fill: currentColor;
 }
 
 footer {
@@ -34,7 +38,6 @@ footer {
 header {
   a {
     text-transform: uppercase;
-    font-size: 16px;
   }
   .menu.menu--horizontal .menu__list {
     display: flex;
@@ -55,13 +58,21 @@ header {
     text-decoration: none;
     display: flex;
   }
+  .wrapper {
+    padding: 5px 0 0px 24px;
+  }
+  .monk {
+    padding-top: 4px;
+    padding-right: 4px;
+  }
 }
 nav {
   display: none;
 }
 blockquote {
   position: relative;
-  margin: 0;
+  margin: 0 0 3em;
+  line-height: 1.444em;
   quotes: "“" "„" ;
   &::before,
   &::after {
@@ -81,6 +92,9 @@ blockquote {
     bottom:0;
     right: 0;
   }
+}
+.jumbotron__title {
+  margin-bottom: 6em;
 }
 
 .main_info {
@@ -289,10 +303,31 @@ blockquote {
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx)
+{
+  body {
+    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_670,dpr_2,q_auto,f_auto/v1530724292/topmonks.com/bgnd_header.png");
+  }
+}
+
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
 @media (min-width: 480px) {
+  body {
+    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_867,dpr_auto,q_auto,f_auto/v1530724292/topmonks.com/bgnd_header.png");
+    background-position: right calc(50% - 320px) top 0;
+    background-size: 867px auto;
+  }
   nav {
     display: block;
+    .menu__list li + li{
+      margin-left: 20px;
+    }
   }
   .wrapper{
     padding: 24px 0;
@@ -305,9 +340,17 @@ blockquote {
     left: 0;
     top: 0.2em;
   }
-  header .logo a{
-    font-size: 1.6em;
-    color: #5C5FD4;
+  header {
+    .wrapper{
+      padding: 40px 0 40px 24px;
+    }
+    .logo a {
+      font-size: 1.6em;
+      color: #5C5FD4;
+    }
+  }
+  .jumbotron__title{
+    margin-bottom: auto;
   }
   .product .steps {
     width: auto;
@@ -353,6 +396,17 @@ blockquote {
   }
   .hamburger {
     display: none;
+  }
+}
+
+/*RETINA - MD GRID DESKTOP BREAKPOINT  */
+@media
+(        min-device-pixel-ratio: 2)      and (min-width: 840px),
+(                min-resolution: 192dpi) and (min-width: 840px),
+(                min-resolution: 2dppx)  and (min-width: 840px)
+{
+  body {
+    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_867,dpr_2,q_auto,f_auto/v1530724292/topmonks.com/bgnd_header.png");
   }
 }
 
