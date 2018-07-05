@@ -220,6 +220,9 @@ h3::after {
   font-weight: 300;
   margin: 0;
 }
+.courses p {
+  padding-bottom: 8px;
+}
 
 .courses a.button {
   font-size: 18px;
@@ -396,7 +399,9 @@ section.teachers {
 .name p {
   color: #9b9b9b;
 }
-
+.slide {
+  padding-bottom: 36px;
+}
 .slides-wrap .lSSlideOuter .lSPager.lSpg {
   margin-top: 24px !important;
 }
@@ -661,6 +666,7 @@ footer {
 
   .courses p {
     height: auto;
+    padding-bottom: 4px;
   }
 
   .fill_1,
