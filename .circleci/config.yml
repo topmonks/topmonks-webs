@@ -26,4 +26,8 @@ jobs:
       - run:
           command: yarn run http-server ./public/www.topmonks.com
           background: true
-      - run: yarn test
+      - run: |
+          mkdir results
+          yarn test
+      - store_artifacts:
+          path: ./results

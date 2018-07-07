@@ -25,7 +25,7 @@
     "build:www.topmonks.com": "BLENDID_CONFIG_PATH=./www.topmonks.com/config/ blendid -- build",
     "build:prodeti.topmonks.cz": "BLENDID_CONFIG_PATH=./prodeti.topmonks.cz/config/ blendid -- build",
     "build": "yarn run build:www.topmonks.com && yarn run build:prodeti.topmonks.cz",
-    "test:lighthouse": "lighthouse http://localhost:8080/ --output json --output html --chrome-flags=\"--headless\" --no-enable-error-reporting --skip-audits is-on-https --skip-audits themed-omnibox --skip-audits redirects-http --skip-audits load-fast-enough-for-pwa --skip-audits service-worker --skip-audits splash-screen --skip-audits webapp-install-banner --skip-audits works-offline",
+    "test:lighthouse": "lighthouse http://localhost:8080/ --output json --output html --output-path ./results/lh.html --chrome-flags=\"--headless\" --no-enable-error-reporting --skip-audits is-on-https --skip-audits themed-omnibox --skip-audits redirects-http --skip-audits load-fast-enough-for-pwa --skip-audits service-worker --skip-audits splash-screen --skip-audits webapp-install-banner --skip-audits works-offline",
     "test": "yarn run test:lighthouse"
   }
 }
