@@ -23,11 +23,63 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn run build
-      - run:
-          command: yarn run http-server ./public/www.topmonks.com
-          background: true
       - run: |
           mkdir results
           yarn test
       - store_artifacts:
           path: ./results
+      - persist_to_workspace:
+          root: .
+          paths: public
+
+  test-www-topmonks-com:
+    docker:
+      - image: circleci/node:10-browsers
+    working_directory: ~/topmonks-webs
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          command: yarn run http-server ./public/www.topmonks.com
+          background: true
+      - run: |
+          mkdir results
+          yarn test:lighthouse
+      - store_artifacts:
+          path: ./results
+
+  test-prodeti-topmonks-cz:
+    docker:
+      - image: circleci/node:10-browsers
+    working_directory: ~/topmonks-webs
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          command: yarn run http-server ./public/prodeti.topmonks.cz
+          background: true
+      - run: |
+          mkdir results
+          yarn test:lighthouse
+      - store_artifacts:
+          path: ./results
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - test-www-topmonks-com:
+          requires:
+            - build
+      - test-prodeti-topmonks-cz:
+          requires:
+            - build
