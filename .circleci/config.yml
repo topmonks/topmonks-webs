@@ -21,7 +21,10 @@ test-site: &test-site
       - run: |
           mkdir results
           yarn test:lighthouse
+          yarn test:ava
       - store_artifacts:
+          path: ./results
+      - store_test_results:
           path: ./results
 
 jobs:
@@ -29,7 +32,6 @@ jobs:
     docker:
       - image: circleci/node:10-browsers
     working_directory: ~/topmonks-webs
-
     steps:
       - checkout
       - restore_cache:
@@ -48,6 +50,8 @@ jobs:
           mkdir results
           yarn test
       - store_artifacts:
+          path: ./results
+      - store_test_results:
           path: ./results
       - persist_to_workspace:
           root: .
