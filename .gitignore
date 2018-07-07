@@ -4,3 +4,4 @@ public/
 .idea/workspace.xml
 /package-lock.json
 results/
+*.log
