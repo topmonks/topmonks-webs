@@ -9,8 +9,9 @@ This is TopMonks websites monorepo for effective development of all our static w
 
 This project uses [Blendid](https://github.com/vigetlabs/blendid) stack. 
 
-Please, format every source code with [EditorConfig](https://editorconfig.org/) and [Prettier](https://github.com/prettier/prettier). We have [ESLint](https://eslint.org/) preconfigured, checks are run on [Build Server](https://circleci.com/gh/topmonks/topmonks-webs).
-In development, check your work conforms to [Lighthouse](https://developers.google.com/web/tools/lighthouse/) rules. We aim at least for 75% conformity.  
+Please, format every source code with [EditorConfig](https://editorconfig.org/) and [Prettier](https://github.com/prettier/prettier). We have [ESLint](https://eslint.org/) and [Stylelint](https://stylelint.io/)
+preconfigured with prettier presets. Checks run on [Build Server](https://circleci.com/gh/topmonks/topmonks-webs) via `yarn test` command.
+In development, check that your work conforms to [Lighthouse](https://developers.google.com/web/tools/lighthouse/) rules. We aim at least for 75% conformity.  
 
 **Be responsible, keep our quality bar high.**
 
