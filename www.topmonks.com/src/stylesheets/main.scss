@@ -77,17 +77,18 @@ blockquote {
     position: absolute;
   }
   &::before {
-    left: -0.4em;
-    top: -0.5em;
+    left: -16px;
+    top: -12px;
   }
   &::after {
     content: close-quote;
-    bottom: 0;
-    //right: 0;
+    bottom: 4px;
+    padding-left: 4px;
   }
 }
 
 .jumbotron__title {
+  padding:4px;
   margin-bottom: 6em;
 }
 
@@ -95,7 +96,7 @@ blockquote {
   h2 {
     text-align: center;
     border-radius: 50px;
-    padding: 14px;
+    padding: 4px;
     background-color: white;
   }
   .box {
