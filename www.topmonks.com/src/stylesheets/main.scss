@@ -59,6 +59,7 @@ body {
 blockquote {
   position: relative;
   margin: 0 0 3em;
+  padding: 0 1em;
   quotes: "“" "„";
   p {
     display: inline;
@@ -73,8 +74,8 @@ blockquote {
     position: absolute;
   }
   &::before {
-    left: -16px;
     top: -12px;
+    left: 0;
   }
   &::after {
     content: close-quote;
@@ -84,7 +85,7 @@ blockquote {
 }
 
 .jumbotron__title {
-  padding:4px;
+  padding: 4px;
   margin-bottom: 6em;
 }
 
@@ -376,7 +377,7 @@ blockquote {
     transform: translate(calc(-100vw - 12px), -64px);
     position: absolute;
     z-index: 3;
-    transition: transform .3s;
+    transition: transform 0.3s;
     overflow: hidden;
     background-color: var(--tm-secondary);
     color: #fff;
@@ -384,7 +385,7 @@ blockquote {
     .tm-menu__list li {
       margin: 0 24px;
     }
-    .tm-menu__list li+li {
+    .tm-menu__list li + li {
       border-top: 1px solid rgba(255, 255, 255, 0.5);
     }
     .tm-menu__list a {
@@ -451,10 +452,6 @@ blockquote {
   .action-button {
     display: inline-block;
     margin: 0;
-  }
-  blockquote::before {
-    left: 0;
-    top: 0.2em;
   }
   .jumbotron__title {
     margin-top: 64px;

@@ -1,0 +1,31 @@
+.tm-footer {
+  background-color: var(--tm-secondary);
+  color: #fff;
+}
+
+.tm-footer h3 {
+  color: #fff;
+  font-weight: 500;
+  text-align: left;
+}
+
+.tm-footer a {
+  color: #fff;
+  text-decoration: underline;
+  @media screen and (max-width: 480px) {
+    display: inline-block;
+    padding: 4px 0 ;
+    margin: 4px 0;
+  }
+}
+
+.social-buttons {
+  background-color: #fff;
+  border-radius: 52px;
+  display: inline-block;
+}
+.social-buttons a {
+  line-height: 32px;
+  margin: 0;
+  padding: 10px 12px 0;
+}
