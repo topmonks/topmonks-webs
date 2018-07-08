@@ -73,7 +73,8 @@ h3::after {
 .a11y--hidden {
   // Hides content visually but make it accessible for screen readers.
   position: absolute !important;
-  height: 1px; width: 1px;
+  height: 1px;
+  width: 1px;
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
@@ -776,7 +777,8 @@ footer {
 }
 
 @media print {
-  body > header, body > footer {
+  body > header,
+  body > footer {
     display: none;
   }
 
