@@ -30,7 +30,7 @@
     <div class="mdc-layout-grid__inner">
       <div
         class="tm-hamburger mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone">
-        <div class="tm-hamburger__container" onclick="this.classList.toggle('tm-hamburger__container--open')">
+        <div class="tm-hamburger__container">
           <div class="tm-hamburger__bar"></div>
           <div class="tm-hamburger__bar"></div>
           <div class="tm-hamburger__bar"></div>
@@ -63,6 +63,19 @@
       </div>
     </div>
   </div>
+  <script>
+    var appBar = document.querySelector(".tm-app-bar");
+    var hamburger = document.querySelector(".tm-hamburger__container");
+    var menu = document.querySelector(".tm-menu");
+    hamburger.addEventListener("click", toggleMenu(hamburger));
+    function toggleMenu(hamburger) {
+      return function(e) {
+        menu.classList.remove("tm-menu--horizontal");
+        hamburger.classList.toggle("tm-hamburger__container--open");
+        appBar.classList.toggle("tm-app-bar--open")
+      }
+    }
+  </script>
 </header>
 
 <main>

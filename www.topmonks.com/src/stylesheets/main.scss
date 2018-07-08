@@ -56,10 +56,6 @@ body {
   padding-right: 6px;
 }
 
-nav {
-  display: none;
-}
-
 blockquote {
   position: relative;
   margin: 0 0 3em;
@@ -323,9 +319,16 @@ blockquote {
 
 .tm-app-bar {
   @media screen and (max-width: 480px) {
+    width: 100vw;
     height: 52px;
+    z-index: 4;
+    top: 0;
+    position: absolute;
     .tm-layout-wrapper {
       padding: 8px 16px 0 8px;
+    }
+    + main {
+      margin-top: 52px;
     }
   }
   @media screen and (min-width: 481px) {
@@ -343,29 +346,72 @@ blockquote {
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   width: 100%;
-  z-index: 4;
   .tm-logo {
-    color: var(--tm-secondary) !important;
-  }
-  + main {
-    margin-top: 52px;
+    color: var(--tm-secondary);
   }
 }
 
-.tm-menu.tm-menu--horizontal .tm-menu__list {
+.tm-app-bar--open {
+  color: #fff;
+  .tm-hamburger__container::after {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .tm-hamburger__bar {
+    background-color: #fff;
+  }
+  .tm-logo {
+    color: #fff;
+  }
+  .tm-menu {
+    transform: translate(-8px, -64px);
+    z-index: -1;
+  }
+}
+
+.tm-menu {
+  @media screen and (max-width: 480px) {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 64px;
+    transform: translate(calc(-100vw - 12px), -64px);
+    position: absolute;
+    z-index: 3;
+    transition: transform .3s;
+    overflow: hidden;
+    background-color: var(--tm-secondary);
+    color: #fff;
+
+    .tm-menu__list li {
+      margin: 0 24px;
+    }
+    .tm-menu__list li+li {
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .tm-menu__list a {
+      display: inline-block;
+      padding: 8px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.tm-menu__list a {
+  color: #fff;
+}
+
+.tm-menu--horizontal .tm-menu__list {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
   margin: 0;
 }
-.tm-menu__list a {
+.tm-menu--horizontal .tm-menu__list a {
   text-transform: uppercase;
-  color: #fff;
   font-weight: bold;
   display: inline-block;
   padding: 4px 8px;
 }
-.tm-menu__list li + li {
+.tm-menu--horizontal .tm-menu__list li + li {
   margin-left: 4px;
 }
 
@@ -399,12 +445,6 @@ blockquote {
 
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
 @media (min-width: 480px) {
-  nav {
-    display: block;
-    .menu__list li + li {
-      margin-left: 20px;
-    }
-  }
   .tm-layout-wrapper {
     padding: 24px 0;
   }
@@ -417,6 +457,7 @@ blockquote {
     top: 0.2em;
   }
   .jumbotron__title {
+    margin-top: 64px;
     margin-bottom: auto;
   }
   .product .steps {
