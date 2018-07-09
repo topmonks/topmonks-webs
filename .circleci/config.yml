@@ -1,0 +1,84 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+
+test-site: &test-site
+    docker:
+      - image: circleci/node:10-browsers
+    working_directory: ~/topmonks-webs
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "yarn.lock" }}
+      - run:
+          command: yarn run http-server ./public/$HOST
+          background: true
+      - run: |
+          mkdir results
+          yarn test:lighthouse
+          yarn test:ava
+      - store_artifacts:
+          path: ./results
+      - store_test_results:
+          path: ./results
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10-browsers
+    working_directory: ~/topmonks-webs
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "yarn.lock" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - run: yarn run build
+      - run: |
+          mkdir results
+          yarn test
+      - store_artifacts:
+          path: ./results
+      - store_test_results:
+          path: ./results
+      - persist_to_workspace:
+          root: .
+          paths: public
+
+  test-www-topmonks-com:
+    <<: *test-site
+    environment:
+      HOST: www.topmonks.com
+
+  test-www-topmonks-cz:
+    <<: *test-site
+    environment:
+      HOST: www.topmonks.cz
+
+  test-prodeti-topmonks-cz:
+    <<: *test-site
+    environment:
+      HOST: prodeti.topmonks.cz
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - test-www-topmonks-com:
+          requires:
+            - build
+      - test-prodeti-topmonks-cz:
+          requires:
+            - build

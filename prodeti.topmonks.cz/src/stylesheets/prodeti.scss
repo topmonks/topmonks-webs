@@ -23,9 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
-}
 
-body {
   background: url("/images/BG.svg") no-repeat;
   background-position-x: 50%;
 }
@@ -72,6 +70,16 @@ h3::after {
   background-color: #abd2ff;
 }
 
+.a11y--hidden {
+  // Hides content visually but make it accessible for screen readers.
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 .description {
   text-align: center;
   font-size: 1.1em;
@@ -90,11 +98,26 @@ h3::after {
   }
 }
 
+@media screen {
+  .main_info {
+    padding-top: 80px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main_info {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
 .main_info h1 {
   font-size: 38px;
   font-weight: lighter;
-  color: white;
   text-align: left;
+  @media screen {
+    color: white;
+  }
 }
 
 .main_info ul {
@@ -104,30 +127,39 @@ h3::after {
 .main_info li {
   line-height: 25px;
   text-decoration: none;
-  color: #ffffff;
   text-align: left;
-  position: relative;
+  @media screen {
+    color: #fff;
+    position: relative;
+  }
 }
 
-.main_info li::before {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 24px;
-  background: url("/images/odrazky.svg") no-repeat;
-  position: absolute;
-  left: -36px;
-  top: 3px;
+@media screen {
+  .main_info li::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url("/images/odrazky.svg") no-repeat;
+    position: absolute;
+    left: -36px;
+    top: 3px;
+  }
+}
+@media print {
+  .main_info ul {
+    list-style-type: circle;
+  }
 }
 
 .main_info .button {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: var(--primary-color);
   background-color: white;
   border-radius: 2px;
   box-shadow: 2px 2px var(--primary-color);
-  padding: 18px 60px;
+  padding: 14px 48px;
   text-decoration: none;
 }
 
@@ -221,6 +253,10 @@ h3::after {
   margin: 0;
 }
 
+.courses p {
+  padding-bottom: 8px;
+}
+
 .courses a.button {
   font-size: 18px;
   font-weight: bold;
@@ -272,9 +308,11 @@ h3::after {
   margin-top: 4em;
   overflow-x: hidden;
 }
+
 .price {
   min-height: 280px;
 }
+
 .price p {
   text-align: center;
   font-size: 1.1em;
@@ -340,28 +378,30 @@ h3::after {
 }
 
 /* Fotogalerie */
-#galerie {
+.gallery {
   background: #f8f8ff url("/images/fotogalerieBG.svg") no-repeat;
   position: relative;
-  .wrapper::after {
-    content: "";
-    display: block;
-    background: url("/images/shapeBlue.svg") no-repeat;
-    background-position-x: 50%;
-    position: absolute;
-    right: 0;
-    top: 400px;
-    width: 179px;
-    height: 412px;
-  }
-  .fotky {
-    width: auto;
-    text-align: center;
-  }
+}
+
+.gallery .wrapper::after {
+  content: "";
+  display: block;
+  background: url("/images/shapeBlue.svg") no-repeat;
+  background-position-x: 50%;
+  position: absolute;
+  right: 0;
+  top: 400px;
+  width: 179px;
+  height: 412px;
+}
+
+.gallery .gallery__photos {
+  width: auto;
+  text-align: center;
 }
 
 /*TEACHERS*/
-section.teachers {
+.teachers {
   text-align: center;
   min-height: 400px;
   a {
@@ -397,6 +437,10 @@ section.teachers {
   color: #9b9b9b;
 }
 
+.slide {
+  padding-bottom: 36px;
+}
+
 .slides-wrap .lSSlideOuter .lSPager.lSpg {
   margin-top: 24px !important;
 }
@@ -418,8 +462,15 @@ footer {
   margin: 0 auto;
 }
 
+.contact {
+  background-image: linear-gradient(-134deg, #e475b9 0%, #3023ae 100%);
+  padding-bottom: 14em;
+}
+
 .contact h2 {
-  color: #ffffff;
+  @media screen {
+    color: #fff;
+  }
 }
 
 .contact ul {
@@ -428,24 +479,26 @@ footer {
 }
 
 .contact a {
-  color: #ffffff;
-  font-weight: normal;
+  @media screen {
+    color: #fff;
+  }
   text-decoration: none;
+  font-weight: 300;
+
+  &:hover {
+    font-weight: 500;
+  }
 }
 
 .contact p {
   font-weight: lighter;
-  color: #ffffff;
+  @media screen {
+    color: #fff;
+  }
 }
 
 .contact h2::after {
   background-color: #fff;
-}
-
-.contact {
-  /* Fill 1 Copy 3: */
-  background-image: linear-gradient(-134deg, #e475b9 0%, #3023ae 100%);
-  padding-bottom: 14em;
 }
 
 .form input {
@@ -494,7 +547,9 @@ footer {
 }
 
 .agenda p {
-  color: #4a4a4a;
+  @media screen {
+    color: #4a4a4a;
+  }
 }
 
 .agenda .pics {
@@ -517,7 +572,9 @@ footer {
 }
 
 .contact h3 {
-  color: white;
+  @media screen {
+    color: white;
+  }
   text-align: left;
 }
 
@@ -527,12 +584,6 @@ footer {
 
 .contact .contact_details p {
   margin: 0;
-}
-.contact a {
-  font-weight: 300;
-}
-.contact a:hover {
-  font-weight: 500;
 }
 
 .contact .mail {
@@ -582,6 +633,29 @@ footer {
 
   #logo {
     margin: 0 auto;
+  }
+
+  .nav_bar {
+    display: block;
+    background: linear-gradient(#613ab2, #6b3fb2);
+    position: fixed;
+    width: 100%;
+    height: 54px;
+    z-index: 1;
+  }
+
+  .nav_bar ul {
+    flex-direction: column;
+  }
+
+  .nav_bar a {
+    font-size: 16px;
+    padding: 8px 8px 8px 16px;
+    display: block;
+  }
+
+  .nav_bar li {
+    width: 100%;
   }
 
   .nav_bar .hamburger {
@@ -652,15 +726,9 @@ footer {
     max-width: 100%;
   }
 
-  .nav_bar {
-    display: block;
-    background: linear-gradient(#613ab2, #6b3fb2);
-    height: 54px;
-    z-index: 1;
-  }
-
   .courses p {
     height: auto;
+    padding-bottom: 4px;
   }
 
   .fill_1,
@@ -674,7 +742,7 @@ footer {
   }
 
   .email_form {
-    display: -webkit-inline-box;
+    display: inline-flex;
   }
 
   .form input {
@@ -700,34 +768,6 @@ footer {
   .gallery img {
     width: 100%;
   }
-
-  .nav_bar {
-    position: fixed;
-    width: 100%;
-  }
-
-  .nav_bar ul {
-    flex-direction: column;
-  }
-
-  .nav_bar a {
-    font-size: 16px;
-    padding: 8px 8px 8px 16px;
-    display: block;
-  }
-
-  .nav_bar li {
-    width: 100%;
-  }
-}
-
-.main_info {
-  padding-top: 80px;
-}
-
-.main_info .button {
-  padding: 14px 48px;
-  font-size: 16px;
 }
 
 @media (min-width: 481px) {
@@ -736,9 +776,17 @@ footer {
   }
 }
 
-@media (min-width: 768px) {
-  .main_info {
-    width: 85%;
-    margin: 0 auto;
+@media print {
+  body > header,
+  body > footer {
+    display: none;
+  }
+
+  main {
+    color: black;
+  }
+
+  section {
+    page-break-before: always;
   }
 }

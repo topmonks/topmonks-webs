@@ -4,7 +4,7 @@ body {
   max-width: 100%;
 }
 
-.wrapper {
+.tm-layout-wrapper {
   max-width: 980px;
   margin: 0 auto;
 }
