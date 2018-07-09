@@ -319,12 +319,13 @@ blockquote {
 }
 
 .tm-app-bar {
+  position: fixed;
+  width: 100vw;
+  z-index: 4;
+  top: 0;
+  transition: all .2s;
   @media screen and (max-width: 480px) {
-    width: 100vw;
     height: 52px;
-    z-index: 4;
-    top: 0;
-    position: absolute;
     .tm-layout-wrapper {
       padding: 8px 16px 0 8px;
     }
@@ -336,19 +337,32 @@ blockquote {
     height: 112px;
     .tm-layout-wrapper {
       padding: 66px 0 0 16px;
+      transition: padding .25s;
+    }
+    + main {
+      margin-top: 112px;
     }
   }
 }
 
 .tm-app-bar--sticky {
-  position: fixed;
-  top: 0;
   background-color: #fff;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  width: 100%;
   .tm-logo {
     color: var(--tm-secondary);
+  }
+  @media screen and (min-width: 481px) {
+    height: 72px;
+    .tm-layout-wrapper {
+      padding: 20px 0 0 16px;
+    }
+    + main {
+      margin-top: 72px;
+    }
+    .tm-menu__list a {
+      color: var(--tm-primary);
+    }
   }
 }
 
@@ -375,7 +389,7 @@ blockquote {
     height: 100vh;
     padding-top: 64px;
     transform: translate(calc(-100vw - 12px), -64px);
-    position: absolute;
+    position: fixed;
     z-index: 3;
     transition: transform 0.3s;
     overflow: hidden;
