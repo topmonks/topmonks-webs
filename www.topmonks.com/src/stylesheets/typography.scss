@@ -18,7 +18,7 @@ body {
   padding: 0;
   font-display: optional;
   letter-spacing: 0;
-  line-height: 1.75em; //28px
+  line-height: 1.444em; //22/26px
   font-family: "Lato", sans-serif;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
@@ -29,7 +29,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
-  line-height: 1.444em;
 }
 
 h1,
