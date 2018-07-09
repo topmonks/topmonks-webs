@@ -70,11 +70,10 @@ blockquote {
     display: inline-block;
     color: #dadada;
     font-size: 2.125em;
-    font-weight: 900;
+    font-weight: 800;
     position: absolute;
   }
   &::before {
-    top: -12px;
     left: 0;
   }
   &::after {
@@ -83,25 +82,16 @@ blockquote {
     padding-left: 4px;
   }
 }
-
-.jumbotron__title {
-  padding: 4px;
-  margin-bottom: 6em;
-}
-
 .main-info {
   h2 {
     text-align: center;
     border-radius: 50px;
-    padding: 4px;
+    padding: 8px;
     background-color: white;
+    margin-bottom: 6em;
   }
-  .box {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  p.box--purple {
-    display: none;
+  .box--lead {
+    padding: 20px 8px;
   }
 }
 
@@ -139,37 +129,18 @@ blockquote {
   margin: 2em auto;
   display: flex;
 }
-
-.teambox {
-  &:before {
-    background: url("/images/listen_ic.svg") no-repeat center 30px;
-    background-size: 82px 82px;
-    content: "";
-    display: block;
-    height: 120px;
-  }
-
-  &.develop:before {
-    background-image: url("/images/develop_ic.svg");
-  }
-  &.verify:before {
-    background-image: url("/images/verify_ic.svg");
-  }
+.box + .box {
+  margin-bottom: var(--mdc-layout-grid-gutter-phone)
 }
 
-.cooperation,
-.jumbotron {
+.cooperation {
   p.box--purple {
     background: linear-gradient(to bottom right, #529cfb 0%, #96f 78%);
     color: white;
   }
-}
-
-.cooperation {
-  background: url("/images/background/bg_working.jpg"),
-    url("/images/background/path_bg.jpg") no-repeat, no-repeat left,
-    center bottom;
-  background-size: 490px;
+  h2 {
+    margin-bottom: 260px;
+  }
 }
 
 .partners {
@@ -458,6 +429,35 @@ blockquote {
   }
 }
 
+.cooperation {
+  @media screen and (max-width: 480px) {
+    background: #fff
+    url("https://res.cloudinary.com/topmonks/image/upload/w_334,dpr_auto,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png")
+    no-repeat left 0 top 120px;
+    background-size: 334px auto;
+    overflow-x: hidden;
+  }
+  @media screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (max-width: 480px) and (min--moz-device-pixel-ratio: 2),
+  screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 2/1),
+  screen and (max-width: 480px) and (min-device-pixel-ratio: 2),
+  screen and (max-width: 480px) and (min-resolution: 192dpi),
+  screen and (max-width: 480px) and (min-resolution: 2dppx) {
+    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_334,dpr_2,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png")
+  }
+  @media screen and (min-width: 481px) {
+    background: #fff
+    url("https://res.cloudinary.com/topmonks/image/upload/w_547,dpr_auto,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png")
+    no-repeat right calc(50% + 481px) top 140px;
+    background-size: 547px auto;
+  }
+  @media screen and (min-width: 841px) and (min-device-pixel-ratio: 2),
+    screen and (min-width: 841px) and (min-resolution: 192dpi),
+    screen and (min-width: 841px) and (min-resolution: 2dppx) {
+    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_547,dpr_2,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png");
+  }
+}
+
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
 @media (min-width: 480px) {
   .tm-layout-wrapper {
@@ -467,9 +467,8 @@ blockquote {
     display: inline-block;
     margin: 0;
   }
-  .jumbotron__title {
-    margin-top: 64px;
-    margin-bottom: auto;
+  .main-info h2 {
+    margin: 64px 0 8px;
   }
   .product .steps {
     width: auto;
@@ -489,20 +488,7 @@ blockquote {
     .jumbotron__lead p {
       max-width: 320px;
     }
-    .box--purple {
-      display: inline-block;
-      box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
-      background: linear-gradient(to bottom right, #529cfb 0%, #96f 78%);
-      border-radius: 50px;
-      text-align: center;
-      font-weight: 700;
-      margin: 0 auto;
-      padding: 8px 24px;
-      text-transform: uppercase;
-    }
     .box--lead {
-      background: none;
-      box-shadow: none;
       height: auto;
     }
     .boxes::before {
@@ -513,8 +499,21 @@ blockquote {
       position: center;
     }
   }
+  .tm-case-studies .tm-case-studies__clients + .tm-case-studies__clients {
+    margin-top: 0;
+  }
   .tm-hamburger {
     display: none;
+  }
+  .cooperation h2 {
+    margin-bottom: 18px;
+  }
+  .box.box--mobile-only{
+    background: none;
+    box-shadow: none;
+  }
+  .box + .box {
+    margin-top: calc(var(--mdc-layout-grid-gutter-desktop) * 2);
   }
 }
 

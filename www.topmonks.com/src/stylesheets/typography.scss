@@ -19,7 +19,7 @@ body {
   font-display: optional;
   letter-spacing: 0;
   line-height: 1.444em; //22/26px
-  font-family: "Lato", sans-serif;
+  font-family: Lato, sans-serif;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
   font-variant-ligatures: common-ligatures contextual;
@@ -33,18 +33,19 @@ body {
 
 h1,
 h2 {
-  font-family: "Lato Black", sans-serif;
   font-size: 1.75em; //28px
+  line-height: 32px;
   text-transform: uppercase;
   text-align: center;
   color: #000000;
   margin-bottom: 18px;
+  font-weight: 800;
 }
 h3 {
-  font-family: "Lato Black", sans-serif;
   font-size: 1.5em; //24px
   text-align: center;
   color: #000000;
+  font-weight: 800;
 }
 h4 {
   font-size: 1em; //16px
@@ -87,7 +88,7 @@ ul li {
   h1,
   h2 {
     font-size: 2.25em; //36px
-    line-height: 32px;
+    line-height: 46px;
   }
   h3 {
     font-size: 1.5em; //24px
