@@ -7,7 +7,7 @@
 
 This is TopMonks websites monorepo for effective development of all our static websites.
 
-This project uses [Blendid](https://github.com/vigetlabs/blendid) stack. 
+This project uses [Blendid](https://github.com/vigetlabs/blendid) stack.
 
 Please, format every source code with [EditorConfig](https://editorconfig.org/) and [Prettier](https://github.com/prettier/prettier). We have [ESLint](https://eslint.org/) and [Stylelint](https://stylelint.io/)
 preconfigured with prettier presets. Checks run on [Build Server](https://circleci.com/gh/topmonks/topmonks-webs) via `yarn test` command.
@@ -32,16 +32,22 @@ Install dependencies
 ```
 yarn install
 ```
-Every website has it's [Blendid](https://github.com/vigetlabs/blendid) configuration. 
+Every website has it's [Blendid](https://github.com/vigetlabs/blendid) configuration.
 Start `www.topmonks.com` development with following command:
 
 ```
 yarn start:www.topmonks.com
 ```
+### Sites available
+
+The following sites can be build and ran using the yarn:start:[SITE] command.
+
+* www.topmonks.com
+* prodeti.topmonks.cz
 
 It will start [browser-sync](https://browsersync.io/) session on [http://localhost:3000](http://localhost:3000).
 
-## Production build 
+## Production build
 
 Build al websites to `/public` folder:
 
@@ -53,7 +59,7 @@ Then you can run `www.topmonks.com` site in production configuration with:
 
 ```
 yarn run http-server public/www.topmonks.com -p 3000
-``` 
+```
 
 
 
