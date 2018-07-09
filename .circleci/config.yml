@@ -109,6 +109,7 @@ workflows:
           requires:
             - build
       - deploy-prodeti-topmonks-cz:
+          context: org-global
           requires:
             - test-prodeti-topmonks-cz
           filters:
