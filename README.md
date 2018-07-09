@@ -40,7 +40,7 @@ yarn start:www.topmonks.com
 ```
 ### Sites available
 
-The following sites can be build and ran using the yarn:start:[SITE] command.
+The following sites can be build and ran using the yarn start:<SITE> command.
 
 * www.topmonks.com
 * prodeti.topmonks.cz
