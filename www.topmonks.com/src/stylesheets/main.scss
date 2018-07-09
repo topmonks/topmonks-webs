@@ -70,7 +70,7 @@ blockquote {
     display: inline-block;
     color: #dadada;
     font-size: 2.125em;
-    font-weight: 800;
+    font-weight: 900;
     position: absolute;
   }
   &::before {
@@ -130,7 +130,21 @@ blockquote {
   display: flex;
 }
 .box + .box {
-  margin-bottom: var(--mdc-layout-grid-gutter-phone)
+  margin-bottom: var(--mdc-layout-grid-gutter-phone);
+}
+
+.how-we-work {
+  .box {
+    background: #fff url("/images/ic_listen.svg") center top 60px no-repeat;
+    background-size: auto 82px;
+    padding-top: 160px;
+  }
+  .box.box--develop {
+    background-image: url("/images/ic_develop.svg");
+  }
+  .box.box--verify {
+    background-image: url("/images/ic_verify.svg");
+  }
 }
 
 .cooperation {
@@ -294,7 +308,7 @@ blockquote {
   width: 100vw;
   z-index: 4;
   top: 0;
-  transition: all .2s;
+  transition: all 0.2s;
   @media screen and (max-width: 480px) {
     height: 52px;
     .tm-layout-wrapper {
@@ -308,7 +322,7 @@ blockquote {
     height: 112px;
     .tm-layout-wrapper {
       padding: 66px 0 0 16px;
-      transition: padding .25s;
+      transition: padding 0.25s;
     }
     + main {
       margin-top: 112px;
@@ -432,23 +446,22 @@ blockquote {
 .cooperation {
   @media screen and (max-width: 480px) {
     background: #fff
-    url("https://res.cloudinary.com/topmonks/image/upload/w_334,dpr_auto,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png")
-    no-repeat left 0 top 120px;
+      url("https://res.cloudinary.com/topmonks/image/upload/w_334,dpr_auto,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png")
+      no-repeat left 0 top 120px;
     background-size: 334px auto;
-    overflow-x: hidden;
   }
   @media screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2),
-  screen and (max-width: 480px) and (min--moz-device-pixel-ratio: 2),
-  screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 2/1),
-  screen and (max-width: 480px) and (min-device-pixel-ratio: 2),
-  screen and (max-width: 480px) and (min-resolution: 192dpi),
-  screen and (max-width: 480px) and (min-resolution: 2dppx) {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_334,dpr_2,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png")
+    screen and (max-width: 480px) and (min--moz-device-pixel-ratio: 2),
+    screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 2/1),
+    screen and (max-width: 480px) and (min-device-pixel-ratio: 2),
+    screen and (max-width: 480px) and (min-resolution: 192dpi),
+    screen and (max-width: 480px) and (min-resolution: 2dppx) {
+    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_334,dpr_2,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png");
   }
   @media screen and (min-width: 481px) {
     background: #fff
-    url("https://res.cloudinary.com/topmonks/image/upload/w_547,dpr_auto,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png")
-    no-repeat right calc(50% + 481px) top 140px;
+      url("https://res.cloudinary.com/topmonks/image/upload/w_547,dpr_auto,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png")
+      no-repeat right calc(50% + 481px) top 140px;
     background-size: 547px auto;
   }
   @media screen and (min-width: 841px) and (min-device-pixel-ratio: 2),
@@ -467,9 +480,6 @@ blockquote {
     display: inline-block;
     margin: 0;
   }
-  .main-info h2 {
-    margin: 64px 0 8px;
-  }
   .product .steps {
     width: auto;
     background: url("/images/background/product_bg.svg") 50% no-repeat;
@@ -479,6 +489,7 @@ blockquote {
     h2 {
       text-align: left;
       background: none;
+      margin: 64px 0 8px;
     }
     .jumbotron__lead {
       max-width: 320px;
@@ -508,7 +519,7 @@ blockquote {
   .cooperation h2 {
     margin-bottom: 18px;
   }
-  .box.box--mobile-only{
+  .box.box--mobile-only {
     background: none;
     box-shadow: none;
   }
