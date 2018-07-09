@@ -32,18 +32,21 @@ Install dependencies
 ```
 yarn install
 ```
+
 Every website has it's [Blendid](https://github.com/vigetlabs/blendid) configuration.
 Start `www.topmonks.com` development with following command:
 
 ```
 yarn start:www.topmonks.com
 ```
+
 ### Sites available
 
-The following sites can be build and ran using the yarn start:[SITE] command.
+The following sites can be build and ran using the `yarn start:[SITE]` command.
 
-* www.topmonks.com
-* prodeti.topmonks.cz
+* `www.topmonks.com`
+* `www.topmonks.cz`
+* `prodeti.topmonks.cz`
 
 It will start [browser-sync](https://browsersync.io/) session on [http://localhost:3000](http://localhost:3000).
 
