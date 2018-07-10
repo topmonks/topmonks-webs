@@ -444,30 +444,42 @@ blockquote {
 }
 
 .cooperation {
-  @media screen and (max-width: 480px) {
-    background: #fff
-      url("https://res.cloudinary.com/topmonks/image/upload/w_334,dpr_auto,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png")
-      no-repeat left 0 top 120px;
-    background-size: 334px auto;
-  }
-  @media screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2),
-    screen and (max-width: 480px) and (min--moz-device-pixel-ratio: 2),
-    screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 2/1),
-    screen and (max-width: 480px) and (min-device-pixel-ratio: 2),
-    screen and (max-width: 480px) and (min-resolution: 192dpi),
-    screen and (max-width: 480px) and (min-resolution: 2dppx) {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_334,dpr_2,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png");
-  }
+  background-image: url("/images/bgnd_product_top.svg"),
+    url("/images/bgnd_curve_1.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-color: transparent, transparent;
+  background-position: bottom 0 center, bottom -5px left calc(50% - 880px);
   @media screen and (min-width: 481px) {
-    background: #fff
-      url("https://res.cloudinary.com/topmonks/image/upload/w_547,dpr_auto,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png")
-      no-repeat right calc(50% + 481px) top 140px;
-    background-size: 547px auto;
+    background-position: bottom -20px center,
+      bottom -120px left calc(50% - 750px);
   }
-  @media screen and (min-width: 841px) and (min-device-pixel-ratio: 2),
-    screen and (min-width: 841px) and (min-resolution: 192dpi),
-    screen and (min-width: 841px) and (min-resolution: 2dppx) {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_547,dpr_2,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png");
+  .bgnd-wrapper {
+    @media screen and (max-width: 480px) {
+      background: transparent
+        url("https://res.cloudinary.com/topmonks/image/upload/w_334,dpr_auto,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png")
+        no-repeat left 0 top 120px;
+      background-size: 334px auto;
+    }
+    @media screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2),
+      screen and (max-width: 480px) and (min--moz-device-pixel-ratio: 2),
+      screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 2/1),
+      screen and (max-width: 480px) and (min-device-pixel-ratio: 2),
+      screen and (max-width: 480px) and (min-resolution: 192dpi),
+      screen and (max-width: 480px) and (min-resolution: 2dppx) {
+      background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_334,dpr_2,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png");
+    }
+    @media screen and (min-width: 481px) {
+      background: transparent
+        url("https://res.cloudinary.com/topmonks/image/upload/w_547,dpr_auto,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png")
+        no-repeat right calc(50% + 481px) top 140px;
+      background-size: 547px auto;
+      padding-bottom: 120px;
+    }
+    @media screen and (min-width: 841px) and (min-device-pixel-ratio: 2),
+      screen and (min-width: 841px) and (min-resolution: 192dpi),
+      screen and (min-width: 841px) and (min-resolution: 2dppx) {
+      background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_547,dpr_2,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png");
+    }
   }
 }
 
@@ -482,7 +494,7 @@ blockquote {
   }
   .product .steps {
     width: auto;
-    background: url("/images/background/product_bg.svg") 50% no-repeat;
+    background: url("/images/bgnd_product.svg") 50% top no-repeat;
   }
   .main-info {
     position: relative;
