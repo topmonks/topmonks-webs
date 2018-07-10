@@ -129,9 +129,6 @@ blockquote {
   margin: 2em auto;
   display: flex;
 }
-.box + .box {
-  margin-bottom: var(--mdc-layout-grid-gutter-phone);
-}
 
 .how-we-work {
   .box {
@@ -448,7 +445,6 @@ blockquote {
   background-image: url("/images/bgnd_product_top.svg"),
     url("/images/bgnd_curve_1.svg");
   background-repeat: no-repeat, no-repeat;
-  background-color: transparent, transparent;
   background-position: bottom 0 center, bottom -5px left calc(50% - 880px);
   @media screen and (min-width: 481px) {
     background-position: bottom -20px center,
@@ -522,13 +518,6 @@ blockquote {
     .box--lead {
       height: auto;
     }
-    .boxes::before {
-      content: "";
-      display: block;
-      background-image: url("/images/background/bg_boxes.svg");
-      background-size: contain;
-      position: center;
-    }
   }
   .tm-case-studies .tm-case-studies__clients + .tm-case-studies__clients {
     margin-top: 0;
@@ -536,15 +525,30 @@ blockquote {
   .tm-hamburger {
     display: none;
   }
-  .cooperation h2 {
-    margin-bottom: 18px;
+  .cooperation {
+    h2 {
+      margin-bottom: 18px;
+    }
+    .box + .box {
+      margin-top: calc(var(--mdc-layout-grid-gutter-desktop) * 2);
+    }
+  }
+  .customers blockquote {
+      &::before,
+      &::after{
+        font-size: 4.444em;
+      }
+      &::before{
+        left: -12px;
+        top: 14px;
+      }
+      &::after{
+        bottom: 22px;
+      }
   }
   .box.box--mobile-only {
     background: none;
     box-shadow: none;
-  }
-  .box + .box {
-    margin-top: calc(var(--mdc-layout-grid-gutter-desktop) * 2);
   }
 }
 
