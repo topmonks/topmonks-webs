@@ -151,7 +151,7 @@ blockquote {
   padding: 0 0 3%;
   background: #fff url("/images/bgnd_curve_3.svg") center bottom no-repeat;
   background-size: 100% auto;
-  .tm-bgnd-wrapper{
+  .tm-bgnd-wrapper {
     background-color: #f3f3f3;
   }
 }
@@ -225,7 +225,7 @@ blockquote {
   background: #fff url("/images/bgnd_curve_4.svg") center top no-repeat;
   background-size: 100% auto;
   text-align: center;
-  .tm-bgnd-wrapper{
+  .tm-bgnd-wrapper {
     background-color: #f3f3f3;
   }
   .name {
@@ -238,7 +238,9 @@ blockquote {
 .contact {
   text-align: center;
   padding: 64px 0 100px;
-  background: #fff url("/images/bgnd_curve_2.svg") top -5px left calc(50% - 880px) no-repeat;
+  background: #fff url("/images/bgnd_curve_2.svg") top -5px left calc(
+      50% - 880px
+    ) no-repeat;
   @media screen and (min-width: 481px) {
     background-position: top -24px left calc(50% - 750px);
   }
