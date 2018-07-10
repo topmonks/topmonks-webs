@@ -168,12 +168,12 @@ blockquote {
   position: relative;
   h3 {
     color: #529cfb;
-    font-size: 18px;
+    font-size: 1em;
     text-transform: uppercase;
     text-align: left;
   }
   p {
-    width: 200px;
+    width: 340px;
   }
   .steps {
     width: 100%;
@@ -184,19 +184,19 @@ blockquote {
   .steps__step {
     position: relative;
     &:nth-child(even) {
-      top: 100px;
-      left: 100px;
+      top: 65px;
+      left: 95px;
     }
     &:nth-child(odd) {
-      top: 160px;
-      left: 100px;
+      top: 165px;
+      left: 22px;
     }
-    &.sales {
-      top: 60px;
+    &.design {
+      top: 136px;
     }
-  }
-  .sales h3 {
-    text-align: left;
+    &.development {
+      top: 34px;
+    }
   }
 }
 
@@ -494,7 +494,7 @@ blockquote {
   }
   .product .steps {
     width: auto;
-    background: url("/images/bgnd_product.svg") 50% top no-repeat;
+    background: url("/images/bgnd_product.svg") calc(50% - 59px) top no-repeat;
   }
   .main-info {
     position: relative;
