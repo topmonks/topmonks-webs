@@ -147,19 +147,13 @@ blockquote {
   }
 }
 
-.cooperation {
-  p.box--purple {
-    background: linear-gradient(to bottom right, #529cfb 0%, #96f 78%);
-    color: white;
-  }
-  h2 {
-    margin-bottom: 260px;
-  }
-}
-
 .partners {
-  padding-top: 30px;
-  background: url("/images/background/bg_who.jpg") no-repeat;
+  padding: 0 0 3%;
+  background: #fff url("/images/bgnd_curve_3.svg") center bottom no-repeat;
+  background-size: 100% auto;
+  .tm-bgnd-wrapper{
+    background-color: #f3f3f3;
+  }
 }
 
 .product {
@@ -201,7 +195,7 @@ blockquote {
 }
 
 .tm-case-studies {
-  .tm-case-studies__title p {
+  .tm-case-studies__title {
     text-align: center;
   }
   h3 {
@@ -226,11 +220,13 @@ blockquote {
   }
 }
 
-.costumers {
-  position: relative;
-  background: url("/images/background/costumers_bg.jpg") no-repeat;
-  p {
-    text-align: center;
+.customers {
+  padding: 3% 0 0;
+  background: #fff url("/images/bgnd_curve_4.svg") center top no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+  .tm-bgnd-wrapper{
+    background-color: #f3f3f3;
   }
   .name {
     font-size: 16px;
@@ -241,8 +237,11 @@ blockquote {
 
 .contact {
   text-align: center;
-  background: url("/images/background/contact_bg.jpg") no-repeat;
-
+  padding: 64px 0 100px;
+  background: #fff url("/images/bgnd_curve_2.svg") top -5px left calc(50% - 880px) no-repeat;
+  @media screen and (min-width: 481px) {
+    background-position: top -24px left calc(50% - 750px);
+  }
   .contact_title p {
     color: var(--tm-black);
   }
@@ -453,7 +452,14 @@ blockquote {
     background-position: bottom -20px center,
       bottom -120px left calc(50% - 750px);
   }
-  .bgnd-wrapper {
+  p.box--purple {
+    background: linear-gradient(to bottom right, #529cfb 0%, #96f 78%);
+    color: white;
+  }
+  h2 {
+    margin-bottom: 260px;
+  }
+  .tm-bgnd-wrapper {
     @media screen and (max-width: 480px) {
       background: transparent
         url("https://res.cloudinary.com/topmonks/image/upload/w_334,dpr_auto,q_auto,f_auto/v1530724291/topmonks.com/bgnd_1.png")
