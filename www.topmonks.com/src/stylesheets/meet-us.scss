@@ -1,0 +1,13 @@
+
+.tm-meetup {
+  @media (min-width: 48em) {
+    &:nth-child(even) .tm-meetup__cell {
+      &:first-child {
+        order: 2;
+      }
+      &:last-child {
+        order: 1;
+      }
+    }
+  }
+}

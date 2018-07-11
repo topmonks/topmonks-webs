@@ -1,13 +1,26 @@
 {% extends 'layouts/topmonks.html' %}
 
-{# string with the current page #}
 {% set page = 'topmonks-index' %}
-
-{# global object with localized strings #}
 {% set language = en %}
 
-{% block content %}
+{% block title %}
+TopMonks - Software development partner for your business
+{% endblock %}
 
+{% block head %}
+<meta name="description" content="We are your software development partners, experienced with both startup and corporate environment.">
+<meta name="twitter:description" property="og:description" content="We are your software development partners, experienced with both startup and corporate environment.">
+<link rel="canonical" href="https://www.topmonks.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@topmonks">
+<meta name="twitter:title" property="og:title" content="TopMonks - Software development partner for your business">
+<meta name="twitter:image" property="og:image" content="https://www.topmonks.com/images/og-image.png">
+<meta property="og:type" content="company">
+<meta property="og:url" content="https://www.topmonks.com/">
+<meta property="og:site_name" content="TopMonks.com">
+{% endblock %}
+
+{% block content %}
 <section class="main-info jumbotron">
   <div class="mdc-layout-grid tm-layout-wrapper">
     <div class="mdc-layout-grid__inner">
@@ -18,14 +31,14 @@
             <p>And they are perfectionists. Ask them to build you a product, and they will
               not give you what you asked for. They will give you what you&nbsp;want.</p>
           </blockquote>
-          <a class="action-button jumbotron__cta">How we work</a>
+          <a class="action-button jumbotron__cta" href="#how-we-work">How we work</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="how-we-work">
+<section id="how-we-work" class="how-we-work">
   <div class="mdc-layout-grid tm-layout-wrapper">
     <div class="mdc-layout-grid__inner">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
