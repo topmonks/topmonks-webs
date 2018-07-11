@@ -65,8 +65,13 @@ blockquote {
 }
 
 .tm-page-header blockquote {
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 28px;
+  line-height: 32px;
+
+  @media screen and (min-width: 481px) {
+    font-size: 40px;
+    line-height: 48px;
+  }
   color: #9b9b9b;
   text-align: center;
   margin: 68px 0;
