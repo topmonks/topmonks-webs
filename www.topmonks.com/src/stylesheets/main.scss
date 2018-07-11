@@ -21,6 +21,15 @@ body {
   margin: 0;
 }
 
+section:target {
+  @media screen and (max-width: 480px) {
+    margin-top: 96px;
+  }
+  @media screen and (min-width: 481px) {
+    margin-top: 88px;
+  }
+}
+
 .tm-layout-wrapper {
   max-width: 1008px;
   margin: 0 auto;

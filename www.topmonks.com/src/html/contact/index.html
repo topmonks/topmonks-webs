@@ -1,5 +1,20 @@
 {% extends 'layouts/topmonks.html' %}
-{% block title %}Contacts - TopMonks{% endblock %}
+{% block title %}TopMonks Contacts{% endblock %}
+
+{% block head %}
+<meta property="og:title" content="TopMonks Contacts">
+<meta property="fb:pages" content="190700404282725">
+<meta property="og:type" content="business.business">
+<meta property="og:url" content="https://www.topmonks.com/contact/">
+<meta property="og:site_name" content="TopMonks.com">
+<meta property="business:contact_data:street_address" content="Struhařovská 2931/9"/>
+<meta property="business:contact_data:locality" content="Praha 4"/>
+<meta property="business:contact_data:postal_code" content="141 00"/>
+<meta property="business:contact_data:country_name" content="Czech republic"/>
+<meta property="business:contact_data:email" content="info@topmonks.com"/>
+<meta property="business:contact_data:phone_number" content="+420 226 257 521"/>
+<meta property="business:contact_data:website" content="https://www.topmonks.com/"/>
+{% endblock %}
 
 {% block content %}
   <div itemscope itemtype="https://schema.org/Organization">
@@ -33,11 +48,12 @@
           </p>
         </div>
 
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop" itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
-          <p><b>Sales</b><br>
-            <span itemprop="name">Svatava Kotyzová</span>:
-            <a itemprop="telephone" href="tel:+420604851133">+420&nbsp;604&nbsp;851&nbsp;133</a><br>
-            <a itemprop="email" href="mailto:svatava.kotyzova@topmonks.com">svatava.kotyzova@​topmonks.com</a></p>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop" itemprop="employee" itemscope
+             itemtype="https://schema.org/Person">
+          <p><b>Sales</b><br/>
+            <span itemprop="name">Lea Petrášová</span>:
+            <a itemprop="telephone" href="tel:+420725504381">+420&nbsp;725&nbsp;504&nbsp;381</a><br/>
+            <a itemprop="email" href="mailto:lea.petrasova@topmonks.com">lea.petrasova@&#8203;topmonks.com</a></p>
         </div>
 
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop" itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
