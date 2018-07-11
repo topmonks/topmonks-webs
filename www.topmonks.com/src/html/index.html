@@ -1,4 +1,5 @@
 {% extends 'layouts/topmonks.html' %}
+{% from 'macros/helpers.html' import sprite %}
 
 {% set page = 'topmonks-index' %}
 {% set language = en %}
@@ -133,9 +134,9 @@ TopMonks - Software development partner for your business
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Who works with&nbsp;us</h2>
           <ul class="tm-partners-list">
-            <li>{{macros.sprite('img_logo_cs')}}</li>
-            <li>{{macros.sprite('img_logo_erste-group')}}</li>
-            <li>{{macros.sprite('img_logo_pricefx')}}</li>
+            <li>{{sprite('img_logo_cs')}}</li>
+            <li>{{sprite('img_logo_erste-group')}}</li>
+            <li>{{sprite('img_logo_pricefx')}}</li>
           </ul>
         </div>
       </div>
@@ -143,8 +144,8 @@ TopMonks - Software development partner for your business
   </div>
 </section>
 
-<!--<section class="tm-case-studies">-->
-  <!--<div class="mdc-layout-grid tm-layout-wrapper">-->
+<section class="tm-case-studies">
+  <div class="mdc-layout-grid tm-layout-wrapper">
     <!--<div class="mdc-layout-grid__inner">-->
       <!--<div class="tm-case-studies__title mdc-layout-grid__cell mdc-layout-grid__cell&#45;&#45;span-12">-->
         <!--<h2>Case studies</h2>-->
@@ -187,8 +188,8 @@ TopMonks - Software development partner for your business
         <!--<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>-->
       <!--</div>-->
     <!--</div>-->
-  <!--</div>-->
-<!--</section>-->
+  </div>
+</section>
 
 <section class="customers">
   <div class="tm-bgnd-wrapper">
@@ -197,13 +198,12 @@ TopMonks - Software development partner for your business
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Our customers say that…</h2>
           <blockquote>
-            <p>Working with TopMonks was really awesome. Working with TopMonks was really awesome.
-              Working with TopMonks was absolutely awesome.</p>
+            <p>TopMonks are special mainly because they understand us.</p>
           </blockquote>
-          <div class="name">
-            Jan Sechovec<br>
-            Universal Digital Punker
-          </div>
+          <figure class="name">
+            <img class="tm-testimonial__picture" src="/images/hp/sechovec.jpg" alt="[foto] Jan Sechovec">
+            <figcaption>Jan Sechovec<br>Universal Digital Punker</figcaption>
+          </figure>
         </div>
       </div>
     </div>
