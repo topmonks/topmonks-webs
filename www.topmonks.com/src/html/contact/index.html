@@ -1,17 +1,13 @@
-{% extends 'layouts/application.html' %}
+{% extends 'layouts/topmonks.html' %}
 {% block title %}Contacts - TopMonks{% endblock %}
 
-{% block navigation %}
-{% include 'shared/top-menu.html' %}
-{% endblock %}
-
-
 {% block content %}
-  {{ macros.pageHeader('Contacts') }}
-
-  <div class="mainBody" itemscope="" itemtype="https://schema.org/Organization">
+  <div itemscope itemtype="https://schema.org/Organization">
     <section class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Contacts</h2>
+        </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Basic information</h2>
         </div>
@@ -54,7 +50,7 @@
     </section>
 
     <section id="offices" class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Offices</h2>
         </div>
@@ -141,20 +137,20 @@
     </section>
 
     <section id="billing" class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Billing information</h2>
         </div>
         <div class="mdc-layout-grid__cell address">
           <h3>Billing address</h3>
-          <span itemprop="legalName">TopMonks, s.r.o.</span><br>
+          <span itemprop="legalName">TopMonks s.r.o.</span><br>
           <span itemprop="foundingLocation" itemscope="" itemtype="https://schema.org/Place">
-                                    <span itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress">
-                                      <span itemprop="streetAddress">Jasná I. 1513/10</span><br>
-                        <span itemprop="postalCode">147 00</span>
-                        <span itemprop="addressLocality">Praha 4</span>
-                        </span>
-                        </span><br>
+          <span itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress">
+          <span itemprop="streetAddress">Jasná I. 1513/10</span><br>
+          <span itemprop="postalCode">147 00</span>
+          <span itemprop="addressLocality">Praha 4</span>
+          </span>
+          </span><br>
           <a href="mailto:invoices@topmonks.com">invoices@topmonks.com</a>
 
           <div>Reg. No: 24847437<br> VAT ID: <span itemprop="vatID">CZ24847437</span></div>
@@ -169,7 +165,6 @@
       </div>
     </section>
   </div>
-
 
 {% endblock %}
 

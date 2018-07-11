@@ -1,18 +1,20 @@
-{% extends 'layouts/application.html' %}
+{% extends 'layouts/topmonks.html' %}
 {% block title %}Meet Us - TopMonks{% endblock %}
 
-{% block navigation %}
-{% include 'shared/top-menu.html' %}
-
-{% endblock %}
-
-
 {% block content %}
-  {{ macros.pageHeader('Community','Learn or die. Teach or die. Only learning and teaching brains flourish.') }}
 
   <section class="principles">
-    <div class="mdc-layout-grid mainBody">
-      <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Community</h2>
+          <blockquote>
+            <p>Learn or die. Teach or die. Only learning and teaching brains flourish.</p>
+          </blockquote>
+          <p> We don't need you messing around from 9 to 5 in the office. We want to deliver the perfection! As our
+            team is mostly distributed, we've worked diligently to improve the ways we work together, and with
+            our clients. Don't count hours, deliver!</p>
+        </div>
         <div class="principle team mdc-layout-grid__cell">
           <h3>This is us</h3>
           <p>This is us. We are a passionate team of top notch devs, designers and team leaders who always want
@@ -34,9 +36,23 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>You can <b>meet us</b> here</h2>
       </div>
-
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <div class="mdc-layout-grid__inner mainBody">
+        <div class="mdc-layout-grid__inner tm-layout-wrapper">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+            <h3><a href="https://caffe.topmonks.cz">TopMonks Caffè</a></h3>
+            <p>Every first thursday of the month we hold regular meetup about everything we are interested in.
+              Balanced mix of technical and soft themes delivered by our speakers and special guests.</p>
+
+            <div class="links"><a href="https://caffe.topmonks.cz">https://caffe.topmonks.cz</a>
+            </div>
+          </div>
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+            <a class="img-link" href="https://caffe.topmonks.cz"><img alt="TopMonks Caffè logo" src="/images/community/tm-caffe.png"></a>
+          </div>
+        </div>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <div class="mdc-layout-grid__inner tm-layout-wrapper">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
             <h3><a href="https://soundcloud.com/czpodcast-1">CZ Podcast</a></h3>
             <p>The most popular tech-podcast in Czech republic! Duo Filemon and Dagi + interesting guest = fun
@@ -51,7 +67,7 @@
         </div>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <div class="mdc-layout-grid__inner mainBody">
+        <div class="mdc-layout-grid__inner tm-layout-wrapper">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
             <h3><a href="http://codingdojo.cz/">Coding Dojo</a></h3>
             <p>Coding Dojo is a place, where you can come and train your knowledge in programming. It is organised
@@ -68,7 +84,7 @@
         </div>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <div class="mdc-layout-grid__inner mainBody">
+        <div class="mdc-layout-grid__inner tm-layout-wrapper">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
             <h3><a href="https://coderetreat.cz/">Code Retreat CZ</a></h3>
             <p>Code retreat is an intensive one day training focused on the basics of software development.
@@ -83,7 +99,7 @@
         </div>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <div class="mdc-layout-grid__inner mainBody">
+        <div class="mdc-layout-grid__inner tm-layout-wrapper">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
             <h3><a href="http://www.asociaceux.cz/">Asociace UX</a></h3>
             <p>UX Asociace mainly focuses on forming and developing local UX market with regards to the foreign
@@ -98,7 +114,7 @@
         </div>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <div class="mdc-layout-grid__inner mainBody">
+        <div class="mdc-layout-grid__inner tm-layout-wrapper">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
             <h3><a href="https://www.meetup.com/Lambda-Meetup-Group/">Prague Lambda</a></h3>
             <p>This meetup group was created as a group for functional programming enthusiasts, programmers
@@ -113,7 +129,7 @@
         </div>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <div class="mdc-layout-grid__inner mainBody">
+        <div class="mdc-layout-grid__inner tm-layout-wrapper">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
             <h3><a href="http://devminutes.cz/">DevMinutes</a></h3>
             <p>Our colleague Jirka decided to make his very own podcast with interesting guests. Starting with
@@ -128,7 +144,7 @@
         </div>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <div class="mdc-layout-grid__inner mainBody">
+        <div class="mdc-layout-grid__inner tm-layout-wrapper">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
             <h3><a href="http://www.wisephora.com/">Wisephora</a></h3>
             <p>Wisephora focuses on supporting the discussion about future of work and connecting people and

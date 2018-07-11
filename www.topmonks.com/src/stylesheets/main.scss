@@ -433,6 +433,7 @@ blockquote {
     background: url("https://res.cloudinary.com/topmonks/image/upload/w_867,dpr_auto,q_auto,f_auto/v1530724292/topmonks.com/bgnd_header.png")
       no-repeat right calc(50% - 320px) top 0;
     background-size: 867px auto;
+    overflow-x: hidden;
   }
   @media screen and (min-width: 841px) and (min-device-pixel-ratio: 2),
     screen and (min-width: 841px) and (min-resolution: 192dpi),
@@ -490,7 +491,7 @@ blockquote {
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
 @media (min-width: 480px) {
   .tm-layout-wrapper {
-    padding: 24px 0;
+    padding: 24px;
   }
   .action-button {
     display: inline-block;
@@ -534,17 +535,17 @@ blockquote {
     }
   }
   .customers blockquote {
-      &::before,
-      &::after{
-        font-size: 4.444em;
-      }
-      &::before{
-        left: -12px;
-        top: 14px;
-      }
-      &::after{
-        bottom: 22px;
-      }
+    &::before,
+    &::after {
+      font-size: 4.444em;
+    }
+    &::before {
+      left: -12px;
+      top: 14px;
+    }
+    &::after {
+      bottom: 22px;
+    }
   }
   .box.box--mobile-only {
     background: none;
