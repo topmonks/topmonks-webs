@@ -22,7 +22,7 @@ body {
 }
 
 .tm-layout-wrapper {
-  max-width: 960px;
+  max-width: 1008px;
   margin: 0 auto;
   padding: 16px;
   --mdc-layout-grid-margin-desktop: 0;
@@ -150,6 +150,21 @@ blockquote {
   background-size: 100% auto;
   .tm-bgnd-wrapper {
     background-color: #f3f3f3;
+  }
+}
+.tm-partners-list {
+  color: var(--tm-grey);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0;
+  li {
+    width: 140px;
+  }
+  svg {
+    width: 100%;
+    fill: currentColor;
+    stroke: currentColor;
   }
 }
 
