@@ -136,6 +136,9 @@ blockquote {
   h2 {
     position: relative;
     z-index: 10;
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
   }
   h2::before {
     content: "";
@@ -195,6 +198,9 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
   margin: 0;
   li {
     width: 140px;
@@ -348,9 +354,18 @@ blockquote {
   }
 
   .tm-app-bar {
+    background-color: transparent;
+    @media screen and (max-width: 480px) {
+      &.tm-app-bar--sticky {
+        background-color: #fff;
+      }
+      .tm-logo {
+        padding-top: 2px;
+        font-size: 22px;
+      }
+    }
     @media screen and (min-width: 481px) {
       height: 112px;
-      background-color: transparent;
       &.tm-app-bar--sticky {
         background-color: #fff;
         @media screen and (min-width: 481px) {
