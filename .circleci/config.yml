@@ -107,7 +107,7 @@ jobs:
   deploy-www-topmonks-com:
     <<: *s3-deploy
     environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E3FDER5NIOLAD2
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: EMNWZWEX2M2BH
     steps:
       - checkout
       - attach_workspace:
@@ -125,11 +125,11 @@ jobs:
       - run:
           name: Deploy to S3
           command: aws s3 sync public/www.topmonks.com s3://www.topmonks.com/
-      #- run:
-      #    name: Invalidate CDN distribution
-      #    command: |
-      #      aws configure set preview.cloudfront true
-      #      aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+      - run:
+          name: Invalidate CDN distribution
+          command: |
+            aws configure set preview.cloudfront true
+            aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
 
 workflows:
   version: 2
