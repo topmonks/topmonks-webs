@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="352px" height="78px" viewBox="0 0 352 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="31.4296206%" y1="-39.2040706%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#529CFB" offset="0%"></stop>
+            <stop stop-color="#8380E5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(1.000000, 3.000000)">
+            <path d="M0,4.00005 C99.0859375,44.00005 215.557292,44.00005 349.414063,4.00005" id="Path-3" stroke="#FFFFFF" stroke-width="5"></path>
+            <path d="M200.7119,10.59075 C208.2919,18.17075 211.8059,28.27575 211.2339,38.19575 C210.7599,46.75975 207.2459,55.18075 200.7119,61.71475 C194.1779,68.24875 185.7639,71.75575 177.2079,72.23675 C167.2799,72.80175 157.1679,69.29475 149.5879,61.71475 C135.4669,47.59375 135.4739,24.70475 149.5879,10.59075 C163.7089,-3.53025 186.5909,-3.53025 200.7119,10.59075" id="Fill-5" stroke="#FFFFFF" stroke-width="5" fill="url(#linearGradient-1)"></path>
+            <text id="Finished-product" font-family="Lato-Black, Lato" font-size="13" font-weight="700" line-spacing="15" fill="#FFFFFF">
+                <tspan x="150" y="32.00005">Finished</tspan>
+                <tspan x="151.521" y="47.00005">product</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

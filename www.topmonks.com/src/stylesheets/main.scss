@@ -198,7 +198,6 @@ blockquote {
   .box.box--verify {
     background-image: url("/images/ic_verify.svg");
   }
-
   .box--purple {
     font-size: 20px;
     padding: 4px 16px;
@@ -234,38 +233,51 @@ blockquote {
 
 .product {
   background-color: #f3f3f3;
-  background-size: cover;
-  position: relative;
+  .tm-layout-wrapper{
+    background: url("/images/bgnd_product_top_mobile.svg") top center no-repeat, url("/images/bgnd_product_mobile.svg") bottom center no-repeat;
+    background-size: 100% auto;
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
   h3 {
     color: #529cfb;
     font-size: 1em;
     text-transform: uppercase;
     text-align: left;
   }
-  p {
-    width: 340px;
-  }
-  .steps {
-    width: 100%;
-    height: 100%;
-    min-height: 769px;
-    margin: 0 auto;
-  }
-  .steps__step {
-    position: relative;
-    &:nth-child(even) {
-      top: 65px;
-      left: 95px;
+  @media screen and (min-width: 481px) {
+    .tm-layout-wrapper{
+      padding-top: 24px;
+      padding-bottom: 24px;
     }
-    &:nth-child(odd) {
-      top: 165px;
-      left: 22px;
+    p {
+      width: 340px;
     }
-    &.design {
-      top: 136px;
+    .steps {
+      width: 100%;
+      height: 100%;
+      min-height: 769px;
+      margin: 0 auto;
+      background: url("/images/bgnd_product.svg") calc(50% - 59px) top no-repeat;
     }
-    &.development {
-      top: 34px;
+    .steps__step {
+      position: relative;
+      &:nth-child(odd) {
+        top: 65px;
+        left: 560px;
+
+      }
+      &:nth-child(even) {
+        top: 165px;
+        left: -468px;
+
+      }
+      &.design {
+        top: 35px;
+      }
+      &.development {
+        top: 135px;
+      }
     }
   }
 }
@@ -436,7 +448,7 @@ blockquote {
   background-image: url("/images/bgnd_product_top.svg"),
     url("/images/bgnd_curve_1.svg");
   background-repeat: no-repeat, no-repeat;
-  background-position: bottom 0 center, bottom -5px left calc(50% - 880px);
+  background-position: bottom 0 left -800px, bottom -5px left calc(50% - 880px);
   @media screen and (min-width: 481px) {
     background-position: bottom -20px center,
       bottom -120px left calc(50% - 750px);
@@ -475,7 +487,7 @@ blockquote {
 }
 
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
-@media (min-width: 480px) {
+@media (min-width: 481px) {
   .tm-layout-wrapper {
     padding: 24px;
   }
@@ -483,9 +495,8 @@ blockquote {
     display: inline-block;
     margin: 0;
   }
-  .product .steps {
-    width: auto;
-    background: url("/images/bgnd_product.svg") calc(50% - 59px) top no-repeat;
+  .product {
+
   }
   .main-info {
     position: relative;
@@ -542,7 +553,7 @@ blockquote {
 }
 
 /* MD GRID TABLET ONLY BREAKPOINT */
-@media screen and (min-width: 480px) and (max-width: 839px) {
+@media screen and (min-width: 481px) and (max-width: 839px) {
   .tm-case-studies__clients {
     align-content: space-between;
   }
