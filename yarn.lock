@@ -5132,9 +5132,9 @@ lighthouse-logger@^1.0.0:
   dependencies:
     debug "^2.6.8"
 
-lighthouse@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-3.0.1.tgz#0f26cca514d861645e404d54245156cb4a5f65a6"
+lighthouse@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-3.0.2.tgz#5108ba6cc3ae18fd2f3ffd887c111673bdb130f4"
   dependencies:
     axe-core "3.0.0-beta.2"
     chrome-devtools-frontend "1.0.422034"
