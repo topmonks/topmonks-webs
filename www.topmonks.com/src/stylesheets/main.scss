@@ -138,6 +138,18 @@ blockquote {
   display: flex;
 }
 
+.box .button {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 6px 8px;
+  margin: 16px 0 8px -8px;
+  border-radius: 4px;
+  &:hover {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+}
+
 .how-we-work {
   h2 {
     position: relative;
