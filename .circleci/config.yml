@@ -97,6 +97,26 @@ jobs:
             aws configure set preview.cloudfront true
             aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
 
+  deploy-www-topmonks-com:
+    <<: *s3-deploy
+    environment:
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E3FDER5NIOLAD2
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - run:
+          name: Install awscli
+          command: sudo pip install awscli
+      - run:
+          name: Deploy to S3
+          command: aws s3 sync public/www.topmonks.com s3://www.topmonks.com/
+      #- run:
+      #    name: Invalidate CDN distribution
+      #    command: |
+      #      aws configure set preview.cloudfront true
+      #      aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+
 workflows:
   version: 2
   build_and_deploy:
@@ -112,6 +132,13 @@ workflows:
           context: org-global
           requires:
             - test-prodeti-topmonks-cz
+          filters:
+            branches:
+              only: master
+      - deploy-www-topmonks-com:
+          context: org-global
+          requires:
+            - test-www-topmonks-com
           filters:
             branches:
               only: master
