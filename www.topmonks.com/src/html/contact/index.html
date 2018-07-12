@@ -1,4 +1,5 @@
 {% extends 'layouts/topmonks.html' %}
+{% set page = 'topmonks-contact' %}
 {% block title %}TopMonks Contacts{% endblock %}
 
 {% block head %}
@@ -69,19 +70,24 @@
         </div>
         <div class="box mdc-layout-grid__cell address" itemprop="subOrganization" itemscope="" itemtype="https://schema.org/Organization"
              id="prague">
-          <h3 itemprop="name">Prague</h3>
-          <span itemprop="legalName">TopMonks, s.r.o.</span>
-          <div itemprop="location" itemscope="" itemtype="https://schema.org/Place">
-            <div itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress">
-              <span itemprop="streetAddress">Struhařovská 2931/9</span><br>
-              <span itemprop="postalCode">141 00</span>
-              <span itemprop="addressLocality">Praha 4</span><br>
-              <span itemprop="addressCountry">Czech Republic</span>
-            </div>
-            <a href="https://goo.gl/maps/SBK1BRsmgu22" class="button" data-marker="praha">show on map</a>
-            <div itemprop="geo" itemscope="" itemtype="https://schema.org/GeoCoordinates">
-              <meta itemprop="latitude" content="50.045386">
-              <meta itemprop="longitude" content="14.491246">
+          <a href="https://goo.gl/maps/SBK1BRsmgu22" class="map" title="Show Prague Office on map">
+            <img alt="[mapa] Praha Spořilov" src="https://maps.googleapis.com/maps/api/staticmap?center=Struhařovská+2931/9,Praha&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:blue%7Clabel:P%7C50.045386,14.491246&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc" width="100%">
+          </a>
+          <div class="content">
+            <h3 itemprop="name">Prague</h3>
+            <span itemprop="legalName">TopMonks s.r.o.</span>
+            <div itemprop="location" itemscope itemtype="https://schema.org/Place">
+              <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="streetAddress">Struhařovská 2931/9</span><br>
+                <span itemprop="postalCode">141 00</span>
+                <span itemprop="addressLocality">Praha 4</span><br>
+                <span itemprop="addressCountry">Czech Republic</span>
+              </div>
+              <a href="https://goo.gl/maps/SBK1BRsmgu22" class="button" data-marker="praha">show on map</a>
+              <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+                <meta itemprop="latitude" content="50.045386">
+                <meta itemprop="longitude" content="14.491246">
+              </div>
             </div>
           </div>
         </div>
@@ -92,38 +98,48 @@
         </div-->
         <div class="box mdc-layout-grid__cell address" itemprop="subOrganization" itemscope="" itemtype="https://schema.org/Organization"
              id="ostrava">
-          <h3 itemprop="name">Ostrava</h3>
-          <span itemprop="legalName">TopMonks, s.r.o.</span>
-          <div itemprop="location" itemscope="" itemtype="https://schema.org/Place">
-            <div itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress">
-              <span itemprop="streetAddress">Sadová 1728/17</span><br>
-              <span itemprop="postalCode">702 00</span>
-              <span itemprop="addressLocality">Ostrava</span><br>
-              <span itemprop="addressCountry">Czech Republic</span>
-            </div>
-            <a href="https://goo.gl/maps/SkoWqfoKgg12" class="button" data-marker="ostrava">show on map</a>
-            <div itemprop="geo" itemscope="" itemtype="https://schema.org/GeoCoordinates">
-              <meta itemprop="latitude" content="49.8454375">
-              <meta itemprop="longitude" content="18.2892897">
+          <a href="https://goo.gl/maps/SBK1BRsmgu22" class="map" title="Show Ostrava Office on map">
+            <img alt="[mapa] Ostrava" src="https://maps.googleapis.com/maps/api/staticmap?center=Sadová+1728/17,Ostrava&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:green%7Clabel:O%7C49.8454375,18.2892897&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc" width="100%">
+          </a>
+          <div class="content">
+            <h3 itemprop="name">Ostrava</h3>
+            <span itemprop="legalName">TopMonks s.r.o.</span>
+            <div itemprop="location" itemscope itemtype="https://schema.org/Place">
+              <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="streetAddress">Sadová 1728/17</span><br>
+                <span itemprop="postalCode">702 00</span>
+                <span itemprop="addressLocality">Ostrava</span><br>
+                <span itemprop="addressCountry">Czech Republic</span>
+              </div>
+              <a href="https://goo.gl/maps/SkoWqfoKgg12" class="button" data-marker="ostrava">show on map</a>
+              <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+                <meta itemprop="latitude" content="49.8454375">
+                <meta itemprop="longitude" content="18.2892897">
+              </div>
             </div>
           </div>
         </div>
         <div class="box mdc-layout-grid__cell address" itemprop="subOrganization" itemscope="" itemtype="https://schema.org/Organization"
              id="san-jose">
-          <h3 itemprop="name">San Jose</h3>
-          <span itemprop="legalName">TopMonks LLC</span>
-          <div itemprop="location" itemscope="" itemtype="https://schema.org/Place">
-            <div itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress">
-              <span itemprop="streetAddress">2 North 1st St., 5th Floor</span><br>
-              <span itemprop="addressLocality">San Jose</span>,
-              <span itemprop="addressRegion">CA</span>
-              <span itemprop="postalCode">95136</span><br>
-              <span itemprop="addressCountry">United States</span>
-            </div>
-            <a href="https://goo.gl/maps/YAJRUb1rDox" class="button" data-marker="san-jose">show on map</a>
-            <div itemprop="geo" itemscope="" itemtype="https://schema.org/GeoCoordinates">
-              <meta itemprop="latitude" content="37.336482">
-              <meta itemprop="longitude" content="-121.8905285">
+          <a href="https://goo.gl/maps/SBK1BRsmgu22" class="map" title="Show San Jose Office on map">
+            <img alt="[mapa] San Jose" src="https://maps.googleapis.com/maps/api/staticmap?center=2+North+1st+St.,San+Jose,CA&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:red%7Clabel:S%7C37.336482,-121.8905285&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc" width="100%">
+          </a>
+          <div class="content">
+            <h3 itemprop="name">San Jose</h3>
+            <span itemprop="legalName">TopMonks LLC</span>
+            <div itemprop="location" itemscope itemtype="https://schema.org/Place">
+              <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="streetAddress">2 North 1st St., 5th Floor</span><br>
+                <span itemprop="addressLocality">San Jose</span>,
+                <span itemprop="addressRegion">CA</span>
+                <span itemprop="postalCode">95136</span><br>
+                <span itemprop="addressCountry">United States</span>
+              </div>
+              <a href="https://goo.gl/maps/YAJRUb1rDox" class="button" data-marker="san-jose">show on map</a>
+              <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+                <meta itemprop="latitude" content="37.336482">
+                <meta itemprop="longitude" content="-121.8905285">
+              </div>
             </div>
           </div>
         </div>
@@ -135,7 +151,7 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Billing information</h2>
         </div>
-        <div class="mdc-layout-grid__cell address">
+        <div class="box mdc-layout-grid__cell">
           <h3>Billing address</h3>
           <span itemprop="legalName">TopMonks s.r.o.</span><br>
           <span itemprop="foundingLocation" itemscope="" itemtype="https://schema.org/Place">
@@ -149,7 +165,7 @@
 
           <div>Reg. No: 24847437<br> VAT ID: <span itemprop="vatID">CZ24847437</span></div>
         </div>
-        <div class="mdc-layout-grid__cell">
+        <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
           <h3>Bank account</h3>
           <div>Bank: Raiffeisen Bank</div>
           <div>Account number: 780318/5500</div>

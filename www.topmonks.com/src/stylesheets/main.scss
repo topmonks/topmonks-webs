@@ -152,6 +152,8 @@ blockquote {
 
 .how-we-work {
   h2 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
     position: relative;
     z-index: 10;
     @media screen and (max-width: 480px) {
@@ -410,6 +412,23 @@ blockquote {
         margin-top: 112px;
       }
     }
+  }
+}
+
+#page-topmonks-contact {
+  .box.address {
+    padding: 0;
+  }
+  .box.address .content {
+    padding: 0 16px 8px;
+  }
+  .box.address img {
+    margin: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .box h3 {
+    text-align: left;
   }
 }
 
