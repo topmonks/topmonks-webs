@@ -7,7 +7,7 @@ module.exports = {
   fonts: true,
   static: true,
   svgSprite: true,
-  ghPages: true,
+  ghPages: false,
 
   javascripts: {
     entry: {

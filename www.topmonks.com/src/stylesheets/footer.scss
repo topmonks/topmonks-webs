@@ -12,9 +12,19 @@
 .tm-footer a {
   color: #fff;
   text-decoration: underline;
+  text-decoration-color: rgba(256, 256, 256, 0.25);
+  -webkit-transition: text-decoration-color 0.2s linear;
+  -ms-transition: text-decoration-color 0.2s linear;
+  transition: text-decoration-color 0.2s linear;
+  &:hover {
+    text-decoration-color: rgba(256, 256, 256, 0.8);
+    -webkit-transition: text-decoration-color 0.2s linear;
+    -ms-transition: text-decoration-color 0.2s linear;
+    transition: text-decoration-color 0.2s linear;
+  }
   @media screen and (max-width: 480px) {
     display: inline-block;
-    padding: 4px 0 ;
+    padding: 4px 0;
     margin: 4px 0;
   }
 }
