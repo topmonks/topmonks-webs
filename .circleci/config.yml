@@ -90,7 +90,7 @@ jobs:
             - aws-cli
       - run:
           name: Install awscli
-          command: sudo pip install awscli
+          command: pip install --user awscli
       - save_cache:
           key: aws-cli
           paths:
@@ -117,7 +117,7 @@ jobs:
             - aws-cli
       - run:
           name: Install awscli
-          command: sudo pip install awscli
+          command: pip install --user awscli
       - save_cache:
           key: aws-cli
           paths:
