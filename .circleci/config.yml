@@ -29,7 +29,7 @@ test-site: &test-site
 
 s3-deploy: &s3-deploy
   docker:
-    - image: circleci/python:2.7-jessie
+    - image: cibuilds/aws:latest
   working_directory: ~/topmonks-webs
 
 jobs:
@@ -85,16 +85,6 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
-      - restore_cache:
-          keys:
-            - v2-aws-cli
-      - run:
-          name: Install awscli
-          command: sudo pip install awscli
-      - save_cache:
-          key: v2-aws-cli
-          paths:
-            - "/root/.cache/pip"
       - run:
           name: Deploy to S3
           command: aws s3 sync public/prodeti.topmonks.cz s3://prodeti.topmonks.cz/
@@ -112,16 +102,6 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
-      - restore_cache:
-          keys:
-            - v2-aws-cli
-      - run:
-          name: Install awscli
-          command: sudo pip install awscli
-      - save_cache:
-          key: v2-aws-cli
-          paths:
-            - "/root/.cache/pip"
       - run:
           name: Deploy to S3
           command: aws s3 sync public/www.topmonks.com s3://www.topmonks.com/
