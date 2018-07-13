@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="473px" height="73px" viewBox="0 0 473 73" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="96.1475817%" y1="-445.563594%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#529CFB" offset="0%"></stop>
+            <stop stop-color="#8380E5" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="31.4296206%" y1="-39.2040706%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#529CFB" offset="0%"></stop>
+            <stop stop-color="#8380E5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-14" transform="translate(0.000000, -0.704800)">
+            <rect id="Rectangle-3" fill="url(#linearGradient-1)" x="0" y="36" width="400" height="4"></rect>
+            <path d="M461.7119,11.2955 C469.2919,18.8755 472.8059,28.9805 472.2339,38.9005 C471.7599,47.4645 468.2459,55.8855 461.7119,62.4195 C455.1779,68.9535 446.7639,72.4605 438.2079,72.9415 C428.2799,73.5065 418.1679,69.9995 410.5879,62.4195 C396.4669,48.2985 396.4739,25.4095 410.5879,11.2955 C424.7089,-2.8255 447.5909,-2.8255 461.7119,11.2955" id="Fill-5" fill="url(#linearGradient-2)"></path>
+            <path d="M419.136,19.84 C409.739,29.237 409.739,44.472 419.136,53.87 C428.533,63.266 443.769,63.266 453.166,53.87 C462.564,44.472 462.564,29.237 453.166,19.84 C448.467,15.141 442.309,12.791 436.151,12.791 C429.993,12.791 423.834,15.141 419.136,19.84" id="Fill-12" fill="#FFFFFF"></path>
+            <text id="02" font-family="Lato-Black, Lato" font-size="20" font-weight="700" fill="#529CFB">
+                <tspan x="425" y="44">02</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

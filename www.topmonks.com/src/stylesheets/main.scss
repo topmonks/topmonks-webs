@@ -233,8 +233,9 @@ blockquote {
 
 .product {
   background-color: #f3f3f3;
-  .tm-layout-wrapper{
-    background: url("/images/bgnd_product_top_mobile.svg") top center no-repeat, url("/images/bgnd_product_mobile.svg") bottom center no-repeat;
+  .tm-layout-wrapper {
+    background: url("/images/bgnd_product_top_mobile.svg") top center no-repeat,
+      url("/images/bgnd_product_mobile.svg") bottom center no-repeat;
     background-size: 100% auto;
     padding-top: 110px;
     padding-bottom: 110px;
@@ -245,8 +246,35 @@ blockquote {
     text-transform: uppercase;
     text-align: left;
   }
+  @media screen and (max-width: 480px) {
+    .tm-layout-wrapper {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .steps__step {
+      font-family: Lato, sans-serif;
+      &:nth-child(odd) {
+        padding-left: 85px;
+        padding-right: 24px;
+        margin-left: 24px;
+        background: url("/images/bgnd_step_1.svg") left 0 top 10px no-repeat;
+      }
+      &:nth-child(even) {
+        padding-right: 85px;
+        padding-left: 24px;
+        margin-right: 24px;
+        background: url("/images/bgnd_step_2.svg") right 0 top 10px no-repeat;
+      }
+      &.design {
+        background-image: url("/images/bgnd_step_3.svg");
+      }
+      &.development {
+        background-image: url("/images/bgnd_step_4.svg");
+      }
+    }
+  }
   @media screen and (min-width: 481px) {
-    .tm-layout-wrapper{
+    .tm-layout-wrapper {
       padding-top: 24px;
       padding-bottom: 24px;
     }
@@ -265,12 +293,10 @@ blockquote {
       &:nth-child(odd) {
         top: 65px;
         left: 560px;
-
       }
       &:nth-child(even) {
         top: 165px;
         left: -468px;
-
       }
       &.design {
         top: 35px;
@@ -494,9 +520,6 @@ blockquote {
   .action-button {
     display: inline-block;
     margin: 0;
-  }
-  .product {
-
   }
   .main-info {
     position: relative;
