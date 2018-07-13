@@ -212,6 +212,7 @@ blockquote {
     background-color: #f3f3f3;
   }
 }
+
 .tm-partners-list {
   color: var(--tm-grey);
   display: flex;
@@ -429,17 +430,15 @@ blockquote {
       height: 112px;
       &.tm-app-bar--sticky {
         background-color: #fff;
-        @media screen and (min-width: 481px) {
-          height: 72px;
-          .tm-layout-wrapper {
-            padding: 20px 0 0 16px;
-          }
-          + main {
-            margin-top: 72px;
-          }
-          .tm-menu__list a {
-            color: var(--tm-primary);
-          }
+        height: 72px;
+        .tm-layout-wrapper {
+          padding: 20px 0 0 16px;
+        }
+        + main {
+          margin-top: 72px;
+        }
+        .tm-menu__list a {
+          color: var(--tm-primary);
         }
       }
       .tm-layout-wrapper {

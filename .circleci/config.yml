@@ -29,7 +29,7 @@ test-site: &test-site
 
 s3-deploy: &s3-deploy
   docker:
-    - image: circleci/python:2.7-jessie
+    - image: cibuilds/aws:latest
   working_directory: ~/topmonks-webs
 
 jobs:
@@ -85,16 +85,6 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
-      - restore_cache:
-          keys:
-            - aws-cli
-      - run:
-          name: Install awscli
-          command: sudo pip install awscli
-      - save_cache:
-          key: aws-cli
-          paths:
-            - "~/.cache/pip"
       - run:
           name: Deploy to S3
           command: aws s3 sync public/prodeti.topmonks.cz s3://prodeti.topmonks.cz/
@@ -107,29 +97,19 @@ jobs:
   deploy-www-topmonks-com:
     <<: *s3-deploy
     environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E3FDER5NIOLAD2
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: EMNWZWEX2M2BH
     steps:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
-      - restore_cache:
-          keys:
-            - aws-cli
-      - run:
-          name: Install awscli
-          command: sudo pip install awscli
-      - save_cache:
-          key: aws-cli
-          paths:
-            - "~/.cache/pip"
       - run:
           name: Deploy to S3
           command: aws s3 sync public/www.topmonks.com s3://www.topmonks.com/
-      #- run:
-      #    name: Invalidate CDN distribution
-      #    command: |
-      #      aws configure set preview.cloudfront true
-      #      aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+      - run:
+          name: Invalidate CDN distribution
+          command: |
+            aws configure set preview.cloudfront true
+            aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
 
 workflows:
   version: 2
