@@ -87,14 +87,14 @@ jobs:
           at: ~/topmonks-webs
       - restore_cache:
           keys:
-            - aws-cli
+            - v2-aws-cli
       - run:
           name: Install awscli
-          command: pip install --user awscli
+          command: sudo pip install awscli
       - save_cache:
-          key: aws-cli
+          key: v2-aws-cli
           paths:
-            - "~/.cache/pip"
+            - "/root/.cache/pip"
       - run:
           name: Deploy to S3
           command: aws s3 sync public/prodeti.topmonks.cz s3://prodeti.topmonks.cz/
@@ -114,14 +114,14 @@ jobs:
           at: ~/topmonks-webs
       - restore_cache:
           keys:
-            - aws-cli
+            - v2-aws-cli
       - run:
           name: Install awscli
-          command: pip install --user awscli
+          command: sudo pip install awscli
       - save_cache:
-          key: aws-cli
+          key: v2-aws-cli
           paths:
-            - "~/.cache/pip"
+            - "/root/.cache/pip"
       - run:
           name: Deploy to S3
           command: aws s3 sync public/www.topmonks.com s3://www.topmonks.com/
