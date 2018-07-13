@@ -15,6 +15,11 @@
     padding-top: 2px;
     justify-content: flex-end;
   }
+  @media screen and (max-width: 840px) {
+    font-size: 24px;
+    padding-top: 2px;
+    justify-content: flex-end;
+  }
 }
 
 .tm-logo .monk {
@@ -23,6 +28,9 @@
 }
 
 .tm-hamburger {
+  @media screen and (min-width: 841px) {
+    display: none;
+  }
   .tm-hamburger__container {
     display: inline-block;
     cursor: pointer;
@@ -76,7 +84,7 @@
   top: 0;
   transition: all 0.2s;
   background-color: var(--tm-secondary);
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 840px) {
     height: 52px;
     .tm-layout-wrapper {
       padding: 8px 16px 0 8px;
@@ -85,7 +93,7 @@
       margin-top: 52px;
     }
   }
-  @media screen and (min-width: 481px) {
+  @media screen and (min-width: 841px) {
     height: 72px;
     .tm-layout-wrapper {
       padding: 20px 0 0 16px;
@@ -108,7 +116,7 @@
   .tm-hamburger .tm-hamburger__container::after {
     color: rgba(0, 0, 0, 0.25);
   }
-  @media screen and (min-width: 481px) {
+  @media screen and (min-width: 841px) {
     height: 72px;
     .tm-layout-wrapper {
       padding: 20px 0 0 16px;
@@ -140,11 +148,12 @@
 }
 
 .tm-menu {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 840px) {
     width: 100vw;
     height: 100vh;
     padding-top: 64px;
     transform: translate(calc(-100vw - 12px), -64px);
+    transform: translate(calc(-140vw - 12px), -64px);
     position: fixed;
     z-index: 3;
     transition: transform 0.3s;

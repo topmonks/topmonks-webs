@@ -16,10 +16,9 @@ body {
   color: var(--topmonks-black);
   margin: 0;
   padding: 0;
-  font-display: optional;
   letter-spacing: 0;
   line-height: 1.444em; //22/26px
-  font-family: Lato, sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,Roboto,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
   font-variant-ligatures: common-ligatures contextual;
@@ -29,6 +28,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
+}
+
+.wf-active body {
+  font-family: Lato, sans-serif;
 }
 
 h1,
@@ -100,29 +103,6 @@ ul li {
 
 /* MD GRID TABLET ONLY BREAKPOINT */
 @media (min-width: 480px) and (max-width: 839px) {
-}
-
-.mdc-tab,
-.mdc-typography,
-.mdc-typography--display1,
-.mdc-typography--display2,
-.mdc-typography--display3,
-.mdc-typography--display4,
-.mdc-typography--headline,
-.mdc-typography--title,
-.mdc-typography--subheading1,
-.mdc-typography--subheading2,
-.mdc-typography--body1,
-.mdc-typography--body2,
-.mdc-toolbar__title,
-.mdc-card__title,
-.mdc-card__title--large,
-.mdc-card__subtitle,
-.mdc-card__supporting-text,
-.mdc-list,
-.mdc-list-item,
-.mdc-list-item__text__secondary {
-  font-family: inherit !important;
 }
 
 nav {
