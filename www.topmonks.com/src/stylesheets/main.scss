@@ -405,7 +405,7 @@ blockquote {
   }
 
   .tm-logo {
-    @media screen and (min-width: 481px) {
+    @media screen and (min-width: 841px) {
       font-size: 1.6em;
       color: var(--tm-secondary);
       &:hover {
@@ -425,7 +425,7 @@ blockquote {
 
   .tm-app-bar {
     background-color: transparent;
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 840px) {
       &.tm-app-bar--sticky {
         background-color: #fff;
       }
@@ -434,7 +434,7 @@ blockquote {
         font-size: 22px;
       }
     }
-    @media screen and (min-width: 481px) {
+    @media screen and (min-width: 841px) {
       height: 112px;
       &.tm-app-bar--sticky {
         background-color: #fff;
@@ -456,6 +456,15 @@ blockquote {
       + main {
         margin-top: 112px;
       }
+    }
+  }
+  .tm-app-bar--open {
+    color: #fff;
+    .tm-hamburger__container::after {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .tm-hamburger__bar {
+      background-color: #fff;
     }
   }
 }
@@ -549,9 +558,6 @@ blockquote {
   }
   .tm-case-studies .tm-case-studies__clients + .tm-case-studies__clients {
     margin-top: 0;
-  }
-  .tm-hamburger {
-    display: none;
   }
   .cooperation {
     h2 {
