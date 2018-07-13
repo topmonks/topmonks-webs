@@ -33,7 +33,7 @@ section:target {
 .tm-layout-wrapper {
   max-width: 1008px;
   margin: 0 auto;
-  padding: 16px;
+  //padding: 16px;
   --mdc-layout-grid-margin-desktop: 0;
   --mdc-layout-grid-margin-tablet: 0;
   --mdc-layout-grid-margin-phone: 0;
@@ -156,7 +156,7 @@ blockquote {
     font-weight: 700;
     position: relative;
     z-index: 10;
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 840px) {
       display: none;
     }
   }
@@ -530,9 +530,6 @@ blockquote {
 
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
 @media (min-width: 481px) {
-  .tm-layout-wrapper {
-    padding: 24px;
-  }
   .action-button {
     display: inline-block;
     margin: 0;
@@ -589,8 +586,14 @@ blockquote {
 }
 
 /* MD GRID TABLET ONLY BREAKPOINT */
-@media screen and (min-width: 481px) and (max-width: 839px) {
+@media screen and (min-width: 481px) and (max-width: 840px) {
   .tm-case-studies__clients {
     align-content: space-between;
+  }
+}
+
+@media screen and (min-width: 841px) {
+  .tm-layout-wrapper {
+    padding: 24px;
   }
 }
