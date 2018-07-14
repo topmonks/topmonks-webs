@@ -285,7 +285,10 @@ blockquote {
       padding-bottom: 24px;
     }
     p {
-      width: 340px;
+      width: 280px;
+      @media screen and (min-width: 840px) {
+        width: 340px;
+      }
     }
     .steps {
       width: 100%;
@@ -298,17 +301,29 @@ blockquote {
       position: relative;
       &:nth-child(odd) {
         top: 65px;
-        left: 560px;
+        left: 460px;
+        @media screen and (min-width: 840px) {
+          left: 560px;
+        }
       }
       &:nth-child(even) {
         top: 165px;
-        left: -468px;
+        left: -268px;
+        @media screen and (min-width: 840px) {
+          left: -468px;
+        }
       }
       &.design {
-        top: 35px;
+        top: 15px;
+        @media screen and (min-width: 840px) {
+          top: 35px;
+        }
       }
       &.development {
-        top: 135px;
+        top: 115px;
+        @media screen and (min-width: 840px) {
+          top: 135px;
+        }
       }
     }
   }
