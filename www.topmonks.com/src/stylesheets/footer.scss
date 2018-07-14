@@ -13,16 +13,12 @@
   color: #fff;
   text-decoration: underline;
   text-decoration-color: rgba(256, 256, 256, 0.5);
-  -webkit-transition: text-decoration-color 0.2s linear;
-  -ms-transition: text-decoration-color 0.2s linear;
   transition: text-decoration-color 0.2s linear;
   &:hover {
     text-decoration-color: rgba(256, 256, 256, 1);
-    -webkit-transition: text-decoration-color 0.2s linear;
-    -ms-transition: text-decoration-color 0.2s linear;
     transition: text-decoration-color 0.2s linear;
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 479px) {
     display: inline-block;
     padding: 4px 0;
     margin: 4px 0;

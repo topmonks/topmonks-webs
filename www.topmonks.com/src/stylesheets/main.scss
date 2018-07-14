@@ -22,10 +22,10 @@ body {
 }
 
 section:target {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 479px) {
     margin-top: 96px;
   }
-  @media screen and (min-width: 481px) {
+  @media screen and (min-width: 480px) {
     margin-top: 88px;
   }
 }
@@ -70,7 +70,7 @@ blockquote {
   font-size: 28px;
   line-height: 32px;
 
-  @media screen and (min-width: 481px) {
+  @media screen and (min-width: 480px) {
     font-size: 40px;
     line-height: 48px;
   }
@@ -156,7 +156,7 @@ blockquote {
     font-weight: 700;
     position: relative;
     z-index: 10;
-    @media screen and (max-width: 840px) {
+    @media screen and (max-width: 839px) {
       display: none;
     }
   }
@@ -218,7 +218,7 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 479px) {
     flex-direction: column;
   }
   margin: 0;
@@ -247,7 +247,7 @@ blockquote {
     text-transform: uppercase;
     text-align: left;
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 479px) {
     .tm-layout-wrapper {
       padding-left: 0;
       padding-right: 0;
@@ -273,7 +273,7 @@ blockquote {
       }
     }
   }
-  @media screen and (min-width: 481px) {
+  @media screen and (min-width: 480px) {
     .tm-layout-wrapper {
       padding-top: 24px;
       padding-bottom: 24px;
@@ -362,7 +362,7 @@ blockquote {
   background: #fff url("/images/bgnd_curve_2.svg") top -5px left calc(
       50% - 530px
     ) no-repeat;
-  @media screen and (min-width: 481px) {
+  @media screen and (min-width: 480px) {
     background-position: top -24px left calc(50% - 370px);
   }
   .contact_title p {
@@ -377,35 +377,35 @@ blockquote {
 }
 
 #page-topmonks-index {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 479px) {
     background: #fff
       url("https://res.cloudinary.com/topmonks/image/upload/w_352,dpr_auto,q_auto,f_auto/v1531486526/topmonks.com/bgnd_header_mobile.png")
       no-repeat right calc(50% - 145px) top -1px;
     background-size: 352px auto;
     overflow-x: hidden;
   }
-  @media screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2),
-    screen and (max-width: 480px) and (min--moz-device-pixel-ratio: 2),
-    screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 2/1),
-    screen and (max-width: 480px) and (min-device-pixel-ratio: 2),
-    screen and (max-width: 480px) and (min-resolution: 192dpi),
-    screen and (max-width: 480px) and (min-resolution: 2dppx) {
+  @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2),
+    screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
+    screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
+    screen and (max-width: 479px) and (min-resolution: 192dpi),
+    screen and (max-width: 479px) and (min-resolution: 2dppx) {
     background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_352,dpr_2,q_auto,f_auto/v1531486526/topmonks.com/bgnd_header_mobile.png");
   }
-  @media screen and (min-width: 481px) {
+  @media screen and (min-width: 480px) {
     background: url("https://res.cloudinary.com/topmonks/image/upload/w_1017,dpr_auto,q_auto,f_auto/v1531486239/topmonks.com/bgnd_header.png")
       no-repeat right calc(50% - 390px) top -1px;
     background-size: 1017px auto;
     overflow-x: hidden;
   }
-  @media screen and (min-width: 841px) and (min-device-pixel-ratio: 2),
-    screen and (min-width: 841px) and (min-resolution: 192dpi),
-    screen and (min-width: 841px) and (min-resolution: 2dppx) {
+  @media screen and (min-width: 840px) and (min-device-pixel-ratio: 2),
+    screen and (min-width: 840px) and (min-resolution: 192dpi),
+    screen and (min-width: 840px) and (min-resolution: 2dppx) {
     background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_1017,dpr_2,q_auto,f_auto/v1531486239/topmonks.com/bgnd_header.png");
   }
 
   .tm-logo {
-    @media screen and (min-width: 841px) {
+    @media screen and (min-width: 840px) {
       font-size: 1.6em;
       color: var(--tm-secondary);
       &:hover {
@@ -425,7 +425,7 @@ blockquote {
 
   .tm-app-bar {
     background-color: transparent;
-    @media screen and (max-width: 840px) {
+    @media screen and (max-width: 839px) {
       &.tm-app-bar--sticky {
         background-color: #fff;
       }
@@ -434,7 +434,7 @@ blockquote {
         font-size: 22px;
       }
     }
-    @media screen and (min-width: 841px) {
+    @media screen and (min-width: 840px) {
       height: 112px;
       &.tm-app-bar--sticky {
         background-color: #fff;
@@ -491,7 +491,7 @@ blockquote {
     url("/images/bgnd_curve_1.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: bottom 0 left -800px, bottom -5px left calc(50% - 530px);
-  @media screen and (min-width: 481px) {
+  @media screen and (min-width: 480px) {
     background-position: bottom -20px center,
       bottom -120px left calc(50% - 400px);
   }
@@ -499,37 +499,37 @@ blockquote {
     margin-bottom: 260px;
   }
   .tm-bgnd-wrapper {
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 479px) {
       background: transparent
         url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_auto,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png")
         no-repeat left -110px top 120px;
       background-size: 440px auto;
     }
-    @media screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2),
-      screen and (max-width: 480px) and (min--moz-device-pixel-ratio: 2),
-      screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 2/1),
-      screen and (max-width: 480px) and (min-device-pixel-ratio: 2),
-      screen and (max-width: 480px) and (min-resolution: 192dpi),
-      screen and (max-width: 480px) and (min-resolution: 2dppx) {
+    @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2),
+      screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2),
+      screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
+      screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
+      screen and (max-width: 479px) and (min-resolution: 192dpi),
+      screen and (max-width: 479px) and (min-resolution: 2dppx) {
       background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_2,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png");
     }
-    @media screen and (min-width: 481px) {
+    @media screen and (min-width: 480px) {
       background: transparent
         url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_auto,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png")
         no-repeat right calc(50% + 555px) top 140px;
       background-size: 695px auto;
       padding-bottom: 120px;
     }
-    @media screen and (min-width: 841px) and (min-device-pixel-ratio: 2),
-      screen and (min-width: 841px) and (min-resolution: 192dpi),
-      screen and (min-width: 841px) and (min-resolution: 2dppx) {
+    @media screen and (min-width: 840px) and (min-device-pixel-ratio: 2),
+      screen and (min-width: 840px) and (min-resolution: 192dpi),
+      screen and (min-width: 840px) and (min-resolution: 2dppx) {
       background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_2,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png");
     }
   }
 }
 
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
-@media (min-width: 481px) {
+@media (min-width: 480px) {
   .action-button {
     display: inline-block;
     margin: 0;
@@ -586,13 +586,13 @@ blockquote {
 }
 
 /* MD GRID TABLET ONLY BREAKPOINT */
-@media screen and (min-width: 481px) and (max-width: 840px) {
+@media screen and (min-width: 480px) and (max-width: 839px) {
   .tm-case-studies__clients {
     align-content: space-between;
   }
 }
 
-@media screen and (min-width: 841px) {
+@media screen and (min-width: 840px) {
   .tm-layout-wrapper {
     padding: 24px;
   }

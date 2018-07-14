@@ -14,7 +14,7 @@
   &.box img {
     margin: 16px auto;
   }
-  @media screen and (max-width: 840px) {
+  @media screen and (max-width: 839px) {
     .tm-meetup__cell {
       &:first-child {
         order: 2;
@@ -24,7 +24,7 @@
       }
     }
   }
-  @media (min-width: 841px) {
+  @media (min-width: 840px) {
     &:nth-child(even) .tm-meetup__cell {
       &:first-child {
         order: 2;
@@ -35,7 +35,7 @@
     }
   }
 }
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 839px) {
   .tm-meetup__img {
     max-width: 100%;
   }

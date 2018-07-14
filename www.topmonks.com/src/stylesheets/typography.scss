@@ -12,13 +12,14 @@ http://pxtoem.com/ - how to count px to em
 */
 
 body {
-  font-size: 16px;
   color: var(--topmonks-black);
   margin: 0;
   padding: 0;
+  font-size: 16px;
   letter-spacing: 0;
   line-height: 1.444em; //22/26px
-  font-family: -apple-system,BlinkMacSystemFont,Roboto,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
   font-variant-ligatures: common-ligatures contextual;
@@ -32,6 +33,14 @@ body {
 
 .wf-active body {
   font-family: Lato, sans-serif;
+}
+.tm-logo {
+  font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+.wf-active .tm-logo {
+  font-family: futura-pt, sans-serif;
 }
 
 h1,
@@ -99,10 +108,6 @@ ul li {
   h4 {
     font-size: 20px; //20px
   }
-}
-
-/* MD GRID TABLET ONLY BREAKPOINT */
-@media (min-width: 480px) and (max-width: 839px) {
 }
 
 nav {
