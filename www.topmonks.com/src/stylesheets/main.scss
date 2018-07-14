@@ -39,6 +39,12 @@ section:target {
   --mdc-layout-grid-margin-phone: 0;
 }
 
+.tm-layout-grid__cell--span-0-desktop {
+  @media screen and (min-width: 840px) {
+    display: none;
+  }
+}
+
 blockquote {
   position: relative;
   margin: 0 0 3em;
@@ -466,23 +472,6 @@ blockquote {
     .tm-hamburger__bar {
       background-color: #fff;
     }
-  }
-}
-
-#page-topmonks-contact {
-  .box.address {
-    padding: 0;
-  }
-  .box.address .content {
-    padding: 0 16px 8px;
-  }
-  .box.address img {
-    margin: 0;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-  .box h3 {
-    text-align: left;
   }
 }
 

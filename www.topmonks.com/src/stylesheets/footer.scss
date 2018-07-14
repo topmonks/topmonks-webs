@@ -38,5 +38,10 @@
   display: inline-block;
   height: 32px;
   margin: 0;
-  padding: 4px 12px 0;
+  @media screen and (max-width: 339px) {
+    padding: 4px 8px 0;
+  }
+  @media screen and (min-width: 340px) {
+    padding: 4px 12px 0;
+  }
 }
