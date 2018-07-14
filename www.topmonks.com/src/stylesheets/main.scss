@@ -368,12 +368,15 @@ blockquote {
     color: var(--tm-grey);
     text-align: center;
   }
+  blockquote {
+    margin-bottom: 2em;
+  }
 }
 
 .tm-testimonial__picture {
   border-radius: 50%;
   filter: grayscale(1);
-  width: 180px;
+  width: 72px;
   border: 2px solid #fff;
 }
 
