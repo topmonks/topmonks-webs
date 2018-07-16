@@ -229,7 +229,8 @@ blockquote {
   }
   margin: 0;
   li {
-    width: 140px;
+    width: 164px;
+    margin-right: 24px;
   }
   svg {
     width: 100%;
@@ -403,7 +404,7 @@ blockquote {
 #page-topmonks-index {
   @media screen and (max-width: 479px) {
     background: #fff
-      url("https://res.cloudinary.com/topmonks/image/upload/w_352,dpr_auto,q_auto,f_auto/v1531486526/topmonks.com/bgnd_header_mobile.png")
+      url("https://res.cloudinary.com/topmonks/image/upload/w_352,dpr_auto,q_auto,f_auto/v1531754590/topmonks.com/bgnd_header_mobile.png")
       no-repeat right calc(50% - 145px) top -1px;
     background-size: 352px auto;
     overflow-x: hidden;
@@ -414,7 +415,7 @@ blockquote {
     screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
     screen and (max-width: 479px) and (min-resolution: 192dpi),
     screen and (max-width: 479px) and (min-resolution: 2dppx) {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_352,dpr_2,q_auto,f_auto/v1531486526/topmonks.com/bgnd_header_mobile.png");
+    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_352,dpr_2,q_auto,f_auto/v1531754590/topmonks.com/bgnd_header_mobile.png");
   }
   @media screen and (min-width: 480px) {
     background: url("https://res.cloudinary.com/topmonks/image/upload/w_1017,dpr_auto,q_auto,f_auto/v1531486239/topmonks.com/bgnd_header.png")
@@ -422,10 +423,13 @@ blockquote {
     background-size: 1017px auto;
     overflow-x: hidden;
   }
-  @media screen and (min-width: 840px) and (min-device-pixel-ratio: 2),
-    screen and (min-width: 840px) and (min-resolution: 192dpi),
-    screen and (min-width: 840px) and (min-resolution: 2dppx) {
+  @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2),
+    screen and (min-width: 480px) and (min-resolution: 192dpi),
+    screen and (min-width: 480px) and (min-resolution: 2dppx) {
     background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_1017,dpr_2,q_auto,f_auto/v1531486239/topmonks.com/bgnd_header.png");
+  }
+  @media screen and (min-width: 480px) and (max-width: 839px) {
+    background-position: right calc(50% - 460px) top -1px;;
   }
 
   .tm-logo {
