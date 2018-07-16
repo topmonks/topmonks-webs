@@ -295,7 +295,7 @@ blockquote {
       height: 100%;
       min-height: 769px;
       margin: 0 auto;
-      background: url("/images/bgnd_product.svg") calc(50% - 59px) top no-repeat;
+      background: url("/images/bgnd_product.svg") calc(50% - 20px) top no-repeat;
     }
     .steps__step {
       position: relative;
@@ -387,7 +387,7 @@ blockquote {
       50% - 530px
     ) no-repeat;
   @media screen and (min-width: 480px) {
-    background-position: top -24px left calc(50% - 370px);
+    background-position: top -1px left calc(50% - 360px);
   }
   .contact_title p {
     color: var(--tm-black);
