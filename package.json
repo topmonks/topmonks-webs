@@ -6,7 +6,8 @@
   "author": "TopMonks",
   "license": "MIT",
   "dependencies": {
-    "@material/layout-grid": "^0.34.0"
+    "@material/layout-grid": "^0.34.0",
+    "broken-link-checker": "^0.7.8"
   },
   "devDependencies": {
     "ava": "^0.25.0",
@@ -16,7 +17,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.2",
     "http-server": "^0.11.1",
-    "lighthouse": "^3.0.2",
+    "lighthouse": "^3.0.3",
     "marked": "^0.4.0",
     "nunjucks-markdown": "^2.0.1",
     "prettier": "^1.13.7",
@@ -31,11 +32,12 @@
     "build:www.topmonks.com": "BLENDID_CONFIG_PATH=./www.topmonks.com/config/ blendid -- build",
     "build:www.topmonks.cz": "BLENDID_CONFIG_PATH=./www.topmonks.cz/config/ blendid -- build",
     "build:prodeti.topmonks.cz": "BLENDID_CONFIG_PATH=./prodeti.topmonks.cz/config/ blendid -- build",
-    "build": "yarn run build:www.topmonks.com && yarn run build:www.topmonks.cz && yarn run build:prodeti.topmonks.cz",
+    "build": "yarn build:www.topmonks.com && yarn build:www.topmonks.cz && yarn build:prodeti.topmonks.cz",
     "test:ava": "ava --tap | tap-xunit > ./results/ava.xml",
     "test:eslint": "eslint ./ --format junit --output-file ./results/eslint.xml",
     "test:stylelint": "stylelint-config-prettier-check",
     "test:lighthouse": "lighthouse http://localhost:8080/ --output json --output html --output-path ./results/lh.html --chrome-flags=\"--headless\" --no-enable-error-reporting --skip-audits is-on-https --skip-audits themed-omnibox --skip-audits redirects-http --skip-audits load-fast-enough-for-pwa --skip-audits service-worker --skip-audits splash-screen --skip-audits webapp-install-banner --skip-audits works-offline",
-    "test": "concurrently 'yarn run test:eslint' 'yarn run test:stylelint'"
+    "test:broken-links": "yarn blc http://localhost:3000/ -ro",
+    "test": "concurrently 'yarn test:eslint' 'yarn test:stylelint'"
   }
 }

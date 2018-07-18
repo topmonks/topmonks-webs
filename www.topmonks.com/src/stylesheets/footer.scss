@@ -38,6 +38,12 @@
   display: inline-block;
   height: 32px;
   margin: 0;
+  &:first-child{
+    padding-left: 6px;
+  }
+  &:last-child {
+    padding-right: 6px;
+  }
   @media screen and (max-width: 339px) {
     padding: 4px 8px 0;
   }
