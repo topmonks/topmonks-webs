@@ -32,11 +32,12 @@
     "build:www.topmonks.com": "BLENDID_CONFIG_PATH=./www.topmonks.com/config/ blendid -- build",
     "build:www.topmonks.cz": "BLENDID_CONFIG_PATH=./www.topmonks.cz/config/ blendid -- build",
     "build:prodeti.topmonks.cz": "BLENDID_CONFIG_PATH=./prodeti.topmonks.cz/config/ blendid -- build",
-    "build": "yarn run build:www.topmonks.com && yarn run build:www.topmonks.cz && yarn run build:prodeti.topmonks.cz",
+    "build": "yarn build:www.topmonks.com && yarn build:www.topmonks.cz && yarn build:prodeti.topmonks.cz",
     "test:ava": "ava --tap | tap-xunit > ./results/ava.xml",
     "test:eslint": "eslint ./ --format junit --output-file ./results/eslint.xml",
     "test:stylelint": "stylelint-config-prettier-check",
     "test:lighthouse": "lighthouse http://localhost:8080/ --output json --output html --output-path ./results/lh.html --chrome-flags=\"--headless\" --no-enable-error-reporting --skip-audits is-on-https --skip-audits themed-omnibox --skip-audits redirects-http --skip-audits load-fast-enough-for-pwa --skip-audits service-worker --skip-audits splash-screen --skip-audits webapp-install-banner --skip-audits works-offline",
-    "test": "concurrently 'yarn run test:eslint' 'yarn run test:stylelint'"
+    "test:broken-links": "yarn blc http://localhost:3000/ -ro",
+    "test": "concurrently 'yarn test:eslint' 'yarn test:stylelint'; yarn test:broken-links"
   }
 }
