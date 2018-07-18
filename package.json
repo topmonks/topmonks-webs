@@ -6,7 +6,8 @@
   "author": "TopMonks",
   "license": "MIT",
   "dependencies": {
-    "@material/layout-grid": "^0.34.0"
+    "@material/layout-grid": "^0.34.0",
+    "broken-link-checker": "^0.7.8"
   },
   "devDependencies": {
     "ava": "^0.25.0",
