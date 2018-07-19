@@ -29,9 +29,11 @@
     "start:www.topmonks.com": "BLENDID_CONFIG_PATH=./www.topmonks.com/config/ blendid",
     "start:www.topmonks.cz": "BLENDID_CONFIG_PATH=./www.topmonks.cz/config/ blendid",
     "start:prodeti.topmonks.cz": "BLENDID_CONFIG_PATH=./prodeti.topmonks.cz/config/ blendid",
+    "start:caffe.topmonks.cz": "BLENDID_CONFIG_PATH=./caffe.topmonks.cz/config/ blendid",
     "build:www.topmonks.com": "BLENDID_CONFIG_PATH=./www.topmonks.com/config/ blendid -- build",
     "build:www.topmonks.cz": "BLENDID_CONFIG_PATH=./www.topmonks.cz/config/ blendid -- build",
     "build:prodeti.topmonks.cz": "BLENDID_CONFIG_PATH=./prodeti.topmonks.cz/config/ blendid -- build",
+    "build:caffe.topmonks.cz": "BLENDID_CONFIG_PATH=./caffe.topmonks.cz/config/ blendid -- build",
     "build": "yarn build:www.topmonks.com && yarn build:www.topmonks.cz && yarn build:prodeti.topmonks.cz",
     "test:ava": "ava --tap | tap-xunit > ./results/ava.xml",
     "test:eslint": "eslint ./ --format junit --output-file ./results/eslint.xml",
@@ -40,6 +42,7 @@
     "test:broken-links:www.topmonks.com": "blcl ./public/www.topmonks.com -ro --exclude linkedin.com --exclude caffe.topmonks.cz",
     "test:broken-links:www.topmonks.cz": "blcl ./public/www.topmonks.cz -ro --exclude linkedin.com --exclude caffe.topmonks.cz",
     "test:broken-links:prodeti.topmonks.cz": "blcl ./public/prodeti.topmonks.cz -ro --exclude linkedin.com --exclude caffe.topmonks.cz",
+    "test:broken-links:caffe.topmonks.cz": "blcl ./public/caffe.topmonks.cz -ro --exclude linkedin.com --exclude caffe.topmonks.cz",
     "test:broken-links":"yarn test:broken-links:www.topmonks.com && yarn test:broken-links:prodeti.topmonks.cz",
     "test": "concurrently 'yarn test:eslint' 'yarn test:stylelint' && yarn test:broken-links"
   }
