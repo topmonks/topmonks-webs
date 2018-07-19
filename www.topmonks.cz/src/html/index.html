@@ -1,8 +1,22 @@
-{% extends 'layouts/application.html' %}
+{% extends 'layouts/topmonks.html' %}
+{% from 'macros/helpers.html' import sprite %}
+
+{% set page = 'topmonks-index' %}
+{% set language = cs %}
+
 {% block title %}TopMonks - Tým pro váš projekt{% endblock %}
 
-{% block navigation %}
-{{ macros.navigation('topmonks.cz') }}
+{% block head %}
+<meta name="description" content="Jsme software development studio, experienced with both startup and corporate environment.">
+<meta name="twitter:description" property="og:description" content="We are your software development partners, experienced with both startup and corporate environment.">
+<link rel="canonical" href="https://www.topmonks.cz/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@topmonks">
+<meta name="twitter:title" property="og:title" content="TopMonks - Software development partner pro váš byznys">
+<meta name="twitter:image" property="og:image" content="https://www.topmonks.com/images/og-image.png">
+<meta property="og:type" content="company">
+<meta property="og:url" content="https://www.topmonks.cz/">
+<meta property="og:site_name" content="TopMonks.cz">
 {% endblock %}
 
 {% block content %}
