@@ -65,7 +65,7 @@ h4 {
 }
 
 p {
-  margin: 0 0 1em 0;
+  margin: 0 0 1em;
 }
 a {
   color: var(--topmonks-orange);
@@ -88,9 +88,9 @@ ul li {
   margin: 0;
 }
 
-/* MD GRID DESKTOP BREAKPOINT*/
-@media (min-width: 840px) {
-}
+///* MD GRID DESKTOP BREAKPOINT*/
+//@media (min-width: 840px) {
+//}
 
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
 @media (min-width: 480px) {
