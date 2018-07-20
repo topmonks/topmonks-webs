@@ -68,7 +68,6 @@
 
     window.addEventListener("resize", function() {
       if (!ticking) {
-        console.log(window.innerWidth);
         window.requestAnimationFrame(function() {
           if (window.matchMedia("(min-width: 841px)").matches) {
             menu.classList.add("tm-menu--horizontal");
