@@ -42,8 +42,7 @@
     var menu = document.querySelector(".tm-menu");
     hamburger.addEventListener("click", toggleMenu(hamburger));
     function toggleMenu(hamburger) {
-      return function(e) {
-        //menu.classList.toggle("tm-menu--horizontal");
+      return function() {
         hamburger.classList.toggle("tm-hamburger__container--open");
         appBar.classList.toggle("tm-app-bar--open");
       }
@@ -51,7 +50,7 @@
 
     var lastPosition = 0;
     var ticking = false;
-    document.addEventListener("scroll", function(e) {
+    document.addEventListener("scroll", function() {
       lastPosition = window.scrollY;
       if (!ticking) {
         window.requestAnimationFrame(function() {
@@ -67,8 +66,24 @@
       }
     });
 
+    window.addEventListener("resize", function() {
+      if (!ticking) {
+        console.log(window.innerWidth);
+        window.requestAnimationFrame(function() {
+          if (window.matchMedia("(min-width: 841px)").matches) {
+            menu.classList.add("tm-menu--horizontal");
+          }
+          else {
+            menu.classList.remove("tm-menu--horizontal");
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
     if (window.matchMedia("(min-width: 841px)").matches) {
-      menu.classList.add("tm-menu--horizontal");
+      menu.classList.toggle("tm-menu--horizontal");
     }
   </script>
 </header>
