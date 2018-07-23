@@ -1,0 +1,45 @@
+{%- import 'macros/helpers.html' as macros -%}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{{ language[page].title }}{% endblock %}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+
+  <!-- Preload CDN assets -->
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Custom Fonts -->
+  <script>WebFontConfig={google:{families:["Lato:400,700,900:latin-ext"]}, async:true}</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async defer integrity="sha384-pvXSwSU09c+q9mPyY++ygUHWIYRoaxgnJ/JC5wcOzMb/NVVu+IDniiB9qWp3ZNWM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@v0.35.0/dist/material-components-web.min.css">
+  <link rel="stylesheet" href="/stylesheets/global/typography.css">
+  <link rel="stylesheet" href="/stylesheets/global/main.css">
+  <link rel="stylesheet" href="/stylesheets/global/anicka.css">
+
+  {% block head %}{% endblock %}
+  {% include "shared/app-icons.html" %}
+</head>
+<body id="page-{{page}}">
+  <header>
+    {% block navigation %}{% endblock %}
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    {% include 'shared/footer.html' %}
+  </footer>
+
+{% block javascript %}
+<script src="/javascripts/app.js"></script>
+{% endblock %}
+
+</body>
+</html>
