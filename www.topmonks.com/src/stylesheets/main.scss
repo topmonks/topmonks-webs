@@ -330,10 +330,8 @@ blockquote {
   }
 }
 
+/* CASE STUDIES SECTION START */
 .tm-case-studies {
-  .tm-case-studies__title {
-    text-align: center;
-  }
   h3 {
     font-weight: 700;
     text-align: left;
@@ -348,13 +346,55 @@ blockquote {
       margin: 8px 0;
     }
   }
-  .tm-case-studies__clients {
-    width: 100%;
+}
+.tm-case-studies__clients {
+  width: 100%;
+}
+.tm-case-studies__clients + .tm-case-studies__clients {
+  margin-top: 24px;
+}
+.tm-case-studies__logo {
+  height: 255px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tm-secondary) top center no-repeat;
+  background-size: 100% auto;
+  .sprite {
+    width: 33%;
+    color: white;
+    transition: width 0.3s ease-in-out;
   }
-  .tm-case-studies__clients + .tm-case-studies__clients {
-    margin-top: 24px;
+  svg {
+    fill: currentColor;
   }
 }
+.tm-case-studies__logo:hover .sprite {
+  width: 36%;
+  transition: width 0.3s ease-in-out;
+}
+.tm-case-studies__title {
+  text-align: center;
+}
+.pricefx {
+  background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1532446643/topmonks.com/bgnd_cs_pricefx.jpg");
+}
+.ceska-sporitelna {
+  background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1532446643/topmonks.com/bgnd_cs_cs.jpg");
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
+  .pricefx{
+    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1532446643/topmonks.com/bgnd_cs_pricefx.jpg");
+  }
+  .ceska-sporitelna {
+    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1532446643/topmonks.com/bgnd_cs_cs.jpg");
+  }
+}
+/* CASE STUDIES SECTION END */
 
 .customers {
   padding: 3% 0 0;
