@@ -210,7 +210,7 @@ blockquote {
   }
 }
 
-.partners {
+.tm-partners {
   padding: 0 0 3%;
   background: #fff url("/images/bgnd_curve_3.svg") center bottom no-repeat;
   background-size: 100% auto;
@@ -219,7 +219,7 @@ blockquote {
   }
 }
 
-.tm-partners-list {
+.tm-partners__list {
   color: var(--tm-grey);
   display: flex;
   align-items: center;
@@ -237,6 +237,9 @@ blockquote {
     fill: currentColor;
     stroke: currentColor;
   }
+}
+li.tm-partners__item--adler {
+  width: 100px;
 }
 
 .product {
@@ -347,9 +350,6 @@ blockquote {
     }
   }
 }
-.tm-case-studies__clients {
-  width: 100%;
-}
 .tm-case-studies__clients + .tm-case-studies__clients {
   margin-top: 24px;
 }
@@ -360,7 +360,8 @@ blockquote {
   align-items: center;
   justify-content: center;
   background: var(--tm-secondary) top center no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
+  background-clip: content-box;
   .sprite {
     width: 33%;
     color: white;
@@ -377,20 +378,20 @@ blockquote {
 .tm-case-studies__title {
   text-align: center;
 }
-.pricefx {
+.tm-case-studies__logo--pricefx {
   background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1532446643/topmonks.com/bgnd_cs_pricefx.jpg");
 }
-.ceska-sporitelna {
+.tm-case-studies__logo--ceska-sporitelna {
   background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1532446643/topmonks.com/bgnd_cs_cs.jpg");
 }
 
 @media screen and (min-device-pixel-ratio: 2),
-screen and (min-resolution: 192dpi),
-screen and (min-resolution: 2dppx) {
-  .pricefx{
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .tm-case-studies__logo--pricefx {
     background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1532446643/topmonks.com/bgnd_cs_pricefx.jpg");
   }
-  .ceska-sporitelna {
+  .tm-case-studies__logo--ceska-sporitelna {
     background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1532446643/topmonks.com/bgnd_cs_cs.jpg");
   }
 }
