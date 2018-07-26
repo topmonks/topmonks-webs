@@ -21,7 +21,7 @@
     "marked": "^0.4.0",
     "nunjucks-markdown": "^2.0.1",
     "prettier": "^1.13.7",
-    "stylelint": "^9.3.0",
+    "stylelint": "^9.4.0",
     "stylelint-config-prettier": "^3.3.0",
     "tap-xunit": "^2.3.0"
   },
