@@ -46,33 +46,36 @@ section:target {
 }
 
 blockquote {
-  position: relative;
   margin: 0 0 3em;
-  padding: 0 1em;
-  quotes: "“" "„";
   p {
-    display: inline;
+    position: relative;
+    padding: 0 1em;
+    margin-bottom: 0.5em;
+    quotes: "“" "„";
+    &::before,
+    &::after {
+      content: open-quote;
+      display: inline-block;
+      color: #dadada;
+      font-size: 2.125em;
+      font-weight: 900;
+      position: absolute;
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      content: close-quote;
+      bottom: 4px;
+      padding-left: 4px;
+    }
   }
-  &::before,
-  &::after {
-    content: open-quote;
-    display: inline-block;
-    color: #dadada;
-    font-size: 2.125em;
-    font-weight: 900;
-    position: absolute;
-  }
-  &::before {
-    left: 0;
-  }
-  &::after {
-    content: close-quote;
-    bottom: 4px;
-    padding-left: 4px;
+  cite {
+    padding: 0 1em;
   }
 }
 
-.tm-page-header blockquote {
+.tm-page-header blockquote p {
   font-size: 28px;
   line-height: 32px;
 
@@ -530,9 +533,7 @@ li.tm-partners__item--adler {
       margin: 64px 0 8px;
     }
     .jumbotron__lead {
-      max-width: 320px;
       box-shadow: none;
-      padding-left: 1em;
     }
     .jumbotron__lead p {
       max-width: 320px;
@@ -552,7 +553,7 @@ li.tm-partners__item--adler {
       margin-top: calc(var(--mdc-layout-grid-gutter-desktop) * 2);
     }
   }
-  .customers blockquote {
+  .customers blockquote p {
     font-size: 1.66em;
     &::before,
     &::after {
