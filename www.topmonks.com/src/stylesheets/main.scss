@@ -38,7 +38,9 @@ section:target {
   --mdc-layout-grid-margin-tablet: 0;
   --mdc-layout-grid-margin-phone: 0;
 }
-
+.tm-layout-align-center {
+  text-align: center;
+}
 .tm-layout-grid__cell--span-0-desktop {
   @media screen and (min-width: 840px) {
     display: none;

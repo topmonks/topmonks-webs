@@ -1,0 +1,127 @@
+{% extends 'layouts/topmonks.html' %}
+{% set page = '_case-studies__adler' %}
+{% block title %} Adler - Case Studies - TopMonks{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/stylesheets/case-studies-common.css">
+<style>
+  .tm-case-study__section--time {
+    background-image: url("/images/case-studies/bgnd_time.svg");
+  }
+  .tm-case-study__section--analysis {
+    background-image: url("/images/case-studies/bgnd_analysis.svg");
+  }
+  .tm-case-study__section--prototype {
+    background-image: url("/images/case-studies/bgnd_prototype.svg");
+  }
+  .tm-case-study__section--feedback {
+    background-image: url("/images/case-studies/bgnd_feedback.svg");
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="tm-case-study__hero">
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Adler</h2>
+        <h3>Adler is a leading supplier of promotional textiles in the Czech Republic and Europe. The company grew very
+          fast, and with 250 employees, the IT department can't cover all of Adler's internal needs anymore.</h3>
+        <ul class="tm-case-study__project-numbers-list">
+          <li class="tm-case-study__project-numbers-item"><strong class="tm-case-study__project-number">30</strong>
+            <p>days from the assignment till finished product</p></li>
+          <li class="tm-case-study__project-numbers-item"><strong class="tm-case-study__project-number">5</strong>
+            <p>monks working on the project</p></li>
+          <li class="tm-case-study__project-numbers-item"><strong class="tm-case-study__project-number">600</strong>
+            <p>minutes saved per employee per month</p></li>
+          <li class="tm-case-study__project-numbers-item"><strong class="tm-case-study__project-number">4</strong>
+            <p>different frameworks</p></li>
+          <li class="tm-case-study__project-numbers-item"><strong class="tm-case-study__project-number">2</strong>
+            <p>databases</p></li>
+        </ul>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
+        <p>That's why TopMonks comes on the scene. Experience from similar projects has enabled us to come up with a
+          tailor-made solution to automate the process of purchasing, marketing, and sales, with the vision that the
+          applications will be integrated into one comprehensive administration platform in the future.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--right tm-case-study__section--time">
+        <h3>Solution saves up to 30 minutes a day</h3>
+        <p>In close cooperation with the client, we created software that is not only nice but also user-friendly.
+          Besides, it saves up to 30 minutes of employees' time every day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--analysis">
+        <h3>Detailed workflow analysis</h3>
+        <p>Detailed workflow and user behavior analysis have provided our UX designer with instant feedback on
+          prototyping. As a result, he was able to create an application that reflects the needs of a real workflow on
+          the customer's side.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--right tm-case-study__section--prototype">
+        <h3>The prototype has already contained all the necessary information</h3>
+        <p>The prototype of the application has already contained a great foundation and all the necessary information
+          for the Front-end and Back-end development. Therefore, there was no delay due to the need for more in-depth
+          specification of the assignment. As a result, developers have been able to design and set up application
+          architecture, data flows, and development environment settings without any delay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--feedback">
+        <h3>Proactive feedback within the team</h3>
+        <p>The quality of collaboration and proactive feedback within the team also helped accelerate the process. The
+          development was continuously linked to the prototype, which led to completing the application in the shortest
+          possible time without compromising the quality of the output.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
+        <p>The latest javascript frameworks were used to guarantee the application's scalability in the future. For Back-end these were Node.js, mocha, sequelize, and React.js for the Front-end.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% set caseStudiesData = { title : 'Other Case Studies', activeCase : 'adler' } %}
+
+{% include 'components/case-studies/index.html' %}
+
+{% endblock %}
