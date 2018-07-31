@@ -29,9 +29,9 @@
 }
 .tm-case-study__section {
   background: top 7em center no-repeat;
-}
-.tm-case-study__section h3 {
-  padding-bottom: 7em;
+  h3 {
+    padding-bottom: 7em;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -45,21 +45,15 @@
   .tm-case-study__section {
     padding-right: 50%;
     text-align: left;
+    background-position: right 23% center;
     &.tm-case-study__section--right {
       padding-right: 0;
       padding-left: 50%;
+      background-position: left 23% center;
     }
     h3 {
       text-align: left;
+      padding-bottom: 0;
     }
-  }
-  .tm-case-study__section {
-    background-position: right 23% center;
-  }
-  .tm-case-study__section h3 {
-    padding-bottom: 0;
-  }
-  .tm-case-study__section.tm-case-study__section--right{
-    background-position: left 23% center;
   }
 }
