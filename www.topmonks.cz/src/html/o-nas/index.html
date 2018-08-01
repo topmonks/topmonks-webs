@@ -1,5 +1,8 @@
 {% extends 'layouts/topmonks.html' %}
-{% block title %} O nás - TopMonks{% endblock %}
+{% from 'macros/helpers.html' import sprite %}
+
+{% set page = 'topmonks-index' %}
+{% set language = cs %}
 
 
 {% block content %}
@@ -9,47 +12,51 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-page-header">
         <h2>Jak pracujeme</h2>
         <blockquote>
-          <p>Úspěchem je výsledek, ne strávený čas.</p>
+          <p>Umění je odvést kvalitní práci, ne strávit nad ní spoustu hodin.</p>
         </blockquote>
-        <p>Nepotřebujeme se poflakovat v&nbsp;kanceláři od 9&nbsp;do 5.&nbsp;Chceme dodat
-          perfektní výsledek! Jelikož je náš tým většinou distribuován, usilovně
-          jsme pracovali na tom, abychom zlepšili způsob, jakým spolupracujeme mezi
-          sebou, a také s&nbsp;našimi klienty. Nepočítejte hodiny, doručte!</p>
+        <p>Našim cílem není sedět v&nbsp;kanceláři klasicky od 9&nbsp;do 5.&nbsp;Především
+          chceme zákazníkům dodávat perfektně odvedenou práci. Protože většina
+          z&nbsp;nás pracuje vzdáleně (remotně), používáme následující nástroje
+          k&nbsp;tomu, abychom měli všichni přehled o&nbsp;dění ve firmě a komunikovali mezi
+          sebou tak, jako bychom seděli u&nbsp;jednoho stolu. Přestaň počítat hodiny a
+          dělej svou práci tak, jak nejlépe dovedeš.</p>
       </div>
       <div class="box mdc-layout-grid__cell">
         <h3>Slack</h3>
-        <p>Efektivní komunikace je podstatou spolupráce&nbsp;&ndash; nejen u&nbsp;našich
-          projektů, ale také u&nbsp;některých našich zákazníků. Je nám jedno, kde
-          sedíte, ale jakmile pracujete, měli byste být k&nbsp;dispozici.</p>
+        <p>Efektivní komunikace je podstatou spolupráce nejen v&nbsp;rámci firmy, ale
+          také s&nbsp;některými našimi zákazníky. Můžeš sedět, kde chceš, ale když
+          pracuješ, měl bys být ostatním k&nbsp;dispozici.</p>
       </div>
       <div class="box mdc-layout-grid__cell">
         <h3>GitHub</h3>
-        <p>Všechny naše projekty probíhají v&nbsp;GitHubu. Mnoho z&nbsp;nich také
-          používá GitHub Issues pro sledování pokroku. Spolu s&nbsp;nástrojem Slack je
-          alfa a omega naší spolupráce.</p>
+        <p>Všechny naše projekty běží na GitHubu. U&nbsp;mnoho z&nbsp;nich používáme
+          GitHub Issues pro sledování jejich progresu. Spolu se Slackem je GitHub alfa a
+          omega naší spolupráce.</p>
       </div>
       <div class="box mdc-layout-grid__cell">
         <h3>Quip</h3>
-        <p>Zde sdílíme veškerou dokumentaci o&nbsp;projektech, faktury, dokonce i&nbsp;naši
-          firemní knihovnu, v&nbsp;podstatě celé naše znalosti. Zeptejte se rarouše na
-          jeho úžasnou kuchařku!</p>
+        <p>Zde sdílíme veškerou projektovou dokumentaci, faktury, naši firemní
+          knihovnu&nbsp;&ndash; v&nbsp;podstatě veškeré naše znalosti. Popros rarouše a on ti
+          nasdílí svoji super kuchařku.</p>
       </div>
       <div class="box mdc-layout-grid__cell">
         <h3>Swarmpit</h3>
-        <p>Většina našich projektů je kontejnerizována a provozována
+        <p>Většina našich projektů je kontejnerizovaná a provozovaná
           v&nbsp;prostředí Docker Swarm. Pro jejich správu jsme vyvinuli vlastní
           uživatelské rozhraní nazvané Swarmpit.</p>
       </div>
       <div class="box mdc-layout-grid__cell">
         <h3>Monksheets</h3>
-        <p>Nyní se zbavte zbytečné administrace! Pokud potřebujete řídit své
-          náklady na projekt, zažádat o&nbsp;volno nebo o&nbsp;vrácení nákladů, můžete to
-          udělat online kdekoli a kdykoliv budete&nbsp;chtít.</p>
+        <p>Všechnu zbytečnou administrativu hoď za hlavu. Pro řízení nákladů na
+          projekt, žádost o&nbsp;dovolenou nebo proplacení jízdenek používáme
+          Monksheety. Všechno si spravuješ sám online&nbsp;&ndash; tedy kdykoli, odkudkoli.</p>
       </div>
       <div class="box mdc-layout-grid__cell">
         <h3>Trello</h3>
-        <p>Trello je výkonný nástroj pro sledování pokroku týmu a
-          delegování&nbsp;práce.</p>
+        <p>S&nbsp;Trellem ses už určitě někdy setkal. Používáme ho na některých
+          projektech pro sledování týmového progresu a pro delegování práce.
+          Záleží na každém projekťákovi a týmu, jak se rozhodnou
+          projekt&nbsp;vést.</p>
       </div>
     </div>
   </section>
@@ -58,19 +65,17 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Company values</h2>
         <ul>
-          <li><b>导</b>Učte se, nebo zemřete. Učte, nebo zemřete. Pouze vzděláváním a učením mozek vzkvétá.</li>
-          <li><b>灵</b> Mějte podnikavou mysl. Produkty navíc v&nbsp;řadách našich členů týmu
-            jsou vítány.</li>
-          <li><b>勇</b> Buďte stateční. Poskytněte upřímnou zpětnou vazbu bez ohledu na okolnosti.</li>
-          <li><b>自由</b> Vaše svoboda nesmí ovlivnit svobodu druhých.</li>
-          <li><b>看板</b> Úspěch je ve výsledku, ne ve stráveném čase. Nečekejte, až budeš požádán o další úkol, najděte si ho sami.</li>
-          <li><b>改善</b> Život je neustálou změnou. Přijměte to.</li>
-          <li><b>无国界</b> Naše firma je živý organismus provázaný s&nbsp;našimi partnery, zákazníky
-            a komunitou. Nejsou zde žádné hranice.</li>
+          <li><b>导</b>Neustále vzdělávej sebe i ostatní. Předávání znalostí je u nás povinnost.</li>
+          <li><b>灵</b>Buď podnikavý. Vlastní projekty Monků jsou velmi vítány.</li>
+          <li><b>勇</b>Buď statečný. Poskytuj upřímnou a konstruktivní zpětnou vazbu bez ohledu na okolnosti.</li>
+          <li><b>自由</b>Tvoje svoboda končí tam, kde začíná svoboda ostatních.</li>
+          <li><b>看板</b>>Umění je odvést kvalitní práci, ne strávit nad ní spoustu hodin.</li>
+          <li><b>改善</b>Život je plný změn. Přijmi to.</li>
+          <li><b>无国界</b>Naše firma je živý organismus propojený s našimi partnery, zákazníky i komunitou. Neexistují žádné hranice.</li>
           <li><b>共享</b> Dávej a bude ti dáno.</li>
           <li><b>怪事</b> Zvláštnost, nekonvenčnost je vítána.</li>
         </ul>
-        <p>Pokud se vám líbí naše myšlení <a href="mailto:jobs@topmonks.com">přidejte se k nám</a>. Nebo <a href="mailto:sales@topmonks.com">mějte svůj projekt</a> námi dodaný. Nebo jednoduše <a href="/contact/">nás navštivte</a>. Užíváme si potkávat nové lidi.</p>
+        <p>Jestli tě baví naše hodnoty a myšlenky, <a href="mailto:jobs@topmonks.com">přidej se k nám</a>. Nebo nám <a href="mailto:sales@topmonks.com">dej vědět</a> , jak ti můžeme pomoci s tvým projektem. Anebo nás jednoduše <a href="/contact/">přijď navštívit</a> na jednu z našich mnoha akcí. Moc rádi potkáváme zajímavé lidi.</p>
       </div>
     </div>
   </section>
