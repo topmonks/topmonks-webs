@@ -37,6 +37,22 @@
     padding-bottom: 8em;
   }
 }
+.tm-case-study__technologies {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  @media screen and (max-width: 479px) {
+    flex-direction: column;
+  }
+  margin: 0;
+  li {
+    width: 164px;
+    margin-right: 24px;
+  }
+  svg {
+    width: 100%;
+  }
+}
 
 @media screen and (min-width: 480px) {
   .tm-case-study__hero {
