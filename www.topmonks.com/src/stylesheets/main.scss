@@ -235,7 +235,9 @@ blockquote {
   margin: 0;
   li {
     width: 164px;
-    margin-right: 24px;
+    @media screen and (min-width: 480px) {
+      margin-right: 24px;
+    }
   }
   svg {
     width: 100%;
@@ -494,7 +496,7 @@ li.tm-partners__item--adler {
   .tm-bgnd-wrapper {
     @media screen and (max-width: 479px) {
       background: transparent
-        url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_auto,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png")
+        url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_auto,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png")
         no-repeat left -110px top 120px;
       background-size: 440px auto;
     }
@@ -504,11 +506,11 @@ li.tm-partners__item--adler {
       screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
       screen and (max-width: 479px) and (min-resolution: 192dpi),
       screen and (max-width: 479px) and (min-resolution: 2dppx) {
-      background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_2,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png");
+      background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_2,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png");
     }
     @media screen and (min-width: 480px) {
       background: transparent
-        url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_auto,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png")
+        url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_auto,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png")
         no-repeat right calc(50% + 555px) top 140px;
       background-size: 695px auto;
       padding-bottom: 120px;
@@ -516,7 +518,7 @@ li.tm-partners__item--adler {
     @media screen and (min-width: 840px) and (min-device-pixel-ratio: 2),
       screen and (min-width: 840px) and (min-resolution: 192dpi),
       screen and (min-width: 840px) and (min-resolution: 2dppx) {
-      background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_2,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png");
+      background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_2,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png");
     }
   }
 }

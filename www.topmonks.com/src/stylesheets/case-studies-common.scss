@@ -47,7 +47,9 @@
   margin: 0;
   li {
     width: 164px;
-    margin-right: 24px;
+    @media screen and (min-width: 480px) {
+      margin-right: 24px;
+    }
   }
   svg {
     width: 100%;
