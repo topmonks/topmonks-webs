@@ -1,8 +1,8 @@
 const globImporter = require("node-sass-glob-importer");
 const marked = require("marked");
-const markdownToJSON = require("gulp-markdown-to-json")
+const markdownToJSON = require("gulp-markdown-to-json");
 const pathConfig = require("./path-config.json");
-const merge = require('gulp-merge-json');
+const merge = require("gulp-merge-json");
 
 module.exports = {
   images: true,
@@ -40,24 +40,27 @@ module.exports = {
   },
 
   additionalTasks: {
-    initialize : function(gulp) {
+    initialize: function(gulp) {
       gulp.task("prepareTeamData", () => {
         let itr = 0;
-        gulp.src("../../www.topmonks.com/src/data/team/**/*.md")
+        gulp
+          .src("../../www.topmonks.com/src/data/team/**/*.md")
           .pipe(markdownToJSON(marked))
-          .pipe(merge({
-            fileName : 'team.json',
-            edit: function(parsedJson) {
-              let editedJson = { users : [] }
-              editedJson['users'][itr ++] = parsedJson
-              return editedJson;
-            }
-          }))
-          .pipe(gulp.dest("../../www.topmonks.com/src/data/"))
-      })
+          .pipe(
+            merge({
+              fileName: "team.json",
+              edit: function(parsedJson) {
+                let editedJson = { users: [] };
+                editedJson["users"][itr++] = parsedJson;
+                return editedJson;
+              }
+            })
+          )
+          .pipe(gulp.dest("../../www.topmonks.com/src/data/"));
+      });
     },
     development: {
-      prebuild: ['prepareTeamData']
+      prebuild: ["prepareTeamData"]
     }
   }
 };
