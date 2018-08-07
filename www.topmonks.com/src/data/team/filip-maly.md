@@ -5,9 +5,9 @@ name: Filip
 surname: Malý
 job_title: 
 twitter: 
-github: 
-linkedin: 
-quote: 
+github: fiila
+linkedin: in/filip-maly/
+quote: it is always possible to make agreement
 photo_align: left
 ---
 

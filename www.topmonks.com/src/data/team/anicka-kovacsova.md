@@ -3,7 +3,7 @@ id: kovacsova-anicka
 photo_id: anicka-kovacsova
 name: Anička
 surname: Kovácsová
-job_title: Quality watch
+job_title: Project manager and happy maker
 github: adikeite
 linkedin: in/anna-kovácsová-a6257328
 quote: Let’s go climb some rocks!
