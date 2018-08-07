@@ -1,7 +1,8 @@
 const globImporter = require("node-sass-glob-importer");
-const markdown = require("nunjucks-markdown");
 const marked = require("marked");
+const markdownToJSON = require("gulp-markdown-to-json")
 const pathConfig = require("./path-config.json");
+const merge = require('gulp-merge-json');
 
 module.exports = {
   images: true,
@@ -23,14 +24,7 @@ module.exports = {
   },
 
   html: {
-    dataFile: "../data/global.json",
-    nunjucksRender: {
-      manageEnv: function(environment) {
-        console.log(environment.loaders[0].searchPaths);
-        // The second argument can be any function that renders markdown
-        markdown.register(environment, marked);
-      }
-    }
+    dataFile: "../data/team.json"
   },
 
   browserSync: {
@@ -43,5 +37,27 @@ module.exports = {
 
   production: {
     rev: true
+  },
+
+  additionalTasks: {
+    initialize : function(gulp) {
+      gulp.task("prepareTeamData", () => {
+        let itr = 0;
+        gulp.src("../../www.topmonks.com/src/data/team/**/*.md")
+          .pipe(markdownToJSON(marked))
+          .pipe(merge({
+            fileName : 'team.json',
+            edit: function(parsedJson) {
+              let editedJson = { users : [] }
+              editedJson['users'][itr ++] = parsedJson
+              return editedJson;
+            }
+          }))
+          .pipe(gulp.dest("../../www.topmonks.com/src/data/"))
+      })
+    },
+    development: {
+      prebuild: ['prepareTeamData']
+    }
   }
 };
