@@ -119,16 +119,16 @@ workflows:
       - test-www-topmonks-com:
           requires:
             - build
-      - test-prodeti-topmonks-cz:
-          requires:
-            - build
-      - deploy-prodeti-topmonks-cz:
-          context: org-global
-          requires:
-            - test-prodeti-topmonks-cz
-          filters:
-            branches:
-              only: master
+#      - test-prodeti-topmonks-cz:
+#          requires:
+#            - build
+#      - deploy-prodeti-topmonks-cz:
+#          context: org-global
+#          requires:
+#            - test-prodeti-topmonks-cz
+#          filters:
+#            branches:
+#              only: master
       - deploy-www-topmonks-com:
           context: org-global
           requires:
