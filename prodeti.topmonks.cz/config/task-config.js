@@ -1,6 +1,4 @@
 const globImporter = require("node-sass-glob-importer");
-const markdown = require("nunjucks-markdown");
-const marked = require("marked");
 
 module.exports = {
   images: true,
@@ -22,13 +20,7 @@ module.exports = {
   },
 
   html: {
-    dataFile: "../data/global.json",
-    nunjucksRender: {
-      manageEnv: function(environment) {
-        // The second argument can be any function that renders markdown
-        markdown.register(environment, marked);
-      }
-    }
+    dataFile: "../data/global.json"
   },
 
   browserSync: {
