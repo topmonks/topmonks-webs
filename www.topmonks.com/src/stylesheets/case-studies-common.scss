@@ -44,11 +44,15 @@
   @media screen and (max-width: 479px) {
     flex-direction: column;
   }
+  @media screen and (min-width: 480px) and (max-width: 839px) {
+    flex-wrap: wrap;
+  }
   margin: 0;
   li {
     width: 164px;
+    margin: 2em 0;
     @media screen and (min-width: 480px) {
-      margin-right: 24px;
+      margin: 1em 2em 1em 0;
     }
   }
   svg {
