@@ -23,7 +23,7 @@
     "marked": "^0.4.0",
     "prettier": "^1.14.0",
     "stylelint": "^9.4.0",
-    "stylelint-config-prettier": "^3.3.0",
+    "stylelint-config-prettier": "^4.0.0",
     "tap-xunit": "^2.3.0"
   },
   "scripts": {
