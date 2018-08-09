@@ -1,7 +1,5 @@
 ---
-id: mika-libor
-photo_id: libor-mika
-photo_align: right
+id: libor-mika
 name: Libor
 surname: Mika
 job_title: Java developer

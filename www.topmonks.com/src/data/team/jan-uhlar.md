@@ -1,6 +1,5 @@
 ---
-id: uhlar-jan
-photo_id: jan-uhlar
+id: jan-uhlar
 photo_align: right
 name: Jan
 surname: Uhlář

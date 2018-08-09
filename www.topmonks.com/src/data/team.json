@@ -19,13 +19,13 @@
 			"photo_id": "anicka-kovacsova",
 			"name": "Anička",
 			"surname": "Kovácsová",
-			"job_title": "Quality watch",
+			"job_title": "Project manager and happy maker",
 			"github": "adikeite",
 			"linkedin": "in/anna-kovácsová-a6257328",
 			"quote": "Let’s go climb some rocks!",
 			"photo_align": "right",
 			"body": "<p>I enjoy when my testing abilities help developers to do their job better and users to like the final product more.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.558Z"
+			"updatedAt": "2018-08-07T15:00:48.981Z"
 		},
 		{
 			"id": "hromada-daniel",
@@ -86,12 +86,12 @@
 			"surname": "Malý",
 			"job_title": null,
 			"twitter": null,
-			"github": null,
-			"linkedin": null,
-			"quote": null,
+			"github": "fiila",
+			"linkedin": "in/filip-maly/",
+			"quote": "it is always possible to make agreement",
 			"photo_align": "left",
 			"body": "<p>Its up to you </p>\n",
-			"updatedAt": "2018-05-03T07:44:48.559Z"
+			"updatedAt": "2018-08-07T15:00:48.981Z"
 		},
 		{
 			"id": "smith-gabriel",
@@ -255,6 +255,20 @@
 			"updatedAt": "2018-05-03T07:44:48.561Z"
 		},
 		{
+			"id": "moulik-karel",
+			"photo_id": "karel-moulik",
+			"name": "Karel",
+			"surname": "Moulík",
+			"job_title": "developer",
+			"twitter": null,
+			"github": null,
+			"linkedin": null,
+			"quote": null,
+			"photo_align": "left",
+			"body": "<p>....</p>\n",
+			"updatedAt": "2018-05-03T07:44:48.561Z"
+		},
+		{
 			"id": "stefan-karel",
 			"photo_id": "karel-stefan",
 			"name": "Karel",
@@ -321,20 +335,6 @@
 			"updatedAt": "2018-05-03T07:44:48.561Z"
 		},
 		{
-			"id": "juhos-miroslav",
-			"photo_id": "miroslav-juhos",
-			"name": "Miroslav",
-			"surname": "Juhos",
-			"job_title": "Web developer",
-			"twitter": "juhy",
-			"github": "juhyxx",
-			"linkedin": "in/mjuhos",
-			"quote": "Hands off my body bag!",
-			"photo_align": "right",
-			"body": "<p>Applications should be helpful and nice and users would not be just like them, but they should love them.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.562Z"
-		},
-		{
 			"id": "svoboda-ondrej",
 			"photo_id": "ondrej-svoboda",
 			"name": "Ondřej",
@@ -345,6 +345,20 @@
 			"quote": null,
 			"photo_align": "right",
 			"body": "",
+			"updatedAt": "2018-05-03T07:44:48.562Z"
+		},
+		{
+			"id": "lobodinsky-pavel",
+			"photo_id": "pavel-lobodinsky",
+			"name": "Pavel",
+			"surname": "Lobodinský",
+			"job_title": null,
+			"twitter": "lobodpav",
+			"github": "lobodpav",
+			"linkedin": "in/lobodinsky",
+			"quote": "Two wheels are more than one",
+			"photo_align": "left",
+			"body": "<p>If anything is worth an effort, then do it right!</p>\n",
 			"updatedAt": "2018-05-03T07:44:48.562Z"
 		},
 		{
@@ -399,6 +413,20 @@
 			"updatedAt": "2018-05-03T07:44:48.562Z"
 		},
 		{
+			"id": "donat-premysl",
+			"photo_id": "premysl-donat",
+			"name": "Přemysl",
+			"surname": "Donát",
+			"job_title": "Ruby",
+			"twitter": "https://twitter.com/DonatP",
+			"github": "https://github.com/Masa331",
+			"linkedin": null,
+			"quote": null,
+			"photo_align": "left",
+			"body": "<p>Just a free spirit. I like to reinvent the wheel.</p>\n",
+			"updatedAt": "2018-05-03T07:44:48.563Z"
+		},
+		{
 			"id": "jakl-radek",
 			"photo_id": "radek-jakl",
 			"name": "Radek",
@@ -438,6 +466,20 @@
 			"photo_align": "right",
 			"body": "",
 			"updatedAt": "2018-05-03T07:44:48.563Z"
+		},
+		{
+			"id": "paulus-tomas",
+			"photo_id": "tomas-paulus",
+			"name": "Tomáš",
+			"surname": "Paulus",
+			"job_title": "UX designer",
+			"twitter": null,
+			"github": null,
+			"linkedin": "i",
+			"quote": null,
+			"photo_align": "left",
+			"body": "<p>Its up to you </p>\n",
+			"updatedAt": "2018-08-07T15:00:48.982Z"
 		},
 		{
 			"id": "zalusky-tomas",

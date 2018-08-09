@@ -1,6 +1,5 @@
 ---
-id: donat-premysl
-photo_id: premysl-donat
+id: premysl-donat
 name: Přemysl
 surname: Donát
 job_title: Ruby
@@ -8,7 +7,6 @@ twitter: https://twitter.com/DonatP
 github: https://github.com/Masa331
 linkedin: 
 quote: 
-photo_align: left
 ---
 
 Just a free spirit. I like to reinvent the wheel.

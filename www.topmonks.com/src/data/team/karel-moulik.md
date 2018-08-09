@@ -1,6 +1,5 @@
 ---
-id: moulik-karel
-photo_id: karel-moulik
+id: karel-moulik
 name: Karel
 surname: Moulík
 job_title: developer
@@ -8,7 +7,6 @@ twitter:
 github: 
 linkedin: 
 quote: 
-photo_align: left
 ---
 
 ....

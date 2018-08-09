@@ -1,10 +1,11 @@
 ---
-id: monsportova-eliska
-photo_id: eliska-monsportova
+id: eliska-monsportova
 name: Eliška
 surname: Monsportová
+twitter: 
+github:
+linkedin:
 job_title: HR
 quote: Everything is awesome.
-photo_align: left
 ---
 

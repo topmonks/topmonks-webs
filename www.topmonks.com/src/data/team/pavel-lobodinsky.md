@@ -1,6 +1,5 @@
 ---
-id: lobodinsky-pavel
-photo_id: pavel-lobodinsky
+id: pavel-lobodinsky
 name: Pavel
 surname: Lobodinský
 job_title:
@@ -8,7 +7,6 @@ twitter: lobodpav
 github: lobodpav
 linkedin: in/lobodinsky
 quote: Two wheels are more than one
-photo_align: left
 ---
 
 If anything is worth an effort, then do it right!
