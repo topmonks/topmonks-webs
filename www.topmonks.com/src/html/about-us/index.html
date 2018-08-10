@@ -82,21 +82,21 @@
     </div>
   </section>
 
-  <section class="tm-team" class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2>Our Team</h2>
-      </div>
-      {{ macros.teamMember(members['jiri-fabian'], true) }}
-      {{ macros.teamMember(members['kristyna-sloupova'], true) }}
-      {{ macros.teamMember(members['ladislav-gerencsery'] , true) }}
-      {{ macros.teamMember(members['lea-petrasova'], true) }}
+  <!--<section class="tm-team" class="mdc-layout-grid">-->
+    <!--<div class="mdc-layout-grid__inner tm-layout-wrapper">-->
+      <!--<div class="mdc-layout-grid__cell mdc-layout-grid__cell&#45;&#45;span-12">-->
+        <!--<h2>Our Team</h2>-->
+      <!--</div>-->
+      <!--{{ macros.teamMember(members['jiri-fabian'], true) }}-->
+      <!--{{ macros.teamMember(members['kristyna-sloupova'], true) }}-->
+      <!--{{ macros.teamMember(members['ladislav-gerencsery'] , true) }}-->
+      <!--{{ macros.teamMember(members['lea-petrasova'], true) }}-->
 
-      {% for id, member in members %}
-        {{ macros.teamMember(member) }}
-      {% endfor %}
-    </div>
-  </section>
+      <!--{% for id, member in members %}-->
+        <!--{{ macros.teamMember(member) }}-->
+      <!--{% endfor %}-->
+    <!--</div>-->
+  <!--</section>-->
 
   <section id="company-values" class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
