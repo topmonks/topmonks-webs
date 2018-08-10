@@ -1,0 +1,81 @@
+/* CASE STUDIES SECTION START */
+.tm-case-studies {
+  h3 {
+    font-weight: 700;
+    text-align: left;
+    margin-top: 14px;
+    margin-bottom: 0;
+    &:after {
+      content: "";
+      width: 59px;
+      height: 2px;
+      background-color: var(--tm-primary);
+      display: block;
+      margin: 8px 0;
+    }
+  }
+}
+.tm-case-studies__clients + .tm-case-studies__clients {
+  margin-top: 24px;
+}
+.tm-case-studies__logo {
+  height: 255px;
+  border-radius: 20px;
+  overflow: hidden;
+  .tm-bgnd-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--tm-secondary) 50% center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease-in-out;
+  }
+  // &.inactive{
+  //  filter: grayscale(100%);
+  //}
+  .sprite {
+    width: 33%;
+    color: white;
+    transition: width 0.2s ease-in-out;
+  }
+  svg {
+    fill: currentColor;
+  }
+}
+.tm-case-studies__logo:hover:not(.inactive) {
+  .tm-bgnd-wrapper {
+    transform: scale(1.1);
+  }
+  .sprite {
+    width: 45%;
+  }
+}
+.tm-case-studies__title {
+  text-align: center;
+}
+.tm-case-studies__logo--pricefx .tm-bgnd-wrapper {
+  background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_pricefx.jpg");
+}
+.tm-case-studies__logo--ceska-sporitelna .tm-bgnd-wrapper {
+  background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_cs.jpg");
+}
+.tm-case-studies__logo--adler .tm-bgnd-wrapper {
+  background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_adler.jpg");
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
+  .tm-case-studies__logo--pricefx .tm-bgnd-wrapper {
+    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_pricefx.jpg");
+  }
+  .tm-case-studies__logo--ceska-sporitelna .tm-bgnd-wrapper {
+    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_cs.jpg");
+  }
+  .tm-case-studies__logo--adler .tm-bgnd-wrapper {
+    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_adler.jpg");
+  }
+}
+/* CASE STUDIES SECTION END */
