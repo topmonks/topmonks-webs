@@ -7,17 +7,19 @@
 {% block title %}TopMonks - Tým pro váš projekt{% endblock %}
 
 {% block head %}
-<meta name="description" content="Jsme software development studio, experienced with both startup and corporate environment.">
-<meta name="twitter:description" property="og:description" content="We are your software development partners, experienced with both startup and corporate environment.">
+<meta name="description"
+      content="Jsme software development studio se zkušenostmi jak se startupy, tak s korporátním prostředím.">
+<meta name="twitter:description" property="og:description"
+      content="Jsme vývojáři softwaru pro váš byznys se zkušenostmi jak se startupy, tak s korporátním prostředím.">
 <link rel="canonical" href="https://www.topmonks.cz/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@topmonks">
-<meta name="twitter:title" property="og:title" content="TopMonks - Software development partner pro váš byznys">
+<meta name="twitter:title" property="og:title" content="TopMonks - Vývojáři softwaru pro váš byznys">
 <meta name="twitter:image" property="og:image" content="https://www.topmonks.com/images/og-image.png">
 <meta property="og:type" content="company">
 <meta property="og:url" content="https://www.topmonks.cz/">
 <meta property="og:site_name" content="TopMonks.cz">
-{% endblock %}
+<link rel="stylesheet" href="/stylesheets/main.scss">
 
 {% block content %}
 
@@ -58,7 +60,7 @@
           <h3>Vyvíjímě</h3>
           <p>Pracujeme s&nbsp;nejnovějšími technologiemi, abychom docílili co nejlepšího
             výsledku. Nepotřebujeme žádné zdlouhavé zaučování a vysvětlování.
-            Dáme vám k&nbsp;ruce sehraný tým seniorních vývojářů, kteří se ihned se
+            Dáme vám k&nbsp;ruce sehraný tým seniorních vývojářů, kteří se ihned
             dají do&nbsp;práce.</p>
         </div>
       </div>
@@ -86,7 +88,7 @@
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
           <p class="box box--mobile-only">Naše seniorita spočívá ve využití kombinací znalostí světa B2B a
-            startupové scény a ve schopnosti aplikovat různá technologická řešení,
+            startupové scény. Také ve schopnosti aplikovat různá technologická řešení,
             ať už jsou stará nebo&nbsp;nová.
           </p>
         </div>
@@ -125,18 +127,21 @@
       <div
         class="steps__step mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
         <h3>Plánování a průzkum</h3>
-        <p>Zkoumáme možnosti trhu a ověřujeme nápady a myšlenky. Produkt a jeho vývoj nestavíme na pocitech, ale na datech a zkušenostech.</p>
+        <p>Zkoumáme možnosti trhu a ověřujeme nápady a myšlenky. Produkt a jeho vývoj nestavíme na pocitech, ale na
+          datech a zkušenostech.</p>
       </div>
       <div
         class="steps__step design mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
         <h3>Design</h3>
-        <p>Design vdechne produktu život. Zajistíme, aby byla vaše aplikace intuitivní a koncoví uživatelé si ji zamilovali.
+        <p>Design vdechne produktu život. Zajistíme, aby byla vaše aplikace intuitivní a koncoví uživatelé si ji
+          zamilovali.
         </p>
       </div>
       <div
         class="steps__step development mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-6-desktop">
         <h3>Vývoj</h3>
-        <p>Rychlý vývoj nemusí nutně znamenat ušetření času a financí. Právě naopak. Nezačínáme bezmyšlěnkovitě vyvíjet a hledáme ta nejlepší řešení konkrétně pro váš produkt.</p>
+        <p>Rychlý vývoj nemusí nutně znamenat ušetření času a financí. Právě naopak. Nezačínáme bezmyšlěnkovitě vyvíjet,
+          ale hledáme ta nejlepší řešení konkrétně pro váš produkt.</p>
       </div>
     </div>
   </div>
@@ -163,43 +168,27 @@
     <div class="mdc-layout-grid__inner">
       <div class="studies_title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Jak pracujeme</h2>
-        <p class="sub-text">We have learned something from every collaboration with our clients.</p>
+        <p class="sub-text">Vždy se naučíme něco nového ze spolupráce s našimi klienty.</p>
       </div>
       <div
         class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-desktop">
-        <img src="/images/sporka.jpg" alt="">
-        <h3>Česká spořitelna</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
+        <img src="/www.topmonks.cz/src/icons/img_logo_adler.svg" alt="">
+        <h3>Adler</h3>
+        <p>Řešení na míru automatizující proces nákupu, marketingu a prodeje
+          s&nbsp;vizí, že aplikace budou v&nbsp;budoucnu integrovány do jedné komplexní
+          administrativní platformy.</p>
       </div>
       <div
         class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-desktop">
-        <img src="/images/pricefx.jpg" alt="">
-        <h3>PriceFX</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
+        <img src="/icons/img_logo_pricefx.svg" alt="">
+        <h3>Price f(x)</h3>
+        <p>Poskytnutí profesionální konzultace na podporu služeb rozšiřujících portfolio zákazníků, a zároveň také pomoc při zlepšování UX pro webové stránky.</p>
       </div>
       <div
         class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-desktop">
-        <img src="/images/purposefly.jpg" alt="">
-        <h3>PurposeFly</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
-      </div>
-      <div
-        class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-desktop">
-        <img src="/images/hearth.jpg" alt="">
-        <h3>Hearth.net</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
-      </div>
-      <div
-        class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-desktop">
-        <img src="/images/techloop.jpg" alt="">
-        <h3>Techloop.io</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
-      </div>
-      <div
-        class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-desktop">
-        <img src="/images/europe.jpg" alt="">
-        <h3>GoRealEurope.com</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque porta. Itaque earum rerum hic.</p>
+        <img src="/www.topmonks.cz/src/icons/img_logo_cs.svg" alt="">
+        <h3>Česká Spořitelna WebAPI</h3>
+        <p>Zákaznická platforma využívána interně bankami, zároveň externě ve formě veřejné API.</p>
       </div>
     </div>
   </div>
