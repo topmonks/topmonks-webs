@@ -49,7 +49,7 @@ module.exports = {
             merge({
               fileName: "team.json",
               edit: function(parsedJson) {
-                let editedJson = { members : {} };
+                let editedJson = { members: {} };
                 editedJson.members[parsedJson.id] = parsedJson;
                 return editedJson;
               }
