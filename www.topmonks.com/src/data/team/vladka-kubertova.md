@@ -1,5 +1,5 @@
 ---
-id: vladka-kubertova
+id: vladimira-kubertova
 name: Vlaďka
 surname: Kubertová
 job_title: Office manager

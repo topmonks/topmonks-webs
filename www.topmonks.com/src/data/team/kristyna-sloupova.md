@@ -1,11 +1,11 @@
 ---
-id: jiri-fabian
-name: Jiří
-surname: Fabián
-job_title: Co-Founder, President
-twitter: jirifabian
-github: filemon
-linkedin: in/jirifabian
+id: kristyna-sloupova
+name: Kristýna
+surname: Sloupová
+job_title: Sales manager
+twitter:
+github:
+linkedin:
 quote: Excellence always sells.
 pickup: true
 ---

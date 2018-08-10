@@ -1,5 +1,5 @@
 ---
-id: anicka-kovacsova
+id: anna-kovacsova
 name: Anička
 surname: Kovácsová
 job_title: Project manager and happy maker

@@ -1,11 +1,11 @@
 ---
-id: jiri-fabian
-name: Jiří
-surname: Fabián
-job_title: Co-Founder, President
-twitter: jirifabian
-github: filemon
-linkedin: in/jirifabian
+id: ladislav-gerencsery
+name: Ladislav
+surname: Gerencséry
+job_title: Sales manager
+twitter:
+github:
+linkedin:
 quote: Excellence always sells.
 pickup: true
 ---

@@ -9,43 +9,15 @@
 <link rel="stylesheet" href="{{ '/stylesheets/components/' ~ stylesheet ~ '/index.css' }}">
 {%- endmacro %}
 
-{% macro navigation(activePage) %}
-<link rel="stylesheet" href="../../stylesheets/components/top-menu/index.css">
-
-<div class="top-menu">
-<nav>
-  <ul>
-    <li><a href="/" class="{% if activePage == 'home' %}active{% endif %}">Home</a></li>
-    <li><a href="/4days.topmonks.com/" class="{% if activePage == '4days' %}active{% endif %}">4days.topmonks.com</a></li>
-    <li><a href="/caffe.topmonks.cz/" class="{% if activePage == 'caffe' %}active{% endif %}">caffe.topmonks.cz</a></li>
-    <li><a href="/references.topmonks.com/" class="{% if activePage == 'references' %}active{% endif %}">references.topmonks.com</a></li>
-    <li><a href="/studio.topmonks.com/" class="{% if activePage == 'studio' %}active{% endif %}">studio.topmonks.com</a></li>
-    <li><a href="/teams.topmonks.com/">teams.topmonks.com</a></li>
-    <li><a href="/prodeti.topmonks.cz/">prodeti.topmonks.cz</a></li>
-    <li><a href="/www.topmonks.cz/" class="{% if activePage == 'topmonks.cz' %}active{% endif %}">www.topmonks.cz</a></li>
-    <li><a href="/www.topmonks.com/" class="{% if activePage == 'topmonks.com' %}active{% endif %}">www.topmonks.com</a></li>
-    <li><a href="/www.topmonks.com/about-us/" class="{% if activePage == 'about-us' %}active{% endif %}"> About Us</a></li>
-    <li><a href="/www.topmonks.com/contacts/" class="{% if activePage == 'contacts' %}active{% endif %}"> Contacts</a></li>
-    <li><a href="/www.topmonks.com/meet-us/" class="{% if activePage == 'meet-us' %}active{% endif %}"> Meet Us</a></li>
-  </ul>
-</nav>
+{% macro teamMember(member, hero) -%}
+{% set fullName = member.name + ' ' + member.surname %}
+{% if (hero and member.pickup) or (not hero and not member.pickup) %}
+<div class="box mdc-layout-grid__cell tm-team__member {% if hero %}mdc-layout-grid__cell--span-3-desktop tm-team__member--hero{% endif %}">
+  <img alt="[foto] {{fullName}}" src="https://insight.topmonks.com/avatar/{{member.id}}" />
+  <div class="content">
+    <strong>{{fullName}}</strong>
+    <span>{{member.job_title}}</span>
+  </div>
 </div>
-{% endmacro %}
-
-{% macro pageHeader(title, intro, scrollButton) %}
-  <section class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h1>{{ title | upper  }}</h1>
-        {% if intro != '' %}
-        <p>{{ intro }}</p>
-        {% endif %}
-
-        {% if scrollButton != '' %}
-        {{ scrollButton | safe  }}
-        {% endif %}
-      </div>
-    </div>
-  </section>
-{% endmacro %}
-
+{% endif %}
+{%- endmacro %}

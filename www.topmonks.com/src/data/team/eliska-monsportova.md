@@ -1,5 +1,5 @@
 ---
-id: eliska-monsportova
+id: eliska
 name: Eliška
 surname: Monsportová
 twitter: 

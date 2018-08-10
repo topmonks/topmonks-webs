@@ -42,7 +42,6 @@ module.exports = {
   additionalTasks: {
     initialize: function(gulp) {
       gulp.task("prepareTeamData", () => {
-        let itr = 0;
         gulp
           .src("../../www.topmonks.com/src/data/team/**/*.md")
           .pipe(markdownToJSON(marked))
@@ -50,8 +49,8 @@ module.exports = {
             merge({
               fileName: "team.json",
               edit: function(parsedJson) {
-                let editedJson = { users: [] };
-                editedJson["users"][itr++] = parsedJson;
+                let editedJson = { members : {} };
+                editedJson.members[parsedJson.id] = parsedJson;
                 return editedJson;
               }
             })

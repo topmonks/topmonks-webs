@@ -1,6 +1,41 @@
 {% extends 'layouts/topmonks.html' %}
+{%- import 'macros/helpers.html' as macros -%}
 {% block title %} About Us - TopMonks{% endblock %}
+{% block head %}
+<style>
 
+  .tm-team__member {
+    display: flex;
+    align-items: center;
+  }
+  .tm-team__member.box.tm-team__member--hero {
+    display: block;
+    padding: 0;
+    text-align: center;
+  }
+  .tm-team__member img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 0;
+  }
+  .tm-team__member.tm-team__member--hero img {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+  }
+  .tm-team__member .content {
+    padding-left: 20px;
+  }
+  .tm-team__member.tm-team__member--hero .content {
+    padding: 20px;
+  }
+  .tm-team__member strong {
+    display: block;
+  }
+</style>
+{% endblock %}
 
 {% block content %}
 
@@ -46,6 +81,23 @@
       </div>
     </div>
   </section>
+
+  <section class="tm-team" class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Our Team</h2>
+      </div>
+      {{ macros.teamMember(members['jiri-fabian'], true) }}
+      {{ macros.teamMember(members['kristyna-sloupova'], true) }}
+      {{ macros.teamMember(members['ladislav-gerencsery'] , true) }}
+      {{ macros.teamMember(members['lea-petrasova'], true) }}
+
+      {% for id, member in members %}
+        {{ macros.teamMember(member) }}
+      {% endfor %}
+    </div>
+  </section>
+
   <section id="company-values" class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">

@@ -1,8 +1,7 @@
 {
-	"users": [
-		{
-			"id": "roubicek-ales",
-			"photo_id": "ales-roubicek",
+	"members": {
+		"ales-roubicek": {
+			"id": "ales-roubicek",
 			"name": "Aleš",
 			"surname": "Roubíček",
 			"job_title": "Hacking Monkey",
@@ -10,26 +9,22 @@
 			"github": "rarous",
 			"linkedin": "in/rarous",
 			"quote": "Not everything is awesome.",
-			"photo_align": "left",
 			"body": "<p>The feeling when you solve complex problems with really simple solutions. This is what drives me forward.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.558Z"
+			"updatedAt": "2018-08-09T13:30:37.929Z"
 		},
-		{
-			"id": "kovacsova-anicka",
-			"photo_id": "anicka-kovacsova",
+		"anna-kovacsova": {
+			"id": "anna-kovacsova",
 			"name": "Anička",
 			"surname": "Kovácsová",
 			"job_title": "Project manager and happy maker",
 			"github": "adikeite",
 			"linkedin": "in/anna-kovácsová-a6257328",
 			"quote": "Let’s go climb some rocks!",
-			"photo_align": "right",
 			"body": "<p>I enjoy when my testing abilities help developers to do their job better and users to like the final product more.</p>\n",
-			"updatedAt": "2018-08-07T15:00:48.981Z"
+			"updatedAt": "2018-08-10T14:39:13.889Z"
 		},
-		{
-			"id": "hromada-daniel",
-			"photo_id": "daniel-hromada",
+		"daniel-hromada": {
+			"id": "daniel-hromada",
 			"name": "Daniel",
 			"surname": "Hromada",
 			"job_title": "Frontend & JavaScript",
@@ -37,26 +32,22 @@
 			"github": "junkycoder",
 			"linkedin": "in/junkycoder",
 			"quote": "Less is more.",
-			"photo_align": "right",
 			"body": "",
-			"updatedAt": "2018-05-03T07:44:48.558Z"
+			"updatedAt": "2018-08-09T13:42:15.019Z"
 		},
-		{
-			"id": "novakova-daria",
-			"photo_id": "daria-novakova",
+		"daria-novakova": {
+			"id": "daria-novakova",
 			"name": "Daria",
 			"surname": "Nováková",
 			"job_title": "Data Scientist",
 			"github": "DariaNovakova",
 			"linkedin": "in/daria-novakova",
 			"quote": "The whole is greater than the part.",
-			"photo_align": "right",
 			"body": "<p>Math is a language that describe your world.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.558Z"
+			"updatedAt": "2018-08-09T13:42:14.956Z"
 		},
-		{
-			"id": "votrubec-david",
-			"photo_id": "david-votrubec",
+		"david-votrubec": {
+			"id": "david-votrubec",
 			"name": "David",
 			"surname": "Votrubec",
 			"job_title": "Sharp Developer (and free time painter)",
@@ -64,24 +55,23 @@
 			"github": "DavidVotrubec",
 			"linkedin": "in/david-votrubec-75b13215",
 			"quote": "Keep calm and rationalize your way out.",
-			"photo_align": "right",
 			"body": "<p>Never stop learning</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.558Z"
+			"updatedAt": "2018-08-09T13:42:14.951Z"
 		},
-		{
-			"id": "monsportova-eliska",
-			"photo_id": "eliska-monsportova",
+		"eliska": {
+			"id": "eliska",
 			"name": "Eliška",
 			"surname": "Monsportová",
+			"twitter": null,
+			"github": null,
+			"linkedin": null,
 			"job_title": "HR",
 			"quote": "Everything is awesome.",
-			"photo_align": "left",
 			"body": "",
-			"updatedAt": "2018-05-03T07:44:48.558Z"
+			"updatedAt": "2018-08-10T14:59:21.228Z"
 		},
-		{
-			"id": "maly-filip",
-			"photo_id": "filip-maly",
+		"filip-maly": {
+			"id": "filip-maly",
 			"name": "Filip",
 			"surname": "Malý",
 			"job_title": null,
@@ -89,39 +79,22 @@
 			"github": "fiila",
 			"linkedin": "in/filip-maly/",
 			"quote": "it is always possible to make agreement",
-			"photo_align": "left",
 			"body": "<p>Its up to you </p>\n",
-			"updatedAt": "2018-08-07T15:00:48.981Z"
+			"updatedAt": "2018-08-09T13:42:15.006Z"
 		},
-		{
-			"id": "smith-gabriel",
-			"photo_id": "gabriel-smith",
-			"name": "Gabriel",
-			"surname": "Smith",
-			"job_title": "Co-Founder, EVP",
-			"twitter": "gabesmith3000",
-			"linkedin": "in/gabesmith",
-			"quote": "Be like water, my friend.",
-			"photo_align": "right",
-			"body": "<p>Running TopMonks adventure in US</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.559Z"
-		},
-		{
-			"id": "fabian-jan",
-			"photo_id": "jan-fabian",
+		"jan-fabian": {
+			"id": "jan-fabian",
 			"name": "Jan",
 			"surname": "Fabián",
 			"job_title": "X-Core Developer",
 			"github": "janfabian",
 			"linkedin": "in/jan-fabian-6b7b6531",
 			"quote": "I don't wanna vote no party. All I wanna do is party.",
-			"photo_align": "right",
 			"body": "<p>I integrate friends from different nodes using my very own logic formulas. At work I do the same with prices. </p>\n",
-			"updatedAt": "2018-05-03T07:44:48.559Z"
+			"updatedAt": "2018-08-09T13:42:14.936Z"
 		},
-		{
-			"id": "hlisnikovsky-jan",
-			"photo_id": "jan-hlisnikovsky",
+		"jan-hlisnikovsky": {
+			"id": "jan-hlisnikovsky",
 			"name": "Jan",
 			"surname": "Hlisnikovský",
 			"job_title": "Integration engineer",
@@ -129,13 +102,11 @@
 			"github": "jhlisnikovskz",
 			"linkedin": "in/hlisnikovsky",
 			"quote": "La vita e bella!",
-			"photo_align": "right",
 			"body": "<p>Everything is possible...</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.559Z"
+			"updatedAt": "2018-08-09T13:42:14.919Z"
 		},
-		{
-			"id": "kopriva-jan",
-			"photo_id": "jan-kopriva",
+		"jan-kopriva": {
+			"id": "jan-kopriva",
 			"name": "Jan",
 			"surname": "Kopřiva",
 			"job_title": "Developer monk",
@@ -143,25 +114,21 @@
 			"github": "jankopriva",
 			"linkedin": "pub/jan-kopriva/7/583/a64",
 			"quote": "Be now. Be real. Be yourself.",
-			"photo_align": "left",
 			"body": "<p>Seeker of the inner peace.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.559Z"
+			"updatedAt": "2018-08-09T13:42:15.001Z"
 		},
-		{
-			"id": "lopusek-jan",
-			"photo_id": "jan-lopusek",
+		"jan-lopusek": {
+			"id": "jan-lopusek",
 			"name": "Ján",
 			"surname": "Lopusek",
 			"job_title": "net-worker",
 			"linkedin": "in/jan-lopusek",
 			"quote": "Trust your inner guidance",
-			"photo_align": "right",
 			"body": "<p>Connecting people based.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.559Z"
+			"updatedAt": "2018-08-09T13:42:14.947Z"
 		},
-		{
-			"id": "uhlar-jan",
-			"photo_id": "jan-uhlar",
+		"jan-uhlar": {
+			"id": "jan-uhlar",
 			"photo_align": "right",
 			"name": "Jan",
 			"surname": "Uhlář",
@@ -171,23 +138,20 @@
 			"linkedin": "in/januhlar",
 			"quote": "People rarely succeed unless they have fun in what they are doing.",
 			"body": "<p>Papa Ruby at TopMonks. Bringing our startups live.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.560Z"
+			"updatedAt": "2018-08-09T13:42:14.898Z"
 		},
-		{
-			"id": "vilc-jaroslav",
-			"photo_id": "jaroslav-vilc",
+		"jaroslav-vilc": {
+			"id": "jaroslav-vilc",
 			"name": "Jaroslav",
 			"surname": "Vilč",
 			"job_title": "Software optimist",
 			"github": "javill",
 			"quote": "Feel free to change the future.",
-			"photo_align": "right",
 			"body": "<p>Turning ideas into proof of concept.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.560Z"
+			"updatedAt": "2018-08-09T13:42:14.993Z"
 		},
-		{
-			"id": "fabian-jiri",
-			"photo_id": "jiri-fabian",
+		"jiri-fabian": {
+			"id": "jiri-fabian",
 			"name": "Jiří",
 			"surname": "Fabián",
 			"job_title": "Co-Founder, President",
@@ -195,13 +159,12 @@
 			"github": "filemon",
 			"linkedin": "in/jirifabian",
 			"quote": "Excellence always sells.",
-			"photo_align": "left",
+			"pickup": true,
 			"body": "<p>Love to put together awesome teams and form business alliances to make this world a better place.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.560Z"
+			"updatedAt": "2018-08-10T15:36:39.070Z"
 		},
-		{
-			"id": "kubala-jiri",
-			"photo_id": "jiri-kubala",
+		"jiri-kubala": {
+			"id": "jiri-kubala",
 			"name": "Jiří",
 			"surname": "Kubala",
 			"job_title": "programátor",
@@ -209,26 +172,22 @@
 			"github": null,
 			"linkedin": null,
 			"quote": null,
-			"photo_align": "left",
 			"body": "<p>Nutno vyplnit</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.560Z"
+			"updatedAt": "2018-08-09T13:42:15.013Z"
 		},
-		{
-			"id": "lafek-jiri",
-			"photo_id": "jiri-lafek",
+		"jiri-lafek": {
+			"id": "jiri-lafek",
 			"name": "Jiří",
 			"surname": "Lafek",
 			"job_title": "Web developer",
 			"twitter": "zzbazza",
 			"github": "zzbazza",
 			"quote": "You either know how to program or you don't know ruby at all.",
-			"photo_align": "right",
 			"body": "<p>Ruby Mario on TopMonks startup projects.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.560Z"
+			"updatedAt": "2018-08-09T13:42:14.964Z"
 		},
-		{
-			"id": "penzes-jiri",
-			"photo_id": "jiri-penzes",
+		"jiri-penzes": {
+			"id": "jiri-penzes",
 			"name": "Jiří",
 			"surname": "Pénzeš",
 			"job_title": "Software coffeeholic",
@@ -236,13 +195,11 @@
 			"github": "jirkapenzes",
 			"linkedin": "in/jirkapenzes",
 			"quote": "Simplicity is the way.",
-			"photo_align": "left",
 			"body": "<p>Any code is not the problem. I&#39;m monk with open mind!</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.560Z"
+			"updatedAt": "2018-08-09T13:42:14.968Z"
 		},
-		{
-			"id": "pisa-jiri",
-			"photo_id": "jiri-pisa",
+		"jiri-pisa": {
+			"id": "jiri-pisa",
 			"name": "Jiří",
 			"surname": "Píša",
 			"job_title": "Co-Founder, VP",
@@ -250,13 +207,11 @@
 			"github": "jiripisa",
 			"linkedin": "in/jiripisa",
 			"quote": "The best ideas come as jokes. Make your thinking as funny as possible.",
-			"photo_align": "left",
 			"body": "<p>Bringing fresh ideas on the table.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.561Z"
+			"updatedAt": "2018-08-09T13:42:14.975Z"
 		},
-		{
-			"id": "moulik-karel",
-			"photo_id": "karel-moulik",
+		"karel-moulik": {
+			"id": "karel-moulik",
 			"name": "Karel",
 			"surname": "Moulík",
 			"job_title": "developer",
@@ -264,27 +219,61 @@
 			"github": null,
 			"linkedin": null,
 			"quote": null,
-			"photo_align": "left",
 			"body": "<p>....</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.561Z"
+			"updatedAt": "2018-08-09T13:42:15.004Z"
 		},
-		{
-			"id": "stefan-karel",
-			"photo_id": "karel-stefan",
+		"karel-stefan": {
+			"id": "karel-stefan",
 			"name": "Karel",
 			"surname": "Štefan",
 			"job_title": "Java developer",
 			"twitter": "karelstefan",
 			"github": "kstefan",
 			"linkedin": "in/karelstefan",
-			"photo_align": "right",
 			"body": "",
-			"updatedAt": "2018-05-03T07:44:48.561Z"
+			"updatedAt": "2018-08-09T13:42:14.995Z"
 		},
-		{
-			"id": "mika-libor",
-			"photo_id": "libor-mika",
-			"photo_align": "right",
+		"kristyna-sloupova": {
+			"id": "kristyna-sloupova",
+			"name": "Kristýna",
+			"surname": "Sloupová",
+			"job_title": "Sales manager",
+			"twitter": null,
+			"github": null,
+			"linkedin": null,
+			"quote": "Excellence always sells.",
+			"pickup": true,
+			"body": "<p>Love to put together awesome teams and form business alliances to make this world a better place.</p>\n",
+			"updatedAt": "2018-08-10T15:36:39.075Z"
+		},
+		"ladislav-gerencsery": {
+			"id": "ladislav-gerencsery",
+			"name": "Ladislav",
+			"surname": "Gerencséry",
+			"job_title": "Sales manager",
+			"twitter": null,
+			"github": null,
+			"linkedin": null,
+			"quote": "Excellence always sells.",
+			"pickup": true,
+			"body": "<p>Love to put together awesome teams and form business alliances to make this world a better place.</p>\n",
+			"updatedAt": "2018-08-10T15:36:39.073Z"
+		},
+		"lea-petrasova": {
+			"id": "lea-petrasova",
+			"name": "Lea",
+			"surname": "Petrášová",
+			"job_title": "Blockchain & Crypto projects",
+			"twitter": null,
+			"github": null,
+			"linkedin": null,
+			"quote": "Excellence always sells.",
+			"pickup": true,
+			"body": "<p>Love to put together awesome teams and form business alliances to make this world a better place.</p>\n",
+			"updatedAt": "2018-08-10T15:59:14.421Z"
+		},
+		"libor-mika": {
+			"id": "libor-mika",
 			"name": "Libor",
 			"surname": "Mika",
 			"job_title": "Java developer",
@@ -292,37 +281,32 @@
 			"linkedin": "in/mikalibor",
 			"quote": "I would love to change the world, but they won't give me the source code.",
 			"body": "<p>I have passion for learning and improving my experience in Java related technology. Seeking new challenges that interested me and taught me something new.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.561Z"
+			"updatedAt": "2018-08-09T13:42:14.989Z"
 		},
-		{
-			"id": "mrkva-lumir",
-			"photo_id": "lumir-mrkva",
+		"lumir-mrkva": {
+			"id": "lumir-mrkva",
 			"name": "Lumír",
 			"surname": "Mrkva",
 			"job_title": "Team leader",
 			"twitter": "mrq1911",
 			"github": "lumir-mrkva",
 			"quote": "Expect perfection and you will never innovate.",
-			"photo_align": "left",
 			"body": "<p>Tireless innovator and evangelist working for our enterprise customers.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.561Z"
+			"updatedAt": "2018-08-09T13:42:14.905Z"
 		},
-		{
-			"id": "mrozek-marian",
-			"photo_id": "marian-mrozek",
+		"marian-mrozek": {
+			"id": "marian-mrozek",
 			"name": "Marian",
 			"surname": "Mrózek",
 			"job_title": "Ruby developer",
 			"github": "rubydev",
 			"linkedin": "in/marianmrozek",
 			"quote": "There are 10 kinds of people in the world, those who can read binary and those who cannot.",
-			"photo_align": "right",
 			"body": "<p>I love my job. A happy programmer is a good programmer!</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.561Z"
+			"updatedAt": "2018-08-09T13:42:14.940Z"
 		},
-		{
-			"id": "nikodim-michal",
-			"photo_id": "michal-nikodim",
+		"michal-nikodim": {
+			"id": "michal-nikodim",
 			"name": "Michal",
 			"surname": "Nikodím",
 			"job_title": "Java developer",
@@ -330,26 +314,22 @@
 			"github": "nkd",
 			"linkedin": "in/michal-nikodím-5b18229",
 			"quote": "Frameworks... frameworks everywhere",
-			"photo_align": "left",
 			"body": "<p>Today I have feel that it is not about programming, but only about customize existing frameworks</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.561Z"
+			"updatedAt": "2018-08-09T13:42:14.962Z"
 		},
-		{
-			"id": "svoboda-ondrej",
-			"photo_id": "ondrej-svoboda",
+		"ondrej-svoboda": {
+			"id": "ondrej-svoboda",
 			"name": "Ondřej",
 			"surname": "Svoboda",
 			"job_title": "Web Developer",
 			"twitter": "the_odik",
 			"github": "theodik",
 			"quote": null,
-			"photo_align": "right",
 			"body": "",
-			"updatedAt": "2018-05-03T07:44:48.562Z"
+			"updatedAt": "2018-08-09T13:42:14.999Z"
 		},
-		{
-			"id": "lobodinsky-pavel",
-			"photo_id": "pavel-lobodinsky",
+		"pavel-lobodinsky": {
+			"id": "pavel-lobodinsky",
 			"name": "Pavel",
 			"surname": "Lobodinský",
 			"job_title": null,
@@ -357,13 +337,11 @@
 			"github": "lobodpav",
 			"linkedin": "in/lobodinsky",
 			"quote": "Two wheels are more than one",
-			"photo_align": "left",
 			"body": "<p>If anything is worth an effort, then do it right!</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.562Z"
+			"updatedAt": "2018-08-09T13:42:15.020Z"
 		},
-		{
-			"id": "trnka-pavel",
-			"photo_id": "pavel-trnka",
+		"pavel-trnka": {
+			"id": "pavel-trnka",
 			"name": "Pavel",
 			"surname": "Trnka",
 			"job_title": "Interaction Designer",
@@ -371,50 +349,42 @@
 			"github": "trnkapavel",
 			"linkedin": "in/pavel-trnka-a2045b76",
 			"quote": "As designers, we have a great responsibility.",
-			"photo_align": "left",
 			"body": "<p>Technological enthusiast</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.562Z"
+			"updatedAt": "2018-08-09T13:42:15.010Z"
 		},
-		{
-			"id": "noha-pavol",
-			"photo_id": "pavol-noha",
+		"pavol-noha": {
+			"id": "pavol-noha",
 			"name": "Pavol",
 			"surname": "Noha",
 			"job_title": "Software gardener",
 			"github": "nohaapav",
 			"linkedin": "in/pavol-noha-0220184a",
 			"quote": "The only way to get rid of a temptation is to yield to it.",
-			"photo_align": "left",
 			"body": "<p>Surprising our clients with technical skills. And sometimes my tattoo too too.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.562Z"
+			"updatedAt": "2018-08-09T13:42:14.960Z"
 		},
-		{
+		"petr-kubin": {
 			"id": "petr-kubin",
-			"photo_id": "petr-kubin",
 			"name": "Petr",
 			"surname": "Kubín",
 			"job_title": "Java Developer, Web Developer",
 			"github": "kubinpe5",
 			"linkedin": "in/petr-kubín-72654210b/",
 			"quote": null,
-			"photo_align": "left",
 			"body": "",
-			"updatedAt": "2018-05-03T07:44:48.562Z"
+			"updatedAt": "2018-08-09T13:42:14.997Z"
 		},
-		{
-			"id": "prazak-petr",
-			"photo_id": "petr-prazak",
+		"petr-prazak": {
+			"id": "petr-prazak",
 			"name": "Petr",
 			"surname": "Pražák",
 			"job_title": null,
 			"quote": "JAVA developer",
-			"photo_align": "left",
 			"body": "",
-			"updatedAt": "2018-05-03T07:44:48.562Z"
+			"updatedAt": "2018-08-09T13:42:14.943Z"
 		},
-		{
-			"id": "donat-premysl",
-			"photo_id": "premysl-donat",
+		"premysl-donat": {
+			"id": "premysl-donat",
 			"name": "Přemysl",
 			"surname": "Donát",
 			"job_title": "Ruby",
@@ -422,13 +392,11 @@
 			"github": "https://github.com/Masa331",
 			"linkedin": null,
 			"quote": null,
-			"photo_align": "left",
 			"body": "<p>Just a free spirit. I like to reinvent the wheel.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.563Z"
+			"updatedAt": "2018-08-09T13:42:14.991Z"
 		},
-		{
-			"id": "jakl-radek",
-			"photo_id": "radek-jakl",
+		"radek-jakl": {
+			"id": "radek-jakl",
 			"name": "Radek",
 			"surname": "Jakl",
 			"job_title": "Button Shifter",
@@ -436,13 +404,11 @@
 			"github": "radekjakl",
 			"linkedin": "in/jaklradek",
 			"quote": "Play a game with the world, even when you are not a child anymore.",
-			"photo_align": "left",
 			"body": "<p>Making websites and apps feel better about themselves.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.563Z"
+			"updatedAt": "2018-08-09T13:42:14.954Z"
 		},
-		{
-			"id": "brejla-tomas",
-			"photo_id": "tomas-brejla",
+		"tomas-brejla": {
+			"id": "tomas-brejla",
 			"name": "Tomáš",
 			"surname": "Brejla",
 			"job_title": "Java developer",
@@ -450,26 +416,22 @@
 			"github": "brdloush",
 			"linkedin": "in/tomasbrejla/cs",
 			"quote": null,
-			"photo_align": "right",
 			"body": "<p>When the wind of change blows, some build walls, others build windmills</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.563Z"
+			"updatedAt": "2018-08-09T13:42:14.924Z"
 		},
-		{
-			"id": "ganaj-tomas",
-			"photo_id": "tomas-ganaj",
+		"tomas-ganaj": {
+			"id": "tomas-ganaj",
 			"name": "Tomáš",
 			"surname": "Ganaj",
 			"job_title": "Java Developer",
 			"github": "tganaj",
 			"linkedin": "in/tomasganaj",
 			"quote": "Trust Yourself",
-			"photo_align": "right",
 			"body": "",
-			"updatedAt": "2018-05-03T07:44:48.563Z"
+			"updatedAt": "2018-08-09T13:42:14.932Z"
 		},
-		{
-			"id": "paulus-tomas",
-			"photo_id": "tomas-paulus",
+		"tomas-paulus": {
+			"id": "tomas-paulus",
 			"name": "Tomáš",
 			"surname": "Paulus",
 			"job_title": "UX designer",
@@ -477,13 +439,11 @@
 			"github": null,
 			"linkedin": "i",
 			"quote": null,
-			"photo_align": "left",
 			"body": "<p>Its up to you </p>\n",
-			"updatedAt": "2018-08-07T15:00:48.982Z"
+			"updatedAt": "2018-08-09T13:42:15.015Z"
 		},
-		{
-			"id": "zalusky-tomas",
-			"photo_id": "tomas-zalusky",
+		"tomas-zalusky": {
+			"id": "tomas-zalusky",
 			"name": "Tomáš",
 			"surname": "Záluský",
 			"job_title": "Java developer",
@@ -491,13 +451,11 @@
 			"github": "tomaszalusky",
 			"linkedin": "in/tomaszalusky",
 			"quote": "It is better to light one small candle than to curse the darkness.",
-			"photo_align": "right",
 			"body": "<p>Dive into technology, stay in reality.</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.563Z"
+			"updatedAt": "2018-08-09T13:42:14.988Z"
 		},
-		{
-			"id": "slavik-vaclav",
-			"photo_id": "vaclav-slavik",
+		"vaclav-slavik": {
+			"id": "vaclav-slavik",
 			"name": "Václav",
 			"surname": "Slavík",
 			"job_title": "Web Weaver",
@@ -505,21 +463,18 @@
 			"github": "vaclav-slavik",
 			"linkedin": "in/vaclav-slavik/",
 			"quote": "Give me but a base font-size on which to stand, and I shall move the web.",
-			"photo_align": "right",
 			"body": "<p>Weaving websites since 2002</p>\n",
-			"updatedAt": "2018-05-03T07:44:48.563Z"
+			"updatedAt": "2018-08-09T13:42:15.003Z"
 		},
-		{
-			"id": "kubertova-vladka",
-			"photo_id": "vladka-kubertova",
+		"vladimira-kubertova": {
+			"id": "vladimira-kubertova",
 			"name": "Vlaďka",
 			"surname": "Kubertová",
 			"job_title": "Office manager",
 			"github": "VladkaKubertova",
 			"quote": "A smooth sea never made a skilled sailor.",
-			"photo_align": "right",
 			"body": "<p>You can only actually help to someone who wants to be helped. </p>\n",
-			"updatedAt": "2018-05-03T07:44:48.564Z"
+			"updatedAt": "2018-08-10T14:58:12.533Z"
 		}
-	]
+	}
 }

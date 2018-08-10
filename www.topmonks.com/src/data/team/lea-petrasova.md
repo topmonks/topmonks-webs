@@ -1,11 +1,11 @@
 ---
-id: jiri-fabian
-name: Jiří
-surname: Fabián
-job_title: Co-Founder, President
-twitter: jirifabian
-github: filemon
-linkedin: in/jirifabian
+id: lea-petrasova
+name: Lea
+surname: Petrášová
+job_title: Blockchain & Crypto projects
+twitter:
+github:
+linkedin:
 quote: Excellence always sells.
 pickup: true
 ---
