@@ -359,25 +359,10 @@ p.description {
 }
 
 /* Fotogalerie */
-.gallery {
-  background: #f8f8ff url("/images/fotogalerieBG.svg") no-repeat;
-  position: relative;
-}
 
-.gallery .wrapper::after {
-  content: "";
-  display: block;
-  background: url("/images/shapeBlue.svg") no-repeat;
-  background-position-x: 50%;
-  position: absolute;
-  right: 0;
-  top: 400px;
-  width: 179px;
-  height: 412px;
-}
-
-.gallery .gallery__photos {
-  width: auto;
+.gallery img {
+  width: 100%;
+  padding: 0;
   text-align: center;
 }
 
@@ -415,7 +400,7 @@ p.description {
   }
 
   img {
-    width: 100%;
+    width: auto;
   }
   .lectors-box {
     background: url("/images/lektori/grainy_bg.png");
