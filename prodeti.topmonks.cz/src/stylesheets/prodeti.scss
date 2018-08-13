@@ -59,6 +59,7 @@ p {
   color: #000;
   font-size: 16px;
 }
+
 p.description {
   text-align: center;
   color: #4A4A4A;
@@ -167,10 +168,10 @@ p.description {
 
 .nav_bar ul {
   display: flex;
-  flex-grow: 2;
+  flex-grow: 0.5;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 13px;
+  font-size: 14px;
   color: white;
   list-style-type: none;
   padding: 0;
@@ -211,6 +212,13 @@ p.description {
   z-index: 10;
 }
 
+#logo svg::before {
+  content: "";
+  display: block;
+  background: url("/images/logo_monk.png") no-repeat;
+  z-index: 0;
+}
+
 .hamburger {
   visibility: hidden;
 }
@@ -225,10 +233,35 @@ p.description {
     text-align: center;
   }
   .basic-info_box {
+    position: relative;
     width: auto;
-    height: 140px;
+    height: 151px;
     border-radius: 20px;
     box-shadow: 0px 4px 10px #D5E9FF;
+    padding-top: 44px;
+  }
+  .basic-info_box_icons::before {
+    width: 91px;
+    height: 91px;
+    position: absolute;
+    bottom: 105px;
+    right: 95px;
+  }
+
+  .basic-info_box_age::before {
+    content: '';
+    display: block;
+    background: url("/images/age_icon.svg") no-repeat;
+  }
+  .basic-info_box_calendar::before {
+    content: '';
+    display: block;
+    background: url("/images/calendar_icon.svg") no-repeat;
+  }
+  .basic-info_box_capacity::before {
+    content: '';
+    display: block;
+    background: url("/images/capacity_icon.svg") no-repeat;
   }
 }
 
@@ -277,6 +310,19 @@ p.description {
   margin: 0 auto;
 }
 
+/* Ukázka - Video */
+#ukazka::after {
+  content: "";
+  display: block;
+  background: url("/images/form-grainy_bg.png") no-repeat;
+  background-size: 100%;
+  background-position-y: 400px;
+}
+
+#ukazka img {
+  width: 100%;
+}
+
 .price {
   min-height: 280px;
 }
@@ -303,41 +349,8 @@ p.description {
   }
 }
 
-.illustration .wrapper::before {
-  content: "";
-  display: block;
-  background: url("/images/shapePink.svg") no-repeat;
-  position: absolute;
-  right: -20px;
-  top: -20px;
-  width: 179px;
-  height: 412px;
-}
-
-.illustration .wrapper::after {
-  content: "";
-  display: block;
-  background: url("/images/shapePurple.svg") no-repeat;
-  position: absolute;
-  top: 220px;
-  left: -30px;
-  bottom: 300px;
-  width: 230px;
-  height: 460px;
-}
-
-.illustration h2 {
-  margin-top: 2em;
-}
-
-.illustration h2::after {
-  background-color: white !important;
-}
-
 /* Keep In Touch*/
 .form {
-  background-color: #eaf4ff;
-  background-position-x: 50%;
   padding-bottom: 3em;
 }
 
@@ -370,16 +383,46 @@ p.description {
 
 /*TEACHERS*/
 .teachers {
-  text-align: center;
   min-height: 400px;
+  h3 {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+  }
   a {
     text-decoration: none;
-    font-weight: 300;
-    color: #555;
+    font-weight: 500;
+    color: #5835B0;
   }
   a:hover {
-    font-weight: 500;
+    font-weight: 700;
   }
+  button {
+    background-color: #3324AE;
+    border: 2px solid #3324AE;
+    width: 486px;
+    height: 75px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+  }
+  button.lectors_jan {
+    color: #000000;
+    background-color: #FFFFFF;
+  }
+
+  img {
+    width: 100%;
+  }
+  .lectors-box {
+    background: url("/images/lektori/grainy_bg.png");
+    width: 100%;
+    padding: 28px;
+  }
+
 }
 
 /*opinions:*/
@@ -515,7 +558,7 @@ footer {
 .contact .mail::before {
   content: "";
   display: block;
-  background: url("/images/j.penzes.jpg") no-repeat;
+  background: url("/images/jiri.penzes.png") no-repeat;
   background-size: contain;
   border-radius: 50%;
   width: 84px;
