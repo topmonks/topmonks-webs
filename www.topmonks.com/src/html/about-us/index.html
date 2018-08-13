@@ -3,7 +3,14 @@
 {% block title %} About Us - TopMonks{% endblock %}
 {% block head %}
 <style>
-
+  .tm-team__members--collapsed .tm-team__member,
+  .tm-team__members--collapsed .show-less,
+  .show-more {
+    display: none;
+  }
+  .tm-team__members--collapsed .show-more {
+    display: initial;
+  }
   .tm-team__member {
     display: flex;
     align-items: center;
@@ -35,6 +42,7 @@
     display: block;
   }
 </style>
+
 {% endblock %}
 
 {% block content %}
@@ -82,21 +90,30 @@
     </div>
   </section>
 
-  <!--<section class="tm-team" class="mdc-layout-grid">-->
-    <!--<div class="mdc-layout-grid__inner tm-layout-wrapper">-->
-      <!--<div class="mdc-layout-grid__cell mdc-layout-grid__cell&#45;&#45;span-12">-->
-        <!--<h2>Our Team</h2>-->
-      <!--</div>-->
-      <!--{{ macros.teamMember(members['jiri-fabian'], true) }}-->
-      <!--{{ macros.teamMember(members['kristyna-sloupova'], true) }}-->
-      <!--{{ macros.teamMember(members['ladislav-gerencsery'] , true) }}-->
-      <!--{{ macros.teamMember(members['lea-petrasova'], true) }}-->
-
-      <!--{% for id, member in members %}-->
-        <!--{{ macros.teamMember(member) }}-->
-      <!--{% endfor %}-->
-    <!--</div>-->
-  <!--</section>-->
+  <section id="team" class="tm-team" class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Our Team</h2>
+      </div>
+      {{ macros.teamMember(members['jiri-fabian'], true) }}
+      {{ macros.teamMember(members['kristyna-sloupova'], true) }}
+      {{ macros.teamMember(members['ladislav-gerencsery'] , true) }}
+      {{ macros.teamMember(members['lea-petrasova'], true) }}
+    </div>
+    <div class="mdc-layout-grid__inner tm-layout-wrapper tm-team__members tm-team__members--collapsed">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
+        <a href="#team" class="action-button show-more">Show more</a>
+      </div>
+      {% for id, member in members %}
+        {% if not member.pickup %}
+          {{ macros.teamMember(member) }}
+        {% endif %}
+      {% endfor %}
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
+        <a href="#team" class="action-button show-less">Show Less</a>
+      </div>
+    </div>
+  </section>
 
   <section id="company-values" class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
@@ -115,9 +132,24 @@
           <li><b>共享</b> Give and you shall receive.</li>
           <li><b>怪事</b> Weirdness, non-conformity is welcome.</li>
         </ul>
-        <p>If you like these ideas, come <a href="mailto:jobs@topmonks.com">join us</a>. Or, <a href="mailto:sales@topmonks.com">have your project</a>                        delivered by us. Or, simply <a href="/contact/">visit us</a>. We enjoy meeting interesting people.</p>
+        <p>If you like these ideas, come <a href="mailto:jobs@topmonks.com">join us</a>. Or, <a href="mailto:sales@topmonks.com">have your project</a> delivered by us. Or, simply <a href="/contact/">visit us</a>. We enjoy meeting interesting people.</p>
       </div>
     </div>
   </section>
+
+  <script>
+    var teamList = document.querySelector(".tm-team__members");
+    var showMoreBtn = teamList.querySelector(".show-more");
+    var showLessBtn = teamList.querySelector(".show-less");
+    showMoreBtn.addEventListener("click", toggleMembersList(teamList, false));
+    showLessBtn.addEventListener("click", toggleMembersList(teamList));
+    function toggleMembersList(teamList, goToAnchor = true) {
+      return function(e) {
+        if(!goToAnchor)
+          e.preventDefault();
+        teamList.classList.toggle("tm-team__members--collapsed");
+      }
+    }
+  </script>
 
 {% endblock %}
