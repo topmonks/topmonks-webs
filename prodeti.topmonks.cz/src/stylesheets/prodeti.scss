@@ -462,7 +462,7 @@ footer {
 
 .contact {
   background-image: linear-gradient(-134deg, #e475b9 0%, #3023ae 100%);
-  padding-bottom: 14em;
+  padding-bottom: 6em;
 }
 
 .contact h2 {
@@ -496,6 +496,9 @@ footer {
 
 .contact h2::after {
   background-color: #fff;
+}
+.contact .about_us {
+  margin-top: 3em;
 }
 
 .form input {
