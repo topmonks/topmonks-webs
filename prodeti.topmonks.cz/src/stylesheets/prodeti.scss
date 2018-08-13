@@ -400,12 +400,14 @@ p.description {
   }
 
   img {
-    width: auto;
+    width: 460px;
+    height: 613px;
   }
   .lectors-box {
     background: url("/images/lektori/grainy_bg.png");
-    width: 100%;
-    padding: 28px;
+  }
+  .lectors-box_text {
+    padding: 28px 46px 0 0;
   }
 
 }
