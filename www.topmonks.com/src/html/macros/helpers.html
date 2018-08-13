@@ -11,7 +11,6 @@
 
 {% macro teamMember(member, hero) -%}
 {% set fullName = member.name + ' ' + member.surname %}
-{% if (hero and member.pickup) or (not hero and not member.pickup) %}
 <div class="box mdc-layout-grid__cell tm-team__member {% if hero %}mdc-layout-grid__cell--span-3-desktop tm-team__member--hero{% endif %}">
   <img alt="[foto] {{fullName}}" src="https://insight.topmonks.com/avatar/{{member.id}}" />
   <div class="content">
@@ -19,5 +18,4 @@
     <span>{{member.job_title}}</span>
   </div>
 </div>
-{% endif %}
 {%- endmacro %}
