@@ -2,7 +2,7 @@
 id: ladislav-gerencsery
 name: Ladislav
 surname: Gerencséry
-job_title: Sales manager
+job_title: Sales Account Manager
 twitter:
 github:
 linkedin:

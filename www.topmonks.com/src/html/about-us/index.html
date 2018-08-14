@@ -9,7 +9,10 @@
     display: none;
   }
   .tm-team__members--collapsed .show-more {
-    display: initial;
+    display: inline-block;
+  }
+  .tm-team__members .action-button{
+    margin-top: 2em;
   }
   .tm-team__member {
     display: flex;
@@ -90,7 +93,7 @@
     </div>
   </section>
 
-  <section id="team" class="tm-team" class="mdc-layout-grid">
+  <section id="team" class="tm-team mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Our Team</h2>
@@ -99,18 +102,22 @@
       {{ macros.teamMember(members['kristyna-sloupova'], true) }}
       {{ macros.teamMember(members['ladislav-gerencsery'] , true) }}
       {{ macros.teamMember(members['lea-petrasova'], true) }}
-    </div>
-    <div class="mdc-layout-grid__inner tm-layout-wrapper tm-team__members tm-team__members--collapsed">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
-        <a href="#team" class="action-button show-more">Show more</a>
-      </div>
-      {% for id, member in members %}
-        {% if not member.pickup %}
-          {{ macros.teamMember(member) }}
-        {% endif %}
-      {% endfor %}
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
-        <a href="#team" class="action-button show-less">Show Less</a>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <div class="mdc-layout-grid tm-team__members tm-team__members--collapsed">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
+              <a href="#team" class="action-button show-more">Show more</a>
+            </div>
+            {% for id, member in members %}
+              {% if not member.pickup %}
+                {{ macros.teamMember(member) }}
+              {% endif %}
+            {% endfor %}
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
+              <a href="#team" class="action-button show-less">Show Less</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -138,11 +145,9 @@
   </section>
 
   <script>
-    var teamList = document.querySelector(".tm-team__members");
-    var showMoreBtn = teamList.querySelector(".show-more");
-    var showLessBtn = teamList.querySelector(".show-less");
-    showMoreBtn.addEventListener("click", toggleMembersList(teamList, false));
-    showLessBtn.addEventListener("click", toggleMembersList(teamList));
+    const teamList = document.querySelector(".tm-team__members");
+    teamList.querySelector(".show-more").addEventListener("click", toggleMembersList(teamList, false));
+    teamList.querySelector(".show-less").addEventListener("click", toggleMembersList(teamList));
     function toggleMembersList(teamList, goToAnchor = true) {
       return function(e) {
         if(!goToAnchor)

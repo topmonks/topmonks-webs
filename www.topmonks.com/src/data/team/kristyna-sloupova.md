@@ -2,7 +2,7 @@
 id: kristyna-sloupova
 name: Kristýna
 surname: Sloupová
-job_title: Sales manager
+job_title: Senior Key Account Manager
 twitter:
 github:
 linkedin:

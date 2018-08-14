@@ -2,7 +2,7 @@
 id: lea-petrasova
 name: Lea
 surname: Petrášová
-job_title: Blockchain & Crypto projects
+job_title: Blockchain & Crypto Projects
 twitter:
 github:
 linkedin:
