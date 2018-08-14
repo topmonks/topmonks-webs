@@ -57,7 +57,7 @@ h4 {
 
 p {
   color: #000;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 p.description {
@@ -119,7 +119,7 @@ p.description {
   text-decoration: none;
   text-align: left;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
   @media screen {
     color: #fff;
     position: relative;
@@ -323,13 +323,61 @@ p.description {
   width: 100%;
 }
 
+/*Cena*/
 .price {
-  min-height: 280px;
-}
-
-.price p {
   text-align: center;
-  font-size: 1.1em;
+  margin: 0 auto;
+  width: 440px;
+  h3 {
+    font-size: 30px;
+    color: #fff;
+    padding: 60px 40px;
+    margin: 0;
+  }
+  .price_table {
+    box-shadow: 0 0 20px #000;
+    border-radius: 8px;
+  }
+  .table_head {
+    background-color: #3324AE;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .table_body {
+    border: 1px solid #D8D8D8;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    min-height: 420px;
+  }
+  .table_body p {
+    font-size: 24px;
+    color: #5D5D5D;
+    padding: 8px 0 8px;
+  }
+  .table_body p::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid #D8D8D8;
+    width: 320px;
+    margin: 0 auto;
+    padding-top: 34px;
+  }
+  .table_body a {
+    display: inline-flex;
+  }
+  .button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #3324AE;
+    border-radius: 30px;
+    box-shadow: 6px 6px 4px #BBDBFF;
+    padding: 14px 38px;
+    text-decoration: none;
+    &:hover {
+      background-color: #0C0449;
+    }
+  }
 }
 
 /* DEVICES */
@@ -359,11 +407,15 @@ p.description {
 }
 
 /* Fotogalerie */
+.gallery > .mdc-layout-grid {
+  --mdc-layout-grid-gutter-desktop: 0;
+  padding: 0;
+  line-height: 0;
+}
 
 .gallery img {
   width: 100%;
-  padding: 0;
-  text-align: center;
+  max-height: 400px;
 }
 
 /*TEACHERS*/
@@ -497,6 +549,7 @@ footer {
 .contact h2::after {
   background-color: #fff;
 }
+
 .contact .about_us {
   margin-top: 3em;
 }
