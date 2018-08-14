@@ -2,7 +2,7 @@
 id: filip-maly
 name: Filip
 surname: Malý
-job_title: 
+job_title: Just a man with his machine
 twitter: 
 github: fiila
 linkedin: in/filip-maly/
