@@ -333,9 +333,7 @@ p.description {
 .price {
   text-align: center;
   margin: 0 auto;
-  padding: 0 0 3%;
-  background: url("/images/price_bg.png") bottom no-repeat;
-  background-size: 100% auto;
+  background: url(/images/price_bg.png) top no-repeat;
   h3 {
     font-size: 30px;
     color: #fff;
@@ -475,14 +473,8 @@ p.description {
   margin: 0 auto;
   position: relative;
   text-align: center;
-  background: url("/images/price_bg.png") top no-repeat;
-}
-
-.review .review-wrapper {
-  padding-top: 3em;
-  background: url("/images/rodice_bg.png") no-repeat;
-  background-size: 100% auto;
-  max-width: 100%;
+  background: url("/images/price_curve.png") top no-repeat;
+  background-size: 100%;
 }
 
 .review h2::after {
