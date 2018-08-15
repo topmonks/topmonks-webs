@@ -472,6 +472,8 @@ p.description {
 /*reviews:*/
 
 .review {
+  margin: 0 auto;
+  position: relative;
   text-align: center;
   background: url("/images/price_bg.png") top no-repeat;
 }
@@ -498,9 +500,9 @@ p.description {
 .name p {
   color: #9b9b9b;
 }
-
-.slide {
-  padding-bottom: 36px;
+.slide{
+  margin: 0 auto;
+  width: auto;
 }
 
 .slides-wrap .lSSlideOuter .lSPager.lSpg {
