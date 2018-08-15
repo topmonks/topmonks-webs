@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1439px" height="727px" viewBox="0 0 1439 727" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>BG</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="101.999998%" y2="100.999999%" id="linearGradient-1">
+            <stop stop-color="#3023AE" offset="0%"></stop>
+            <stop stop-color="#C86DD7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="101.999998%" y2="100.999999%" id="linearGradient-2">
+            <stop stop-color="#3023AE" offset="0%"></stop>
+            <stop stop-color="#E475B9" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0,0 L2036.50865,0 L2036.50865,595.470748 C2036.50865,595.470748 1684.27705,629.762996 1564.62525,643.218488 C1444.97345,656.673981 820.297852,747.418265 0,526.229963 L0,0 Z" id="path-3"></path>
+        <rect id="path-5" x="1071.32526" y="563" width="670.816609" height="474" rx="64"></rect>
+        <filter x="-4.5%" y="-4.2%" width="106.0%" height="108.4%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="-10" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.121235281 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1.000000, 0.000000)">
+            <g id="BG" transform="translate(1.000000, 0.000000)">
+                <path d="M352.617104,603.432147 C493.80147,774.690572 938.182093,786.940572 1685.75897,640.182147 C2433.33585,493.423722 1988.95523,481.173722 352.617104,603.432147 Z" id="Path-6" fill="#D5E9FF" transform="translate(1195.013683, 630.930185) rotate(3.000000) translate(-1195.013683, -630.930185) "></path>
+                <path d="M0,0 L2036.50865,0 L2036.50865,595.470748 C2036.50865,595.470748 1684.27705,629.762996 1564.62525,643.218488 C1444.97345,656.673981 820.297852,747.418265 0,526.229963 L0,0 Z" id="Fill-1" fill="url(#linearGradient-1)"></path>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="Fill-1" fill="url(#linearGradient-2)" xlink:href="#path-3"></use>
+                <g id="Rectangle-3-Copy-2" mask="url(#mask-4)" transform="translate(1406.733564, 800.000000) rotate(80.000000) translate(-1406.733564, -800.000000) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

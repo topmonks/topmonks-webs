@@ -333,9 +333,8 @@ p.description {
 .price {
   text-align: center;
   margin: 0 auto;
-  padding: 0 0 3%;
-  background: url("/images/price_bg.png") bottom no-repeat;
-  background-size: 100% auto;
+  background: url(/images/price_bg.png) top no-repeat;
+  background-size: 100%;
   h3 {
     font-size: 30px;
     color: #fff;
@@ -472,23 +471,23 @@ p.description {
 /*reviews:*/
 
 .review {
+  margin: 0 auto;
+  position: relative;
   text-align: center;
-  background: url("/images/price_bg.png") top no-repeat;
-}
-
-.review .review-wrapper {
-  padding-top: 3em;
-  background: url("/images/rodice_bg.png") no-repeat;
-  background-size: 100% auto;
-  max-width: 100%;
+  background: url("/images/price_curve.png") top no-repeat;
+  background-size: 100%;
+  padding-bottom: 2em;
 }
 
 .review h2::after {
   background-color: #fff;
 }
 
-.photo img {
-  border-radius: 50%;
+.photo {
+  padding-top: 2em;
+  img {
+    border-radius: 50%;
+  }
 }
 
 .name {
@@ -500,7 +499,8 @@ p.description {
 }
 
 .slide {
-  padding-bottom: 36px;
+  margin: 0 auto;
+  width: auto;
 }
 
 .slides-wrap .lSSlideOuter .lSPager.lSpg {
@@ -783,12 +783,16 @@ footer {
   }
 }
 
+@media (min-width: 1440px) {
+
+}
+
 @media (max-width: 768px) {
   .form button {
     padding: 15px 30px;
   }
   #basic-info .basic-info_box_age::before, #basic-info .basic-info_box_capacity::before, #basic-info .basic-info_box_calendar::before {
-    right: 130px;
+    right: 36%;
   }
   #basic-info .basic-info_box_capacity {
     margin-top: 40px;
