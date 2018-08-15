@@ -16,6 +16,29 @@
   .tm-case-study__section--feedback {
     background-image: url("/images/case-studies/bgnd_feedback.svg");
   }
+  .tm-case-study__hero img {
+    width: 100%;
+  }
+  @media screen and (min-width: 840px) {
+    .tm-case-study__hero img {
+      margin-bottom: 30px;
+    }
+
+    .tm-case-study__hero .tm-img-wrapper {
+      position: relative;
+    }
+
+    .tm-case-study__hero .first {
+      left: 55px;
+    }
+
+    .tm-case-study__hero .last img {
+      position: absolute;
+      right: 55px;
+      top: 60px;
+    }
+  }
+
 </style>
 {% endblock %}
 
@@ -32,13 +55,29 @@
             <p>days from the assignment till finished product</p></li>
           <li class="tm-case-study__project-numbers-item"><strong class="tm-case-study__project-number">5</strong>
             <p>monks working on the project</p></li>
-          <li class="tm-case-study__project-numbers-item"><strong class="tm-case-study__project-number">600</strong>
-            <p>minutes saved per employee per month</p></li>
           <li class="tm-case-study__project-numbers-item"><strong class="tm-case-study__project-number">4</strong>
             <p>different frameworks</p></li>
           <li class="tm-case-study__project-numbers-item"><strong class="tm-case-study__project-number">2</strong>
             <p>databases</p></li>
         </ul>
+      </div>
+    </div>
+  </div>
+  <div class="tm-bgnd-wrapper">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 tm-img-wrapper first">
+          <img alt="[photo] Topmonks team at work"
+               src="http://res.cloudinary.com/topmonks/image/upload/w_545,q_auto,f_auto,dpr_auto/v1534344850/topmonks.com/adler_hero_1.png"
+               srcset="https://res.cloudinary.com/topmonks/image/upload/w_545,q_auto,f_auto,dpr_auto/v1534344850/topmonks.com/adler_hero_1.png 1x,
+                      https://res.cloudinary.com/topmonks/image/upload/w_545,q_auto,f_auto,dpr_2/v1534344850/topmonks.com/adler_hero_1.png 2x"/>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 tm-img-wrapper last">
+          <img alt="[photo] Topmonks team at work"
+               src="http://res.cloudinary.com/topmonks/image/upload/w_545,q_auto,f_auto,dpr_auto/v1534344850/topmonks.com/adler_hero_2.png"
+               srcset="https://res.cloudinary.com/topmonks/image/upload/w_545,q_auto,f_auto,dpr_auto/v1534344850/topmonks.com/adler_hero_2.png 1x,
+                      https://res.cloudinary.com/topmonks/image/upload/w_545,q_auto,f_auto,dpr_2/v1534344850/topmonks.com/adler_hero_2.png 2x"/>
+        </div>
       </div>
     </div>
   </div>

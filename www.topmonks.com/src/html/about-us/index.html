@@ -51,32 +51,32 @@
 
   <section class="tm-team">
     <div id="team" class="tm-bgnd-wrapper mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2>Our Team</h2>
-      </div>
-      {{ macros.teamMember(members['jiri-fabian'], true) }}
-      {{ macros.teamMember(members['kristyna-sloupova'], true) }}
-      {{ macros.teamMember(members['ladislav-gerencsery'] , true) }}
-      {{ macros.teamMember(members['lea-petrasova'], true) }}
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <div class="mdc-layout-grid tm-team__members tm-team__members--collapsed">
-          <div class="mdc-layout-grid__inner">
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
-              <a href="#team" class="action-button show-more">Show more</a>
-            </div>
-            {% for id, member in members %}
-              {% if not member.pickup %}
-                {{ macros.teamMember(member) }}
-              {% endif %}
-            {% endfor %}
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
-              <a href="#team" class="action-button show-less">Show Less</a>
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Our Team</h2>
+        </div>
+        {{ macros.teamMember(members['jiri-fabian'], true) }}
+        {{ macros.teamMember(members['kristyna-sloupova'], true) }}
+        {{ macros.teamMember(members['ladislav-gerencsery'] , true) }}
+        {{ macros.teamMember(members['lea-petrasova'], true) }}
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div class="mdc-layout-grid tm-team__members tm-team__members--collapsed">
+            <div class="mdc-layout-grid__inner">
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
+                <a href="#team" class="action-button show-more">Show more</a>
+              </div>
+              {% for id, member in members %}
+                {% if not member.pickup %}
+                  {{ macros.teamMember(member) }}
+                {% endif %}
+              {% endfor %}
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
+                <a href="#team" class="action-button show-less">Show Less</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   </section>
 

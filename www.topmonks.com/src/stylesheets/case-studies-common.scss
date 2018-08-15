@@ -1,11 +1,18 @@
 .tm-case-study__hero {
-  background-image: url("/images/bgnd_curve_3.svg"),
-    url("/images/bgnd_curve_1.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom center, bottom -5px left calc(50% - 530px);
-  background-size: 100% auto, auto;
+  background-image: url("/images/bgnd_curve_1.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 600px left calc(50% - 530px);
   h3 {
     font-weight: 400;
+  }
+  .tm-bgnd-wrapper {
+    padding: 0 0 4%;
+    background: #fff url(/images/bgnd_curve_3.svg) bottom no-repeat;
+    background-size: 100% auto;
+
+    & > .mdc-layout-grid {
+      background-color: #f3f3f3;
+    }
   }
 }
 .tm-case-study__project-numbers-list {
@@ -62,7 +69,10 @@
 
 @media screen and (min-width: 480px) {
   .tm-case-study__hero {
-    background-position: bottom center, bottom 75px left calc(50% - 400px);
+    background-position: bottom 560px left calc(50% - 400px);
+  }
+  .tm-bgnd-wrapper {
+    background-position: bottom center;
   }
   .tm-case-study__project-numbers-item {
     width: 20%;
