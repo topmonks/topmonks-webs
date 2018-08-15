@@ -99,6 +99,12 @@ p.description {
     width: 85%;
     margin: 0 auto;
   }
+  .price .price_table {
+    width: 200px;
+  }
+  .table_body p::after {
+    width: 240px;
+  }
 }
 
 .main_info h1 {
@@ -168,7 +174,7 @@ p.description {
 
 .nav_bar ul {
   display: flex;
-  flex-grow: 0.5;
+  flex-grow: 1;
   justify-content: space-evenly;
   align-items: center;
   font-size: 14px;
@@ -215,7 +221,7 @@ p.description {
 #logo svg::before {
   content: "";
   display: block;
-  background: url("/images/logo_monk.png") no-repeat;
+  background: url("/images/monk_logo.svg") no-repeat;
   z-index: 0;
 }
 
@@ -327,7 +333,9 @@ p.description {
 .price {
   text-align: center;
   margin: 0 auto;
-  width: 440px;
+  padding: 0 0 3%;
+  background: url("/images/price_bg.png") bottom no-repeat;
+  background-size: 100% auto;
   h3 {
     font-size: 30px;
     color: #fff;
@@ -337,6 +345,8 @@ p.description {
   .price_table {
     box-shadow: 0 0 20px #000;
     border-radius: 8px;
+    width: 360px;
+    margin: 0 auto;
   }
   .table_head {
     background-color: #3324AE;
@@ -348,6 +358,7 @@ p.description {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     min-height: 420px;
+    background-color: white;
   }
   .table_body p {
     font-size: 24px;
@@ -358,7 +369,7 @@ p.description {
     content: '';
     display: block;
     border-bottom: 1px solid #D8D8D8;
-    width: 320px;
+    width: 310px;
     margin: 0 auto;
     padding-top: 34px;
   }
@@ -407,15 +418,9 @@ p.description {
 }
 
 /* Fotogalerie */
-.gallery > .mdc-layout-grid {
-  --mdc-layout-grid-gutter-desktop: 0;
-  padding: 0;
-  line-height: 0;
-}
 
 .gallery img {
   width: 100%;
-  max-height: 400px;
 }
 
 /*TEACHERS*/
@@ -464,14 +469,22 @@ p.description {
 
 }
 
-/*opinions:*/
+/*reviews:*/
 
-.opinions {
+.review {
   text-align: center;
-  background-color: var(--secondary-color);
+  padding: 0 0 2%;
+  background: url("/images/price_bg.png") top no-repeat;
+  background-size: 100% auto;
+}
+.review .review-wrapper {
+  padding-top: 3em;
+  background: url("/images/rodice_bg.png") no-repeat;
+  background-size: 100% auto;
+  max-width: 100%;
 }
 
-.opinions h2::after {
+.review h2::after {
   background-color: #fff;
 }
 
@@ -750,11 +763,29 @@ footer {
   .gallery img {
     width: 100%;
   }
+  .price .price_table {
+    width: 342px;
+  }
+  .basic-info_box {
+    margin-top: 40px;
+  }
 }
 
 @media (min-width: 481px) {
   .nav_bar {
     height: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form button {
+    padding: 15px 30px;
+  }
+  #basic-info .basic-info_box_age::before, #basic-info .basic-info_box_capacity::before, #basic-info .basic-info_box_calendar::before {
+    right: 130px;
+  }
+  #basic-info .basic-info_box_capacity {
+    margin-top: 40px;
   }
 }
 
