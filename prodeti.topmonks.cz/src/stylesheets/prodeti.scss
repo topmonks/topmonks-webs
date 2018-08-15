@@ -334,6 +334,7 @@ p.description {
   text-align: center;
   margin: 0 auto;
   background: url(/images/price_bg.png) top no-repeat;
+  background-size: 100%;
   h3 {
     font-size: 30px;
     color: #fff;
@@ -475,14 +476,18 @@ p.description {
   text-align: center;
   background: url("/images/price_curve.png") top no-repeat;
   background-size: 100%;
+  padding-bottom: 2em;
 }
 
 .review h2::after {
   background-color: #fff;
 }
 
-.photo img {
-  border-radius: 50%;
+.photo {
+  padding-top: 2em;
+  img {
+    border-radius: 50%;
+  }
 }
 
 .name {
@@ -492,7 +497,8 @@ p.description {
 .name p {
   color: #9b9b9b;
 }
-.slide{
+
+.slide {
   margin: 0 auto;
   width: auto;
 }
@@ -782,7 +788,7 @@ footer {
     padding: 15px 30px;
   }
   #basic-info .basic-info_box_age::before, #basic-info .basic-info_box_capacity::before, #basic-info .basic-info_box_calendar::before {
-    right: 130px;
+    right: 36%;
   }
   #basic-info .basic-info_box_capacity {
     margin-top: 40px;
