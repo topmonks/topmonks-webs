@@ -473,10 +473,9 @@ p.description {
 
 .review {
   text-align: center;
-  padding: 0 0 3%;
   background: url("/images/price_bg.png") top no-repeat;
-  background-size: 100% auto;
 }
+
 .review .review-wrapper {
   padding-top: 3em;
   background: url("/images/rodice_bg.png") no-repeat;
@@ -733,6 +732,9 @@ footer {
     width: 100%;
     padding-top: 2em;
   }
+  .basic-info_box {
+    margin-top: 40px;
+  }
 
   .courses p {
     height: auto;
@@ -747,6 +749,9 @@ footer {
   .email_form {
     display: inline-flex;
   }
+  .email {
+    margin: 0 auto;
+  }
 
   .form input {
     padding: 14px;
@@ -754,20 +759,21 @@ footer {
   }
 
   .form button {
+    margin-top: 4px;
+    padding: 15px 40px;
     float: right;
     font-size: 14px;
     box-shadow: 3px 3px #bbdbff;
-    padding: 16px 10px;
   }
 
   .gallery img {
     width: 100%;
   }
   .price .price_table {
-    width: 300px;
+    width: 280px;
   }
-  .basic-info_box {
-    margin-top: 40px;
+  .price .table_body p::after {
+    width: 200px;
   }
 }
 
