@@ -214,8 +214,15 @@ p.description {
 #logo svg {
   position: absolute;
   top: 16px;
-  left: 0;
+  left: 24px;
   z-index: 10;
+}
+#logo svg.monk_icon {
+  left: -4px;
+  top: 10px;
+}
+svg.monk_icon {
+  padding-right: 6px;
 }
 
 #logo svg::before {
