@@ -726,6 +726,15 @@ footer {
   .basic-info_box {
     margin-top: 40px;
   }
+  .basic-info_box_age {
+    width: 100%;
+  }
+  .basic-info_box_calendar {
+    width: 100%;
+  }
+  .basic-info_box_capacity {
+    width: 100%;
+  }
 
   .courses p {
     height: auto;
@@ -745,8 +754,7 @@ footer {
   }
 
   .form input {
-    padding: 14px 40px;
-    width: auto;
+    width: 100%;
   }
 
   .form button {
