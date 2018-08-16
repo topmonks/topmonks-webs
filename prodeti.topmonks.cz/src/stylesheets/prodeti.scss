@@ -401,10 +401,31 @@ p.description {
 /* Keep In Touch*/
 .form {
   padding-bottom: 3em;
-}
-
-.form h3 {
-  color: #4a4a4a;
+  h3 {
+    color: #4a4a4a;
+  }
+  input {
+    padding: 15px;
+    width: 320px;
+    background-color: white;
+    font-size: 18px;
+    color: #9b9b9b;
+    border-radius: 30px;
+    border: 1px solid #84beff;
+    display: block;
+    float: right;
+  }
+  button {
+    -webkit-appearance: none;
+    background-color: var(--primary-color);
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 6px 6px 10px #bbdbff;
+    padding: 15px 50px;
+    display: block;
+  }
 }
 
 /* Fotogalerie */
@@ -429,34 +450,6 @@ p.description {
   a:hover {
     font-weight: 700;
   }
-  button {
-    background-color: #3324AE;
-    border: 2px solid #3324AE;
-    width: 486px;
-    height: 75px;
-    color: #FFFFFF;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-  }
-  button.lectors_jan {
-    color: #000000;
-    background-color: #FFFFFF;
-  }
-
-  img {
-    width: 460px;
-    height: 613px;
-  }
-  .lectors-box {
-    background: url("/images/lektori/grainy_bg.png");
-  }
-  .lectors-box_text {
-    padding: 28px 46px 0 0;
-  }
-
 }
 
 /*reviews:*/
@@ -555,30 +548,6 @@ footer {
 
 .contact .about_us {
   margin-top: 3em;
-}
-
-.form input {
-  padding: 15px;
-  width: 320px;
-  background-color: white;
-  font-size: 18px;
-  color: #9b9b9b;
-  border-radius: 30px;
-  border: 1px solid #84beff;
-  display: block;
-  float: right;
-}
-
-.form button {
-  -webkit-appearance: none;
-  background-color: var(--primary-color);
-  font-weight: bold;
-  font-size: 18px;
-  color: white;
-  border-radius: 30px;
-  box-shadow: 6px 6px 10px #bbdbff;
-  padding: 15px 50px;
-  display: block;
 }
 
 .contact h3 {
@@ -759,7 +728,6 @@ footer {
   .form button {
     margin-top: 4px;
     padding: 15px 40px;
-    float: right;
     font-size: 14px;
     box-shadow: 3px 3px #bbdbff;
   }
@@ -778,6 +746,35 @@ footer {
 @media (min-width: 481px) {
   .nav_bar {
     height: 72px;
+  }
+}
+
+@media (max-width: 320px) {
+  #basic-info {
+    .basic-info_box_age {
+      background: none;
+      border-radius: 20px;
+      box-shadow: 0px 4px 10px #D5E9FF;
+      width: 100%;
+      height: 100%;
+    }
+    .basic-info_box_calendar {
+      background: none;
+      border-radius: 20px;
+      box-shadow: 0px 4px 10px #D5E9FF;
+      width: 100%;
+      height: 100%;
+    }
+    .basic-info_box_capacity {
+      background: none;
+      border-radius: 20px;
+      box-shadow: 0px 4px 10px #D5E9FF;
+      width: 100%;
+      height: 100%;
+    }
+    h2 {
+      padding-top: 20px;
+    }
   }
 }
 
