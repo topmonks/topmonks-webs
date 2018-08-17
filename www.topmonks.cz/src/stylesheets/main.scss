@@ -340,8 +340,8 @@ blockquote {
   }
 }
 
-.tm-case-studies {
-  .tm-case-studies__title {
+.tm-studies {
+  .studies_title {
     text-align: center;
   }
   h3 {
@@ -358,49 +358,65 @@ blockquote {
       margin: 8px 0;
     }
   }
-  .tm-case-studies__clients {
+  .tm-studies__clients {
     width: 100%;
   }
-  .tm-case-studies__clients + .tm-case-studies__clients {
+  .tm-studies__clients + .tm-studies__clients {
     margin-top: 24px;
   }
+  .tm-studies__logo {
+    height: 255px;
+    border-radius: 20px;
+    overflow: hidden;
+    -webkit-transform: translateZ(0);
+  }
+  .tm-studies__logo .tm-bgnd-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: var(--tm-secondary) 50% no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform .2s ease-in-out;
+  }
+  a {
+    color: var(--topmonks-orange);
+    text-decoration: none;
+  }
 }
-
-.customers {
+.zakaznici {
   padding: 3% 0 0;
   background: #fff url("/images/bgnd_curve_4.svg") center top no-repeat;
   background-size: 100% auto;
   text-align: center;
-}
-
-.costumers .tm-bgnd-wrapper {
-  background-color: #f3f3f3;
-}
-
-.costumers blockquote {
-  text-align: center;
-  font-size: 1.66em;
-  margin: 1.6em 0 1em 0;
-}
-
-.costumers blockquote::before, blockquote::after {
-  font-size: 2.22em;
-}
-
-.costumers blockquote::before {
-  left: 66px;
-  top: 2px;
-}
-
-.costumers blockquote::after {
-  bottom: 12px;
-  right: 68px;
-}
-
-.costumers .name {
-  font-size: 16px;
-  color: var(--tm-grey);
-  text-align: center;
+  .tm-bgnd-wrapper {
+    background-color: #f3f3f3;
+  }
+  blockquote {
+    text-align: center;
+    font-size: 1.66em;
+    margin: 1.6em 0 1em 0;
+  }
+  blockquote::before, blockquote::after {
+    font-size: 2.22em;
+  }
+  blockquote::before {
+    left: 66px;
+    top: 2px;
+  }
+  blockquote::after {
+    bottom: 12px;
+    right: 68px;
+  }
+  .name {
+    font-size: 16px;
+    color: var(--tm-grey);
+    text-align: center;
+  }
 }
 
 .tm-testimonial__picture {
@@ -586,7 +602,7 @@ blockquote {
       height: auto;
     }
   }
-  .tm-case-studies .tm-case-studies__clients + .tm-case-studies__clients {
+  .tm-studies .tm-studies__clients + .tm-studies__clients {
     margin-top: 0;
   }
   .cooperation {
@@ -620,7 +636,7 @@ blockquote {
 
 /* MD GRID TABLET ONLY BREAKPOINT */
 @media screen and (min-width: 480px) and (max-width: 839px) {
-  .tm-case-studies__clients {
+  .tm-studies__clients {
     align-content: space-between;
   }
 }
