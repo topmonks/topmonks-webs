@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="119px" height="119px" viewBox="0 0 119 119" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="about-us---vsichni-2-copy-8" transform="translate(-875.000000, -1814.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="3862"></rect>
+            <g id="Group-10" transform="translate(250.000000, 1798.000000)" stroke="#E0E2E5" stroke-width="2">
+                <g id="Group" transform="translate(626.000000, 17.000000)">
+                    <g transform="translate(48.326087, 0.000000)" id="Shape" stroke-linejoin="round">
+                        <path d="M10.173913,0 L10.173913,22.8913043"></path>
+                        <polyline points="0 10.173913 10.173913 0 20.3478261 10.173913"></polyline>
+                    </g>
+                    <g transform="translate(15.260870, 15.260870)" id="Shape" stroke-linejoin="round">
+                        <path d="M1.78043478,1.78043478 L16.2782609,16.2782609"></path>
+                        <polyline points="1.78043478 16.2782609 1.78043478 1.78043478 16.2782609 1.78043478"></polyline>
+                    </g>
+                    <g transform="translate(0.000000, 48.326087)" id="Shape" stroke-linejoin="round">
+                        <path d="M0,10.173913 L20.3478261,10.173913"></path>
+                        <polyline points="10.173913 20.3478261 0 10.173913 10.173913 0"></polyline>
+                    </g>
+                    <g transform="translate(15.260870, 83.934783)" id="Shape" stroke-linejoin="round">
+                        <path d="M1.78043478,16.023913 L16.2782609,1.52608696"></path>
+                        <polyline points="16.2782609 16.023913 1.78043478 16.023913 1.78043478 1.52608696"></polyline>
+                    </g>
+                    <g transform="translate(48.326087, 94.108696)" id="Shape" stroke-linejoin="round">
+                        <path d="M10.173913,22.8913043 L10.173913,0"></path>
+                        <polyline points="20.3478261 12.7173913 10.173913 22.8913043 0 12.7173913"></polyline>
+                    </g>
+                    <g transform="translate(83.934783, 83.934783)" id="Shape" stroke-linejoin="round">
+                        <path d="M16.023913,16.023913 L1.52608696,1.52608696"></path>
+                        <polyline points="16.023913 1.52608696 16.023913 16.023913 1.52608696 16.023913"></polyline>
+                    </g>
+                    <g transform="translate(96.652174, 48.326087)" id="Shape" stroke-linejoin="round">
+                        <path d="M20.3478261,10.173913 L0,10.173913"></path>
+                        <polyline points="10.173913 0 20.3478261 10.173913 10.173913 20.3478261"></polyline>
+                    </g>
+                    <g transform="translate(83.934783, 15.260870)" id="Shape" stroke-linejoin="round">
+                        <path d="M16.023913,1.78043478 L1.52608696,16.2782609"></path>
+                        <polyline points="1.52608696 1.78043478 16.023913 1.78043478 16.023913 16.2782609"></polyline>
+                    </g>
+                    <g transform="translate(33.065217, 40.695652)">
+                        <rect id="Rectangle-path" transform="translate(25.434783, 17.804348) rotate(-180.000000) translate(-25.434783, -17.804348) " x="3.4352208e-09" y="-3.4352208e-09" width="50.8695652" height="35.6086957"></rect>
+                        <path d="M25.4347826,35.6086957 L25.4347826,45.7826087" id="Shape"></path>
+                        <path d="M40.1869565,45.7826087 L10.6826087,45.7826087" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

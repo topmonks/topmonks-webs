@@ -1,7 +1,6 @@
 .tm-case-study__hero {
   background-image: url("/images/bgnd_curve_1.svg");
   background-repeat: no-repeat;
-  background-position: bottom 600px left calc(50% - 530px);
   h3 {
     font-weight: 400;
   }
@@ -68,9 +67,6 @@
 }
 
 @media screen and (min-width: 480px) {
-  .tm-case-study__hero {
-    background-position: bottom 560px left calc(50% - 400px);
-  }
   .tm-bgnd-wrapper {
     background-position: bottom center;
   }

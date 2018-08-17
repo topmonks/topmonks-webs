@@ -4,18 +4,30 @@
 {% block head %}
 <link rel="stylesheet" href="/stylesheets/case-studies-common.css">
 <style>
-  .tm-case-study__section--time {
-    background-image: url("/images/case-studies/bgnd_time.svg");
+  .tm-case-study__section--success {
+    background-image: url("/images/case-studies/bgnd_success.svg");
   }
-  .tm-case-study__section--analysis {
-    background-image: url("/images/case-studies/bgnd_analysis.svg");
+  .tm-case-study__section--expand {
+    background-image: url("/images/case-studies/bgnd_expand.svg");
   }
-  .tm-case-study__section--prototype {
-    background-image: url("/images/case-studies/bgnd_prototype.svg");
+  .tm-case-study__section--cloud {
+    background-image: url("/images/case-studies/bgnd_cloud.svg");
   }
   .tm-case-study__section--feedback {
     background-image: url("/images/case-studies/bgnd_feedback.svg");
   }
+  .tm-case-study__hero img {
+    width: 100%;
+  }
+  .tm-case-study__hero {
+    background-position: bottom 190px left calc(50% - 530px);
+  }
+  @media screen and (min-width: 840px) {
+    .tm-case-study__hero {
+      background-position: bottom 650px left calc(50% - 400px);
+    }
+  }
+
 </style>
 {% endblock %}
 
@@ -39,13 +51,25 @@
       </div>
     </div>
   </div>
+  <div class="tm-bgnd-wrapper">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-img-wrapper">
+          <img alt="[photo] Topmonks team at work"
+               src="https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,f_auto,dpr_auto/v1534518123/topmonks.com/pricefx_hero.png"
+               srcset="https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,f_auto,dpr_auto/v1534518123/topmonks.com/pricefx_hero.png 1x,
+                      https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,f_auto,dpr_2/v1534518123/topmonks.com/pricefx_hero.png 2x"/>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section>
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div
-        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--right tm-case-study__section--time">
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--right tm-case-study__section--success">
         <h3>We will turn your startup into a successful company</h3>
         <p>Monks got involved in the Price f(x) project within their startup studio, where they provide technical consultations and development in exchange for equity - as an investment. Price f(x) is a proof TopMonks has the expertise and qualification to assist you in turning your startup into a successful multi-national corporation.</p>
       </div>
@@ -56,7 +80,7 @@
 <section>
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--analysis">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--expand">
         <h3>They saw a little sense in how CPQ solutions were built</h3>
         <p>In the beginning, there were a bunch of people with experience in automated price calculation (CPQ software) who saw little sense in how CPQ solutions were built at that time. Robust systems were overpriced, required installation on customer premises, significant customer-side resources (financial, personal and technical), installation and configuration took ages, and any modification or upgrade was a living nightmare.</p>
       </div>
@@ -68,7 +92,7 @@
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div
-        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--right tm-case-study__section--prototype">
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--right tm-case-study__section--cloud">
         <h3>Product would greatly benefit from cloud technologies</h3>
         <p>Pricing is vital for customers, however often unrelated to their core business. In other words almost a perfect definition of a product that would greatly benefit from cloud technologies, a field where TopMonks feels at home. Thus a customer has a service that deals with his vital problem available and can freely focus on his core business development.</p>
       </div>

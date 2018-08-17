@@ -16,14 +16,19 @@
   .tm-case-study__section--feedback {
     background-image: url("/images/case-studies/bgnd_feedback.svg");
   }
+  .tm-case-study__hero {
+    background-position: bottom 600px left calc(50% - 530px);
+  }
   .tm-case-study__hero img {
     width: 100%;
   }
   @media screen and (min-width: 840px) {
+    .tm-case-study__hero {
+      background-position: bottom 560px left calc(50% - 400px);
+    }
     .tm-case-study__hero img {
       margin-bottom: 30px;
     }
-
     .tm-case-study__hero .tm-img-wrapper {
       position: relative;
     }
@@ -38,7 +43,6 @@
       top: 60px;
     }
   }
-
 </style>
 {% endblock %}
 
