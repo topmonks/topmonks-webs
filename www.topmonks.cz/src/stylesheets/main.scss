@@ -197,6 +197,7 @@ blockquote {
     padding-top: 160px;
     z-index: 15;
     position: relative;
+    min-height: 300px;
   }
   .box.box--develop {
     background-image: url("/images/ic_develop.svg");
