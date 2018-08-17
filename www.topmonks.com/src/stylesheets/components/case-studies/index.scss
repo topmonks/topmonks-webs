@@ -20,6 +20,9 @@
 }
 .tm-case-studies__clients + .tm-case-studies__clients {
   margin-top: 24px;
+  @media (min-width: 480px) {
+    margin-top: 0;
+  }
 }
 .tm-case-studies__logo {
   height: 255px;

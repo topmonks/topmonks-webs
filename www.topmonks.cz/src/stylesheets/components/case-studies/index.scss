@@ -14,14 +14,21 @@
       margin: 8px 0;
     }
   }
+  a:hover{
+    text-decoration: none;
+  }
 }
 .tm-case-studies__clients + .tm-case-studies__clients {
   margin-top: 24px;
+  @media (min-width: 480px) {
+    margin-top: 0;
+  }
 }
 .tm-case-studies__logo {
   height: 255px;
   border-radius: 20px;
   overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
   .tm-bgnd-wrapper {
     display: flex;
     align-items: center;
@@ -32,9 +39,9 @@
     height: 100%;
     transition: transform 0.2s ease-in-out;
   }
-  // &.inactive{
-  //  filter: grayscale(100%);
-  //}
+  &.inactive {
+    filter: grayscale(100%);
+  }
   .sprite {
     width: 33%;
     color: white;
@@ -66,8 +73,8 @@
 }
 
 @media screen and (min-device-pixel-ratio: 2),
-screen and (min-resolution: 192dpi),
-screen and (min-resolution: 2dppx) {
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
   .tm-case-studies__logo--pricefx .tm-bgnd-wrapper {
     background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_pricefx.jpg");
   }
