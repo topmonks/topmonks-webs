@@ -280,7 +280,7 @@ blockquote {
         padding-right: 85px;
         padding-left: 24px;
         margin-right: 24px;
-        background: url("/images/bgnd_step_2.svg") right 0 top 10px no-repeat;
+        background: url("/images/bgnd_step_2.svg") right 0 top 3px no-repeat;
       }
       &.design {
         background-image: url("/images/bgnd_step_3.svg");
@@ -388,6 +388,7 @@ blockquote {
     text-decoration: none;
   }
 }
+
 .zakaznici {
   padding: 3% 0 0;
   background: #fff url("/images/bgnd_curve_4.svg") center top no-repeat;
@@ -644,5 +645,23 @@ blockquote {
 @media screen and (min-width: 840px) {
   .tm-layout-wrapper {
     padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tm-studies__clients {
+    padding: 0 18px;
+  }
+  .zakaznici blockquote::before, .zakaznici blockquote::after  {
+    visibility: hidden;
+  }
+  .cooperation h2 {
+    margin: 2em 0 0;
+  }
+  .sub-text {
+    padding: 0 10px 0;
+  }
+  .contact .contact_title p {
+    padding: 0 10px 0;
   }
 }
