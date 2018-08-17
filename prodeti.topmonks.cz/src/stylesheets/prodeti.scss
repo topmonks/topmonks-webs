@@ -217,10 +217,12 @@ p.description {
   left: 24px;
   z-index: 10;
 }
+
 #logo svg.monk_icon {
   left: -4px;
   top: 10px;
 }
+
 svg.monk_icon {
   padding-right: 6px;
 }
@@ -408,9 +410,14 @@ svg.monk_icon {
 /* Keep In Touch*/
 .form {
   padding-bottom: 3em;
+  background: url("/images/lektori/grainy_lektori.jpg") bottom no-repeat;
+  background-size: 100%;
+  min-height: 300px;
+
   h3 {
     color: #4a4a4a;
   }
+
   input {
     padding: 15px;
     width: 320px;
@@ -422,6 +429,7 @@ svg.monk_icon {
     display: block;
     float: right;
   }
+
   button {
     -webkit-appearance: none;
     background-color: var(--primary-color);
@@ -433,12 +441,23 @@ svg.monk_icon {
     padding: 15px 50px;
     display: block;
   }
+
 }
 
 /* Fotogalerie */
 
-.gallery img {
-  width: 100%;
+.gallery {
+  --mdc-layout-grid-gutter-desktop: 0;
+  --mdc-layout-grid-gutter-tablet: 0;
+  --mdc-layout-grid-gutter-phone: 0;
+  .mdc-layout-grid {
+    padding: 0;
+    line-height: 0;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /*TEACHERS*/
@@ -455,8 +474,30 @@ svg.monk_icon {
     color: #5835B0;
   }
   a:hover {
-    font-weight: 700;
+    font-weight: bold;
   }
+  a.phone {
+    color: black;
+  }
+  .teachers_content {
+    margin: 0 auto;
+  }
+  img {
+    width: 760px;
+  }
+  .teachers_contact {
+    display: inline-flex;
+    margin: 0 auto;
+  }
+  .teachers_contact-box {
+    margin: 0 4px;
+    text-align: center;
+    border: 0.5px solid #D8D8D8;
+    background-color: #FFFFFF;
+    border-radius: 80px;
+    padding: 8px 86px;
+  }
+
 }
 
 /*reviews:*/
@@ -728,26 +769,43 @@ footer {
   .email {
     margin: 0 auto;
   }
-  .form input {
-    width: 200px;
-  }
-
-  .form button {
-    margin-top: 4px;
-    padding: 15px 40px;
-    font-size: 14px;
-    box-shadow: 3px 3px #bbdbff;
+  .form {
+    input {
+      width: 200px;
+    }
+    button {
+      margin-top: 4px;
+      padding: 15px 40px;
+      font-size: 14px;
+      box-shadow: 3px 3px #bbdbff;
+    }
   }
 
   .gallery img {
     width: 100%;
   }
-  .price .price_table {
-    width: 280px;
+  .price {
+    .price_table {
+      width: 280px;
+    }
+    .table_body p::after {
+      width: 200px;
+    }
   }
-  .price .table_body p::after {
-    width: 200px;
+
+  .teachers img {
+    width: 100%;
   }
+  .teachers {
+    .teachers_contact {
+      display: block;
+    }
+    .teachers_contact-box {
+      padding: 8px 26px;
+      margin: 6px;
+    }
+  }
+
 }
 
 @media (min-width: 481px) {
