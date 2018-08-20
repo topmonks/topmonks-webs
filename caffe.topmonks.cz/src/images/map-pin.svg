@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="22px" viewBox="0 0 18 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>map-pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Desktop-HD" transform="translate(-781.000000, -399.000000)" stroke="#999999" stroke-width="1.77777778">
+            <g id="map-pin" transform="translate(782.000000, 400.000000)">
+                <path d="M16,8.18181818 C16,14.5454545 8,20 8,20 C8,20 0,14.5454545 0,8.18181818 C6.58374728e-08,3.66312482 3.58172205,1.21918591e-07 8,1.21918592e-07 C12.418278,1.21918592e-07 15.9999999,3.66312482 16,8.18181818 Z" id="Shape"></path>
+                <ellipse id="Oval" cx="8" cy="8.18181818" rx="2.66666667" ry="2.72727273"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>
