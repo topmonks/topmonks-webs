@@ -12,16 +12,14 @@ http://pxtoem.com/ - how to count px to em
 */
 
 body {
-  color: var(--topmonks-black);
-  margin: 0;
   padding: 0;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 1.444em; //22/26px
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0 auto;
+  max-width: 100%;
+  font-family: Lato, sans-serif, Roboto, Arial, sans-serif;
+  -webkit-font-kerning: normal;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
+  -webkit-font-variant-ligatures: common-ligatures contextual;
   font-variant-ligatures: common-ligatures contextual;
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
   font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
@@ -29,46 +27,45 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
+
+  background: url("/images/BG.svg") no-repeat;
+  background-position-x: 50%;
+  color: #233341;
 }
 
 .wf-active body {
   font-family: Lato, sans-serif;
 }
+
 .tm-logo {
   font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
 }
+
 .wf-active .tm-logo {
   font-family: futura-pt, sans-serif;
 }
 
-h1,
+h1 {
+  font-size: 3em;
+  font-weight: normal;
+
+}
+
 h2 {
-  font-size: 1.75em; //28px
-  line-height: 32px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #000000;
-  margin-bottom: 18px;
-  font-weight: 900;
-}
-h3 {
-  font-size: 1.5em; //24px
-  text-align: center;
-  color: #000000;
-  font-weight: 900;
-}
-h4 {
-  font-size: 1em; //16px
-  margin-bottom: 0.25em; //4px
+  font-size: 2em;
+  font-weight: normal;
 }
 
 p {
-  margin: 0 0 1em;
+  font-size: 1.125em;
+  font-weight: normal;
 }
+
 a {
-  color: var(--topmonks-orange);
+  font-weight: normal;
+  color: #02A3C8;
   text-decoration: none;
 
   &:hover {
@@ -79,12 +76,27 @@ a {
 ul,
 ul li {
   padding: 0;
+  a {
+    color: #233341;
+  }
 }
+
 ul {
   margin: 1em 0;
 }
+
 ul li {
   list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 4px 14px;
+  font-size: 14px;
+}
+
+ul#navigace {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
   margin: 0;
 }
 

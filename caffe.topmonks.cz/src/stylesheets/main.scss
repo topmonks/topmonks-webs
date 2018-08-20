@@ -17,7 +17,7 @@
 }
 
 .tm-layout-wrapper {
-  max-width: 980px;
+  max-width: 900px;
   margin: 0 auto;
   //padding: 16px;
   --mdc-layout-grid-margin-desktop: 0;
@@ -31,39 +31,75 @@
   }
 }
 
-body {
-  padding: 0;
+section {
+  margin-bottom: 3em;
+  min-height: 10em;
+}
+#uvod {
+  text-align: left;
+  background: url("/images/main_BG.png") center no-repeat;
+  background-size: 100%;
+  height: 43em;
+  color: #FFFFFF;
   margin: 0 auto;
-  max-width: 100%;
-  font-family: Lato, Roboto, Arial, sans-serif;
-  font-weight: normal;
-  -webkit-font-kerning: normal;
-  font-kerning: normal;
-  font-variant-numeric: lining-nums slashed-zero;
-  -webkit-font-variant-ligatures: common-ligatures contextual;
-  font-variant-ligatures: common-ligatures contextual;
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
-  font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: geometricPrecision;
 
-  background: url("/images/BG.svg") no-repeat;
-  background-position-x: 50%;
-}
-
-header {
-  padding-left: 6em;
-}
-
-section:target {
-  @media screen and (max-width: 479px) {
-    margin-top: 96px;
+  p {
+    font-size: 1.5em;
   }
-  @media screen and (min-width: 480px) {
-    margin-top: 88px;
+  a {
+    text-align: right;
+  }
+  .opening_text {
+    margin-top: 7em;
   }
 }
 
+.articles {
+  .latest-news {
+    box-shadow: 0 12px 24px lightgrey;
+    img {
+      width: 100%;
+      background: #233341;
+    }
 
+    span {
+      font-size: 0.875em;
+      color: #999999;
+    }
+    .latest-news_content {
+      padding: 1.5em;
+      font-size: 0.875em;
+    }
+  }
+  a {
+    float: right;
+    margin: 18px;
+  }
+}
+
+.latest-news:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
+  transition: all .25s linear;
+  box-shadow: -1px 4px 24px 0px rgba(0, 0, 0, 0.8);
+  width: 100%;
+}
+#recnici {
+  background: url("/images/speakers_BG.png") center no-repeat;
+  background-size: 100%;
+  height: 409px;
+  text-align: center;
+  p {
+    line-height: 0.4;
+  }
+  a {
+    font-size: 24px;
+  }
+  a:hover {
+    font-weight: bold;
+  }
+  .speakers_content {
+    margin-top: 4em;
+  }
+}
