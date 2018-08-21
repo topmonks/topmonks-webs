@@ -12,7 +12,7 @@
 {% macro teamMember(member, hero) -%}
 {% set fullName = member.name + ' ' + member.surname %}
 <div class="box mdc-layout-grid__cell tm-team__member {% if hero %}mdc-layout-grid__cell--span-3-desktop tm-team__member--hero{% endif %}">
-  <img alt="[foto] {{fullName}}" src="https://insight.topmonks.com/avatar/{{member.id}}" />
+  <img alt="[foto] {{fullName}}" src="https://insight.topmonks.com/avatar/{{member.id}}" onerror="this.onerror=null; this.src='/images/monk_logo.png'"/>
   <div class="content">
     <strong>{{fullName}}</strong>
     <span>{{member.job_title}}</span>
