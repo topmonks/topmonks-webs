@@ -48,7 +48,7 @@ section {
 #uvod {
   background: url("/images/main_BG.png") center no-repeat;
   background-size: 100%;
-  height: 100%;
+  height: 790px;
   margin: 0 auto;
 
   p {
@@ -93,9 +93,16 @@ section {
         padding: 18px 0;
       }
     }
+    hr {
+      margin-top: 38px;
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #EEEEEE;
+      padding: 0;
+    }
 
     .confirm-btn {
-      width: 100%;
       margin: 0 auto;
       a.button {
         background-color: #01A2C7;
