@@ -36,7 +36,7 @@ section {
   min-height: 10em;
 }
 
-.date {
+.news_content .date {
   font-size: 0.875em;
   color: #999999;
 }
@@ -64,7 +64,7 @@ section {
   }
   .newest-news {
     width: 228px;
-    height: 505px;
+    height: 535px;
     margin: 6em;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 12);
     background-color: #FFFFFF;
@@ -81,10 +81,17 @@ section {
     span {
       font-size: 12px;
     }
-    svg {
-      margin: 0 auto;
-      padding: 12px 0 0 24px;
+    .date, .place {
+      font-size: 12px;
     }
+    .place svg, .date svg {
+      margin: 0 auto;
+      padding: 4px 0 0 24px;
+    }
+    .meetup-logo svg {
+      padding: 2px 0 0 24px;
+    }
+
     p {
       font-size: 14px;
       padding-bottom: 0;
