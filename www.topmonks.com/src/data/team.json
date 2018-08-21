@@ -402,6 +402,18 @@
 			"body": "<p>Today I have feel that it is not about programming, but only about customize existing frameworks</p>\n",
 			"updatedAt": "2018-08-09T13:42:14.962Z"
 		},
+		"michal-skvor": {
+			"id": "michal-skvor",
+			"name": "Michal",
+			"surname": "Skvor",
+			"job_title": "Developer",
+			"twitter": null,
+			"github": null,
+			"linkedin": null,
+			"quote": null,
+			"body": "<p>Just tell us something we don&#39;t know</p>\n",
+			"updatedAt": "2018-08-21T12:01:27.155Z"
+		},
 		"ondrej-svoboda": {
 			"id": "ondrej-svoboda",
 			"name": "Ondřej",
