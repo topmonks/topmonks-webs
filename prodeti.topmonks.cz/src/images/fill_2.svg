@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="89px" height="100px" viewBox="0 0 89 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-    <title>ikonka2</title>
+<svg width="134px" height="150px" viewBox="0 0 134 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <path d="M74.1958161,77.5388443 L45.3809292,90.9200995 C42.2831428,92.3599668 38.7168572,92.3599668 35.6190708,90.9200995 L6.8041839,77.5388443 C2.65774751,75.612386 0,71.423279 0,66.8117224 L0,25.1882776 C0,20.576721 2.65774751,16.387614 6.8041839,14.4611557 L35.6190708,1.07990047 C38.7168572,-0.359966823 42.2831428,-0.359966823 45.3809292,1.07990047 L74.1958161,14.4611557 C78.3422525,16.387614 81,20.576721 81,25.1882776 L81,66.8117224 C81,71.423279 78.3422525,75.612386 74.1958161,77.5388443" id="path-1"></path>
-        <filter x="-9.9%" y="-4.3%" width="119.8%" height="117.4%" filterUnits="objectBoundingBox" id="filter-2">
+        <path d="M104.79014,109.565758 L64.0935593,128.474054 C59.718414,130.508649 54.681586,130.508649 50.3064407,128.474054 L9.60985973,109.565758 C3.75365821,106.843589 0,100.924199 0,94.4078686 L0,35.5921314 C0,29.0758015 3.75365821,23.1564112 9.60985973,20.4342417 L50.3064407,1.52594632 C54.681586,-0.508648772 59.718414,-0.508648772 64.0935593,1.52594632 L104.79014,20.4342417 C110.646342,23.1564112 114.4,29.0758015 114.4,35.5921314 L114.4,94.4078686 C114.4,100.924199 110.646342,106.843589 104.79014,109.565758" id="path-1"></path>
+        <filter x="-14.9%" y="-10.0%" width="129.7%" height="126.2%" filterUnits="objectBoundingBox" id="filter-2">
             <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0.835294118   0 0 0 0 0.91372549   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.615686275   0 0 0 0 0.780392157   0 0 0 0 0.960784314  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
-        <path d="M8.33333333,26.6666667 C8.33333333,33.1166667 13.55,38.3333333 20,38.3333333 C26.45,38.3333333 31.6666667,33.1166667 31.6666667,26.6666667 L31.6666667,20 L8.33333333,20 L8.33333333,26.6666667 L8.33333333,26.6666667 Z M26.8666667,7.28333333 L30.3666667,3.78333333 L29,2.4 L25.1666667,6.25 C23.6,5.46666667 21.8666667,5 20,5 C18.1333333,5 16.4,5.46666667 14.85,6.25 L11,2.4 L9.63333333,3.78333333 L13.1333333,7.28333333 C10.2333333,9.4 8.33333333,12.8 8.33333333,16.6666667 L8.33333333,18.3333333 L31.6666667,18.3333333 L31.6666667,16.6666667 C31.6666667,12.8 29.7666667,9.4 26.8666667,7.28333333 L26.8666667,7.28333333 Z M15,15 C14.0833333,15 13.3333333,14.25 13.3333333,13.3333333 C13.3333333,12.4166667 14.0833333,11.6666667 15,11.6666667 C15.9166667,11.6666667 16.6666667,12.4166667 16.6666667,13.3333333 C16.6666667,14.25 15.9166667,15 15,15 L15,15 Z M25,15 C24.0833333,15 23.3333333,14.25 23.3333333,13.3333333 C23.3333333,12.4166667 24.0833333,11.6666667 25,11.6666667 C25.9166667,11.6666667 26.6666667,12.4166667 26.6666667,13.3333333 C26.6666667,14.25 25.9166667,15 25,15 L25,15 Z" id="path-3"></path>
-        <rect id="path-5" x="0" y="0" width="83" height="83"></rect>
+        <path d="M13.5416667,43.3333333 C13.5416667,53.8145833 22.01875,62.2916667 32.5,62.2916667 C42.98125,62.2916667 51.4583333,53.8145833 51.4583333,43.3333333 L51.4583333,32.5 L13.5416667,32.5 L13.5416667,43.3333333 L13.5416667,43.3333333 Z M43.6583333,11.8354167 L49.3458333,6.14791667 L47.125,3.9 L40.8958333,10.15625 C38.35,8.88333333 35.5333333,8.125 32.5,8.125 C29.4666667,8.125 26.65,8.88333333 24.13125,10.15625 L17.875,3.9 L15.6541667,6.14791667 L21.3416667,11.8354167 C16.6291667,15.275 13.5416667,20.8 13.5416667,27.0833333 L13.5416667,29.7916667 L51.4583333,29.7916667 L51.4583333,27.0833333 C51.4583333,20.8 48.3708333,15.275 43.6583333,11.8354167 L43.6583333,11.8354167 Z M24.375,24.375 C22.8854167,24.375 21.6666667,23.15625 21.6666667,21.6666667 C21.6666667,20.1770833 22.8854167,18.9583333 24.375,18.9583333 C25.8645833,18.9583333 27.0833333,20.1770833 27.0833333,21.6666667 C27.0833333,23.15625 25.8645833,24.375 24.375,24.375 L24.375,24.375 Z M40.625,24.375 C39.1354167,24.375 37.9166667,23.15625 37.9166667,21.6666667 C37.9166667,20.1770833 39.1354167,18.9583333 40.625,18.9583333 C42.1145833,18.9583333 43.3333333,20.1770833 43.3333333,21.6666667 C43.3333333,23.15625 42.1145833,24.375 40.625,24.375 L40.625,24.375 Z" id="path-3"></path>
+        <rect id="path-5" x="0" y="0" width="135" height="135"></rect>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop-HD" transform="translate(-675.000000, -970.000000)">
-            <g id="blok-2" transform="translate(570.000000, 970.000000)">
-                <g id="ikonka2" transform="translate(109.000000, 0.000000)">
-                    <g id="Fill-1">
-                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
-                    </g>
-                    <g id="ic_adb" transform="translate(20.000000, 26.000000)">
-                        <mask id="mask-4" fill="white">
-                            <use xlink:href="#path-3"></use>
-                        </mask>
-                        <g id="Mask"></g>
-                        <g id="Colors/Blue" mask="url(#mask-4)">
-                            <g transform="translate(-21.666667, -21.666667)">
-                                <mask id="mask-6" fill="white">
-                                    <use xlink:href="#path-5"></use>
-                                </mask>
-                                <use id="Black" stroke="none" fill="#3324AE" fill-rule="evenodd" xlink:href="#path-5"></use>
+        <g id="prodeti---desktop" transform="translate(-240.000000, -1473.000000)">
+            <g id="co-naucime-vase-deti" transform="translate(250.000000, 1046.000000)">
+                <g id="blok-1-copy-3" transform="translate(0.000000, 433.000000)">
+                    <g id="Group-6">
+                        <g id="Fill-1">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <g id="ic_adb" transform="translate(24.700000, 32.500000)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <g id="Mask"></g>
+                            <g id="Colors/Blue" mask="url(#mask-4)">
+                                <g transform="translate(-35.208333, -35.208333)">
+                                    <mask id="mask-6" fill="white">
+                                        <use xlink:href="#path-5"></use>
+                                    </mask>
+                                    <use id="Black" stroke="none" fill="#3324AE" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                </g>
                             </g>
                         </g>
                     </g>

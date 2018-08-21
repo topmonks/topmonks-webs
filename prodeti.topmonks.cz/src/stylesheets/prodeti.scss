@@ -58,6 +58,7 @@ h4 {
 p {
   color: #000;
   font-size: 18px;
+  line-height: 1.5;
 }
 
 p.description {
@@ -275,7 +276,7 @@ svg.monk_icon {
 
 .courses h3 {
   font-size: 24px;
-  font-weight: normal;
+  font-weight: bold;
   text-align: left;
   margin-bottom: 0;
 }
@@ -297,22 +298,22 @@ svg.monk_icon {
 
 .fill_1 {
   background: url("/images/fill_1.svg") no-repeat;
-  width: 81px;
-  height: 97px;
+  width: 160px;
+  height: 160px;
   margin: 0 auto;
 }
 
 .fill_2 {
   background: url("/images/fill_2.svg") no-repeat;
-  width: 81px;
-  height: 97px;
+  width: 160px;
+  height: 160px;
   margin: 0 auto;
 }
 
 .fill_3 {
   background: url("/images/fill_3.svg") no-repeat;
-  width: 81px;
-  height: 97px;
+  width: 160px;
+  height: 160px;
   margin: 0 auto;
 }
 
@@ -338,11 +339,11 @@ svg.monk_icon {
   h3 {
     font-size: 30px;
     color: #fff;
-    padding: 60px 40px;
+    padding: 50px 40px;
     margin: 0;
   }
   .price_table {
-    box-shadow: 0 0 20px #000;
+    box-shadow: 0 0 20px #D3CDCD;
     border-radius: 8px;
     width: 360px;
     margin: 0 auto;
@@ -356,7 +357,7 @@ svg.monk_icon {
     border: 1px solid #D8D8D8;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    min-height: 420px;
+    min-height: 430px;
     background-color: white;
   }
   .table_body p {
@@ -381,7 +382,7 @@ svg.monk_icon {
     color: #FFFFFF;
     background-color: #3324AE;
     border-radius: 30px;
-    box-shadow: 6px 6px 4px #BBDBFF;
+    box-shadow: 4px 4px 6px #BBDBFF;
     padding: 14px 38px;
     text-decoration: none;
     &:hover {
@@ -463,6 +464,7 @@ svg.monk_icon {
 /*TEACHERS*/
 .teachers {
   min-height: 400px;
+  margin-bottom: 4em;
   h3 {
     text-align: center;
     color: white;
@@ -686,18 +688,6 @@ footer {
     padding: 8px;
     top: -12px;
     left: 8px;
-  }
-
-  .hamburger:before {
-    content: "";
-    position: absolute;
-    left: 2px;
-    top: 3px;
-    border: 2px solid white;
-    width: 32px;
-    height: 32px;
-    transform: rotate(45deg);
-    border-radius: 6px;
   }
 
   .nav_bar .hamburger:active,

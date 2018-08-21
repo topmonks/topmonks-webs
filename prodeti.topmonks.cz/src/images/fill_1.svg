@@ -1,29 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="89px" height="100px" viewBox="0 0 89 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-    <title>ikonka</title>
+<svg width="134px" height="150px" viewBox="0 0 134 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <path d="M45.3809292,90.9200995 C42.2831428,92.3599668 38.7168572,92.3599668 35.6190708,90.9200995 L6.8041839,77.5388443 C2.65774751,75.612386 0,71.423279 0,66.8117224 L0,25.1882776 C0,20.576721 2.65774751,16.387614 6.8041839,14.4611557 L35.6190708,1.07990047 C38.7168572,-0.359966823 42.2831428,-0.359966823 45.3809292,1.07990047 L74.1958161,14.4611557 C78.3422525,16.387614 81,20.576721 81,25.1882776 L81,66.8117224 C81,71.423279 78.3422525,75.612386 74.1958161,77.5388443 L45.3809292,90.9200995 Z" id="path-1"></path>
-        <filter x="-9.9%" y="-4.3%" width="119.8%" height="117.4%" filterUnits="objectBoundingBox" id="filter-2">
+        <path d="M64.0935593,128.474054 C59.718414,130.508649 54.681586,130.508649 50.3064407,128.474054 L9.60985973,109.565758 C3.75365821,106.843589 0,100.924199 0,94.4078686 L0,35.5921314 C0,29.0758015 3.75365821,23.1564112 9.60985973,20.4342417 L50.3064407,1.52594632 C54.681586,-0.508648772 59.718414,-0.508648772 64.0935593,1.52594632 L104.79014,20.4342417 C110.646342,23.1564112 114.4,29.0758015 114.4,35.5921314 L114.4,94.4078686 C114.4,100.924199 110.646342,106.843589 104.79014,109.565758 L64.0935593,128.474054 Z" id="path-1"></path>
+        <filter x="-14.9%" y="-10.0%" width="129.7%" height="126.2%" filterUnits="objectBoundingBox" id="filter-2">
             <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0.835294118   0 0 0 0 0.91372549   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.615268758   0 0 0 0 0.779673708   0 0 0 0 0.962345876  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
-        <path d="M55,36 L25,36 C23.1666667,36 21.6666667,37.5 21.6666667,39.3333333 L21.6666667,52.6666667 C21.6666667,54.5 23.1666667,56 25,56 L55,56 C56.8333333,56 58.3333333,54.5 58.3333333,52.6666667 L58.3333333,39.3333333 C58.3333333,37.5 56.8333333,36 55,36 L55,36 Z M38.3333333,47.6666667 L33.3333333,47.6666667 L33.3333333,52.6666667 L30,52.6666667 L30,47.6666667 L25,47.6666667 L25,44.3333333 L30,44.3333333 L30,39.3333333 L33.3333333,39.3333333 L33.3333333,44.3333333 L38.3333333,44.3333333 L38.3333333,47.6666667 L38.3333333,47.6666667 Z M45.8333333,51 C44.45,51 43.3333333,49.8833333 43.3333333,48.5 C43.3333333,47.1166667 44.45,46 45.8333333,46 C47.2166667,46 48.3333333,47.1166667 48.3333333,48.5 C48.3333333,49.8833333 47.2166667,51 45.8333333,51 L45.8333333,51 Z M52.5,46 C51.1166667,46 50,44.8833333 50,43.5 C50,42.1166667 51.1166667,41 52.5,41 C53.8833333,41 55,42.1166667 55,43.5 C55,44.8833333 53.8833333,46 52.5,46 L52.5,46 Z" id="path-3"></path>
+        <path d="M55.125,15.75 L7.875,15.75 C4.9875,15.75 2.625,18.1125 2.625,21 L2.625,42 C2.625,44.8875 4.9875,47.25 7.875,47.25 L55.125,47.25 C58.0125,47.25 60.375,44.8875 60.375,42 L60.375,21 C60.375,18.1125 58.0125,15.75 55.125,15.75 L55.125,15.75 Z M28.875,34.125 L21,34.125 L21,42 L15.75,42 L15.75,34.125 L7.875,34.125 L7.875,28.875 L15.75,28.875 L15.75,21 L21,21 L21,28.875 L28.875,28.875 L28.875,34.125 L28.875,34.125 Z M40.6875,39.375 C38.50875,39.375 36.75,37.61625 36.75,35.4375 C36.75,33.25875 38.50875,31.5 40.6875,31.5 C42.86625,31.5 44.625,33.25875 44.625,35.4375 C44.625,37.61625 42.86625,39.375 40.6875,39.375 L40.6875,39.375 Z M51.1875,31.5 C49.00875,31.5 47.25,29.74125 47.25,27.5625 C47.25,25.38375 49.00875,23.625 51.1875,23.625 C53.36625,23.625 55.125,25.38375 55.125,27.5625 C55.125,29.74125 53.36625,31.5 51.1875,31.5 L51.1875,31.5 Z" id="path-3"></path>
+        <rect id="path-5" x="0" y="0" width="131" height="131"></rect>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop-HD" transform="translate(-355.000000, -970.000000)">
-            <g id="blok-1" transform="translate(250.000000, 970.000000)">
-                <g id="ikonka" transform="translate(109.000000, 0.000000)">
-                    <g id="Fill-1">
-                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+        <g id="prodeti---desktop" transform="translate(-729.000000, -1153.000000)">
+            <g id="co-naucime-vase-deti" transform="translate(250.000000, 1046.000000)">
+                <g id="blok-1-copy" transform="translate(489.000000, 113.000000)">
+                    <g id="Group-6">
+                        <g id="Fill-1">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <g id="ic_videogame_asset" transform="translate(26.866667, 32.933333)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <g id="Mask"></g>
+                            <g id="Colors/Blue" mask="url(#mask-4)">
+                                <g transform="translate(-34.125000, -34.125000)">
+                                    <mask id="mask-6" fill="white">
+                                        <use xlink:href="#path-5"></use>
+                                    </mask>
+                                    <use id="Black" stroke="none" fill="#3324AE" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                </g>
+                            </g>
+                        </g>
                     </g>
-                    <mask id="mask-4" fill="white">
-                        <use xlink:href="#path-3"></use>
-                    </mask>
-                    <use id="Mask" fill="#3324AE" xlink:href="#path-3"></use>
                 </g>
             </g>
         </g>
