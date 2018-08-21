@@ -21,14 +21,14 @@ body {
   margin: 0;
 }
 
-section:target {
-  @media screen and (max-width: 479px) {
-    margin-top: 96px;
-  }
-  @media screen and (min-width: 480px) {
-    margin-top: 88px;
-  }
-}
+//section:target {
+//  @media screen and (max-width: 479px) {
+//    margin-top: 96px;
+//  }
+//  @media screen and (min-width: 480px) {
+//    margin-top: 88px;
+//  }
+//}
 
 .tm-layout-wrapper {
   max-width: 1008px;
