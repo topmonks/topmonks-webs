@@ -63,13 +63,19 @@ section {
     text-align: left;
   }
   .newest-news {
-    max-width: 228px;
+    width: 228px;
+    height: 505px;
+    margin: 6em;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 12);
     background-color: #FFFFFF;
     .news_content {
       padding: 24px 24px 0;
       span {
         font-size: 14px;
+      }
+      img {
+        width: 100%;
+        padding: 0;
       }
     }
     span {
