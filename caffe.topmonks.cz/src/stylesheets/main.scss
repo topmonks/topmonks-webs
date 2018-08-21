@@ -36,6 +36,15 @@ section {
   min-height: 10em;
 }
 
+.date {
+  font-size: 0.875em;
+  color: #999999;
+}
+.news_content {
+  font-size: 0.875em;
+  background-color: #FFFFFF;
+}
+
 #uvod {
   background: url("/images/main_BG.png") center no-repeat;
   background-size: 100%;
@@ -54,15 +63,31 @@ section {
     text-align: left;
   }
   .newest-news {
-    background-color: #FFFFFF;
-    max-width: 228px;
+    width: 228px;
+    height: 505px;
+    margin: 6em;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 12);
+    background-color: #FFFFFF;
+    .news_content {
+      padding: 24px 24px 0;
+      span {
+        font-size: 14px;
+      }
+      img {
+        width: 100%;
+        padding: 0;
+      }
+    }
     span {
       font-size: 12px;
     }
     svg {
       margin: 0 auto;
       padding: 12px 0 0 24px;
+    }
+    p {
+      font-size: 14px;
+      padding-bottom: 0;
     }
     .users p {
       font-size: 14px;
@@ -89,19 +114,13 @@ section {
       width: 100%;
       background: #233341;
     }
-
-    span {
-      font-size: 0.875em;
-      color: #999999;
-    }
-    .latest-news_content {
-      padding: 1.5em;
-      font-size: 0.875em;
-    }
   }
   a {
     float: right;
     margin: 18px;
+  }
+  .news_content {
+    padding: 1.5em;
   }
 }
 
