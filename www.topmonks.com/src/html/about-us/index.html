@@ -49,8 +49,8 @@
     </div>
   </section>
 
-  <section class="tm-team">
-    <div id="team" class="tm-bgnd-wrapper mdc-layout-grid">
+  <section class="tm-team" id="team">
+    <div id="team--collapsed" class="tm-bgnd-wrapper mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Our Team</h2>
@@ -60,7 +60,7 @@
         {{ macros.teamMember(members['ladislav-gerencsery'] , true) }}
         {{ macros.teamMember(members['lea-petrasova'], true) }}
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <div class="mdc-layout-grid tm-team__members tm-team__members--collapsed">
+          <div class="mdc-layout-grid tm-team__members">
             <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
                 <a href="#team" class="action-button show-more">Show more</a>
@@ -71,7 +71,7 @@
                 {% endif %}
               {% endfor %}
               <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
-                <a href="#team" class="action-button show-less">Show Less</a>
+                <a href="#team--collapsed" class="action-button show-less">Show Less</a>
               </div>
             </div>
           </div>
@@ -101,18 +101,5 @@
       </div>
     </div>
   </section>
-
-  <script>
-    const teamList = document.querySelector(".tm-team__members");
-    teamList.querySelector(".show-more").addEventListener("click", toggleMembersList(teamList, false));
-    teamList.querySelector(".show-less").addEventListener("click", toggleMembersList(teamList));
-    function toggleMembersList(teamList, goToAnchor = true) {
-      return function(e) {
-        if(!goToAnchor)
-          e.preventDefault();
-        teamList.classList.toggle("tm-team__members--collapsed");
-      }
-    }
-  </script>
 
 {% endblock %}

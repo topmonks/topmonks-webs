@@ -1,16 +1,24 @@
-.tm-team__members--collapsed .tm-team__member,
-.tm-team__members--collapsed .show-less,
-.show-more {
+#team:target .show-more,
+.show-less
+{
   display: none;
 }
-.tm-team__members--collapsed .show-more {
-  display: inline-block;
+#team:target {
+  .show-less{
+    display: inline-block;
+  }
+  .tm-team__member {
+    display: flex;
+    &.tm-team__member--hero {
+      display: block;
+    }
+  }
 }
 .tm-team__members .action-button {
   margin-top: 2em;
 }
 .tm-team__member {
-  display: flex;
+  display: none;
   align-items: center;
 
   img {

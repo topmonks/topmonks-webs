@@ -492,6 +492,18 @@
 			"body": "<p>Just a free spirit. I like to reinvent the wheel.</p>\n",
 			"updatedAt": "2018-08-09T13:42:14.991Z"
 		},
+		"premysl-novak": {
+			"id": "premysl-novak",
+			"name": "Přemysl",
+			"surname": "Novák",
+			"job_title": "Key Account Manager",
+			"twitter": null,
+			"github": null,
+			"linkedin": null,
+			"quote": null,
+			"body": "<p>Just tell us something we don&#39;t know</p>\n",
+			"updatedAt": "2018-08-21T15:09:27.615Z"
+		},
 		"radek-jakl": {
 			"id": "radek-jakl",
 			"name": "Radek",
