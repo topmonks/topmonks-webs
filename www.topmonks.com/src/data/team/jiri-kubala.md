@@ -2,7 +2,7 @@
 id: jiri-kubala
 name: Jiří
 surname: Kubala
-job_title: programátor
+job_title: Programmer
 twitter: 
 github: 
 linkedin: 

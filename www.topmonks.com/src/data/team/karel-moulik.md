@@ -2,7 +2,7 @@
 id: karel-moulik
 name: Karel
 surname: Moulík
-job_title: developer
+job_title: Developer
 twitter: 
 github: 
 linkedin: 
