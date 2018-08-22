@@ -3,7 +3,6 @@ const marked = require("marked");
 const markdownToJSON = require("gulp-markdown-to-json");
 const pathConfig = require("./path-config.json");
 const merge = require("gulp-merge-json");
-const sort = require("gulp-sort");
 
 module.exports = {
   images: true,
@@ -45,9 +44,6 @@ module.exports = {
       gulp.task("prepareTeamData", () => {
         gulp
           .src("../../www.topmonks.com/src/data/team/**/*.md")
-          .pipe(sort({
-            asc: false
-          }))
           .pipe(markdownToJSON(marked))
           .pipe(
             merge({
