@@ -311,24 +311,17 @@
       </div>
     </div>
   </section>
+  {% set eventsCount = events | length %}
+
   <section id="seance" class="seance">
     <div class="mdc-layout-grid tm-layout-wrapper">
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Předchozí seance</h2>
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
-          <img src="/images/trip.svg">
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
-          <img src="/images/study.svg">
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
-          <img src="/images/blockchain.svg">
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
-          <img src="/images/frontend.svg">
-        </div>
+        {% for i in range(eventsCount -1, 0, -1) -%}
+          {{ macros.eventInfo(events[i]) }}
+        {%- endfor %}
         <div class="seance_posters mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <a href="">Zobrazit všechny...</a>
         </div>

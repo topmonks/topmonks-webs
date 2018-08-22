@@ -32,6 +32,26 @@
 </div>
 {% endmacro %}
 
+{% macro eventInfo(eventData) %}
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 history">
+  <a href="{{eventData.link}}">
+    <img alt="TopMonks Caffè - {{eventData.title}}" src="{{eventData.picture}}">
+  </a>
+  <h4>{{eventData.shortTitle}}</h4>
+  <p>
+    <time>{{eventData.date}}</time>
+  </p>
+  <div class="lecturer">
+    {{eventData.lecturers}}
+  </div>
+  {% if eventData.videoLink %}
+  <div class="link">
+    <a href="{{eventData.videoLink}}">Video záznam</a>
+  </div>
+  {% endif %}
+</div>
+{% endmacro %}
+
 {% macro pageHeader(title, intro, scrollButton) %}
   <section class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner">
