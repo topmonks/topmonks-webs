@@ -26,7 +26,7 @@ module.exports = {
   html: {
     nunjucksRender: {
       manageEnv: function(env) {
-        env.addFilter('split', function(str, seperator) {
+        env.addFilter("split", function(str, seperator) {
           return str.split(seperator);
         });
       }
