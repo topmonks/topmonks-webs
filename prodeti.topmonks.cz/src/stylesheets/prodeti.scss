@@ -235,6 +235,10 @@ svg.monk_icon {
   z-index: 0;
 }
 
+.logo-white {
+  display: none;
+}
+
 .hamburger {
   visibility: hidden;
 }
@@ -510,30 +514,119 @@ svg.monk_icon {
   text-align: center;
   background: url("/images/price_curve.png") top no-repeat;
   background-size: 100%;
-  padding-bottom: 2em;
+  padding-bottom: 3em;
 }
 
 .review h2::after {
   background-color: #fff;
 }
 
-.photo {
-  padding-top: 2em;
-  img {
-    border-radius: 50%;
-  }
+.photo img {
+  border-radius: 50%;
 }
 
 .name {
   color: #555;
-}
-
-.name p {
-  color: #9b9b9b;
+  p {
+    color: #9b9b9b;
+  }
 }
 
 /*Review Slider */
+.lSSlideOuter {
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+.lSSlideWrapper {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+ul#clients {
+  width: 6840px;
+  transform: translate3d(-1140px, 0px, 0px);
+  height: 280px;
+  li {
+    width: 1140px;
+    margin-right: 0px;
+  }
+}
+
+.lSSlideOuter {
+  a {
+    border: 1px solid #3324AE;
+    border-radius: 100%;
+    padding: 2px 12px;
+  }
+  a:hover {
+    background-color: #3324AE;
+  }
+}
+
+.lSSlideOuter .lightSlider, .lSSlideOuter .lSPager {
+  padding-left: 0;
+  list-style: none outside none;
+}
+
+.lSSlideWrapper .lSSlide {
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  -webkit-transition: all 1s;
+  -webkit-transition-property: -webkit-transform, height;
+  transition-property: transform, height;
+  -webkit-transition-duration: inherit !important;
+  transition-duration: inherit !important;
+  -webkit-transition-timing-function: inherit !important;
+  transition-timing-function: inherit !important;
+}
+
+.lightSlider {
+  overflow: hidden;
+  margin: 0;
+}
+
+.lightSlider.lsGrab > * {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.lSSlideOuter .lightSlider > *, .lSSlideOuter .lSGallery li {
+  float: left;
+}
+
+.lSSlideOuter .lSPager.lSpg {
+  padding: 0;
+  text-align: center;
+  ul {
+    margin-top: 5px;
+  }
+}
+
+.lSSlideOuter .lightSlider, .lSSlideOuter .lSPager {
+  padding-left: 0;
+  list-style: none outside none;
+}
+
+.lSSlideOuter .lSPager.lSpg > li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.parent {
+  width: 700px;
+  margin-left: 8em;
+}
 
 /*footer Kontakt */
 footer {
@@ -635,11 +728,29 @@ footer {
   header {
     padding-left: 0;
   }
-
   #logo {
     margin: 0 auto;
   }
-
+  #logo::before {
+    background: none;
+  }
+  .logo-purple {
+    visibility: hidden;
+    display: none;
+  }
+  .logo-white {
+    visibility: visible;
+    display: inline-block;
+    margin: 0 auto;
+  }
+  #logo svg.monk_icon {
+    left: 112px;
+    top: 10px;
+  }
+  #logo svg {
+    left: 142px;
+    top: 18px;
+  }
   .nav_bar {
     display: block;
     background: linear-gradient(#613ab2, #6b3fb2);
