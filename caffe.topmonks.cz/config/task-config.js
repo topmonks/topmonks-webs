@@ -24,6 +24,13 @@ module.exports = {
   },
 
   html: {
+    nunjucksRender: {
+      manageEnv: function(env) {
+        env.addFilter('split', function(str, seperator) {
+          return str.split(seperator);
+        });
+      }
+    },
     dataFile: "../data/events.json"
   },
 
@@ -37,7 +44,7 @@ module.exports = {
 
   additionalTasks: {
     initialize: function(gulp) {
-      gulp.task("prepareTeamData", () => {
+      gulp.task("prepareJsonData", () => {
         gulp
           .src("../../caffe.topmonks.cz/src/data/events/**/*.md")
           .pipe(markdownToJSON(marked))
@@ -55,7 +62,7 @@ module.exports = {
       });
     },
     development: {
-      prebuild: ["prepareTeamData"]
+      prebuild: ["prepareJsonData"]
     }
   },
 
