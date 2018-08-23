@@ -27,6 +27,7 @@
     "tap-xunit": "^2.3.0"
   },
   "scripts": {
+    "start:blockchain.topmonks.cz": "BLENDID_CONFIG_PATH=./blockchain.topmonks.cz/config/ blendid",
     "start:www.topmonks.com": "BLENDID_CONFIG_PATH=./www.topmonks.com/config/ blendid",
     "start:www.topmonks.cz": "BLENDID_CONFIG_PATH=./www.topmonks.cz/config/ blendid",
     "start:prodeti.topmonks.cz": "BLENDID_CONFIG_PATH=./prodeti.topmonks.cz/config/ blendid",
