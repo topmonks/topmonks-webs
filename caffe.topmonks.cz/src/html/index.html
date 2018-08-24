@@ -1,6 +1,7 @@
 {% extends 'layouts/application.html' %}
 <!--celkový počet sessions, používá se při generování obsahu...-->
 {% set eventsCount = events | length %}
+{% set upcomingEvent = events[eventsCount] %}
 
 {% block title %}caffe.topmonks.cz{% endblock %}
 
@@ -123,11 +124,11 @@
             <div class="news_content mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
 
               <span class="date">Příští téma:</span>
-              <p class="news_title">Na cestách</p>
+              <p class="news_title">{{upcomingEvent.shortTitle}}</p>
 
             </div>
 
-            <img src="/images/news1.svg" class="news-img">
+            <img src="{{upcomingEvent.picture}}" alt="plakát pro topmonks caffe na téma {{upcomingEvent.shortTitle}}" class="news-img">
 
             <div class="news_content-details mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
               <div class="date">
@@ -150,8 +151,8 @@
                   </div>
 
                   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-9">
-                    <span>Thursday, August 2, 2018</span><br>
-                    <span>7:00 PM</span>
+                    <span>{{upcomingEvent.date}}</span><br>
+                    <span>19:00</span>
                   </div>
                 </div>
               </div>
@@ -319,9 +320,6 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Předchozí seance</h2>
         </div>
-        <!--nadcházející akce-->
-        {{ macros.eventInfo(events[eventsCount]) }}
-        <!--a ty z minulosti-->
         {% for i in range(eventsCount -1, 0, -1) -%}
           {{ macros.eventInfo(events[i]) }}
         {%- endfor %}

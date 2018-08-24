@@ -69,8 +69,7 @@ section {
 
   .newest-news {
     width: 228px;
-    height: 535px;
-    margin: 6em;
+    margin: 3em 6em;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 12);
     background-color: #FFFFFF;
     p {
@@ -79,9 +78,9 @@ section {
     }
     .news_content {
       padding: 24px 24px 0;
-      img {
-        width: 100%;
-      }
+    }
+    .news-img {
+      width:228px;
     }
     .news_content-details {
       span {
