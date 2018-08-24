@@ -35,6 +35,7 @@ body {
   text-rendering: geometricPrecision;
 
   background: url("/images/main-info_BG.png") top no-repeat;
+  background-size: 100%;
   color: #FFFFFF;
 }
 
@@ -58,6 +59,7 @@ h2 {
   font-weight: 900;
   text-align: center;
 }
+
 h2.h2_title {
   line-height: 0;
   font-weight: 400;
@@ -65,6 +67,8 @@ h2.h2_title {
 }
 
 h3 {
+  font-size: 22px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -152,11 +156,6 @@ svg.monk {
 }
 
 .main_content_button {
-  position: absolute;
-  content: "";
-  display: block;
-  bottom: 68px;
-  left: 32em;
   margin: 0 auto;
 }
 
@@ -171,6 +170,7 @@ a.button {
 #values {
   background: url("/images/values_BG.png") right no-repeat;
   background-position-y: 100px;
+  background-size: 78%;
 }
 
 #values p {
@@ -198,25 +198,35 @@ a.button {
   font-weight: 400;
 }
 
+.welcome {
+  margin-top: 2em;
+}
+
 /* Offers */
-.offer_white-box p {
+.offer .wrapper {
+  --mdc-layout-grid-gutter-desktop: 0;
+  --mdc-layout-grid-gutter-tablet: 0;
+}
+
+.offer_box-white p {
   color: #586B78;
 }
 
-.offer_white-box {
-  color: #000000;
-  background-color: #FFFFFF;
-  width: 313px;
-  height: 486px;
+.offer_box {
+  width: 100%;
   box-shadow: 0 0 20px #d3cdcd;
   padding: 24px;
 }
 
-.offer_purple-box {
+.offer_box-white {
+  color: #000000;
+  background-color: #FFFFFF;
+  height: 534px;
+}
+
+.offer_box-purple {
   background-color: #4D2F72;
-  width: 320px;
-  height: 531px;
-  padding: 24px;
+  height: 576px;
 }
 
 h3.blockchain_bubble::before {
@@ -250,6 +260,11 @@ h3.ICO_bubble::before {
 .offer2 {
   margin-top: 3em;
   background: url("/images/offer2_BG.png") left no-repeat;
+  background-size: 78%;
+}
+
+.offer2-box {
+  padding: 24px;
 }
 
 /* Security First section */
@@ -327,6 +342,7 @@ h3.ICO_bubble::before {
   width: 100%;
   height: 60px;
 }
+
 .our-work_members::before {
   content: "";
   display: block;
@@ -342,24 +358,29 @@ h3.ICO_bubble::before {
   width: 100%;
   height: 60px;
 }
+
 .why-topmonks {
   margin: 6em 0 4em;
 }
 
 /*Contact section*/
 #contact {
+  background-color: #F4F8FB;
   color: #1C1C37;
   text-align: center;
-  margin-bottom: 4em;
+  min-height: 490px;
 }
+
 #contact img {
   width: 100%;
   height: 92px;
   margin: 0 auto;
 }
+
 #contact h4 {
   line-height: 0;
 }
+
 #contact p {
   line-height: 0;
   padding-bottom: 1em;
@@ -371,4 +392,104 @@ footer {
 
 footer p {
   color: #FFFFFF;
+}
+
+@media (max-width: 480px) {
+  header {
+    padding-left: 0;
+  }
+
+  body {
+    background-size: auto;
+  }
+
+  .nav_bar {
+    display: block;
+    background-color: #1A1C5E;
+    position: fixed;
+    width: 100%;
+    height: 54px;
+    z-index: 1;
+  }
+
+  .nav_bar ul {
+    flex-direction: column;
+  }
+
+  .nav_bar a {
+    font-size: 16px;
+    padding: 8px 8px 8px 16px;
+    display: block;
+  }
+
+  .nav_bar li {
+    width: 100%;
+  }
+
+  .nav_bar .hamburger {
+    visibility: visible;
+    color: white;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    top: -12px;
+    left: 8px;
+  }
+
+  .nav_bar .hamburger:active,
+  .nav_bar .hamburger:hover {
+    border: none;
+  }
+
+  .hamburger .menu {
+    display: block;
+  }
+
+  .hamburger:active .menu {
+    display: none;
+  }
+
+  .hamburger .close {
+    display: none;
+  }
+
+  .hamburger:active .close {
+    display: block;
+  }
+
+  #navigace {
+    display: none;
+  }
+
+  #navigace:target {
+    display: block;
+    background-color: white;
+    position: relative;
+    top: -35px;
+  }
+
+  #navigace a {
+    color: purple;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  h2.h2_title {
+    line-height: 1.2;
+  }
+
+  #values {
+    background: none;
+  }
+
+  .security p {
+    width: 100%;
+  }
+
+  .our-work_box {
+    width: 100%;
+  }
 }
