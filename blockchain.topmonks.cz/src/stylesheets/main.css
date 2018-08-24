@@ -35,7 +35,6 @@ body {
   text-rendering: geometricPrecision;
 
   background: url("/images/main-info_BG.png") top no-repeat;
-  background-size: 100%;
   color: #FFFFFF;
 }
 
@@ -62,6 +61,12 @@ h2 {
 
 h3 {
   text-align: center;
+}
+
+h3.h3-larger {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 900;
 }
 
 h4 {
@@ -96,14 +101,13 @@ a {
   padding: 0;
 }
 
-.nav_bar a {
-  text-decoration: none;
+.nav_bar li a {
   color: #FFFFFF;
   border-bottom: 2px solid transparent;
 }
 
 .nav_bar a:hover {
-  border-color: white;
+  border-color: #EC71E9;
 }
 
 #logo {
@@ -133,8 +137,10 @@ svg.monk {
   height: 280px;
   width: 100%;
 }
+
 .opening {
   position: relative;
+  margin-top: 5em;
 }
 
 .main_content_button {
@@ -158,9 +164,11 @@ a.button {
   background: url("/images/values_BG.png") right no-repeat;
   background-position-y: 100px;
 }
+
 #values p {
   text-align: center;
 }
+
 .value_1::before {
   content: "";
   display: block;
@@ -176,9 +184,88 @@ a.button {
   width: 100%;
   height: 99px;
 }
+
 /* welcome */
 .welcome h2 {
   font-weight: 400;
+}
+
+/* Offers */
+.offer_white-box p {
+  color: #586B78;
+}
+
+.offer_white-box {
+  color: #000000;
+  background-color: #FFFFFF;
+  width: 313px;
+  height: 486px;
+  box-shadow: 0 0 20px #d3cdcd;
+  padding: 24px;
+}
+
+.offer_purple-box {
+  background-color: #4D2F72;
+  width: 320px;
+  height: 531px;
+  padding: 24px;
+}
+
+h3.blockchain_bubble::before {
+  content: "";
+  display: block;
+  background: url("/images/blockchain.svg") center no-repeat;
+  width: 100%;
+  height: 116px;
+  margin-bottom: 2em;
+}
+
+h3.aApps_bubble::before {
+  content: "";
+  display: block;
+  background: url("/images/dApps.svg") center no-repeat;
+  width: 100%;
+  height: 116px;
+  margin-bottom: 2em;
+}
+
+h3.ICO_bubble::before {
+  content: "";
+  display: block;
+  background: url("/images/ICO.svg") center no-repeat;
+  width: 100%;
+  height: 116px;
+  margin-bottom: 2em;
+}
+
+/* Offer continue */
+.offer2 {
+  margin-top: 3em;
+  background: url("/images/offer2_BG.png") left no-repeat;
+}
+
+/* Security First section */
+.security .wrapper {
+  background: url("/images/security_white_BG.png") center no-repeat;
+  padding-top: 0;
+}
+.security h3 {
+  color: #9B9B9B;
+}
+.security h3.h3-larger::before {
+  content: "";
+  display: block;
+  background: url("/images/security.svg") center no-repeat;
+  width: 100%;
+  height: 160px;
+  margin-bottom: 0.5em;
+}
+.security p {
+  color: #586B78;
+  width: 405px;
+}
+.security_first {
+  background-image: url("/images/security_first.png");
 }
 
 footer {
