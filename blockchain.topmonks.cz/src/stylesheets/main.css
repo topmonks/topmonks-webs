@@ -33,10 +33,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
+
+  background: url("/images/main-info_BG.png") top no-repeat;
+  background-size: 100%;
+  color: #FFFFFF;
 }
 
 header {
-  padding-left: 6em;
+  padding: 2em 0 0 4em;
 }
 
 .wrapper {
@@ -46,23 +50,28 @@ header {
 
 h1 {
   font-size: 58px;
-  font-weight: bold;
+  font-weight: 900;
   text-align: center;
 }
+
 h2 {
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 900;
   text-align: center;
 }
+
 h3 {
   text-align: center;
 }
+
 h4 {
   text-align: center;
 }
+
 p {
   font-size: 18px;
 }
+
 a {
   font-size: 18px;
   text-align: center;
@@ -89,7 +98,7 @@ a {
 
 .nav_bar a {
   text-decoration: none;
-  color: #000000;
+  color: #FFFFFF;
   border-bottom: 2px solid transparent;
 }
 
@@ -97,80 +106,80 @@ a {
   border-color: white;
 }
 
-#logo:before {
-  content: "";
-  display: block;
-  top: 0;
-  left: -29px;
-  width: 200px;
-  height: 100px;
-  position: absolute;
-  background: url("/images/logoBG.svg") no-repeat;
-  z-index: 0;
-}
-
 #logo {
   position: relative;
-  width: 142px;
-  height: 18px;
+  width: 194px;
+  height: 21px;
 }
 
-#logo svg {
+#logo svg.topmonks {
   position: absolute;
-  top: 16px;
-  left: 24px;
+  top: 14px;
+  left: 49px;
   z-index: 10;
 }
 
-#logo svg.monk_icon {
-  left: -4px;
-  top: 10px;
-}
-
-svg.monk_icon {
+svg.monk {
   padding-right: 6px;
-}
-
-#logo svg::before {
-  content: "";
-  display: block;
-  background: url("/images/monk_logo.svg") no-repeat;
-  z-index: 0;
 }
 
 .hamburger {
   visibility: hidden;
 }
 
-/* Main Info section */
-.main_info ul {
-  list-style-type: none;
+/* Main_info section */
+.developers {
+  background: url("/images/slices_BG.png") center no-repeat;
+  height: 280px;
+  width: 100%;
+}
+.opening {
+  position: relative;
 }
 
-.main_info li {
-  line-height: 25px;
-  text-decoration: none;
-  text-align: left;
-  font-weight: normal;
-  font-size: 18px;
-}
-.main_info li::before {
+.main_content_button {
+  position: absolute;
   content: "";
   display: block;
-  width: 24px;
-  height: 24px;
-  background: url("/images/odrazky.svg") no-repeat;
-  position: absolute;
-  left: -36px;
-  top: 3px;
+  bottom: 68px;
+  left: 32em;
+  margin: 0 auto;
 }
 
-.main_info a {
-  border-radius: 30px;
-  box-shadow: 4px 4px 22px var(--primary-color);
-  padding: 14px 68px;
+a.button {
+  background: linear-gradient(to bottom right, #EE72E9 0, #96f 78%);
+  border-radius: 32px;
+  padding: 12px 24px;
+  color: #fff;
 }
 
+/*Values*/
+#values {
+  background: url("/images/values_BG.png") right no-repeat;
+  background-position-y: 100px;
+}
+#values p {
+  text-align: center;
+}
+.value_1::before {
+  content: "";
+  display: block;
+  background: url("/images/value_1.svg") center no-repeat;
+  width: 100%;
+  height: 99px;
+}
+
+.value_2::before {
+  content: "";
+  display: block;
+  background: url("/images/value_2.svg") center no-repeat;
+  width: 100%;
+  height: 99px;
+}
+/* welcome */
+.welcome h2 {
+  font-weight: 400;
+}
 
 footer {
   background-color: #212142;
