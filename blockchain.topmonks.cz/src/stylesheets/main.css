@@ -58,23 +58,31 @@ h2 {
   font-weight: 900;
   text-align: center;
 }
+h2.h2_title {
+  line-height: 0;
+  font-weight: 400;
+  padding-bottom: 1em;
+}
 
 h3 {
   text-align: center;
 }
 
-h3.h3-larger {
+h3.h3_larger {
   font-size: 24px;
   text-align: center;
   font-weight: 900;
 }
 
 h4 {
+  font-weight: 900;
+  font-size: 24px;
   text-align: center;
 }
 
 p {
   font-size: 18px;
+  line-height: 1.5;
 }
 
 a {
@@ -249,9 +257,11 @@ h3.ICO_bubble::before {
   background: url("/images/security_white_BG.png") center no-repeat;
   padding-top: 0;
 }
+
 .security h3 {
   color: #9B9B9B;
 }
+
 .security h3.h3-larger::before {
   content: "";
   display: block;
@@ -260,12 +270,99 @@ h3.ICO_bubble::before {
   height: 160px;
   margin-bottom: 0.5em;
 }
+
 .security p {
   color: #586B78;
   width: 405px;
 }
+
 .security_first {
   background-image: url("/images/security_first.png");
+}
+
+/* How we work */
+#our-work {
+  background-color: #212142;
+}
+
+.our-work_box {
+  background-color: #333355;
+  width: 300px;
+  height: 440px;
+  padding: 58px 24px;
+}
+
+.our-work_box p {
+
+}
+
+.box1::before {
+  content: "";
+  display: block;
+  background: url("/images/we-listen.svg") center no-repeat;
+  width: 100%;
+  height: 82px;
+}
+
+.box2::before {
+  content: "";
+  display: block;
+  background: url("/images/we-develop.svg") center no-repeat;
+  width: 100%;
+  height: 82px;
+}
+
+.box3::before {
+  content: "";
+  display: block;
+  background: url("/images/we-verify.svg") center no-repeat;
+  width: 100%;
+  height: 82px;
+}
+
+.our-work_crypto::before {
+  content: "";
+  display: block;
+  background: url("/images/crypto.svg") center no-repeat;
+  width: 100%;
+  height: 60px;
+}
+.our-work_members::before {
+  content: "";
+  display: block;
+  background: url("/images/members.svg") center no-repeat;
+  width: 100%;
+  height: 60px;
+}
+
+.our-work_blockstars::before {
+  content: "";
+  display: block;
+  background: url("/images/blockstars.svg") center no-repeat;
+  width: 100%;
+  height: 60px;
+}
+.why-topmonks {
+  margin: 6em 0 4em;
+}
+
+/*Contact section*/
+#contact {
+  color: #1C1C37;
+  text-align: center;
+  margin-bottom: 4em;
+}
+#contact img {
+  width: 100%;
+  height: 92px;
+  margin: 0 auto;
+}
+#contact h4 {
+  line-height: 0;
+}
+#contact p {
+  line-height: 0;
+  padding-bottom: 1em;
 }
 
 footer {
