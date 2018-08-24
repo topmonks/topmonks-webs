@@ -44,28 +44,32 @@ header {
   margin: 0 auto;
 }
 
-.main_info ul {
-  list-style-type: none;
+h1 {
+  font-size: 58px;
+  font-weight: bold;
+  text-align: center;
 }
-
-.main_info li {
-  line-height: 25px;
-  text-decoration: none;
-  text-align: left;
-  font-weight: normal;
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+h4 {
+  text-align: center;
+}
+p {
   font-size: 18px;
 }
-.main_info li::before {
-    content: "";
-    display: block;
-    width: 24px;
-    height: 24px;
-    background: url("/images/odrazky.svg") no-repeat;
-    position: absolute;
-    left: -36px;
-    top: 3px;
+a {
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
 }
 
+/* Navigation bar - header */
 .nav_bar {
   display: flex;
   justify-content: space-between;
@@ -137,6 +141,37 @@ svg.monk_icon {
 .hamburger {
   visibility: hidden;
 }
+
+/* Main Info section */
+.main_info ul {
+  list-style-type: none;
+}
+
+.main_info li {
+  line-height: 25px;
+  text-decoration: none;
+  text-align: left;
+  font-weight: normal;
+  font-size: 18px;
+}
+.main_info li::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("/images/odrazky.svg") no-repeat;
+  position: absolute;
+  left: -36px;
+  top: 3px;
+}
+
+.main_info a {
+  border-radius: 30px;
+  box-shadow: 4px 4px 22px var(--primary-color);
+  padding: 14px 68px;
+}
+
+
 footer {
   background-color: #212142;
 }

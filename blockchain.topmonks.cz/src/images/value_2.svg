@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="99px" viewBox="0 0 104 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 15</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="31.4296206%" y1="-39.2040706%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#529CFB" offset="0%"></stop>
+            <stop stop-color="#8380E5" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#EE72E9" offset="0%"></stop>
+            <stop stop-color="#8363F9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Blockchain---doplnene-texty-2" transform="translate(-950.000000, -630.000000)" fill-rule="nonzero">
+            <g id="Group-4-Copy" transform="translate(810.000000, 630.000000)">
+                <g id="Group-15" transform="translate(140.000000, 0.000000)">
+                    <g id="Group-14">
+                        <ellipse id="Oval" fill="url(#linearGradient-1)" cx="56.5" cy="46" rx="47.5" ry="46"></ellipse>
+                        <ellipse id="Oval-Copy" fill="url(#linearGradient-2)" style="mix-blend-mode: multiply;" cx="47.5" cy="53" rx="47.5" ry="46"></ellipse>
+                    </g>
+                    <g id="Group" transform="translate(30.000000, 36.000000)" fill="#FFFFFF">
+                        <path d="M25.0682594,4.80874317 L25.0682594,0 L13,8 L25.0682594,16 L25.0682594,10.7978142 C27.7303754,10.7978142 29.4163823,10.9289617 30.4812287,11.0601093 C37.225256,11.8469945 39,16 39,16 C39,5.8579235 25.0682594,4.80874317 25.0682594,4.80874317" id="Shape"></path>
+                        <path d="M13.9317406,17.2021858 C11.2696246,17.2021858 9.58361775,17.0710383 8.51877133,16.9398907 C1.77474403,16.1530055 0,12 0,12 C0,22.1420765 13.9317406,23.1912568 13.9317406,23.1912568 L13.9317406,28 L26,20 L13.9317406,12 L13.9317406,17.2021858 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
