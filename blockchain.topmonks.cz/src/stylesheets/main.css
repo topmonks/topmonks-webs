@@ -16,6 +16,10 @@
   --tm-black: #4a4a4a;
 }
 
+html {
+  background-color: #F4F8FB;
+}
+
 body {
   padding: 0;
   margin: 0 auto;
@@ -166,11 +170,13 @@ a.button {
   color: #fff;
 }
 
+.opening_button {
+  margin: 0 auto;
+}
+
 /*Values*/
-#values {
+.values_bg {
   background: url("/images/values_BG.png") right no-repeat;
-  background-position-y: 100px;
-  background-size: 78%;
 }
 
 #values p {
@@ -196,10 +202,6 @@ a.button {
 /* welcome */
 .welcome h2 {
   font-weight: 400;
-}
-
-.welcome {
-  margin-top: 2em;
 }
 
 /* Offers */
@@ -257,14 +259,9 @@ h3.ICO_bubble::before {
 }
 
 /* Offer continue */
-.offer2 {
-  margin-top: 3em;
+.offer2_bg {
+  margin: 3em 0 0;
   background: url("/images/offer2_BG.png") left no-repeat;
-  background-size: 78%;
-}
-
-.offer2-box {
-  padding: 24px;
 }
 
 /* Security First section */
@@ -273,26 +270,27 @@ h3.ICO_bubble::before {
   padding-top: 0;
 }
 
-.security h3 {
+.security_first h3 {
   color: #9B9B9B;
 }
 
-.security h3.h3-larger::before {
+.security_first h3::before {
   content: "";
   display: block;
   background: url("/images/security.svg") center no-repeat;
   width: 100%;
   height: 160px;
-  margin-bottom: 0.5em;
+  margin: 4em 0 0.5em;
 }
 
-.security p {
+.security_text p {
   color: #586B78;
   width: 405px;
 }
 
 .security_first {
   background-image: url("/images/security_first.png");
+  background-size: 100% 100%;
 }
 
 /* How we work */
@@ -394,13 +392,31 @@ footer p {
   color: #FFFFFF;
 }
 
+@media (max-width: 1440px) {
+  body {
+    background-size: auto;
+  }
+}
+
+@media (min-width: 1360px) {
+  .offer2_bg, .values_bg {
+    background-size: 82%;
+  }
+}
+
+@media (max-width: 1360px) {
+  .offer2_bg, .values_bg {
+    background-size: 1120px 320px;
+  }
+}
+
 @media (max-width: 480px) {
   header {
     padding-left: 0;
   }
 
   body {
-    background-size: auto;
+    background-size: 100% 30%;
   }
 
   .nav_bar {
@@ -481,8 +497,21 @@ footer p {
     line-height: 1.2;
   }
 
-  #values {
+  .values_bg {
     background: none;
+    padding-top: 0;
+  }
+
+  .value_1 {
+    margin-bottom: 2.5em;
+  }
+
+  .welcome h2 {
+    font-size: 24px;
+  }
+
+  .offer2_bg, .values_bg {
+    background-size: 600px 700px;
   }
 
   .security p {
