@@ -270,13 +270,9 @@ h3.ICO_bubble::before {
   margin: 3em 0 0;
   background: url("/images/offer2_BG.png") left no-repeat;
 }
-
 .offer2-box {
-  margin: 0 auto;
-  width: 400px;
+  max-width: 480px;
 }
-
-
 
 /* Security First section */
 .security .wrapper {
@@ -403,12 +399,6 @@ footer p {
   color: #FFFFFF;
 }
 
-@media (min-width: 1440px)  {
-  .offer2-box_2 {
-    margin-right: 18em;
-  }
-}
-
 @media (max-width: 1440px) {
   body {
     background-size: auto;
@@ -418,9 +408,6 @@ footer p {
 @media (min-width: 1360px) {
   .offer2_bg, .values_bg {
     background-size: 82%;
-  }
-  .offer2-box_1 {
-    margin-left: 14em;
   }
 }
 
@@ -449,11 +436,11 @@ footer p {
 }
 
 @media (max-width: 1300px) {
-  .value_1, offer2-box_2 {
+  .value_1 {
     margin-left: 11em;
   }
 
-  .value_2, offer2-box_1 {
+  .value_2 {
     margin-right: 11em;
   }
 }
