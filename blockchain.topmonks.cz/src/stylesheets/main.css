@@ -183,6 +183,14 @@ a.button {
   text-align: center;
 }
 
+.value_1 {
+  margin-left: 14.5em;
+}
+
+.value_2 {
+  margin-right: 14.5em;
+}
+
 .value_1::before {
   content: "";
   display: block;
@@ -207,7 +215,6 @@ a.button {
 /* Offers */
 .offer .wrapper {
   --mdc-layout-grid-gutter-desktop: 0;
-  --mdc-layout-grid-gutter-tablet: 0;
 }
 
 .offer_box-white p {
@@ -264,6 +271,13 @@ h3.ICO_bubble::before {
   background: url("/images/offer2_BG.png") left no-repeat;
 }
 
+.offer2-box {
+  margin: 0 auto;
+  width: 400px;
+}
+
+
+
 /* Security First section */
 .security .wrapper {
   background: url("/images/security_white_BG.png") center no-repeat;
@@ -303,10 +317,7 @@ h3.ICO_bubble::before {
   width: 300px;
   height: 440px;
   padding: 58px 24px;
-}
-
-.our-work_box p {
-
+  margin: 0 auto;
 }
 
 .box1::before {
@@ -392,6 +403,12 @@ footer p {
   color: #FFFFFF;
 }
 
+@media (min-width: 1440px)  {
+  .offer2-box_2 {
+    margin-right: 18em;
+  }
+}
+
 @media (max-width: 1440px) {
   body {
     background-size: auto;
@@ -402,11 +419,42 @@ footer p {
   .offer2_bg, .values_bg {
     background-size: 82%;
   }
+  .offer2-box_1 {
+    margin-left: 14em;
+  }
 }
 
 @media (max-width: 1360px) {
   .offer2_bg, .values_bg {
     background-size: 1120px 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .values_bg {
+    background: none;
+  }
+
+  .offer_box-purple {
+    height: 534px;
+  }
+
+  .welcome h2 {
+    font-size: 24px;
+  }
+
+  .offer2_bg, .values_bg {
+    background-size: 1120px 920px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .value_1, offer2-box_2 {
+    margin-left: 11em;
+  }
+
+  .value_2, offer2-box_1 {
+    margin-right: 11em;
   }
 }
 
@@ -505,9 +553,8 @@ footer p {
   .value_1 {
     margin-bottom: 2.5em;
   }
-
-  .welcome h2 {
-    font-size: 24px;
+  .value_1, .value_2 {
+    margin: 0 auto;
   }
 
   .offer2_bg, .values_bg {
