@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="522px" height="487px" viewBox="0 0 522 487" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M460,198.863636 L479,217 L460,235.136364 L460,441 L0,441 L0,0 L460,0 L460,198.863636 Z" id="path-1"></path>
+        <filter x="-7.4%" y="-7.6%" width="114.8%" height="116.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="11.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#EE72E9" offset="0%"></stop>
+            <stop stop-color="#8363F9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Blockchain---doplnene-texty-2" transform="translate(-228.000000, -1989.000000)">
+            <g id="Group-10" transform="translate(251.000000, 2010.000000)">
+                <g id="Group-5">
+                    <g id="Combined-Shape">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <path d="M176.000144,176.798134 L176.000144,203.565759 C175.947044,231.192986 190.535746,256.958683 214.741756,271.988885 L226.000164,279 L237.250747,271.988885 C261.459788,256.960516 276.051538,231.194427 275.999863,203.565759 L275.999863,176.798134 L225.999924,163 L176.000144,176.798134 Z M256.95264,190.066114 C257.701356,190.782826 258.122007,191.755076 258.122007,192.768872 C258.122007,193.782667 257.701356,194.754917 256.95264,195.471629 L215.996807,234.693426 C215.248424,235.410475 214.233176,235.813339 213.17454,235.813339 C212.115904,235.813339 211.100656,235.410475 210.352274,234.693426 L195.047368,220.036603 C193.515428,218.53959 193.528081,216.140368 195.075733,214.658251 C196.623385,213.176134 199.128694,213.164016 200.6919,214.631087 L213.174381,226.584999 L251.307868,190.066267 C252.056259,189.349164 253.071539,188.946254 254.130221,188.946225 C255.188903,188.946197 256.204206,189.349052 256.95264,190.066114 Z" id="Shape" fill="url(#linearGradient-3)" fill-rule="nonzero"></path>
+                    <path d="M227.5,140 L159,159.150502 L159,197.230454 C159.00058,234.369384 178.363249,268.990498 210.463131,289.248295 L227.5,300 L244.53883,289.248295 C276.638226,268.990289 296.000197,234.369103 296,197.230454 L296,159.150502 L227.5,140 Z M284.472911,202.367417 C284.528584,232.430106 268.846886,260.46567 242.83057,276.815127 L229.639228,285.142193 C228.3405,285.964323 226.663423,285.964323 225.364694,285.142193 L212.165665,276.814899 C186.152599,260.463535 170.4741,232.428496 170.531168,202.367417 L170.531168,172.876202 C170.531163,171.181776 171.686829,169.691607 173.36556,169.221406 L226.414188,154.394406 C227.125721,154.20127 227.878279,154.20127 228.589813,154.394406 L281.638284,169.221558 C283.317015,169.691759 284.472681,171.181928 284.472676,172.876354 L284.472911,202.367417 Z" id="Shape" fill="url(#linearGradient-3)" fill-rule="nonzero"></path>
+                    <text id="Security-First" font-family="Lato-Black, Lato" font-size="24" font-weight="700" fill="#9B9B9B">
+                        <tspan x="154" y="338">Security First</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
