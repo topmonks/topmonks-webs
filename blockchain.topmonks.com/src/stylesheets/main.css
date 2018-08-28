@@ -270,6 +270,7 @@ h3.ICO_bubble::before {
   margin: 3em 0 0;
   background: url("/images/offer2_BG.png") left no-repeat;
 }
+
 .offer2-box {
   max-width: 480px;
   min-height: 310px;
@@ -280,10 +281,12 @@ h3.ICO_bubble::before {
   position: relative;
   margin-bottom: 6em;
 }
+
 .security .wrapper {
   background: url("/images/security_white_BG.png") center no-repeat;
   padding-top: 0;
 }
+
 .security_first img {
   content: "";
   display: block;
@@ -420,17 +423,22 @@ footer p {
     background: none;
   }
 
-  .offer_box-purple {
-    height: 534px;
-  }
-
   .welcome h2 {
     font-size: 24px;
+  }
+
+  .offer_box-purple {
+    height: 534px;
   }
 
   .offer2_bg, .values_bg {
     background-size: 1120px 920px;
   }
+
+  .offer2-box {
+    margin: 0 auto;
+  }
+
 }
 
 @media (max-width: 1300px) {
@@ -459,6 +467,7 @@ footer p {
     width: 100%;
     height: 54px;
     z-index: 1;
+    padding-top: 12px;
   }
 
   .nav_bar ul {
@@ -482,7 +491,7 @@ footer p {
     width: 24px;
     height: 24px;
     padding: 8px;
-    top: -12px;
+    top: -20px;
     left: 8px;
   }
 
@@ -505,6 +514,10 @@ footer p {
 
   .hamburger:active .close {
     display: block;
+  }
+
+  #logo {
+    margin: 0 auto;
   }
 
   #navigace {
@@ -538,6 +551,7 @@ footer p {
   .value_1 {
     margin-bottom: 2.5em;
   }
+
   .value_1, .value_2 {
     margin: 0 auto;
   }
@@ -545,12 +559,24 @@ footer p {
   .offer2_bg, .values_bg {
     background-size: 600px 700px;
   }
-
+  .security .wrapper {
+    background-color: white;
+  }
   .security p {
     width: 100%;
+  }
+
+  .security_text {
+    margin-top: 18em;
+  }
+
+  .security_first img {
+    left: 8px;
+    width: 360px;
   }
 
   .our-work_box {
     width: 100%;
   }
+
 }
