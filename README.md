@@ -19,12 +19,31 @@ In development, check that your work conforms to [Lighthouse](https://developers
 
 *We use `www.topmonks.com` as example site. You can use any site likewise.*
 
-Prerequisites: **git, node.js 10+, yarn**
+Prerequisites: 
+ * terminal
+ * git
+ * node.js
+ * yarn
+
+To setup your macOS run these commands in Terminal application
+```
+# Install Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# Insatll git
+brew install git
+# Install Node.js Version Manager
+brew install nvm
+# Instal Node.js 10
+nvm install 10
+# Install Yarn package manager
+brew install yarn
+```
 
 Checkout repository
 ```
 git clone git@github.com:topmonks/topmonks-webs.git
 cd topmonks-webs
+nvm use
 ```
 
 Install dependencies
