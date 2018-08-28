@@ -6,7 +6,7 @@
   "author": "TopMonks",
   "license": "MIT",
   "dependencies": {
-    "@material/layout-grid": "^0.34.0"
+    "@material/layout-grid": "^0.39.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",
