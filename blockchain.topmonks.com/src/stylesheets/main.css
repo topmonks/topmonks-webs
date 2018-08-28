@@ -172,6 +172,7 @@ a.button {
 
 .opening_button {
   margin: 0 auto;
+  margin-top: -90px;
 }
 
 /*Values*/
@@ -398,6 +399,13 @@ footer {
 
 footer p {
   color: #FFFFFF;
+}
+footer .social-buttons {
+  margin-top: 1em;
+}
+.social-buttons svg {
+  background-color: #FFFFFF;
+  border-radius: 80%;
 }
 
 @media (max-width: 1440px) {
