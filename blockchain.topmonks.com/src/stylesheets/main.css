@@ -278,7 +278,6 @@ h3.ICO_bubble::before {
 
 /* Security First section */
 .security {
-  position: relative;
   margin-bottom: 6em;
 }
 
@@ -288,11 +287,7 @@ h3.ICO_bubble::before {
 }
 
 .security_first img {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -58px;
-  left: 12em;
+  position: static;
 }
 
 .security_first h3 {
@@ -303,7 +298,11 @@ h3.ICO_bubble::before {
   color: #586B78;
   width: 405px;
 }
-
+.security_text {
+  position: static;
+  margin-right: 6px;
+  background: white;
+}
 /* How we work */
 #our-work {
   background-color: #212142;
@@ -428,7 +427,7 @@ footer p {
   }
 
   .offer_box-purple {
-    height: 534px;
+    height: 564px;
   }
 
   .offer2_bg, .values_bg {
@@ -559,20 +558,20 @@ footer p {
   .offer2_bg, .values_bg {
     background-size: 600px 700px;
   }
+
   .security .wrapper {
     background-color: white;
   }
+  .security {
+    margin-bottom: 0;
+  }
+
   .security p {
     width: 100%;
   }
-
-  .security_text {
-    margin-top: 18em;
-  }
-
   .security_first img {
     left: 8px;
-    width: 360px;
+    width: 100%;
   }
 
   .our-work_box {
