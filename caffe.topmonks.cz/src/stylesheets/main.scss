@@ -28,6 +28,9 @@ header {
   max-width: 900px;
   margin: 0 auto;
 }
+.tm-header {
+  margin-top: 1.5em;
+}
 
 .tm-layout-grid__cell--span-0-desktop {
   @media screen and (min-width: 840px) {
@@ -120,7 +123,7 @@ section {
 }
 
 .articles {
-  .latest-news {
+  .box-shadow {
     box-shadow: 0 12px 24px lightgrey;
     img {
       width: 100%;
@@ -136,7 +139,7 @@ section {
   }
 }
 
-.latest-news:hover {
+.box-shadow:hover {
   -webkit-transform: scale(1.03);
   -ms-transform: scale(1.03);
   transform: scale(1.03);
