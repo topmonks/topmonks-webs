@@ -1,6 +1,6 @@
 {
-  "src": "./blockchain.topmonks.cz/src",
-  "dest": "./public/blockchain.topmonks.cz",
+  "src": "./blockchain.topmonks.com/src",
+  "dest": "./public/blockchain.topmonks.com",
 
   "html": {
     "src": "html",
