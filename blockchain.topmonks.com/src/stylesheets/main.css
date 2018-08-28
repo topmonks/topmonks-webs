@@ -269,6 +269,7 @@ h3.ICO_bubble::before {
 .offer2_bg {
   margin: 3em 0 0;
   background: url("/images/offer2_BG.png") left no-repeat;
+  padding-bottom: 0;
 }
 
 .offer2-box {
