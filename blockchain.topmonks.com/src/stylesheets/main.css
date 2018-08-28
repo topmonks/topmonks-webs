@@ -123,7 +123,7 @@ a {
 }
 
 .nav_bar a:hover {
-  border-color: #EC71E9;
+  border-color: #DB0F7F;
 }
 
 #logo {
@@ -164,15 +164,15 @@ svg.monk {
 }
 
 a.button {
-  background: linear-gradient(to bottom right, #EE72E9 0, #96f 78%);
+  background: linear-gradient(to bottom right, #DB0F7F 0, #FF7E71 80%);
   border-radius: 32px;
-  padding: 12px 24px;
+  padding: 12px 54px;
   color: #fff;
 }
 
 .opening_button {
   margin: 0 auto;
-  margin-top: -90px;
+  margin-top: -85px;
 }
 
 /*Values*/
@@ -228,15 +228,20 @@ a.button {
   padding: 24px;
 }
 
+.offer_box li {
+  line-height: 1.5;
+  font-size: 18px;
+}
+
 .offer_box-white {
   color: #000000;
   background-color: #FFFFFF;
-  height: 534px;
+  height: 458px;
 }
 
 .offer_box-purple {
   background-color: #4D2F72;
-  height: 576px;
+  height: 504px;
 }
 
 h3.blockchain_bubble::before {
@@ -300,11 +305,13 @@ h3.ICO_bubble::before {
   color: #586B78;
   width: 405px;
 }
+
 .security_text {
   position: static;
   margin-right: 6px;
   background: white;
 }
+
 /* How we work */
 #our-work {
   background-color: #212142;
@@ -366,6 +373,14 @@ h3.ICO_bubble::before {
   height: 60px;
 }
 
+.our-work_blockstars a {
+  color: #9E55B4;
+}
+
+.our-work_blockstars a:hover {
+  color: #FFFFFF;
+}
+
 .why-topmonks {
   margin: 6em 0 4em;
 }
@@ -400,9 +415,11 @@ footer {
 footer p {
   color: #FFFFFF;
 }
+
 footer .social-buttons {
   margin-top: 1em;
 }
+
 .social-buttons svg {
   background-color: #FFFFFF;
   border-radius: 80%;
@@ -425,48 +442,13 @@ footer .social-buttons {
     background-size: 1120px 320px;
   }
 }
-
-@media (max-width: 768px) {
-  .values_bg {
-    background: none;
-  }
-
-  .welcome h2 {
-    font-size: 24px;
-  }
-
-  .offer_box-purple {
-    height: 564px;
-  }
-
-  .offer2_bg, .values_bg {
-    background-size: 1120px 920px;
-  }
-
-  .offer2-box {
+@media (max-width: 1200px) {
+  .value_1, .value_2 {
     margin: 0 auto;
   }
-
 }
 
-@media (max-width: 1300px) {
-  .value_1 {
-    margin-left: 11em;
-  }
-
-  .value_2 {
-    margin-right: 11em;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    padding-left: 0;
-  }
-
-  body {
-    background-size: 100% 30%;
-  }
+@media (max-width: 768px) {
 
   .nav_bar {
     display: block;
@@ -543,6 +525,38 @@ footer .social-buttons {
     color: purple;
   }
 
+  .values_bg {
+    background: none;
+  }
+
+  .welcome h2 {
+    font-size: 24px;
+  }
+
+  .offer_box-purple {
+    height: 564px;
+  }
+
+  .offer2_bg, .values_bg {
+    background-size: 1120px 920px;
+  }
+
+  .offer2-box {
+    margin: 0 auto;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+  header {
+    padding-left: 0;
+  }
+
+  body {
+    background-size: 100% 30%;
+  }
+
   h1 {
     font-size: 38px;
   }
@@ -571,6 +585,7 @@ footer .social-buttons {
   .security .wrapper {
     background-color: white;
   }
+
   .security {
     margin-bottom: 0;
   }
@@ -578,6 +593,7 @@ footer .social-buttons {
   .security p {
     width: 100%;
   }
+
   .security_first img {
     left: 8px;
     width: 100%;
