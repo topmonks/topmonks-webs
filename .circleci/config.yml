@@ -67,10 +67,25 @@ jobs:
     environment:
       HOST: www.topmonks.com
 
+  test-blockchain-topmonks-com:
+    <<: *test-site
+    environment:
+      HOST: blockchain.topmonks.cz
+
+  test-studio-topmonks-com:
+    <<: *test-site
+    environment:
+      HOST: studio.topmonks.com
+
   test-www-topmonks-cz:
     <<: *test-site
     environment:
       HOST: www.topmonks.cz
+
+  test-caffe-topmonks-cz:
+    <<: *test-site
+    environment:
+      HOST: caffe.topmonks.cz
 
   test-prodeti-topmonks-cz:
     <<: *test-site
@@ -117,6 +132,18 @@ workflows:
     jobs:
       - build
       - test-www-topmonks-com:
+          requires:
+            - build
+      - test-blockchain-topmonks-com:
+          requires:
+            - build
+      - test-studio-topmonks-com:
+          requires:
+            - build
+      - test-www-topmonks-cz:
+          requires:
+            - build
+      - test-caffe-topmonks-cz:
           requires:
             - build
       - test-prodeti-topmonks-cz:
