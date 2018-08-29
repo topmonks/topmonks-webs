@@ -1,8 +1,14 @@
 {
-  "cs": {
-    "code": "cs",
+  "en": {
+    "code": "en",
+    "navigation": {
+      "about-us": "About Us",
+      "meet-us": "Meet US",
+      "contacts": "Contacts",
+      "startup-studio": "Startup Studio"
+    },
     "topmonks-index": {
-      "title": "TopMonks - Partner pro vaše softwarové projekty"
+      "title": "TopMonks"
     }
   }
 }

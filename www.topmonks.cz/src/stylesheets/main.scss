@@ -21,14 +21,14 @@ body {
   margin: 0;
 }
 
-section:target {
-  @media screen and (max-width: 479px) {
-    margin-top: 96px;
-  }
-  @media screen and (min-width: 480px) {
-    margin-top: 88px;
-  }
-}
+//section:target {
+//  @media screen and (max-width: 479px) {
+//    margin-top: 96px;
+//  }
+//  @media screen and (min-width: 480px) {
+//    margin-top: 88px;
+//  }
+//}
 
 .tm-layout-wrapper {
   max-width: 1008px;
@@ -38,7 +38,9 @@ section:target {
   --mdc-layout-grid-margin-tablet: 0;
   --mdc-layout-grid-margin-phone: 0;
 }
-
+.tm-layout-align-center {
+  text-align: center;
+}
 .tm-layout-grid__cell--span-0-desktop {
   @media screen and (min-width: 840px) {
     display: none;
@@ -46,33 +48,36 @@ section:target {
 }
 
 blockquote {
-  position: relative;
   margin: 0 0 3em;
-  padding: 0 1em;
-  quotes: "“" "„";
   p {
-    display: inline;
+    position: relative;
+    padding: 0 1em;
+    margin-bottom: 0.5em;
+    quotes: "“" "„";
+    &::before,
+    &::after {
+      content: open-quote;
+      display: inline-block;
+      color: #dadada;
+      font-size: 2.125em;
+      font-weight: 900;
+      position: absolute;
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      content: close-quote;
+      bottom: 4px;
+      padding-left: 4px;
+    }
   }
-  &::before,
-  &::after {
-    content: open-quote;
-    display: inline-block;
-    color: #dadada;
-    font-size: 2.125em;
-    font-weight: 900;
-    position: absolute;
-  }
-  &::before {
-    left: 0;
-  }
-  &::after {
-    content: close-quote;
-    bottom: 4px;
-    padding-left: 4px;
+  cite {
+    padding: 0 1em;
   }
 }
 
-.tm-page-header blockquote {
+.tm-page-header blockquote p {
   font-size: 28px;
   line-height: 32px;
 
@@ -129,7 +134,6 @@ blockquote {
 
 .sub-text {
   color: var(--tm-grey);
-  text-align: center;
 }
 
 .box,
@@ -198,7 +202,6 @@ blockquote {
     padding-top: 160px;
     z-index: 15;
     position: relative;
-    min-height: 300px;
   }
   .box.box--develop {
     background-image: url("/images/ic_develop.svg");
@@ -212,9 +215,10 @@ blockquote {
   }
 }
 
-.partners {
+.tm-partners {
   padding: 0 0 3%;
   background: #fff url("/images/bgnd_curve_3.svg") center bottom no-repeat;
+  background-size: 100% auto;
   .tm-bgnd-wrapper {
     background-color: #f3f3f3;
   }
@@ -222,38 +226,34 @@ blockquote {
 
 .tm-partners__list {
   color: var(--tm-grey);
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   @media screen and (max-width: 479px) {
     flex-direction: column;
   }
   margin: 0;
   li {
-    margin-right: 28px;
+    width: 164px;
+    @media screen and (min-width: 480px) {
+      margin-right: 24px;
+    }
   }
   svg {
     width: 100%;
     fill: currentColor;
     stroke: currentColor;
   }
-  .tm-partners__item--adler svg {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .tm-partners .tm-bgnd-wrapper {
-    background-color: #f3f3f3;
-  }
+}
+li.tm-partners__item--adler {
+  width: 100px;
 }
 
 .product {
   background-color: #f3f3f3;
   .tm-layout-wrapper {
     background: url("/images/bgnd_product_top_mobile.svg") top center no-repeat,
-    url("/images/bgnd_product_mobile.svg") bottom center no-repeat;
+      url("/images/bgnd_product_mobile.svg") bottom center no-repeat;
     background-size: 100% auto;
     padding-top: 110px;
     padding-bottom: 110px;
@@ -325,71 +325,22 @@ blockquote {
         }
       }
       &.design {
-        top: 15px;
+        top: 30px;
         @media screen and (min-width: 840px) {
-          top: 35px;
+          top: 45px;
         }
       }
       &.development {
-        top: 115px;
+        top: 130px;
         @media screen and (min-width: 840px) {
-          top: 135px;
+          top: 147px;
         }
       }
     }
   }
 }
 
-.tm-studies {
-  .studies_title {
-    text-align: center;
-  }
-  h3 {
-    font-weight: 700;
-    text-align: left;
-    margin-top: 14px;
-    margin-bottom: 0;
-    &:after {
-      content: "";
-      width: 59px;
-      height: 2px;
-      background-color: var(--tm-primary);
-      display: block;
-      margin: 8px 0;
-    }
-  }
-  .tm-studies__clients {
-    width: 100%;
-  }
-  .tm-studies__clients + .tm-studies__clients {
-    margin-top: 24px;
-  }
-  .tm-studies__logo {
-    height: 255px;
-    border-radius: 20px;
-    overflow: hidden;
-    -webkit-transform: translateZ(0);
-  }
-  .tm-studies__logo .tm-bgnd-wrapper {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    background: var(--tm-secondary) 50% no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    transition: transform .2s ease-in-out;
-  }
-  a {
-    color: var(--topmonks-orange);
-    text-decoration: none;
-  }
-}
-
-.zakaznici {
+.customers {
   padding: 3% 0 0;
   background: #fff url("/images/bgnd_curve_4.svg") center top no-repeat;
   background-size: 100% auto;
@@ -397,26 +348,13 @@ blockquote {
   .tm-bgnd-wrapper {
     background-color: #f3f3f3;
   }
-  blockquote {
-    text-align: center;
-    font-size: 1.66em;
-    margin: 1.6em 0 1em 0;
-  }
-  blockquote::before, blockquote::after {
-    font-size: 2.22em;
-  }
-  blockquote::before {
-    left: 66px;
-    top: 2px;
-  }
-  blockquote::after {
-    bottom: 12px;
-    right: 68px;
-  }
   .name {
     font-size: 16px;
     color: var(--tm-grey);
     text-align: center;
+  }
+  blockquote {
+    margin-bottom: 2em;
   }
 }
 
@@ -431,8 +369,8 @@ blockquote {
   text-align: center;
   padding: 64px 0 100px;
   background: #fff url("/images/bgnd_curve_2.svg") top -5px left calc(
-    50% - 530px
-  ) no-repeat;
+      50% - 530px
+    ) no-repeat;
   @media screen and (min-width: 480px) {
     background-position: top -1px left calc(50% - 360px);
   }
@@ -449,26 +387,29 @@ blockquote {
 
 #page-topmonks-index {
   @media screen and (max-width: 479px) {
-    background: #fff url("https://res.cloudinary.com/topmonks/image/upload/w_352,dpr_auto,q_auto,f_auto/v1531754590/topmonks.com/bgnd_header_mobile.png") no-repeat right calc(50% - 145px) top -1px;
+    background: #fff
+      url("https://res.cloudinary.com/topmonks/image/upload/w_352,dpr_auto,q_auto,f_auto/v1531754590/topmonks.com/bgnd_header_mobile.png")
+      no-repeat right calc(50% - 145px) top -1px;
     background-size: 352px auto;
     overflow-x: hidden;
   }
   @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2),
-  screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2),
-  screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
-  screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
-  screen and (max-width: 479px) and (min-resolution: 192dpi),
-  screen and (max-width: 479px) and (min-resolution: 2dppx) {
+    screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2),
+    screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
+    screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
+    screen and (max-width: 479px) and (min-resolution: 192dpi),
+    screen and (max-width: 479px) and (min-resolution: 2dppx) {
     background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_352,dpr_2,q_auto,f_auto/v1531754590/topmonks.com/bgnd_header_mobile.png");
   }
   @media screen and (min-width: 480px) {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/w_1017,dpr_auto,q_auto,f_auto/v1531486239/topmonks.com/bgnd_header.png") no-repeat right calc(50% - 390px) top -1px;
+    background: url("https://res.cloudinary.com/topmonks/image/upload/w_1017,dpr_auto,q_auto,f_auto/v1531486239/topmonks.com/bgnd_header.png")
+      no-repeat right calc(50% - 390px) top -1px;
     background-size: 1017px auto;
     overflow-x: hidden;
   }
   @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2),
-  screen and (min-width: 480px) and (min-resolution: 192dpi),
-  screen and (min-width: 480px) and (min-resolution: 2dppx) {
+    screen and (min-width: 480px) and (min-resolution: 192dpi),
+    screen and (min-width: 480px) and (min-resolution: 2dppx) {
     background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_1017,dpr_2,q_auto,f_auto/v1531486239/topmonks.com/bgnd_header.png");
   }
   @media screen and (min-width: 480px) and (max-width: 839px) {
@@ -542,38 +483,42 @@ blockquote {
 
 .cooperation {
   background-image: url("/images/bgnd_product_top.svg"),
-  url("/images/bgnd_curve_1.svg");
+    url("/images/bgnd_curve_1.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: bottom 0 left -800px, bottom -5px left calc(50% - 530px);
   @media screen and (min-width: 480px) {
     background-position: bottom -20px center,
-    bottom -120px left calc(50% - 400px);
+      bottom -120px left calc(50% - 400px);
   }
   h2 {
     margin-bottom: 260px;
   }
   .tm-bgnd-wrapper {
     @media screen and (max-width: 479px) {
-      background: transparent url(https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_auto,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png) no-repeat right calc(50% + 555px) top 140px;
-      background-size: 695px auto;
+      background: transparent
+        url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_auto,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png")
+        no-repeat left -110px top 120px;
+      background-size: 440px auto;
     }
     @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2),
-    screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2),
-    screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
-    screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
-    screen and (max-width: 479px) and (min-resolution: 192dpi),
-    screen and (max-width: 479px) and (min-resolution: 2dppx) {
-      background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_2,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png");
+      screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2),
+      screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
+      screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
+      screen and (max-width: 479px) and (min-resolution: 192dpi),
+      screen and (max-width: 479px) and (min-resolution: 2dppx) {
+      background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_2,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png");
     }
     @media screen and (min-width: 480px) {
-      background: transparent url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_auto,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png") no-repeat right calc(50% + 555px) top 140px;
+      background: transparent
+        url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_auto,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png")
+        no-repeat right calc(50% + 555px) top 140px;
       background-size: 695px auto;
       padding-bottom: 120px;
     }
     @media screen and (min-width: 840px) and (min-device-pixel-ratio: 2),
-    screen and (min-width: 840px) and (min-resolution: 192dpi),
-    screen and (min-width: 840px) and (min-resolution: 2dppx) {
-      background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_2,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png");
+      screen and (min-width: 840px) and (min-resolution: 192dpi),
+      screen and (min-width: 840px) and (min-resolution: 2dppx) {
+      background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_2,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png");
     }
   }
 }
@@ -592,9 +537,7 @@ blockquote {
       margin: 64px 0 8px;
     }
     .jumbotron__lead {
-      max-width: 320px;
       box-shadow: none;
-      padding-left: 1em;
     }
     .jumbotron__lead p {
       max-width: 320px;
@@ -602,9 +545,6 @@ blockquote {
     .box--lead {
       height: auto;
     }
-  }
-  .tm-studies .tm-studies__clients + .tm-studies__clients {
-    margin-top: 0;
   }
   .cooperation {
     h2 {
@@ -614,7 +554,7 @@ blockquote {
       margin-top: calc(var(--mdc-layout-grid-gutter-desktop) * 2);
     }
   }
-  .customers blockquote {
+  .customers blockquote p {
     font-size: 1.66em;
     &::before,
     &::after {
@@ -637,7 +577,7 @@ blockquote {
 
 /* MD GRID TABLET ONLY BREAKPOINT */
 @media screen and (min-width: 480px) and (max-width: 839px) {
-  .tm-studies__clients {
+  .tm-case-studies__clients {
     align-content: space-between;
   }
 }
@@ -645,23 +585,5 @@ blockquote {
 @media screen and (min-width: 840px) {
   .tm-layout-wrapper {
     padding: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .tm-studies__clients {
-    padding: 0 18px;
-  }
-  .zakaznici blockquote::before, .zakaznici blockquote::after  {
-    visibility: hidden;
-  }
-  .cooperation h2 {
-    margin: 2em 0 0;
-  }
-  .sub-text {
-    padding: 0 10px 0;
-  }
-  .contact .contact_title p {
-    padding: 0 10px 0;
   }
 }

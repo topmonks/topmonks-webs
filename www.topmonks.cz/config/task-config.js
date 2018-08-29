@@ -1,5 +1,8 @@
 const globImporter = require("node-sass-glob-importer");
 const pathConfig = require("./path-config.json");
+const marked = require("marked");
+const markdownToJSON = require("gulp-markdown-to-json");
+const merge = require("gulp-merge-json");
 
 module.exports = {
   images: true,
@@ -21,7 +24,7 @@ module.exports = {
   },
 
   html: {
-    dataFile: "../data/global.json"
+    dataFile: "../data/team.json"
   },
 
   browserSync: {
@@ -34,5 +37,29 @@ module.exports = {
 
   production: {
     rev: true
+  },
+
+  additionalTasks: {
+    initialize: function(gulp) {
+      gulp.task("prepareTeamData", () => {
+        gulp
+          .src("../../www.topmonks.com/src/data/team/**/*.md")
+          .pipe(markdownToJSON(marked))
+          .pipe(
+            merge({
+              fileName: "team.json",
+              edit: function(parsedJson) {
+                let editedJson = { members: {} };
+                editedJson.members[parsedJson.id] = parsedJson;
+                return editedJson;
+              }
+            })
+          )
+          .pipe(gulp.dest("../../www.topmonks.cz/src/data/"));
+      });
+    },
+    development: {
+      prebuild: ["prepareTeamData"]
+    }
   }
 };

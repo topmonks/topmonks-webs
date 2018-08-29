@@ -1,7 +1,8 @@
 {% extends 'layouts/topmonks.html' %}
+{%- import 'macros/helpers.html' as macros -%}
 {% block title %}O nás - TopMonks{% endblock %}
 {% block head %}
-<link rel="stylesheet" href="/stylesheets/meet-us.css">
+<link rel="stylesheet" href="/stylesheets/about-us.css">
 {% endblock %}
 
 {% block content %}
@@ -59,6 +60,38 @@
       </div>
     </div>
   </section>
+
+  <section class="tm-team" id="team">
+    <div id="team--collapsed" class="tm-bgnd-wrapper mdc-layout-grid">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Náš team</h2>
+        </div>
+        {{ macros.teamMember(members['jiri-fabian'], true) }}
+        {{ macros.teamMember(members['kristyna-sloupova'], true) }}
+        {{ macros.teamMember(members['ladislav-gerencsery'] , true) }}
+        {{ macros.teamMember(members['lea-petrasova'], true) }}
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div class="mdc-layout-grid tm-team__members">
+            <div class="mdc-layout-grid__inner">
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
+                <a href="#team" class="action-button show-more">Ukaž více</a>
+              </div>
+              {% for id, member in members %}
+              {% if not member.pickup %}
+              {{ macros.teamMember(member) }}
+              {% endif %}
+              {% endfor %}
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
+                <a href="#team--collapsed" class="action-button show-less">Ukaž méně</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="company-values" class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
