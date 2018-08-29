@@ -1,7 +1,7 @@
 const globImporter = require("node-sass-glob-importer");
+const pathConfig = require("./path-config.json");
 const marked = require("marked");
 const markdownToJSON = require("gulp-markdown-to-json");
-const pathConfig = require("./path-config.json");
 const merge = require("gulp-merge-json");
 
 module.exports = {
