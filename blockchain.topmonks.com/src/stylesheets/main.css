@@ -230,7 +230,7 @@ a.button:hover {
 .offer_box {
   width: 100%;
   box-shadow: 0 0 20px #d3cdcd;
-  padding: 24px;
+  padding: 0 24px;
 }
 
 .offer_box li {
@@ -246,7 +246,7 @@ a.button:hover {
 
 .offer_box-purple {
   background-color: #4D2F72;
-  height: 504px;
+  height: 494px;
 }
 
 h3.blockchain_bubble::before {
