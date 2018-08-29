@@ -170,12 +170,14 @@ a.button {
   color: #fff;
 }
 a.button:hover {
-  box-shadow: 0 0 10px #FF7E71;
+  background: none;
+  border: 4px solid #fff;;
+  font-weight: 900;
 }
 
 .opening_button {
   margin: 0 auto;
-  margin-top: -85px;
+  margin-top: -60px;
 }
 
 /*Values*/
