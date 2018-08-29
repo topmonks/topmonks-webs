@@ -51,8 +51,7 @@
     var menu = document.querySelector(".tm-menu");
     hamburger.addEventListener("click", toggleMenu(hamburger));
     function toggleMenu(hamburger) {
-      return function(e) {
-        //menu.classList.toggle("tm-menu--horizontal");
+      return function() {
         hamburger.classList.toggle("tm-hamburger__container--open");
         appBar.classList.toggle("tm-app-bar--open");
       }
