@@ -46,7 +46,7 @@ body {
 h1,
 h2 {
   font-size: 1.75em; //28px
-  line-height: 32px;
+  line-height: 1.143em; //32px
   text-transform: uppercase;
   text-align: center;
   color: #000000;
@@ -55,6 +55,7 @@ h2 {
 }
 h3 {
   font-size: 1.5em; //24px
+  line-height: 1.167em; //28px
   text-align: center;
   color: #000000;
   font-weight: 900;
@@ -65,7 +66,7 @@ h4 {
 }
 
 p {
-  margin: 0 0 1em 0;
+  margin: 0 0 1em;
 }
 a {
   color: var(--topmonks-orange);
@@ -88,9 +89,9 @@ ul li {
   margin: 0;
 }
 
-/* MD GRID DESKTOP BREAKPOINT*/
-@media (min-width: 840px) {
-}
+///* MD GRID DESKTOP BREAKPOINT*/
+//@media (min-width: 840px) {
+//}
 
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
 @media (min-width: 480px) {
@@ -99,11 +100,11 @@ ul li {
   }
   h1,
   h2 {
-    font-size: 2.25em; //36px
-    line-height: 46px;
+    font-size: 2.111em; //38px
+    line-height: 1.211em; //46px
   }
   h3 {
-    font-size: 1.5em; //24px
+    font-size: 1.333em; //24px
   }
   h4 {
     font-size: 20px; //20px

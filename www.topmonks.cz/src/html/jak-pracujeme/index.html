@@ -1,0 +1,10 @@
+{% extends 'layouts/topmonks.html' %}
+{% block title %} Jak pracujeme - TopMonks{% endblock %}
+
+{% block content %}
+
+{% set caseStudiesData = { title : 'Jak pracujeme', subTitle : 'Vždy se naučíme něco nového ze spolupráce s našimi klienty.'} %}
+
+{% include 'components/case-studies/index.html' %}
+
+{% endblock %}

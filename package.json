@@ -6,21 +6,21 @@
   "author": "TopMonks",
   "license": "MIT",
   "dependencies": {
-    "@material/layout-grid": "^0.34.0"
+    "@material/layout-grid": "^0.39.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",
     "blendid": "^4.4.3",
     "broken-link-checker-local": "^0.2.0",
-    "concurrently": "^3.6.1",
     "eslint": "^5.4.0",
-    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-prettier": "^2.6.2",
     "gulp-markdown-to-json": "^1.1.0",
     "gulp-merge-json": "^1.3.1",
     "http-server": "^0.11.1",
     "lighthouse": "^3.0.3",
-    "marked": "^0.4.0",
+    "marked": "^0.5.0",
+    "npm-run-all": "^4.1.3",
     "prettier": "^1.14.2",
     "stylelint": "^9.5.0",
     "stylelint-config-prettier": "^4.0.0",
@@ -32,14 +32,14 @@
     "start:prodeti.topmonks.cz": "BLENDID_CONFIG_PATH=./prodeti.topmonks.cz/config/ blendid",
     "start:caffe.topmonks.cz": "BLENDID_CONFIG_PATH=./caffe.topmonks.cz/config/ blendid",
     "start:studio.topmonks.com": "BLENDID_CONFIG_PATH=./studio.topmonks.com/config/ blendid",
-    "start:blockchain.topmonks.cz": "BLENDID_CONFIG_PATH=./blockchain.topmonks.cz/config/ blendid",
+    "start:blockchain.topmonks.com": "BLENDID_CONFIG_PATH=./blockchain.topmonks.com/config/ blendid",
     "build:www.topmonks.com": "BLENDID_CONFIG_PATH=./www.topmonks.com/config/ blendid -- build",
     "build:www.topmonks.cz": "BLENDID_CONFIG_PATH=./www.topmonks.cz/config/ blendid -- build",
     "build:prodeti.topmonks.cz": "BLENDID_CONFIG_PATH=./prodeti.topmonks.cz/config/ blendid -- build",
     "build:caffe.topmonks.cz": "BLENDID_CONFIG_PATH=./caffe.topmonks.cz/config/ blendid -- build",
     "build:studio.topmonks.com": "BLENDID_CONFIG_PATH=./studio.topmonks.com/config/ blendid -- build",
-    "build:blockchain.topmonks.cz": "BLENDID_CONFIG_PATH=./blockchain.topmonks.cz/config/ blendid -- build",
-    "build": "yarn build:www.topmonks.com && yarn build:www.topmonks.cz && yarn build:prodeti.topmonks.cz",
+    "build:blockchain.topmonks.com": "BLENDID_CONFIG_PATH=./blockchain.topmonks.com/config/ blendid -- build",
+    "build": "run-s build:*",
     "test:ava": "ava --tap | tap-xunit > ./results/ava.xml",
     "test:eslint": "eslint ./ --format junit --output-file ./results/eslint.xml",
     "test:stylelint": "stylelint-config-prettier-check",
@@ -49,7 +49,8 @@
     "test:broken-links:prodeti.topmonks.cz": "blcl ./public/prodeti.topmonks.cz -ro --exclude linkedin.com --exclude caffe.topmonks.cz",
     "test:broken-links:caffe.topmonks.cz": "blcl ./public/caffe.topmonks.cz -ro --exclude linkedin.com --exclude caffe.topmonks.cz",
     "test:broken-links:studio.topmonks.com": "blcl ./public/studio.topmonks.com -ro --exclude linkedin.com --exclude caffe.topmonks.cz",
-    "test:broken-links": "yarn test:broken-links:www.topmonks.com && yarn test:broken-links:prodeti.topmonks.cz",
-    "test": "concurrently 'yarn test:eslint' 'yarn test:stylelint' && yarn test:broken-links"
+    "test:broken-links:blockchain.topmonks.com": "blcl ./public/blockchain.topmonks.com -ro --exclude linkedin.com --exclude caffe.topmonks.cz",
+    "test:broken-links": "run-s test:broken-links:*",
+    "test": "run-p test:eslint test:stylelint"
   }
 }
