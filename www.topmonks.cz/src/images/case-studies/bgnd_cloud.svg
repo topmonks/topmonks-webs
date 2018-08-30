@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="119px" height="119px" viewBox="0 0 119 119" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="about-us---vsichni-2-copy-8" transform="translate(-421.000000, -2038.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="3862"></rect>
+            <g id="Group-11" transform="translate(416.000000, 2014.000000)" stroke="#E0E2E5" stroke-width="2">
+                <g id="Group" transform="translate(6.000000, 25.000000)">
+                    <path d="M85.5578947,67 C98.8315789,67 107,58.625 107,48.219697 C107,39.0833333 100.618421,31.7234848 92.1947368,29.6931818 C93.4710526,26.6477273 93.9815789,23.8560606 93.7263158,20.3030303 C92.9605263,9.13636364 83.0052632,0 71.5184211,0 C60.7973684,0 51.6078947,7.10606061 49.3105263,17.0037879 C45.9921053,13.1969697 40.8868421,10.6590909 35.0157895,11.4204545 C28.6342105,11.9280303 23.5289474,16.2424242 21.2315789,21.8257576 C19.4447368,26.1401515 20.9763158,31.2159091 20.9763158,31.2159091 C14.5947368,34.0075758 10,40.6060606 10,48.219697 C10,58.625 18.6789474,67 31.4421053,67 L85.5578947,67 Z" id="Shape"></path>
+                    <g transform="translate(89.000000, 67.000000)">
+                        <polyline id="Shape" points="0 0.0285714286 0 27.2857143 12.7272727 27.2857143"></polyline>
+                        <ellipse id="Oval" cx="20.3636364" cy="27.2857143" rx="7.63636364" ry="7.71428571"></ellipse>
+                    </g>
+                    <g transform="translate(0.000000, 67.000000)">
+                        <polyline id="Shape" points="28 0.0285714286 28 27.2857143 15.2727273 27.2857143"></polyline>
+                        <ellipse id="Oval" cx="7.63636364" cy="27.2857143" rx="7.63636364" ry="7.71428571"></ellipse>
+                    </g>
+                    <g transform="translate(64.000000, 69.000000)">
+                        <path d="M7.5,0 L7.5,32.8421053" id="Shape"></path>
+                        <ellipse id="Oval" cx="7.5" cy="40.4210526" rx="7.5" ry="7.57894737"></ellipse>
+                    </g>
+                    <g transform="translate(38.000000, 69.000000)">
+                        <path d="M7.5,0 L7.5,32.8421053" id="Shape"></path>
+                        <ellipse id="Oval" cx="7.5" cy="40.4210526" rx="7.5" ry="7.57894737"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
