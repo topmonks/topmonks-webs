@@ -184,6 +184,9 @@ a.button:hover {
 .values_bg {
   background: url("/images/values_BG.png") right no-repeat;
 }
+.values_title {
+  padding-bottom: 0;
+}
 
 #values p {
   text-align: center;
@@ -221,6 +224,9 @@ a.button:hover {
 /* Offers */
 .offer .wrapper {
   --mdc-layout-grid-gutter-desktop: 0;
+}
+.offer {
+  margin-top: -2.5em;
 }
 
 .offer_box-white p {
@@ -283,19 +289,20 @@ h3.ICO_bubble::before {
   padding-bottom: 0;
 }
 
-.offer2-box {
-  max-width: 480px;
-  min-height: 310px;
+.offer2-box h3{
+ text-align: left;
 }
-
+.offer2-box_svg {
+  margin: 0 auto;
+}
+.offer2 svg {
+  vertical-align: middle;
+  height: 100%;
+  width: 120Px;
+}
 /* Security First section */
 .security {
   margin-bottom: 6em;
-}
-
-.security .wrapper {
-  background: url("/images/security_white_BG.png") center no-repeat;
-  padding-top: 0;
 }
 
 .security_first img {
@@ -602,6 +609,10 @@ footer .social-buttons {
   .security_first img {
     left: 8px;
     width: 100%;
+    margin-top: -3em;
+  }
+  .security_first-box {
+    margin: 0 auto;
   }
 
   .our-work_box {
