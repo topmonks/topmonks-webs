@@ -71,7 +71,7 @@ jobs:
   test-blockchain-topmonks-com:
     <<: *test-site
     environment:
-      HOST: blockchain.topmonks.cz
+      HOST: blockchain.topmonks.com
 
   test-studio-topmonks-com:
     <<: *test-site
@@ -109,6 +109,23 @@ jobs:
           command: |
             aws configure set preview.cloudfront true
             aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+
+  deploy-blockchain-topmonks-com:
+    <<: *s3-deploy
+#    environment:
+#      AWS_CLOUDFRONT_DISTRIBUTION_ID: EMNWZWEX2M2BH
+    steps:
+    - checkout
+    - attach_workspace:
+        at: ~/topmonks-webs
+    - run:
+        name: Deploy to S3
+        command: aws s3 sync public/blockchain.topmonks.com s3://blockchain.topmonks.com/
+#    - run:
+#        name: Invalidate CDN distribution
+#        command: |
+#          aws configure set preview.cloudfront true
+#          aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
 
   deploy-www-topmonks-com:
     <<: *s3-deploy
@@ -185,6 +202,13 @@ workflows:
           context: org-global
           requires:
           - test-www-topmonks-cz
+          filters:
+            branches:
+              only: master
+      - deploy-blockchain-topmonks-com:
+          context: org-global
+          requires:
+          - test-blockchain-topmonks-com
           filters:
             branches:
               only: master
