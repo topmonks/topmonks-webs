@@ -1,0 +1,198 @@
+.tm-logo {
+  display: flex;
+  align-items: center;
+  font-family: futura-pt, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  @media screen and (max-width: 479px) {
+    font-size: 24px;
+    padding-top: 2px;
+    justify-content: flex-end;
+  }
+  @media screen and (max-width: 839px) {
+    font-size: 24px;
+    padding-top: 2px;
+    justify-content: flex-end;
+  }
+  .monk {
+    fill: currentColor;
+    padding-right: 6px;
+  }
+}
+.tm-hamburger {
+  @media screen and (min-width: 840px) {
+    display: none;
+  }
+  display: flex;
+  align-items: center;
+  .tm-hamburger__container {
+    display: inline-block;
+    cursor: pointer;
+    padding: 8px;
+    width: 18px;
+    height: 18px;
+    position: relative;
+  }
+  .tm-hamburger__container::after {
+    content: "menu";
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    font-size: 13px;
+    position: absolute;
+    top: 5px;
+    left: 36px;
+  }
+  .tm-hamburger__bar {
+    background-color: #fff;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: 16px;
+    transition: transform 0.4s;
+    &:first-of-type {
+      transform: translateY(-6px);
+    }
+    &:last-of-type {
+      transform: translateY(6px);
+    }
+  }
+  .tm-hamburger__container--open {
+    .tm-hamburger__bar:first-of-type {
+      transform: rotate(-45deg);
+    }
+
+    .tm-hamburger__bar:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    .tm-hamburger__bar:last-of-type {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.tm-app-bar {
+  width: 100vw;
+  z-index: 1000;
+  transition: all 0.2s;
+  top: 0;
+  //background-color: #2d3d90;
+  @media screen and (max-width: 839px) {
+    position: fixed;
+    background-color: #1a1d57;
+    height: 52px;
+    .tm-layout-wrapper {
+      padding: 8px 16px 0 8px;
+    }
+    + main {
+      margin-top: 52px;
+    }
+  }
+  @media screen and (min-width: 840px) {
+    height: 72px;
+    .tm-layout-wrapper {
+      padding: 20px 0 0 16px;
+    }
+    + main {
+      margin-top: 72px;
+    }
+  }
+}
+
+.tm-app-bar--sticky {
+  //.tm-hamburger .tm-hamburger__bar {
+  //  //  background-color: var(--tm-primary);
+  //  //}
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  //.tm-hamburger .tm-hamburger__container::after {
+  //  color: rgba(45, 61, 144, 0.5);
+  //}
+  //@media screen and (min-width: 840px) {
+  //  height: 72px;
+  //  .tm-layout-wrapper {
+  //    padding: 20px 0 0 16px;
+  //  }
+  //  + main {
+  //    margin-top: 72px;
+  //  }
+  //  .tm-menu__list a {
+  //    color: var(--tm-primary);
+  //  }
+  //}
+}
+
+.tm-app-bar.tm-app-bar--open {
+  position: fixed;
+  .tm-hamburger__container::after {
+    color: rgba(45, 61, 144, 0.5);
+  }
+  .tm-hamburger__bar {
+    background-color: #2d3d90;
+  }
+  .tm-logo {
+    color: #2d3d90;
+  }
+  .tm-menu {
+    transform: translate(-8px, -64px);
+    z-index: -1;
+  }
+  .tm-menu__list a{
+    color: #2d3d90;
+    text-align: left;
+  }
+}
+
+.tm-menu {
+  @media screen and (max-width: 839px) {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 64px;
+    transform: translate(calc(-100vw - 12px), -64px);
+    transform: translate(calc(-140vw - 12px), -64px);
+    position: fixed;
+    z-index: 3;
+    transition: transform 0.3s;
+    overflow: hidden;
+    background-color: var(--tm-secondary);
+    color: #2d3d90;
+
+    .tm-menu__list li {
+      margin: 0 24px;
+    }
+    .tm-menu__list li + li {
+      border-top: 1px solid rgba(45, 61, 144, 0.5);
+    }
+    .tm-menu__list a {
+      display: block;
+      padding: 12px;
+      margin: 4px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.tm-menu__list a {
+  color: #FFFFFF;
+  border-bottom: 2px solid transparent;
+}
+
+.tm-menu--horizontal .tm-menu__list {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  line-height: 32px;
+}
+.tm-menu--horizontal .tm-menu__list a {
+  display: inline-block;
+  padding: 4px 8px;
+}
+.tm-menu--horizontal .tm-menu__list li + li {
+  margin-left: 4px;
+}

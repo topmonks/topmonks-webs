@@ -8,7 +8,7 @@
   --tm-primary: #fe664b;
   --tm-primary-dark: #c53321;
   --tm-primary-light: #ff9878;
-  --tm-secondary: #5c5fd4;
+  --tm-secondary: #fff;
   --tm-secondary-dark: #1d35a2;
   --tm-secondary-light: #918cff;
   --tm-grey: #9b9b9b;
@@ -43,11 +43,7 @@ body {
   color: #FFFFFF;
 }
 
-header {
-  padding: 2em 0 0 4em;
-}
-
-.wrapper {
+.tm-layout-wrapper {
   max-width: 980px;
   margin: 0 auto;
 }
@@ -98,55 +94,15 @@ a {
   text-align: center;
   text-decoration: none;
 }
-
-/* Navigation bar - header */
-.nav_bar {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+ul {
+  margin: 1em 0;
 }
-
-.nav_bar ul {
-  display: flex;
-  flex-grow: 1;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 14px;
-  color: white;
-  list-style-type: none;
+ul, ul li{
   padding: 0;
 }
-
-.nav_bar li a {
-  color: #FFFFFF;
-  border-bottom: 2px solid transparent;
+ul li {
+  list-style: none;
 }
-
-.nav_bar a:hover {
-  border-color: #D12785;
-}
-
-#logo {
-  position: relative;
-  width: 194px;
-  height: 21px;
-}
-
-#logo svg.topmonks {
-  position: absolute;
-  top: 14px;
-  left: 49px;
-  z-index: 10;
-}
-
-svg.monk {
-  padding-right: 6px;
-}
-
-.hamburger {
-  visibility: hidden;
-}
-
 /* Main_info section */
 .developers {
   background: url("/images/slices_BG.png") center no-repeat;
@@ -156,7 +112,7 @@ svg.monk {
 
 .opening {
   position: relative;
-  margin-top: 5em;
+  padding-top: 5em;
 }
 
 .main_content_button {
@@ -304,7 +260,7 @@ h3.ICO_bubble::before {
 }
 
 /* Security First section */
-.security .wrapper {
+.security .tm-layout-wrapper {
   padding-top: 0;
 }
 
@@ -600,7 +556,7 @@ footer .social-buttons {
     background-size: 600px 700px;
   }
 
-  .security .wrapper {
+  .security .tm-layout-wrapper {
     background-color: white;
   }
 
