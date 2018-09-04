@@ -63,7 +63,7 @@ p {
 
 p.description {
   text-align: center;
-  color: #4A4A4A;
+  color: #4a4a4a;
 }
 
 .a11y--hidden {
@@ -79,25 +79,25 @@ p.description {
   max-width: 980px;
   margin: 0 auto;
 }
-.tm-bgnd-wrapper{
+.tm-bgnd-wrapper {
   background: url("/images/BG.svg") no-repeat left 50% bottom 60px;
   background-size: auto 100%;
 }
 .main_info {
   padding-top: 80px;
   padding-bottom: 120%;
-  background: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_510/v1536071311/prodeti.topmonks.cz/bgnd_boy.png") no-repeat center bottom;
+  background: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_510/v1536071311/prodeti.topmonks.cz/bgnd_boy.png")
+    no-repeat center bottom;
   background-size: 90% auto;
   @media screen and (-webkit-min-device-pixel-ratio: 2),
-  screen and (min--moz-device-pixel-ratio: 2),
-  screen and (-o-min-device-pixel-ratio: 2/1),
-  screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
-      background-image: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_2,w_510/v1536071311/prodeti.topmonks.cz/bgnd_boy.png");
+    screen and (min--moz-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_2,w_510/v1536071311/prodeti.topmonks.cz/bgnd_boy.png");
   }
 }
-
 
 @media screen and (min-width: 768px) {
   .tm-bgnd-wrapper {
@@ -260,7 +260,7 @@ svg.monk_icon {
     padding-top: 81px;
   }
   p {
-    color: #9B9B9B;
+    color: #9b9b9b;
     text-align: center;
   }
 
@@ -283,7 +283,6 @@ svg.monk_icon {
     height: 230px;
     margin: 0 auto;
   }
-
 }
 
 /*Nabídka kurzů - 4 sloupce: */
@@ -357,18 +356,18 @@ svg.monk_icon {
     margin: 0;
   }
   .price_table {
-    box-shadow: 0 0 20px #D3CDCD;
+    box-shadow: 0 0 20px #d3cdcd;
     border-radius: 8px;
     width: 360px;
     margin: 0 auto;
   }
   .table_head {
-    background-color: #3324AE;
+    background-color: #3324ae;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
   .table_body {
-    border: 1px solid #D8D8D8;
+    border: 1px solid #d8d8d8;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     min-height: 430px;
@@ -376,13 +375,13 @@ svg.monk_icon {
   }
   .table_body p {
     font-size: 24px;
-    color: #5D5D5D;
+    color: #5d5d5d;
     padding: 8px 0 8px;
   }
   .table_body p::after {
-    content: '';
+    content: "";
     display: block;
-    border-bottom: 1px solid #D8D8D8;
+    border-bottom: 1px solid #d8d8d8;
     width: 310px;
     margin: 0 auto;
     padding-top: 34px;
@@ -393,14 +392,14 @@ svg.monk_icon {
   .button {
     font-size: 16px;
     font-weight: bold;
-    color: #FFFFFF;
-    background-color: #3324AE;
+    color: #ffffff;
+    background-color: #3324ae;
     border-radius: 30px;
-    box-shadow: 4px 4px 6px #BBDBFF;
+    box-shadow: 4px 4px 6px #bbdbff;
     padding: 14px 38px;
     text-decoration: none;
     &:hover {
-      background-color: #0C0449;
+      background-color: #0c0449;
     }
   }
 }
@@ -456,7 +455,6 @@ svg.monk_icon {
     padding: 15px 50px;
     display: block;
   }
-
 }
 
 /* Fotogalerie */
@@ -487,7 +485,7 @@ svg.monk_icon {
   a {
     text-decoration: none;
     font-weight: 500;
-    color: #5835B0;
+    color: #5835b0;
   }
   a:hover {
     font-weight: bold;
@@ -508,12 +506,11 @@ svg.monk_icon {
   .teachers_contact-box {
     margin: 0 4px;
     text-align: center;
-    border: 0.5px solid #D8D8D8;
-    background-color: #FFFFFF;
+    border: 0.5px solid #d8d8d8;
+    background-color: #ffffff;
     border-radius: 80px;
     padding: 8px 86px;
   }
-
 }
 
 /*reviews:*/
@@ -552,7 +549,9 @@ svg.monk_icon {
   user-select: none;
 }
 
-*, :after, :before {
+*,
+:after,
+:before {
   box-sizing: border-box;
 }
 
@@ -574,16 +573,17 @@ ul#clients {
 
 .lSSlideOuter {
   a {
-    border: 1px solid #3324AE;
+    border: 1px solid #3324ae;
     border-radius: 100%;
     padding: 2px 12px;
   }
   a:hover {
-    background-color: #3324AE;
+    background-color: #3324ae;
   }
 }
 
-.lSSlideOuter .lightSlider, .lSSlideOuter .lSPager {
+.lSSlideOuter .lightSlider,
+.lSSlideOuter .lSPager {
   padding-left: 0;
   list-style: none outside none;
 }
@@ -610,7 +610,8 @@ ul#clients {
   cursor: grab;
 }
 
-.lSSlideOuter .lightSlider > *, .lSSlideOuter .lSGallery li {
+.lSSlideOuter .lightSlider > *,
+.lSSlideOuter .lSGallery li {
   float: left;
 }
 
@@ -622,7 +623,8 @@ ul#clients {
   }
 }
 
-.lSSlideOuter .lightSlider, .lSSlideOuter .lSPager {
+.lSSlideOuter .lightSlider,
+.lSSlideOuter .lSPager {
   padding-left: 0;
   list-style: none outside none;
 }
@@ -900,7 +902,6 @@ footer {
       margin: 6px;
     }
   }
-
 }
 
 @media (min-width: 481px) {
@@ -914,21 +915,21 @@ footer {
     .basic-info_box_age {
       background: none;
       border-radius: 20px;
-      box-shadow: 0px 4px 10px #D5E9FF;
+      box-shadow: 0px 4px 10px #d5e9ff;
       width: 100%;
       height: 100%;
     }
     .basic-info_box_calendar {
       background: none;
       border-radius: 20px;
-      box-shadow: 0px 4px 10px #D5E9FF;
+      box-shadow: 0px 4px 10px #d5e9ff;
       width: 100%;
       height: 100%;
     }
     .basic-info_box_capacity {
       background: none;
       border-radius: 20px;
-      box-shadow: 0px 4px 10px #D5E9FF;
+      box-shadow: 0px 4px 10px #d5e9ff;
       width: 100%;
       height: 100%;
     }
@@ -939,7 +940,6 @@ footer {
 }
 
 @media (min-width: 1440px) {
-
 }
 
 @media (max-width: 768px) {
