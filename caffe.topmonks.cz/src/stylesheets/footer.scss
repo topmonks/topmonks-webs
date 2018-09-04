@@ -1,5 +1,5 @@
 .tm-footer {
-  background-color: var(--tm-secondary);
+  background-color: #233341;
   color: #fff;
 }
 
@@ -25,14 +25,11 @@
   }
 }
 
-.copy-and-media .tm-layout-wrapper {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-}
-
 .social-buttons {
   background-color: #fff;
   border-radius: 52px;
   display: inline-block;
+  margin-top: 14px;
 }
 .social-buttons a {
   display: inline-block;

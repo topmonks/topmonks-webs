@@ -40,7 +40,7 @@
   }
   .tm-hamburger__container::after {
     content: "menu";
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     text-transform: uppercase;
     font-size: 13px;
     position: absolute;
@@ -108,7 +108,6 @@
   //.tm-hamburger .tm-hamburger__bar {
   //  //  background-color: var(--tm-primary);
   //  //}
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   //.tm-hamburger .tm-hamburger__container::after {
   //  color: rgba(45, 61, 144, 0.5);
   //}

@@ -68,10 +68,6 @@ a {
   font-weight: normal;
   color: #02A3C8;
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 ul,
@@ -98,7 +94,15 @@ ul#navigace {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  margin: 0;
+  margin-top: 10px;
+
+  a {
+    font-size: 18px;
+    padding: 4px 8px;
+    &:hover {
+      border-bottom: 1px solid #02A3C8;
+    }
+  }
 }
 
 ///* MD GRID DESKTOP BREAKPOINT*/
