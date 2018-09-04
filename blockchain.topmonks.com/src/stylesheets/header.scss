@@ -85,7 +85,7 @@
   @media screen and (max-width: 839px) {
     position: fixed;
     background-color: #1a1d57;
-    height: 52px;
+    height: 64px;
     .tm-layout-wrapper {
       padding: 8px 16px 0 8px;
     }
@@ -144,6 +144,11 @@
   .tm-menu__list a{
     color: #2d3d90;
     text-align: left;
+  }
+}
+.tm-menu__list {
+  a:hover{
+    border-bottom: 2px solid #DB0F7F;
   }
 }
 
