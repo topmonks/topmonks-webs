@@ -88,6 +88,13 @@ ul li {
   list-style: none;
   margin: 0;
 }
+ul.formatted {
+  padding-left: 1em;
+  li {
+    list-style: initial;
+    margin-bottom: 0.5em;
+  }
+}
 
 ///* MD GRID DESKTOP BREAKPOINT*/
 //@media (min-width: 840px) {
@@ -117,6 +124,9 @@ nav {
     font-weight: bold;
   }
 }
-abbr {
+strong abbr {
   text-decoration: none;
+}
+.no-transform {
+  text-transform: none;
 }
