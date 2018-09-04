@@ -146,6 +146,11 @@
     text-align: left;
   }
 }
+.tm-menu__list {
+  a:hover{
+    border-bottom: 2px solid #DB0F7F;
+  }
+}
 
 .tm-menu {
   @media screen and (max-width: 839px) {
