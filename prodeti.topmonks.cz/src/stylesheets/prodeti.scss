@@ -75,30 +75,33 @@ p.description {
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
-
 .wrapper {
   max-width: 980px;
   margin: 0 auto;
 }
-
-@media screen and (min-width: 1500px) {
-  .main_content {
-    background-size: contain;
-    background-position-x: 50%;
-    background-position-y: -5%;
+.main_info {
+  padding-top: 80px;
+  padding-bottom: 120%;
+  background: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_510/v1536071311/prodeti.topmonks.cz/bgnd_boy.png") no-repeat center bottom;
+  background-size: 90% auto;
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min--moz-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+      background-image: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_2,w_510/v1536071311/prodeti.topmonks.cz/bgnd_boy.png");
   }
 }
 
-@media screen {
-  .main_info {
-    padding-top: 80px;
-  }
-}
 
 @media screen and (min-width: 768px) {
   .main_info {
-    width: 85%;
     margin: 0 auto;
+    padding-bottom: 0;
+    min-height: 689px;
+    background-position: left calc(50% + 280px) bottom 0;
+    background-size: 510px auto;
   }
   .price .price_table {
     width: 200px;
