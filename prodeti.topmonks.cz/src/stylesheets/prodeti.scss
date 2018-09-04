@@ -79,6 +79,10 @@ p.description {
   max-width: 980px;
   margin: 0 auto;
 }
+.tm-bgnd-wrapper{
+  background: url("/images/BG.svg") no-repeat left 50% bottom 60px;
+  background-size: auto 100%;
+}
 .main_info {
   padding-top: 80px;
   padding-bottom: 120%;
@@ -96,6 +100,9 @@ p.description {
 
 
 @media screen and (min-width: 768px) {
+  .tm-bgnd-wrapper {
+    background: none;
+  }
   .main_info {
     margin: 0 auto;
     padding-bottom: 0;
