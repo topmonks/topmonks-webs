@@ -130,6 +130,12 @@ a.button:hover {
   border: 4px solid #fff;;
   font-weight: 900;
 }
+#contact a.button:hover {
+  background: none;
+  border: 4px solid #DB0F7F;;
+  font-weight: 900;
+  color: #DB0F7F;
+}
 
 .opening_button {
   margin: 0 auto;
@@ -179,7 +185,7 @@ a.button:hover {
   margin-top: -2.5em;
 }
 
-.offer_box-white p {
+.offer_box-white li {
   color: #586B78;
 }
 
@@ -189,10 +195,20 @@ a.button:hover {
   stop-opacity: 1%;
   padding: 0 24px;
 }
+.offer_box ul {
+}
 
 .offer_box li {
   line-height: 1.5;
   font-size: 18px;
+}
+.offer_box li::before {
+  content: "";
+  display: inline-block;
+  background: url("/images/odrazka.svg") no-repeat;
+  width: 12px;
+  height: 9px;
+  padding-right: 8px;
 }
 
 .offer_box-white {
@@ -260,6 +276,7 @@ h3.ICO_bubble::before {
 
 /* Security First section */
 .security .tm-layout-wrapper {
+  --mdc-layout-grid-gutter-desktop: 0;
   padding-top: 0;
 }
 
@@ -284,15 +301,11 @@ h3.ICO_bubble::before {
   line-height: 0;
 }
 
-.security_first img {
+.security_first-img {
+  background-image: url("/images/security-first.svg");
   position: static;
   width: auto;
   margin-top: -2.5em;
-}
-
-.security_first-box img {
-  width: auto;
-  margin-left: 0.44em;
 }
 
 /* How we work */
@@ -460,7 +473,7 @@ footer .social-buttons {
     display: block;
   }
 
-  .nav_bar li, .security_first-box img {
+  .nav_bar li {
     width: 100%;
   }
 
@@ -519,11 +532,6 @@ footer .social-buttons {
     background-size: 1120px 920px;
   }
 
-  .security_first-box img {
-    width: 100%;
-    margin-left: 0;
-  }
-
 }
 
 @media (max-width: 480px) {
@@ -575,6 +583,9 @@ footer .social-buttons {
   .security_first img {
     left: 8px;
     width: 100%;
+  }
+  .offer2-box {
+    padding: 24px;
   }
 
 }
