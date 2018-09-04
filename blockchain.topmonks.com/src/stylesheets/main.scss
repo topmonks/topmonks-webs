@@ -112,7 +112,6 @@ ul li {
 
 .opening {
   position: relative;
-  padding-top: 5em;
 }
 
 .main_content_button {
@@ -172,7 +171,7 @@ a.button:hover {
 }
 
 /* Offers */
-.offer .wrapper {
+.offer .tm-layout-wrapper {
   --mdc-layout-grid-gutter-desktop: 0;
 }
 
