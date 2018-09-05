@@ -210,6 +210,14 @@ a.button:hover {
   height: 9px;
   padding-right: 8px;
 }
+.offer_box-white li::before {
+  content: "";
+  display: inline-block;
+  background: url("/images/odrazka.svg") no-repeat;
+  width: 12px;
+  height: 9px;
+  padding-right: 8px;
+}
 
 .offer_box-white {
   color: #000000;
@@ -276,7 +284,6 @@ h3.ICO_bubble::before {
 
 /* Security First section */
 .security .tm-layout-wrapper {
-  --mdc-layout-grid-gutter-desktop: 0;
   padding-top: 0;
 }
 
@@ -301,10 +308,7 @@ h3.ICO_bubble::before {
   line-height: 0;
 }
 
-.security_first-img {
-  background-image: url("/images/security-first.svg");
-  position: static;
-  width: auto;
+.security_first-img svg {
   margin-top: -2.5em;
 }
 
@@ -585,6 +589,10 @@ footer .social-buttons {
 
   .security_first img {
     left: 8px;
+    width: 100%;
+  }
+  .security_first-img svg {
+    margin-top: -6.5em;
     width: 100%;
   }
   .offer2-box {
