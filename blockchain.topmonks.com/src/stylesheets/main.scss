@@ -202,10 +202,10 @@ a.button:hover {
   line-height: 1.5;
   font-size: 18px;
 }
-.offer_box li::before {
+.offer_box-purple li::before {
   content: "";
   display: inline-block;
-  background: url("/images/odrazka.svg") no-repeat;
+  background: url("/images/trans-odrazka.svg") no-repeat;
   width: 12px;
   height: 9px;
   padding-right: 8px;
@@ -530,6 +530,9 @@ footer .social-buttons {
 
   .offer2_bg, .values_bg {
     background-size: 1120px 920px;
+  }
+  .security_first-box img {
+    width: 100%;
   }
 
 }
