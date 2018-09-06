@@ -39,9 +39,6 @@
     height: 100%;
     transition: transform 0.2s ease-in-out;
   }
-  &.inactive {
-    filter: grayscale(100%);
-  }
   .sprite {
     width: 33%;
     color: white;
@@ -51,7 +48,7 @@
     fill: currentColor;
   }
 }
-.tm-case-studies__logo:hover:not(.inactive) {
+.tm-case-studies__logo:hover {
   .tm-bgnd-wrapper {
     transform: scale(1.1);
   }
