@@ -476,18 +476,6 @@ footer .social-buttons {
 }
 
 @media (max-width: 768px) {
-  .tm-content-wrapper {
-    overflow: scroll;
-    position: absolute;
-    top: 52px;
-    bottom: 0;
-    width: 100%;
-    background-size: 100%;
-    color: #ffffff;
-  }
-  main {
-    background: url("/images/main-info_BG.png") top no-repeat;
-  }
   .opening {
     padding-top: 2em;
   }
@@ -523,7 +511,7 @@ footer .social-buttons {
     padding-left: 0;
   }
 
-  main {
+  body {
     background-size: 100% 30%;
   }
 
