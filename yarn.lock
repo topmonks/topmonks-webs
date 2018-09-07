@@ -745,12 +745,6 @@ axios@0.17.1:
     follow-redirects "^1.2.5"
     is-buffer "^1.1.5"
 
-babar@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/babar/-/babar-0.2.0.tgz#79bc0f029721467207f2b6baedf96b3938ad7db0"
-  dependencies:
-    colors "~0.6.2"
-
 babel-code-frame@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-code-frame/-/babel-code-frame-6.26.0.tgz#63fd43f7dc1e3bb7ce35947db8fe369a3f58c74b"
@@ -2292,10 +2286,6 @@ colors@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.0.3.tgz#0433f44d809680fdeb60ed260f1b0c262e82a40b"
 
-colors@~0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/colors/-/colors-0.6.2.tgz#2423fe6678ac0c5dae8852e5d0e5be08c997abcc"
-
 colors@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.1.2.tgz#168a4701756b6a7f51a12ce0c97bfa28c084ed63"
@@ -3330,6 +3320,10 @@ esprima@^2.6.0:
 esprima@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.0.tgz#4499eddcd1110e0b218bacf2fa7f7f59f55ca804"
+
+esprima@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
 
 espurify@^1.6.0:
   version "1.8.0"
@@ -4955,6 +4949,16 @@ interpret@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
 
+intl-messageformat-parser@1.4.0, intl-messageformat-parser@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-1.4.0.tgz#b43d45a97468cadbe44331d74bb1e8dea44fc075"
+
+intl-messageformat@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-2.2.0.tgz#345bcd46de630b7683330c2e52177ff5eab484fc"
+  dependencies:
+    intl-messageformat-parser "1.4.0"
+
 invariant@^2.2.2:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
@@ -5638,22 +5642,25 @@ lighthouse-logger@^1.0.0:
   dependencies:
     debug "^2.6.8"
 
-lighthouse@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-3.0.3.tgz#7a15e1ef717ffed1450ff789c8e1fbbde597f566"
+lighthouse@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-3.1.0.tgz#ac6b22102db3730929948004d40272311224df25"
   dependencies:
     axe-core "3.0.0-beta.2"
     chrome-devtools-frontend "1.0.422034"
     chrome-launcher "^0.10.2"
     configstore "^3.1.1"
     devtools-timeline-model "1.1.6"
-    esprima "^4.0.0"
+    esprima "^4.0.1"
     http-link-header "^0.8.0"
     inquirer "^3.3.0"
+    intl-messageformat "^2.2.0"
+    intl-messageformat-parser "^1.4.0"
     jpeg-js "0.1.2"
     js-library-detector "^4.3.1"
     lighthouse-logger "^1.0.0"
     lodash.isequal "^4.5.0"
+    lookup-closest-locale "6.0.4"
     metaviewport-parser "0.2.0"
     mkdirp "0.5.1"
     opn "4.0.2"
@@ -5662,7 +5669,7 @@ lighthouse@^3.0.3:
     rimraf "^2.6.1"
     robots-parser "^2.0.1"
     semver "^5.3.0"
-    speedline "1.3.3"
+    speedline-core "1.4.0"
     update-notifier "^2.1.0"
     ws "3.3.2"
     yargs "3.32.0"
@@ -5968,13 +5975,17 @@ longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
 
+lookup-closest-locale@6.0.4:
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/lookup-closest-locale/-/lookup-closest-locale-6.0.4.tgz#1279fed7546a601647bbc980f64423ee990a8590"
+
 loose-envify@^1.0.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
   dependencies:
     js-tokens "^3.0.0"
 
-loud-rejection@^1.0.0, loud-rejection@^1.2.0, loud-rejection@^1.6.0:
+loud-rejection@^1.0.0, loud-rejection@^1.2.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/loud-rejection/-/loud-rejection-1.6.0.tgz#5b46f80147edee578870f086d04821cf998e551f"
   dependencies:
@@ -8717,16 +8728,13 @@ specificity@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/specificity/-/specificity-0.4.0.tgz#301b1ab5455987c37d6d94f8c956ef9d9fb48c1d"
 
-speedline@1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/speedline/-/speedline-1.3.3.tgz#c5b38f7ba81a1e1cc34ed3e9cc0ac9b6260a20ed"
+speedline-core@1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/speedline-core/-/speedline-core-1.4.0.tgz#884831eaef66ddc928dd7d4c9e844c5d28bad7db"
   dependencies:
     "@types/node" "*"
-    babar "0.2.0"
     image-ssim "^0.2.0"
     jpeg-js "^0.1.2"
-    loud-rejection "^1.6.0"
-    meow "^3.7.0"
 
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
