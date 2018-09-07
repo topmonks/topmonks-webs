@@ -17,7 +17,7 @@
 }
 
 html {
-  background-color: #F4F8FB;
+  background-color: #f4f8fb;
 }
 
 body {
@@ -40,7 +40,7 @@ body {
 
   background: url("/images/main-info_BG.png") top no-repeat;
   background-size: 100%;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .tm-layout-wrapper {
@@ -99,7 +99,8 @@ ul {
   margin: 1em 0;
 }
 
-ul, ul li {
+ul,
+ul li {
   padding: 0;
 }
 
@@ -123,7 +124,7 @@ ul li {
 }
 
 a.button {
-  background: linear-gradient(to bottom right, #DB0F7F 0, #FF7E71 78%);
+  background: linear-gradient(to bottom right, #db0f7f 0, #ff7e71 78%);
   border-radius: 32px;
   padding: 12px 54px;
   color: #fff;
@@ -131,15 +132,15 @@ a.button {
 
 a.button:hover {
   background: none;
-  border: 4px solid #fff;;
+  border: 4px solid #fff;
   font-weight: 900;
 }
 
 #contact a.button:hover {
   background: none;
-  border: 4px solid #DB0F7F;;
+  border: 4px solid #db0f7f;
   font-weight: 900;
-  color: #DB0F7F;
+  color: #db0f7f;
 }
 
 .opening_button {
@@ -191,17 +192,14 @@ a.button:hover {
 }
 
 .offer_box-white li {
-  color: #586B78;
+  color: #586b78;
 }
 
 .offer_box {
   width: 100%;
-  box-shadow: 0 2px 33px rgba(0, 0, 0, .4);
+  box-shadow: 0 2px 33px rgba(0, 0, 0, 0.4);
   stop-opacity: 1%;
   padding: 0 24px;
-}
-
-.offer_box ul {
 }
 
 .offer_box li {
@@ -229,12 +227,12 @@ a.button:hover {
 
 .offer_box-white {
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 458px;
 }
 
 .offer_box-purple {
-  background-color: #4D2F72;
+  background-color: #4d2f72;
   height: 494px;
 }
 
@@ -287,7 +285,7 @@ h3.ICO_bubble::before {
 .offer2 svg {
   vertical-align: middle;
   height: 100%;
-  width: 120Px;
+  width: 120px;
 }
 
 /* Security First section */
@@ -323,13 +321,13 @@ h3.ICO_bubble::before {
 }
 
 .security_first-box_white {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .security_first-box_purple {
-  background-color: #4D2F72;
+  background-color: #4d2f72;
   h3 {
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: normal;
   }
 }
@@ -396,12 +394,12 @@ h3.ICO_bubble::before {
 }
 
 .our-work_blockstars a {
-  color: #FF7E71;
+  color: #ff7e71;
   text-decoration: underline;
 }
 
 .our-work_blockstars a:hover {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .why-topmonks {
@@ -410,8 +408,8 @@ h3.ICO_bubble::before {
 
 /*Contact section*/
 #contact {
-  background-color: #F4F8FB;
-  color: #1C1C37;
+  background-color: #f4f8fb;
+  color: #1c1c37;
   text-align: center;
   min-height: 490px;
 }
@@ -420,7 +418,7 @@ h3.ICO_bubble::before {
   width: 100%;
   height: 92px;
   margin: 0 auto;
-  background-color: #F4F8FB;
+  background-color: #f4f8fb;
 }
 
 #contact h4 {
@@ -437,7 +435,7 @@ footer {
 }
 
 footer p {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 footer .social-buttons {
@@ -445,7 +443,7 @@ footer .social-buttons {
 }
 
 .social-buttons svg {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 80%;
 }
 
@@ -456,105 +454,55 @@ footer .social-buttons {
 }
 
 @media (min-width: 1360px) {
-  .offer2_bg, .values_bg {
+  .offer2_bg,
+  .values_bg {
     background-size: 82% 100%;
     min-height: 250px;
   }
 }
 
 @media (max-width: 1360px) {
-  .offer2_bg, .values_bg {
+  .offer2_bg,
+  .values_bg {
     background-size: 1120px 320px;
   }
 }
 
 @media (max-width: 1200px) {
-  .value_1, .value_2 {
+  .value_1,
+  .value_2 {
     margin: 0 auto;
   }
 }
 
 @media (max-width: 768px) {
+  .tm-content-wrapper {
+    overflow: scroll;
+    position: absolute;
+    top: 52px;
+    bottom: 0px;
+    width: 100%;
+    background-size: 100%;
+    color: #ffffff;
+  }
+  main {
+    background: url("/images/main-info_BG.png") top no-repeat;
+  }
   .opening {
     padding-top: 2em;
-  }
-
-  .nav_bar {
-    display: block;
-    background-color: #1A1C5E;
-    position: fixed;
-    width: 100%;
-    height: 54px;
-    z-index: 1;
-    padding-top: 12px;
-  }
-
-  .nav_bar ul {
-    flex-direction: column;
-  }
-
-  .nav_bar a {
-    font-size: 16px;
-    padding: 8px 8px 8px 16px;
-    display: block;
-  }
-
-  .nav_bar li {
-    width: 100%;
-  }
-
-  .nav_bar .hamburger {
-    visibility: visible;
-    color: white;
-    position: relative;
-    width: 24px;
-    height: 24px;
-    padding: 8px;
-    top: -20px;
-    left: 8px;
-  }
-
-  .nav_bar .hamburger:active,
-  .nav_bar .hamburger:hover {
-    border: none;
-  }
-
-  .hamburger .menu {
-    display: block;
-  }
-
-  .hamburger:active .menu, .hamburger .close, #navigace, .hidden-box {
-    display: none;
-  }
-
-  .hamburger:active .close {
-    display: block;
-  }
-
-  #logo, .offer2-box {
-    margin: 0 auto;
-  }
-
-  #navigace:target {
-    display: block;
-    background-color: white;
-    position: relative;
-    top: -35px;
-  }
-
-  #navigace a {
-    color: purple;
   }
 
   .welcome h2 {
     font-size: 24px;
   }
 
-  .offer_box-purple, .offer_box-white {
+  .offer_box-purple,
+  .offer_box-white {
     height: 468px;
   }
 
-  .offer2_bg, .values_bg {
+  .offer2_bg,
+  .values_bg {
     background-size: 1120px 920px;
   }
 
@@ -575,7 +523,7 @@ footer .social-buttons {
     padding-left: 0;
   }
 
-  body {
+  main {
     background-size: 100% 30%;
   }
 
@@ -596,11 +544,13 @@ footer .social-buttons {
     margin-bottom: 2.5em;
   }
 
-  .value_1, .value_2 {
+  .value_1,
+  .value_2 {
     margin: 0 auto;
   }
 
-  .offer2_bg, .values_bg {
+  .offer2_bg,
+  .values_bg {
     background-size: 600px 700px;
   }
 
