@@ -475,10 +475,16 @@ footer .social-buttons {
   }
 }
 
+@media (max-width: 830px) {
+  .hidden-box {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .tm-content-wrapper {
     overflow: scroll;
-    -webkit-overflow-scrolling:touch;
+    -webkit-overflow-scrolling: touch;
     position: absolute;
     top: 64px;
     bottom: 0;
@@ -508,13 +514,15 @@ footer .social-buttons {
   }
 
   .security_first-box {
-    height: 100%;
     h3 {
       font-size: 14px;
       margin-bottom: 2em;
     }
+    img {
+      width: 100%;
+    }
   }
-  .security_first-box img {
+  .security_first-img svg {
     width: 100%;
   }
 }
