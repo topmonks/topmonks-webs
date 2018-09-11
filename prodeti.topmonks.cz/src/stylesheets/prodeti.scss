@@ -22,14 +22,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
-
   background: url("/images/BG.svg") no-repeat;
   background-position-x: 50%;
 }
 
-header {
-  padding-left: 6em;
-}
 
 h1 {
   font-size: 36px;
@@ -65,6 +61,10 @@ p.description {
   text-align: center;
   color: #4a4a4a;
 }
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 
 .a11y--hidden {
   // Hides content visually but make it accessible for screen readers.
@@ -75,7 +75,7 @@ p.description {
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
-.wrapper {
+.tm-layout-wrapper {
   max-width: 980px;
   margin: 0 auto;
 }
@@ -106,7 +106,7 @@ p.description {
   .main_info {
     margin: 0 auto;
     padding-bottom: 0;
-    min-height: 689px;
+    min-height: 600px;
     background-position: left calc(50% + 280px) bottom 0;
     background-size: 510px auto;
   }
@@ -118,28 +118,44 @@ p.description {
   }
 }
 
-.main_info h1 {
-  font-size: 36px;
-  font-weight: bold;
-  text-align: left;
-  @media screen {
-    color: white;
+.main_info {
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: left;
+    @media screen {
+      color: white;
+    }
   }
-}
 
-.main_info ul {
-  list-style-type: none;
-}
+  ul {
+    padding-left: 2.5em;
+  }
 
-.main_info li {
-  line-height: 25px;
-  text-decoration: none;
-  text-align: left;
-  font-weight: normal;
-  font-size: 18px;
-  @media screen {
-    color: #fff;
-    position: relative;
+  li {
+    line-height: 25px;
+    text-decoration: none;
+    text-align: left;
+    font-weight: normal;
+    font-size: 18px;
+    @media screen {
+      color: #fff;
+      position: relative;
+    }
+  }
+  .button {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-color);
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 4px 4px 22px var(--primary-color);
+    padding: 14px 68px;
+    text-decoration: none;
+  }
+
+  .button:hover {
+    background-color: #ddd;
   }
 }
 
@@ -160,97 +176,6 @@ p.description {
   .main_info ul {
     list-style-type: circle;
   }
-}
-
-.main_info .button {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--primary-color);
-  background-color: white;
-  border-radius: 30px;
-  box-shadow: 4px 4px 22px var(--primary-color);
-  padding: 14px 68px;
-  text-decoration: none;
-}
-
-.main_info .button:hover {
-  background-color: #ddd;
-}
-
-.nav_bar {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-.nav_bar ul {
-  display: flex;
-  flex-grow: 1;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 14px;
-  color: white;
-  list-style-type: none;
-  padding: 0;
-}
-
-.nav_bar a {
-  text-decoration: none;
-  color: #fff;
-  border-bottom: 2px solid transparent;
-}
-
-.nav_bar a:hover {
-  border-color: white;
-}
-
-#logo:before {
-  content: "";
-  display: block;
-  top: 0;
-  left: -29px;
-  width: 200px;
-  height: 100px;
-  position: absolute;
-  background: url("/images/logoBG.svg") no-repeat;
-  z-index: 0;
-}
-
-#logo {
-  position: relative;
-  width: 142px;
-  height: 18px;
-}
-
-#logo svg {
-  position: absolute;
-  top: 16px;
-  left: 24px;
-  z-index: 10;
-}
-
-#logo svg.monk_icon {
-  left: -4px;
-  top: 10px;
-}
-
-svg.monk_icon {
-  padding-right: 6px;
-}
-
-#logo svg::before {
-  content: "";
-  display: block;
-  background: url("/images/monk_logo.svg") no-repeat;
-  z-index: 0;
-}
-
-.logo-white {
-  display: none;
-}
-
-.hamburger {
-  visibility: hidden;
 }
 
 /*Základní info*/
@@ -407,7 +332,7 @@ svg.monk_icon {
 /* DEVICES */
 
 @media (max-width: 1024px) {
-  #galerie .wrapper::after {
+  #galerie .tm-layout-wrapper::after {
     visibility: hidden;
   }
   .main_info img {
@@ -547,12 +472,6 @@ svg.monk_icon {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-*,
-:after,
-:before {
-  box-sizing: border-box;
 }
 
 .lSSlideWrapper {
@@ -737,102 +656,6 @@ footer {
 /* Mobile layout */
 
 @media (max-width: 480px) {
-  header {
-    padding-left: 0;
-  }
-  #logo {
-    margin: 0 auto;
-  }
-  #logo::before {
-    background: none;
-  }
-  .logo-purple {
-    visibility: hidden;
-    display: none;
-  }
-  .logo-white {
-    visibility: visible;
-    display: inline-block;
-    margin: 0 auto;
-  }
-  #logo svg.monk_icon {
-    left: 112px;
-    top: 10px;
-  }
-  #logo svg {
-    left: 142px;
-    top: 18px;
-  }
-  .nav_bar {
-    display: block;
-    background: linear-gradient(#613ab2, #6b3fb2);
-    position: fixed;
-    width: 100%;
-    height: 54px;
-    z-index: 1;
-  }
-
-  .nav_bar ul {
-    flex-direction: column;
-  }
-
-  .nav_bar a {
-    font-size: 16px;
-    padding: 8px 8px 8px 16px;
-    display: block;
-  }
-
-  .nav_bar li {
-    width: 100%;
-  }
-
-  .nav_bar .hamburger {
-    visibility: visible;
-    color: white;
-    position: relative;
-    width: 24px;
-    height: 24px;
-    padding: 8px;
-    top: -12px;
-    left: 8px;
-  }
-
-  .nav_bar .hamburger:active,
-  .nav_bar .hamburger:hover {
-    border: none;
-  }
-
-  .hamburger .menu {
-    display: block;
-  }
-
-  .hamburger:active .menu {
-    display: none;
-  }
-
-  .hamburger .close {
-    display: none;
-  }
-
-  .hamburger:active .close {
-    display: block;
-  }
-
-  #navigace {
-    display: none;
-  }
-
-  #navigace:target {
-    display: block;
-    background-color: white;
-    position: relative;
-    top: -35px;
-  }
-
-  #navigace a {
-    color: purple;
-  }
-
   .main_info img {
     width: 100%;
     padding-top: 2em;
@@ -937,9 +760,6 @@ footer {
       padding-top: 20px;
     }
   }
-}
-
-@media (min-width: 1440px) {
 }
 
 @media (max-width: 768px) {
