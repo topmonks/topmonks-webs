@@ -9,7 +9,7 @@
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
-  color: #3324AE;
+  color: #3324ae;
   @media screen and (max-width: 479px) {
     font-size: 24px;
     padding-top: 2px;
@@ -23,7 +23,7 @@
   @media screen and (min-width: 840px) {
     padding-top: 0.5em;
     padding-left: 1.5em;
-    &::before{
+    &::before {
       content: "";
       display: block;
       top: 0;
@@ -141,7 +141,6 @@
   }
 }
 
-
 .tm-menu {
   @media screen and (max-width: 839px) {
     width: 100vw;
@@ -182,7 +181,7 @@
   }
 }
 
-.tm-menu__list{
+.tm-menu__list {
   font-size: 14px;
 }
 
