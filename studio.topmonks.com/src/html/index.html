@@ -1,11 +1,3 @@
-{% extends 'layouts/application.html' %}
-{% block title %}studio.topmonks.com{% endblock %}
-
-{% block navigation %}
-{% include 'shared/header.html' %}
-{% endblock %}
-
-{% block content %}
 
 <div class="tm-content-wrapper">
   <main id="main_content" class="main_content">
@@ -15,21 +7,27 @@
           <div class="startup-developers mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <h1>Developers
               for your startup</h1>
-            <p>TopMonks Startup Monastery is located in the historical Prague, in heart of
-              Europe 60+ developers, designers &amp; project managers are ready to boost your
-              idea from scratch. We are your tech angels &amp; your first investors.</p>
-          </div>
-          <div class="opening_button mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <p>TopMonks Startup Monastery is located in the historical Prague, in the heart
+              of Europe 60+ developers, designers &amp; project managers are ready to boost
+              your idea from scratch. We are your tech angels &amp; your first investors.</p>
             <a href="#contact" class="button">COME PITCH TO US</a>
-          </div>
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <img>
-          </div>
         </div>
+      </div>
       </div>
     </section>
   </main>
-
+  <section id="mail" class="mail">
+    <div class="mdc-layout-grid tm-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Subscribe to our mailing list</h2>
+          <form>email adress...</form>
+          <a href="" class="mail-button">SUBSCRIBE</a>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="pitch_us" class="pitch_us">
     <div class="mdc-layout-grid tm-layout-wrapper">
       <div class="mdc-layout-grid__inner">
@@ -37,130 +35,193 @@
           <h2>Come pitch to us</h2>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-        <h3>01. MEET US</h3>
-        <p>We offer you our friendly feedback on your project and some fine coffee
-          &amp;&nbsp;tea.</p>
-      </div>
+          <h3>01. MEET US</h3>
+          <p>We offer you our friendly feedback on your project and some fine coffee
+            &amp;&nbsp;tea.</p>
+        </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
           <h3>02. PROTOTYPING</h3>
           <p>We offer you our friendly feedback on your project and some fine coffee
             &amp;&nbsp;tea.</p>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-          <h3>01. MEET US</h3>
+          <h3>03. PARTNERSHIP</h3>
           <p>We offer you our friendly feedback on your project and some fine coffee
             &amp;&nbsp;tea.</p>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-          <h3>01. MEET US</h3>
-          <p>We offer you our friendly feedback on your project and some fine coffee
-            &amp;&nbsp;tea.</p>
+          <h3>04. GROWTH</h3>
+          <p>Build your development team or find your new CTO with us. Continue to VCs
+            with your market validation and our recommendation for follow up Seed / Round
+            A&nbsp;funding.</p>
         </div>
 
+      </div>
+    </div>
+  </section>
+  <section id="idea" class="idea">
+    <div class="mdc-layout-grid tm-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Do you have an idea for the next big thing?</h2>
+          <a href="#contact" class="button_filled">COME PITCH TO US</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="portfolio" class="portfolio">
+    <div class="mdc-layout-grid tm-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Portfolio</h2>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <p>Price f(x) is the pricing suite designed especially for the needs of a holistic pricing process.</p>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <p>Platform for matching IT professionals with hiring companies.</p>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <p>Europe Trip Planning app for 21st century.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="clients" class="clients">
+    <div class="mdc-layout-grid tm-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="summary" class="data">
+    <div class="mdc-layout-grid tm-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+          <h3>Numbers of startups</h3>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+          <h3>Portfolio valuation</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="network" class="network">
+    <div class="mdc-layout-grid tm-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+          <h2>Network</h2>
+          <p>We have seen hundreds of projects; we understand investors, market sentiment
+            and various interest of the major stakeholders. Thus our know-how can be helpful
+            when making your next pitch. As our partners, you will get all our support in
+            preparing the pitch deck and networking with the investors. Now it's&nbsp;our mutual
+            interest to help you grow and to raise your funds in the Seed Round or Round A.
+            The same approach to your B2B partners, in case we are familiar with your
+            segment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="blog" class="blog">
+    <div class="mdc-layout-grid tm-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Blog</h2>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <h3>Psychology of raising angel funds for your startup</h3>
+          <span title="date">7. 9. 2018</span>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <h3>Why we invested in Quickshirt</h3>
+          <span title="date">7. 9. 2018</span>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <h3>Psychology of raising angel funds for your startup</h3>
+          <span title="date">7. 9. 2018</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="about_us">
+    <div class="mdc-layout-grid tm-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+          <h2>About us</h2>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+          <h3>Success is a delivery not the time spent.</h3>
+          <p>We don't need you messing around from 9&nbsp;to 5&nbsp;in the office. We want to
+            deliver the perfection! As our team is mostly distributed, we've worked
+            diligently to improve the ways we work together, and with our clients. Don't
+            count hours, deliver!</p>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+          <h3>MEET US</h3>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+          <h3>VALUES</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contacts" class="contacts">
+    <div class="mdc-layout-grid tm-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Contacts</h2>
+          <a href="mailto:studio@topmonks.com ">studio@topmonks.com</a>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <a href="#contact" class="button_filled">COME PITCH TO US</a>
+          <p>We occasionally send news about how our startups perform, if we had some fuckups or successes recently.</p>
+        </div>
+        </div>
       </div>
     </div>
   </section>
 </div>
 
+<section id="references" class="references">
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>References</h2>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 startups-list">
+        <div class="startup"><a href="https://www.purposefly.com/"><img src="/images/logos/purposefly.png"
+                                                                        alt="PurposeFly" width="120"></a></div>
+        <div class="startup"><a href="https://lafluence.com/"><img src="/images/logos/lafluence.png" alt="Lafluence"
+                                                                   width="120"></a></div>
+        <div class="startup"><a href="https://swarmpit.io"><img src="/images/logos/swarmpit.png" alt="Swarmpit"
+                                                                width="120"></a></div>
+        <div class="startup"><a href="https://www.2pocket.com/"><img src="/images/logos/2pocket.png" alt="2pocket"
+                                                                     width="120"></a></div>
+        <div class="startup"><a href="https://www.pricefx.eu/" class="hatched"><img src="/images/logos/pricefx.png"
+                                                                                    alt="PriceFx" width="120"></a></div>
+        <div class="startup"><a href="https://techloop.io/" class="hatched"><img src="/images/logos/techloop.png"
+                                                                                 alt="Techloop" width="120"></a></div>
+        <div class="startup"><a href="https://www.kartapacienta.cz/" class="hatched"><img
+          src="/images/logos/cardoid.png" alt="Karta pacienta" width="120"></a></div>
+        <div class="startup"><a href="https://www.purposefly.com/ingrid/" class="hatched"><img
+          src="/images/logos/ingrid.png" alt="Ingrid" width="120"></a></div>
+        <div class="startup"><a href="https://www.gorealeurope.com/" class="hatched"><img
+          src="/images/logos/go-real-europe.png" alt="Go Real Europe" width="120"></a></div>
+        <div class="startup"><a href="https://www.coocooshop.com/"><img src="/images/logos/coocoon.png"
+                                                                        alt="Coocoo Shop" width="120"></a></div>
+        <div class="startup"><a href="http://www.bouncepilot.com/"><img src="/images/logos/bouncepilot.png"
+                                                                        alt="BouncePilot" width="120"></a></div>
+        <div class="startup"><a href="https://www.quickshirt.cz/"><img src="/images/logos/bouncepilot.png"
+                                                                       alt="BouncePilot" width="120"></a></div>
 
-
-  <section id="how-it-works" class="how-it-works">
-    <div class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>How can we help you?</h2>
-          <p class="description">We are developers for your startup. We offer you our topnotch developers or help with finding your
-            new CTO. Furthermore, you are welcome in our offices.</p>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
-          <div class="principle">
-            <div class="icon"><img style="top:36%;left:15%" src="images/mutual-trust.png" alt="Mutual Trust"></div>
-            <div class="text">
-              <h3>Meet us</h3>
-              <p>Get our friendly feedback and some fine coffee.</p>
-            </div>
-          </div>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
-          <div class="principle">
-            <div class="icon"><img style="top:31%;left:16%" src="images/healthy-communication.png" alt=""></div>
-            <div class="text">
-              <h3>Investment</h3>
-              <p>We can become your angel or pre-seed investors.</p>
-            </div>
-          </div>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
-          <div class="principle">
-            <div class="icon"><img style="top:27%;left:10%" src="images/remote-work.png" alt="Remote work"></div>
-            <div class="text">
-              <h3>Technical incubation</h3>
-              <p>Get your prototype or MVP done by some skilled technicians.</p>
-            </div>
-          </div>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
-          <div class="principle">
-            <div class="icon"><img style="top:34%;left:14%" src="images/team.png" alt="Teams"></div>
-            <div class="text">
-              <h3>Network of VC Investors</h3>
-              <p>Get introduced to Investors for your next round.</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-  </section>
-  <section id="references" class="references">
-    <div class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>References</h2>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 startups-list">
-          <div class="startup"><a href="https://www.purposefly.com/"><img src="/images/logos/purposefly.png" alt="PurposeFly" width="120"></a></div>
-          <div class="startup"><a href="https://lafluence.com/"><img src="/images/logos/lafluence.png" alt="Lafluence" width="120"></a></div>
-          <div class="startup"><a href="https://swarmpit.io"><img src="/images/logos/swarmpit.png" alt="Swarmpit" width="120"></a></div>
-          <div class="startup"><a href="https://www.2pocket.com/"><img src="/images/logos/2pocket.png" alt="2pocket" width="120"></a></div>
-          <div class="startup"><a href="https://www.pricefx.eu/" class="hatched"><img src="/images/logos/pricefx.png" alt="PriceFx" width="120"></a></div>
-          <div class="startup"><a href="https://techloop.io/" class="hatched"><img src="/images/logos/techloop.png" alt="Techloop" width="120"></a></div>
-          <div class="startup"><a href="https://www.kartapacienta.cz/" class="hatched"><img src="/images/logos/cardoid.png" alt="Karta pacienta" width="120"></a></div>
-          <div class="startup"><a href="https://www.purposefly.com/ingrid/" class="hatched"><img src="/images/logos/ingrid.png" alt="Ingrid" width="120"></a></div>
-          <div class="startup"><a href="https://www.gorealeurope.com/" class="hatched"><img src="/images/logos/go-real-europe.png" alt="Go Real Europe" width="120"></a></div>
-          <div class="startup"><a href="https://www.coocooshop.com/"><img src="/images/logos/coocoon.png" alt="Coocoo Shop" width="120"></a></div>
-          <div class="startup"><a href="http://www.bouncepilot.com/"><img src="/images/logos/bouncepilot.png" alt="BouncePilot" width="120"></a></div>
-          <div class="startup"><a href="https://www.quickshirt.cz/"><img src="/images/logos/bouncepilot.png" alt="BouncePilot" width="120"></a></div>
+  </div>
+</section>
 
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="contacts">
-    <div class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>Contacts</h2>
-        </div>
-        <div class="mdc-layout-grid__cell titleteam">
-          <div class="team padd text-center" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><img src="https://res.cloudinary.com/swarmpit/image/fetch/f_auto,q_auto/http://swarmpit.io/img/jiri-penzes-s.jpg"
-                                                                                                                      alt="photo: Jirka Pénzeš" class="avatar" itemprop="image">
-            <div class="title">
-              <h5 class="name" itemprop="name">Jirka Pénzeš</h5>
-              <p><a itemprop="email" href="mailto:jiri.penzes@topmonks.com">jiri.penzes@topmonks.com</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="mdc-layout-grid__cell titleteam">
-          <div class="team padd text-center" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><img src="https://res.cloudinary.com/swarmpit/image/fetch/f_auto,q_auto/http://swarmpit.io/img/janjanko-s.jpg"
-                                                                                                                      alt="photo: Jan Lopusek" class="avatar" itemprop="image">
-            <div class="title">
-              <h5 class="name" itemprop="name">Jan Lopusek</h5>
-              <p><a href="mailto:jan.lopusek@topmonks.com">jan.lopusek@topmonks.com</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-{% endblock %}
