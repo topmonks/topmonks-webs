@@ -46,12 +46,52 @@ section:target {
     display: none;
   }
 }
+
+.p_center {
+  text-align: center;
+}
+
+/*Main Info*/
 .opening {
   text-align: center;
   p {
     color: #4F4F4F;
     max-width: 600px;
     margin: 0 auto;
+  }
+  .button {
+    margin: 1em 0 5em;
+  }
+}
+/*Email - Subscribe */
+.mail {
+  form {
+    background-color: #FFFFFF;
+    float: right;
+    padding: 12px 200Px 12px 24px;
+    border-radius: 32px;
+    border: 1px solid #DBDBDB;
+    color: #B0B0B0;
+  }
+  .subscribe {
+    width: 200px;
+    padding: 12px 24px;
+    border-radius: 32px;
+    border: 2px solid #FF7A7E;
+    text-align: center;
+    background: transparent;
+    a {
+      color: #FF7A7E;
+      font-weight: 700;
+    }
+  }
+}
+
+/*Pitch us*/
+#pitch_us {
+  background: url("/images/pitch-bg.jpg") top no-repeat;
+  .pitch_us-box {
+    background-color: #FFFFFF;
   }
 }
 
