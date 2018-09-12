@@ -15,7 +15,9 @@
   --tm-article-background: #f8fbfc;
   --tm-black: #4a4a4a;
 }
-
+html {
+  background-color: #ECF6FF;
+}
 body {
   padding: 0;
   margin: 0;
@@ -42,6 +44,14 @@ section:target {
 .tm-layout-grid__cell--span-0-desktop {
   @media screen and (min-width: 840px) {
     display: none;
+  }
+}
+.opening {
+  text-align: center;
+  p {
+    color: #4F4F4F;
+    max-width: 600px;
+    margin: 0 auto;
   }
 }
 

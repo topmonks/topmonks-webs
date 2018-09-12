@@ -12,13 +12,13 @@ http://pxtoem.com/ - how to count px to em
 */
 
 body {
-  color: var(--topmonks-black);
+  color: #000;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 0;
   line-height: 1.444em; //22/26px
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
+  font-family: Lato, sans-serif, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
@@ -29,6 +29,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
+  font-weight: 400;
+
 }
 
 .wf-active body {
@@ -43,49 +45,31 @@ body {
   font-family: futura-pt, sans-serif;
 }
 
-h1,
+h1 {
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+}
 h2 {
-  font-size: 1.75em; //28px
-  line-height: 32px;
-  text-transform: uppercase;
+  font-size: 38px;
+  font-weight: 700;
+  color: #FFFFFF;
   text-align: center;
-  color: #000000;
-  margin-bottom: 18px;
-  font-weight: 900;
-}
-h3 {
-  font-size: 1.5em; //24px
-  text-align: center;
-  color: #000000;
-  font-weight: 900;
-}
-h4 {
-  font-size: 1em; //16px
-  margin-bottom: 0.25em; //4px
-}
 
-p {
-  margin: 0 0 1em;
+}
+.h2_black {
+  color: #000;
 }
 a {
-  color: var(--topmonks-orange);
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
-
-ul,
-ul li {
-  padding: 0;
-}
-ul {
-  margin: 1em 0;
-}
-ul li {
-  list-style: none;
-  margin: 0;
+a.button {
+  background-color: #FF7A7E;
+  border-radius: 32px;
+  padding: 12px 54px;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 1em;
 }
 
 ///* MD GRID DESKTOP BREAKPOINT*/
