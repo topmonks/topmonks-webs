@@ -79,5 +79,11 @@ a.button {
 a.button_filled {
   background-color: #FFFFFF;
   color: #FF7A7E;
-  width: 200px;
+  padding: 12px 98px;
+}
+
+@media (min-width: 420px) {
+h1, h2 {
+  line-height: 1.1em;
+}
 }

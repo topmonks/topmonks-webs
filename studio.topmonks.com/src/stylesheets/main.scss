@@ -109,7 +109,17 @@ section:target {
 
 /*IDEA*/
 #idea {
-  background: url("/images/idea-bg.jpg") top no-repeat;
+  .tm-layout-wrapper {
+    background: url("/images/idea-bg.jpg") top no-repeat;
+  }
+}
+
+/*Portfolio*/
+.portfolio {
+  p {
+    font-size: 16px;
+    color: #474747;
+  }
 }
 
 blockquote {
