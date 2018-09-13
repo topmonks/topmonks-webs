@@ -19,7 +19,7 @@ body {
   letter-spacing: 0;
   line-height: 1.444em; //22/26px
   font-family: Lato, sans-serif, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
   font-variant-ligatures: common-ligatures contextual;
@@ -36,11 +36,13 @@ body {
 .wf-active body {
   font-family: Lato, sans-serif;
 }
+
 .tm-logo {
   font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
 }
+
 .wf-active .tm-logo {
   font-family: futura-pt, sans-serif;
 }
@@ -50,12 +52,14 @@ h1 {
   font-weight: 900;
   text-align: center;
 }
+
 h2 {
   font-size: 38px;
   font-weight: 700;
   color: #FFFFFF;
   text-align: center;
 }
+
 .h2_black {
   color: #000;
 }
@@ -64,9 +68,11 @@ h3 {
   font-size: 18px;
   font-weight: 900;
 }
+
 a {
   text-decoration: none;
 }
+
 a.button {
   background-color: #FF7A7E;
   border-radius: 32px;
@@ -83,7 +89,7 @@ a.button_filled {
 }
 
 @media (min-width: 420px) {
-h1, h2 {
-  line-height: 1.1em;
-}
+  h1, h2 {
+    line-height: 1.1em;
+  }
 }

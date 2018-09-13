@@ -52,6 +52,7 @@ section:target {
 .p_center {
   text-align: center;
 }
+
 .button {
   margin: 0 auto;
 }
@@ -111,6 +112,7 @@ section:target {
 #idea {
   .tm-layout-wrapper {
     background: url("/images/idea-bg.jpg") top no-repeat;
+    padding-bottom: 2.5em;
   }
 }
 
@@ -336,26 +338,6 @@ blockquote {
       padding-left: 0;
       padding-right: 0;
     }
-    .steps__step {
-      &:nth-child(odd) {
-        padding-left: 85px;
-        padding-right: 24px;
-        margin-left: 24px;
-        background: url("/images/bgnd_step_1.svg") left 0 top 10px no-repeat;
-      }
-      &:nth-child(even) {
-        padding-right: 85px;
-        padding-left: 24px;
-        margin-right: 24px;
-        background: url("/images/bgnd_step_2.svg") right 0 top 10px no-repeat;
-      }
-      &.design {
-        background-image: url("/images/bgnd_step_3.svg");
-      }
-      &.development {
-        background-image: url("/images/bgnd_step_4.svg");
-      }
-    }
   }
   @media screen and (min-width: 480px) {
     .tm-layout-wrapper {
@@ -366,42 +348,6 @@ blockquote {
       width: 280px;
       @media screen and (min-width: 840px) {
         width: 340px;
-      }
-    }
-    .steps {
-      width: 100%;
-      height: 100%;
-      min-height: 769px;
-      margin: 0 auto;
-      background: url("/images/bgnd_product.svg") calc(50% - 20px) top no-repeat;
-    }
-    .steps__step {
-      position: relative;
-      &:nth-child(odd) {
-        top: 65px;
-        left: 460px;
-        @media screen and (min-width: 840px) {
-          left: 560px;
-        }
-      }
-      &:nth-child(even) {
-        top: 165px;
-        left: -268px;
-        @media screen and (min-width: 840px) {
-          left: -468px;
-        }
-      }
-      &.design {
-        top: 15px;
-        @media screen and (min-width: 840px) {
-          top: 35px;
-        }
-      }
-      &.development {
-        top: 115px;
-        @media screen and (min-width: 840px) {
-          top: 135px;
-        }
       }
     }
   }
@@ -609,72 +555,20 @@ blockquote {
   }
 }
 
-/* MD GRID TABLET AND ABOVE BREAKPOINT */
-@media (min-width: 480px) {
-  .action-button {
-    display: inline-block;
-    margin: 0;
+@media (max-width: 780px) {
+  #pitch_us {
+    .pitch_us-text {
+      padding: 0 1.5em 1em 2em;
+    }
+    .pitch_us-box svg {
+      padding: 1em 0 0 1.5em;
+    }
   }
-  .main-info {
-    position: relative;
-    h2 {
-      text-align: left;
+  #idea {
+    background-color: #FF7A7E;
+    height: 220px;
+    .tm-layout-wrapper {
       background: none;
-      margin: 64px 0 8px;
     }
-    .jumbotron__lead {
-      max-width: 320px;
-      box-shadow: none;
-      padding-left: 1em;
-    }
-    .jumbotron__lead p {
-      max-width: 320px;
-    }
-    .box--lead {
-      height: auto;
-    }
-  }
-  .tm-case-studies .tm-case-studies__clients + .tm-case-studies__clients {
-    margin-top: 0;
-  }
-  .cooperation {
-    h2 {
-      margin-bottom: 18px;
-    }
-    .box + .box {
-      margin-top: calc(var(--mdc-layout-grid-gutter-desktop) * 2);
-    }
-  }
-  .customers blockquote {
-    font-size: 1.66em;
-    &::before,
-    &::after {
-      font-size: 2.22em;
-      position: relative;
-    }
-    &::before {
-      left: -8px;
-      top: 16px;
-    }
-    &::after {
-      bottom: -2px;
-    }
-  }
-  .box.box--mobile-only {
-    background: none;
-    box-shadow: none;
-  }
-}
-
-/* MD GRID TABLET ONLY BREAKPOINT */
-@media screen and (min-width: 480px) and (max-width: 839px) {
-  .tm-case-studies__clients {
-    align-content: space-between;
-  }
-}
-
-@media screen and (min-width: 840px) {
-  .tm-layout-wrapper {
-    padding: 24px;
   }
 }
