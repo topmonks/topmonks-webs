@@ -56,6 +56,9 @@ section:target {
 .button {
   margin: 0 auto;
 }
+.white-box {
+  background-color: #FFFFFF;
+}
 
 /*Main Info*/
 .opening {
@@ -97,12 +100,9 @@ section:target {
 /*Pitch us*/
 #pitch_us {
   background: url("/images/pitch-bg.jpg") top no-repeat;
-  .pitch_us-box {
-    background-color: #FFFFFF;
     svg {
       padding: 6.5em 0 0 1.5em;
     }
-  }
   .pitch_us-text {
     padding: 6em 1.5em 1em 2em;
   }
@@ -123,6 +123,37 @@ section:target {
     color: #474747;
   }
 }
+
+/*Summary*/
+.data {
+  h3 {
+    text-align: center;
+    color: #2E2B2C;
+    font-size: 28px;
+    font-weight: 300;
+  }
+  svg {
+    width: 100%;
+  }
+}
+
+/*Network*/
+#network {
+  background: url("/images/network_bg.jpg") top no-repeat;
+  h2 {
+    text-align: left;
+  }
+  p {
+    padding: 24px;
+  }
+  .white-box {
+    padding: 24px;
+  }
+  svg {
+    margin-top: 3em;
+  }
+}
+
 
 blockquote {
   position: relative;
