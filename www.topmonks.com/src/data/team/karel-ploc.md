@@ -2,11 +2,11 @@
 id: karel-ploc
 name: Karel
 surname: Ploc
-job_title: Clojure Guy
+job_title: Node.js artisan at TopMonks.
 twitter:
 github:
 linkedin:
 quote: 
 ---
 
-Just tell us something we don't know
+Let's establish javascript state. Next to Liberland.
