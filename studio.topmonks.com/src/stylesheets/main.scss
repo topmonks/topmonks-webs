@@ -5,24 +5,24 @@
   --mdc-layout-grid-gutter-desktop: 20px;
   --mdc-layout-grid-column-width-desktop: 60px;
 
-  --tm-primary: #fe664b;
-  --tm-primary-dark: #c53321;
-  --tm-primary-light: #ff9878;
-  --tm-secondary: #5c5fd4;
-  --tm-secondary-dark: #1d35a2;
-  --tm-secondary-light: #918cff;
+  --tm-primary: #ff7a7e;
+  --tm-primary-dark: #ff6165;
+  --tm-primary-light: #ff9497;
+  --tm-secondary: #6e70fb;
+  --tm-secondary-dark: #5558fa;
+  --tm-secondary-light: #8788fc;
   --tm-grey: #9b9b9b;
   --tm-article-background: #f8fbfc;
   --tm-black: #4a4a4a;
 }
 
-html {
-  background-color: #ecf6ff;
+body {
+  background-color: #ECF6FF;
 }
 
-body {
-  padding: 0;
-  margin: 0;
+main {
+  background-image: url("/images/html_bg.jpg");
+  background-size: 100%;
 }
 
 section:target {
@@ -69,6 +69,7 @@ section:target {
 
 /*Main Info*/
 .opening {
+  margin-top: 8em;
   text-align: center;
   p {
     color: #4f4f4f;
@@ -207,9 +208,9 @@ section:target {
 /*Team*/
 
 #team {
-  img {
-    width: 100%;
-  }
+  height: 962px;
+  background: url("/images/team.jpg") no-repeat;
+  background-size: 100%;
 }
 
 /*Blog*/
@@ -261,7 +262,7 @@ section:target {
   .mailto {
     margin-bottom: 1em;
     a {
-      color: #FFFFFF;
+      color: #ffffff;
       font-size: 18px;
       font-weight: 700;
       &:hover {
@@ -271,7 +272,7 @@ section:target {
   }
   p {
     font-size: 15px;
-    color: #FFFFFF;
+    color: #ffffff;
     line-height: 1.3;
   }
 }

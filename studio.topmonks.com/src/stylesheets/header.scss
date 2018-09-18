@@ -20,10 +20,16 @@
     justify-content: flex-end;
   }
 }
+.tm-logo-header {
+  margin: 0 auto;
+}
 
 .tm-logo .monk {
   fill: currentColor;
   padding-right: 6px;
+}
+.navigation-right {
+  text-align: right;
 }
 
 .tm-hamburger {
@@ -82,7 +88,6 @@
   z-index: 1000;
   top: 0;
   transition: all 0.2s;
-  background-color: var(--tm-secondary);
   @media screen and (max-width: 839px) {
     height: 52px;
     .tm-layout-wrapper {
@@ -152,7 +157,6 @@
     height: 100vh;
     padding-top: 64px;
     transform: translate(calc(-100vw - 12px), -64px);
-    transform: translate(calc(-140vw - 12px), -64px);
     position: fixed;
     z-index: 3;
     transition: transform 0.3s;
@@ -177,19 +181,23 @@
 
 .tm-menu__list a {
   color: #fff;
+  font-size: 15px;
 }
 
 .tm-menu--horizontal .tm-menu__list {
-  display: flex;
+  display: -webkit-inline-flex;
   align-items: flex-start;
   justify-content: flex-end;
   margin: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 .tm-menu--horizontal .tm-menu__list a {
-  text-transform: uppercase;
   font-weight: bold;
   display: inline-block;
   padding: 4px 8px;
+  text-decoration: none;
+
 }
 .tm-menu--horizontal .tm-menu__list li + li {
   margin-left: 4px;
