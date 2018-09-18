@@ -62,6 +62,11 @@ section:target {
   padding: 0 24px;
 }
 
+.pink-title {
+  background-color: #ff7a7e;
+  max-width: 100%;
+}
+
 /*Main Info*/
 .opening {
   text-align: center;
@@ -72,6 +77,10 @@ section:target {
   }
   .button {
     margin: 1em 0 5em;
+  }
+  .avatar {
+    background: url("/images/avatar_bg.svg") center no-repeat;
+    background-size: 100%;
   }
 }
 
@@ -181,17 +190,25 @@ section:target {
 
 /*Network*/
 #network {
-  background: url("/images/network_bg.jpg") top no-repeat;
+  background-color: #6e70fb;
   h2 {
     text-align: left;
     margin-bottom: 1.2em;
   }
   p {
-    padding: 20px 38px;
+    padding: 20px 8px;
     height: 230px;
   }
   svg {
-    margin-top: 3em;
+    margin-top: 4em;
+  }
+}
+
+/*Team*/
+
+#team {
+  img {
+    width: 100%;
   }
 }
 
@@ -214,10 +231,6 @@ section:target {
   .white-box {
     padding: 10px 24px;
   }
-  .about_us-title {
-    background-color: #ff7a7e;
-    max-width: 100%;
-  }
   .about_us-box {
     text-align: center;
     height: 200px;
@@ -234,11 +247,37 @@ section:target {
     background-color: #56ccf2;
   }
   .about_us-pink-box {
-    background-color: #FF7A7E;
+    background-color: #ff7a7e;
     h3 {
       margin-top: 8px;
     }
   }
+}
+
+/*Contact*/
+#contacts {
+  text-align: center;
+  padding: 2em 0;
+  .mailto {
+    margin-bottom: 1em;
+    a {
+      color: #FFFFFF;
+      font-size: 18px;
+      font-weight: 700;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  p {
+    font-size: 15px;
+    color: #FFFFFF;
+    line-height: 1.3;
+  }
+}
+
+.social-buttons {
+  margin-top: 0.8em;
 }
 
 blockquote {
