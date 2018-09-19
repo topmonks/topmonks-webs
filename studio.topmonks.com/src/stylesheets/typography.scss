@@ -18,8 +18,9 @@ body {
   font-size: 18px;
   letter-spacing: 0;
   line-height: 1.444em; //22/26px
-  font-family: Lato, sans-serif, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Lato, sans-serif, BlinkMacSystemFont, Roboto, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
   font-variant-ligatures: common-ligatures contextual;
@@ -30,7 +31,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
   font-weight: 400;
-
 }
 
 .wf-active body {
@@ -39,8 +39,8 @@ body {
 
 .tm-logo {
   font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }
 
 .wf-active .tm-logo {
@@ -56,7 +56,7 @@ h1 {
 h2 {
   font-size: 38px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -74,7 +74,7 @@ a {
 }
 
 a.button {
-  background-color: #FF7A7E;
+  background-color: #ff7a7e;
   border-radius: 32px;
   padding: 12px 54px;
   color: #fff;
@@ -83,13 +83,15 @@ a.button {
 }
 
 a.button_filled {
-  background-color: #FFFFFF;
-  color: #FF7A7E;
+  background-color: #ffffff;
+  color: #ff7a7e;
   padding: 12px 98px;
 }
 
-@media (min-width: 420px) {
-  h1, h2 {
+@media (max-width: 780px) {
+  h1,
+  h2 {
     line-height: 1.1em;
+    padding: 0 0.5em;
   }
 }
