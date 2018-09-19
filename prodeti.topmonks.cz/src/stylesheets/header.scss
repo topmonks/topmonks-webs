@@ -1,7 +1,6 @@
 .tm-logo {
   display: flex;
   align-items: center;
-  font-family: futura-pt, sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
@@ -127,7 +126,6 @@
     .tm-menu {
       transform: translate(-8px, -64px);
       z-index: -1;
-      background-color: #fff;
     }
     .tm-menu__list a {
       text-align: left;
@@ -152,7 +150,7 @@
     z-index: 3;
     transition: transform 0.3s;
     overflow: hidden;
-    background-color: var(--tm-secondary);
+    background-color: #fff;
     color: #fff;
 
     .tm-menu__list li {
