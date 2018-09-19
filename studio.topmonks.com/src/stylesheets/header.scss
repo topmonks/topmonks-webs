@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   font-family: futura-pt, sans-serif;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 32px;
   letter-spacing: -1px;
@@ -23,6 +23,9 @@
 .tm-logo-header {
   margin: 0 auto;
 }
+.topmonks-icon {
+  margin: 0 auto;
+}
 
 .tm-logo .monk {
   fill: currentColor;
@@ -30,6 +33,9 @@
 }
 .navigation-right {
   text-align: right;
+  a {
+    color: #000;
+  }
 }
 
 .tm-hamburger {
@@ -79,6 +85,9 @@
     .tm-hamburger__bar:last-of-type {
       transform: rotate(45deg);
     }
+    .tm-menu__list a {
+      color: var(--tm-primary);
+    }
   }
 }
 
@@ -127,9 +136,6 @@
     }
     + main {
       margin-top: 72px;
-    }
-    .tm-menu__list a {
-      color: var(--tm-primary);
     }
   }
 }

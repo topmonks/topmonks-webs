@@ -17,11 +17,7 @@
 }
 
 body {
-  background-color: #ECF6FF;
-}
-
-main {
-  background-image: url("/images/html_bg.jpg");
+  background: #ECF6FF url("/images/html_bg.jpg") top center no-repeat;
   background-size: 100%;
 }
 
@@ -120,6 +116,11 @@ section:target {
   background: url("/images/pitch-bg.jpg") top no-repeat;
   .white-box {
     --mdc-layout-grid-gutter-desktop: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+  .pitch-box {
+    background-color: #FFFFFF;
   }
   .box1,
   .box2 {
@@ -130,11 +131,11 @@ section:target {
     border-right: 1px solid #d5e9ff;
   }
   svg {
-    padding: 6.5em 0 0 1.5em;
+    padding: 4.5em 0 0 1.5em;
   }
   .box1 .pitch_us-text,
   .box2 .pitch_us-text {
-    padding: 6em 1.5em 1em 2em;
+    padding: 4em 1.5em 1em 2em;
   }
   .box3 .pitch_us-text,
   .box4 .pitch_us-text {
@@ -148,11 +149,8 @@ section:target {
 
 /*IDEA*/
 #idea {
-  background-color: #ffffff;
-  .tm-layout-wrapper {
-    background: url("/images/idea-bg.jpg") top no-repeat;
-    padding-bottom: 2.5em;
-  }
+  background: #ffffff url("/images/idea-bg.jpg") no-repeat top;
+  padding-bottom: 2.5em;
 }
 
 /*Portfolio*/
