@@ -63,6 +63,12 @@ section:target {
   max-width: 100%;
 }
 
+.button_transparent a:hover {
+  background-color: transparent;
+  border: 3px solid #ff7a7e;
+  color: #ff7a7e;
+}
+
 /*Main Info*/
 .opening {
   margin-top: 8em;
@@ -108,6 +114,12 @@ section:target {
       color: #ff7a7e;
       font-weight: 700;
     }
+    &:hover {
+      background-color: #ff7a7e;
+      a {
+        color: #ffffff;
+      }
+    }
   }
 }
 
@@ -151,6 +163,10 @@ section:target {
 #idea {
   background: #ffffff url("/images/idea-bg.jpg") no-repeat top;
   padding-bottom: 2.5em;
+  .button_transparent a:hover {
+    border: 3px solid #ffffff;
+    color: #ffffff;
+  }
 }
 
 /*Portfolio*/
@@ -183,8 +199,19 @@ section:target {
     font-size: 28px;
     font-weight: 300;
   }
-  svg {
+  p {
+    text-align: center;
+    margin-top: 3em;
+    font-size: 38px;
+    font-weight: 700;
+    color: white;
+  }
+  .data_triangle {
+    margin: 0 auto;
+    background: url("/images/triangle.jpg") center no-repeat;
+    background-size: 100%;
     width: 100%;
+    height: 240px;
   }
 }
 
@@ -211,6 +238,7 @@ section:target {
   background: url("/images/team.jpg") no-repeat;
   background-size: 100%;
 }
+
 .team_member {
   width: 200px;
   background-color: #ffffff;
@@ -536,5 +564,31 @@ blockquote {
     .tm-layout-wrapper {
       background: none;
     }
+  }
+  .mail {
+    margin: 0 0 4em;
+  }
+  .opening p,
+  .portfolio p {
+    padding: 0 24px;
+  }
+  .social,
+  #contacts p {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 320px) {
+  .mail form input[type="email"] {
+    padding: 12px 60px 12px 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  #network .white-box {
+    min-height: 488px;
+  }
+  .button a.button_filled {
+    padding: 12px 48px;
   }
 }
