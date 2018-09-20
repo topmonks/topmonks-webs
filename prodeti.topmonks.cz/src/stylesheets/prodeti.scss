@@ -283,7 +283,7 @@ ul {
 .price {
   text-align: center;
   margin: 0 auto;
-  background: url(/images/price_bg.png) top no-repeat;
+  background: url(/images/price_bg.png) top repeat-y;
   background-size: 100%;
   h3 {
     font-size: 30px;
@@ -360,7 +360,7 @@ ul {
 /* Keep In Touch*/
 .form {
   padding-bottom: 3em;
-  background: url("/images/lektori/grainy_lektori.jpg") bottom no-repeat;
+  background: url(/images/price_bg.png) top repeat-y;
   background-size: 100%;
   min-height: 300px;
 
@@ -413,6 +413,11 @@ ul {
 .teachers {
   min-height: 400px;
   margin-bottom: 4em;
+  background: url("/images/price_curve.png") top no-repeat;
+  background-size: 100%;
+  padding-top: 1em;
+  text-align: center;
+
   h3 {
     text-align: center;
     color: white;
@@ -429,15 +434,13 @@ ul {
   a.phone {
     color: black;
   }
-  .teachers_content {
-    margin: 0 auto;
-  }
   img {
-    width: 760px;
+    width: 100%;
+    max-width: 938px;
   }
   .teachers_contact {
-    display: inline-flex;
-    margin: 0 auto;
+    max-width: 938px;
+    margin: 1em auto 0;
   }
   .teachers_contact-box {
     margin: 0 4px;
@@ -445,7 +448,7 @@ ul {
     border: 0.5px solid #d8d8d8;
     background-color: #ffffff;
     border-radius: 80px;
-    padding: 8px 86px;
+    padding: 8px 2em;
   }
 }
 
