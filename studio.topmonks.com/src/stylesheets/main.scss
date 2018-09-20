@@ -68,6 +68,9 @@ section:target {
   border: 3px solid #ff7a7e;
   color: #ff7a7e;
 }
+.hidden-box {
+  display: none;
+}
 
 /*Main Info*/
 .opening {
@@ -128,6 +131,7 @@ section:target {
   background: url("/images/pitch-bg.jpg") top no-repeat;
   .white-box {
     --mdc-layout-grid-gutter-desktop: 0;
+    --mdc-layout-grid-gutter-tablet: 0;
     --mdc-layout-grid-gutter-phone: 0;
     padding: 0;
     background-color: transparent;
@@ -152,7 +156,7 @@ section:target {
   }
   .box3 .pitch_us-text,
   .box4 .pitch_us-text {
-    padding: 1em 1.5em 2.5em 2em;
+    padding: 1em 1.5em 2em 2em;
   }
   .box3 svg,
   .box4 svg {
@@ -193,11 +197,15 @@ section:target {
 /*Clients*/
 #clients {
   background-color: #d7ecff;
+  .logos {
+    margin: 0 auto;
+    line-height: 0;
+  }
 }
 
 /*Summary*/
 #summary {
-  margin-top: 2em;
+  padding-top: 2em;
   background-color: #ffffff;
   h3 {
     text-align: center;
@@ -229,8 +237,8 @@ section:target {
     margin-bottom: 1.2em;
   }
   p {
-    padding: 20px 8px;
-    height: 230px;
+    padding: 24px;
+    height: 220px;
   }
   svg {
     margin-top: 4em;
@@ -279,6 +287,7 @@ section:target {
 }
 
 #about {
+  --mdc-layout-grid-gutter-phone: 0;
   .white-box {
     padding: 10px 24px;
   }
@@ -558,8 +567,18 @@ blockquote {
   .network_icon {
     margin: 0 auto;
   }
-  #network .white-box {
-    min-height: 378px;
+  #network {
+    padding-bottom: 2em;
+    .white-box {
+      margin: 0 8em;
+    }
+    svg {
+      height: 217px;
+      width: 187px;
+    }
+    h2 {
+      text-align: center;
+    }
   }
   #team {
     height: auto;
@@ -588,6 +607,18 @@ blockquote {
   body {
     background: url("/images/mobile_bg.jpg") top center no-repeat;
     background-size: 100%;
+  }
+  #network {
+    .white-box {
+      min-height: 380px;
+      margin: 0 24px;
+    }
+  }
+  #idea {
+    padding-bottom: 3em;
+  }
+  .pitch_us .box4 {
+    border-top: 1px solid #d5e9ff;
   }
 }
 @media (min-width: 320px) {
