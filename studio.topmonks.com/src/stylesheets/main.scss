@@ -68,9 +68,7 @@ section:target {
   border: 3px solid #ff7a7e;
   color: #ff7a7e;
 }
-.hidden-box {
-  display: none;
-}
+
 
 /*Main Info*/
 .opening {
@@ -196,10 +194,13 @@ section:target {
 
 /*Clients*/
 #clients {
+  text-align: center;
   background-color: #d7ecff;
-  .logos {
-    margin: 0 auto;
-    line-height: 0;
+  --mdc-layout-grid-gutter-desktop: 0;
+  --mdc-layout-grid-gutter-tablet: 0;
+  --mdc-layout-grid-gutter-phone: 0;
+  img {
+  width: 100%;
   }
 }
 
@@ -531,6 +532,9 @@ blockquote {
       width: 100%;
       margin-top: 4.5em;
     }
+  }
+  .hidden-box {
+    display: none;
   }
   .opening .avatar {
     background: url(/images/avatar_bg.svg) top center no-repeat;
