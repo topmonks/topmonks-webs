@@ -128,6 +128,7 @@ section:target {
   background: url("/images/pitch-bg.jpg") top no-repeat;
   .white-box {
     --mdc-layout-grid-gutter-desktop: 0;
+    --mdc-layout-grid-gutter-phone: 0;
     padding: 0;
     background-color: transparent;
   }
@@ -162,10 +163,15 @@ section:target {
 /*IDEA*/
 #idea {
   background: #ffffff url("/images/idea-bg.jpg") no-repeat top;
-  padding-bottom: 2.5em;
+  height: 220px;
+  margin-top: -2em;
+  padding-bottom: 1em;
   .button_transparent a:hover {
     border: 3px solid #ffffff;
     color: #ffffff;
+  }
+  h2 {
+    padding-top: 1em;
   }
 }
 
@@ -520,6 +526,7 @@ blockquote {
   .opening .avatar {
     background: url(/images/avatar_bg.svg) top center no-repeat;
     background-size: 100%;
+    margin-top: -5em;
   }
   .mail_filling,
   .subscribe {
@@ -577,7 +584,12 @@ blockquote {
     padding: 24px;
   }
 }
-
+@media (max-width: 480px){
+  body {
+    background: url("/images/mobile_bg.jpg") top center no-repeat;
+    background-size: 100%;
+  }
+}
 @media (min-width: 320px) {
   .mail form input[type="email"] {
     padding: 12px 60px 12px 24px;
