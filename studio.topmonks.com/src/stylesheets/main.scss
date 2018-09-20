@@ -280,23 +280,25 @@ section:target {
   }
 }
 
-  .member-fil {
-    left: 6%;
-    top: 4%;
-  }
-  .member-linh {
-    left: 30%;
-    bottom: 30%;
-  }
-  .member-janko {
-    right: 33%;
-    top: 10%;
-  }
-  .member-jiri{
-    right: 4%;
-    top: 6%;
-  }
+.member-fil {
+  left: 6%;
+  top: 4%;
+}
 
+.member-linh {
+  left: 30%;
+  bottom: 30%;
+}
+
+.member-janko {
+  right: 33%;
+  top: 10%;
+}
+
+.member-jiri {
+  right: 4%;
+  top: 6%;
+}
 
 /*Blog*/
 #blog {
@@ -558,6 +560,12 @@ blockquote {
   }
 }
 
+@media (max-width: 1024px) {
+  #team {
+    height: 652px;
+  }
+}
+
 @media (max-width: 780px) {
   .avatar {
     svg {
@@ -576,6 +584,9 @@ blockquote {
   .mail_filling,
   .subscribe {
     margin: 0 auto;
+  }
+  #team {
+    height: 500px;
   }
   #pitch_us {
     .pitch_us-text {
@@ -685,26 +696,6 @@ blockquote {
   }
   .pitch_us .box4 {
     border-top: 1px solid #d5e9ff;
-  }
-  .portfolio {
-    .order1 {
-      order: 1;
-    }
-    .order2 {
-      order: 3;
-    }
-    .order3 {
-      order: 2;
-    }
-    .order4 {
-      order: 4;
-    }
-    .order5 {
-      order: 5;
-    }
-    .order6 {
-      order: 7;
-    }
   }
   #team {
     display: none;
