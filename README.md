@@ -33,7 +33,7 @@ To setup your macOS run these commands in Terminal application
 brew install git
 # Install Node.js Version Manager
 brew install nvm
-# Instal Node.js 10
+# Instal Node.js
 nvm install 10
 # Install Yarn package manager
 brew install yarn
@@ -85,8 +85,6 @@ Then you can run `www.topmonks.com` site in production configuration with:
 ```
 yarn run http-server public/www.topmonks.com -p 3000
 ```
-
-
 
 ## Issues
 

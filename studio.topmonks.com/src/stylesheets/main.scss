@@ -18,6 +18,7 @@
 
 body {
   background: #ecf6ff url("/images/html_bg.jpg") top center no-repeat;
+  background-size: contain;
 }
 
 section:target {

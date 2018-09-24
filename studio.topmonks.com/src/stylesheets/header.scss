@@ -8,16 +8,21 @@
   letter-spacing: -1px;
   text-decoration: none;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--tm-secondary);
   @media screen and (max-width: 479px) {
     font-size: 24px;
     padding-top: 2px;
     justify-content: flex-end;
   }
-  @media screen and (max-width: 839px) {
+  @media screen and (max-width: 840px) {
     font-size: 24px;
     padding-top: 2px;
     justify-content: flex-end;
+  }
+  @media screen and (min-width: 841px) {
+    color: #fff;
+    transform: translateY(-10px) scale(0.8);
+    transition: .15s transform ease-out, .15s color ease-out;
   }
 }
 .tm-logo-header {
@@ -111,11 +116,22 @@
   }
 }
 
-.tm-app-bar--sticky {
+.tm-navigation-bar {
+  @media screen and (min-width: 841px) {
+    position: fixed;
+    top: 0;
+    padding: 20px 0 0 16px;
+    transform: translateY(-1000px);
+    transition: .15s transform ease-out;
+  }
+}
+
+.tm-app-bar.tm-app-bar--sticky {
   background-color: #fff;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
   .tm-logo {
     color: var(--tm-secondary);
+    transform: translateY(0) scale(1.0);
   }
   .tm-hamburger .tm-hamburger__bar {
     background-color: var(--tm-primary);
@@ -130,6 +146,9 @@
     }
     + main {
       margin-top: 72px;
+    }
+    .tm-navigation-bar {
+      transform: translateY(0);
     }
   }
 }
@@ -156,7 +175,7 @@
     width: 100vw;
     height: 100vh;
     padding-top: 64px;
-    transform: translate(calc(-100vw - 12px), -64px);
+    transform: translate(calc(-100vw - 8px), -64px);
     position: fixed;
     z-index: 3;
     transition: transform 0.3s;
@@ -179,13 +198,19 @@
   }
 }
 
+.tm-menu__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .tm-menu__list a {
   color: #fff;
   font-size: 15px;
 }
 
 .tm-menu--horizontal .tm-menu__list {
-  display: -webkit-inline-flex;
+  display: flex;
   align-items: flex-start;
   justify-content: flex-end;
   margin: 0;
@@ -202,10 +227,19 @@
 .tm-menu--horizontal .tm-menu__list li + li {
   margin-left: 4px;
 }
+.tm-menu--horizontal.navigation-right {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
 
-.navigation-right {
-  text-align: right;
-  .tm-menu__list a {
-    color: #000;
+.tm-navigation-bar .tm-menu__list a {
+  @media screen and (min-width: 841px) {
+    color: var(--tm-primary);
+  }
+  text-transform: uppercase;
+
+  &:hover {
+    color: var(--tm-secondary);
+    text-decoration: underline;
   }
 }
