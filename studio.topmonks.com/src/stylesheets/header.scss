@@ -22,19 +22,22 @@
   @media screen and (min-width: 841px) {
     color: #fff;
     transform: translateY(-10px) scale(0.8);
-    transition: .15s transform ease-out, .15s color ease-out;
+    transition: 0.15s transform ease-out, 0.15s color ease-out;
   }
 }
+
 .tm-logo-header {
   margin: 0 auto;
 }
-.topmonks-icon {
-  margin: 0 auto;
+
+@media screen and (min-width: 841px) {
+  .topmonks-icon {
+    margin: 0 auto;
+  }
 }
 
 .tm-logo .monk {
   fill: currentColor;
-  padding-right: 6px;
 }
 
 .tm-hamburger {
@@ -122,7 +125,7 @@
     top: 0;
     padding: 20px 0 0 16px;
     transform: translateY(-1000px);
-    transition: .15s transform ease-out;
+    transition: 0.15s transform ease-out;
   }
 }
 
@@ -131,7 +134,7 @@
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
   .tm-logo {
     color: var(--tm-secondary);
-    transform: translateY(0) scale(1.0);
+    transform: translateY(0) scale(1);
   }
   .tm-hamburger .tm-hamburger__bar {
     background-color: var(--tm-primary);
@@ -217,16 +220,18 @@
   list-style-type: none;
   padding-left: 0;
 }
+
 .tm-menu--horizontal .tm-menu__list a {
   font-weight: bold;
   display: inline-block;
   padding: 4px 8px;
   text-decoration: none;
-
 }
+
 .tm-menu--horizontal .tm-menu__list li + li {
   margin-left: 4px;
 }
+
 .tm-menu--horizontal.navigation-right {
   align-items: flex-end;
   justify-content: flex-end;

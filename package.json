@@ -46,10 +46,10 @@
     "test:lighthouse": "lighthouse http://localhost:8080/ --output json --output html --output-path ./results/lh.html --chrome-flags=\"--headless\" --no-enable-error-reporting --skip-audits is-on-https --skip-audits themed-omnibox --skip-audits redirects-http --skip-audits load-fast-enough-for-pwa --skip-audits service-worker --skip-audits splash-screen --skip-audits webapp-install-banner --skip-audits works-offline",
     "test:broken-links:www.topmonks.com": "blcl ./public/www.topmonks.com -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
     "test:broken-links:www.topmonks.cz": "blcl ./public/www.topmonks.cz -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
-    "test:broken-links:prodeti.topmonks.cz": "blcl ./public/prodeti.topmonks.cz -ro --exclude linkedin.com --exclude caffe.topmonks.cz",
-    "test:broken-links:caffe.topmonks.cz": "blcl ./public/caffe.topmonks.cz -ro --exclude linkedin.com --exclude caffe.topmonks.cz",
-    "test:broken-links:studio.topmonks.com": "blcl ./public/studio.topmonks.com -ro --exclude linkedin.com --exclude caffe.topmonks.cz",
-    "test:broken-links:blockchain.topmonks.com": "blcl ./public/blockchain.topmonks.com -ro --exclude linkedin.com --exclude caffe.topmonks.cz",
+    "test:broken-links:prodeti.topmonks.cz": "blcl ./public/prodeti.topmonks.cz -ro --exclude linkedin.com --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
+    "test:broken-links:caffe.topmonks.cz": "blcl ./public/caffe.topmonks.cz -ro --exclude linkedin.com --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
+    "test:broken-links:studio.topmonks.com": "blcl ./public/studio.topmonks.com -ro --exclude linkedin.com --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
+    "test:broken-links:blockchain.topmonks.com": "blcl ./public/blockchain.topmonks.com -ro --exclude linkedin.com --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
     "test:broken-links": "run-s test:broken-links:*",
     "test": "run-p test:eslint test:stylelint"
   }

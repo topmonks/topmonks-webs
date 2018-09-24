@@ -127,6 +127,23 @@ jobs:
           aws configure set preview.cloudfront true
           aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
 
+  deploy-studio-topmonks-com:
+    <<: *s3-deploy
+    environment:
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E3E7VE5619MYLH
+    steps:
+    - checkout
+    - attach_workspace:
+        at: ~/topmonks-webs
+    - run:
+        name: Deploy to S3
+        command: aws s3 sync public/studio.topmonks.com s3://studio.topmonks.com/
+    - run:
+        name: Invalidate CDN distribution
+        command: |
+          aws configure set preview.cloudfront true
+          aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+
   deploy-www-topmonks-com:
     <<: *s3-deploy
     environment:
@@ -209,6 +226,13 @@ workflows:
           context: org-global
           requires:
           - test-blockchain-topmonks-com
+          filters:
+            branches:
+              only: master
+      - deploy-studio-topmonks-com:
+          context: org-global
+          requires:
+          - test-studio-topmonks-com
           filters:
             branches:
               only: master
