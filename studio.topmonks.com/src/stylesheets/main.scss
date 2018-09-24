@@ -30,6 +30,16 @@ section:target {
   }
 }
 
+.a11y--hidden {
+  // Hides content visually but make it accessible for screen readers.
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 .tm-layout-wrapper {
   max-width: 980px;
   margin: 0 auto;
@@ -90,35 +100,39 @@ section:target {
 /*Email - Subscribe */
 .mail {
   margin: 4em 0;
-  form input[type="email"] {
+  label {
+    display: block;
+    text-align: right;
+  }
+  input[type="email"] {
+    -webkit-appearance: none;
+    width: 200px;
     background-color: #ffffff;
-    float: right;
-    padding: 12px 140px 12px 24px;
+    padding: 12px 24px;
     border-radius: 32px;
     border: 1px solid #dbdbdb;
     color: #b0b0b0;
     font-size: 18px;
-    input[type="email"]:active {
+    &:focus {
+      padding: 10px 22px;
       border: 3px solid #555;
     }
   }
 
-  .subscribe {
+  .mail-button {
     width: 200px;
-    padding: 12px 24px;
+    padding: 11px 24px;
     border-radius: 32px;
     border: 2px solid #ff7a7e;
     text-align: center;
+    color: #ff7a7e;
     background: transparent;
-    a {
-      color: #ff7a7e;
-      font-weight: 700;
-    }
+    font-size: 18px;
+    font-weight: 700;
+    -webkit-appearance: none;
     &:hover {
+      color: #ffffff;
       background-color: #ff7a7e;
-      a {
-        color: #ffffff;
-      }
     }
   }
 }
