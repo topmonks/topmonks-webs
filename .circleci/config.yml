@@ -14,7 +14,7 @@ test-site: &test-site
         at: ~/topmonks-webs
     - restore_cache:
         keys:
-        - v1-dependencies-{{ checksum "yarn.lock" }}
+          - v1-dependencies-{{ checksum "yarn.lock" }}
     - run:
         command: yarn run http-server ./public/$HOST
         background: true
@@ -42,9 +42,9 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "yarn.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
 
       - run: yarn install
       - save_cache:
@@ -115,34 +115,34 @@ jobs:
     environment:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E8FIHBRFAUTJQ
     steps:
-    - checkout
-    - attach_workspace:
-        at: ~/topmonks-webs
-    - run:
-        name: Deploy to S3
-        command: aws s3 sync public/blockchain.topmonks.com s3://blockchain.topmonks.com/
-    - run:
-        name: Invalidate CDN distribution
-        command: |
-          aws configure set preview.cloudfront true
-          aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - run:
+          name: Deploy to S3
+          command: aws s3 sync public/blockchain.topmonks.com s3://blockchain.topmonks.com/
+      - run:
+          name: Invalidate CDN distribution
+          command: |
+            aws configure set preview.cloudfront true
+            aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
 
   deploy-studio-topmonks-com:
     <<: *s3-deploy
     environment:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E3E7VE5619MYLH
     steps:
-    - checkout
-    - attach_workspace:
-        at: ~/topmonks-webs
-    - run:
-        name: Deploy to S3
-        command: aws s3 sync public/studio.topmonks.com s3://studio.topmonks.com/
-    - run:
-        name: Invalidate CDN distribution
-        command: |
-          aws configure set preview.cloudfront true
-          aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - run:
+          name: Deploy to S3
+          command: aws s3 sync public/studio.topmonks.com s3://studio.topmonks.com/
+      - run:
+          name: Invalidate CDN distribution
+          command: |
+            aws configure set preview.cloudfront true
+            aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
 
   deploy-www-topmonks-com:
     <<: *s3-deploy
@@ -166,17 +166,17 @@ jobs:
     environment:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E1CX5IMQ3B6G4W
     steps:
-    - checkout
-    - attach_workspace:
-        at: ~/topmonks-webs
-    - run:
-        name: Deploy to S3
-        command: aws s3 sync public/www.topmonks.cz s3://www.topmonks.cz/
-    - run:
-        name: Invalidate CDN distribution
-        command: |
-          aws configure set preview.cloudfront true
-          aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - run:
+          name: Deploy to S3
+          command: aws s3 sync public/www.topmonks.cz s3://www.topmonks.cz/
+      - run:
+          name: Invalidate CDN distribution
+          command: |
+            aws configure set preview.cloudfront true
+            aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
 
 workflows:
   version: 2
@@ -218,21 +218,21 @@ workflows:
       - deploy-www-topmonks-cz:
           context: org-global
           requires:
-          - test-www-topmonks-cz
+            - test-www-topmonks-cz
           filters:
             branches:
               only: master
       - deploy-blockchain-topmonks-com:
           context: org-global
           requires:
-          - test-blockchain-topmonks-com
+            - test-blockchain-topmonks-com
           filters:
             branches:
               only: master
       - deploy-studio-topmonks-com:
           context: org-global
           requires:
-          - test-studio-topmonks-com
+            - test-studio-topmonks-com
           filters:
             branches:
               only: master
