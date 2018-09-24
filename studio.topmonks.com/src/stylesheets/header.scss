@@ -31,12 +31,6 @@
   fill: currentColor;
   padding-right: 6px;
 }
-.navigation-right {
-  text-align: right;
-  a {
-    color: #000;
-  }
-}
 
 .tm-hamburger {
   @media screen and (min-width: 840px) {
@@ -207,4 +201,11 @@
 }
 .tm-menu--horizontal .tm-menu__list li + li {
   margin-left: 4px;
+}
+
+.navigation-right {
+  text-align: right;
+  .tm-menu__list a {
+    color: #000;
+  }
 }
