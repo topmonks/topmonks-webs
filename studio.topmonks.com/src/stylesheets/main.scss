@@ -18,7 +18,6 @@
 
 body {
   background: #ecf6ff url("/images/html_bg.jpg") top center no-repeat;
-  background-size: 100%;
 }
 
 section:target {
@@ -164,7 +163,7 @@ section:target {
 /*IDEA*/
 #idea {
   background: #ffffff url("/images/idea-bg.jpg") no-repeat top;
-  height: 220px;
+  min-height: 220px;
   margin-top: -2em;
   padding-bottom: 1em;
   .button_transparent a:hover {
@@ -238,7 +237,7 @@ section:target {
   }
   p {
     padding: 24px;
-    height: 220px;
+    min-height: 220px;
   }
   svg {
     margin-top: 4em;
@@ -599,7 +598,7 @@ blockquote {
     .box2 .pitch_us-text,
     .box3 .pitch_us-text,
     .box4 .pitch_us-text {
-      padding: 0em 1.5em 1em 2em;
+      padding: 0 1.5em 1em 2em;
     }
   }
 
@@ -636,7 +635,6 @@ blockquote {
 
   #idea {
     background-color: #ff7a7e;
-    height: 220px;
     .tm-layout-wrapper {
       background: none;
     }
@@ -685,14 +683,29 @@ blockquote {
     background: url("/images/mobile_bg.jpg") top center no-repeat;
     background-size: 100%;
   }
+  .tm-logo {
+    color: var(--tm-secondary);
+  }
+  .tm-logo .monk {
+    fill: var(--tm-secondary);
+  }
+  .opening h1 {
+    font-size: 28px;
+  }
   #network {
     .white-box {
       min-height: 380px;
       margin: 0 24px;
     }
+    .network_icon svg {
+      width: 103px;
+    }
   }
   #idea {
-    padding-bottom: 3em;
+    padding-top: 2em;
+    h2 {
+      font-size: 28px;
+    }
   }
   .pitch_us .box4 {
     border-top: 1px solid #d5e9ff;
