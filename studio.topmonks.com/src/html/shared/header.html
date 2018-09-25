@@ -53,7 +53,7 @@
       </div>
     </div>
     <div class="mdc-layout-grid__inner tm-navigation-bar">
-      <div class="mdc-layout-grid__cell">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop">
         <nav class="tm-menu navigation-left">
           <ul class="tm-menu__list">
             <li class=""><a href="#pitch-us">Pitch to us</a></li>
@@ -62,7 +62,7 @@
           </ul>
         </nav>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop"></div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop"></div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop">
         <nav class="tm-menu navigation-right">
           <ul class="tm-menu__list">
@@ -79,16 +79,16 @@
     var appBar = document.querySelector(".tm-app-bar");
     var hamburger = document.querySelector(".tm-hamburger__container");
     var menu = Array.from(document.querySelectorAll(".tm-menu"));
-    var links = document.querySelectorAll(".tm-menu a");
-    for (var i = 0, len = links.length; i < len; i++) {
-      links[i].onclick = toggleMenu(hamburger);
-    }
+    var links = Array.from(document.querySelectorAll(".tm-menu a"));
     hamburger.addEventListener("click", toggleMenu());
+    links.forEach(l => l.addEventListener("click", toggleMenu()));
 
     function toggleMenu() {
-      return function() {
-        hamburger.classList.toggle("tm-hamburger__container--open");
-        appBar.classList.toggle("tm-app-bar--open");
+      return () => {
+        if (window.matchMedia("(max-width: 840px)").matches) {
+          hamburger.classList.toggle("tm-hamburger__container--open");
+          appBar.classList.toggle("tm-app-bar--open");
+        }
       };
     }
 
