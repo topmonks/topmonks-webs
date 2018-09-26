@@ -379,6 +379,8 @@ li.tm-partners__item--adler {
   }
   .person--photo img {
     border-radius: 50%;
+    width: 183px;
+    filter: saturate(0);
   }
   svg {
     margin-top: 8px;
