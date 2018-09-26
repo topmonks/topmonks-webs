@@ -143,7 +143,7 @@ section:target {
 }
 
 /*Pitch us*/
-#pitch_us {
+.pitch-us {
   background: url("/images/pitch-bg.jpg") top no-repeat;
   .white-box {
     --mdc-layout-grid-gutter-desktop: 0;
@@ -166,12 +166,12 @@ section:target {
   svg {
     padding: 4.5em 0 0 1.5em;
   }
-  .box1 .pitch_us-text,
-  .box2 .pitch_us-text {
+  .box1 .pitch-us__text,
+  .box2 .pitch-us__text {
     padding: 4em 1.5em 1em 2em;
   }
-  .box3 .pitch_us-text,
-  .box4 .pitch_us-text {
+  .box3 .pitch-us__text,
+  .box4 .pitch-us__text {
     padding: 1em 1.5em 2em 2em;
   }
   .box3 svg,
@@ -181,14 +181,14 @@ section:target {
 }
 
 /*IDEA*/
-#idea {
-  background: #ffffff url("/images/idea-bg.jpg") no-repeat top;
+.idea {
+  background: #fff url("/images/idea-bg.jpg") no-repeat top;
   min-height: 220px;
   margin-top: -2em;
   padding-bottom: 1em;
   .button_transparent a:hover {
-    border: 3px solid #ffffff;
-    color: #ffffff;
+    border: 3px solid #fff;
+    color: #fff;
   }
   h2 {
     padding-top: 1em;
@@ -249,42 +249,56 @@ section:target {
 }
 
 /*Network*/
-#network {
+.network {
   background-color: #6e70fb;
   h2 {
     text-align: left;
     margin-bottom: 1.2em;
   }
   p {
-    padding: 24px;
+    padding: 16px;
+    margin: 16px 0;
     min-height: 220px;
   }
-  svg {
-    margin-top: 4em;
+  @media screen and (min-width: 841px) {
+    svg {
+      margin-top: 4em;
+      margin-bottom: 3em;
+    }
+    .network__content {
+      position: relative;
+    }
+    .network__content-box {
+      position: absolute;
+      z-index: 500;
+    }
   }
 }
 
 /*Team*/
 
-#team {
-  height: 802px;
-  background: url("/images/team.jpg") no-repeat;
-  background-size: 100%;
+.team {
   position: relative;
-  .pink-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 20%;
+
+  figure {
+    margin: 0;
+  }
+
+  .team__photo {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 841px) {
+    .pink-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 20%;
+    }
   }
 }
 
-.team_member {
-  width: 200px;
-  background-color: #ffffff;
-  padding: 4px 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  position: absolute;
+.team__member {
   h4,
   p {
     margin: 0;
@@ -296,31 +310,46 @@ section:target {
     color: #b0b0b0;
     font-weight: normal;
   }
-}
+  @media screen and (min-width: 841px) {
+    width: 200px;
+    background-color: #fff;
+    padding: 4px 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: absolute;
 
-.member-fil {
-  left: 6%;
-  top: 4%;
-}
+    &.member-fil {
+      left: 6%;
+      top: 4%;
+    }
 
-.member-linh {
-  left: 30%;
-  bottom: 30%;
-}
+    &.member-linh {
+      left: 30%;
+      bottom: 30%;
+    }
 
-.member-janko {
-  right: 33%;
-  top: 10%;
-}
+    &.member-janko {
+      right: 33%;
+      top: 10%;
+    }
 
-.member-jiri {
-  right: 4%;
-  top: 6%;
+    &.member-jiri {
+      right: 4%;
+      top: 6%;
+    }
+  }
 }
 
 /*Blog*/
-#blog {
-  margin: 2em 0 7em;
+.blog {
+  margin: 2em 16px 7em;
+  a:link,
+  a:visited {
+    color: #000;
+  }
+  a:hover {
+    color: var(--tm-secondary);
+    text-decoration: underline;
+  }
   .blog_middle-box {
     box-shadow: 0 0 20px #d3cdcd;
   }
@@ -555,40 +584,6 @@ blockquote {
   h2 {
     margin-bottom: 260px;
   }
-  .tm-bgnd-wrapper {
-    @media screen and (max-width: 479px) {
-      background: transparent
-        url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_auto,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png")
-        no-repeat left -110px top 120px;
-      background-size: 440px auto;
-    }
-    @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2),
-      screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2),
-      screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
-      screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
-      screen and (max-width: 479px) and (min-resolution: 192dpi),
-      screen and (max-width: 479px) and (min-resolution: 2dppx) {
-      background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_2,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png");
-    }
-    @media screen and (min-width: 480px) {
-      background: transparent
-        url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_auto,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png")
-        no-repeat right calc(50% + 555px) top 140px;
-      background-size: 695px auto;
-      padding-bottom: 120px;
-    }
-    @media screen and (min-width: 840px) and (min-device-pixel-ratio: 2),
-      screen and (min-width: 840px) and (min-resolution: 192dpi),
-      screen and (min-width: 840px) and (min-resolution: 2dppx) {
-      background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_2,q_auto,f_auto/v1531486239/topmonks.com/bgnd_1.png");
-    }
-  }
-}
-
-@media (max-width: 1024px) {
-  #team {
-    height: 652px;
-  }
 }
 
 @media (max-width: 780px) {
@@ -613,30 +608,30 @@ blockquote {
   #team {
     height: 500px;
   }
-  #pitch_us {
-    .pitch_us-text {
+  .pitch-us {
+    .pitch-us__text {
       padding: 0 1.5em 1em 2em;
     }
     svg {
       padding: 1.5em 0 0 1.5em;
     }
-    .box1 .pitch_us-text,
-    .box2 .pitch_us-text,
-    .box3 .pitch_us-text,
-    .box4 .pitch_us-text {
+    .box1 .pitch-us__text,
+    .box2 .pitch-us__text,
+    .box3 .pitch-us__text,
+    .box4 .pitch-us__text {
       padding: 0 1.5em 1em 2em;
     }
   }
 
-  #clients,
-  #about,
-  #blog {
+  .clients,
+  .about,
+  .blog {
     padding: 24px;
   }
-  #blog {
+  .blog {
     margin: 1em 0 2em;
   }
-  #about {
+  .about {
     .pink-title {
       transform: translateY(0em);
     }
@@ -644,7 +639,7 @@ blockquote {
   .network_icon {
     margin: 0 auto;
   }
-  #network {
+  .network {
     padding-bottom: 2em;
     .white-box {
       margin: 0 8em;
@@ -659,7 +654,7 @@ blockquote {
     }
   }
 
-  #idea {
+  .idea {
     background-color: #ff7a7e;
     .tm-layout-wrapper {
       background: none;
@@ -733,11 +728,8 @@ blockquote {
       font-size: 28px;
     }
   }
-  .pitch_us .box4 {
+  .pitch-us .box4 {
     border-top: 1px solid #d5e9ff;
-  }
-  #team {
-    display: none;
   }
 }
 

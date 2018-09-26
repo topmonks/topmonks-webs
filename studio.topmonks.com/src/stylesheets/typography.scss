@@ -70,15 +70,21 @@ a.button {
 }
 
 a.button_filled {
-  background-color: #ffffff;
+  background-color: #fff;
   color: #ff7a7e;
   padding: 12px 98px;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 840px) {
   h1,
   h2 {
     line-height: 1.1em;
     padding: 0 0.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 24px;
   }
 }
