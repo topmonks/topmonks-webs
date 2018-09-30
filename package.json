@@ -12,7 +12,7 @@
     "ava": "^0.25.0",
     "blendid": "^4.4.3",
     "broken-link-checker-local": "^0.2.0",
-    "eslint": "^5.6.0",
+    "eslint": "^5.6.1",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "^2.7.0",
     "gulp-markdown-to-json": "^1.1.0",
