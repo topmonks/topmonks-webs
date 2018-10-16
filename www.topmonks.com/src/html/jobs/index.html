@@ -3,6 +3,15 @@
 {% block title %}TopMonks Opened Job Positions{% endblock %}
 
 {% block content %}
-<div class="hire-jobs"></div>
-<script id="hire-embed-loader" async defer src="https://hire.withgoogle.com/s/embed/hire-jobs.js?company=topmonkscom"></script>
+<section class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner tm-layout-wrapper">
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+      <h2>Yes, we're hiring!</h2>
+      <p>Check out our <a href="/about-us/">culture</a> and especially our <a href="/about-us/#company-values">company values</a> if you'll like it, just let us know and we'll discuss the details. We love meeting interesting people!</p>
+
+      <div class="hire-jobs"></div>
+      <script id="hire-embed-loader" async defer src="https://hire.withgoogle.com/s/embed/hire-jobs.js?company=topmonkscom"></script>
+    </div>
+  </div>
+</section>
 {% endblock %}
