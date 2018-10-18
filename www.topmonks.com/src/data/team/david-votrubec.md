@@ -2,7 +2,7 @@
 id: david-votrubec
 name: David
 surname: Votrubec
-job_title: Sharp Developer (and free time painter)
+job_title: Sharp Developer
 twitter: davidvotrubec
 github: DavidVotrubec
 linkedin: in/david-votrubec-75b13215

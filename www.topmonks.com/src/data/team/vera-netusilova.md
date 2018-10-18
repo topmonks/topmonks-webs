@@ -2,7 +2,7 @@
 id: vera-netusilova
 name: Věra
 surname: Netušilová
-job_title: Business Development
+job_title: Business Developer
 twitter: 
 github:
 linkedin:

@@ -2,7 +2,7 @@
 id: karel-ploc
 name: Karel
 surname: Ploc
-job_title: Node.js artisan at TopMonks.
+job_title: Node.js artisan
 twitter:
 github:
 linkedin:
