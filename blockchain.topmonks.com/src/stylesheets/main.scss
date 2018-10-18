@@ -418,27 +418,28 @@ h3.ICO_bubble::before {
 }
 
 /*Contact section*/
-#contact {
+.contact {
   background-color: #f4f8fb;
   color: #1c1c37;
   text-align: center;
   min-height: 490px;
 }
 
-#contact img {
-  width: 100%;
+.contact .person__photo {
+  width: 92px;
   height: 92px;
   margin: 0 auto;
   background-color: #f4f8fb;
+  border-radius: 50%;
 }
 
-#contact h4 {
-  line-height: 0;
+.contact h4 {
+  margin: 0;
 }
 
-#contact p {
-  line-height: 0;
-  padding-bottom: 1em;
+.contact p {
+  margin: 0;
+  padding: 0 0 1em 0;
 }
 
 footer {
