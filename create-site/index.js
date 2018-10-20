@@ -2,7 +2,7 @@ const commander = require("commander");
 const chalk = require("chalk");
 const fs = require("fs");
 const path = require("path");
-const PATH = path.resolve("create-app");
+const PATH = path.resolve("create-site");
 
 const Promise = require("bluebird");
 const writeFile = Promise.promisify(fs.writeFile);

@@ -92,7 +92,7 @@ yarn run http-server public/www.topmonks.com -p 3000
 If you want to create a new site, e.g. new-app.topmonks.com, simply run
 
 ```
-yarn create-app new-app.topmonks.com
+yarn create-site new-app.topmonks.com
 ```
 
 then simply run for development mode
@@ -112,7 +112,7 @@ The command will generate initial files and package.json scripts for you. Don't 
 
 ### Full command example
 ```
-yarn create-app new-app.topmonks.com -v --title "New Topmonks App" 
+yarn create-site new-app.topmonks.com -v --title "New Topmonks App" 
 ```
 
 
