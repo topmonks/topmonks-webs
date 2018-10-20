@@ -6,12 +6,15 @@
   "author": "TopMonks",
   "license": "MIT",
   "dependencies": {
-    "@material/layout-grid": "^0.40.1"
+    "@material/layout-grid": "^0.40.1",
+    "bluebird": "^3.5.2"
   },
   "devDependencies": {
     "ava": "^0.25.0",
     "blendid": "^4.4.3",
     "broken-link-checker-local": "^0.2.0",
+    "chalk": "^2.4.1",
+    "commander": "^2.19.0",
     "eslint": "^5.6.1",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "^3.0.0",
@@ -27,6 +30,7 @@
     "tap-xunit": "^2.3.0"
   },
   "scripts": {
+    "create-app": "node ./create-app",
     "start:www.topmonks.com": "BLENDID_CONFIG_PATH=./www.topmonks.com/config/ blendid",
     "start:www.topmonks.cz": "BLENDID_CONFIG_PATH=./www.topmonks.cz/config/ blendid",
     "start:prodeti.topmonks.cz": "BLENDID_CONFIG_PATH=./prodeti.topmonks.cz/config/ blendid",
