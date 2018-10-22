@@ -25,7 +25,8 @@ body {
   margin: 0 auto;
   max-width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";  font-weight: normal;
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: normal;
   -webkit-font-kerning: normal;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
@@ -45,11 +46,13 @@ body {
 .wf-active body {
   font-family: Lato, sans-serif;
 }
+
 .tm-logo {
   font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
   Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
 }
+
 .wf-active .tm-logo {
   font-family: futura-pt, sans-serif;
 }
@@ -417,12 +420,21 @@ h3.ICO_bubble::before {
   margin: 6em 0 4em;
 }
 
+/*References section*/
+
+.references .references_text {
+  margin-left: 0.5em;
+}
+
 /*Contact section*/
-.contact {
+.contact, .references {
   background-color: #f4f8fb;
   color: #1c1c37;
-  text-align: center;
   min-height: 490px;
+}
+
+.contact {
+  text-align: center;
 }
 
 .contact .person__photo {
@@ -491,6 +503,10 @@ footer .social-buttons {
   .hidden-box {
     display: none;
   }
+  .references img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -507,6 +523,10 @@ footer .social-buttons {
   main {
     background: url("/images/main-info_BG.png") top no-repeat;
   }
+  .our-work, .offer, .references {
+    padding: 24px;
+  }
+
   .opening {
     padding-top: 2em;
   }
@@ -582,6 +602,11 @@ footer .social-buttons {
   .our-work_box {
     width: 100%;
     padding: 0 24px;
+  }
+
+  .references img {
+    width: 100%;
+    height: 100%;
   }
   .security_first-box {
     margin: 0 auto;
