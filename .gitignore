@@ -5,3 +5,5 @@ public/
 /package-lock.json
 results/
 *.log
+.
+team.json
