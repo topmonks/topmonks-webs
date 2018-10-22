@@ -74,7 +74,7 @@ It will start [browser-sync](https://browsersync.io/) session on [http://localho
 
 ## Production build
 
-Build al websites to `/public` folder:
+Build all websites to `/public` folder:
 
 ```
 yarn run build
@@ -85,6 +85,36 @@ Then you can run `www.topmonks.com` site in production configuration with:
 ```
 yarn run http-server public/www.topmonks.com -p 3000
 ```
+
+
+## Create new site
+
+If you want to create a new site, e.g. new-app.topmonks.com, simply run
+
+```
+yarn create-site new-app.topmonks.com
+```
+
+then simply run for development mode
+
+```
+yarn start:new-app.topmonks.com
+```
+
+The command will generate initial files and package.json scripts for you. Don't forget to include your repo in .circleci/config.yml when ready to deploy.
+
+### Options
+
+* `-v`, `--verbose`
+* `-h`, `--help`
+* `-t`, `--title`, adds title to various places, e.g. `<title>Your title</title>` in default html template. Default value is `Topmonks` if not provided.
+* `<project-directory>`, project dir/name
+
+### Full command example
+```
+yarn create-site new-app.topmonks.com -v --title "New Topmonks App" 
+```
+
 
 ## Issues
 
