@@ -504,8 +504,8 @@ footer .social-buttons {
     display: none;
   }
   .references img {
-    width: 100%;
     height: 100%;
+    width: 100%;
   }
 }
 
@@ -557,6 +557,11 @@ footer .social-buttons {
   .security_first-img svg {
     width: 100%;
   }
+  .references img {
+    height: 180px;
+    width: 330px;
+    margin-top: 2em;
+  }
 }
 
 @media (max-width: 480px) {
@@ -604,9 +609,17 @@ footer .social-buttons {
     padding: 0 24px;
   }
 
-  .references img {
-    width: 100%;
-    height: 100%;
+  .references {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .references_text {
+      margin-left: 0;
+    }
+    h3 {
+      margin-top: 0;
+    }
   }
   .security_first-box {
     margin: 0 auto;
