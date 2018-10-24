@@ -1,0 +1,35 @@
+{% extends 'layouts/topmonks.html' %}
+{% from 'macros/helpers.html' import sprite %}
+
+{% set page = 'topmonks-index' %}
+{% set language = en %}
+
+{% block title %}
+TopMonks - Software development partner for your business
+{% endblock %}
+
+{% block head %}
+<meta name="description" content="We are your software development partners, experienced with both startup and corporate environment.">
+<meta name="twitter:description" property="og:description" content="We are your software development partners, experienced with both startup and corporate environment.">
+<link rel="canonical" href="https://www.gorealeurope.topmonks.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@topmonks">
+<meta name="twitter:title" property="og:title" content="TopMonks - Software development partner for your business">
+<meta name="twitter:image" property="og:image" content="https://www.gorealeurope.topmonks.com/images/og-image.png">
+<meta property="og:type" content="company">
+<meta property="og:url" content="https://www.gorealeurope.topmonks.com/">
+<meta property="og:site_name" content="TopMonks.com">
+{% endblock %}
+
+{% block content %}
+<section class="main-info">
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>GOREALEUROPE</h2>
+            <p>Go Real is a travel startup we truly love. It offers smart travel planning and custom trip package booking within a few clicks. he product is loved by customers from the US, Canada, Australia, New Zealand, and Singapore. With 300 user reviews on TrustPilot and Facebook, GRE has earned a nearly perfect rating.</p>
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock %}
