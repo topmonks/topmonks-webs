@@ -12,6 +12,13 @@ const config = {
   javascripts: {
     entry: {
       app: ["./index.js"]
+    },
+    extractSharedJs: true,
+    hot: {
+      enabled: true,
+      reload: true,
+      quiet: true,
+      react: false
     }
   },
 
