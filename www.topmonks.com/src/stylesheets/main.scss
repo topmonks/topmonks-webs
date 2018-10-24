@@ -1,10 +1,8 @@
 @import "@material/layout-grid/mdc-layout-grid";
-
 :root {
   --mdc-layout-grid-margin-desktop: 24px;
   --mdc-layout-grid-gutter-desktop: 20px;
   --mdc-layout-grid-column-width-desktop: 60px;
-
   --tm-primary: #fe664b;
   --tm-primary-dark: #c53321;
   --tm-primary-light: #ff9878;
@@ -29,18 +27,18 @@ body {
 //    margin-top: 88px;
 //  }
 //}
-
 .tm-layout-wrapper {
   max-width: 1008px;
-  margin: 0 auto;
-  //padding: 16px;
+  margin: 0 auto; //padding: 16px;
   --mdc-layout-grid-margin-desktop: 0;
   --mdc-layout-grid-margin-tablet: 0;
   --mdc-layout-grid-margin-phone: 0;
 }
+
 .tm-layout-align-center {
   text-align: center;
 }
+
 .tm-layout-grid__cell--span-0-desktop {
   @media screen and (min-width: 840px) {
     display: none;
@@ -80,7 +78,6 @@ blockquote {
 .tm-page-header blockquote p {
   font-size: 28px;
   line-height: 32px;
-
   @media screen and (min-width: 480px) {
     font-size: 40px;
     line-height: 48px;
@@ -88,7 +85,6 @@ blockquote {
   color: #9b9b9b;
   text-align: center;
   margin: 68px 0;
-
   &::before,
   &::after {
     content: none;
@@ -125,7 +121,6 @@ blockquote {
   margin: 0 1em;
   text-align: center;
   text-transform: uppercase;
-
   &:hover {
     text-decoration: none;
     background-color: var(--tm-primary-dark);
@@ -195,7 +190,6 @@ blockquote {
     top: 32px;
     z-index: -1;
   }
-
   .box {
     background: #fff url("/images/ic_listen.svg") center top 60px no-repeat;
     background-size: auto 82px;
@@ -245,6 +239,7 @@ blockquote {
     stroke: currentColor;
   }
 }
+
 li.tm-partners__item--adler {
   width: 100px;
 }
@@ -252,8 +247,7 @@ li.tm-partners__item--adler {
 .product {
   background-color: #f3f3f3;
   .tm-layout-wrapper {
-    background: url("/images/bgnd_product_top_mobile.svg") top center no-repeat,
-      url("/images/bgnd_product_mobile.svg") bottom center no-repeat;
+    background: url("/images/bgnd_product_top_mobile.svg") top center no-repeat, url("/images/bgnd_product_mobile.svg") bottom center no-repeat;
     background-size: 100% auto;
     padding-top: 110px;
     padding-bottom: 110px;
@@ -368,9 +362,7 @@ li.tm-partners__item--adler {
 .contact {
   text-align: center;
   padding: 64px 0 100px;
-  background: #fff url("/images/bgnd_curve_2.svg") top -5px left calc(
-      50% - 530px
-    ) no-repeat;
+  background: #fff url("/images/bgnd_curve_2.svg") top -5px left calc( 50% - 530px) no-repeat;
   @media screen and (min-width: 480px) {
     background-position: top -1px left calc(50% - 360px);
   }
@@ -389,35 +381,31 @@ li.tm-partners__item--adler {
 
 #page-topmonks-index {
   @media screen and (max-width: 479px) {
-    background: #fff
-      url("https://res.cloudinary.com/topmonks/image/upload/w_352,dpr_auto,q_auto,f_auto/v1531754590/topmonks.com/bgnd_header_mobile.png")
-      no-repeat right calc(50% - 145px) top -1px;
+    background: #fff url("https://res.cloudinary.com/topmonks/image/upload/w_352,dpr_auto,q_auto,f_auto/v1531754590/topmonks.com/bgnd_header_mobile.png") no-repeat right calc(50% - 145px) top -1px;
     background-size: 352px auto;
     overflow-x: hidden;
   }
   @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2),
-    screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2),
-    screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
-    screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
-    screen and (max-width: 479px) and (min-resolution: 192dpi),
-    screen and (max-width: 479px) and (min-resolution: 2dppx) {
+  screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2),
+  screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
+  screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
+  screen and (max-width: 479px) and (min-resolution: 192dpi),
+  screen and (max-width: 479px) and (min-resolution: 2dppx) {
     background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_352,dpr_2,q_auto,f_auto/v1531754590/topmonks.com/bgnd_header_mobile.png");
   }
   @media screen and (min-width: 480px) {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/w_1017,dpr_auto,q_auto,f_auto/v1531486239/topmonks.com/bgnd_header.png")
-      no-repeat right calc(50% - 390px) top -1px;
+    background: url("https://res.cloudinary.com/topmonks/image/upload/w_1017,dpr_auto,q_auto,f_auto/v1531486239/topmonks.com/bgnd_header.png") no-repeat right calc(50% - 390px) top -1px;
     background-size: 1017px auto;
     overflow-x: hidden;
   }
   @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2),
-    screen and (min-width: 480px) and (min-resolution: 192dpi),
-    screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  screen and (min-width: 480px) and (min-resolution: 192dpi),
+  screen and (min-width: 480px) and (min-resolution: 2dppx) {
     background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_1017,dpr_2,q_auto,f_auto/v1531486239/topmonks.com/bgnd_header.png");
   }
   @media screen and (min-width: 480px) and (max-width: 839px) {
     background-position: right calc(50% - 460px) top -1px;
   }
-
   .tm-logo {
     @media screen and (min-width: 840px) {
       font-size: 1.6em;
@@ -427,7 +415,6 @@ li.tm-partners__item--adler {
       }
     }
   }
-
   .tm-hamburger {
     .tm-hamburger__container::after {
       color: rgba(0, 0, 0, 0.25);
@@ -436,7 +423,6 @@ li.tm-partners__item--adler {
       background-color: var(--tm-primary);
     }
   }
-
   .tm-app-bar {
     background-color: transparent;
     @media screen and (max-width: 839px) {
@@ -456,7 +442,7 @@ li.tm-partners__item--adler {
         .tm-layout-wrapper {
           padding: 20px 0 0 16px;
         }
-        + main {
+        +main {
           margin-top: 72px;
         }
         .tm-menu__list a {
@@ -467,7 +453,7 @@ li.tm-partners__item--adler {
         padding: 66px 0 0 16px;
         transition: padding 0.25s;
       }
-      + main {
+      +main {
         margin-top: 112px;
       }
     }
@@ -484,48 +470,43 @@ li.tm-partners__item--adler {
 }
 
 .cooperation {
-  background-image: url("/images/bgnd_product_top.svg"),
-    url("/images/bgnd_curve_1.svg");
+  background-image: url("/images/bgnd_product_top.svg"), url("/images/bgnd_curve_1.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: bottom 0 left -800px, bottom -5px left calc(50% - 530px);
   @media screen and (min-width: 480px) {
-    background-position: bottom -20px center,
-      bottom -120px left calc(50% - 400px);
+    background-position: bottom -20px center, bottom -120px left calc(50% - 400px);
   }
   h2 {
     margin-bottom: 260px;
   }
   .tm-bgnd-wrapper {
     @media screen and (max-width: 479px) {
-      background: transparent
-        url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_auto,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png")
-        no-repeat left -110px top 120px;
+      background: transparent url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_auto,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png") no-repeat left -110px top 120px;
       background-size: 440px auto;
     }
     @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2),
-      screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2),
-      screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
-      screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
-      screen and (max-width: 479px) and (min-resolution: 192dpi),
-      screen and (max-width: 479px) and (min-resolution: 2dppx) {
+    screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2),
+    screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
+    screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
+    screen and (max-width: 479px) and (min-resolution: 192dpi),
+    screen and (max-width: 479px) and (min-resolution: 2dppx) {
       background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_2,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png");
     }
     @media screen and (min-width: 480px) {
-      background: transparent
-        url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_auto,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png")
-        no-repeat right calc(50% + 555px) top 140px;
+      background: transparent url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_auto,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png") no-repeat right calc(50% + 555px) top 140px;
       background-size: 695px auto;
       padding-bottom: 120px;
     }
     @media screen and (min-width: 840px) and (min-device-pixel-ratio: 2),
-      screen and (min-width: 840px) and (min-resolution: 192dpi),
-      screen and (min-width: 840px) and (min-resolution: 2dppx) {
+    screen and (min-width: 840px) and (min-resolution: 192dpi),
+    screen and (min-width: 840px) and (min-resolution: 2dppx) {
       background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_2,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png");
     }
   }
 }
 
 /* MD GRID TABLET AND ABOVE BREAKPOINT */
+
 @media (min-width: 480px) {
   .action-button {
     display: inline-block;
@@ -552,7 +533,7 @@ li.tm-partners__item--adler {
     h2 {
       margin-bottom: 18px;
     }
-    .box + .box {
+    .box+.box {
       margin-top: calc(var(--mdc-layout-grid-gutter-desktop) * 2);
     }
   }
@@ -578,6 +559,7 @@ li.tm-partners__item--adler {
 }
 
 /* MD GRID TABLET ONLY BREAKPOINT */
+
 @media screen and (min-width: 480px) and (max-width: 839px) {
   .tm-case-studies__clients {
     align-content: space-between;
@@ -587,5 +569,63 @@ li.tm-partners__item--adler {
 @media screen and (min-width: 840px) {
   .tm-layout-wrapper {
     padding: 24px;
+  }
+}
+
+#mc {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 5000;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s all;
+  #mc-bg {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: .4s all;
+  }
+  #mc-content {
+    transition: .4s all;
+    opacity: 0;
+    transform: translateY(30px);
+    position: relative;
+    z-index: 10000;
+  }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    #mc-bg {
+      background: rgba(0, 0, 0, 0.5);
+    }
+    #mc-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.tm-modal {
+  max-width: 700px;
+  margin: 20px;
+  padding: 20px;
+  @media screen and (min-width: 400px) {
+    padding: 50px;
+  }
+  background: white;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &>*:not(:last-child) {
+    margin-bottom: 1rem;
   }
 }
