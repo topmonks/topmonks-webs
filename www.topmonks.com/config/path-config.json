@@ -1,37 +1,30 @@
 {
   "src": "./www.topmonks.com/src",
   "dest": "./public/www.topmonks.com",
-
   "html": {
     "src": "html",
     "dest": "./"
   },
-
   "static": {
     "src": "static",
     "dest": "./"
   },
-
   "javascripts": {
     "src": "javascripts",
-    "dest": "javascripts"
+    "dest": "js"
   },
-
   "stylesheets": {
     "src": "stylesheets",
     "dest": "stylesheets"
   },
-
   "images": {
     "src": "images",
     "dest": "images"
   },
-
   "fonts": {
     "src": "fonts",
     "dest": "fonts"
   },
-
   "icons": {
     "src": "icons",
     "dest": "images"
