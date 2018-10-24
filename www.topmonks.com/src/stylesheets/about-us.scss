@@ -1,10 +1,82 @@
+.tm-modal.tm-modal__member {
+  #modal-close {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    @media screen and (min-width: 400px) {
+      top: 24px;
+      right: 24px;
+    }
+    margin: 0 !important;
+    opacity: .5;
+    padding: 20px;
+  }
+  justify-content: center;
+  @media screen and (min-width: 769px) {
+    flex-direction: row;
+    &>*:not(:last-child) {
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+  }
+  border-radius: 10px;
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 769px) {
+      align-items: flex-start;
+    }
+    span {
+      font-size: 1rem;
+    }
+    &>*:not(:last-child):not(.link) {
+      margin-bottom: .4rem;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      @media screen and (min-width: 769px) {
+        justify-content: flex-start;
+      }
+      margin: 1rem -1rem 0;
+    }
+    .link {
+      font-size: .875rem;
+      margin-bottom: .2rem;
+      display: flex;
+      align-items: center;
+      margin: 0.3rem 1rem;
+      svg {
+        margin-right: 7px;
+        opacity: .7;
+      }
+    }
+    q {
+      margin-top: .5rem;
+      font-style: italic;
+    }
+  }
+}
+
 #team:target .show-more,
-.show-less
-{
+.show-less {
   display: none;
 }
+
 #team:target {
-  .show-less{
+  .show-less {
     display: inline-block;
   }
   .tm-team__member {
@@ -14,24 +86,23 @@
     }
   }
 }
+
 .tm-team__members .action-button {
   margin-top: 2em;
 }
+
 .tm-team__member {
   display: none;
   align-items: center;
-
   img {
     width: 75px;
     height: 75px;
     border-radius: 50%;
     margin: 0;
   }
-
   .content {
     padding-left: 20px;
   }
-
   strong {
     display: block;
   }
@@ -39,7 +110,6 @@
     display: block;
     padding: 0;
     text-align: center;
-
     img {
       position: static;
       width: 100%;
@@ -51,15 +121,16 @@
     }
   }
 }
+
 .tm-team {
   padding: 0 0 4%;
   background: #fff url(/images/bgnd_curve_3.svg) bottom no-repeat;
   background-size: 100% auto;
-
   .tm-bgnd-wrapper {
     background-color: #f3f3f3;
   }
 }
+
 #how-we-work {
   background-image: url("/images/bgnd_curve_1.svg");
   background-repeat: no-repeat;
