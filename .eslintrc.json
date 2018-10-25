@@ -4,7 +4,10 @@
     "es6": true
   },
   "parserOptions": {
-    "ecmaVersion": 6
+    "ecmaVersion": 9,
+    "ecmaFeatures": {
+      "spread": true
+    }
   },
   "plugins": [
     "prettier"
