@@ -56,6 +56,8 @@
     "test:broken-links:studio.topmonks.com": "blcl ./public/studio.topmonks.com -ro --exclude linkedin.com --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
     "test:broken-links:blockchain.topmonks.com": "blcl ./public/blockchain.topmonks.com -ro --exclude linkedin.com --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
     "test:broken-links": "run-s test:broken-links:*",
-    "test": "run-p test:eslint test:stylelint"
+    "test": "run-p test:eslint test:stylelint",
+    "start:example-with-shared": "BLENDID_CONFIG_PATH=./example-with-shared/config/ blendid",
+    "build:example-with-shared": "BLENDID_CONFIG_PATH=./example-with-shared/config/ blendid -- build"
   }
 }
