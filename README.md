@@ -114,6 +114,40 @@ The command will generate initial files and package.json scripts for you. Don't 
 ```
 yarn create-site new-app.topmonks.com -v --title "New Topmonks App" 
 ```
+## Shared Assets
+
+Your project can have access to the /shared folder to use shared assets. Currently there is only support for html/css. So, let's start with simple configuration, in `your_project/config/task-config.js` import:
+```javascript
+const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
+```
+
+Usually you would do `module.exports = config;` at the end of the file, however createSharedTaskConfig modifies our config  injecting some extra configuration to load html/css as well as add some gulp watch tasks. Modify your module.export like this:
+```javascript
+const yourConfig = {...};
+
+module.exports = createSharedTaskConfig(__dirname, yourConfig);
+```
+
+That's it, now you can import shared assets in your project.
+
+### Importing shared assets
+
+#### HTML
+```
+{% include 'common/example.html' %}
+```
+#### Don't forget to add (S)CSS
+```
+@import 'common/example'
+```
+
+
+### Creating Shared Assets
+To create new assets, create them in:
+
+* html and (s)css files as `/shared/src/common/your_new_component.{html/scss}` 
+
+These rules will simplify the import and will ensure that when importing them in projects, the imports will have the same import pattern starting with `'common/*'`
 
 
 ## Issues
