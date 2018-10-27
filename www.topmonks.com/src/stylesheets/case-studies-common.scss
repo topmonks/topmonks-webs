@@ -4,9 +4,6 @@
   h3 {
     font-weight: 400;
   }
-  h3.h3_gorealeurope {
-    width: 940px;
-  }
   .tm-bgnd-wrapper {
     padding: 0 0 4%;
     background: #fff url(/images/bgnd_curve_3.svg) bottom no-repeat;
@@ -15,6 +12,9 @@
     & > .mdc-layout-grid {
       background-color: #f3f3f3;
     }
+  }
+  .h3_text-left h3{
+    text-align: left;
   }
 }
 .tm-case-study__project-numbers-list {

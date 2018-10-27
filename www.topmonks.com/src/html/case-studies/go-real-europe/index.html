@@ -4,12 +4,33 @@
 {% block head %}
 <link rel="stylesheet" href="/stylesheets/case-studies-common.css">
 <style>
-  .tm-case-study__section--costumers {
-    background-image: url("/images/case-studies/go-real-europe/bgnd_costumers.svg");
+  h3 {
+    text-align: left;
+    font-weight: 700;
   }
 
-  .tm-case-study__section--costume {
-    background-image: url("/images/case-studies/bgnd_costume.svg");
+  h3.text-center {
+    text-align: center;
+  }
+
+  h3.h3_gorealeurope {
+    width: 940px;
+  }
+
+  .tm-case-study__section--collecting {
+    background-image: url("/images/case-studies/go-real-europe/bgnd_collecting.svg");
+  }
+
+  .tm-case-study__section--all-in {
+    background-image: url("/images/case-studies/go-real-europe/bgnd_all-in.svg");
+  }
+
+  .tm-case-study__section--checking {
+    background-image: url("/images/case-studies/go-real-europe/bgnd_checking.svg");
+  }
+
+  .tm-case-study__section--guide {
+    background-image: url("/images/case-studies/go-real-europe/bgnd_guide.svg");
   }
 
   .tm-case-study__hero {
@@ -19,10 +40,12 @@
   .tm-case-study__hero img {
     width: 100%;
   }
+  .tm-case-study__section--svg {
+       background-position: center;
+     }
 
-  .tm-case-study__emphasis {
-    background-color: #f3f3f3;
-    border-radius: 20px;
+  .video {
+    text-align: center;
   }
 
   @media screen and (max-width: 839px) {
@@ -33,7 +56,7 @@
 
   @media screen and (min-width: 840px) {
     .tm-case-study__hero {
-      background-position: bottom 560px left calc(50% - 400px);
+      background-position: top left calc(50% - 400px);
     }
 
     .tm-case-study__hero img {
@@ -43,17 +66,26 @@
     .tm-case-study__hero .tm-img-wrapper {
       position: relative;
     }
+  }
 
-    .tm-case-study__hero .first {
-      left: 55px;
+  @media screen and (max-width: 480px) {
+    h3 {
+      font-size: 24px;
     }
 
-    .tm-case-study__hero .last img {
-      position: absolute;
-      right: 55px;
-      top: 60px;
+    h3.h3_gorealeurope {
+      width: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+    .tm-case-study__section--svg {
+      background-position: center;
     }
   }
+
 </style>
 {% endblock %}
 
@@ -62,8 +94,9 @@
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2>GO REAL EUROPE</h2>
-        <h3 class="h3_gorealeurope">GRE is a fast-growing travel startup specializing in crafting personalized
+        <h2>GOREALEUROPE</h2>
+        <h3 class="h3_gorealeurope text-center">GRE is a fast-growing travel startup specializing in crafting
+          personalized
           itineraries for any type of traveler wanting to touch down and explore the gems
           of Europe. Travelers from around the globe namely from the US, Canada,
           Australia, New Zealand, and Singapore, rave about GRE’s&nbsp;efficiency,
@@ -74,10 +107,11 @@
             <p>years in production</p></li>
           <li class="tm-case-study__project-numbers-item"><strong class="tm-case-study__project-number">4000+</strong>
             <p>travelers</p></li>
-          <li class="tm-case-study__project-numbers-item"><strong class="tm-case-study__project-number">$2.5M</strong>
-            <p>in sales this year alone and doubling</p></li>
-          <li class="tm-case-study__project-numbers-item"><strong class="tm-case-study__project-number">18</strong>
-            <p>technologies</p></li>
+          <li class="tm-case-study__project-numbers-item"><strong class="tm-case-study__project-number">(:</strong>
+            <p>Excellent reviews on Facebook (4.9&nbsp;out of 5) and Trustpilot (9.6&nbsp;out
+              of&nbsp;10)</p></li>
+          <li class="tm-case-study__project-numbers-item"><strong class="tm-case-study__project-number">$2.3M</strong>
+            <p>in year-to-date 2018&nbsp;sales, doubling year-to-year</p></li>
         </ul>
       </div>
     </div>
@@ -85,7 +119,9 @@
   <div class="tm-bgnd-wrapper">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 tm-img-wrapper video">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-img-wrapper video">
+          <iframe width="806" height="453" src="https://www.youtube.com/embed/wuU6XzKGLZk" frameborder="0"
+                  allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -94,95 +130,86 @@
 <section>
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12"><h3>Story</h3>
-        <p>Founder David Manley approached us with an idea to automate his business,
-          previously operated via his magical Excel spreadsheet. David had tremendous
-          experience in the travel industry, providing customers with an on-demand
-          tailor-made itinerary for traveling to Europe. Customer satisfaction was
-          extremely high, but scalability was not. TopMonks fixed&nbsp;that.</p>
-        <p>The GRE team becomes an expert on every destination they sell, combining the
-          knowledge of locals with their own first-hand experiences. That expertise is
-          input into a uniquely structured database, enabling GRE’s&nbsp;proprietary
-          algorithm to instantly create a perfect travel itinerary. The itinerary
-          navigates travelers through a stress-free trip, making sure they never get lost
-          or waste time. Even the most complex trips become a seamless experience.</p></div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h3 class="h3_left-align">Leave your business challenges up to the Monks</h3>
+        <p>Starting out with just an Excel spreadsheet and his tremendous experience in
+          the travel industry, founder David Manley’s&nbsp;personal and customized approach
+          got his business taking off faster than any normal spreadsheet could handle. As
+          his customers increased, unfortunately scalability did not. So TopMonks
+          fixed&nbsp;it.</p>
+        <h3 class="h3_left-align">Now GRE travels with automation</h3>
+        <p>With every destination they offer, GRE becomes an expert by combining local
+          knowledge with their own first-hand experiences. This ultimate combo of tips,
+          hacks and travel wizardry is then inputted into a uniquely structured database,
+          enabling GRE’s&nbsp;proprietary algorithm to instantly create a perfect and
+          customizable itinerary for anyone. Travelers can sit back, relax, and spend
+          their time the way they want. No matter how complex a trip may seem, GRE masters
+          the art of giving a seamless experience.</p></div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div
-        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--right tm-case-study__section--costumers">
-        <h3>Costumers pick</h3>
-        <p>Customers pick their preferred dates, cities, interests, and activities.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div
-        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--infrastructure tm-case-study__section--costume">
-        <h3>Custom itinerary</h3>
-        <p>A&nbsp;unique, custom itinerary with the overall plan, transportation, tours,
-          transfers and hotels bookings is automatically generated.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div
-        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--right tm-case-study__section--integration">
-        <h3>The itinerary reflects</h3>
-        <p>The itinerary reflects the preferences of the travelers while also accounting for seasonal activities, date
-          restrictions, and transportation schedules.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div
-        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--infrastructure">
-        <h3>The itinerary provides smart navigation</h3>
-        <p>The itinerary provides smart navigation for self-guided travel, one-step
-          package booking, and the opportunity to experience special activities such as
-          symphony concerts, cycling trips, private guides, cable cars to mountain
-          summits, and much&nbsp;more.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div
-        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-case-study__section tm-case-study__section--infrastructure">
-        <h3>Details information</h3>
-        <p>All the details and information the traveler needs for his particular trip are at her fingertips.</p>
-      </div>
-    </div>
-  </div>
-</section>
 <section>
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h3>The next big thing?</h3>
-        <p>GRE has grown tremendously, with $2.3M in sales already this year, putting
-          them on track to double 2017’s&nbsp;total. Recently TopMonks helped GRE raise
-          $200k to expand into new locations, and they are now raising another $1.5M to
-          expand globally. This could be the next unicorn, and we are thrilled to be a
-          part of this venture.</p>
+        <h3 class="text-center">Seamless experience</h3>
+      </div>
+      <div class="tm-case-study__section mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-desktop tm-case-study__section--svg tm-case-study__section--collecting">
+      </div>
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-desktop">
+        <h4>Collecting what you want</h4>
+        <p>Customers choose when, where and what they want and would enjoy&nbsp;most.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <h4>An all-in-one crafted trip</h4>
+        <p>Presenting a unique, personalized itinerary with the overall plan including
+          transportation, accommodation, tours, and transfers automatically generated for
+          each traveler.</p>
+      </div>
+      <div class="tm-case-study__section mdc-layout-grid__cell mdc-layout-grid__cell--span-6 tm-case-study__section--svg tm-case-study__section--all-in">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="tm-case-study__section mdc-layout-grid__cell mdc-layout-grid__cell--span-6 tm-case-study__section--svg tm-case-study__section--checking">
+      </div>
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <h4>Triple checking so customers don’t have to</h4>
+        <p>The itinerary reflects the preferences of the travelers while also accounting
+          for seasonal activities, date restrictions, and transportation schedules.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <h4>A&nbsp;personal guide on the go</h4>
+        <p>An itinerary that always has your back, including smart navigation for
+          self-guided travel, one-step package booking, and presenting opportunities to
+          experience special activities like symphony concerts, cycling trips, private
+          guides, cable cars to mountain summits, and more&nbsp;&ndash; all at your
+          fingertips.</p>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 tm-case-study__section--svg tm-case-study__section--guide">
       </div>
     </div>
   </div>
@@ -190,19 +217,33 @@
 <section>
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="h3_text-left mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h3>Soaring even higher with TopMonks under its wings</h3>
+        <p>With proper automation and room to scale, GRE has already hit $2.3M in sales
+          this year, putting them on track to land double as much from 2017.&nbsp;As GRE got
+          bigger, they needed more space. With that said, TopMonks helped raise $200K to
+          make it happen. As we speak, GRE is raising an additional $1.5M to expand around
+          the&nbsp;globe.</p>
+      </div>
+      <div class="h3_text-left mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h3>Leveling up the travel industry</h3>
+        <p>We believe they’ll be the next unicorn and we’re pretty thrilled to be
+          part of this. Originally starting out with just 3&nbsp;monks, we’ve now got just
+          one who’s&nbsp;teamed up with another dev from GRE’s&nbsp;side. The MVP went from
+          Ruby 3.2&nbsp;to 5.2, where it’s&nbsp;currently still running. But with a lot of
+          growth comes a lot of future plans, and GRE has already partnered with Prague
+          Startup SmartGuide to integrate its catchy mobile travel app into
+          GRE’s&nbsp;itineraries.</p>
+      </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h3>Project description:</h3>
-        <p>The project initially started with a team of 3&nbsp;monks. The MVP was developed
-          in Ruby 3.2&nbsp;and is currently running on 5.2.&nbsp;Since 2015&nbsp;the whole project has
-          been supported, maintained, and developed by one developer&nbsp;&ndash; Marian. With the
-          project's&nbsp;rapid expansion another developer has recently joined Marian, and GRE
-          has also partnered with fellow Prague startup SmartGuide to integrate its
-          innovative mobile travel app with GRE’s&nbsp;itineraries. GRE boasts quite a nice
-          list of technologies:</p>
+        <h3>The tech</h3>
+        <p>GRE and its entire troop of boast-worthy technologies that run behind the scenes:</p>
       </div>
     </div>
   </div>
 </section>
+
 {% set caseStudiesData = { title : 'Other Case Studies', activeCase : 'cs' } %}
 
+{% include 'components/case-studies/index.html' %}
 {% endblock %}
