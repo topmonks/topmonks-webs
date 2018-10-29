@@ -22,7 +22,7 @@
   }
 
   .tm-case-study__section--all-in {
-    background-image: url("/images/case-studies/go-real-europe/bgnd_all-in.svg");
+    background-image: url("/images/case-studies/go-real-europe/bgnd_guide.svg");
   }
 
   .tm-case-study__section--checking {
@@ -30,7 +30,8 @@
   }
 
   .tm-case-study__section--guide {
-    background-image: url("/images/case-studies/go-real-europe/bgnd_guide.svg");
+    background-image: url("/images/case-studies/go-real-europe/bgnd_all-in.svg");
+
   }
 
   .tm-case-study__hero {
@@ -83,6 +84,14 @@
     }
     .tm-case-study__section--svg {
       background-position: center;
+      width: 100%;
+      height: 120px;
+    }
+    .tm-case-study__section--svg-order_1 {
+      order: 1;
+    }
+    .order_2{
+      order: 2;
     }
   }
 
@@ -170,13 +179,13 @@
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div
-        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 order_2">
         <h4>An all-in-one crafted trip</h4>
         <p>Presenting a unique, personalized itinerary with the overall plan including
           transportation, accommodation, tours, and transfers automatically generated for
           each traveler.</p>
       </div>
-      <div class="tm-case-study__section mdc-layout-grid__cell mdc-layout-grid__cell--span-6 tm-case-study__section--svg tm-case-study__section--all-in">
+      <div class="tm-case-study__section mdc-layout-grid__cell mdc-layout-grid__cell--span-6 tm-case-study__section--svg tm-case-study__section--svg-order_1 tm-case-study__section--all-in">
       </div>
     </div>
   </div>
@@ -201,7 +210,7 @@
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div
-        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 order_2">
         <h4>A&nbsp;personal guide on the go</h4>
         <p>An itinerary that always has your back, including smart navigation for
           self-guided travel, one-step package booking, and presenting opportunities to
@@ -209,7 +218,7 @@
           guides, cable cars to mountain summits, and more&nbsp;&ndash; all at your
           fingertips.</p>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 tm-case-study__section--svg tm-case-study__section--guide">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 tm-case-study__section tm-case-study__section--svg tm-case-study__section--svg-order_1 tm-case-study__section--guide">
       </div>
     </div>
   </div>
@@ -236,7 +245,7 @@
           GRE’s&nbsp;itineraries.</p>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h3>The tech</h3>
+        <h3>18 technologies</h3>
         <p>GRE and its entire troop of boast-worthy technologies that run behind the scenes:</p>
       </div>
     </div>
