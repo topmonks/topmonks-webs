@@ -6,7 +6,7 @@
   "author": "TopMonks",
   "license": "MIT",
   "dependencies": {
-    "@material/layout-grid": "^0.40.1",
+    "@material/layout-grid": "^0.41.0",
     "bluebird": "^3.5.2"
   },
   "devDependencies": {
