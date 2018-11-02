@@ -59,6 +59,9 @@
 .tm-case-studies__title {
   text-align: center;
 }
+.tm-case-studies__logo--gorealeurope .tm-bgnd-wrapper {
+  background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_gorealeurope.jpg");
+}
 .tm-case-studies__logo--pricefx .tm-bgnd-wrapper {
   background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_pricefx.jpg");
 }
@@ -72,6 +75,9 @@
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
+  .tm-case-studies__logo--gorealeurope .tm-bgnd-wrapper {
+    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_gorealeurope.jpg");
+  }
   .tm-case-studies__logo--pricefx .tm-bgnd-wrapper {
     background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_pricefx.jpg");
   }
