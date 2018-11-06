@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "@material/layout-grid": "^0.41.0",
-    "bluebird": "^3.5.2"
+    "bluebird": "^3.5.3"
   },
   "devDependencies": {
     "ava": "^0.25.0",
