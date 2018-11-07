@@ -19,12 +19,6 @@ module.exports = {
       app: ["./index.js"]
     }
   },
-  hot: {
-    enabled: true,
-    reload: true,
-    quiet: true,
-    react: false
-  },
 
   stylesheets: {
     sass: {

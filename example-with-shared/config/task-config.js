@@ -1,8 +1,8 @@
 const globImporter = require("node-sass-glob-importer");
 
-// const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig"); // <- Use if you want to enable access to shared assets
+const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
 
-const config = {
+const config = createSharedTaskConfig(__dirname, {
   images: true,
   fonts: true,
   static: true,
@@ -29,15 +29,13 @@ const config = {
     server: {
       // should match `dest` in
       // path-config.json
-      baseDir: "./public/%APP_DIR_NAME%"
+      baseDir: "./public/example-with-shared"
     }
   },
 
   production: {
     rev: true
   }
-};
+});
 
 module.exports = config;
-
-// module.exports = createSharedTaskConfig(__dirname, config); // <- Use if you want to enable access to shared assets
