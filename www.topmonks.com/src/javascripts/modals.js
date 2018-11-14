@@ -72,7 +72,7 @@ const generateLinks = (data, keys) => {
   return keys
     .map(
       key =>
-        !!data[key]
+        data && !!data[key]
           ? `<span class="link">${icons[key]} <a target="_blank" href="${
               urls[key]
             }${data[key]}"><strong>${data[key]}</strong></a></span>`
@@ -87,6 +87,14 @@ setModalTeamMemberProfile = event => {
 
   const id = target.getAttribute("data-member-id");
   const member = members[id];
+
+  if (!id) {
+    console.warn("Property data-member-id is not set.");
+  }
+
+  if (!id || !member) {
+    return;
+  }
 
   const wrapperNode = document.createElement("div");
   wrapperNode.classList.add("tm-modal");

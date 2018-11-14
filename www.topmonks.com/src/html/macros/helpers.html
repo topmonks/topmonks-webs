@@ -1,7 +1,9 @@
 {% macro sprite(id, viewBox, classes) %}
 {% set viewBox = viewBox or "0 0 1 1"%}
 <span class='sprite -{{id}} {{classes}}'>
-  <svg viewBox="{{viewBox}}"><use xlink:href='/images/icons.svg#{{id}}'></use></svg>
+  <svg viewBox="{{viewBox}}">
+    <use xlink:href='/images/icons.svg#{{id}}'></use>
+  </svg>
 </span>
 {% endmacro %}
 
@@ -11,8 +13,9 @@
 
 {% macro teamMember(member, hero) -%}
 {% set fullName = member.name + ' ' + member.surname %}
-<div class="box mdc-layout-grid__cell tm-team__member {% if hero %}mdc-layout-grid__cell--span-3-desktop tm-team__member--hero{% endif %}">
-  <img alt="[foto] {{fullName}}" src="https://insight.topmonks.com/avatar/{{member.id}}" onerror="this.onerror=null; this.src='/images/monk_logo.png'" width="75" height="75">
+<div data-member-id="{{member.id}}" class="box mdc-layout-grid__cell tm-team__member {% if hero %}mdc-layout-grid__cell--span-3-desktop tm-team__member--hero{% endif %}">
+  <img alt="[foto] {{fullName}}" src="https://insight.topmonks.com/avatar/{{member.id}}" onerror="this.onerror=null; this.src='/images/monk_logo.png'"
+    width="75" height="75">
   <div class="content">
     <strong>{{fullName}}</strong>
     <span>{{member.job_title}}</span>
