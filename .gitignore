@@ -6,4 +6,8 @@ public/
 results/
 *.log
 .
+.pulumi/.gitignore
+.pulumi/package.json
+.pulumi/package-lock.json
+
 team.json

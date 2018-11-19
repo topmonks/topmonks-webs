@@ -2,7 +2,9 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-version: 2
+version: 2.1
+orbs:
+  pulumi: pulumi/pulumi@1.0.0
 
 test-site: &test-site
   docker:
@@ -178,61 +180,86 @@ jobs:
             aws configure set preview.cloudfront true
             aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
 
+  deploy-test-caffe-topmonks-com:
+    docker:
+    - image: circleci/node:10
+    working_directory: ~/topmonks-webs
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - pulumi/login
+      - run:
+          command: |
+            cd .pulumi
+            pulumi new https://github.com/pulumi/templates/aws-javascript -s topmonks/topmonks-webs-prod
+      - pulumi/update:
+          working_directory: .pulumi
+          stack: topmonks/topmonks-webs-prod
+          skip-preview: true
+
 workflows:
   version: 2
   build_and_deploy:
     jobs:
       - build
-      - test-www-topmonks-com:
-          requires:
-            - build
-      - test-blockchain-topmonks-com:
-          requires:
-            - build
-      - test-studio-topmonks-com:
-          requires:
-            - build
-      - test-www-topmonks-cz:
-          requires:
-            - build
-      - test-caffe-topmonks-cz:
-          requires:
-            - build
-      - test-prodeti-topmonks-cz:
-          requires:
-            - build
-      - deploy-prodeti-topmonks-cz:
+#      - test-www-topmonks-com:
+#          requires:
+#            - build
+#      - test-blockchain-topmonks-com:
+#          requires:
+#            - build
+#      - test-studio-topmonks-com:
+#          requires:
+#            - build
+#      - test-www-topmonks-cz:
+#          requires:
+#            - build
+#      - test-caffe-topmonks-cz:
+#          requires:
+#            - build
+#      - test-prodeti-topmonks-cz:
+#          requires:
+#            - build
+#      - deploy-prodeti-topmonks-cz:
+#          context: org-global
+#          requires:
+#            - test-prodeti-topmonks-cz
+#          filters:
+#            branches:
+#              only: master
+#      - deploy-www-topmonks-com:
+#          context: org-global
+#          requires:
+#            - test-www-topmonks-com
+#          filters:
+#            branches:
+#              only: master
+#      - deploy-www-topmonks-cz:
+#          context: org-global
+#          requires:
+#            - test-www-topmonks-cz
+#          filters:
+#            branches:
+#              only: master
+#      - deploy-blockchain-topmonks-com:
+#          context: org-global
+#          requires:
+#            - test-blockchain-topmonks-com
+#          filters:
+#            branches:
+#              only: master
+#      - deploy-studio-topmonks-com:
+#          context: org-global
+#          requires:
+#            - test-studio-topmonks-com
+#          filters:
+#            branches:
+#              only: master
+      - deploy-test-caffe-topmonks-com:
           context: org-global
           requires:
-            - test-prodeti-topmonks-cz
+          - build
           filters:
             branches:
-              only: master
-      - deploy-www-topmonks-com:
-          context: org-global
-          requires:
-            - test-www-topmonks-com
-          filters:
-            branches:
-              only: master
-      - deploy-www-topmonks-cz:
-          context: org-global
-          requires:
-            - test-www-topmonks-cz
-          filters:
-            branches:
-              only: master
-      - deploy-blockchain-topmonks-com:
-          context: org-global
-          requires:
-            - test-blockchain-topmonks-com
-          filters:
-            branches:
-              only: master
-      - deploy-studio-topmonks-com:
-          context: org-global
-          requires:
-            - test-studio-topmonks-com
-          filters:
-            branches:
-              only: master
+              only: feature/pulumi-deploy
