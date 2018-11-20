@@ -183,7 +183,7 @@ jobs:
   deploy-test-caffe-topmonks-com:
     docker:
     - image: circleci/node:7.10
-    working_directory: ~/topmonks-webs
+    working_directory: ~/topmonks-webs/.pulumi
     steps:
       - checkout
       - attach_workspace:
@@ -191,12 +191,10 @@ jobs:
       - pulumi/login
       - run:
           command: |
-            cd .pulumi
             echo $PWD
+            ls -all
             npm install
-            npm run build
       - pulumi/update:
-          working_directory: .pulumi
           stack: topmonks/topmonks-webs-prod
           skip-preview: true
 
