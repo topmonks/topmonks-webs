@@ -28,11 +28,17 @@
 .copy-and-media .tm-layout-wrapper {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
-
+.about {
+  padding-right: 2em;
+}
+.footer_social-buttons {
+text-align: right;
+}
 .social-buttons {
   background-color: #fff;
   border-radius: 52px;
   display: inline-block;
+  padding: 2px 8px;
 }
 .social-buttons a {
   display: inline-block;
