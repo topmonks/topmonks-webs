@@ -464,7 +464,11 @@ footer p {
 }
 
 footer .social-buttons {
-  margin-top: 1em;
+  margin-top: 0.5em;
+    background-color: #fff;
+    border-radius: 52px;
+    display: inline-block;
+    padding: 5px 8px 0px;
 }
 
 .social-buttons svg {
