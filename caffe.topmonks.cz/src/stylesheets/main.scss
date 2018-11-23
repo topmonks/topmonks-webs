@@ -31,9 +31,7 @@ header {
 .tm-header {
   margin-top: 1.5em;
 }
-.upcoming-poster {
-  display: none;
-    }
+
 
 .tm-layout-grid__cell--span-0-desktop {
   @media screen and (min-width: 840px) {
@@ -85,7 +83,7 @@ main #main_content {
 
   .newest-news {
     width: 228px;
-    margin: 3em 6em;
+    margin: 2em 6em;
     box-shadow: 0 0.44em 1.1em rgba(0,0,0,.2);
     background-color: #FFFFFF;
     p {
@@ -216,6 +214,9 @@ main #main_content {
   main #main_content {
     background: none;
   }
+  .upcoming-poster {
+    display: none;
+      }
   #uvod {
   .opening_text {
     color: #4a4a4a;
