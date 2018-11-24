@@ -44,9 +44,6 @@ header {
 @media (min-width: 2024px) {
   #uvod {
     margin: 0 0 6em;
-  .opening_text {
-    padding-top: 8em;
-}
   }
 }
 
@@ -63,9 +60,9 @@ section {
   font-size: 0.875em;
   background-color: #FFFFFF;
 }
-main #main_content {
+main #uvod {
   background: url("https://res.cloudinary.com/topmonks/image/upload/c_scale,h_590,w_1280/v1542985969/caffe.topmonks.cz/main_BG.png") no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
   }
 
 #uvod {
