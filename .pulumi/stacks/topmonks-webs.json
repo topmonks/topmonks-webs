@@ -4,19 +4,19 @@
         "stack": "topmonks-webs",
         "latest": {
             "manifest": {
-                "time": "2018-11-25T19:05:19.991567+01:00",
+                "time": "2018-11-25T19:34:57.455118284Z",
                 "magic": "312a582fa53be4136b42e235d4fedbc33f0ed1170179b9a88ae100c62388f448",
                 "version": "v0.16.5",
                 "plugins": [
                     {
                         "name": "nodejs",
-                        "path": "/usr/local/bin/pulumi-language-nodejs",
+                        "path": "/home/circleci/.pulumi/bin/pulumi-language-nodejs",
                         "type": "language",
                         "version": "0.16.5"
                     },
                     {
                         "name": "aws",
-                        "path": "/Users/rarous/.pulumi/plugins/resource-aws-v0.16.2/pulumi-resource-aws",
+                        "path": "/home/circleci/.pulumi/plugins/resource-aws-v0.16.2/pulumi-resource-aws",
                         "type": "resource",
                         "version": "0.16.2"
                     }
