@@ -8,5 +8,4 @@ node_modules/
 .
 team.json
 /.pulumi/stacks/topmonks-webs.json.bak
-/.pulumi/history/
 /.pulumi/backups/

@@ -133,6 +133,16 @@ jobs:
           command: yarn
       - pulumi/update:
           stack: topmonks-webs
+          skip-preview: true
+      - run:
+          name: Store updated Pulumi state
+          command: |
+            git config credential.helper 'cache --timeout=120'
+            git config user.email "robot@topmonks.com"
+            git config user.name "Deployment Bot"
+            git status -s | grep .pulumi && git commit --allow-empty -am "[skip ci] Updated Pulumi stack state"
+            # Push quietly to prevent showing the token in log
+            git push -q https://${GITHUB_BOT_TOKEN}@github.com/topmonks/topmonks-webs.git master
 
   deploy-prodeti-topmonks-cz:
     <<: *s3-deploy

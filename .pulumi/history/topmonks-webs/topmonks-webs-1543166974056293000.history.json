@@ -1,0 +1,27 @@
+{
+    "kind": "update",
+    "startTime": 1543166968,
+    "message": "Contact hr",
+    "environment": {
+        "git.author": "Cihlova",
+        "git.author.email": "33567545+Cihlova@users.noreply.github.com",
+        "git.committer": "Cihlova",
+        "git.committer.email": "33567545+Cihlova@users.noreply.github.com",
+        "git.dirty": "true",
+        "git.head": "a6264e980d5d86cf94865332a461bea1a697d9dc",
+        "git.headName": "refs/heads/master",
+        "github.login": "topmonks",
+        "github.repo": "topmonks-webs",
+        "vcs.kind": "github.com",
+        "vcs.owner": "topmonks",
+        "vcs.repo": "topmonks-webs"
+    },
+    "config": {
+        "aws:region": "eu-central-1"
+    },
+    "result": "succeeded",
+    "endTime": 1543166974,
+    "resourceChanges": {
+        "same": 6
+    }
+}

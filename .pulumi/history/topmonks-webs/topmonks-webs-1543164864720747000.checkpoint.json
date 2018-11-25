@@ -4,7 +4,7 @@
         "stack": "topmonks-webs",
         "latest": {
             "manifest": {
-                "time": "2018-11-25T19:05:19.991567+01:00",
+                "time": "2018-11-25T17:54:24.71813+01:00",
                 "magic": "312a582fa53be4136b42e235d4fedbc33f0ed1170179b9a88ae100c62388f448",
                 "version": "v0.16.5",
                 "plugins": [
@@ -26,16 +26,20 @@
                 {
                     "urn": "urn:pulumi:topmonks-webs::topmonks-webs::pulumi:pulumi:Stack::topmonks-webs-topmonks-webs",
                     "custom": false,
-                    "type": "pulumi:pulumi:Stack"
+                    "type": "pulumi:pulumi:Stack",
+                    "outputs": {
+                        "test": "pokus"
+                    }
                 },
                 {
                     "urn": "urn:pulumi:topmonks-webs::topmonks-webs::topmonks-webs:WebSite::caffe.topmonks.cz",
                     "custom": false,
                     "type": "topmonks-webs:WebSite",
                     "outputs": {
+                        "cloudFrontDomain": "d3qdvw0noia80y.cloudfront.net",
                         "cloudFrontId": "EQ3Z90HYRV83G",
                         "contentBucketUri": "s3://caffe.topmonks.cz.s3.amazonaws.com",
-                        "domain": "caffe.topmonks.cz",
+                        "contentBucketWebsiteEndpoint": "caffe.topmonks.cz.s3-website.eu-central-1.amazonaws.com",
                         "url": "https://caffe.topmonks.cz/"
                     },
                     "parent": "urn:pulumi:topmonks-webs::topmonks-webs::pulumi:pulumi:Stack::topmonks-webs-topmonks-webs"
