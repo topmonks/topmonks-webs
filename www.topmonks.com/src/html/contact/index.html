@@ -109,6 +109,9 @@
     p.box_text-about {
       height: 90px;
     }
+    #contacts-main .box img {
+      margin: 2em 0 0;
+    }
 
     hr {
       width: 288px;
@@ -127,16 +130,13 @@
       height: 100px;
     }
 
-    .box-member img {
-      margin: 2em 0 0;
-    }
   }
 </style>
 {% endblock %}
 
 {% block content %}
 <div itemscope itemtype="https://schema.org/Organization">
-  <section class="mdc-layout-grid">
+  <section id="contacts-main" class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div class="contact-title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Get In Touch</h2>
