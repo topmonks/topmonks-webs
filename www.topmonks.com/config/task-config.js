@@ -6,8 +6,9 @@ const merge = require("gulp-merge-json");
 const watch = require("gulp-watch");
 const path = require("path");
 const gulp = require("gulp");
+const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
 
-module.exports = {
+const config = createSharedTaskConfig(__dirname, {
   images: true,
   fonts: true,
   static: true,
@@ -97,4 +98,6 @@ module.exports = {
       prebuild: ["team-data"]
     }
   }
-};
+});
+
+module.exports = config;

@@ -89,46 +89,36 @@ yarn run http-server public/www.topmonks.com -p 3000
 
 ## Create new site
 
-If you want to create a new site, e.g. new-app.topmonks.com, simply run
+If you want to create a new site, e.g. `new-site.topmonks.com`, simply run
 
 ```
-yarn create-site new-app.topmonks.com
+yarn create-site new-site.topmonks.com
 ```
 
 then simply run for development mode
 
 ```
-yarn start:new-app.topmonks.com
+yarn start:new-site.topmonks.com
 ```
 
-The command will generate initial files and package.json scripts for you. Don't forget to include your repo in .circleci/config.yml when ready to deploy.
+The command will generate initial files and package.json scripts for you.
+Don't forget to include your repo in `.circleci/config.yml` when ready to deploy.
 
 ### Options
 
 * `-v`, `--verbose`
 * `-h`, `--help`
-* `-t`, `--title`, adds title to various places, e.g. `<title>Your title</title>` in default html template. Default value is `Topmonks` if not provided.
+* `-t`, `--title`, adds title to various places, e.g. `<title>Your title</title>` in default html template. Default value is `TopMonks` if not provided.
 * `<project-directory>`, project dir/name
 
 ### Full command example
 ```
-yarn create-site new-app.topmonks.com -v --title "New Topmonks App" 
+yarn create-site new-site.topmonks.com -v --title "New TopMonks App" 
 ```
 ## Shared Assets
 
-Your project can have access to the /shared folder to use shared assets. Currently there is only support for html/css. So, let's start with simple configuration, in `your_project/config/task-config.js` import:
-```javascript
-const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
-```
-
-Usually you would do `module.exports = config;` at the end of the file, however createSharedTaskConfig modifies our config  injecting some extra configuration to load html/css as well as add some gulp watch tasks. Modify your module.export like this:
-```javascript
-const yourConfig = {...};
-
-module.exports = createSharedTaskConfig(__dirname, yourConfig);
-```
-
-That's it, now you can import shared assets in your project.
+Your project can have access to the `/shared` folder to use shared assets. 
+Currently there is only support for HTTL and CSS.
 
 ### Importing shared assets
 
@@ -136,20 +126,21 @@ That's it, now you can import shared assets in your project.
 ```
 {% include 'common/example.html' %}
 ```
-#### Don't forget to add (S)CSS
+#### SCSS
 ```
 @import 'common/example'
 ```
 
-
 ### Creating Shared Assets
 To create new assets, create them in:
 
-* html and (s)css files as `/shared/src/common/your_new_component.{html/scss}` 
+* html and scss files as `/shared/src/common/example.{html/scss}` 
 
-These rules will simplify the import and will ensure that when importing them in projects, the imports will have the same import pattern starting with `'common/*'`
+These rules will simplify the import and will ensure that when importing
+them in projects, the imports will have the same import pattern starting with `'common/*'`
 
 
 ## Issues
 
-If you find any [issues](https://github.com/topmonks/topmonks-webs/issues), please, [report them](https://github.com/topmonks/topmonks-webs/issues/new) immediately.
+If you find any [issues](https://github.com/topmonks/topmonks-webs/issues), please,
+[report them](https://github.com/topmonks/topmonks-webs/issues/new) immediately.

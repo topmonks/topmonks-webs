@@ -2,7 +2,7 @@ const commander = require("commander");
 const chalk = require("chalk");
 const fs = require("fs");
 const path = require("path");
-const PATH = path.resolve("create-site");
+const PATH = path.resolve(".scripts/create-site");
 
 const Promise = require("bluebird");
 const writeFile = Promise.promisify(fs.writeFile);
@@ -17,18 +17,18 @@ const VERSION = "0.0.1";
 /************************************************************************
  * Commander
  */
-let APP_DIR_NAME = "";
-const program = new commander.Command("createApp")
+let SITE_DIR_NAME = "";
+const program = new commander.Command("createSite")
   .version(VERSION)
   .arguments("<project-directory>")
   .action(name => {
-    APP_DIR_NAME = name;
+    SITE_DIR_NAME = name;
   })
-  .option("-t, --title [title]", "Set App Title")
+  .option("-t, --title [title]", "Set Site Title")
   .option("-v, --verbose", "Verbose")
   .parse(process.argv);
 
-const APP_TITLE = program.title || "Topmonks";
+const SITE_TITLE = program.title || "TopMonks";
 const IS_VERBOSE = !!program.verbose;
 
 /*
@@ -67,11 +67,11 @@ const generatedFiles = [
 const replaceKeys = [
   {
     regex: /%APP_DIR_NAME%/g,
-    value: APP_DIR_NAME
+    value: SITE_DIR_NAME
   },
   {
     regex: /%APP_TITLE%/g,
-    value: APP_TITLE
+    value: SITE_TITLE
   }
 ];
 
@@ -120,7 +120,7 @@ const exitApp = message => {
 /**
  * Check if we received directory name
  */
-if (typeof APP_DIR_NAME === "undefined" || !APP_DIR_NAME) {
+if (typeof SITE_DIR_NAME === "undefined" || !SITE_DIR_NAME) {
   console.error("Please specify the project directory:");
   console.log(
     `${chalk.cyan(program.name())} ${chalk.green("<project-directory>")}`
@@ -128,7 +128,7 @@ if (typeof APP_DIR_NAME === "undefined" || !APP_DIR_NAME) {
   console.log();
   console.log("For example:");
   console.log(
-    `${chalk.cyan(program.name())} ${chalk.green("new-app.topmonks.com")}`
+    `${chalk.cyan(program.name())} ${chalk.green("new-site.topmonks.com")}`
   );
   console.log();
   console.log(
@@ -143,11 +143,11 @@ if (typeof APP_DIR_NAME === "undefined" || !APP_DIR_NAME) {
  */
 function createDirectories(root) {
   if (!fs.existsSync(root)) {
-    Logger.log("Creating new directory:", APP_DIR_NAME);
+    Logger.log("Creating new directory:", SITE_DIR_NAME);
     fs.mkdirSync(root);
 
     generatedDirectories.forEach(dirName => {
-      Logger.log("Creating new directory:", `${APP_DIR_NAME}/${dirName}`);
+      Logger.log("Creating new directory:", `${SITE_DIR_NAME}/${dirName}`);
       fs.mkdirSync(`${root}/${dirName}`);
     });
 
@@ -166,7 +166,7 @@ function generateFiles(root) {
   return Promise.all(
     generatedFiles.map(file =>
       readFile(`${PATH}/${file}`, "utf8").then(data => {
-        Logger.log("Generating file:", `${APP_DIR_NAME}/${file}`);
+        Logger.log("Generating file:", `${SITE_DIR_NAME}/${file}`);
 
         const result = replaceTemplateKey(data, replaceKeys);
 
@@ -189,11 +189,14 @@ function createPackageJsonScripts() {
     const packageConfig = JSON.parse(data);
 
     packageConfig.scripts[
-      `start:${APP_DIR_NAME}`
-    ] = `BLENDID_CONFIG_PATH=./${APP_DIR_NAME}/config/ blendid`;
+      `start:${SITE_DIR_NAME}`
+    ] = `BLENDID_CONFIG_PATH=./${SITE_DIR_NAME}/config/ blendid`;
     packageConfig.scripts[
-      `build:${APP_DIR_NAME}`
-    ] = `BLENDID_CONFIG_PATH=./${APP_DIR_NAME}/config/ blendid -- build`;
+      `build:${SITE_DIR_NAME}`
+    ] = `BLENDID_CONFIG_PATH=./${SITE_DIR_NAME}/config/ blendid -- build`;
+    packageConfig.scripts[
+      `test:broken-links:${SITE_DIR_NAME}`
+    ] = `blcl ./public/${SITE_DIR_NAME} -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com`;
 
     const packageConfigStrigified = JSON.stringify(packageConfig, null, 2);
 
@@ -210,8 +213,8 @@ function create(name) {
     .then(() => {
       console.log("Successfully created");
       console.log(
-        `Start your app with command: ${chalk.green(
-          `yarn start:${APP_DIR_NAME}`
+        `Start your site with command: ${chalk.green(
+          `yarn start:${SITE_DIR_NAME}`
         )}`
       );
       console.log();
@@ -221,4 +224,4 @@ function create(name) {
     .catch(e => exitApp(e));
 }
 
-create(APP_DIR_NAME);
+create(SITE_DIR_NAME);

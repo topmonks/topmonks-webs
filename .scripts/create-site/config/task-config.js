@@ -1,8 +1,7 @@
 const globImporter = require("node-sass-glob-importer");
+const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
 
-// const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig"); // <- Use if you want to enable access to shared assets
-
-const config = {
+const config = createSharedTaskConfig(__dirname, {
   images: true,
   fonts: true,
   static: true,
@@ -36,7 +35,7 @@ const config = {
   production: {
     rev: true
   }
-};
+});
 
 module.exports = config;
 
