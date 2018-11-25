@@ -1,9 +1,6 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
-version: 2
-
+version: 2.1
+orbs:
+  pulumi: pulumi/pulumi@1.0.0
 test-site: &test-site
   docker:
     - image: circleci/node:10-browsers
@@ -32,6 +29,18 @@ s3-deploy: &s3-deploy
   docker:
     - image: cibuilds/aws:latest
   working_directory: ~/topmonks-webs
+  steps:
+    - checkout
+    - attach_workspace:
+        at: ~/topmonks-webs
+    - run:
+        name: Deploy to S3
+        command: aws s3 sync "public/$HOST" "s3://$HOST/"
+    - run:
+        name: Invalidate CDN distribution
+        command: |
+          aws configure set preview.cloudfront true
+          aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
 
 jobs:
   build:
@@ -93,96 +102,70 @@ jobs:
     environment:
       HOST: prodeti.topmonks.cz
 
+  provision:
+    docker:
+      - image: 'circleci/node:10'
+    working_directory: ~/topmonks-webs
+    steps:
+      - checkout
+      - run:
+          name: "Install Pulumi CLI, if needed"
+          command: |
+            curl -L https://get.pulumi.com/ | bash -s
+            # Add to PATH
+            echo 'export PATH=/home/circleci/.pulumi/bin:$PATH' >> $BASH_ENV
+            source $BASH_ENV
+      - run:
+          name: "Log into Pulumi"
+          command: pulumi login file:///home/circleci/topmonks-webs
+      - pulumi/preview:
+          stack: topmonks-webs
+
   deploy-prodeti-topmonks-cz:
     <<: *s3-deploy
     environment:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E3FDER5NIOLAD2
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - run:
-          name: Deploy to S3
-          command: aws s3 sync public/prodeti.topmonks.cz s3://prodeti.topmonks.cz/
-      - run:
-          name: Invalidate CDN distribution
-          command: |
-            aws configure set preview.cloudfront true
-            aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+      HOST: prodeti.topmonks.cz
 
   deploy-blockchain-topmonks-com:
     <<: *s3-deploy
     environment:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E8FIHBRFAUTJQ
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - run:
-          name: Deploy to S3
-          command: aws s3 sync public/blockchain.topmonks.com s3://blockchain.topmonks.com/
-      - run:
-          name: Invalidate CDN distribution
-          command: |
-            aws configure set preview.cloudfront true
-            aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+      HOST: blockchain.topmonks.com
 
   deploy-studio-topmonks-com:
     <<: *s3-deploy
     environment:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E3E7VE5619MYLH
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - run:
-          name: Deploy to S3
-          command: aws s3 sync public/studio.topmonks.com s3://studio.topmonks.com/
-      - run:
-          name: Invalidate CDN distribution
-          command: |
-            aws configure set preview.cloudfront true
-            aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+      HOST: studio.topmonks.com
 
   deploy-www-topmonks-com:
     <<: *s3-deploy
     environment:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: EMNWZWEX2M2BH
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - run:
-          name: Deploy to S3
-          command: aws s3 sync public/www.topmonks.com s3://www.topmonks.com/
-      - run:
-          name: Invalidate CDN distribution
-          command: |
-            aws configure set preview.cloudfront true
-            aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+      HOST: www.topmonks.com
 
   deploy-www-topmonks-cz:
     <<: *s3-deploy
     environment:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E1CX5IMQ3B6G4W
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - run:
-          name: Deploy to S3
-          command: aws s3 sync public/www.topmonks.cz s3://www.topmonks.cz/
-      - run:
-          name: Invalidate CDN distribution
-          command: |
-            aws configure set preview.cloudfront true
-            aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+      HOST: www.topmonks.cz
+
+  deploy-caffe-topmonks-cz:
+    <<: *s3-deploy
+    environment:
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: EQ3Z90HYRV83G
+      HOST: caffe.topmonks.cz
 
 workflows:
-  version: 2
   build_and_deploy:
     jobs:
       - build
+      - provision:
+          context: org-global
+          filters:
+            branches:
+              only: master
       - test-www-topmonks-com:
           requires:
             - build
@@ -204,6 +187,7 @@ workflows:
       - deploy-prodeti-topmonks-cz:
           context: org-global
           requires:
+            - provision
             - test-prodeti-topmonks-cz
           filters:
             branches:
@@ -211,6 +195,7 @@ workflows:
       - deploy-www-topmonks-com:
           context: org-global
           requires:
+            - provision
             - test-www-topmonks-com
           filters:
             branches:
@@ -218,6 +203,7 @@ workflows:
       - deploy-www-topmonks-cz:
           context: org-global
           requires:
+            - provision
             - test-www-topmonks-cz
           filters:
             branches:
@@ -225,6 +211,7 @@ workflows:
       - deploy-blockchain-topmonks-com:
           context: org-global
           requires:
+            - provision
             - test-blockchain-topmonks-com
           filters:
             branches:
@@ -232,6 +219,7 @@ workflows:
       - deploy-studio-topmonks-com:
           context: org-global
           requires:
+            - provision
             - test-studio-topmonks-com
           filters:
             branches:

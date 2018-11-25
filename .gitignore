@@ -1,9 +1,12 @@
 .idea/
-node_modules/
-public/
 .idea/workspace.xml
+node_modules/
+/public/
 /package-lock.json
-results/
+/results/
 *.log
 .
 team.json
+/.pulumi/stacks/topmonks-webs.json.bak
+/.pulumi/history/
+/.pulumi/backups/

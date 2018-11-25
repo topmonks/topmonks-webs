@@ -204,12 +204,27 @@ function createPackageJsonScripts() {
   });
 }
 
+function addSiteToIaaC(name) {
+  const filePath = path.resolve("./websites.json");
+  Logger.log();
+  Logger.log("Adding website to websites.json manifest");
+  Logger.log();
+
+  return readFile(filePath, "utf8").then(data => {
+    const websites = JSON.parse(data);
+    // add default website configuration
+    websites[name] = {};
+    return writeFile(filePath, JSON.stringify(websites, null, 2), "utf8");
+  });
+}
+
 function create(name) {
   const root = path.resolve(name);
 
   createDirectories(root)
     .then(() => generateFiles(root))
     .then(() => createPackageJsonScripts())
+    .then(() => addSiteToIaaC(name))
     .then(() => {
       console.log("Successfully created");
       console.log(

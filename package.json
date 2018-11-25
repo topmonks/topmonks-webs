@@ -1,5 +1,6 @@
 {
   "name": "TopMonks-webs",
+  "main": "index.js",
   "version": "1.0.0",
   "description": "TopMonks Webs",
   "repository": "https://github.com/topmonks/topmonks-webs.git",
@@ -7,11 +8,13 @@
   "license": "MIT",
   "dependencies": {
     "@material/layout-grid": "^0.41.0",
-    "bluebird": "^3.5.3"
+    "@pulumi/pulumi": "latest",
+    "@pulumi/aws": "latest"
   },
   "devDependencies": {
     "ava": "^0.25.0",
     "blendid": "^4.4.3",
+    "bluebird": "^3.5.2",
     "broken-link-checker-local": "^0.2.0",
     "chalk": "^2.4.1",
     "commander": "^2.19.0",

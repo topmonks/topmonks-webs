@@ -139,6 +139,16 @@ To create new assets, create them in:
 These rules will simplify the import and will ensure that when importing
 them in projects, the imports will have the same import pattern starting with `'common/*'`
 
+## Provisioning
+
+Whole infrastructure is provisioned by Pulumi.io program. If you create new website via
+`yarn create-site` then the web site will be provisioned in AWS (S3, Cloudfront, Route53).
+Website will be added to `websites.json` manifest file where you can override default
+settings.
+
+TODO: allow overrides and document them
+
+Any update to Pulumi stack in `master` branch will be deployed from Integration Server.
 
 ## Issues
 
