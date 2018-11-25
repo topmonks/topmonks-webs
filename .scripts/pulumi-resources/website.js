@@ -14,7 +14,6 @@ function createBucket(parent, domain) {
     `${domain}/bucket`,
     {
       bucket: domain,
-      acl: "public-read",
       website: {
         indexDocument: "index.html",
         errorDocument: "404.html"
@@ -25,9 +24,40 @@ function createBucket(parent, domain) {
 }
 
 /**
+ * Creates Public read bucket policy
+ * @param parent {pulumi.ComponentResource} parent component
+ * @param domain {string} website domain name
+ * @param bucket {aws.s3.Bucket}
+ * @returns {aws.s3.BucketPolicy}
+ */
+function createBucketPolicy(parent, domain, bucket) {
+  return new aws.s3.BucketPolicy(
+    `${domain}/bucket-policy`,
+    {
+      bucket: bucket.bucket,
+      policy: JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [
+          {
+            Sid: "1",
+            Effect: "Allow",
+            Principal: {
+              AWS: "*"
+            },
+            Action: "s3:GetObject",
+            Resource: `arn:aws:s3:::${domain}/*`
+          }
+        ]
+      })
+    },
+    { parent }
+  );
+}
+
+/**
  * Creates CloudFront distribution on top of S3 website
- * @param parent {pulumi.ComponentResource}
- * @param domain {string}
+ * @param parent {pulumi.ComponentResource} parent component
+ * @param domain {string} website domain name
  * @param contentBucket {aws.s3.Bucket}
  * @returns {Promise<aws.cloudfront.Distribution>}
  */
@@ -95,8 +125,8 @@ async function createCloudFront(parent, domain, contentBucket) {
 
 /**
  * Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
- * @param parent {pulumi.ComponentResource}
- * @param domain {string}
+ * @param parent {pulumi.ComponentResource} parent component
+ * @param domain {string} website domain name
  * @param cdn {aws.cloudfront.Distribution}
  * @returns {Promise<aws.route53.Record>}
  */
@@ -120,7 +150,7 @@ async function createAliasRecord(parent, domain, cdn) {
 
 /**
  * Gets Widlcard certificate for top domain
- * @param domain {string}
+ * @param domain {string} website domain name
  * @returns {Promise<aws.acm.GetCertificateResult>}
  */
 function getCertificate(domain) {
@@ -177,9 +207,17 @@ class WebSite extends pulumi.ComponentResource {
     this.url = `https://${domain}/`;
   }
 
+  /**
+   * Asynchronously creates new WebSite Resource
+   * @param domain {string} website domain name
+   * @param settings {*} optional overrides of website configuration
+   * @param opts {pulumi.ComponentResourceOptions}
+   * @returns {Promise<WebSite>}
+   */
   static async create(domain, settings, opts) {
     const website = new WebSite(domain, settings, opts);
     const contentBucket = website.contentBucket = createBucket(website, domain);
+    website.contentBucketPolicy = createBucketPolicy(website, domain, contentBucket);
     const cdn = website.cdn = await createCloudFront(website, domain, contentBucket);
     website.dnsRecord = await createAliasRecord(website, domain, cdn);
     website.registerOutputs({
