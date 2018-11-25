@@ -128,6 +128,9 @@ jobs:
       - run:
           name: "Log into Pulumi"
           command: pulumi login file:///home/circleci/topmonks-webs
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install deps
           command: yarn
@@ -234,6 +237,15 @@ workflows:
           requires:
             - provision
             - test-studio-topmonks-com
+          filters:
+            branches:
+              only: master
+
+      - deploy-caffe-topmonks-cz:
+          context: org-global
+          requires:
+            - provision
+            - test-caffe-topmonks-cz
           filters:
             branches:
               only: master
