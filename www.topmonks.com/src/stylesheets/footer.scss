@@ -57,4 +57,13 @@
   @media screen and (min-width: 340px) {
     padding: 4px 12px 0;
   }
+  @media (max-width: 480px) {
+    padding: 6px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer_social-buttons {
+    text-align: left;
+  }
 }
