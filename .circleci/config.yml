@@ -128,9 +128,6 @@ jobs:
       - run:
           name: "Log into Pulumi"
           command: pulumi login file:///home/circleci/topmonks-webs
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install deps
           command: yarn
