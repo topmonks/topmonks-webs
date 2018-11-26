@@ -19,7 +19,7 @@ test-site: &test-site
         mkdir results
         yarn test:lighthouse
         yarn test:ava
-        yarn test:broken-links:$HOST
+        #yarn test:broken-links:$HOST
     - store_artifacts:
         path: ./results
     - store_test_results:
