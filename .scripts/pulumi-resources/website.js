@@ -155,7 +155,9 @@ async function createAliasRecord(parent, domain, cdn) {
  */
 function getCertificate(domain) {
   const parentDomain = getParentDomain(domain);
-  const usEast1 = new aws.Provider("us-east-1", { region: aws.USEast1Region });
+  const usEast1 = new aws.Provider(`${domain}/provider/us-east-1`, {
+    region: aws.USEast1Region
+  });
   return aws.acm.getCertificate(
     { domain: `*.${parentDomain}` },
     { provider: usEast1 }
@@ -216,9 +218,20 @@ class WebSite extends pulumi.ComponentResource {
    */
   static async create(domain, settings, opts) {
     const website = new WebSite(domain, settings, opts);
-    const contentBucket = website.contentBucket = createBucket(website, domain);
-    website.contentBucketPolicy = createBucketPolicy(website, domain, contentBucket);
-    const cdn = website.cdn = await createCloudFront(website, domain, contentBucket);
+    const contentBucket = (website.contentBucket = createBucket(
+      website,
+      domain
+    ));
+    website.contentBucketPolicy = createBucketPolicy(
+      website,
+      domain,
+      contentBucket
+    );
+    const cdn = (website.cdn = await createCloudFront(
+      website,
+      domain,
+      contentBucket
+    ));
     website.dnsRecord = await createAliasRecord(website, domain, cdn);
     website.registerOutputs({
       contentBucketUri: contentBucket.bucketDomainName.apply(t => `s3://${t}`),
