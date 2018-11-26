@@ -148,7 +148,7 @@ jobs:
   deploy-prodeti-topmonks-cz:
     <<: *s3-deploy
     environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E3FDER5NIOLAD2
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E81ZRHS2RR6UN
       HOST: prodeti.topmonks.cz
 
   deploy-blockchain-topmonks-com:
@@ -172,7 +172,7 @@ jobs:
   deploy-www-topmonks-cz:
     <<: *s3-deploy
     environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E1CX5IMQ3B6G4W
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E2K0QM3AL8O9FE
       HOST: www.topmonks.cz
 
   deploy-caffe-topmonks-cz:
