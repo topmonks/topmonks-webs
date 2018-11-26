@@ -154,13 +154,13 @@ jobs:
   deploy-blockchain-topmonks-com:
     <<: *s3-deploy
     environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E8FIHBRFAUTJQ
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E1CJ2HYFKVH0CG
       HOST: blockchain.topmonks.com
 
   deploy-studio-topmonks-com:
     <<: *s3-deploy
     environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E3E7VE5619MYLH
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E2CIFZELO3K1ME
       HOST: studio.topmonks.com
 
   deploy-www-topmonks-com:
