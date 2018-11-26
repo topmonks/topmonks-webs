@@ -1,0 +1,31 @@
+{
+    "kind": "update",
+    "startTime": 1543220382,
+    "message": "Convert Pulumi code to TypeScript (for improved Intellisense)",
+    "environment": {
+        "ci.build.id": "4125",
+        "ci.build.url": "https://circleci.com/gh/topmonks/topmonks-webs/4125",
+        "ci.pr.headSHA": "bc5f06e0b99dc8d057771a8481f2d0a6e153d0cf",
+        "ci.system": "CircleCI",
+        "git.author": "Aleš Roubíček",
+        "git.author.email": "ales@roubicek.name",
+        "git.committer": "Aleš Roubíček",
+        "git.committer.email": "ales@roubicek.name",
+        "git.dirty": "false",
+        "git.head": "bc5f06e0b99dc8d057771a8481f2d0a6e153d0cf",
+        "git.headName": "refs/heads/master",
+        "github.login": "topmonks",
+        "github.repo": "topmonks-webs",
+        "vcs.kind": "github.com",
+        "vcs.owner": "topmonks",
+        "vcs.repo": "topmonks-webs"
+    },
+    "config": {
+        "aws:region": "eu-central-1"
+    },
+    "result": "succeeded",
+    "endTime": 1543220387,
+    "resourceChanges": {
+        "same": 19
+    }
+}
