@@ -1,0 +1,31 @@
+{
+    "kind": "update",
+    "startTime": 1543221557,
+    "message": "Caffe web 2 - moved in a file V2",
+    "environment": {
+        "ci.build.id": "4141",
+        "ci.build.url": "https://circleci.com/gh/topmonks/topmonks-webs/4141",
+        "ci.pr.headSHA": "1555128ed3069a32d4f3729473444f0962821df6",
+        "ci.system": "CircleCI",
+        "git.author": "Cihlova",
+        "git.author.email": "33567545+Cihlova@users.noreply.github.com",
+        "git.committer": "Cihlova",
+        "git.committer.email": "33567545+Cihlova@users.noreply.github.com",
+        "git.dirty": "false",
+        "git.head": "1555128ed3069a32d4f3729473444f0962821df6",
+        "git.headName": "refs/heads/master",
+        "github.login": "topmonks",
+        "github.repo": "topmonks-webs",
+        "vcs.kind": "github.com",
+        "vcs.owner": "topmonks",
+        "vcs.repo": "topmonks-webs"
+    },
+    "config": {
+        "aws:region": "eu-central-1"
+    },
+    "result": "succeeded",
+    "endTime": 1543221562,
+    "resourceChanges": {
+        "same": 19
+    }
+}
