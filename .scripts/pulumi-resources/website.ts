@@ -5,17 +5,23 @@ import * as pulumi from "@pulumi/pulumi";
  * Creates S3 bucket with static website hosting enabled
  * @param parent {pulumi.ComponentResource} parent component
  * @param domain {string} website domain name
+ * @param settings {aws.s3.BucketArgs}
  * @returns {aws.s3.Bucket}
  */
-function createBucket(parent, domain) {
+function createBucket(
+  parent: pulumi.ComponentResource,
+  domain: string,
+  settings: aws.s3.BucketArgs
+) {
+  const website = settings.website || {
+    indexDocument: "index.html",
+    errorDocument: "404.html"
+  };
   return new aws.s3.Bucket(
     `${domain}/bucket`,
     {
       bucket: domain,
-      website: {
-        indexDocument: "index.html",
-        errorDocument: "404.html"
-      }
+      website
     },
     { parent }
   );
@@ -125,10 +131,14 @@ async function createCloudFront(parent, domain, contentBucket) {
  * Creates a new Route53 DNS record pointing the domain to the CloudFront distribution.
  * @param parent {pulumi.ComponentResource} parent component
  * @param domain {string} website domain name
- * @param cdn {aws.cloudfront.Distribution}
+ * @param cname {pulumi.Output<string>} aliased domain name
  * @returns {Promise<aws.route53.Record>}
  */
-async function createAliasRecord(parent, domain, cdn) {
+async function createAliasRecord(
+  parent: pulumi.ComponentResource,
+  domain: string,
+  cname: pulumi.Output<string>
+) {
   const domainParts = getDomainAndSubdomain(domain);
   const hostedZone = await aws.route53.getZone({
     name: domainParts.parentDomain
@@ -140,7 +150,7 @@ async function createAliasRecord(parent, domain, cdn) {
       zoneId: hostedZone.zoneId,
       type: "CNAME",
       ttl: 300,
-      records: [cdn.domainName]
+      records: [cname]
     },
     { parent }
   );
@@ -199,7 +209,7 @@ export class WebSite extends pulumi.ComponentResource {
   url: string;
   contentBucket: aws.s3.Bucket;
   contentBucketPolicy: aws.s3.BucketPolicy;
-  cdn: aws.cloudfront.Distribution;
+  cdn?: aws.cloudfront.Distribution;
   dnsRecord: aws.route53.Record;
 
   /**
@@ -229,25 +239,34 @@ export class WebSite extends pulumi.ComponentResource {
     const website = new WebSite(domain, settings, opts);
     const contentBucket = (website.contentBucket = createBucket(
       website,
-      domain
+      domain,
+      settings.bucket || {}
     ));
     website.contentBucketPolicy = createBucketPolicy(
       website,
       domain,
       contentBucket
     );
-    const cdn = (website.cdn = await createCloudFront(
-      website,
-      domain,
-      contentBucket
-    ));
-    website.dnsRecord = await createAliasRecord(website, domain, cdn);
-    website.registerOutputs({
+    let cdn;
+    if (!(settings.cdn && settings.cdn.disabled)) {
+      cdn = website.cdn = await createCloudFront(
+        website,
+        domain,
+        contentBucket
+      );
+    }
+    const cname = cdn ? cdn.domainName : contentBucket.bucketDomainName;
+    website.dnsRecord = await createAliasRecord(website, domain, cname);
+
+    const outputs = {
       contentBucketUri: contentBucket.bucketDomainName.apply(t => `s3://${t}`),
-      cloudFrontId: cdn.id,
       url: website.url,
       domain: domain
-    });
+    };
+    if (cdn) {
+      outputs["cloudFrontId"] = cdn.id;
+    }
+    website.registerOutputs(outputs);
     return website;
   }
 }
