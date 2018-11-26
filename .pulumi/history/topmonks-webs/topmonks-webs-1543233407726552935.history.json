@@ -1,0 +1,31 @@
+{
+    "kind": "update",
+    "startTime": 1543233402,
+    "message": "New CDN distribution IDs",
+    "environment": {
+        "ci.build.id": "4176",
+        "ci.build.url": "https://circleci.com/gh/topmonks/topmonks-webs/4176",
+        "ci.pr.headSHA": "d8b4df0a535b9f0c93e7f69c2beac2cb0e2928a8",
+        "ci.system": "CircleCI",
+        "git.author": "Aleš Roubíček",
+        "git.author.email": "ales@roubicek.name",
+        "git.committer": "Aleš Roubíček",
+        "git.committer.email": "ales@roubicek.name",
+        "git.dirty": "false",
+        "git.head": "d8b4df0a535b9f0c93e7f69c2beac2cb0e2928a8",
+        "git.headName": "refs/heads/master",
+        "github.login": "topmonks",
+        "github.repo": "topmonks-webs",
+        "vcs.kind": "github.com",
+        "vcs.owner": "topmonks",
+        "vcs.repo": "topmonks-webs"
+    },
+    "config": {
+        "aws:region": "eu-central-1"
+    },
+    "result": "succeeded",
+    "endTime": 1543233407,
+    "resourceChanges": {
+        "same": 31
+    }
+}
