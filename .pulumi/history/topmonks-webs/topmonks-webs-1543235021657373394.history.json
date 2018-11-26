@@ -1,0 +1,32 @@
+{
+    "kind": "update",
+    "startTime": 1543234964,
+    "message": "Added redirect bucket for prodeti and caffe on topmonks.com",
+    "environment": {
+        "ci.build.id": "4192",
+        "ci.build.url": "https://circleci.com/gh/topmonks/topmonks-webs/4192",
+        "ci.pr.headSHA": "e66a9c3af828733992a6871436d5a59994f1aec5",
+        "ci.system": "CircleCI",
+        "git.author": "Aleš Roubíček",
+        "git.author.email": "ales@roubicek.name",
+        "git.committer": "Aleš Roubíček",
+        "git.committer.email": "ales@roubicek.name",
+        "git.dirty": "false",
+        "git.head": "e66a9c3af828733992a6871436d5a59994f1aec5",
+        "git.headName": "refs/heads/master",
+        "github.login": "topmonks",
+        "github.repo": "topmonks-webs",
+        "vcs.kind": "github.com",
+        "vcs.owner": "topmonks",
+        "vcs.repo": "topmonks-webs"
+    },
+    "config": {
+        "aws:region": "eu-central-1"
+    },
+    "result": "succeeded",
+    "endTime": 1543235021,
+    "resourceChanges": {
+        "create": 8,
+        "same": 31
+    }
+}
