@@ -1,5 +1,25 @@
 {
   "blockchain.topmonks.com": {},
+  "prodeti.topmonks.com": {
+    "bucket": {
+      "website": {
+        "redirectAllRequestsTo": "https://prodeti.topmonks.cz/"
+      }
+    },
+    "cdn": {
+      "disabled": true
+    }
+  },
+  "caffe.topmonks.com": {
+    "bucket": {
+      "website": {
+        "redirectAllRequestsTo": "https://caffe.topmonks.cz/"
+      }
+    },
+    "cdn": {
+      "disabled": true
+    }
+  },
   "studio.topmonks.com": {},
   "caffe.topmonks.cz": {},
   "prodeti.topmonks.cz": {},
