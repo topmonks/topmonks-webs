@@ -1,7 +1,5 @@
-"use strict";
-
-const aws = require("@pulumi/aws");
-const pulumi = require("@pulumi/pulumi");
+import * as aws from "@pulumi/aws";
+import * as pulumi from "@pulumi/pulumi";
 
 /**
  * Creates S3 bucket with static website hosting enabled
@@ -196,14 +194,25 @@ function getDomainAndSubdomain(domain) {
  * WebSite component resource represents logical unit of static web site
  * hosted in AWS S3 and distributed via CloudFront CDN with Route53 DNS Record.
  */
-class WebSite extends pulumi.ComponentResource {
+export class WebSite extends pulumi.ComponentResource {
+  domain: string;
+  url: string;
+  contentBucket: aws.s3.Bucket;
+  contentBucketPolicy: aws.s3.BucketPolicy;
+  cdn: aws.cloudfront.Distribution;
+  dnsRecord: aws.route53.Record;
+
   /**
    *
    * @param domain {string} domain name of the website
    * @param settings {*} optional overrides of website configuration
    * @param opts {pulumi.ComponentResourceOptions}
    */
-  constructor(domain, settings, opts) {
+  constructor(
+    domain: string,
+    settings: any,
+    opts?: pulumi.ComponentResourceOptions
+  ) {
     super("topmonks-webs:WebSite", domain, settings, opts);
     this.domain = domain;
     this.url = `https://${domain}/`;
@@ -216,7 +225,7 @@ class WebSite extends pulumi.ComponentResource {
    * @param opts {pulumi.ComponentResourceOptions}
    * @returns {Promise<WebSite>}
    */
-  static async create(domain, settings, opts) {
+  static async create(domain, settings, opts?) {
     const website = new WebSite(domain, settings, opts);
     const contentBucket = (website.contentBucket = createBucket(
       website,
@@ -242,5 +251,3 @@ class WebSite extends pulumi.ComponentResource {
     return website;
   }
 }
-
-module.exports.WebSite = WebSite;
