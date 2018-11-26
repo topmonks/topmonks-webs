@@ -1,0 +1,32 @@
+{
+    "kind": "update",
+    "startTime": 1543233252,
+    "message": "Added blockchain.topmonks.com and studio.topmonks.com to provisioning",
+    "environment": {
+        "ci.build.id": "4166",
+        "ci.build.url": "https://circleci.com/gh/topmonks/topmonks-webs/4166",
+        "ci.pr.headSHA": "2c49b22dfb173f990a57be44c967f9a625a29fac",
+        "ci.system": "CircleCI",
+        "git.author": "Aleš Roubíček",
+        "git.author.email": "ales@roubicek.name",
+        "git.committer": "Aleš Roubíček",
+        "git.committer.email": "ales@roubicek.name",
+        "git.dirty": "false",
+        "git.head": "2c49b22dfb173f990a57be44c967f9a625a29fac",
+        "git.headName": "refs/heads/master",
+        "github.login": "topmonks",
+        "github.repo": "topmonks-webs",
+        "vcs.kind": "github.com",
+        "vcs.owner": "topmonks",
+        "vcs.repo": "topmonks-webs"
+    },
+    "config": {
+        "aws:region": "eu-central-1"
+    },
+    "result": "succeeded",
+    "endTime": 1543233301,
+    "resourceChanges": {
+        "create": 12,
+        "same": 19
+    }
+}
