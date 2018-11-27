@@ -278,5 +278,4 @@ workflows:
             - test-xixo-demo-topmonks-com
           filters:
             branches:
-              # only: master
-              only: feature/dockerize
+              only: master
