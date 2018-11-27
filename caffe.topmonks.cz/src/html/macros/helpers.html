@@ -12,7 +12,8 @@
 {% macro eventInfo(eventData) %}
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 history">
   <a href="{{eventData.link}}">
-    <img alt="TopMonks Caffè - {{eventData.title}}" src="{{eventData.picture}}">
+    <img alt="TopMonks Caffè - {{eventData.title}}"
+         src="https://res.cloudinary.com/topmonks/image/fetch/f_auto,dpr_auto,w_320/https://caffe.topmonks.cz{{eventData.picture}}">
   </a>
   <h4>{{eventData.shortTitle}}</h4>
   <p>
