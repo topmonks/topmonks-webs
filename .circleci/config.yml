@@ -166,7 +166,7 @@ jobs:
   deploy-www-topmonks-com:
     <<: *s3-deploy
     environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: EMNWZWEX2M2BH
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E2FSHRGA7F0TNY
       HOST: www.topmonks.com
 
   deploy-www-topmonks-cz:
