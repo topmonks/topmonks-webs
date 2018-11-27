@@ -32,14 +32,13 @@ header {
   margin-top: 1.5em;
 }
 
-
 .tm-layout-grid__cell--span-0-desktop {
   @media screen and (min-width: 840px) {
     display: none;
     .opening_text {
       margin-top: 6em;
+    }
   }
-}
 }
 @media (min-width: 2024px) {
   #uvod {
@@ -58,14 +57,13 @@ section {
 }
 .news_content {
   font-size: 0.875em;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
-main #uvod {
-  background: url("https://res.cloudinary.com/topmonks/image/upload/c_scale,h_590,w_1280/v1542985969/caffe.topmonks.cz/main_BG.png") no-repeat;
-  background-size: 100% 100%;
-  }
 
 #uvod {
+  background: url("https://res.cloudinary.com/topmonks/image/upload/c_scale,h_590,w_1280,f_auto/v1542985969/caffe.topmonks.cz/main_BG.png")
+  no-repeat;
+  background-size: 100% 100%;
   p {
     font-size: 1.5em;
   }
@@ -74,15 +72,15 @@ main #uvod {
   }
   .opening_text {
     margin-top: 6em;
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: left;
   }
 
   .newest-news {
     width: 228px;
     margin: 2em 6em;
-    box-shadow: 0 0.44em 1.1em rgba(0,0,0,.2);
-    background-color: #FFFFFF;
+    box-shadow: 0 0.44em 1.1em rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
     p {
       line-height: 0;
       font-size: 14px;
@@ -91,7 +89,7 @@ main #uvod {
       padding: 24px 24px 0;
     }
     .news-img {
-      width:228px;
+      width: 228px;
     }
     .news_content-details {
       span {
@@ -103,7 +101,7 @@ main #uvod {
       .date {
         color: #233341;
       }
-     .date {
+      .date {
         padding: 18px 0;
       }
     }
@@ -112,22 +110,22 @@ main #uvod {
       display: block;
       height: 1px;
       border: 0;
-      border-top: 1px solid #EEEEEE;
+      border-top: 1px solid #eeeeee;
       padding: 0;
     }
-.meetup-logo svg {
-  padding: 18px;
-}
+    .meetup-logo svg {
+      padding: 18px;
+    }
     .confirm-btn {
       margin: 0 auto;
       align-self: center;
       a.button {
-        background-color: #01A2C7;
+        background-color: #01a2c7;
         padding: 8px 14px;
         border: none;
         border-radius: 4px;
         font-size: 14px;
-        color: #FFFFFF;
+        color: #ffffff;
       }
     }
   }
@@ -154,7 +152,7 @@ main #uvod {
   -webkit-transform: scale(1.03);
   -ms-transform: scale(1.03);
   transform: scale(1.03);
-  transition: all .25s linear;
+  transition: all 0.25s linear;
   box-shadow: -1px 4px 24px rgba(0, 0, 0, 0.8);
   width: 100%;
 }
@@ -185,27 +183,26 @@ main #uvod {
 //}
 
 // Docasny styl pro history events
-.history img{
+.history img {
   width: 100%;
 }
-@media (max-width: 768px) { 
-  #uvod  {
+@media (max-width: 768px) {
+  #uvod {
     .newest-news {
-    margin: 0;
-  }
-  .opening_text {
-   margin-top: 0;
-   padding-left: 2em;
-  }
-  h1 {
-    font-size: 2em;
-  }
-  p {
-    font-size: 1em;
+      margin: 0;
+    }
+    .opening_text {
+      margin-top: 0;
+      padding-left: 2em;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1em;
+    }
   }
 }
-}
-
 
 @media (max-width: 480px) {
   main #main_content {
@@ -213,40 +210,39 @@ main #uvod {
   }
   .upcoming-poster {
     display: none;
-      }
+  }
   #uvod {
-  .opening_text {
-    color: #4a4a4a;
-    margin-top: 0;
-    text-align: center;
-  }
+    .opening_text {
+      color: #4a4a4a;
+      margin-top: 0;
+      text-align: center;
+    }
 
-  .newest-news {
-    margin: 0 auto
+    .newest-news {
+      margin: 0 auto;
+    }
+    .meetup-logo {
+      text-align: center;
+    }
+    .meetup-logo svg {
+      padding: 0;
+      margin: 0 auto;
+    }
+    .news_content-details svg {
+      padding-bottom: 0;
+    }
+    .confirm-btn {
+      padding: 24px;
+    }
   }
-  .meetup-logo {
-    text-align: center;
+  #recnici {
+    background-size: auto;
+    height: 100%;
+    p {
+      line-height: 1.5;
+    }
+    .speakers_content {
+      margin: 0.5em 0;
+    }
   }
-  .meetup-logo svg {
-    padding: 0;
-    margin: 0 auto;
-  }
-  .news_content-details svg {
-    padding-bottom: 0;
-  }
-  .confirm-btn {
-padding: 24px;
-  }
-}
-#recnici {
-  background-size: auto;
-  height: 100%;
-  p {
-    line-height: 1.5;
-  }
-.speakers_content{
-  margin: 0.5em 0;
-
-}
-}
 }
