@@ -1,0 +1,31 @@
+{
+    "kind": "update",
+    "startTime": 1543294183,
+    "message": "[caffe.topmonks.cz] Posters optimization",
+    "environment": {
+        "ci.build.id": "4256",
+        "ci.build.url": "https://circleci.com/gh/topmonks/topmonks-webs/4256",
+        "ci.pr.headSHA": "5277eae0d998c8879d17e8501a9062c4035a3c64",
+        "ci.system": "CircleCI",
+        "git.author": "Aleš Roubíček",
+        "git.author.email": "ales@roubicek.name",
+        "git.committer": "Aleš Roubíček",
+        "git.committer.email": "ales@roubicek.name",
+        "git.dirty": "false",
+        "git.head": "5277eae0d998c8879d17e8501a9062c4035a3c64",
+        "git.headName": "refs/heads/master",
+        "github.login": "topmonks",
+        "github.repo": "topmonks-webs",
+        "vcs.kind": "github.com",
+        "vcs.owner": "topmonks",
+        "vcs.repo": "topmonks-webs"
+    },
+    "config": {
+        "aws:region": "eu-central-1"
+    },
+    "result": "succeeded",
+    "endTime": 1543294188,
+    "resourceChanges": {
+        "same": 45
+    }
+}
