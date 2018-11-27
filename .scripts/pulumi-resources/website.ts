@@ -21,6 +21,7 @@ function createBucket(
     `${domain}/bucket`,
     {
       bucket: domain,
+      acl: "public-read",
       website
     },
     { parent }
