@@ -1,0 +1,31 @@
+{
+    "kind": "update",
+    "startTime": 1543296051,
+    "message": "[caffe.topmonks.cz] Images and lighthouse optimizations",
+    "environment": {
+        "ci.build.id": "4273",
+        "ci.build.url": "https://circleci.com/gh/topmonks/topmonks-webs/4273",
+        "ci.pr.headSHA": "7a097fb8849c9aed0fa6913d9c89c125dc5987e3",
+        "ci.system": "CircleCI",
+        "git.author": "Aleš Roubíček",
+        "git.author.email": "ales@roubicek.name",
+        "git.committer": "Aleš Roubíček",
+        "git.committer.email": "ales@roubicek.name",
+        "git.dirty": "false",
+        "git.head": "7a097fb8849c9aed0fa6913d9c89c125dc5987e3",
+        "git.headName": "refs/heads/master",
+        "github.login": "topmonks",
+        "github.repo": "topmonks-webs",
+        "vcs.kind": "github.com",
+        "vcs.owner": "topmonks",
+        "vcs.repo": "topmonks-webs"
+    },
+    "config": {
+        "aws:region": "eu-central-1"
+    },
+    "result": "succeeded",
+    "endTime": 1543296056,
+    "resourceChanges": {
+        "same": 45
+    }
+}
