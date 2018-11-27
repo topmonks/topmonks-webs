@@ -112,9 +112,14 @@ jobs:
     environment:
       HOST: prodeti.topmonks.cz
 
+  test-xixo-demo-topmonks-cz:
+    <<: *test-site
+    environment:
+      HOST: xixo-demo.topmonks.cz
+
   provision:
     docker:
-      - image: 'circleci/node:10'
+      - image: "circleci/node:10"
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -150,6 +155,12 @@ jobs:
     environment:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E81ZRHS2RR6UN
       HOST: prodeti.topmonks.cz
+
+  deploy-xixo-demo-topmonks-cz:
+    <<: *s3-deploy
+    environment:
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E1GXIJBNNRMQGV
+      HOST: xixo-demo.topmonks.cz
 
   deploy-blockchain-topmonks-com:
     <<: *s3-deploy
@@ -208,6 +219,9 @@ workflows:
       - test-prodeti-topmonks-cz:
           requires:
             - build
+      - test-xixo-demo-topmonks-cz:
+          requires:
+            - build
       - deploy-prodeti-topmonks-cz:
           context: org-global
           requires:
@@ -257,3 +271,12 @@ workflows:
           filters:
             branches:
               only: master
+      - deploy-xixo-demo-topmonks-com:
+          context: org-global
+          requires:
+            - provision
+            - test-xixo-demo-topmonks-com
+          filters:
+            branches:
+              # only: master
+              only: feature/dockerize
