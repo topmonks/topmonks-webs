@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
   pulumi: pulumi/pulumi@1.0.0
-  aws-s3: circleci/aws-s3@1.0.2
 test-site: &test-site
   docker:
     - image: circleci/node:10-browsers
@@ -91,9 +90,9 @@ jobs:
       - run:
           name: Create Pulumi state folder
           command: mkdir .pulumi
-      - aws-s3/sync:
-          from: s3://topmonks-pulumi-state/
-          to: .pulumi/
+      - run:
+          name: Fetch Pulumi state from S3
+          command: aws s3 sync s3://topmonks-pulumi-state/ .pulumi/
       - persist_to_workspace:
           root: .
           paths: .pulumi
@@ -142,9 +141,9 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/topmonks-webs
-      - aws-s3/sync:
-          from: .pulumi/
-          to: s3://topmonks-pulumi-state/
+      - run:
+          name: Push Pulumi state to S3
+          command: aws s3 sync .pulumi/ s3://topmonks-pulumi-state/
 
   test-www-topmonks-com:
     <<: *test-site
