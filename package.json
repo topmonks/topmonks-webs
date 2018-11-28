@@ -42,6 +42,8 @@
     "test:eslint": "eslint ./ --format junit --output-file ./results/eslint.xml",
     "test:stylelint": "stylelint-config-prettier-check",
     "test": "run-p test:eslint test:stylelint",
+    "pulumi:fetch": "mkdir -p ~/.pulumi && AWS_DEFAULT_PROFILE=topmonks aws s3 sync s3://topmonks-pulumi-state/ ~/.pulumi/",
+    "pulumi:push": "AWS_DEFAULT_PROFILE=topmonks aws s3 sync ~/.pulumi/ s3://topmonks-pulumi-state/",
     "start:www.topmonks.com": "BLENDID_CONFIG_PATH=./www.topmonks.com/config/ blendid",
     "build:www.topmonks.com": "BLENDID_CONFIG_PATH=./www.topmonks.com/config/ blendid -- build",
     "test:broken-links:www.topmonks.com": "blcl ./public/www.topmonks.com -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude blog.topmonks.com",
