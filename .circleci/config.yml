@@ -112,11 +112,6 @@ jobs:
     environment:
       HOST: prodeti.topmonks.cz
 
-  test-xixo-demo-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: xixo-demo.topmonks.com
-
   provision:
     docker:
       - image: "circleci/node:10"
@@ -219,9 +214,6 @@ workflows:
       - test-prodeti-topmonks-cz:
           requires:
             - build
-      - test-xixo-demo-topmonks-com:
-          requires:
-            - build
       - deploy-prodeti-topmonks-cz:
           context: org-global
           requires:
@@ -274,7 +266,7 @@ workflows:
           context: org-global
           requires:
             - provision
-            - test-xixo-demo-topmonks-com
+            - build
           filters:
             branches:
               only: master
