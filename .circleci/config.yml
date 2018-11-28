@@ -88,13 +88,15 @@ jobs:
       - image: "cibuilds/aws:latest"
     steps:
       - checkout
-      - run: mkdir .pulumi
+      - run:
+          name: Create Pulumi state folder
+          command: mkdir .pulumi
       - aws-s3/sync:
           from: s3://topmonks-pulumi-state/
           to: .pulumi/
       - persist_to_workspace:
-        root: .
-        paths: .pulumi
+          root: .
+          paths: .pulumi
 
   provision:
     docker:
@@ -136,7 +138,7 @@ jobs:
 
   post-provision:
     docker:
-        - image: "cibuilds/aws:latest"
+      - image: "cibuilds/aws:latest"
     steps:
       - attach_workspace:
           at: ~/topmonks-webs
