@@ -10,12 +10,7 @@ const config = createSharedTaskConfig(__dirname, {
 
   javascripts: {
     entry: {
-      //app: ["./index.js"]
-      app: [
-        // "./runtime.ec2944dd8b20ec099bf3.js",
-        // "./polyfills.f769d3dd0ac22fc8bfc7.js",
-        // "./main.6998b14f6f91ddc82ce9.js"
-      ]
+      app: ["./index.js"]
     }
   },
 
