@@ -642,15 +642,9 @@ footer {
   text-align: center;
 }
 
-.contact .mail::before {
-  content: "";
-  display: block;
-  background: url("/images/jiri.penzes.png") no-repeat;
-  background-size: contain;
+.contact img {
   border-radius: 50%;
-  width: 84px;
-  height: 84px;
-  margin: 15px auto;
+  margin: 13px auto;
 }
 
 .social {
