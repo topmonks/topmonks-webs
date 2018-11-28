@@ -85,6 +85,7 @@ jobs:
   pre-provision:
     docker:
       - image: "cibuilds/aws:latest"
+    working_directory: ~/topmonks-webs
     steps:
       - checkout
       - run:
@@ -138,6 +139,7 @@ jobs:
   post-provision:
     docker:
       - image: "cibuilds/aws:latest"
+    working_directory: ~/topmonks-webs
     steps:
       - attach_workspace:
           at: ~/topmonks-webs
