@@ -1,0 +1,31 @@
+{
+    "kind": "update",
+    "startTime": 1543387336,
+    "message": "Do not test XIXO",
+    "environment": {
+        "ci.build.id": "4371",
+        "ci.build.url": "https://circleci.com/gh/topmonks/topmonks-webs/4371",
+        "ci.pr.headSHA": "f948c61c11357a802d1bbf8ae93661a37cbcb23f",
+        "ci.system": "CircleCI",
+        "git.author": "Aleš Roubíček",
+        "git.author.email": "ales@roubicek.name",
+        "git.committer": "Aleš Roubíček",
+        "git.committer.email": "ales@roubicek.name",
+        "git.dirty": "false",
+        "git.head": "f948c61c11357a802d1bbf8ae93661a37cbcb23f",
+        "git.headName": "refs/heads/master",
+        "github.login": "topmonks",
+        "github.repo": "topmonks-webs",
+        "vcs.kind": "github.com",
+        "vcs.owner": "topmonks",
+        "vcs.repo": "topmonks-webs"
+    },
+    "config": {
+        "aws:region": "eu-central-1"
+    },
+    "result": "succeeded",
+    "endTime": 1543387342,
+    "resourceChanges": {
+        "same": 51
+    }
+}
