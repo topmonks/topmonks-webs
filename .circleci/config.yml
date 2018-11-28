@@ -112,10 +112,10 @@ jobs:
     environment:
       HOST: prodeti.topmonks.cz
 
-  test-xixo-demo-topmonks-cz:
+  test-xixo-demo-topmonks-com:
     <<: *test-site
     environment:
-      HOST: xixo-demo.topmonks.cz
+      HOST: xixo-demo.topmonks.com
 
   provision:
     docker:
@@ -156,11 +156,11 @@ jobs:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E81ZRHS2RR6UN
       HOST: prodeti.topmonks.cz
 
-  deploy-xixo-demo-topmonks-cz:
+  deploy-xixo-demo-topmonks-com:
     <<: *s3-deploy
     environment:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E1GXIJBNNRMQGV
-      HOST: xixo-demo.topmonks.cz
+      HOST: xixo-demo.topmonks.com
 
   deploy-blockchain-topmonks-com:
     <<: *s3-deploy
@@ -219,7 +219,7 @@ workflows:
       - test-prodeti-topmonks-cz:
           requires:
             - build
-      - test-xixo-demo-topmonks-cz:
+      - test-xixo-demo-topmonks-com:
           requires:
             - build
       - deploy-prodeti-topmonks-cz:
@@ -262,7 +262,6 @@ workflows:
           filters:
             branches:
               only: master
-
       - deploy-caffe-topmonks-cz:
           context: org-global
           requires:
