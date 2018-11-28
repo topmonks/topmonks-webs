@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   pulumi: pulumi/pulumi@1.0.0
+  aws-s3: circleci/aws-s3@1.0.2
 test-site: &test-site
   docker:
     - image: circleci/node:10-browsers
@@ -144,6 +145,9 @@ jobs:
             git commit -m "[skip ci] Pulumi checkpoint"
             # Push quietly to prevent showing the token in log
             git push -q https://${GITHUB_BOT_TOKEN}@github.com/topmonks/topmonks-webs.git master
+      - aws-s3/sync:
+          from: .pulumi/
+          to: s3://topmonks-pulumi-state/
 
   deploy-prodeti-topmonks-cz:
     <<: *s3-deploy
