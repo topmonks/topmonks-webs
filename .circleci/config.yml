@@ -83,6 +83,67 @@ jobs:
           root: .
           paths: public
 
+  pre-provision:
+    docker:
+      - image: "cibuilds/aws:latest"
+    steps:
+      - checkout
+      - run: mkdir .pulumi
+      - aws-s3/sync:
+          from: s3://topmonks-pulumi-state/
+          to: .pulumi/
+      - persist_to_workspace:
+        root: .
+        paths: .pulumi
+
+  provision:
+    docker:
+      - image: "circleci/node:10"
+    working_directory: ~/topmonks-webs
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - run:
+          name: "Install Pulumi CLI, if needed"
+          command: |
+            curl -L https://get.pulumi.com/ | bash -s
+            # Add to PATH
+            echo 'export PATH=/home/circleci/.pulumi/bin:$PATH' >> $BASH_ENV
+            source $BASH_ENV
+      - run:
+          name: "Log into Pulumi"
+          command: pulumi login file:///home/circleci/topmonks-webs
+      - run:
+          name: Install deps
+          command: yarn
+      - pulumi/update:
+          stack: topmonks-webs
+          skip-preview: true
+      - run:
+          name: Store updated Pulumi state
+          command: |
+            git config credential.helper 'cache --timeout=120'
+            git config user.email "robot@topmonks.com"
+            git config user.name "Deployment Bot"
+            git add -A
+            git commit -m "[skip ci] Pulumi checkpoint"
+            # Push quietly to prevent showing the token in log
+            git push -q https://${GITHUB_BOT_TOKEN}@github.com/topmonks/topmonks-webs.git master
+      - persist_to_workspace:
+          root: .
+          paths: .pulumi
+
+  post-provision:
+    docker:
+        - image: "cibuilds/aws:latest"
+    steps:
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - aws-s3/sync:
+          from: .pulumi/
+          to: s3://topmonks-pulumi-state/
+
   test-www-topmonks-com:
     <<: *test-site
     environment:
@@ -112,42 +173,6 @@ jobs:
     <<: *test-site
     environment:
       HOST: prodeti.topmonks.cz
-
-  provision:
-    docker:
-      - image: "circleci/node:10"
-    working_directory: ~/topmonks-webs
-    steps:
-      - checkout
-      - run:
-          name: "Install Pulumi CLI, if needed"
-          command: |
-            curl -L https://get.pulumi.com/ | bash -s
-            # Add to PATH
-            echo 'export PATH=/home/circleci/.pulumi/bin:$PATH' >> $BASH_ENV
-            source $BASH_ENV
-      - run:
-          name: "Log into Pulumi"
-          command: pulumi login file:///home/circleci/topmonks-webs
-      - run:
-          name: Install deps
-          command: yarn
-      - pulumi/update:
-          stack: topmonks-webs
-          skip-preview: true
-      - run:
-          name: Store updated Pulumi state
-          command: |
-            git config credential.helper 'cache --timeout=120'
-            git config user.email "robot@topmonks.com"
-            git config user.name "Deployment Bot"
-            git add -A
-            git commit -m "[skip ci] Pulumi checkpoint"
-            # Push quietly to prevent showing the token in log
-            git push -q https://${GITHUB_BOT_TOKEN}@github.com/topmonks/topmonks-webs.git master
-      - aws-s3/sync:
-          from: .pulumi/
-          to: s3://topmonks-pulumi-state/
 
   deploy-prodeti-topmonks-cz:
     <<: *s3-deploy
@@ -197,6 +222,13 @@ workflows:
       - build
       - provision:
           context: org-global
+          filters:
+            branches:
+              only: master
+      - post-provision:
+          context: org-global
+          requires:
+            - provision
           filters:
             branches:
               only: master
