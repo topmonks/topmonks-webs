@@ -159,7 +159,7 @@ jobs:
   deploy-xixo-demo-topmonks-com:
     <<: *s3-deploy
     environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E1GXIJBNNRMQGV
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E22G4M3HL57V9Z
       HOST: xixo-demo.topmonks.com
 
   deploy-blockchain-topmonks-com:
