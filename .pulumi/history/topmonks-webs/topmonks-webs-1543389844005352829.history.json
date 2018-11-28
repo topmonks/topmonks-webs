@@ -1,0 +1,31 @@
+{
+    "kind": "update",
+    "startTime": 1543389838,
+    "message": "Working directory",
+    "environment": {
+        "ci.build.id": "4435",
+        "ci.build.url": "https://circleci.com/gh/topmonks/topmonks-webs/4435",
+        "ci.pr.headSHA": "f6f5b7b83f1650eed63f85729f21677c15d06739",
+        "ci.system": "CircleCI",
+        "git.author": "Aleš Roubíček",
+        "git.author.email": "ales@roubicek.name",
+        "git.committer": "Aleš Roubíček",
+        "git.committer.email": "ales@roubicek.name",
+        "git.dirty": "false",
+        "git.head": "f6f5b7b83f1650eed63f85729f21677c15d06739",
+        "git.headName": "refs/heads/master",
+        "github.login": "topmonks",
+        "github.repo": "topmonks-webs",
+        "vcs.kind": "github.com",
+        "vcs.owner": "topmonks",
+        "vcs.repo": "topmonks-webs"
+    },
+    "config": {
+        "aws:region": "eu-central-1"
+    },
+    "result": "succeeded",
+    "endTime": 1543389843,
+    "resourceChanges": {
+        "same": 51
+    }
+}
