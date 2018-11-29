@@ -30,7 +30,7 @@
       "website": {
         "indexDocument": "index.html",
         "errorDocument": "404.html",
-        "routingRules": "[{\"Condition\":{\"HttpErrorCodeReturnedEquals\":\"404\"},\"Redirect\":{\"HostName\":\"xixo-demo.topmonks.com\",\"ReplaceKeyPrefixWith\":\"#!/\"}}]"
+        "routingRules": "[{\"Condition\":{\"HttpErrorCodeReturnedEquals\":\"404\"},\"Redirect\":{\"HostName\":\"xixo-demo.topmonks.com\",\"ReplaceKeyPrefixWith\":\"#/\"}}]"
       }
     }
   }
