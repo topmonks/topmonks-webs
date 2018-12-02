@@ -64,6 +64,9 @@
     "test:broken-links:blockchain.topmonks.com": "blcl ./public/blockchain.topmonks.com -ro --exclude linkedin.com --exclude blog.topmonks.com",
     "start:xixo-demo.topmonks.com": "BLENDID_CONFIG_PATH=./xixo-demo.topmonks.com/config/ blendid",
     "build:xixo-demo.topmonks.com": "BLENDID_CONFIG_PATH=./xixo-demo.topmonks.com/config/ blendid -- build",
-    "test:broken-links:xixo-demo.topmonks.com": "blcl ./public/xixo-demo.topmonks.com -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com"
+    "test:broken-links:xixo-demo.topmonks.com": "blcl ./public/xixo-demo.topmonks.com -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
+    "start:www.hookahmonk.com": "BLENDID_CONFIG_PATH=./www.hookahmonk.com/config/ blendid",
+    "build:www.hookahmonk.com": "BLENDID_CONFIG_PATH=./www.hookahmonk.com/config/ blendid -- build",
+    "test:broken-links:www.hookahmonk.com": "blcl ./public/www.hookahmonk.com -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com"
   }
 }
