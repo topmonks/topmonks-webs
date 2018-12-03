@@ -5,30 +5,55 @@
   --mdc-layout-grid-margin-desktop: 24px;
   --mdc-layout-grid-gutter-desktop: 20px;
   --mdc-layout-grid-column-width-desktop: 60px;
+
+  --primary-color: #000000;
+  --secondary-color: #E25822;
+  --third-color: #ffff;
+}
+
+.tm-layout-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  --mdc-layout-grid-margin-desktop: 0;
+  --mdc-layout-grid-margin-tablet: 0;
+  --mdc-layout-grid-margin-phone: 0;
 }
 
 body {
-  font-family: Century Gothic, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  color: var(--primary-color);
+}
+
+header {
+  margin: 2em 0;
 }
 
 /* Typography */
 
 h1 {
   font-size: 70px;
+  text-align: center;
 }
 
 h2 {
   font-size: 30px;
   font-weight: bold;
+  text-align: center;
 }
 
 h3 {
   font-size: 30px;
-  border-left: 62px solid #E25822;
+  border-left: 4px solid var(--secondary-color);
+  padding: 8px 0 8px 12px;
 }
 
 footer {
   font-size: 15px;
+
   h3 {
     font-weight: bold;
   }
@@ -40,30 +65,79 @@ p {
 
 p.sub-text {
   font-size: 24px;
+  text-align: center;
 }
 
 p.text-bold {
   font-weight: bold;
 }
 
-a.button {
-  display: block;
-  font-size: 18px;
-  color: #fff;
-  background-color: #E25822;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .16);
-  padding: 10px 28px;
-  margin: 0 1em;
+img {
+  width: 100%;
+}
+
+/* Buttons */
+
+.button {
   text-align: center;
+
+  a.button {
+    font-size: 18px;
+    color: var(--third-color);
+    background-color: var(--secondary-color);
+    padding: 12px 48px;
+    text-align: center;
+    display: inline-flex;
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  section, footer {
+    padding: 2em 0;
+  }
+}
+
+/* Navigation Menu */
+
+ul.menu {
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin: 0;
+
+  li {
+    list-style: none;
+    margin: 0;
+
+    a {
+      display: inline-block;
+      padding: 4px 8px;
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+
+    a:hover {
+      font-weight: 700;
+      text-underline: var(--secondary-color);
+    }
+  }
 }
 
 /* Footer */
 footer {
   background: url("https://res.cloudinary.com/topmonks/image/upload/v1543849049/hookamonk.com/footer_bgnd.png") no-repeat;
   background-size: 100%;
+
   a {
     text-decoration: none;
     text-underline: none;
+  }
+
+  .logo {
+    text-align: center;
   }
 }
 
