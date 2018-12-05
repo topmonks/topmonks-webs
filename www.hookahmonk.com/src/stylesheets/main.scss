@@ -115,18 +115,23 @@ img {
   }
 }
 
+body {
+  background: url("https://res.cloudinary.com/topmonks/image/upload/c_scale,h_835/v1543851209/hookamonk.com/Main_bgnd.png") no-repeat;
+  background-size: auto;
+}
+
 @media screen and (min-width: 840px) {
   section {
     padding: 2em 0;
   }
   body {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/c_scale,h_835/v1543851209/hookamonk.com/Main_bgnd.png") no-repeat;
     background-size: 100% 835px;
   }
   #products {
     .button a.button {
       position: absolute;
     }
+
     .products_sub-title h3 {
       text-align: right;
     }
@@ -170,6 +175,8 @@ ul.menu {
 
 /* Revolution section */
 #revolution {
+  background: url("https://res.cloudinary.com/topmonks/image/upload/v1544004582/hookamonk.com/smoke-png-transparent-background-2.png") center no-repeat;
+  background-size: 100%;
 
   .revolution_text:before {
     content: "";
@@ -257,12 +264,40 @@ footer {
 
   a {
     font-size: 15px;
-    color: var(--primary-color)
+    color: var(--primary-color);
+    text-decoration: none;
   }
 
   .logo {
     text-align: center;
     margin: 3em 0;
+  }
+
+  .footer_social-section {
+    border-top: 1px solid #DCDCDC;
+    align-self: center;
+    margin: 24px 0;
+
+    p {
+      font-size: 15px;
+      color: #270202;
+      text-align: right;
+    }
+
+    a {
+      padding: 6px;
+    }
+
+    .social-buttons {
+      align-self: center;
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  footer, #products {
+    background: url(https://res.cloudinary.com/topmonks/image/upload/v1543849049/hookamonk.com/footer_bgnd.png);
+    background-size: 100%;
   }
 }
 
@@ -270,8 +305,24 @@ footer {
   h1 {
     font-size: 48px;
   }
-  #products .button a.button {
-    position: inherit;
+  header svg {
+    width: 125px;
+    height: 32px;
+  }
+
+  #products {
+    h3 {
+      text-align: center;
+      border-left: none;
+    }
+    .button a.button {
+      position: inherit;
+    }
+  }
+  footer {
+    h3, .footer_social-section p {
+      text-align: left;
+    }
   }
 }
 
