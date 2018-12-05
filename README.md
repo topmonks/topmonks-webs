@@ -39,6 +39,9 @@ brew install nvm
 nvm install 10
 # Install Yarn package manager
 brew install yarn
+# Install Pulumi
+brew install pulumi
+pulumi install plugin
 ```
 
 Checkout repository
@@ -159,9 +162,11 @@ settings.
 
 You can disable Provisioning of CloudFront CDN distribution by adding following section to
 website configuration:
+
 ```json
-{"cdn":  {"disabled": true}}
-``` 
+{ "cdn": { "disabled": true } }
+```
+
 Route53 entry will the ALIAS to S3 bucket directly.
 
 ### S3 Website
@@ -170,8 +175,12 @@ You can change default settings (`index.html` and `404.html`) of S3 Bucket Websi
 by adding following section to website configuration:
 
 ```json
-{"bucket": {"website": {"redirectAllRequestsTo": "https://caffe.topmonks.cz/"}}}
-``` 
+{
+  "bucket": {
+    "website": { "redirectAllRequestsTo": "https://caffe.topmonks.cz/" }
+  }
+}
+```
 
 ### Pulumi
 
@@ -179,17 +188,20 @@ Any update to Pulumi stack in `master` branch will be deployed from Integration 
 It is **highly discouraged to update Pulumi state from local machine**.
 
 To fetch current Pulumi state (you need to have `awscli` installed with `topmonks` credentials profile):
+
 ```bash
 yarn pulumi:fetch
 ```
 
 Use actual state of Pulumi stack:
+
 ```bash
 pulumi login --local
 pulumi stack select topmonks-webs
 ```
 
 Preview changes that will be provisioned in next build
+
 ```bash
 pulumi preview
 ```
