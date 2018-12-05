@@ -16,16 +16,38 @@
   margin: 0 auto;
 
   --mdc-layout-grid-margin-desktop: 0;
-  --mdc-layout-grid-margin-tablet: 0;
-  --mdc-layout-grid-margin-phone: 0;
+  --mdc-layout-grid-margin-tablet: 24px;
+  --mdc-layout-grid-margin-phone: 24px;
 }
 
 body {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  font-style: normal;
   font-variant: normal;
-  font-weight: normal;
+  font-style: normal;
   color: var(--primary-color);
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('./fonts/CenturyGothicStd/3099F9_2_0.eot');
+  src: url('./fonts/CenturyGothicStd/3099F9_2_0.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/CenturyGothicStd/3099F9_2_0.woff2') format('woff2'),
+  url('./fonts/CenturyGothicStd/3099F9_2_0.woff') format('woff'),
+  url('./fonts/CenturyGothicStd/3099F9_2_0.ttf') format('truetype');
+  font-weight: 400;
+}
+
+
+@font-face {
+  font-family: 'CenturyGothicBold';
+  src: url('./fonts/CenturyGothicBold/3099F9_2_0.eot');
+  src: url('./fonts/CenturyGothicBold/3099F9_2_0.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/CenturyGothicBold/3099F9_2_0.woff2') format('woff2'),
+  url('./fonts/CenturyGothicBold/3099F9_2_0.woff') format('woff'),
+  url('./fonts/CenturyGothicBold/3099F9_2_0.ttf') format('truetype');
+  font-weight: 700;
 }
 
 header {
@@ -41,21 +63,14 @@ h1 {
 
 h2 {
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
+  margin-bottom: 0;
 }
 
 h3 {
   font-size: 30px;
   padding: 8px 0 8px 12px;
-}
-
-footer {
-  font-size: 15px;
-
-  h3 {
-    font-weight: bold;
-  }
 }
 
 p {
@@ -65,10 +80,19 @@ p {
 p.sub-text {
   font-size: 24px;
   text-align: center;
+  margin-top: 0;
 }
 
 p.text-bold {
   font-weight: bold;
+}
+
+footer {
+  font-size: 15px;
+
+  h3 {
+    font-weight: bold;
+  }
 }
 
 img {
@@ -92,17 +116,37 @@ img {
 }
 
 @media screen and (min-width: 840px) {
-  section, footer {
+  section {
     padding: 2em 0;
   }
+  body {
+    background: url("https://res.cloudinary.com/topmonks/image/upload/c_scale,h_835/v1543851209/hookamonk.com/Main_bgnd.png") no-repeat;
+    background-size: 100% 835px;
+  }
+  #products {
+    .button a.button {
+      position: absolute;
+    }
+    .products_sub-title h3 {
+      text-align: right;
+    }
+  }
 }
+
 li {
   list-style: none;
   margin: 0;
+
   a {
     text-decoration: none;
+    text-underline: none;
+  }
+
+  a:hover {
+    font-weight: 900;
   }
 }
+
 /* Navigation Menu */
 
 ul.menu {
@@ -114,44 +158,85 @@ ul.menu {
   margin: 0;
 
   li a {
-      display: inline-block;
-      padding: 4px 8px;
-      color: var(--primary-color);
-    }
+    display: inline-block;
+    padding: 4px 8px;
+    color: var(--primary-color);
+  }
 
-    a:hover {
-      font-weight: 700;
-      text-underline: var(--secondary-color);
+  a:hover {
+    text-underline: var(--secondary-color);
+  }
+}
+
+/* Revolution section */
+#revolution {
+
+  .revolution_text:before {
+    content: "";
+    display: inline-block;
+    background: url("/images/check.svg") no-repeat;
+    width: 50px;
+    height: 51px;
+    padding-right: 2em;
+  }
+
+  .revolution_side-text {
+    align-self: center;
+
+    p {
+      display: inline-flex;
     }
   }
+}
 
 /* Products section */
 #products {
+  background: url("https://res.cloudinary.com/topmonks/image/upload/v1543851209/hookamonk.com/Main_bgnd.png") no-repeat;
+  background-size: 100% 100%;
+
   h3 {
     border-left: 4px solid var(--secondary-color);
   }
+
   .products_text {
     align-self: center;
   }
-  .products_sub-title h3 {
-    text-align: right;
-  }
 
   .button a.button {
-    position: absolute;
     padding: 12px 90px;
   }
+
   .products_text_management .button a {
     margin: 0 2%;
   }
+
   .products_text_pipe .button a {
     margin: 0 -18%;
   }
 }
+
 /* Services section */
 #services {
   h3 {
     text-align: center;
+  }
+
+  .services_box {
+    border: 2px solid #E5E5E5;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .serivces_box_info {
+    p {
+      font-size: 24px;
+    }
+
+    p.serivces_box_bold {
+      font-size: 60px;
+      font-weight: 700;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -161,16 +246,34 @@ footer {
   background: url("https://res.cloudinary.com/topmonks/image/upload/v1543849049/hookamonk.com/footer_bgnd.png") no-repeat;
   background-size: 100%;
 
+  h3, ul {
+    padding-left: 0;
+  }
+
+  h3 {
+    font-size: 16px;
+    color: #111111;
+  }
+
   a {
-    text-decoration: none;
-    text-underline: none;
+    font-size: 15px;
+    color: var(--primary-color)
   }
 
   .logo {
     text-align: center;
+    margin: 3em 0;
   }
 }
 
+@media (max-width: 480px) {
+  h1 {
+    font-size: 48px;
+  }
+  #products .button a.button {
+    position: inherit;
+  }
+}
 
 
 
