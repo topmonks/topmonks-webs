@@ -276,9 +276,12 @@ footer {
     text-align: center;
     margin: 3em 0;
   }
-
+hr.above-footer-line {
+  min-width: 50em;
+  height: .11em;
+  background-color: #DCDCDC;
+}
   .footer_social-section {
-    border-top: 1px solid #DCDCDC;
     align-self: center;
     margin: 24px 0;
 
