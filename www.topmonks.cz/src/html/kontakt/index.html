@@ -16,186 +16,359 @@
 <meta property="business:contact_data:phone_number" content="+420 226 257 521"/>
 <meta property="business:contact_data:website" content="https://www.topmonks.cz/"/>
 <style>
+  :root {
+    --tm-contact-darkgrey: #3C3C3B;
+    --tm-contact-lightgrey: #777776;
+  }
+
+  body {
+    line-height: 1.8;
+  }
+
+  h2 {
+    text-transform: none;
+  }
+
+  h3 {
+    color: var(--tm-contact-darkgrey);
+    text-align: left;
+  }
+
+  span {
+    color: var(--tm-contact-darkgrey);
+  }
+
+  body {
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1543140261/topmonks.com/bngd_site.png") center 30% no-repeat;
+    background-size: 100%;
+  }
+
+  footer span {
+    color: #ffffff;
+  }
+
+  .contact-title p {
+    font-size: 24px;
+    color: var(--tm-contact-darkgrey);
+    text-align: center;
+    opacity: 0.7;
+  }
+
+  .box-member {
+    padding: 10px 28px;
+  }
+
+  .box-member img {
+    border-radius: 50%;
+  }
+
+  .box_member-contact {
+    align-self: center;
+  }
+
+  p.box_text-about {
+    color: var(--tm-contact-lightgrey);
+    height: 60px;
+  }
+
   .box.address {
     padding: 0;
   }
+
+
   .box.address .content {
     padding: 0 16px 8px;
   }
+
   .box.address img {
     margin: 0;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
-  .box h3 {
-    text-align: left;
+
+  hr {
+    background-color: #F3F3F3;
+    height: 2px;
+    border: none;
+  }
+
+  .line-between {
+    padding: 24px 0;
+  }
+
+  #billing {
+    text-transform: uppercase;
+    line-height: 1.8;
+  }
+
+  #billing a {
+    line-height: 6;
+  }
+
+  @media screen and (min-width: 840px) {
+    p.box_text-about {
+      height: 60px;
+    }
+  }
+
+  @media (max-width: 840px) {
+    p.box_text-about {
+      height: 90px;
+    }
+
+    #contacts-main .box img {
+      margin: 2em 0 0;
+    }
+
+    hr {
+      width: 736px;
+      margin-top: 2.5em;
+    }
+  }
+
+  @media (max-width: 480px) {
+    body {
+      line-height: 1.5;
+      background-size: auto;
+    }
+
+    p.box_text-about {
+      height: 100px;
+    }
+
+    hr {
+      width: 288px;
+    }
   }
 </style>
 {% endblock %}
 
 {% block content %}
-  <div itemscope itemtype="https://schema.org/Organization">
-    <section class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner tm-layout-wrapper">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>Kontakt</h2>
-        </div>
-
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <p><b>Kancelář</b><br> Telefon:
-            <a itemprop="telephone" href="tel:+420226257521">+420&nbsp;226&nbsp;257&nbsp;521</a><br>
-            <a itemprop="email" href="mailto:info@topmonks.com">info@topmonks.com</a></p>
-        </div>
-
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop" itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
-          <p><b>HR aka Happy Maker</b><br>
-            <span itemprop="name">Eliška Monsportová</span>:
-            <a itemprop="telephone" href="tel:+420724390424">+420&nbsp;724&nbsp;390&nbsp;424</a><br>
-            <a itemprop="email" href="mailto:eliska@topmonks.com">eliska@topmonks.com</a></p>
-        </div>
-
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop" itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
-          <p><b>Kancelář a fakturace</b><br>
-            <span itemprop="name">Daria Nováková</span>:
-            <a itemprop="telephone" href="tel:+420774647793">+420&nbsp;774&nbsp;647&nbsp;793</a><br>
-            <a itemprop="email" href="mailto:daria.novakova@topmonks.com">daria.novakova@​topmonks.com</a>
-          </p>
-        </div>
-
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop" itemprop="employee" itemscope
-             itemtype="https://schema.org/Person">
-          <p><b>Sales</b><br/>
-            <span itemprop="name">Lea Petrášová</span>:
-            <a itemprop="telephone" href="tel:+420725504381">+420&nbsp;725&nbsp;504&nbsp;381</a><br/>
-            <a itemprop="email" href="mailto:lea.petrasova@topmonks.com">lea.petrasova@&#8203;topmonks.com</a></p>
-        </div>
-
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop" itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
-          <p><b>Software projekty</b><br>
-            <span itemprop="name">Jirka Pénzeš</span>:
-            <a itemprop="telephone" href="tel:+420732364404">+420&nbsp;732&nbsp;364&nbsp;404</a><br>
-            <a itemprop="email" href="mailto:jiri.penzes@topmonks.com">jiri.penzes@​topmonks.com</a></p>
+<div itemscope itemtype="https://schema.org/Organization">
+  <section class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="contact-title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Kontaktujte nás</h2>
+        <p>Ať už jste úspěšná a zavedená společnost, zajímavý startup nebo
+          u&nbsp;nás chcete pracovat, rádi o&nbsp;vás uslyšíme.</p>
+      </div>
+      <div
+        class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
+        itemprop="employee" itemscope
+        itemtype="https://schema.org/Person">
+        <h3><b>Sales</b></h3>
+        <p class="box_text-about">Pokud jste střední nebo velká firma, obraťte se na Láďu. Pomůžeme
+          vám najít řešení problému, kterému aktuálně čelíte.</p>
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <img alt="[foto] Ladislav Gerencséry" src="https://insight.topmonks.com/avatar/ladislav-gerencsery"
+                 onerror="this.onerror=null; this.src='/images/monk_logo-c877778634.png'" width="112" height="112">
+          </div>
+          <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+            <p><span itemprop="name">Ladislav Gerencséry</span><br>
+              <a itemprop="telephone" href="tel:+420606637915">+420&nbsp;606&nbsp;637&nbsp;915</a><br/>
+              <a itemprop="email" href="mailto:sales&#64;topmonks.com">sales@​topmonks.com</a></p>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section id="offices" class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner tm-layout-wrapper">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>Naše kanceláře</h2>
+      <div
+        class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
+        itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
+        <h3><b>US Sales</b></h3>
+        <p class="box_text-about">Jsme otevření novým příležitostem a zkušenostem i&nbsp;v&nbsp;USA. Pokud pro
+          nás máte zajímavý projekt, kontaktujte Bereniku.</p>
+        <!-- <span itemprop="name">Anna Kovácsová</span>:
+        <a itemprop="telephone" href="tel:+420777556859">+420&nbsp;777&nbsp;556&nbsp;859</a><br>-->
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <img alt="[foto] Berenika Alexandre" src="https://insight.topmonks.com/avatar/berenika-alexandre"
+                 onerror="this.onerror=null; this.src='/images/monk_logo-c877778634.png'" width="112" height="112">
+          </div>
+          <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+            <p><span itemprop="name">Berenika Alexandre</span><br>
+              <a itemprop="telephone" href="tel:+420724390424">+1-415-525-6313</a><br>
+              <a itemprop="email" href="mailto:berenika.alexandre&#64;topmonks.com">berenika.alexandre@topmonks.com</a>
+            </p>
+          </div>
         </div>
-        <div class="box mdc-layout-grid__cell address" itemprop="subOrganization" itemscope="" itemtype="https://schema.org/Organization"
-             id="prague">
-          <a href="https://goo.gl/maps/SBK1BRsmgu22" class="map" title="Show Prague Office on map">
-            <img alt="[mapa] Praha Spořilov"
-                 src="https://maps.googleapis.com/maps/api/staticmap?center=Struhařovská+2931/9,Praha&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:blue%7Clabel:P%7C50.045386,14.491246&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc"
-                 srcset="https://maps.googleapis.com/maps/api/staticmap?center=Struhařovská+2931/9,Praha&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:blue%7Clabel:P%7C50.045386,14.491246&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc 1x,
+      </div>
+      <div
+        class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
+        itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
+        <h3><b>Startup studio</b></h3>
+        <p class="box_text-about"><a href="https://studio.topmonks.com/">TopMonks Startup</a> vám pomůže proměnit
+          počáteční myšlenku v&nbsp;produkt.
+          Jsme vaši první investoři a konzultanti.</p>
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <img alt="[foto] Jiří Pénzeš" src="https://insight.topmonks.com/avatar/jiri-penzes"
+                 onerror="this.onerror=null; this.src='/images/monk_logo-c877778634.png'" width="112" height="112">
+          </div>
+          <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+            <p><span itemprop="name">Jirka Pénzeš</span><br>
+              <a itemprop="telephone" href="tel:+420732364404">+420&nbsp;732&nbsp;364&nbsp;404</a><br>
+              <a itemprop="email" href="mailto:studio&#64;topmonks.com">studio@​topmonks.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
+        itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
+        <h3><b>Happy Makers AKA HR</b></h3>
+        <p class="box_text-about">Neustále se poohlížíme po nových talentovaných lidech, kteří souzní
+          s&nbsp;naší kulturou. Zkontrolujte aktuálně <a href="https://www.topmonks.com/jobs">vypsané pozice</a> nebo se
+          ozvěte Elišce.</p>
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <img alt="[foto] Eliška Monsportová" src="https://insight.topmonks.com/avatar/eliska"
+                 onerror="this.onerror=null; this.src='/images/monk_logo-c877778634.png'" width="112" height="112">
+          </div>
+          <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+            <p><span itemprop="name">Eliška Monsportová</span><br>
+              <a itemprop="telephone" href="tel:+420724390424">+420&nbsp;724 390 424</a><br>
+              <a itemprop="email" href="mailto:happy&#64;topmonks.com">happy@topmonks.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="offices" class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Kanceláře TopMonks</h2>
+      </div>
+      <div class="box mdc-layout-grid__cell address" itemprop="subOrganization" itemscope=""
+           itemtype="https://schema.org/Organization"
+           id="prague">
+        <a href="https://goo.gl/maps/SBK1BRsmgu22" class="map" title="Show Prague Office on map">
+          <img alt="[mapa] Praha Spořilov"
+               src="https://maps.googleapis.com/maps/api/staticmap?center=Struhařovská+2931/9,Praha&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:blue%7Clabel:P%7C50.045386,14.491246&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc"
+               srcset="https://maps.googleapis.com/maps/api/staticmap?center=Struhařovská+2931/9,Praha&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:blue%7Clabel:P%7C50.045386,14.491246&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc 1x,
                          https://maps.googleapis.com/maps/api/staticmap?center=Struhařovská+2931/9,Praha&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:blue%7Clabel:P%7C50.045386,14.491246&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc&amp;scale=2 2x"
-                 width="100%">
-          </a>
-          <div class="content">
-            <h3 itemprop="name">Praha</h3>
-            <span itemprop="legalName">TopMonks s.r.o.</span>
-            <div itemprop="location" itemscope itemtype="https://schema.org/Place">
-              <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                <span itemprop="streetAddress">Struhařovská 2931/9</span><br>
-                <span itemprop="postalCode">141 00</span>
-                <span itemprop="addressLocality">Praha 4</span><br>
-                <span itemprop="addressCountry">Česká Republika</span>
-              </div>
-              <a href="https://goo.gl/maps/SBK1BRsmgu22" class="button" data-marker="praha">ukázat na mapě</a>
-              <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-                <meta itemprop="latitude" content="50.045386">
-                <meta itemprop="longitude" content="14.491246">
-              </div>
+               width="100%">
+        </a>
+        <div class="content">
+          <h3 itemprop="name">Praha</h3>
+          <span itemprop="legalName"><b>TopMonks s.r.o.</b></span>
+          <div itemprop="location" itemscope itemtype="https://schema.org/Place">
+            <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <span itemprop="streetAddress"><b>Struhařovská 2931/9</b></span><br>
+              <span itemprop="postalCode">141 00</span>
+              <span itemprop="addressLocality">Praha 4</span><br>
+              <span itemprop="addressCountry">Česká Republika</span>
+            </div>
+            <a href="https://goo.gl/maps/SBK1BRsmgu22" class="button" data-marker="praha">ukázat na mapě</a>
+            <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+              <meta itemprop="latitude" content="50.045386">
+              <meta itemprop="longitude" content="14.491246">
             </div>
           </div>
         </div>
-        <div class="box mdc-layout-grid__cell address" itemprop="subOrganization" itemscope="" itemtype="https://schema.org/Organization"
-             id="ostrava">
-          <a href="https://goo.gl/maps/SkoWqfoKgg12" class="map" title="Show Ostrava Office on map">
-            <img alt="[mapa] Ostrava" src="https://maps.googleapis.com/maps/api/staticmap?center=Sadová+1728/17,Ostrava&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:green%7Clabel:O%7C49.8454375,18.2892897&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc"
-                 srcset="https://maps.googleapis.com/maps/api/staticmap?center=Sadová+1728/17,Ostrava&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:green%7Clabel:O%7C49.8454375,18.2892897&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc 1x,
+      </div>
+      <div class="box mdc-layout-grid__cell address" itemprop="subOrganization" itemscope=""
+           itemtype="https://schema.org/Organization"
+           id="ostrava">
+        <a href="https://goo.gl/maps/SkoWqfoKgg12" class="map" title="Show Ostrava Office on map">
+          <img alt="[mapa] Ostrava"
+               src="https://maps.googleapis.com/maps/api/staticmap?center=Sadová+1728/17,Ostrava&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:green%7Clabel:O%7C49.8454375,18.2892897&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc"
+               srcset="https://maps.googleapis.com/maps/api/staticmap?center=Sadová+1728/17,Ostrava&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:green%7Clabel:O%7C49.8454375,18.2892897&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc 1x,
                          https://maps.googleapis.com/maps/api/staticmap?center=Sadová+1728/17,Ostrava&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:green%7Clabel:O%7C49.8454375,18.2892897&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc&amp;scale=2 2x"
-                 width="100%">
-          </a>
-          <div class="content">
-            <h3 itemprop="name">Ostrava</h3>
-            <span itemprop="legalName">TopMonks s.r.o.</span>
-            <div itemprop="location" itemscope itemtype="https://schema.org/Place">
-              <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                <span itemprop="streetAddress">Sadová 1728/17</span><br>
-                <span itemprop="postalCode">702 00</span>
-                <span itemprop="addressLocality">Ostrava</span><br>
-                <span itemprop="addressCountry">Česká republika</span>
-              </div>
-              <a href="https://goo.gl/maps/SkoWqfoKgg12" class="button" data-marker="ostrava">ukázat na mapě</a>
-              <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-                <meta itemprop="latitude" content="49.8454375">
-                <meta itemprop="longitude" content="18.2892897">
-              </div>
+               width="100%">
+        </a>
+        <div class="content">
+          <h3 itemprop="name">Ostrava</h3>
+          <span itemprop="legalName"><b>TopMonks s.r.o.</b></span>
+          <div itemprop="location" itemscope itemtype="https://schema.org/Place">
+            <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <span itemprop="streetAddress"><b>Sadová 1728/17</b></span><br>
+              <span itemprop="postalCode">702 00</span>
+              <span itemprop="addressLocality">Ostrava</span><br>
+              <span itemprop="addressCountry">Česká republika</span>
+            </div>
+            <a href="https://goo.gl/maps/SkoWqfoKgg12" class="button" data-marker="ostrava">ukázat na mapě</a>
+            <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+              <meta itemprop="latitude" content="49.8454375">
+              <meta itemprop="longitude" content="18.2892897">
             </div>
           </div>
         </div>
-        <div class="box mdc-layout-grid__cell address" itemprop="subOrganization" itemscope="" itemtype="https://schema.org/Organization"
-             id="san-jose">
-          <a href="https://goo.gl/maps/YAJRUb1rDox" class="map" title="Show San Jose Office on map">
-            <img alt="[mapa] San Jose" src="https://maps.googleapis.com/maps/api/staticmap?center=2+North+1st+St.,San+Jose,CA&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:red%7Clabel:S%7C37.336482,-121.8905285&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc"
-                 srcset="https://maps.googleapis.com/maps/api/staticmap?center=2+North+1st+St.,San+Jose,CA&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:red%7Clabel:S%7C37.336482,-121.8905285&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc 1x,
+      </div>
+      <div class="box mdc-layout-grid__cell address" itemprop="subOrganization" itemscope=""
+           itemtype="https://schema.org/Organization"
+           id="san-jose">
+        <a href="https://goo.gl/maps/YAJRUb1rDox" class="map" title="Show San Jose Office on map">
+          <img alt="[mapa] San Jose"
+               src="https://maps.googleapis.com/maps/api/staticmap?center=2+North+1st+St.,San+Jose,CA&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:red%7Clabel:S%7C37.336482,-121.8905285&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc"
+               srcset="https://maps.googleapis.com/maps/api/staticmap?center=2+North+1st+St.,San+Jose,CA&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:red%7Clabel:S%7C37.336482,-121.8905285&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc 1x,
                          https://maps.googleapis.com/maps/api/staticmap?center=2+North+1st+St.,San+Jose,CA&amp;zoom=15&amp;size=320x240&amp;maptype=roadmap&amp;markers=color:red%7Clabel:S%7C37.336482,-121.8905285&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc&amp;scale=2 2x"
-                 width="100%">
-          </a>
-          <div class="content">
-            <h3 itemprop="name">San Jose</h3>
-            <span itemprop="legalName">TopMonks LLC</span>
-            <div itemprop="location" itemscope itemtype="https://schema.org/Place">
-              <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                <span itemprop="streetAddress">2 North 1st St., 5th Floor</span><br>
-                <span itemprop="addressLocality">San Jose</span>,
-                <span itemprop="addressRegion">CA</span>
-                <span itemprop="postalCode">95136</span><br>
-                <span itemprop="addressCountry">United States</span>
-              </div>
-              <a href="https://goo.gl/maps/YAJRUb1rDox" class="button" data-marker="san-jose">ukázat na mapě</a>
-              <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-                <meta itemprop="latitude" content="37.336482">
-                <meta itemprop="longitude" content="-121.8905285">
-              </div>
+               width="100%">
+        </a>
+        <div class="content">
+          <h3 itemprop="name">San Jose</h3>
+          <span itemprop="legalName">TopMonks LLC</span>
+          <div itemprop="location" itemscope itemtype="https://schema.org/Place">
+            <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <span itemprop="streetAddress">2 North 1st St., 5th Floor</span><br>
+              <span itemprop="addressLocality">San Jose</span>,
+              <span itemprop="addressRegion">CA</span>
+              <span itemprop="postalCode">95136</span><br>
+              <span itemprop="addressCountry">United States</span>
+            </div>
+            <a href="https://goo.gl/maps/YAJRUb1rDox" class="button" data-marker="san-jose">ukázat na mapě</a>
+            <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+              <meta itemprop="latitude" content="37.336482">
+              <meta itemprop="longitude" content="-121.8905285">
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="billing" class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner tm-layout-wrapper">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>Fakturační údaje</h2>
-        </div>
-        <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-          <h3>Fakturační adresa</h3>
-          <span itemprop="legalName">TopMonks s.r.o.</span><br>
-          <span itemprop="foundingLocation" itemscope="" itemtype="https://schema.org/Place">
-          <span itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress">
-          <span itemprop="streetAddress">Struhařovská 2931/9</span><br>
-          <span itemprop="postalCode">141 00</span>
-          <span itemprop="addressLocality">Praha 4</span>
-          </span>
-          </span><br>
-          <a href="mailto:invoices@topmonks.com">invoices@topmonks.com</a>
-
-          <div>IČO: 24847437<br> DIČ: <span itemprop="vatID">CZ24847437</span></div>
-        </div>
-        <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-8-tablet">
-          <h3>Bankovní účet</h3>
-          <div>Banka: Raiffeisen Bank</div>
-          <div>Číslo účtu: 780318/5500</div>
-          <div>IBAN: CZ3655000000000000780318</div>
-          <div>BIC: RZBCCZPP</div>
-        </div>
-      </div>
-    </section>
+  <div class="tm-layout-wrapper line-between mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+    <hr>
   </div>
+
+  <section id="billing" class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+        <h3>Fakturační adresa</h3>
+        <span itemprop="legalName"><b>TopMonks S.R.O.</b></span><br>
+        <span itemprop="foundingLocation" itemscope="" itemtype="https://schema.org/Place">
+          <span itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress">
+            <span itemprop="streetAddress"><b>Struhařovská 2931/9</b></span><br>
+            <span itemprop="postalCode"><b>141 00</b></span>
+          <span itemprop="addressLocality"><b>Praha 4</b></span>
+          </span>
+        </span><br>
+        <a href="mailto:invoices@topmonks.com">invoices@topmonks.com</a>
+
+        <div>IČO: 24847437<br> DIČ: <span itemprop="vatID">CZ24847437</span></div>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+        <h3>Fakturační adresa USA</h3>
+        <span itemprop="legalName"><b>TopMonks INC.</b></span><br>
+        <span itemprop="foundingLocation" itemscope="" itemtype="https://schema.org/Place">
+          <span itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress">
+            <span itemprop="streetAddress"><b>919 North Market Street, Suite 950 Wilmington</b></span><br>
+            <span itemprop="postalCode"><b>New Castle, Delaware 19801</b></span><br>
+          <span itemprop="addressLocality"><b>United States</b></span>
+          </span>
+        </span>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+        <h3>Bankovní účet</h3>
+        <div>Banka: Raiffeisen Bank</div>
+        <div><b>Číslo účtu: 780318/5500</b></div>
+        <div><b>IBAN: CZ3655000000000000780318</b></div>
+        <div>BIC: RZBCCZPP</div>
+      </div>
+    </div>
+  </section>
+</div>
 
 {% endblock %}
 
