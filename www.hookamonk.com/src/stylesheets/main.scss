@@ -178,6 +178,10 @@ ul.menu {
   background: url("https://res.cloudinary.com/topmonks/image/upload/v1544004582/hookamonk.com/smoke-png-transparent-background-2.png") center no-repeat;
   background-size: 100%;
 
+  .revolution_img-phone {
+    display: none;
+  }
+
   .revolution_text:before {
     content: "";
     display: inline-block;
@@ -309,7 +313,16 @@ footer {
     width: 125px;
     height: 32px;
   }
+  #revolution {
+    .revolution_img-phone {
+      display: block;
+    }
 
+    .revolution_img-desktop {
+      display: none;
+
+    }
+  }
   #products {
     h3 {
       text-align: center;
@@ -327,6 +340,7 @@ footer {
     .order_2 {
       order: 2;
     }
+
     .order_3 {
       order: 3;
     }
