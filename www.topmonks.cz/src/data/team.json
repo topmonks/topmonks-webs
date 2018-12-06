@@ -489,6 +489,18 @@
 			"body": "",
 			"updatedAt": "2018-08-15T08:57:21.809Z"
 		},
+		"petr-simek": {
+			"id": "petr-simek",
+			"name": "Petr",
+			"surname": "Šimek",
+			"job_title": "Java Developer",
+			"twitter": null,
+			"github": null,
+			"linkedin": null,
+			"quote": null,
+			"body": "",
+			"updatedAt": "2018-11-02T07:54:21.235Z"
+		},
 		"premysl-donat": {
 			"id": "premysl-donat",
 			"name": "Přemysl",
@@ -536,18 +548,6 @@
 			"quote": null,
 			"body": "",
 			"updatedAt": "2018-10-18T12:01:39.902Z"
-		},
-		"rustem-zhunusov": {
-			"id": "rustem-zhunusov",
-			"name": "Rustem",
-			"surname": "Zhunusov",
-			"job_title": null,
-			"twitter": null,
-			"github": null,
-			"linkedin": null,
-			"quote": null,
-			"body": "",
-			"updatedAt": "2018-08-21T14:57:44.312Z"
 		},
 		"tomas-brejla": {
 			"id": "tomas-brejla",
