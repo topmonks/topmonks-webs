@@ -1,6 +1,6 @@
 {
-  "src": "./www.hookahmonk.com/src",
-  "dest": "./public/www.hookahmonk.com",
+  "src": "./www.hookamonk.com/src",
+  "dest": "./public/www.hookamonk.com",
 
   "html": {
     "src": "html",
