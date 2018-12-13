@@ -256,7 +256,7 @@ workflows:
       - test-www-hookamonk-com:
           requires:
             - build
-      - deploy-www-hookamonk-com
+      - deploy-www-hookamonk-com:
           context: org-global
           requires:
             - provision
