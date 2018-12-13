@@ -11,7 +11,7 @@ test-site: &test-site
         at: ~/topmonks-webs
     - restore_cache:
         keys:
-          - v2-dependencies-{{ checksum "yarn.lock" }}
+          - v3-dependencies-{{ checksum "yarn.lock" }}
     - run:
         command: yarn run http-server ./public/$HOST
         background: true
@@ -61,15 +61,13 @@ jobs:
           command: pulumi login file:///home/circleci/topmonks-webs
       - restore_cache:
           keys:
-            - v2-dependencies-{{ checksum "yarn.lock" }}
-            # fallback to using the latest cache if no exact match is found
-            - v2-dependencies-
+            - v3-dependencies-{{ checksum "yarn.lock" }}
 
       - run: yarn install --link-duplicates --no-progress
       - save_cache:
           paths:
             - node_modules
-          key: v2-dependencies-{{ checksum "yarn.lock" }}
+          key: v3-dependencies-{{ checksum "yarn.lock" }}
       - run: yarn run build
       - run: |
           mkdir results
@@ -137,31 +135,6 @@ jobs:
           name: Push Pulumi state to S3
           command: aws s3 sync .pulumi/ s3://topmonks-pulumi-state/
 
-  test-www-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: www.topmonks.com
-
-  test-blockchain-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: blockchain.topmonks.com
-
-  test-studio-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: studio.topmonks.com
-
-  test-www-topmonks-cz:
-    <<: *test-site
-    environment:
-      HOST: www.topmonks.cz
-
-  test-caffe-topmonks-cz:
-    <<: *test-site
-    environment:
-      HOST: caffe.topmonks.cz
-
   test-prodeti-topmonks-cz:
     <<: *test-site
     environment:
@@ -173,11 +146,10 @@ jobs:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E81ZRHS2RR6UN
       HOST: prodeti.topmonks.cz
 
-  deploy-xixo-demo-topmonks-com:
-    <<: *s3-deploy
+  test-blockchain-topmonks-com:
+    <<: *test-site
     environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E22G4M3HL57V9Z
-      HOST: xixo-demo.topmonks.com
+      HOST: blockchain.topmonks.com
 
   deploy-blockchain-topmonks-com:
     <<: *s3-deploy
@@ -185,11 +157,21 @@ jobs:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E1CJ2HYFKVH0CG
       HOST: blockchain.topmonks.com
 
+  test-studio-topmonks-com:
+    <<: *test-site
+    environment:
+      HOST: studio.topmonks.com
+
   deploy-studio-topmonks-com:
     <<: *s3-deploy
     environment:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E2CIFZELO3K1ME
       HOST: studio.topmonks.com
+
+  test-www-topmonks-com:
+    <<: *test-site
+    environment:
+      HOST: www.topmonks.com
 
   deploy-www-topmonks-com:
     <<: *s3-deploy
@@ -197,17 +179,44 @@ jobs:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E2FSHRGA7F0TNY
       HOST: www.topmonks.com
 
+  test-www-topmonks-cz:
+    <<: *test-site
+    environment:
+      HOST: www.topmonks.cz
+
   deploy-www-topmonks-cz:
     <<: *s3-deploy
     environment:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E2K0QM3AL8O9FE
       HOST: www.topmonks.cz
 
+  test-caffe-topmonks-cz:
+    <<: *test-site
+    environment:
+      HOST: caffe.topmonks.cz
+
   deploy-caffe-topmonks-cz:
     <<: *s3-deploy
     environment:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: EQ3Z90HYRV83G
       HOST: caffe.topmonks.cz
+
+  test-www-hookamonk-com:
+    <<: *test-site
+    environment:
+      HOST: www.hookamonk.com
+
+  deploy-www-hookamonk-com:
+    <<: *s3-deploy
+    environment:
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E2EF8JLZURG0RI
+      HOST: www.hookamonk.com
+
+  deploy-xixo-demo-topmonks-com:
+    <<: *s3-deploy
+    environment:
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E22G4M3HL57V9Z
+      HOST: xixo-demo.topmonks.com
 
 workflows:
   build_and_deploy:
@@ -244,6 +253,17 @@ workflows:
       - test-prodeti-topmonks-cz:
           requires:
             - build
+      - test-www-hookamonk-com:
+          requires:
+            - build
+      - deploy-www-hookamonk-com
+          context: org-global
+          requires:
+            - provision
+            - test-www-hookamonk-com
+          filters:
+            branches:
+              only: master
       - deploy-prodeti-topmonks-cz:
           context: org-global
           requires:
