@@ -33,5 +33,6 @@
         "routingRules": "[{\"Condition\":{\"HttpErrorCodeReturnedEquals\":\"404\"},\"Redirect\":{\"HostName\":\"xixo-demo.topmonks.com\",\"ReplaceKeyPrefixWith\":\"#/\"}}]"
       }
     }
-  }
+  },
+  "www.hookamonks.com": {}
 }
