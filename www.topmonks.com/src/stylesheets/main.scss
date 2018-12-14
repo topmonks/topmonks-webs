@@ -114,10 +114,13 @@ blockquote {
   }
 }
 .page_sub-title p {
-  font-size: 24px;
-  color: var(--tm-contact-darkgrey);
-  text-align: center;
-  opacity: 0.7;
+   font-size: 24px;
+   color: var(--tm-contact-darkgrey);
+   text-align: center;
+   opacity: 0.7;
+ }
+.page_sub-title h2 {
+ text-transform: none;
 }
 
 .action-button {
