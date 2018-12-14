@@ -34,8 +34,11 @@
 .footer_social-buttons {
   text-align: right;
 }
-.tm-footer .tm-footer_nav a{
-  text-underline: none;
+.tm-footer nav a{
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .social-buttons {
   background-color: #fff;
