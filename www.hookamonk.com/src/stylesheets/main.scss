@@ -21,33 +21,21 @@
 }
 
 body {
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  font-variant: normal;
-  font-style: normal;
+  font-family: century-gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-size: 16px;
   color: var(--primary-color);
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
-}
-
-@font-face {
-  font-family: 'CenturyGothic';
-  src: url('./fonts/CenturyGothicStd/3099F9_2_0.eot');
-  src: url('./fonts/CenturyGothicStd/3099F9_2_0.eot?#iefix') format('embedded-opentype'),
-  url('./fonts/CenturyGothicStd/3099F9_2_0.woff2') format('woff2'),
-  url('./fonts/CenturyGothicStd/3099F9_2_0.woff') format('woff'),
-  url('./fonts/CenturyGothicStd/3099F9_2_0.ttf') format('truetype');
-  font-weight: 400;
-}
-
-
-@font-face {
-  font-family: 'CenturyGothicBold';
-  src: url('./fonts/CenturyGothicBold/3099F9_2_0.eot');
-  src: url('./fonts/CenturyGothicBold/3099F9_2_0.eot?#iefix') format('embedded-opentype'),
-  url('./fonts/CenturyGothicBold/3099F9_2_0.woff2') format('woff2'),
-  url('./fonts/CenturyGothicBold/3099F9_2_0.woff') format('woff'),
-  url('./fonts/CenturyGothicBold/3099F9_2_0.ttf') format('truetype');
-  font-weight: 700;
+  font-kerning: normal;
+  font-variant-numeric: lining-nums;
+  font-variant-ligatures: common-ligatures contextual;
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum";
+  font-feature-settings: "kern", "liga", "clig", "calt", "lnum";
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
 }
 
 header {
@@ -255,8 +243,7 @@ ul.menu {
 /* Footer */
 footer {
   background: url("https://res.cloudinary.com/topmonks/image/upload/v1543849049/hookamonk.com/footer_bgnd.png") no-repeat;
-  background-size: 100%;
-
+  background-size: cover;
   h3, ul {
     padding-left: 0;
   }
@@ -276,12 +263,10 @@ footer {
     text-align: center;
     margin: 3em 0;
   }
-hr.above-footer-line {
-  min-width: 50em;
-  height: .11em;
-  background-color: #DCDCDC;
-}
+
   .footer_social-section {
+    border-top: 2px solid #DCDCDC;
+    padding-top: 1em;
     align-self: center;
     margin: 24px 0;
 
