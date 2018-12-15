@@ -12,7 +12,7 @@
     "@pulumi/pulumi": "latest"
   },
   "devDependencies": {
-    "ava": "^0.25.0",
+    "ava": "^1.0.1",
     "blendid": "^4.4.3",
     "bluebird": "^3.5.2",
     "broken-link-checker-local": "^0.2.0",
