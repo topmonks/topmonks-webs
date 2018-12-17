@@ -35,7 +35,11 @@ function createBucket(
  * @param bucket {aws.s3.Bucket}
  * @returns {aws.s3.BucketPolicy}
  */
-function createBucketPolicy(parent, domain, bucket) {
+function createBucketPolicy(
+  parent: pulumi.ComponentResource,
+  domain: string,
+  bucket: aws.s3.Bucket
+) {
   return new aws.s3.BucketPolicy(
     `${domain}/bucket-policy`,
     {
@@ -64,10 +68,14 @@ function createBucketPolicy(parent, domain, bucket) {
  * @param parent {pulumi.ComponentResource} parent component
  * @param domain {string} website domain name
  * @param contentBucket {aws.s3.Bucket}
- * @returns {Promise<aws.cloudfront.Distribution>}
+ * @returns {aws.cloudfront.Distribution}
  */
-async function createCloudFront(parent, domain, contentBucket) {
-  const acmCertificate = await getCertificate(domain);
+function createCloudFront(
+  parent: pulumi.ComponentResource,
+  domain: string,
+  contentBucket: aws.s3.Bucket
+) {
+  const acmCertificate = getCertificate(domain);
   return new aws.cloudfront.Distribution(
     `${domain}/cdn-distribution`,
     {
@@ -118,13 +126,16 @@ async function createCloudFront(parent, domain, contentBucket) {
         }
       },
       viewerCertificate: {
-        acmCertificateArn: acmCertificate.arn,
+        acmCertificateArn: acmCertificate.apply(x => x.arn),
         sslSupportMethod: "sni-only",
         minimumProtocolVersion: "TLSv1.2_2018"
       },
       isIpv6Enabled: true
     },
-    { parent }
+    {
+      parent,
+      dependsOn: [contentBucket]
+    }
   );
 }
 
@@ -135,20 +146,17 @@ async function createCloudFront(parent, domain, contentBucket) {
  * @param cname {pulumi.Output<string>} aliased domain name
  * @returns {Promise<aws.route53.Record>}
  */
-async function createAliasRecord(
+function createAliasRecord(
   parent: pulumi.ComponentResource,
   domain: string,
   cname: pulumi.Output<string>
 ) {
-  const domainParts = getDomainAndSubdomain(domain);
-  const hostedZone = await aws.route53.getZone({
-    name: domainParts.parentDomain
-  });
+  const hostedZone = getHostedZone(domain);
   return new aws.route53.Record(
     `${domain}/dns-record`,
     {
       name: domain,
-      zoneId: hostedZone.zoneId,
+      zoneId: hostedZone.apply(x => x.zoneId),
       type: "CNAME",
       ttl: 300,
       records: [cname]
@@ -157,23 +165,32 @@ async function createAliasRecord(
   );
 }
 
+function getHostedZone(domain: string) {
+  const domainParts = getDomainAndSubdomain(domain);
+  const hostedZone = aws.route53.getZone({
+    name: domainParts.parentDomain
+  });
+  return pulumi.output(hostedZone);
+}
+
 /**
  * Gets Widlcard certificate for top domain
  * @param domain {string} website domain name
- * @returns {Promise<aws.acm.GetCertificateResult>}
+ * @returns {pulumi.Output<pulumi.Unwrap<aws.acm.GetCertificateResult>>}
  */
-function getCertificate(domain) {
+function getCertificate(domain: string) {
   const parentDomain = getParentDomain(domain);
   const usEast1 = new aws.Provider(`${domain}/provider/us-east-1`, {
     region: aws.USEast1Region
   });
-  return aws.acm.getCertificate(
+  const certificate = aws.acm.getCertificate(
     { domain: `*.${parentDomain}` },
     { provider: usEast1 }
   );
+  return pulumi.output(certificate);
 }
 
-function getParentDomain(domain) {
+function getParentDomain(domain: string) {
   const rootDomain = getDomainAndSubdomain(domain).parentDomain;
   return rootDomain.substr(0, rootDomain.length - 1);
 }
@@ -184,7 +201,7 @@ function getParentDomain(domain) {
  * @param domain
  * @returns {*}
  */
-function getDomainAndSubdomain(domain) {
+function getDomainAndSubdomain(domain: string) {
   const parts = domain.split(".");
   if (parts.length < 2) {
     throw new Error(`No TLD found on ${domain}`);
@@ -206,12 +223,14 @@ function getDomainAndSubdomain(domain) {
  * hosted in AWS S3 and distributed via CloudFront CDN with Route53 DNS Record.
  */
 export class WebSite extends pulumi.ComponentResource {
-  domain: string;
-  url: string;
   contentBucket: aws.s3.Bucket;
   contentBucketPolicy: aws.s3.BucketPolicy;
   cdn?: aws.cloudfront.Distribution;
   dnsRecord: aws.route53.Record;
+  domain: pulumi.Output<string>;
+  url: pulumi.Output<string>;
+  contentBucketUri: pulumi.Output<string>;
+  cloudFrontId?: pulumi.Output<string>;
 
   /**
    *
@@ -225,8 +244,8 @@ export class WebSite extends pulumi.ComponentResource {
     opts?: pulumi.ComponentResourceOptions
   ) {
     super("topmonks-webs:WebSite", domain, settings, opts);
-    this.domain = domain;
-    this.url = `https://${domain}/`;
+    this.domain = pulumi.output(domain);
+    this.url = pulumi.output(`https://${domain}/`);
   }
 
   /**
@@ -234,9 +253,13 @@ export class WebSite extends pulumi.ComponentResource {
    * @param domain {string} website domain name
    * @param settings {*} optional overrides of website configuration
    * @param opts {pulumi.ComponentResourceOptions}
-   * @returns {Promise<WebSite>}
+   * @returns {WebSite}
    */
-  static async create(domain, settings, opts?) {
+  static create(
+    domain: string,
+    settings: any,
+    opts?: pulumi.ComponentResourceOptions
+  ) {
     const website = new WebSite(domain, settings, opts);
     const contentBucket = (website.contentBucket = createBucket(
       website,
@@ -250,16 +273,12 @@ export class WebSite extends pulumi.ComponentResource {
     );
     let cdn;
     if (!(settings.cdn && settings.cdn.disabled)) {
-      cdn = website.cdn = await createCloudFront(
-        website,
-        domain,
-        contentBucket
-      );
+      cdn = website.cdn = createCloudFront(website, domain, contentBucket);
     }
     const cname = cdn ? cdn.domainName : contentBucket.bucketDomainName;
-    website.dnsRecord = await createAliasRecord(website, domain, cname);
+    website.dnsRecord = createAliasRecord(website, domain, cname);
 
-    const outputs = {
+    const outputs: pulumi.Inputs = {
       contentBucketUri: contentBucket.bucketDomainName.apply(t => `s3://${t}`),
       url: website.url,
       domain: domain
