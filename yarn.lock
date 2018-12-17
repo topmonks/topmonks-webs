@@ -485,18 +485,35 @@
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
 "@pulumi/aws@latest":
-  version "0.16.3"
-  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-0.16.3.tgz#675d07283fba65122246aedea6ce2b0bf12f4fd5"
-  integrity sha512-IbW1nvNdI0jhPujUX6vjk0RuY69EEfPmyxvljMv647ME554Win5ktQZdLx9V7ReDV/GKAmBkrUFlOnhLoq9gKg==
+  version "0.16.4"
+  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-0.16.4.tgz#96a4ce2de903b239719164117cb9a3e379ad0e15"
+  integrity sha512-cIavJWOFUV8F1AEYl4nS9Z8KgzY6bWeyNLVc5aHdDq+zu9sSu82yiNFAootaiQci/UOQgxTtxvbMYHoHr4xRhg==
   dependencies:
-    "@pulumi/pulumi" "^0.16.4"
+    "@pulumi/pulumi" dev
     aws-sdk "^2.0.0"
     builtin-modules "3.0.0"
     mime "^2.0.0"
     read-package-tree "^5.2.1"
     resolve "^1.7.1"
 
-"@pulumi/pulumi@^0.16.4", "@pulumi/pulumi@latest":
+"@pulumi/pulumi@dev":
+  version "0.16.9-dev.1545073195"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.16.9-dev.1545073195.tgz#c2e6bf3669c209cfb205802a56315bdc3b1378a0"
+  integrity sha512-tYJiPxsHqKsTXTVWQbVRENWpe3lKE5FqyRpgQ9dc/AEpLk+OOXIGNZb/PCDwj+EjqkTE1jrAD1pWuj1WmVAobw==
+  dependencies:
+    google-protobuf "^3.5.0"
+    grpc "^1.12.2"
+    minimist "^1.2.0"
+    normalize-package-data "^2.4.0"
+    protobufjs "^6.8.6"
+    read-package-tree "^5.2.1"
+    require-from-string "^2.0.1"
+    source-map-support "^0.4.16"
+    ts-node "^7.0.0"
+    typescript "^3.0.0"
+    upath "^1.1.0"
+
+"@pulumi/pulumi@latest":
   version "0.16.8"
   resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.16.8.tgz#d9a899a2b9b1e29806e9829cce023617bc9f4836"
   integrity sha512-Q0POq22jmXd3ZXCYrWtgJn90m49ZNigro8e/7aHcRASLehDadUTaRLqKe69HYUc2ry9xnSFl05m0XguulWh2Hg==
