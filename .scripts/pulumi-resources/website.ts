@@ -230,7 +230,10 @@ export class WebSite extends pulumi.ComponentResource {
   public domain: pulumi.Output<string>;
   public url: pulumi.Output<string>;
   get contentBucketUri(): pulumi.Output<string> {
-    return this.contentBucket.bucketDomainName.apply(t => `s3://${t}`);
+    return this.contentBucket.bucket.apply(t => `s3://${t}`);
+  }
+  get s3WebsiteUrl(): pulumi.Output<string> {
+    return this.contentBucket.websiteEndpoint;
   }
   get cloudFrontId(): pulumi.Output<string> | undefined {
     return this.cdn && this.cdn.id;
@@ -282,6 +285,7 @@ export class WebSite extends pulumi.ComponentResource {
 
     const outputs: pulumi.Inputs = {
       contentBucketUri: website.contentBucketUri,
+      s3WebsiteUrl: website.s3WebsiteUrl,
       url: website.url,
       domain: website.domain,
       cloudFrontId: website.cloudFrontId

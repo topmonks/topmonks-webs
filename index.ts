@@ -8,7 +8,8 @@ for (const domain in websites) {
   const website = topmonks.WebSite.create(domain, websites[domain]);
   sites[domain] = {
     url: website.url,
-    contentBucketUri: website.contentBucketUri,
+    s3BucketUri: website.contentBucketUri,
+    s3WebsiteUrl: website.s3WebsiteUrl,
     cloudFrontId: website.cloudFrontId
   };
 }
