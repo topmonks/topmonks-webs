@@ -229,8 +229,12 @@ export class WebSite extends pulumi.ComponentResource {
   dnsRecord: aws.route53.Record;
   public domain: pulumi.Output<string>;
   public url: pulumi.Output<string>;
-  public contentBucketUri: pulumi.Output<string>;
-  public cloudFrontId?: pulumi.Output<string>;
+  get contentBucketUri(): pulumi.Output<string> {
+    return this.contentBucket.bucketDomainName.apply(t => `s3://${t}`);
+  }
+  get cloudFrontId(): pulumi.Output<string> | undefined {
+    return this.cdn && this.cdn.id;
+  }
 
   /**
    *
@@ -261,11 +265,8 @@ export class WebSite extends pulumi.ComponentResource {
     opts?: pulumi.ComponentResourceOptions
   ) {
     const website = new WebSite(domain, settings, opts);
-    const contentBucket = (website.contentBucket = createBucket(
-      website,
-      domain,
-      settings.bucket || {}
-    ));
+    const contentBucket = createBucket(website, domain, settings.bucket || {});
+    website.contentBucket = contentBucket;
     website.contentBucketPolicy = createBucketPolicy(
       website,
       domain,
@@ -273,19 +274,18 @@ export class WebSite extends pulumi.ComponentResource {
     );
     let cdn;
     if (!(settings.cdn && settings.cdn.disabled)) {
-      cdn = website.cdn = createCloudFront(website, domain, contentBucket);
+      cdn = createCloudFront(website, domain, contentBucket);
+      website.cdn = cdn;
     }
     const cname = cdn ? cdn.domainName : contentBucket.bucketDomainName;
     website.dnsRecord = createAliasRecord(website, domain, cname);
 
     const outputs: pulumi.Inputs = {
-      contentBucketUri: contentBucket.bucketDomainName.apply(t => `s3://${t}`),
+      contentBucketUri: website.contentBucketUri,
       url: website.url,
-      domain: website.domain
+      domain: website.domain,
+      cloudFrontId: website.cloudFrontId
     };
-    if (cdn) {
-      outputs["cloudFrontId"] = cdn.id;
-    }
     website.registerOutputs(outputs);
     return website;
   }
