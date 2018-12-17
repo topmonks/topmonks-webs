@@ -6,7 +6,9 @@ const websites = require("./websites.json");
 export const sites = Object.keys(websites)
   .map(domain => topmonks.WebSite.create(domain, websites[domain]))
   .map(site => ({
-    [`${site.domain.apply(x => x.replace(".", "-"))}-bucket-uri`]: site.contentBucketUri,
-    [`${site.domain.apply(x => x.replace(".", "-"))}-distribution-id`]: site.cloudFrontId
+    [`${site.domain}`]: {
+      contentBucketUri: site.contentBucketUri,
+      cloudFrontId: site.cloudFrontId
+    }
   }))
   .reduce((acc, site) => Object.assign(acc, site), {});

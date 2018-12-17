@@ -227,10 +227,10 @@ export class WebSite extends pulumi.ComponentResource {
   contentBucketPolicy: aws.s3.BucketPolicy;
   cdn?: aws.cloudfront.Distribution;
   dnsRecord: aws.route53.Record;
-  domain: pulumi.Output<string>;
-  url: pulumi.Output<string>;
-  contentBucketUri: pulumi.Output<string>;
-  cloudFrontId?: pulumi.Output<string>;
+  public domain: pulumi.Output<string>;
+  public url: pulumi.Output<string>;
+  public contentBucketUri: pulumi.Output<string>;
+  public cloudFrontId?: pulumi.Output<string>;
 
   /**
    *
@@ -281,7 +281,7 @@ export class WebSite extends pulumi.ComponentResource {
     const outputs: pulumi.Inputs = {
       contentBucketUri: contentBucket.bucketDomainName.apply(t => `s3://${t}`),
       url: website.url,
-      domain: domain
+      domain: website.domain
     };
     if (cdn) {
       outputs["cloudFrontId"] = cdn.id;
