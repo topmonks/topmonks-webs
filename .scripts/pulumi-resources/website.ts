@@ -229,11 +229,11 @@ export class WebSite extends pulumi.ComponentResource {
   dnsRecord: aws.route53.Record;
   public domain: pulumi.Output<string>;
   public url: pulumi.Output<string>;
-  get contentBucketUri(): pulumi.Output<string> {
-    return this.contentBucket.bucket.apply(t => `s3://${t}`);
+  get s3BucketUri(): pulumi.Output<string> {
+    return this.contentBucket.bucket.apply(x => `s3://${x}`);
   }
   get s3WebsiteUrl(): pulumi.Output<string> {
-    return this.contentBucket.websiteEndpoint;
+    return this.contentBucket.websiteEndpoint.apply(x => `http://${x}`);
   }
   get cloudFrontId(): pulumi.Output<string> | undefined {
     return this.cdn && this.cdn.id;
@@ -284,7 +284,7 @@ export class WebSite extends pulumi.ComponentResource {
     website.dnsRecord = createAliasRecord(website, domain, cname);
 
     const outputs: pulumi.Inputs = {
-      contentBucketUri: website.contentBucketUri,
+      contentBucketUri: website.s3BucketUri,
       s3WebsiteUrl: website.s3WebsiteUrl,
       url: website.url,
       domain: website.domain,
