@@ -5,36 +5,84 @@
   --mdc-layout-grid-margin-desktop: 0;
   --mdc-layout-grid-margin-tablet: 0;
   --mdc-layout-grid-margin-phone: 0;
+
   h3 {
     text-align: left;
   }
+
   .tm-layout-wrapper {
     padding: 0;
   }
+
+  .links a {
+    font-size: 18px;
+    color: #FE664B;
+  }
+
   &.box img {
-    margin: 16px auto;
-  }
-  @media screen and (max-width: 839px) {
-    .tm-meetup__cell {
-      &:first-child {
-        order: 2;
-      }
-      &:last-child {
-        order: 1;
-      }
-    }
-  }
-  @media (min-width: 840px) {
-    &:nth-child(even) .tm-meetup__cell {
-      &:first-child {
-        order: 2;
-      }
-      &:last-child {
-        order: 1;
-      }
-    }
+    margin: 0;
   }
 }
+
+.tm-events {
+  .tm-layout-wrapper {
+    padding: 0;
+  }
+  a {
+    text-decoration: underline;
+  }
+  & a:hover {
+    text-decoration: none;
+  }
+}
+
+.other-events {
+  img {
+    filter: saturate(0);
+
+    &:hover {
+      filter: saturate(1.0);
+    }
+  }
+
+  .other-events_logos {
+    text-align: center;
+  }
+}
+
+#gallery {
+  margin-bottom: 3em;
+  text-align: center;
+  width: 100%;
+  .mdc-layout-grid {
+    --mdc-layout-grid-gutter-desktop: 0;
+    --mdc-layout-grid-gutter-tablet: 0;
+    padding: 0;
+  }
+
+  img {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .tm-events_text {
+    padding: 14px 34px 0 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .tm-meetup {
+    &.box img {
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+  }
+  .gallery_img {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 839px) {
   .tm-meetup__img {
     max-width: 100%;
@@ -42,5 +90,33 @@
   .img-link {
     display: block;
     text-align: center;
+  }
+}
+@media (max-width: 780px) {
+  .tm-meetup__cell img {
+    height: 100%;
+  }
+  .tm-events_text {
+    padding: 0.5em 1.5em;
+  }
+  #gallery {
+    display: none;
+  }
+  .gallery_img {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .tm-events_text {
+    padding: 0 24px 24px;
+  }
+  &.box img {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  .tm-meetup__cell img {
+    height: auto;
   }
 }
