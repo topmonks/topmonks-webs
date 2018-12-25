@@ -514,9 +514,9 @@
     upath "^1.1.0"
 
 "@pulumi/pulumi@latest":
-  version "0.16.8"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.16.8.tgz#d9a899a2b9b1e29806e9829cce023617bc9f4836"
-  integrity sha512-Q0POq22jmXd3ZXCYrWtgJn90m49ZNigro8e/7aHcRASLehDadUTaRLqKe69HYUc2ry9xnSFl05m0XguulWh2Hg==
+  version "0.16.9"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.16.9.tgz#addcdeab3bf76ca59729b8617fd39d0cc3f07d50"
+  integrity sha512-FwxHklybzjbMGdhrfZC/1lmZKpAvXx8za7edaLhD1BVKfuFmyFe0xXTSzgTneFAEFFiFlIYySaj/XLXI5MhOgw==
   dependencies:
     google-protobuf "^3.5.0"
     grpc "^1.12.2"
