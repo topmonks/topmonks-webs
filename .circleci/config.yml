@@ -308,7 +308,7 @@ workflows:
           context: org-global
           requires:
             - provision
-            #- test-caffe-topmonks-cz
+            - test-caffe-topmonks-cz
           filters:
             branches:
               only: master
