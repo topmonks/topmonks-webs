@@ -455,19 +455,49 @@
 			"shortTitle": "Conference Minutes",
 			"lecturers": "Tomáš Záluský, Lumír Mrkva, Aleš Roubíček",
 			"date": "2. listopadu 2017",
-			"address": "Loft N8, Nekázanka 8, Praha 1",
+			"address": "Loft N8<br> Nekázanka 8, Praha 1",
 			"mapLink": "https://goo.gl/maps/TiqAbr4sRTB2",
 			"link": "https://www.facebook.com/events/294980417665663/",
 			"picture": "/images/posters-small/empty.png",
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2018-08-28T04:33:20.405Z"
+			"updatedAt": "2019-01-02T13:27:21.427Z"
+		},
+		"50": {
+			"sessionNumber": 50,
+			"title": "It depends - designeři TopMonks o UX",
+			"shortTitle": "It depends",
+			"lecturers": "Pavel Trnka",
+			"date": "1. listopadu 2018",
+			"address": "Jamm Club, Pod kaštany 3, 160 00 Praha",
+			"mapLink": "https://goo.gl/maps/D2WMNNpDZ9D2",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/255606837/",
+			"picture": "/images/posters-small/empty.png",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-01-02T13:48:17.483Z"
+		},
+		"51": {
+			"sessionNumber": 51,
+			"title": "Chatboti",
+			"shortTitle": "Chatboti",
+			"lecturers": "Jirka Pénzeš",
+			"date": "6. prosince 2018",
+			"address": "Jamm Club, Pod kaštany 3, 160 00 Praha",
+			"mapLink": "https://goo.gl/maps/D2WMNNpDZ9D2",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/256540509/",
+			"picture": "/images/posters-small/empty.png",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-01-02T10:29:45.862Z"
 		},
 		"52": {
 			"sessionNumber": 52,
 			"title": "DevOps a Akcelerace byznysu",
-			"shortTitle": "DevOps",
+			"shortTitle": "DevOps a Akcelerace byznysu",
 			"lecturers": "Aleš Roubíček, Jiří Fabián",
 			"date": "10. ledna 2019",
 			"address": "Jamm Club<br>Pod kaštany 3, 160 00 Praha",
@@ -477,7 +507,7 @@
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-01-02T10:24:04.064Z"
+			"updatedAt": "2019-01-02T13:50:17.034Z"
 		}
 	}
 }

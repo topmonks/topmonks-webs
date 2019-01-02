@@ -1,13 +1,12 @@
 {% extends 'layouts/application.html' %}
 <!--celkový počet sessions, používá se při generování obsahu...-->
 {% set eventsCount = events | length %}
-{% set upcomingEvent = events[eventsCount] %}
+{% set eventsList = events | list %}
+{% set upcomingEvent = eventsList | last %}
+{% set upcomingEvent = upcomingEvent.value %}
 
 {% block title %}TopMonks Caffè{% endblock %}
 {% block content %}
-<script type="text/javascript">
-  console.log({{ events | safe  }}, {{ upcomingEvent | safe  }});
-</script>
 <header>
   <div class="mdc-layout-grid tm-header tm-layout-wrapper">
     <div class="mdc-layout-grid__inner">
@@ -149,7 +148,7 @@
                     </svg>
                   </div>
                   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-9-desktop">
-                    {{upcomingEvent.address}}
+                    <span>{{ upcomingEvent.address | safe }}</span>
                   </div>
                 </div>
               </div>
@@ -222,7 +221,7 @@
           <h2>Předchozí seance</h2>
         </div>
         {% for i in range(eventsCount -1, 0, -1) -%}
-        {{ macros.eventInfo(events[i]) }}
+        {{ macros.eventInfo(eventsList[i].value) }}
         {%- endfor %}
         <!--div class="seance_posters mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <a href="">Zobrazit všechny...</a>
