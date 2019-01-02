@@ -464,50 +464,20 @@
 			"body": "",
 			"updatedAt": "2018-08-28T04:33:20.405Z"
 		},
-		"50": {
-			"sessionNumber": 50,
-			"title": "\"It depends\" - designový team TopMonks o UX",
-			"shortTitle": "UX téma",
-			"lecturers": "Pavel Trnka, Radek Jakl, Tomáš Paulus",
-			"date": "1. listopadu 2018",
-			"address": "Jamm Club, Pod kaštany 3, 160 00 Praha",
-			"mapLink": "https://goo.gl/maps/D2WMNNpDZ9D2",
-			"link": "https://www.facebook.com/events/294980417665663/",
-			"picture": "/images/posters-small/empty.png",
-			"presentationLink": null,
-			"videoLink": null,
-			"body": "",
-			"updatedAt": "2019-01-02T09:49:06.881Z"
-		},
-		"51": {
-			"sessionNumber": 51,
-			"title": "Chatboti",
-			"shortTitle": "Chatboti",
-			"lecturers": "Jirka Pénzeš, Karel Ploc, Dan Hromada",
-			"date": "6. prosince 2018",
-			"address": "Jamm Club, Pod kaštany 3, 160 00 Praha",
-			"mapLink": "https://goo.gl/maps/D2WMNNpDZ9D2",
-			"link": "https://www.facebook.com/events/294980417665663/",
-			"picture": "/images/posters-small/empty.png",
-			"presentationLink": null,
-			"videoLink": null,
-			"body": "",
-			"updatedAt": "2019-01-02T07:56:51.867Z"
-		},
 		"52": {
 			"sessionNumber": 52,
 			"title": "DevOps a Akcelerace byznysu",
 			"shortTitle": "DevOps",
-			"lecturers": "Aleš Roubíček, Jiří \"Filemon\" Fabián",
+			"lecturers": "Aleš Roubíček, Jiří Fabián",
 			"date": "10. ledna 2019",
-			"address": "Jamm Club, Pod kaštany 3, 160 00 Praha",
+			"address": "Jamm Club<br>Pod kaštany 3, 160 00 Praha",
 			"mapLink": "https://goo.gl/maps/D2WMNNpDZ9D2",
-			"link": "https://www.facebook.com/events/294980417665663/",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/257611074/",
 			"picture": "/images/posters-small/empty.png",
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-01-02T07:56:51.867Z"
+			"updatedAt": "2019-01-02T10:24:04.064Z"
 		}
 	}
 }

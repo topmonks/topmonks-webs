@@ -3,6 +3,8 @@ const pathConfig = require("./path-config.json");
 const marked = require("marked");
 const markdownToJSON = require("gulp-markdown-to-json");
 const merge = require("gulp-merge-json");
+const watch = require("gulp-watch");
+const path = require("path");
 
 module.exports = {
   images: true,
@@ -44,9 +46,11 @@ module.exports = {
 
   additionalTasks: {
     initialize: function(gulp) {
-      gulp.task("prepareJsonData", () => {
+      const dataPath = `${path.resolve(__dirname, "../src/data")}`;
+      const eventsSrc = `${dataPath}/events/**/*.md`;
+      const generateEventsJson = () => {
         gulp
-          .src("../../caffe.topmonks.cz/src/data/events/**/*.md")
+          .src(eventsSrc)
           .pipe(markdownToJSON(marked))
           .pipe(
             merge({
@@ -58,14 +62,36 @@ module.exports = {
               }
             })
           )
-          .pipe(gulp.dest("../../caffe.topmonks.cz/src/data/"));
+          .pipe(gulp.dest(dataPath));
+      };
+      /**
+       * Task generate team data
+       */
+      gulp.task("events-data", generateEventsJson);
+      /**
+       * Watch src/data/team/* changes
+       */
+      gulp.task("events-data:watch", () => {
+        watch(eventsSrc, generateEventsJson);
+      });
+
+      /**
+       * Watch src/data/events.json changes
+       * We use the same gulp task used for html (we need to generate new html after new team.json is created)
+       */
+      gulp.task("events-json:watch", () => {
+        watch(
+          path.resolve(dataPath, "events.json"),
+          require("blendid/gulpfile.js/tasks/html") // the code is so shit we need to use require
+        );
       });
     },
     development: {
-      prebuild: ["prepareJsonData"]
+      prebuild: ["events-data"],
+      postbuild: ["events-data:watch", "events-json:watch"]
     },
     production: {
-      prebuild: ["prepareJsonData"]
+      prebuild: ["events-data"]
     }
   },
 

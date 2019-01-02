@@ -3,8 +3,11 @@
 {% set eventsCount = events | length %}
 {% set upcomingEvent = events[eventsCount] %}
 
-{% block title %}caffe.topmonks.cz{% endblock %}
+{% block title %}TopMonks Caffè{% endblock %}
 {% block content %}
+<script type="text/javascript">
+  console.log({{ events | safe  }}, {{ upcomingEvent | safe  }});
+</script>
 <header>
   <div class="mdc-layout-grid tm-header tm-layout-wrapper">
     <div class="mdc-layout-grid__inner">
@@ -146,8 +149,7 @@
                     </svg>
                   </div>
                   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-9-desktop">
-                    <span>Jamm club</span><br>
-                    <span>Pod kaštany 3, 160 00 Praha</span>
+                    {{upcomingEvent.address}}
                   </div>
                 </div>
               </div>
@@ -172,7 +174,7 @@
                   </svg>
                 </div>
                 <div class="confirm-btn mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop">
-                  <a href="" class="button">Potvrdit účast</a>
+                  <a href="{{upcomingEvent.link}}" class="button">Potvrdit účast</a>
                 </div>
               </div>
             </div>
@@ -222,9 +224,9 @@
         {% for i in range(eventsCount -1, 0, -1) -%}
         {{ macros.eventInfo(events[i]) }}
         {%- endfor %}
-        <div class="seance_posters mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <!--div class="seance_posters mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <a href="">Zobrazit všechny...</a>
-        </div>
+        </div-->
       </div>
     </div>
   </section>
