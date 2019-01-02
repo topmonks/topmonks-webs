@@ -63,6 +63,10 @@ module.exports = {
     },
     development: {
       prebuild: ["prepareJsonData"]
+    },
+    
+    production: {
+      prebuild: ["prepareJsonData"]
     }
   },
 
