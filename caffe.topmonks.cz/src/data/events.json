@@ -432,7 +432,7 @@
 			"presentationLink": null,
 			"videoLink": "https://youtu.be/l0VFnTJhlyE",
 			"body": "",
-			"updatedAt": "2018-08-28T04:33:20.404Z"
+			"updatedAt": "2019-01-02T15:28:04.803Z"
 		},
 		"37": {
 			"sessionNumber": 37,
@@ -443,11 +443,11 @@
 			"address": "Loft N8, Nekázanka 8, Praha 1",
 			"mapLink": "https://goo.gl/maps/TiqAbr4sRTB2",
 			"link": "https://www.facebook.com/events/2004956993116250/",
-			"picture": "/images/posters-small/empty.png",
+			"picture": "/images/posters-small/2017-10-12.jpg",
 			"presentationLink": null,
 			"videoLink": "https://youtu.be/8CWSuWSwtFU",
 			"body": "",
-			"updatedAt": "2019-01-02T15:06:45.593Z"
+			"updatedAt": "2019-01-02T15:07:44.757Z"
 		},
 		"38": {
 			"sessionNumber": 38,
@@ -458,17 +458,197 @@
 			"address": "Loft N8<br> Nekázanka 8, Praha 1",
 			"mapLink": "https://goo.gl/maps/TiqAbr4sRTB2",
 			"link": "https://www.facebook.com/events/294980417665663/",
+			"picture": "/images/posters-small/2017-11-02.jpg",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-01-02T15:29:03.466Z"
+		},
+		"39": {
+			"sessionNumber": 39,
+			"title": "Jak děláme mobilní appky?",
+			"shortTitle": "Mobilní appky",
+			"lecturers": "Dan Hromada, Jan Fabián, Radek Jakl",
+			"date": "7. prosince 2017",
+			"address": "Loft N8<br> Nekázanka 8, Praha 1",
+			"mapLink": "https://goo.gl/maps/TiqAbr4sRTB2",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/245335537/",
+			"picture": "/images/posters-small/2017-12-07.jpg",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-01-02T15:28:54.348Z"
+		},
+		"40": {
+			"sessionNumber": 40,
+			"title": "Pražský fotograf: práce s digitální fotografií",
+			"shortTitle": "Digitální fotografie",
+			"lecturers": "Jiří Píša",
+			"date": "11. ledna 2018",
+			"address": "Loft N8<br> Nekázanka 8, Praha 1",
+			"mapLink": "https://goo.gl/maps/TiqAbr4sRTB2",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/246604749/",
+			"picture": "/images/posters-small/2018-01-11.jpg",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-01-02T15:32:34.322Z"
+		},
+		"41": {
+			"sessionNumber": 41,
+			"title": "Hrátky s JavaScriptem v Ostravě",
+			"shortTitle": "JS Povídačky",
+			"lecturers": "Jarek Vilč, Jan Uhlář, Aleš Roubíček",
+			"date": "25. ledna 2018",
+			"address": "Ostravská Jindřiška, Sokolská tř. 57, 702 00 Ostrava",
+			"mapLink": "https://goo.gl/maps/E1LayNwPZ3S2",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/246894511/",
+			"picture": "/images/posters-small/2018-01-25.jpg",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-01-02T15:36:28.606Z"
+		},
+		"42": {
+			"sessionNumber": 42,
+			"title": "Reactive Java/Vertx.io",
+			"shortTitle": "Reactive Java/Vertx.io",
+			"lecturers": "Karel Štefan, Jan Hlisnikovský",
+			"date": "1. února 2018",
+			"address": "Loft N8<br> Nekázanka 8, Praha 1",
+			"mapLink": "https://goo.gl/maps/TiqAbr4sRTB2",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/247187597/",
+			"picture": "/images/posters-small/2018-02-01.jpg",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-01-02T15:47:00.658Z"
+		},
+		"43": {
+			"sessionNumber": 43,
+			"title": "Docker pro váš Business",
+			"shortTitle": "Docker pro váš Business",
+			"lecturers": "Lumír Mrkva, Palo Noha, Aleš Roubíček",
+			"date": "5. dubna 2018",
+			"address": "Loft N8<br> Nekázanka 8, Praha 1",
+			"mapLink": "https://goo.gl/maps/TiqAbr4sRTB2",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/249151513/",
+			"picture": "/images/posters-small/2018-04-05.jpg",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-01-02T15:48:15.942Z"
+		},
+		"44": {
+			"sessionNumber": 44,
+			"title": "Hluboká práce",
+			"shortTitle": "Hluboká práce",
+			"lecturers": "David Votrubec, Ján Lopušek, Jaroslav Holaň",
+			"date": "3. května 2018",
+			"address": "Loft N8<br> Nekázanka 8, Praha 1",
+			"mapLink": "https://goo.gl/maps/TiqAbr4sRTB2",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/249941634/",
+			"picture": "/images/posters-small/2018-05-03.jpg",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-01-02T15:50:21.072Z"
+		},
+		"45": {
+			"sessionNumber": 45,
+			"title": "Efektivní Front-end",
+			"shortTitle": "Efektivní Front-end",
+			"lecturers": "Aleš Roubíček",
+			"date": "7. června 2018",
+			"address": "Loft N8<br> Nekázanka 8, Praha 1",
+			"mapLink": "https://goo.gl/maps/TiqAbr4sRTB2",
+			"link": null,
+			"picture": "/images/posters-small/2018-06-07.jpg",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-01-02T15:51:57.381Z"
+		},
+		"46": {
+			"sessionNumber": 46,
+			"title": "Jak se rychle učit?",
+			"shortTitle": "Jak se rychle učit?",
+			"lecturers": "David Votrubec, Vítek Miština, Jiří Fabián",
+			"date": "12. července 2018",
+			"address": "Loft N8<br> Nekázanka 8, Praha 1",
+			"mapLink": "https://goo.gl/maps/TiqAbr4sRTB2",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/252259662/",
+			"picture": "/images/posters-small/2018-07-12.jpg",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-01-02T15:53:37.082Z"
+		},
+		"47": {
+			"sessionNumber": 47,
+			"title": "Na cestách",
+			"shortTitle": "Na cestách",
+			"lecturers": "Eliška Monsportová, Lea Petrášová, Daria Nováková, Eva Zeisová",
+			"date": "2. srpna 2018",
+			"address": "Loft N8<br> Nekázanka 8, Praha 1",
+			"mapLink": "https://goo.gl/maps/TiqAbr4sRTB2",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/253263749/",
+			"picture": "/images/posters-small/2018-08-02.jpg",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-01-02T15:55:18.975Z"
+		},
+		"48": {
+			"sessionNumber": 48,
+			"title": "Jak budujeme infrastrukturu",
+			"shortTitle": "Jak budujeme infrastrukturu",
+			"lecturers": "Jirka Pénzeš, Aleš Roubíček, Lumír Mrkva, Palo Noha",
+			"date": "6. září 2018",
+			"address": "Jamm Club, Pod kaštany 3, 160 00 Praha",
+			"mapLink": "https://goo.gl/maps/D2WMNNpDZ9D2",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/253808081/",
+			"picture": "/images/posters-small/2018-09-06.jpg",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-01-02T15:55:43.654Z"
+		},
+		"49": {
+			"sessionNumber": 49,
+			"title": "Automatizace Deployment Pipeline",
+			"shortTitle": "Automatizace Deployment Pipeline",
+			"lecturers": "Aleš Roubíček, Jan Uhlář, Karel Ploc",
+			"date": "27. září 2018",
+			"address": "Sportclub, Vítězná 2, 702 00 Ostrava",
+			"mapLink": "https://goo.gl/maps/v5CGj9iHdPm",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/254752692/",
+			"picture": "/images/posters-small/2018-09-27.jpg",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-01-02T15:55:48.286Z"
+		},
+		"50": {
+			"sessionNumber": 50,
+			"title": "Fungování decentralizovaných společností",
+			"shortTitle": "Fungování decentralizovaných společností",
+			"lecturers": "Jiří Fabián, Aleš Roubíček",
+			"date": "4. října 2018",
+			"address": "Jamm Club, Pod kaštany 3, 160 00 Praha",
+			"mapLink": "https://goo.gl/maps/D2WMNNpDZ9D2",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/255133039/",
 			"picture": "/images/posters-small/empty.png",
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-01-02T15:06:53.920Z"
+			"updatedAt": "2019-01-02T15:55:53.358Z"
 		},
-		"50": {
-			"sessionNumber": 50,
+		"51": {
+			"sessionNumber": 51,
 			"title": "It depends - designeři TopMonks o UX",
 			"shortTitle": "It depends",
-			"lecturers": "Pavel Trnka",
+			"lecturers": "Pavel Trnka, Radek Jakl, Tomáš Paulus",
 			"date": "1. listopadu 2018",
 			"address": "Jamm Club, Pod kaštany 3, 160 00 Praha",
 			"mapLink": "https://goo.gl/maps/D2WMNNpDZ9D2",
@@ -477,13 +657,13 @@
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-01-02T13:48:17.483Z"
+			"updatedAt": "2019-01-02T15:55:58.221Z"
 		},
-		"51": {
-			"sessionNumber": 51,
+		"52": {
+			"sessionNumber": 52,
 			"title": "Chatboti",
 			"shortTitle": "Chatboti",
-			"lecturers": "Jirka Pénzeš",
+			"lecturers": "Jirka Pénzeš, Karel Ploc, Dan Hromada",
 			"date": "6. prosince 2018",
 			"address": "Jamm Club, Pod kaštany 3, 160 00 Praha",
 			"mapLink": "https://goo.gl/maps/D2WMNNpDZ9D2",
@@ -492,10 +672,10 @@
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-01-02T10:29:45.862Z"
+			"updatedAt": "2019-01-02T15:56:02.381Z"
 		},
-		"52": {
-			"sessionNumber": 52,
+		"53": {
+			"sessionNumber": 53,
 			"title": "DevOps a Akcelerace byznysu",
 			"shortTitle": "DevOps a Akcelerace byznysu",
 			"lecturers": "Aleš Roubíček, Jiří Fabián",
@@ -507,7 +687,7 @@
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-01-02T13:50:17.034Z"
+			"updatedAt": "2019-01-02T15:56:06.236Z"
 		}
 	}
 }
