@@ -218,12 +218,6 @@ jobs:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E22G4M3HL57V9Z
       HOST: xixo-demo.topmonks.com
 
-  deploy-hello-topmonks-com:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: EJ109IJDXFL3F
-      HOST: hello.topmonks.com
-
 workflows:
   build_and_deploy:
     jobs:
@@ -319,14 +313,6 @@ workflows:
             branches:
               only: master
       - deploy-xixo-demo-topmonks-com:
-          context: org-global
-          requires:
-            - provision
-            - build
-          filters:
-            branches:
-              only: master
-      - deploy-hello-topmonks-com:
           context: org-global
           requires:
             - provision
