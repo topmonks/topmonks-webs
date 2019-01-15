@@ -76,6 +76,8 @@ The following sites can be build and ran using the `yarn start:[SITE]` command.
 - `blockchain.topmonks.com`
 - `studio.topmonks.com`
 - `xixo-demo.topmonks.com`
+- `hello.topmonks.com`
+
 
 It will start [browser-sync](https://browsersync.io/) session on [http://localhost:3000](http://localhost:3000).
 
