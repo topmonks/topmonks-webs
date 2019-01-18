@@ -34,6 +34,17 @@ body {
   font-family: futura-pt, sans-serif;
 }
 
+input, textarea{
+  font-size: 18px;
+}
+
+textarea {
+  font-family: Lato, sans-serif, BlinkMacSystemFont, Roboto, "Segoe UI",
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+}
+
+
 h1 {
   font-size: 48px;
   font-weight: 900;
@@ -45,6 +56,9 @@ h2 {
   font-weight: 700;
   color: #ffffff;
   text-align: center;
+}
+p {
+  margin-bottom: 1em;
 }
 
 .h2_black {
@@ -60,21 +74,6 @@ a {
   text-decoration: none;
 }
 
-a.button {
-  background-color: #ff7a7e;
-  border-radius: 32px;
-  padding: 12px 54px;
-  color: #fff;
-  font-weight: 700;
-  margin-top: 1em;
-}
-
-a.button_filled {
-  background-color: #fff;
-  color: #ff7a7e;
-  padding: 12px 98px;
-}
-
 @media (max-width: 840px) {
   h1,
   h2 {
@@ -87,4 +86,7 @@ a.button_filled {
   h2 {
     font-size: 24px;
   }
+}
+.tm-text--align-center {
+  text-align: center;
 }

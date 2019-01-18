@@ -45,7 +45,7 @@
             <p>TopMonks Startup Studio <b>invests</b> your dream from idea to real success. We are your tech
               angels &amp; first investors.</p>
           </div>
-          <div class="button button_transparent mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <a href="#contacts" class="button">COME PITCH TO US</a>
           </div>
           <div class="avatar mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -192,7 +192,7 @@
           </div>
           <div
             class="subscribe mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop">
-            <button class="mail-button">SUBSCRIBE</button>
+            <button class="button button--mail">SUBSCRIBE</button>
           </div>
         </form>
       </div>
@@ -305,13 +305,13 @@
     </div>
   </section>
   <section id="idea" class="idea">
-    <div class="mdc-layout-grid tm-layout-wrapper">
+    <div class="mdc-layout-grid tm-layout-wrapper tm-text--align-center">
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Do you have an idea for the next big thing?</h2>
         </div>
-        <div class="button button_transparent mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <a href="#contacts" class="button button_filled">PITCH US</a>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <a href="#contacts" class="button button--inverse">PITCH US</a>
         </div>
       </div>
     </div>
@@ -539,27 +539,55 @@
     <div class="mdc-layout-grid tm-layout-wrapper">
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>Contacts</h2>
-        </div>
-        <div class="mailto mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <a href="mailto:studio@topmonks.com ">studio@topmonks.com</a>
-        </div>
-        <div class="button button_transparent mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <a href="#mail" class="button button_filled">NEWSLETTER SIGN UP</a>
+          <h2>Contact us</h2>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <p>We occasionally send news about how our startups<br> perform, if we had some fuckups or successes recently.
-          </p>
+        <form class="tm-form">
+          <div class="tm-form-control tm-form-control--required">
+            <input class="tm-form-control__field" type="text" id="project-name" required onblur="toggleState(this)"/>
+            <label class="tm-form-control__label" for="project-name">Project name</label>
+          </div>
+          <div class="tm-form-control tm-form-control--required" >
+            <input class="tm-form-control__field" type="email" id="contact-email" required onblur="toggleState(this)"/>
+            <label class="tm-form-control__label" for="contact-email">E-mail address</label>
+          </div>
+          <div class="tm-form-control">
+            <input class="tm-form-control__field" type="tel" id="phone-no" onblur="toggleState(this)"/>
+            <label class="tm-form-control__label" for="phone-no">Phone number</label>
+          </div>
+          <div class="tm-form-control">
+            <textarea class="tm-form-control__field" id="project-desc" required onblur="toggleState(this)"></textarea>
+            <label class="tm-form-control__label" for="project-desc">Short project description</label>
+          </div>
+          <button type="submit" class="button button-fullwidth">send</button>
+        </form>
+        </div>
+        <div class="mailto mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div>
+            <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32.9942 12.2351C32.9909 12.1983 32.9836 12.162 32.9723 12.1268C32.965 12.0954 32.9548 12.0647 32.942 12.035C32.927 12.0061 32.9091 11.9787 32.8886 11.9534C32.8681 11.9233 32.8442 11.8956 32.8177 11.8707C32.8091 11.8633 32.8054 11.8531 32.7964 11.8456L27.6662 7.86136V3.732C27.6662 2.84819 26.9497 2.13166 26.0659 2.13166H20.2849L17.9703 0.334476C17.3985 -0.111492 16.5966 -0.111492 16.0248 0.334476L13.7096 2.13166H7.92868C7.04487 2.13166 6.32834 2.84812 6.32834 3.732V7.86142L1.19984 11.8457C1.19077 11.8532 1.18702 11.8633 1.17852 11.8708C1.15195 11.8956 1.12813 11.9234 1.10757 11.9535C1.08706 11.9788 1.06918 12.0061 1.05424 12.0351C1.0413 12.0647 1.03118 12.0954 1.02386 12.1269C1.01273 12.1616 1.00542 12.1973 1.00198 12.2336C1.00198 12.2448 0.995605 12.2544 0.995605 12.2656V30.4042C0.996356 30.7435 1.10613 31.0736 1.30873 31.3457C1.31192 31.3505 1.31248 31.3564 1.31617 31.3606C1.31992 31.3649 1.32792 31.3697 1.33324 31.3756C1.63293 31.7699 2.09902 32.0024 2.59431 32.0045H31.4003C31.8975 32.003 32.3656 31.7694 32.6656 31.3729C32.6699 31.3676 32.6763 31.366 32.68 31.3607C32.6838 31.3554 32.6843 31.3506 32.6875 31.3458C32.8901 31.0736 32.9999 30.7435 33.0007 30.4042V12.2671C33.0006 12.2559 32.9948 12.2463 32.9942 12.2351ZM16.6772 1.17621C16.8635 1.02818 17.1273 1.02818 17.3136 1.17621L18.5442 2.1316H15.4502L16.6772 1.17621ZM2.72872 30.9377L16.6772 20.1028C16.8637 19.9551 17.1273 19.9551 17.3136 20.1028L31.2659 30.9377H2.72872ZM31.9337 30.106L17.9703 19.261C17.3983 18.8155 16.5967 18.8155 16.0248 19.261L2.06083 30.106V13.0795L10.8024 19.8676C11.0353 20.0482 11.3705 20.0058 11.5511 19.7729C11.7317 19.54 11.6893 19.2048 11.4564 19.0242L2.57562 12.1284L6.3284 9.21201V13.3339C6.3284 13.6286 6.56727 13.8674 6.86183 13.8674C7.15645 13.8674 7.39525 13.6285 7.39525 13.3339V3.73193C7.39525 3.43731 7.63405 3.19851 7.92868 3.19851H26.0658C26.3604 3.19851 26.5992 3.43731 26.5992 3.73193V13.3339C26.5992 13.6286 26.838 13.8674 27.1326 13.8674C27.4272 13.8674 27.666 13.6285 27.666 13.3339V9.21201L31.4188 12.1284L22.5226 19.0365C22.3696 19.1525 22.2906 19.3418 22.316 19.5321C22.3414 19.7225 22.4671 19.8845 22.6452 19.9563C22.8233 20.0281 23.0263 19.9988 23.1766 19.8793L31.9336 13.0795V30.106H31.9337Z" fill="white"/>
+              <path d="M23.3984 12.8005V10.6667C23.3984 7.13135 20.5324 4.26538 16.997 4.26538C13.4617 4.26538 10.5957 7.13135 10.5957 10.6667C10.5957 14.2021 13.4617 17.068 16.997 17.068C17.2917 17.068 17.5305 16.8292 17.5305 16.5346C17.5305 16.24 17.2917 16.0012 16.997 16.0012C14.0509 16.0012 11.6626 13.6129 11.6626 10.6668C11.6626 7.72066 14.0509 5.33235 16.997 5.33235C19.9432 5.33235 22.3315 7.72066 22.3315 10.6668V12.8005C22.3315 13.3898 21.8538 13.8674 21.2646 13.8674C20.6753 13.8674 20.1976 13.3898 20.1976 12.8005V10.6668C20.1976 10.3722 19.9588 10.1334 19.6642 10.1334C19.3696 10.1334 19.1308 10.3722 19.1308 10.6668C19.1308 11.8452 18.1755 12.8005 16.997 12.8005C15.8186 12.8005 14.8633 11.8452 14.8633 10.6668C14.8633 9.48834 15.8186 8.53302 16.997 8.53302C17.2917 8.53302 17.5305 8.29422 17.5305 7.9996C17.5305 7.70497 17.2917 7.46617 16.997 7.46617C15.5646 7.46299 14.3044 8.41199 13.9118 9.78966C13.5192 11.1673 14.0897 12.6381 15.3087 13.3905C16.5278 14.1429 18.0982 13.9937 19.1537 13.0252C19.2699 14.1533 20.2504 14.9921 21.3829 14.9322C22.5154 14.8722 23.4019 13.9346 23.3984 12.8005Z" fill="white"/>
+            </svg>
+          </div>
+          <a href="mailto:studio@topmonks.com ">studio@topmonks.com</a>
         </div>
       </div>
     </div>
+    <script>
+      var toggleState = function(i){
+        if (i.value != '')
+          i.classList.add('has-value');
+        else
+          i.classList.remove('has-value');
+      }
+    </script>
   </section>
 </div>
 <footer id="social" class="social">
   <div class="mdc-layout-grid tm-layout-wrapper">
     <div class="mdc-layout-grid__inner">
       <div class="sro mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop">
-        <p>© 2018 TopMonks s.r.o.</p>
+        <p>© 2019 TopMonks s.r.o.</p>
       </div>
 
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop">
