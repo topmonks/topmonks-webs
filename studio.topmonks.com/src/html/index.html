@@ -542,22 +542,22 @@
           <h2>Contact us</h2>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <form class="tm-form">
+        <form class="tm-form tm-form__contact">
           <div class="tm-form-control tm-form-control--required">
-            <input class="tm-form-control__field" type="text" id="project-name" required onblur="toggleState(this)"/>
-            <label class="tm-form-control__label" for="project-name">Project name</label>
+            <input class="tm-form-control__field" type="text" id="projectname" name="projectname" required />
+            <label class="tm-form-control__label" for="projectname">Project name</label>
           </div>
           <div class="tm-form-control tm-form-control--required" >
-            <input class="tm-form-control__field" type="email" id="contact-email" required onblur="toggleState(this)"/>
-            <label class="tm-form-control__label" for="contact-email">E-mail address</label>
+            <input class="tm-form-control__field" type="email" id="email" name="email" required />
+            <label class="tm-form-control__label" for="email">E-mail address</label>
           </div>
           <div class="tm-form-control">
-            <input class="tm-form-control__field" type="tel" id="phone-no" onblur="toggleState(this)"/>
-            <label class="tm-form-control__label" for="phone-no">Phone number</label>
+            <input class="tm-form-control__field" type="tel" id="tel" name="tel" />
+            <label class="tm-form-control__label" for="tel">Phone number</label>
           </div>
           <div class="tm-form-control">
-            <textarea class="tm-form-control__field" id="project-desc" required onblur="toggleState(this)"></textarea>
-            <label class="tm-form-control__label" for="project-desc">Short project description</label>
+            <textarea class="tm-form-control__field" id="projectdesc" name="projectdesc" required></textarea>
+            <label class="tm-form-control__label" for="projectdesc">Short project description</label>
           </div>
           <button type="submit" class="button button-fullwidth">send</button>
         </form>
@@ -573,13 +573,34 @@
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
-      var toggleState = function(i){
-        if (i.value != '')
-          i.classList.add('has-value');
+      let toggleFieldState = function(elm){
+        if (elm.value != '')
+          elm.classList.add('has-value');
         else
-          i.classList.remove('has-value');
-      }
+          elm.classList.remove('has-value');
+      };
+      $(document).ready(function() {
+        $(".tm-form__contact").submit(function (e) {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+          if (typeof window["fetch"] === "undefined") return;
+          var data = {};
+          var $form = $(this);
+          $form.serializeArray().forEach(function (x) {
+            data[x.name] = x.value;
+          });
+
+          fetch("https://uwjqzwx0d3.execute-api.eu-central-1.amazonaws.com/production/startupstudio-contact-form", {
+            method: "POST",
+            body: JSON.stringify(data)
+          }).then(document.alert('Thanks a lot for contacting us! We will get back to you soon!'));
+        });
+        $('.tm-form__contact .tm-form-control__field')
+          .on('blur', function(e){ toggleFieldState(e.target) })
+          .each(function(i, obj){toggleFieldState(obj)});
+        });
     </script>
   </section>
 </div>
