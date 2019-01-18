@@ -526,9 +526,9 @@
     resolve "^1.7.1"
 
 "@pulumi/pulumi@^0.16.9", "@pulumi/pulumi@latest":
-  version "0.16.10"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.16.10.tgz#85722aa80051477df989c6f2a3ae5b1c7c7736c9"
-  integrity sha512-wKhE97J1fpuTQuhTetojdXZVTnRKCevTI+cI3ZRBsLdFwl3RYTFX7Lo5ecYMxxdbc5EOdnz2dcHRuWjdYrWIwA==
+  version "0.16.11"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.16.11.tgz#b3fc8f666ec0dc3d8d4a51cebfbbf229258d016c"
+  integrity sha512-4kGbPoIJJt+qAXk8PAHUhWedn739CWADvL0y3dYT0skRTbhlefu3aPi2+5qUL1s+GEYjD21ufQWEEo2SWNcPrA==
   dependencies:
     google-protobuf "^3.5.0"
     grpc "^1.12.2"
