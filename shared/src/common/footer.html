@@ -6,7 +6,7 @@
           <h4>What we do?</h4>
           <nav>
             <ul>
-              <li><a href="/">Software development</a></li>
+              <li><a href="https://www.topmonks.com/">Software development</a></li>
               <li><a href="https://studio.topmonks.com/">Startup Studio</a></li>
               <li><a href="https://blockchain.topmonks.com/">Blockchain Development</a></li>
               <li><a href="https://prodeti.topmonks.cz/">Programming for Kids</a></li>
@@ -18,11 +18,14 @@
           <nav>
             <ul>
               <li><a href="/">Home</a></li>
-              <li><a href="/about-us/">About TopMonks</a></li>
-              <li><a href="/meet-us/">Meet Us</a></li>
+              <li><a href="https://www.topmonks.com/about-us/">About TopMonks</a></li>
+              <li><a href="https://www.topmonks.com/meet-us/">Meet Us</a></li>
               <li><a href="https://blog.topmonks.com/">Blog</a></li>
-              <li><a href="/jobs/">Jobs</a></li>
-              <li><a href="/contact/">Contacts</a></li>
+              <li><a href="https://www.topmonks.com/jobs/">Jobs</a></li>
+              <li><a href="https://www.topmonks.com/contact/">Contacts</a></li>
+              {% for linkText, href in extraNavLinks %}
+                <a href="{{href}}">{{linkText}}</a>
+              {% endfor %}
             </ul>
           </nav>
         </div>

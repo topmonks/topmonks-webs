@@ -1,11 +1,12 @@
 const globImporter = require("node-sass-glob-importer");
 const pathConfig = require("./path-config.json");
+const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
 
-module.exports = {
+const config = createSharedTaskConfig(__dirname, {
   images: true,
-  fonts: true,
+  fonts: false,
   static: true,
-  svgSprite: true,
+  svgSprite: false,
   ghPages: false,
 
   javascripts: {
@@ -35,4 +36,6 @@ module.exports = {
   production: {
     rev: true
   }
-};
+});
+
+module.exports = config;
