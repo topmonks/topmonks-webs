@@ -21,14 +21,14 @@ body {
   background-size: contain;
 }
 
-section:target {
-  @media screen and (max-width: 479px) {
-    margin-top: 96px;
-  }
-  @media screen and (min-width: 480px) {
-    margin-top: 88px;
-  }
-}
+//section:target {
+//  @media screen and (max-width: 479px) {
+//    margin-top: 96px;
+//  }
+//  @media screen and (min-width: 480px) {
+//    margin-top: 88px;
+//  }
+//}
 
 .a11y--hidden {
   // Hides content visually but make it accessible for screen readers.
