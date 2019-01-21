@@ -25,7 +25,7 @@ body {
   margin: 0 auto;
   max-width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: normal;
   -webkit-font-kerning: normal;
   font-kerning: normal;
@@ -47,8 +47,8 @@ body {
 
 .tm-logo {
   font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }
 
 .wf-active .tm-logo {
@@ -120,7 +120,6 @@ ul li {
 ul li {
   list-style: none;
 }
-
 
 /* Main_info section */
 .developers {
@@ -198,10 +197,10 @@ a.button:hover {
 
 /* Offers */
 #we-offer {
-  color: #48435C;
+  color: #48435c;
 
   h3 {
-    color: #4D2F72;
+    color: #4d2f72;
     font-weight: 700;
     font-size: 48px;
     margin: 0;
@@ -212,20 +211,21 @@ a.button:hover {
     font-size: 24px;
   }
 
-  h3, h4 {
+  h3,
+  h4 {
     text-align: left;
   }
 
   .offer_box {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     box-shadow: 0 1px 23px rgba(0, 0, 0, 0.1);
     width: 100%;
     padding: 4em;
     margin-bottom: 3em;
 
     hr {
-      background-color: #DDD8F9;
-      border: 0.5px solid #DDD8F9;
+      background-color: #ddd8f9;
+      border: 0.5px solid #ddd8f9;
       margin-top: 2em;
     }
   }
@@ -233,7 +233,7 @@ a.button:hover {
     text-align: center;
     margin-top: 2em;
     background-color: #fbfbfb;
-    border-bottom: 4px solid #8363F9;
+    border-bottom: 4px solid #8363f9;
     padding: 3em 0;
 
     cite {
@@ -339,7 +339,8 @@ a.button:hover {
 }
 
 /*Contact section*/
-.contact, .references {
+.contact,
+.references {
   background-color: #f4f8fb;
   color: #1c1c37;
   min-height: 490px;
@@ -443,7 +444,8 @@ footer .social-buttons {
   main {
     background: url("/images/main-info_BG.png") top no-repeat;
   }
-  .our-work, .references {
+  .our-work,
+  .references {
     padding: 24px;
   }
 
