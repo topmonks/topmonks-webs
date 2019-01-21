@@ -229,6 +229,33 @@ a.button:hover {
       margin-top: 2em;
     }
   }
+  .tm-case-study {
+    text-align: center;
+    margin-top: 2em;
+    background-color: #fbfbfb;
+    border-bottom: 4px solid #8363F9;
+    padding: 3em 0;
+
+    cite {
+      display: block;
+      font-style: normal;
+      font-size: 18px;
+    }
+    blockquote {
+      margin: auto 1.5em;
+    }
+  }
+  .tm-case-study__author {
+    color: #000000;
+  }
+  .tm-case-study__organization {
+    display: block;
+    color: #7e7e7e;
+  }
+  .tm-case-study__logo {
+    display: inline-block;
+    margin-bottom: 1.5em;
+  }
 }
 
 /* How we work */
