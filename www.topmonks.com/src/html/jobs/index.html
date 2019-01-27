@@ -2,121 +2,9 @@
 {% set page = 'topmonks-jobs' %}
 {% block title %}TopMonks Opened Job Positions{% endblock %}
 {% block head %}
-<style>
-  .action-button {
-    padding: 10px 58px;
-    font-size: 16px;
-  }
-  .tm-values svg, .tm-projects svg {
-    padding: 8px 0;
-  }
-
-  #jobs-main .box {
-    padding: 18px 40px 38px;
-  }
-
-  .jobs_positions h3 {
-    font-size: 24px;
-    font-weight: normal;
-    padding-bottom: 14px;
-  }
-
-  .middle-text {
-    align-self: center;
-  }
-
-  #jobs-main hr {
-    background-color: #F3F3F3;
-    height: 2px;
-    border: none;
-  }
-
-  .contact-info p {
-    color: #000000;
-    font-size: 18px;
-    text-align: center;
-  }
-
-  hr {
-    background-color: #FFFFFF;
-    height: 2px;
-    border: none;
-  }
-
-  .page_sub-title_left h2, .page_sub-title_left p {
-    text-align: left;
-  }
-  .page_sub-title p {
-    color: #9B9B9B;
-  }
-
-  .tm-values .button {
-    text-align: center;
-  }
-  .tm-projects .box {
-    text-align: center;
-    padding-top: 22px;
-  }
-
-  #gallery {
-    margin-bottom: 3em;
-    text-align: center;
-    width: 100%;
-  }
-
-  #gallery .mdc-layout-grid {
-    --mdc-layout-grid-gutter-desktop: 0;
-    --mdc-layout-grid-gutter-tablet: 0;
-    padding: 0;
-  }
-
-  #gallery img {
-    padding: 0;
-  }
-
-  .tm-jobs-info h2, h3, p {
-    text-align: left;
-  }
-
-  .tm-jobs-info img {
-    border-radius: 50%;
-  }
-  .tm-jobs-info .action-button{
-    margin: 20px 0;
-  }
-
-  .box_member-contact {
-    align-self: center;
-  }
-  @media screen and (min-width: 840px) {
-    .middle-text p {
-      text-align: right;
-      margin-bottom: 0;
-    }
-  }
-  @media (max-width: 840px) {
-    #gallery {
-      display: none;
-    }
-  }
-    @media (max-width: 480px) {
-    .tm-values {
-      padding: 24px;
-    }
-    .tm-values .action-button {
-      margin: 3em 0;
-    }
-    .tm-jobs-info h2 {
-      text-align: center;
-    }
-
-    .tm-jobs-info, .tm-life {
-      margin: 44px 0;
-    }
-  }
-
-</style>
+<link rel="stylesheet" href="/stylesheets/jobs.css">
 {% endblock %}
+
 {% block content %}
 <section id="jobs-main" class="main mdc-layout-grid">
   <div class="mdc-layout-grid__inner tm-layout-wrapper">
@@ -128,30 +16,36 @@
     <div class="box jobs_positions mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
       <h3>OPENED POSITIONS</h3>
       <div class="mdc-layout-grid__inner">
-        <div class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <div
+          class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
           <a>Backend Developer (Node.js)</a>
         </div>
-        <div class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <div
+          class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
           <p>Prague, Czech Republic</p>
         </div>
-        <div class="line-between mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <div class="line-between line-between_grey mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <hr>
         </div>
 
-        <div class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <div
+          class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
           <a>Office Manager / HR Assistant</a>
         </div>
-        <div class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <div
+          class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
           <p>Prague, Czech Republic</p>
         </div>
-        <div class="line-between mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <div class="line-between line-between_grey mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <hr>
         </div>
 
-        <div class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <div
+          class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
           <a>Project manager</a>
         </div>
-        <div class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <div
+          class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
           <p>Prague, Czech Republic</p>
         </div>
       </div>
@@ -162,7 +56,7 @@
     </div>
   </div>
 </section>
-<div class="line-between mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+<div class="tm-layout-wrapper line-between line-between_white line-padding mdc-layout-grid__cell mdc-layout-grid__cell--span-4-iphone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12-desktop">
   <hr>
 </div>
 <section class="tm-values mdc-layout-grid">
@@ -172,7 +66,8 @@
       <p>We live them every day. They are important for us. Do they resonate with you
         as well? Which one the&nbsp;most?</p>
     </div>
-    <div class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+    <div
+      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
       <svg width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
         <title>[icon] Jobs Values</title>
         <path
@@ -181,7 +76,8 @@
       </svg>
       <p>Learn or die. Teach or die. Only learning and teaching brains flourish</p>
     </div>
-    <div class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+    <div
+      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <title>[icon] Jobs Values</title>
         <path
@@ -190,7 +86,8 @@
       </svg>
       <p>Have an entrepreneurial mind. Spin-offs of our former team members are welcome.</p>
     </div>
-    <div class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+    <div
+      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
       <svg width="48" height="51" viewBox="0 0 48 51" fill="none" xmlns="http://www.w3.org/2000/svg">
         <title>[icon] Jobs Values</title>
         <path
@@ -199,7 +96,8 @@
       </svg>
       <p>Be brave. Provide a sincere feedback regardless of the circumstances.</p>
     </div>
-    <div class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+    <div
+      class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
       <svg width="90" height="48" viewBox="0 0 90 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <title>[icon] Jobs Values</title>
         <path
@@ -216,6 +114,9 @@
     <a class="action-button jumbotron__cta" href="#">SHOW MORE</a>
   </div>
 </section>
+<div class="tm-layout-wrapper line-between line-between_grey line-padding mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+  <hr>
+</div>
 <section class="tm-projects mdc-layout-grid">
   <div class="mdc-layout-grid__inner tm-layout-wrapper">
     <div class="page_sub-title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -531,6 +432,9 @@
     </div>
   </div>
 </section>
+<div class="tm-layout-wrapper line-between line-between_white line-padding mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+  <hr>
+</div>
 <section class="tm-life mdc-layout-grid">
   <div class="mdc-layout-grid__inner tm-layout-wrapper">
     <div class="page_sub-title page_sub-title_left mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -603,7 +507,7 @@
       <p>Come to TopMonks breakfast or our monthly TopMonks Caffe, where we share our knowledge. We also hold
         conferences on the future of work and blockchain. We are members of many other dev events where we don't only
         participate but also often lecture.</p>
-      <a class="action-button jumbotron__cta" href="#">COME AND MEET US</a>
+      <a class="action-button jumbotron__cta" href="https://www.topmonks.com/meet-us/">COME AND MEET US</a>
     </div>
     <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
       <h3>Get in touch with Anička</h3>
@@ -611,14 +515,16 @@
         touch with Anička to find out more about opened positions. In case you have not
         found the desired position, let us know. will figure something&nbsp;out.</p>
       <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"><img alt="[foto] Anička Kovácsová"
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-iphone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop"><img alt="[foto] Anička Kovácsová"
                                                                               src="https://insight.topmonks.com/avatar/anna-kovacsova"
                                                                               onerror="this.onerror=null; this.src='/images/monk_logo-c877778634.png'"
                                                                               width="112" height="112"></div>
-        <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-10-desktop"><p><span itemprop="name">Anička Kovácsová</span><br><a
-          itemprop="telephone" href="tel:+420777556859">+420&nbsp;777 556 859</a><br><a itemprop="email"
-                                                                                        href="mailto:happy@topmonks.com">happy@topmonks.com</a>
-        </p></div>
+        <div
+          class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-4-iphone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-10-desktop">
+          <p><span itemprop="name">Anička Kovácsová</span><br><a
+            itemprop="telephone" href="tel:+420777556859">+420&nbsp;777 556 859</a><br><a itemprop="email"
+                                                                                          href="mailto:happy@topmonks.com">happy@topmonks.com</a>
+          </p></div>
       </div>
     </div>
   </div>
