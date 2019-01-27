@@ -1,0 +1,183 @@
+.page_sub-title h2 {
+  line-height: 46px;
+}
+
+.page_sub-title p {
+  line-height: 35px;
+}
+
+p, a {
+  line-height: 26px;
+}
+
+.action-button {
+  padding: 10px 58px;
+  font-size: 16px;
+}
+
+.tm-values svg, .tm-projects svg {
+  padding: 8px 0;
+}
+
+.jobs_positions h3 {
+  font-size: 24px;
+  font-weight: normal;
+  padding-bottom: 14px;
+}
+
+.middle-text {
+  align-self: center;
+}
+
+.line-between hr {
+  height: 2px;
+  border: none;
+}
+
+.line-between_white, .line-between_grey {
+  border: none;
+}
+
+.line-between_grey hr {
+  background-color: #F3F3F3;
+}
+
+.line-between_white hr {
+  background-color: #FFFFFF;
+}
+
+.tm-values_box-hidden {
+  display: none;
+}
+
+.contact-info p {
+  color: #000000;
+  font-size: 18px;
+  text-align: center;
+}
+
+.page_sub-title_left h2, .page_sub-title_left p {
+  text-align: left;
+}
+
+.page_sub-title p {
+  color: #9B9B9B;
+}
+
+.tm-values .button {
+  text-align: center;
+}
+
+.tm-projects .box {
+  text-align: center;
+  padding-top: 22px;
+}
+
+
+.tm-jobs-info h2, h3, p {
+  text-align: left;
+}
+
+.tm-jobs-info img {
+  border-radius: 50%;
+}
+
+.tm-jobs-info .action-button {
+  margin: 20px 0;
+}
+
+.box_member-contact {
+  align-self: center;
+}
+
+@media screen and (min-width: 840px) {
+  body {
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1543140261/topmonks.com/bngd_site.png") center 8% no-repeat, url("https://res.cloudinary.com/topmonks/image/upload/v1548594687/topmonks.com/rounded_bgnd.png") center 46.5% no-repeat;
+    background-size: 100%;
+  }
+
+  #jobs-main .box {
+    padding: 18px 40px 38px;
+  }
+
+  .middle-text p {
+    text-align: right;
+    margin-bottom: 0;
+  }
+
+  .line-between {
+    padding: 0;
+  }
+
+  .tm-jobs-info {
+    padding-top: 0;
+  }
+
+  .gallery_images {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #gallery {
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #gallery .mdc-layout-grid {
+    padding: 0;
+  }
+
+  #gallery img {
+    padding: 0;
+  }
+}
+
+@media (max-width: 840px) {
+  .mdc-layout-grid {
+    padding: 24px;
+  }
+
+  .line-padding hr {
+    margin: 14px 24px;
+  }
+
+  .line-between_white hr, .line-between_grey hr {
+    background-color: #F3F3F3;
+  }
+
+  #gallery {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .tm-values {
+    padding: 24px;
+  }
+
+  .tm-values .action-button {
+    margin: 3em 0;
+  }
+
+  .tm-jobs-info h2 {
+    text-align: center;
+  }
+
+  .tm-projects {
+    margin-bottom: 58px;
+  }
+
+  .action-button {
+    padding: 10px 24px;
+  }
+
+  .box_member-contact p {
+    text-align: center;
+  }
+
+  .box img {
+    margin: 8px auto;
+  }
+}
