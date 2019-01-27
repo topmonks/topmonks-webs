@@ -1,3 +1,15 @@
+.page_sub-title h2 {
+  line-height: 46px;
+}
+
+.page_sub-title p {
+  line-height: 35px;
+}
+
+p, a {
+  line-height: 26px;
+}
+
 .action-button {
   padding: 10px 58px;
   font-size: 16px;
@@ -34,6 +46,10 @@
   background-color: #FFFFFF;
 }
 
+.tm-values_box-hidden {
+  display: none;
+}
+
 .contact-info p {
   color: #000000;
   font-size: 18px;
@@ -58,7 +74,6 @@
 }
 
 #gallery {
-  margin-bottom: 3em;
   text-align: center;
   width: 100%;
 }
@@ -94,6 +109,7 @@
     background: url("https://res.cloudinary.com/topmonks/image/upload/v1543140261/topmonks.com/bngd_site.png") center 8% no-repeat, url("https://res.cloudinary.com/topmonks/image/upload/v1548594687/topmonks.com/rounded_bgnd.png") center 46.5% no-repeat;
     background-size: 100%;
   }
+
   #jobs-main .box {
     padding: 18px 40px 38px;
   }
@@ -105,6 +121,9 @@
 
   .line-between {
     padding: 0;
+  }
+  .tm-jobs-info {
+    padding-top: 0;
   }
 }
 
@@ -138,15 +157,19 @@
   .tm-jobs-info h2 {
     text-align: center;
   }
+
   .tm-projects {
     margin-bottom: 58px;
   }
+
   .action-button {
     padding: 10px 24px;
   }
+
   .box_member-contact p {
     text-align: center;
   }
+
   .box img {
     margin: 8px auto;
   }
