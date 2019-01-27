@@ -50,21 +50,6 @@
   }
 }
 
-#gallery {
-  margin-bottom: 3em;
-  text-align: center;
-  width: 100%;
-  .mdc-layout-grid {
-    --mdc-layout-grid-gutter-desktop: 0;
-    --mdc-layout-grid-gutter-tablet: 0;
-    padding: 0;
-  }
-
-  img {
-    padding: 0;
-  }
-}
-
 @media screen and (min-width: 840px) {
   .tm-events_text {
     padding: 14px 34px 0 0;
@@ -97,14 +82,14 @@
     height: 100%;
   }
   .tm-events_text {
-    padding: 0.5em 1.5em;
-  }
-  #gallery {
-    display: none;
+    padding: 0 1.5em 0.5em;
   }
   .gallery_img {
     display: block;
     text-align: center;
+    img {
+      width: 100%;
+    }
   }
 }
 
