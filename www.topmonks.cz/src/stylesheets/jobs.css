@@ -112,26 +112,6 @@ p, a {
   .tm-jobs-info {
     padding-top: 0;
   }
-
-  .gallery_images {
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-  }
-
-  #gallery {
-    overflow: hidden;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  #gallery .mdc-layout-grid {
-    padding: 0;
-  }
-
-  #gallery img {
-    padding: 0;
-  }
 }
 
 @media (max-width: 840px) {
@@ -145,10 +125,6 @@ p, a {
 
   .line-between_white hr, .line-between_grey hr {
     background-color: #F3F3F3;
-  }
-
-  #gallery {
-    display: none;
   }
 }
 

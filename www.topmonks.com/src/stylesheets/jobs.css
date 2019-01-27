@@ -73,20 +73,6 @@ p, a {
   padding-top: 22px;
 }
 
-#gallery {
-  text-align: center;
-  width: 100%;
-}
-
-#gallery .mdc-layout-grid {
-  --mdc-layout-grid-gutter-desktop: 0;
-  --mdc-layout-grid-gutter-tablet: 0;
-  padding: 0;
-}
-
-#gallery img {
-  padding: 0;
-}
 
 .tm-jobs-info h2, h3, p {
   text-align: left;
@@ -122,6 +108,7 @@ p, a {
   .line-between {
     padding: 0;
   }
+
   .tm-jobs-info {
     padding-top: 0;
   }
@@ -138,10 +125,6 @@ p, a {
 
   .line-between_white hr, .line-between_grey hr {
     background-color: #F3F3F3;
-  }
-
-  #gallery {
-    display: none;
   }
 }
 
