@@ -68,6 +68,9 @@
     "test:broken-links:xixo-demo.topmonks.com": "blcl ./public/xixo-demo.topmonks.com -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
     "start:www.hookamonk.com": "BLENDID_CONFIG_PATH=./www.hookamonk.com/config/ blendid",
     "build:www.hookamonk.com": "BLENDID_CONFIG_PATH=./www.hookamonk.com/config/ blendid -- build",
-    "test:broken-links:www.hookamonk.com": "blcl ./public/www.hookamonk.com -ro"
+    "test:broken-links:www.hookamonk.com": "blcl ./public/www.hookamonk.com -ro",
+    "start:monkstage.topmonks.com": "BLENDID_CONFIG_PATH=./monkstage.topmonks.com/config/ blendid",
+    "build:monkstage.topmonks.com": "BLENDID_CONFIG_PATH=./monkstage.topmonks.com/config/ blendid -- build",
+    "test:broken-links:monkstage.topmonks.com": "blcl ./public/monkstage.topmonks.com -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com"
   }
 }
