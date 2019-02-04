@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <title>{% block title %}{{ language[page].title }}{% endblock %}</title>
+
+  <link rel="stylesheet" href="/stylesheets/typography.css">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+
+  {% block head %}{% endblock %}
+</head>
+<body>
+
+{% include 'shared/header.html' %}
+
+<main>
+  {% block content %}{% endblock %}
+</main>
+
+{% block javascript %}
+{% endblock %}
+
+</body>
+</html>
