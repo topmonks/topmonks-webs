@@ -103,7 +103,7 @@
       margin-top: 88px;
     }
     .tm-menu__list a {
-      color: #6A7B8C;
+      color: var(--tm-secondary_text);
       &.tm-btn {
         color: var(--tm-primary);
         background-color: var(--tm-secondary);
@@ -134,7 +134,7 @@
     z-index: 3;
     transition: transform 0.3s;
     overflow: hidden;
-    background-color: var(--tm-secondary);
+    background-color: #ffffff;
     color: var(--tm-primary);
 
     .tm-menu__list li {

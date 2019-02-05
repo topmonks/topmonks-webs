@@ -23,3 +23,27 @@
   border-radius: 4px;
   border: transparent;
 }
+.tm-strip {
+  background: #FFFFFF no-repeat;
+  background-image: url("../images/bgnd_ticket.png"), url("../images/bgnd_ticket_btm.png");
+  background-position: top 0 left 70px, bottom 0 left 70px;
+  background-size: 32px 10px;
+  color: var(--tm-secondary_text);
+  box-shadow: 4px 10px 60px rgba(79, 103, 135, 0.2);
+  border-radius: 20px;
+  padding: 1em 3em;
+  display: flex;
+}
+.tm-strip__info {
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+  padding: 1em 2em 1em 1em;
+  margin-right: 1em;
+  border-right: 1px dashed #DADADA;
+}
+.tm-strip__info--figure {
+  display: block;
+  font-size: 3em;
+  margin-right: 0.1em;
+}
