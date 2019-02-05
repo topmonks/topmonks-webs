@@ -16,3 +16,10 @@
 .tm-layout--display-block{
   display: block;
 }
+
+.tm-btn {
+  color: var(--tm-primary);
+  background-color: var(--tm-secondary);
+  border-radius: 4px;
+  border: transparent;
+}

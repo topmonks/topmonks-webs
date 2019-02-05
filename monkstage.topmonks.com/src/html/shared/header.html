@@ -46,7 +46,7 @@
           <ul class="tm-menu__list">
             <li class=""><a href="#about-event">about event</a></li>
             <li class=""><a href="#contacts">contacts</a></li>
-            <li class=""><a href="/">get tickets now</a></li>
+            <li class=""><a class="tm-btn" href="/">get tickets now</a></li>
           </ul>
         </nav>
       </div>
@@ -65,6 +65,7 @@
       }
     }
 
+    var ticking = false;
     window.addEventListener("resize", function() {
       if (!ticking) {
         window.requestAnimationFrame(function() {

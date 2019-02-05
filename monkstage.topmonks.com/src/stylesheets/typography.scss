@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 :root {
-  --primary_text: #3C3C3B;
-  --primary: #FF7A7E;
+  --tm-primary_text: #3C3C3B;
+  --tm-primary: #B46AF2;
+  --tm-secondary: rgba(180, 106, 242, 0.1)
 }
 body {
   font-size: 16px;
@@ -19,7 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
-  color: var(--primary_text);
+  color: var(--tm-primary_text);
 }
 .accessible-text {
   position: absolute;
@@ -47,6 +48,9 @@ h1 {
 h2 {
   font-size: 1.667em; // 30px
   line-height: 1.1em; // 44px
+  background: var(--tm-primary_gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 h3 {
   font-weight: 700;
@@ -65,10 +69,10 @@ p {
 }
 a {
   text-decoration: none;
-  color: var(--primary-blue);
+  color: var(--primary);
   &:hover {
-    text-decoration:underline;
-    text-underline: var(--primary-blue);
+    text-decoration: underline;
+    text-underline: var(--primary);
   }
 }
 q {
@@ -87,9 +91,9 @@ ul {
     font-size: 2.4em; // 36px
   }
 }
-.aw-text--center {
+.tm-text--center {
   text-align: center;
 }
-.aw-text--subtext {
+.tm-text--subtext {
   font-size: 0.7em;
 }

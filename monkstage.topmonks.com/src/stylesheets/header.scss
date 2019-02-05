@@ -22,7 +22,7 @@
   }
   .tm-hamburger__container::after {
     content: "menu";
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--tm-primary);
     text-transform: uppercase;
     font-size: 13px;
     position: absolute;
@@ -30,7 +30,7 @@
     left: 36px;
   }
   .tm-hamburger__bar {
-    background-color: #fff;
+    background-color: var(--tm-primary);
     width: 20px;
     height: 2px;
     position: absolute;
@@ -95,29 +95,27 @@
     color: rgba(0, 0, 0, 0.25);
   }
   @media screen and (min-width: 840px) {
-    height: 72px;
+    height: 88px;
     .tm-layout-wrapper {
-      padding: 20px 0 0 16px;
+      padding: 30px 0 0 16px;
     }
     + main {
-      margin-top: 72px;
+      margin-top: 88px;
     }
     .tm-menu__list a {
-      color: var(--tm-primary);
+      color: #6A7B8C;
+      &.tm-btn {
+        color: var(--tm-primary);
+        background-color: var(--tm-secondary);
+      }
     }
   }
 }
 
 .tm-app-bar.tm-app-bar--open {
-  color: #fff;
+  color: var(--tm-primary);
   .tm-hamburger__container::after {
-    color: rgba(255, 255, 255, 0.5);
-  }
-  .tm-hamburger__bar {
-    background-color: #fff;
-  }
-  .tm-logo {
-    color: #fff;
+    color: var(--tm-primary);
   }
   .tm-menu {
     transform: translate(-8px, -64px);
@@ -137,7 +135,7 @@
     transition: transform 0.3s;
     overflow: hidden;
     background-color: var(--tm-secondary);
-    color: #fff;
+    color: var(--tm-primary);
 
     .tm-menu__list li {
       margin: 0 24px;
@@ -154,21 +152,17 @@
   }
 }
 
-.tm-menu__list a {
-  color: #fff;
-}
-
 .tm-menu--horizontal .tm-menu__list {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
+  vertical-align: center;
   margin: 0;
 }
 .tm-menu--horizontal .tm-menu__list a {
   text-transform: uppercase;
   font-weight: bold;
-  display: inline-block;
-  padding: 4px 8px;
+  padding: 1.2em;
 }
 .tm-menu--horizontal .tm-menu__list li + li {
   margin-left: 4px;
