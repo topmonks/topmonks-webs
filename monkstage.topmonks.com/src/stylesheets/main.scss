@@ -74,3 +74,19 @@
     margin-right: 16px;
   }
 }
+.tm-speaker {
+  margin: 2em 0 6em;
+}
+.tm-speaker {
+  display: flex;
+  align-items: center;
+  margin-right: 2.5em;
+}
+.tm-speaker__img {
+  display: inline-block;
+  height: 82px;
+  width: 82px;
+  border-radius: 50%;
+  box-shadow: 4px 10px 20px rgba(79, 103, 135, 0.2);
+  margin-right: 1.5em;
+}
