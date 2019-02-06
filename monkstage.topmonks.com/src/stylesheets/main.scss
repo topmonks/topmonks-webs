@@ -90,3 +90,14 @@
   box-shadow: 4px 10px 20px rgba(79, 103, 135, 0.2);
   margin-right: 1.5em;
 }
+footer {
+  background: #F6F6F6 url("../images/bgnd_footer.svg") top center no-repeat;
+  background-size: 100% auto;
+  padding-top: 3em;
+  .tm-logo {
+    width: 300px;
+  }
+  .tm-text--subtext {
+    color: var(--tm-primary);
+  }
+}
