@@ -49,14 +49,10 @@ h1 {
 h2 {
   font-size: 1.667em; // 30px
   line-height: 1.1em; // 44px
-  background: var(--tm-primary_gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 h3 {
-  font-weight: 700;
   font-size: 2em; // 23px
-  line-height: 1.625em; // 27px
+  line-height: 1.5em; // 27px
 }
 h4 {
   font-weight: 700;
@@ -70,10 +66,10 @@ p {
 }
 a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--tm-primary);
   &:hover {
     text-decoration: underline;
-    text-underline: var(--primary);
+    text-underline: var(--tm-primary);
   }
 }
 q {
