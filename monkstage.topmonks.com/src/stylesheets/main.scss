@@ -19,6 +19,9 @@
 .tm-layout--display-block{
   display: block;
 }
+.tm-img--fullwidth {
+  width: 100%;
+}
 hr {
   height: 0;
   border: 0;
@@ -30,13 +33,16 @@ section,
   margin-top: 3em;
 }
 .tm-btn {
+  display: inline-block;
+  text-align: center;
+  min-width: 200px;
   color: var(--tm-primary);
   background-color: var(--tm-secondary);
   border-radius: 4px;
   border: transparent;
   padding: 1em 1.2em;
   text-transform: uppercase;
-  margin-left: 1em;
+  margin-left: 2em;
   &.tm-btn--inverse {
     color: var(--tm-secondary);
     background-color: var(--tm-primary);
@@ -51,6 +57,11 @@ section,
   &.tm-box--testimonial {
     background: url("../images/bgnd_testimonial.svg") left 1.5em top 1.5em no-repeat;
   }
+}
+.tm-hero {
+  background: transparent url("../images/bgnd_hero.svg") no-repeat;
+  background-position: bottom 20px right calc(50% - 500px);
+  padding-bottom: 2em;
 }
 .tm-strip {
   background: #FFFFFF no-repeat;
@@ -99,7 +110,7 @@ section,
 .tm-speaker {
   display: flex;
   align-items: center;
-  margin-right: 2.5em;
+  margin-right: 2em;
 }
 .tm-speaker__author {
   font-style: normal;
@@ -116,9 +127,19 @@ section,
     width: 42px;
     margin-right: 1em;
   }
+  &.tm-speaker__img--previous {
+    height: 64px;
+    width: 64px;
+  }
 }
-.tm-testimonial {
-
+.tm-section {
+  padding: 1.5em 2em;
+}
+.tm-section__content {
+  li {
+    padding-left: 4em;
+    background: url("../images/bgnd_li.svg") left 0 top 0.5em no-repeat;
+  }
 }
 .tm-footer {
   background: #F6F6F6 url("../images/bgnd_footer.svg") top center no-repeat;

@@ -105,6 +105,7 @@
       &.tm-btn {
         color: var(--tm-primary);
         background-color: var(--tm-secondary);
+        display: inline;
       }
     }
   }
@@ -146,6 +147,9 @@
       padding: 12px;
       margin: 4px;
       text-transform: capitalize;
+      &.tm-btn {
+        text-align: left;
+      }
     }
   }
 }
