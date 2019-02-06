@@ -13,6 +13,9 @@
 .tm-layout--display-flex {
   display: flex;
 }
+.tm-layout--flex-align-start {
+  align-self: start;
+}
 .tm-layout--display-block{
   display: block;
 }
@@ -22,28 +25,52 @@
   background-color: var(--tm-secondary);
   border-radius: 4px;
   border: transparent;
+  padding: 1em 1.2em;
+  text-transform: uppercase;
+  margin-left: 1em;
+  &.tm-btn--inverse {
+    color: var(--tm-secondary);
+    background-color: var(--tm-primary);
+  }
 }
 .tm-strip {
   background: #FFFFFF no-repeat;
   background-image: url("../images/bgnd_ticket.png"), url("../images/bgnd_ticket_btm.png");
-  background-position: top 0 left 70px, bottom 0 left 70px;
+  background-position: top 0 left 8%, bottom 0 left 8%;
   background-size: 32px 10px;
   color: var(--tm-secondary_text);
   box-shadow: 4px 10px 60px rgba(79, 103, 135, 0.2);
   border-radius: 20px;
-  padding: 1em 3em;
+  padding: 1em 5%;
   display: flex;
 }
 .tm-strip__info {
   display: flex;
   align-items: center;
   line-height: 1.5;
-  padding: 1em 2em 1em 1em;
-  margin-right: 1em;
+  padding: 1em 1.5em 1em 0;
+  margin-right: 1.5em;
   border-right: 1px dashed #DADADA;
+  height: 3em;
+  &:last-of-type {
+    border-right: none;
+    margin-right: 0;
+  }
+  .tm-btn {
+    margin-left: 2em;
+  }
 }
-.tm-strip__info--figure {
+.tm-strip__info_figure {
   display: block;
   font-size: 3em;
   margin-right: 0.1em;
+  line-height: 1;
+  &.tm-strip__info_figure--map {
+    display: flex;
+    background: url("../images/bgnd_ticket-map.png") center center no-repeat;
+    background-size: 53px 53px;
+    height: 53px;
+    width: 53px;
+    margin-right: 16px;
+  }
 }

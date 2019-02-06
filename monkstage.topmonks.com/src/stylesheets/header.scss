@@ -47,11 +47,9 @@
     .tm-hamburger__bar:first-of-type {
       transform: rotate(-45deg);
     }
-
     .tm-hamburger__bar:nth-of-type(2) {
       opacity: 0;
     }
-
     .tm-hamburger__bar:last-of-type {
       transform: rotate(45deg);
     }
@@ -161,8 +159,7 @@
 }
 .tm-menu--horizontal .tm-menu__list a {
   text-transform: uppercase;
-  font-weight: bold;
-  padding: 1.2em;
+  padding: 1.1em 1.2em;
 }
 .tm-menu--horizontal .tm-menu__list li + li {
   margin-left: 4px;
