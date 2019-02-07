@@ -65,20 +65,21 @@ section,
 .tm-strip {
   background: #FFFFFF no-repeat;
   background-image: url("../images/bgnd_ticket.png"), url("../images/bgnd_ticket_btm.png");
-  background-position: top 0 left 8%, bottom 0 left 8%;
+  background-position: top 0 left 10%, bottom 0 left 10%;
   background-size: 32px 10px;
   color: var(--tm-secondary_text);
   box-shadow: 4px 10px 60px rgba(79, 103, 135, 0.2);
   border-radius: 20px;
   padding: 1em 5%;
   display: flex;
+  justify-content: center;
 }
 .tm-strip__info {
   display: flex;
   align-items: center;
   line-height: 1.5;
-  padding: 1em 1.5em 1em 0;
-  margin-right: 1.5em;
+  padding: 1em 3% 1em 0;
+  margin-right: 3%;
   border-right: 1px dashed #DADADA;
   height: 3em;
   &:last-of-type {
