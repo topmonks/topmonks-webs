@@ -162,6 +162,17 @@ jobs:
     environment:
       HOST: studio.topmonks.com
 
+  deploy-monkstage-topmonks-com:
+    <<: *s3-deploy
+    environment:
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E6S8YGG74H6RZ
+      HOST: monkstage.topmonks.com
+
+  test-monkstage-topmonks-com:
+    <<: *test-site
+    environment:
+      HOST: monkstage.topmonks.com
+
   deploy-studio-topmonks-com:
     <<: *s3-deploy
     environment:
@@ -244,6 +255,9 @@ workflows:
       - test-studio-topmonks-com:
           requires:
             - build
+      - test-monkstage-topmonks-com:
+          requires:
+            - build
       - test-www-topmonks-cz:
           requires:
             - build
@@ -293,6 +307,14 @@ workflows:
           requires:
             - provision
             - test-blockchain-topmonks-com
+          filters:
+            branches:
+              only: master
+      - deploy-monkstage-topmonks-com:
+          context: org-global
+          requires:
+            - provision
+            - test-monkstage-topmonks-com
           filters:
             branches:
               only: master
