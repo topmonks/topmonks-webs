@@ -61,8 +61,12 @@
     var appBar = document.querySelector(".tm-app-bar");
     var hamburger = document.querySelector(".tm-hamburger__container");
     var menu = document.querySelector(".tm-menu");
-    hamburger.addEventListener("click", toggleMenu(hamburger));
-    function toggleMenu(hamburger) {
+    var links = menu.getElementsByTagName('a');
+    for(var i = 0, len = links.length; i < len; i++) {
+      links[i].onclick = toggleMenu(hamburger)
+    }
+    hamburger.addEventListener("click", toggleMenu());
+    function toggleMenu() {
       return function() {
         hamburger.classList.toggle("tm-hamburger__container--open");
         appBar.classList.toggle("tm-app-bar--open");
@@ -70,6 +74,7 @@
     }
 
     var ticking = false;
+
     window.addEventListener("resize", function() {
       if (!ticking) {
         window.requestAnimationFrame(function() {
