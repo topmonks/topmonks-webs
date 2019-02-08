@@ -28,12 +28,23 @@
 .tm-layout--margin-right {
   margin-right: 2em;
 }
+.tm-layout--margin-bottom {
+  margin-bottom: 2em;
+}
 .tm-layout--margin-top,
 section {
   margin-top: 3em;
 }
 .tm-img--fullwidth {
   width: 100%;
+}
+.tm-img--gallery{
+  min-width:  500px;
+}
+.tm-img--fullwidth-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  transform: 50%;
 }
 
 hr {
