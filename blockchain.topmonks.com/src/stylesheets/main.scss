@@ -386,6 +386,9 @@ footer {
       padding: 0 4px;
     }
   }
+  .mailto a {
+    text-decoration: underline;
+  }
   .copy-and-media .tm-layout-wrapper {
     border-top: 1px solid hsla(0,0%,100%,.5);
     padding-top: 24px;
