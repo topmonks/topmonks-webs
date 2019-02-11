@@ -366,28 +366,36 @@ a.button:hover {
 
 footer {
   background-color: #212142;
+  h4, a {
+    color: #FFFFFF;
+    text-align: left;
+    font-size: 18px;
+  }
+  h4 {
+    font-weight: bold;
+  }
+  .social-buttons {
+    margin-top: 0.5em;
+    background-color: #fff;
+    border-radius: 52px;
+    display: inline-block;
+    padding: 5px 8px 0px;
+    svg {
+      background-color: #ffffff;
+      border-radius: 80%;
+    }
+  }
 }
 
-footer p {
-  color: #ffffff;
-}
-
-footer .social-buttons {
-  margin-top: 0.5em;
-  background-color: #fff;
-  border-radius: 52px;
-  display: inline-block;
-  padding: 5px 8px 0px;
-}
-
-.social-buttons svg {
-  background-color: #ffffff;
-  border-radius: 80%;
-}
 
 @media (min-width: 840px) {
   #we-offer {
     margin-top: 8em;
+  }
+  footer {
+    .footer_social-buttons{
+      text-align: right;
+    }
   }
 }
 
