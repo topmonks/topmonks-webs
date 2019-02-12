@@ -1,4 +1,5 @@
 @import "@material/layout-grid/mdc-layout-grid";
+
 :root {
   --mdc-layout-grid-margin-desktop: 24px;
   --mdc-layout-grid-gutter-desktop: 20px;
@@ -10,47 +11,59 @@
   max-width: 1300px;
   margin: 0 auto;
 }
+
 .tm-layout--display-flex {
   display: flex;
 }
+
 .tm-layout--display-flex-desktop {
   display: inline-block;
   @media (min-width: 840px) {
     display: flex;
   }
 }
+
 .tm-layout--flex-align-start {
   align-self: start;
 }
-.tm-layout--display-block{
+
+.tm-layout--display-block {
   display: block;
 }
+
 .tm-layout--margin-right {
   margin-right: 2em;
 }
+
 .tm-layout--margin-bottom {
   margin-bottom: 2em;
 }
+
 .tm-layout--margin-top,
 section {
   margin-top: 3em;
 }
+
 .tm-img--fullwidth {
   width: 100%;
 }
-.tm-img--gallery{
-  min-width:  500px;
+
+.tm-img--gallery {
+  min-width: 500px;
 }
+
 .tm-img--fullwidth-wrapper {
   width: 100%;
   overflow-x: hidden;
 }
+
 hr {
   height: 0;
   border: 0;
   margin: 1.5em -1em;
   border-top: 1px solid rgba(218, 218, 218, 0.4);;
 }
+
 .tm-btn {
   display: inline-block;
   text-align: center;
@@ -61,42 +74,47 @@ hr {
   border: transparent;
   padding: 1em 1.2em;
   text-transform: uppercase;
+
   &.tm-btn--inverse {
     color: var(--tm-secondary);
     background: linear-gradient(187.18deg, #EE72E9 -23.89%, #8363F9 107.68%);
     transition: all 0.1s ease-in-out;
+
     &:hover {
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(187.18deg, #EE72E9 -23.89%, #8363F9 107.68%);
       text-decoration: none;
     }
   }
 }
+
 .tm-box {
   background: #FFFFFF;
   box-shadow: 4px 10px 20px rgba(79, 103, 135, 0.1);
   border-radius: 20px;
   padding: 3em 3em 1em;
   border-bottom: 4px solid var(--tm-primary);
+
   &.tm-box--testimonial {
     background: url("../images/bgnd_testimonial.svg") left 1.5em top 1.5em no-repeat;
   }
 }
+
 .tm-hero {
-  background: transparent url("../images/bgnd_hero.svg") no-repeat;
-  background-position: top 0 right calc(50% - 380px);
-  @media (min-width: 840px) {
-    background-size: initial;
-    background-position: bottom 0 right calc(50% - 500px);
-  }
   .tm-layout-helper {
     max-width: 1060px;
   }
-  .tm-strip {
-    @media (min-width: 840px) {
+
+  @media (min-width: 840px) {
+    background: transparent url("../images/bgnd_hero.svg") no-repeat;
+    background-position: bottom 0 right calc(50% - 500px);
+    background-size: initial;
+    .tm-strip {
       background-position: top 0 left 10%, bottom 0 left 10%;
     }
   }
 }
+
+
 .tm-strip {
   background: #FFFFFF no-repeat;
   background-image: url("../images/bgnd_ticket.png"), url("../images/bgnd_ticket_btm.png");
@@ -113,6 +131,7 @@ hr {
     flex-wrap: nowrap;
   }
 }
+
 .tm-strip__info {
   display: flex;
   line-height: 1.5;
@@ -128,6 +147,7 @@ hr {
     border-bottom: none;
     height: 3em;
   }
+
   &:last-of-type {
     border: none;
     margin-right: 0;
@@ -135,6 +155,7 @@ hr {
       flex-wrap: wrap;
     }
   }
+
   .tm-btn {
     min-width: auto;
     @media (max-width: 450px) {
@@ -142,11 +163,13 @@ hr {
     }
   }
 }
+
 .tm-strip__info_figure {
   display: block;
   font-size: 3em;
   margin-right: 0.1em;
   line-height: 1;
+
   &.tm-strip__info_figure--map {
     display: flex;
     background: url("../images/bgnd_ticket-map.png") center center no-repeat;
@@ -156,9 +179,11 @@ hr {
     margin-right: 16px;
   }
 }
+
 .tm-speakers {
   margin: 2em 0 6em;
 }
+
 .tm-speaker {
   display: flex;
   align-items: center;
@@ -168,28 +193,34 @@ hr {
     margin-right: 2em;
   }
 }
+
 .tm-speaker__author {
   font-style: normal;
 }
+
 .tm-speaker__img {
   display: inline-block;
   border-radius: 50%;
   box-shadow: 4px 10px 20px rgba(79, 103, 135, 0.2);
   margin-right: 1.5em;
+
   &.tm-speaker__img--testimonial {
     height: 42px;
     width: 42px;
     margin-right: 1em;
   }
 }
+
 #o-akci {
   padding-top: 2em;
 }
+
 .tm-section {
   @media (min-width: 840px) {
     padding: 1.5em 2em;
   }
 }
+
 .tm-section__content {
   li {
     padding-left: 4em;
@@ -197,10 +228,12 @@ hr {
     background: url("../images/bgnd_li.svg") left 0 top 0.5em no-repeat;
   }
 }
+
 .tm-footer {
   background: #F6F6F6 url("../images/bgnd_footer.svg") top center no-repeat;
   background-size: 100% auto;
   padding-top: 3em;
+
   .tm-logo {
     width: 300px;
   }
