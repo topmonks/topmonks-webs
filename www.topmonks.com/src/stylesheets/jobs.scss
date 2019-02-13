@@ -31,6 +31,9 @@ p, a {
     color: #000000;
     font-size: 18px;
     text-align: center;
+    @media (max-width: 480px) {
+      margin-top: 2.5em;
+    }
   }
 
   @media screen and (min-width: 840px) {
