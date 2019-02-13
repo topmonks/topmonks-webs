@@ -58,17 +58,6 @@
 			"body": "",
 			"updatedAt": "2018-08-15T08:57:21.802Z"
 		},
-		"daria-novakova": {
-			"id": "daria-novakova",
-			"name": "Daria",
-			"surname": "Nováková",
-			"job_title": "Data Scientist",
-			"github": "DariaNovakova",
-			"linkedin": "in/daria-novakova",
-			"quote": "The whole is greater than the part.",
-			"body": "<p>Math is a language that describe your world.</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.802Z"
-		},
 		"david-votrubec": {
 			"id": "david-votrubec",
 			"name": "David",
@@ -92,18 +81,6 @@
 			"quote": null,
 			"body": "<p>Just tell us something we don&#39;t know</p>\n",
 			"updatedAt": "2018-08-21T14:57:44.304Z"
-		},
-		"eliska": {
-			"id": "eliska",
-			"name": "Eliška",
-			"surname": "Monsportová",
-			"twitter": null,
-			"github": null,
-			"linkedin": null,
-			"job_title": "HR",
-			"quote": "Everything is awesome.",
-			"body": "",
-			"updatedAt": "2018-08-15T08:57:21.803Z"
 		},
 		"filip-maly": {
 			"id": "filip-maly",
@@ -304,18 +281,6 @@
 			"body": "<p>Just tell us something we don&#39;t know</p>\n",
 			"updatedAt": "2018-08-21T14:57:44.309Z"
 		},
-		"karel-moulik": {
-			"id": "karel-moulik",
-			"name": "Karel",
-			"surname": "Moulík",
-			"job_title": "Developer",
-			"twitter": null,
-			"github": null,
-			"linkedin": null,
-			"quote": null,
-			"body": "<p>....</p>\n",
-			"updatedAt": "2018-08-21T14:57:44.310Z"
-		},
 		"karel-ploc": {
 			"id": "karel-ploc",
 			"name": "Karel",
@@ -422,6 +387,16 @@
 			"quote": null,
 			"body": "<p>Just tell us something we don&#39;t know</p>\n",
 			"updatedAt": "2018-08-21T14:57:44.312Z"
+		},
+		"michal-velek": {
+			"id": "michal-velek",
+			"name": "Michal",
+			"surname": "Velek",
+			"job_title": "developer",
+			"github": "mvelek",
+			"quote": "“.... there’s a difference between knowing the path and walking the path.” ― Morpheus",
+			"body": "",
+			"updatedAt": "2019-02-11T10:08:40.852Z"
 		},
 		"ondrej-svoboda": {
 			"id": "ondrej-svoboda",
@@ -537,18 +512,6 @@
 			"body": "<p>Making websites and apps feel better about themselves.</p>\n",
 			"updatedAt": "2018-08-15T08:57:21.809Z"
 		},
-		"roman-nguyen": {
-			"id": "roman-nguyen",
-			"name": "Roman",
-			"surname": "Nguyen",
-			"job_title": "React Guy",
-			"twitter": "https://twitter.com/roman_nguyen",
-			"github": null,
-			"linkedin": "https://www.linkedin.com/in/roman-nguyen/",
-			"quote": null,
-			"body": "",
-			"updatedAt": "2018-10-18T12:01:39.902Z"
-		},
 		"tomas-brejla": {
 			"id": "tomas-brejla",
 			"name": "Tomáš",
@@ -607,18 +570,6 @@
 			"quote": "Give me but a base font-size on which to stand, and I shall move the web.",
 			"body": "<p>Weaving websites since 2002</p>\n",
 			"updatedAt": "2018-08-15T08:57:21.810Z"
-		},
-		"vera-netusilova": {
-			"id": "vera-netusilova",
-			"name": "Věra",
-			"surname": "Netušilová",
-			"job_title": "Business Developer",
-			"twitter": null,
-			"github": null,
-			"linkedin": null,
-			"quote": null,
-			"body": "<p>Just tell us something we don&#39;t know</p>\n",
-			"updatedAt": "2018-10-18T12:01:39.903Z"
 		},
 		"veronika-tomasova": {
 			"id": "veronika-tomasova",
