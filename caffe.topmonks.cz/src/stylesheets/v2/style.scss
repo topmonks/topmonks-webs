@@ -11,6 +11,10 @@
 http://pxtoem.com/ - how to count px to em
 */
 
+header {
+  padding-top: 2em;
+}
+
 body {
   margin: 0 auto;
   max-width: 100%;
@@ -34,11 +38,14 @@ body {
   color: var(--topmonks-caffe-dark_blue);
   @media (max-width: 840px) {
     background-size: auto;
-    padding: 0 6%;
-
+    .tm-layout-wrapper {
+      padding: 0 6%;
+    }
   }
   @media (min-width: 840px) {
-    padding: 0 12%;
+    .tm-layout-wrapper {
+      padding: 0 12%;
+    }
   }
 }
 
@@ -202,6 +209,22 @@ ul#navigace {
     height: 0.0625em; //1px
     border: none;
   }
+
+  .btn {
+    margin-top: 2em;
+    border: 2px solid var(--topmonks-caffe-dark_blue);
+    background-color: var(--topmonks-caffe-dark_blue);
+
+    &:hover {
+      color: #FFFFFF;
+      background-color: transparent;
+
+    }
+  }
+
+  @media screen and (min-width: 840px) {
+    padding: 0 12%;
+  }
 }
 
 //* Section: What is TM caffé*//
@@ -214,6 +237,7 @@ ul#navigace {
 
 //* Section: Become a speaker! *//
 #speakers {
+
   h2 {
     font-weight: 700;
   }
@@ -224,8 +248,42 @@ ul#navigace {
     padding: 2em;
   }
 
-  @media (min-width: 840px) {
-    background: url("/images/microphone_icon.svg") top right no-repeat;
+  @media screen and (min-width: 840px) {
+    position: relative;
+    .speakers_box:after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: url(/images/microphone_icon.svg) top right no-repeat;
+      width: 307px;
+      height: 490px;
+      top: -10px;
+      right: 238px;
+    }
+  }
+}
+
+footer {
+  background-color: var(--topmonks-caffe-dark_blue);
+  color: #FFFFFF;
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    padding-left: 0;
+  }
+  .menu ul li {
+    display: block;
+  }
+
+
+  @media screen and (min-width: 840px) {
+    padding: 0 12%;
+    .footer_social-buttons {
+      text-align: right;
+    }
   }
 }
 
