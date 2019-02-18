@@ -1,11 +1,10 @@
 const globImporter = require("node-sass-glob-importer");
 const pathConfig = require("./path-config.json");
+const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
 const marked = require("marked");
 const markdownToJSON = require("gulp-markdown-to-json");
 const merge = require("gulp-merge-json");
-const watch = require("gulp-watch");
 const path = require("path");
-const gulp = require("gulp");
 const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
 
 const config = createSharedTaskConfig(__dirname, {
@@ -13,7 +12,6 @@ const config = createSharedTaskConfig(__dirname, {
   fonts: true,
   static: true,
   svgSprite: true,
-  ghPages: false,
 
   javascripts: {
     entry: {
@@ -24,7 +22,8 @@ const config = createSharedTaskConfig(__dirname, {
   stylesheets: {
     sass: {
       importer: globImporter()
-    }
+    },
+    autoprefixer: { browsers: ["> 5%", "last 4 versions", "IE 8"] }
   },
 
   html: {
@@ -46,53 +45,35 @@ const config = createSharedTaskConfig(__dirname, {
   },
 
   additionalTasks: {
-    initialize: function(gulpInjected, PATH_CONFIG, TASK_CONFIG) {
-      const rootPath = `${path.resolve(__dirname, "../src/data")}`;
-      const teamSrc = `${rootPath}/team/**/*.md`;
+    initialize({ task, src, dest, series, watch }, PATH_CONFIG, TASK_CONFIG) {
+      const destPath = projectPath(PATH_CONFIG.src, PATH_CONFIG.data.dest);
+      const teamSrc = projectPath(
+        PATH_CONFIG.src,
+        PATH_CONFIG.data.team,
+        "**/*.md"
+      );
 
-      const generateTeamDataTask = () => {
-        return gulp
-          .src(teamSrc)
+      const generateTeamDataTask = () =>
+        src(teamSrc)
           .pipe(markdownToJSON(marked))
           .pipe(
             merge({
               fileName: "team.json",
-              edit: function(parsedJson) {
-                let editedJson = { members: {} };
-                editedJson.members[parsedJson.id] = parsedJson;
-                return editedJson;
-              }
+              edit: json => ({ members: { [json.id]: json } })
             })
           )
-          .pipe(gulp.dest(rootPath)); // it doesn't work with injected gulp, idkw
-      };
+          .pipe(dest(destPath));
 
-      /**
-       * Task generate team data
-       */
-      gulp.task("team-data", generateTeamDataTask);
-
-      /**
-       * Watch src/data/team/* changes
-       */
-      gulp.task("team-data:watch", () => {
+      task("team-data", generateTeamDataTask);
+      task("team:watch", cb => {
         watch(teamSrc, generateTeamDataTask);
-      });
-
-      /**
-       * Watch src/data/team.json changes
-       * We use the same gulp task used for html (we need to generate new html after new team.json is created)
-       */
-      gulp.task("team-json:watch", () => {
-        watch(
-          path.resolve(rootPath, "team.json"),
-          require("blendid/gulpfile.js/tasks/html") // the code is so shit we need to use require
-        );
+        watch(path.resolve(destPath, "team.json"), series("html"));
+        cb();
       });
     },
     development: {
       prebuild: ["team-data"],
-      postbuild: ["team-data:watch", "team-json:watch"]
+      postbuild: ["team:watch"]
     },
     production: {
       prebuild: ["team-data"]

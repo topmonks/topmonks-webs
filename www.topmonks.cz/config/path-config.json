@@ -2,6 +2,11 @@
   "src": "./www.topmonks.cz/src",
   "dest": "./public/www.topmonks.cz",
 
+  "data": {
+    "team": "./www.topmonks.com/src/data/team",
+    "dest": "./data/"
+  },
+
   "html": {
     "src": "html",
     "dest": "./"
