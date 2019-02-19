@@ -204,6 +204,7 @@ a.button:hover {
     font-weight: 700;
     font-size: 48px;
     margin: 0;
+    text-align: left;
   }
 
   p.sub-text {
@@ -211,9 +212,17 @@ a.button:hover {
     font-size: 24px;
   }
 
-  h3,
   h4 {
+    font-size: 22px;
+    font-weight: 700;
     text-align: left;
+    margin-bottom: 0;
+  }
+  p, h4, em{
+    color: #48435C;
+  }
+  em {
+    font-size: 16px;
   }
 
   .offer_box {
