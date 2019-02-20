@@ -14,10 +14,44 @@
         That’s just a small part of what we stand for. Sounds like you? Come join us!</p>
     </div>
     <div class="box jobs_positions mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-      <div class="hire-jobs"></div>
-      <script id="hire-embed-loader" async defer
-              src="https://hire.withgoogle.com/s/embed/hire-jobs.js?company=topmonkscom">
+      <h3>Open positions</h3>
+      <div class="hire-jobs">
+        <ul>
+          <li><a href=""></a> <span class="location"></span></li>
+        </ul>
+      </div>
+      <script>
+        getJobs();
 
+        var list = document.querySelector(".hire-jobs ul");
+        var item = list.querySelector("li");
+        list.removeChild(item);
+
+        async function getJobs() {
+          (await fetch("https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs", {
+            mode: "cors"
+          }).then(r => r.json()))
+            .map(jobPostingItem)
+            .forEach(n => list.append(n));
+        }
+
+        function jobPostingItem({ title, url, jobLocation }) {
+          var node = item.cloneNode(true);
+          var a = node.querySelector("a");
+          a.innerText = title;
+          a.href = url;
+          var loc = node.querySelector(".location");
+
+          loc.innerText = address(jobLocation);
+          return node;
+        }
+
+        function address({address}) {
+          if (address.addressLocality) {
+            return address.addressLocality + ", " + address.addressCountry;
+          }
+          return address.addressCountry;
+        }
       </script>
     </div>
     <!--<div class="mdc-layout-grid__inner">
