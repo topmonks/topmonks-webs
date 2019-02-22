@@ -463,9 +463,9 @@
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
 "@pulumi/aws@<=1.0":
-  version "0.16.8"
-  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-0.16.8.tgz#4115378daad4e761fa35980c8bfb32adc7fc60fe"
-  integrity sha512-kJeLZmp/Q4TH6K0fg4Lz86yS6G6U7ng9zG9SpAJ5DD5Vst3AVywdkMwS6lOWGM3O33SASzydsxnmGdY7MFGpeQ==
+  version "0.16.9"
+  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-0.16.9.tgz#4d5f79ad4b6196558f3aa4885813061581439a22"
+  integrity sha512-e8x5DG8Nc0VU/w02vK5R1OmjOW/gpgxdikSISB89cOXoxXVqjP6jeqZMwjJYszBU346jT7EWMPXyT98hL3tJCQ==
   dependencies:
     "@pulumi/pulumi" "^0.16.14"
     aws-sdk "^2.0.0"
@@ -8429,7 +8429,7 @@ path-key@^2.0.0, path-key@^2.0.1:
   resolved "https://registry.yarnpkg.com/path-key/-/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
   integrity sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A=
 
-path-parse@^1.0.5, path-parse@^1.0.6:
+path-parse@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
   integrity sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==
@@ -9707,19 +9707,12 @@ resolve-url@^0.2.1:
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
   integrity sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
 
-resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.4.0, resolve@^1.9.0:
+resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.3.2, resolve@^1.4.0, resolve@^1.7.1, resolve@^1.9.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.10.0.tgz#3bdaaeaf45cc07f375656dfd2e54ed0810b101ba"
   integrity sha512-3sUr9aq5OfSg2S9pNtPA9hL1FVEAjvfOC4leW0SNf/mpnaakz2a9femSd6LqAww2RaFctwyf1lCqnTHuF1rxDg==
   dependencies:
     path-parse "^1.0.6"
-
-resolve@^1.3.2, resolve@^1.7.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.8.1.tgz#82f1ec19a423ac1fbd080b0bab06ba36e84a7a26"
-  integrity sha512-AicPrAC7Qu1JxPCZ9ZgCZlY35QgFnNqc+0LtbRNxnVw4TXvjQ72wnuL9JQcEBgXkI9JM8MsT9kaQoHcpCRJOYA==
-  dependencies:
-    path-parse "^1.0.5"
 
 resp-modifier@6.0.2:
   version "6.0.2"
