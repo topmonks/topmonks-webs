@@ -34,6 +34,7 @@ p, a {
     li {
       border-bottom: 2px solid #f3f3f3;
       line-height: 68px;
+
       &:last-child {
         border-bottom: none;
       }
@@ -194,8 +195,13 @@ p, a {
 
 @media screen and (min-width: 840px) {
   body {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1543140261/topmonks.com/bngd_site.png") center 8% no-repeat, url("https://res.cloudinary.com/topmonks/image/upload/v1548594687/topmonks.com/rounded_bgnd.png") center 46.5% no-repeat;
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1548594687/topmonks.com/rounded_bgnd.png") center 46.5% no-repeat;
     background-size: 100%;
+  }
+  main {
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1551196541/topmonks.com/jobs/img_abovefold.png") center 8% no-repeat;
+    background-size: 440px 571px;
+    background-position-x: 0;
   }
 }
 
