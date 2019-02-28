@@ -475,9 +475,9 @@
     resolve "^1.7.1"
 
 "@pulumi/pulumi@<=1.0", "@pulumi/pulumi@^0.16.14":
-  version "0.16.15"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.16.15.tgz#b2403e2642ab48ba8b4c0d4622e9b0463f997969"
-  integrity sha512-2a0gJiBvXJDFX6LL9sZcqHh8mihHjwIOcBLqVLve2Z/bXcg7h2dcHhi9hoJH7KjO906+G+I96G1WqP3fQgnCGA==
+  version "0.16.17"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.16.17.tgz#765bf6bbd20e00fef34918be27aff2b1a4d21a85"
+  integrity sha512-KOz1JyKFnJkmsGzlk5BskkPRo4lJOHC1vPVyUXiyejzysjy4JDyrOdGa5osCOl6wgJ/aOuaUIxSr75KrVSQ/Mg==
   dependencies:
     google-protobuf "^3.5.0"
     grpc "^1.12.2"
@@ -4102,10 +4102,10 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-prettier@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-4.0.0.tgz#16cedeea0a56e74de60dcbbe3be0ab2c645405b9"
-  integrity sha512-kWuiJxzV5NwOwZcpyozTzDT5KJhBw292bbYro9Is7BWnbNMg15Gmpluc1CTetiCatF8DRkNvgPAOaSyg+bYr3g==
+eslint-config-prettier@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-4.1.0.tgz#181364895899fff9fd3605fecb5c4f20e7d5f395"
+  integrity sha512-zILwX9/Ocz4SV2vX7ox85AsrAgXV3f2o2gpIicdMIOra48WYqgUnWNH/cR/iHtmD2Vb3dLSC3LiEJnS05Gkw7w==
   dependencies:
     get-stdin "^6.0.0"
 
@@ -10622,10 +10622,10 @@ stylehacks@^4.0.0:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
 
-stylelint-config-prettier@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-prettier/-/stylelint-config-prettier-4.0.0.tgz#8c712977be13bd25191ab8b986b5c07a3342a5dc"
-  integrity sha512-cwh3QbBC2+3zBeMvuxFjT8XsbSdyoyELOY9BZqMuvphUKEQ+srkPWoN60FlvRwLB014TOke4Y12KvTtfKnaHhg==
+stylelint-config-prettier@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-prettier/-/stylelint-config-prettier-5.0.0.tgz#e7339da065dac8129ca821e234abddcef950b7f8"
+  integrity sha512-ksd78d8Kfq5CCDaT7C+/5O8RyDnRMkLNsqcpqXtdDkHIkIN9lNTdFeYo6clMFw0MmtibO8Mb7/AbEcZysAKRpw==
 
 stylelint@^9.10.1:
   version "9.10.1"
