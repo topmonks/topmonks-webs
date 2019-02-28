@@ -296,7 +296,8 @@ workflows:
           context: org-global
           requires:
             - provision
-            - test-www-xduediligence-com
+            #- test-www-xduediligence-com
+            - build
           filters:
             branches:
               only: master
