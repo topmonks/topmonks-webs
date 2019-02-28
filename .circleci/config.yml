@@ -231,7 +231,7 @@ jobs:
   deploy-www-xduediligence-com:
     <<: *s3-deploy
     environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: EEZYVPS6MGJ5A
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E3CP5QY5Q88VXM
       HOST: www.xduediligence.com
 
   deploy-xixo-demo-topmonks-com:
