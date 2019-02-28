@@ -9,7 +9,12 @@
   "dependencies": {
     "@material/layout-grid": "^0.41.0",
     "@pulumi/aws": "<=1.0",
-    "@pulumi/pulumi": "<=1.0"
+    "@pulumi/pulumi": "<=1.0",
+    "@fortawesome/fontawesome-free": "5.7.2",
+    "bootstrap": "4.3.1",
+    "jquery": "3.3.1",
+    "jquery.easing": "^1.4.1",
+    "popper.js": "^1.14.7"
   },
   "devDependencies": {
     "@topmonks/blendid": "git://github.com/topmonks/blendid.git",
