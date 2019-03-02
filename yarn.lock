@@ -421,8 +421,8 @@
     resolve "^1.7.1"
 
 "@pulumi/pulumi@<=1.0", "@pulumi/pulumi@^0.16.14":
-  version "0.16.17"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.16.17.tgz#765bf6bbd20e00fef34918be27aff2b1a4d21a85"
+  version "0.16.18"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.16.18.tgz#05e87eeb71c737986e33dc3113284630f20410c0"
   dependencies:
     google-protobuf "^3.5.0"
     grpc "^1.12.2"
