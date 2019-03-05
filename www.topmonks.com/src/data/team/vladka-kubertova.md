@@ -2,7 +2,7 @@
 id: vladimira-kubertova
 name: Vlaďka
 surname: Kubertová
-job_title: Finance manager
+job_title: Office manager
 github: VladkaKubertova
 quote: A smooth sea never made a skilled sailor.
 ---

@@ -162,17 +162,6 @@ jobs:
     environment:
       HOST: studio.topmonks.com
 
-  deploy-monkstage-topmonks-com:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E6S8YGG74H6RZ
-      HOST: monkstage.topmonks.com
-
-  test-monkstage-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: monkstage.topmonks.com
-
   deploy-studio-topmonks-com:
     <<: *s3-deploy
     environment:
@@ -223,17 +212,6 @@ jobs:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E2EF8JLZURG0RI
       HOST: www.hookamonk.com
 
-  test-www-xduediligence-com:
-    <<: *test-site
-    environment:
-      HOST: www.xduediligence.com
-
-  deploy-www-xduediligence-com:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E3CP5QY5Q88VXM
-      HOST: www.xduediligence.com
-
   deploy-xixo-demo-topmonks-com:
     <<: *s3-deploy
     environment:
@@ -266,9 +244,6 @@ workflows:
       - test-studio-topmonks-com:
           requires:
             - build
-      - test-monkstage-topmonks-com:
-          requires:
-            - build
       - test-www-topmonks-cz:
           requires:
             - build
@@ -286,18 +261,6 @@ workflows:
           requires:
             - provision
             - test-www-hookamonk-com
-          filters:
-            branches:
-              only: master
-      - test-www-xduediligence-com:
-          requires:
-            - build
-      - deploy-www-xduediligence-com:
-          context: org-global
-          requires:
-            - provision
-            #- test-www-xduediligence-com
-            - build
           filters:
             branches:
               only: master
@@ -330,14 +293,6 @@ workflows:
           requires:
             - provision
             - test-blockchain-topmonks-com
-          filters:
-            branches:
-              only: master
-      - deploy-monkstage-topmonks-com:
-          context: org-global
-          requires:
-            - provision
-            - test-monkstage-topmonks-com
           filters:
             branches:
               only: master

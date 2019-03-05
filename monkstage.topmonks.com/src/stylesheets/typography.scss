@@ -45,17 +45,24 @@ h1 {
   font-size: 3em;
   margin-bottom: 0;
 }
+
 h2 {
-  font-size: 1.667em;
-  line-height: 1;
+  font-size: 1.667em; // 30px
+  line-height: 1.1em; // 44px
 }
 h3 {
-  font-size: 1.3em;
-  line-height: 1;
+  font-size: 2em; // 23px
+  line-height: 1.5em; // 27px
+}
+h4 {
+  font-weight: 700;
+  font-size: 1.6em; // 21px
+}
+h5 {
+  font-size: 1em;
 }
 p {
   margin-top: 0;
-  margin-bottom: 1.5em;
 }
 a {
   text-decoration: none;
