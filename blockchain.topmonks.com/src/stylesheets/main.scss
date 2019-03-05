@@ -204,6 +204,7 @@ a.button:hover {
     font-weight: 700;
     font-size: 48px;
     margin: 0;
+    text-align: left;
   }
 
   p.sub-text {
@@ -211,9 +212,17 @@ a.button:hover {
     font-size: 24px;
   }
 
-  h3,
   h4 {
+    font-size: 22px;
+    font-weight: 700;
     text-align: left;
+    margin-bottom: 0;
+  }
+  p, h4, em{
+    color: #48435C;
+  }
+  em {
+    font-size: 16px;
   }
 
   .offer_box {
@@ -366,28 +375,44 @@ a.button:hover {
 
 footer {
   background-color: #212142;
+  h4, a {
+    color: #FFFFFF;
+    text-align: left;
+    font-size: 18px;
+  }
+  h4 {
+    font-weight: bold;
+  }
+  .social-buttons {
+    margin-top: 0.5em;
+    background-color: #fff;
+    border-radius: 52px;
+    display: inline-block;
+    padding: 5px 8px 0px;
+    svg {
+      background-color: #ffffff;
+      border-radius: 80%;
+      padding: 0 4px;
+    }
+  }
+  .mailto a {
+    text-decoration: underline;
+  }
+  .copy-and-media .tm-layout-wrapper {
+    border-top: 1px solid hsla(0,0%,100%,.5);
+    padding-top: 24px;
+  }
 }
 
-footer p {
-  color: #ffffff;
-}
-
-footer .social-buttons {
-  margin-top: 0.5em;
-  background-color: #fff;
-  border-radius: 52px;
-  display: inline-block;
-  padding: 5px 8px 0px;
-}
-
-.social-buttons svg {
-  background-color: #ffffff;
-  border-radius: 80%;
-}
 
 @media (min-width: 840px) {
   #we-offer {
     margin-top: 8em;
+  }
+  footer {
+    .footer_social-buttons{
+      text-align: right;
+    }
   }
 }
 

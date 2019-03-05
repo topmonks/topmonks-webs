@@ -2,10 +2,7 @@
  * merges original config with a some extra configuration, adding support to import shared files
  */
 
-const globImporter = require("node-sass-glob-importer");
-const watch = require("gulp-watch");
 const path = require("path");
-const gulp = require("gulp");
 
 /**
  *
@@ -19,7 +16,7 @@ const withShared = function(dirname, config) {
     stylesheets: {
       ...config.stylesheets,
       sass: {
-        importer: globImporter(),
+        ...config.stylesheets.sass,
         includePaths: [
           path.resolve(dirname, "../../shared/src"),
           path.resolve(dirname, "../../node_modules")
@@ -48,29 +45,24 @@ const withShared = function(dirname, config) {
 
     additionalTasks: {
       ...config.additionalTasks,
-      initialize: function(gulpInjected, PATH_CONFIG, TASK_CONFIG) {
+      initialize(gulp, PATH_CONFIG, TASK_CONFIG) {
         if (config.additionalTasks && config.additionalTasks.initialize) {
-          config.additionalTasks.initialize(
-            gulpInjected,
-            PATH_CONFIG,
-            TASK_CONFIG
-          );
+          config.additionalTasks.initialize(gulp, PATH_CONFIG, TASK_CONFIG);
         }
 
-        gulp.task("shared-html:watch", () => {
-          watch(
-            path.resolve(dirname, "../../shared/src", "**/*.{html,njk,json}"),
-            require("blendid/gulpfile.js/tasks/html") // the code is so shit we need to use require
-          );
-        });
-        gulp.task("shared-css:watch", () => {
+        const { task, watch, series } = gulp;
+
+        task("shared:watch", cb => {
           watch(
             path.resolve(dirname, "../../shared/src", "**/*.{css,scss}"),
-            require("blendid/gulpfile.js/tasks/stylesheets") // the code is so shit we need to use require
+            series("stylesheets")
           );
+          watch(
+            path.resolve(dirname, "../../shared/src", "**/*.{html,njk,json}"),
+            series("html")
+          );
+          cb();
         });
-
-        // initSharedWatcher();
       },
       development: {
         ...(config.additionalTasks && config.additionalTasks.development
@@ -82,8 +74,7 @@ const withShared = function(dirname, config) {
           config.additionalTasks.development.postbuild
             ? config.additionalTasks.development.postbuild
             : []),
-          "shared-html:watch",
-          "shared-css:watch"
+          "shared:watch"
         ]
       }
     }

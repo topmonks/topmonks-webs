@@ -1,15 +1,16 @@
 const globImporter = require("node-sass-glob-importer");
-const pathConfig = require("./path-config.json");
 const marked = require("marked");
 const markdownToJSON = require("gulp-markdown-to-json");
 const merge = require("gulp-merge-json");
+const path = require("path");
+const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
+const pathConfig = require("./path-config.json");
 
 module.exports = {
   images: true,
   fonts: true,
   static: true,
   svgSprite: true,
-  ghPages: false,
 
   javascripts: {
     entry: {
@@ -20,7 +21,8 @@ module.exports = {
   stylesheets: {
     sass: {
       importer: globImporter()
-    }
+    },
+    autoprefixer: { browsers: ["> 5%", "last 4 versions", "IE 8"] }
   },
 
   html: {
@@ -40,26 +42,34 @@ module.exports = {
   },
 
   additionalTasks: {
-    initialize: function(gulp) {
-      gulp.task("prepareTeamData", () => {
-        gulp
-          .src("../../www.topmonks.com/src/data/team/**/*.md")
+    initialize({ task, src, dest, series, watch }, PATH_CONFIG, TASK_CONFIG) {
+      const destPath = projectPath(PATH_CONFIG.src, PATH_CONFIG.data.dest);
+      const teamSrc = projectPath(PATH_CONFIG.data.team, "**/*.md");
+
+      const generateTeamDataTask = () =>
+        src(teamSrc)
           .pipe(markdownToJSON(marked))
           .pipe(
             merge({
               fileName: "team.json",
-              edit: function(parsedJson) {
-                let editedJson = { members: {} };
-                editedJson.members[parsedJson.id] = parsedJson;
-                return editedJson;
-              }
+              edit: json => ({ members: { [json.id]: json } })
             })
           )
-          .pipe(gulp.dest("../../www.topmonks.cz/src/data/"));
+          .pipe(dest(destPath));
+
+      task("team-data", generateTeamDataTask);
+      task("team:watch", cb => {
+        watch(teamSrc, generateTeamDataTask);
+        watch(path.resolve(destPath, "team.json"), series("html"));
+        cb();
       });
     },
     development: {
-      prebuild: ["prepareTeamData"]
+      prebuild: ["team-data"],
+      postbuild: ["team:watch"]
+    },
+    production: {
+      prebuild: ["team-data"]
     }
   }
 };
