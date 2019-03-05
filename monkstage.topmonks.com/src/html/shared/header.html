@@ -44,9 +44,13 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop">
         <nav id="navigation" class="tm-menu">
           <ul class="tm-menu__list">
-            <li class=""><a href="#about-event">o akci</a></li>
-            <li class=""><a href="#contacts">kontakty</a></li>
-            <li class=""><a class="tm-btn" href="/">koupit vstupenky</a></li>
+            <li><a href="#o-akci">o akci</a></li>
+            <li><a href="#kontakty">kontakty</a></li>
+            <li>
+              <a class="tm-btn ga-track"
+                 href="https://www.eventbrite.com/e/monkstage-blockchain-edition-tickets-56054420280?aff=webmenu"
+                 data-label="Menu">koupit vstupenky</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -57,8 +61,12 @@
     var appBar = document.querySelector(".tm-app-bar");
     var hamburger = document.querySelector(".tm-hamburger__container");
     var menu = document.querySelector(".tm-menu");
-    hamburger.addEventListener("click", toggleMenu(hamburger));
-    function toggleMenu(hamburger) {
+    var links = menu.getElementsByTagName('a');
+    for(var i = 0, len = links.length; i < len; i++) {
+      links[i].onclick = toggleMenu(hamburger)
+    }
+    hamburger.addEventListener("click", toggleMenu());
+    function toggleMenu() {
       return function() {
         hamburger.classList.toggle("tm-hamburger__container--open");
         appBar.classList.toggle("tm-app-bar--open");
@@ -66,6 +74,7 @@
     }
 
     var ticking = false;
+
     window.addEventListener("resize", function() {
       if (!ticking) {
         window.requestAnimationFrame(function() {

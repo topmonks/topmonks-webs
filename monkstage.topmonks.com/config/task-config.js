@@ -6,7 +6,6 @@ const config = createSharedTaskConfig(__dirname, {
   fonts: true,
   static: true,
   svgSprite: true,
-  ghPages: false,
 
   javascripts: {
     entry: {
@@ -17,7 +16,8 @@ const config = createSharedTaskConfig(__dirname, {
   stylesheets: {
     sass: {
       importer: globImporter()
-    }
+    },
+    autoprefixer: { browsers: ["> 5%", "last 4 versions", "IE 8"] }
   },
 
   html: {

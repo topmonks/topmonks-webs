@@ -8,3 +8,24 @@
 {% macro css(stylesheet) -%}
 <link rel="stylesheet" href="{{ '/stylesheets/components/' ~ stylesheet ~ '/index.css' }}">
 {%- endmacro %}
+
+<!-- TODO finish cloudinary srceenset img macro-->
+<!--{% macro responsiveImage(image, class, altText, w_size, h_size, imgVersion) -%}-->
+<!--{% set w_size = w_size or "team-default.png"%}-->
+<!--{% set imgVersion = imgVersion | default('') %}-->
+  <!--<img class="{{class}}"-->
+       <!--src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_{{w_size}},h_{{h_size}}/{{imgVersion}}monkstage.topmonks.com/{{image}}"-->
+       <!--srcset="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_{{w_size}},h_{{h_size}}/{{imgVersion}}monkstage.topmonks.com/{{image}} 1x,-->
+                    <!--https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_2,w_{{w_size}},h_{{h_size}}/{{imgVersion}}monkstage.topmonks.com/{{image}} 2x"-->
+       <!--alt="{{altText}}" />-->
+<!--{%- endmacro %}-->
+
+{% macro speakerImage(speakerId, name, size, imgVersion) -%}
+{% set imgVersion = imgVersion | default('') %}
+<img class="tm-speaker__img" width="{{size}}" height="{{size}}"
+     src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_{{size}},h_{{size}}/{{imgVersion}}monkstage.topmonks.com/img_speaker_{{speakerId}}.png"
+     srcset="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_{{size}},h_{{size}}/{{imgVersion}}monkstage.topmonks.com/img_speaker_{{speakerId}}.png 1x,
+                    https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_2,w_{{size}},h_{{size}}/{{imgVersion}}monkstage.topmonks.com/img_speaker_{{speakerId}}.png 2x"
+     alt="[foto] {{name}}" />
+{%- endmacro %}
+
