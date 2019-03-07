@@ -225,6 +225,7 @@ p {
   .box {
     align-items: center;
     margin: 0 auto;
+    display: inline-flex;
     @media screen and (min-width: 840px) {
       padding: 0 120px;
     }
