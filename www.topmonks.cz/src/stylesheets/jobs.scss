@@ -120,6 +120,12 @@ p, a {
 
 //
 
+//* Section: Gallery *//
+#gallery {
+  display: none;
+}
+//
+
 //* Section: TopMonks Jobs Info *//
 
 .tm-jobs-info {
@@ -179,8 +185,21 @@ p, a {
     background: url("https://res.cloudinary.com/topmonks/image/upload/v1548594687/topmonks.com/rounded_bgnd.png") center 46.5% no-repeat;
     background-size: 100%;
   }
+  #gallery {
+    display: unset;
+    --mdc-layout-grid-gutter-desktop: 0;
+    padding: 0;
+    .gallery {
+      text-align: center;
+      display: flex;
+      margin: 0 auto;
+
+    }
+  }
+}
+@media (min-width: 1030px) and (max-width: 1800px) {
   main {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1551973762/topmonks.com/jobs/img_side.png") center 8% no-repeat;
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1551973762/topmonks.com/jobs/img_side.png") center 6.5% no-repeat;
     background-size: 440px 571px;
     background-position-x: 0;
   }
