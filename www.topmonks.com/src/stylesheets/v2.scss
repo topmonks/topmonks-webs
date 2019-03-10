@@ -222,6 +222,8 @@ p {
 }
 
 .cooperation {
+  background: none;
+
   .box {
     align-items: center;
     margin: 0 auto;
@@ -347,9 +349,13 @@ li.tm-partners__item--adler {
 }
 
 .steps {
+  h3 {
+    text-align: left;
+  }
+
   .step_1 {
     @media screen and (min-width: 840px) {
-      margin-top: 40%;
+      margin-top: 14em;
     }
   }
 
@@ -364,11 +370,13 @@ li.tm-partners__item--adler {
 
   @media screen and (min-width: 840px) {
     background: url("/images/work-with-us_bgnd.png") center left no-repeat;
-    background-size: contain;
+    background-size: 40% 80%;
     background-position-y: 220px;
     z-index: 200;
     .tm-layout-wrapper {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/v1550609656/topmonks.com/svg/Group.svg") center no-repeat;
+      background: url(https://res.cloudinary.com/topmonks/image/upload/v1550609656/topmonks.com/svg/Group.svg) center no-repeat;
+      background-size: 100% 100%;
+      background-position: 10em 10em;
     }
   }
 
@@ -549,10 +557,10 @@ li.tm-partners__item--adler {
   }
 
   @media screen and (min-width: 840px) {
-      text-align: center;
+    text-align: center;
   }
   @media (max-width: 740px) {
-    .box_member-contact p{
+    .box_member-contact p {
       text-align: center;
     }
   }
