@@ -13,7 +13,7 @@
 .tm-layout-wrapper {
   max-width: 1208px;
   margin: 0 auto;
-  //padding: 16px;
+  padding: 0;
   --mdc-layout-grid-margin-desktop: 0;
   --mdc-layout-grid-margin-tablet: 0;
   --mdc-layout-grid-margin-phone: 0;
@@ -24,6 +24,11 @@ body {
 }
 
 // Typography //
+
+h1 {
+  color: #FFFFFF;
+  line-height: 46px;
+}
 
 h1, h2 {
   font-size: 2.25em; //36px
@@ -50,6 +55,12 @@ hr.purple {
 .intro {
   height: 750px;
   background: url("/images/abstract.svg") center no-repeat;
+  text-align: center;
+  padding-top: 6em;
+
+  .intro_text {
+    margin-top: 17%;
+  }
 }
 
 // Section: About - Description //
@@ -82,11 +93,14 @@ hr.purple {
 // Section: Proposal //
 .proposal {
   color: #FFFFFF;
+  background: url("/images/waves.png") center no-repeat;
 }
+
 // Section: Implementation //
 .implementation, .testing {
   background-color: #FFFFFF;
 }
+
 // Section: Testing //
 .testing {
 }
