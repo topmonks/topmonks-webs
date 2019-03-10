@@ -56,7 +56,7 @@ const generatedFiles = [
   "src/data/global.json",
   "src/html/index.html",
   "src/javascripts/index.js",
-  "src/stylesheets/main.scss"
+  "src/stylesheets/xixoio.scss"
 ];
 
 /**

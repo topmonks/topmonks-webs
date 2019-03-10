@@ -1,9 +1,9 @@
 @import "@material/layout-grid/mdc-layout-grid";
 
 :root {
-  --mdc-layout-grid-margin-desktop: 24px;
-  --mdc-layout-grid-gutter-desktop: 20px;
-  --mdc-layout-grid-column-width-desktop: 60px;
+  --mdc-layout-grid-margin-desktop: 1.5em; //24px
+  --mdc-layout-grid-gutter-desktop: 1.25em; //20px
+  --mdc-layout-grid-column-width-desktop: 3.75em; //60px
 
   --tm-xixo-purple: #BB6BD9;
   --tm-xixo-darkpurple: #B651E0;
@@ -11,7 +11,7 @@
 }
 
 .tm-layout-wrapper {
-  max-width: 1208px;
+  max-width: 75em; //1200px
   margin: 0 auto;
   padding: 0;
   --mdc-layout-grid-margin-desktop: 0;
@@ -20,14 +20,17 @@
 }
 
 body {
+  font-family: Avenir, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background: linear-gradient(to bottom right, #6551E0 0, #6B359D 78%);
+  line-height: 2.25em; //36px
+  font-weight: lighter;
 }
 
 // Typography //
 
 h1 {
   color: #FFFFFF;
-  line-height: 46px;
 }
 
 h1, h2 {
@@ -35,7 +38,7 @@ h1, h2 {
   text-align: center;
 }
 
-p {
+h3, p {
   font-size: 1.25em; //20px
 }
 
@@ -45,16 +48,16 @@ p {
 
 hr.purple {
   background-color: var(--tm-xixo-purple);
-  height: 5px;
+  height: 0.3125em; //5px
   border: none;
-  width: 166px;
+  width: 10.375em; //166px
   margin: 0 auto;
 }
 
 // Section: Introduction //
 .intro {
-  height: 750px;
-  background: url("/images/abstract.svg") center no-repeat;
+  height: 46.875em; //750px
+  background: url("/images/case-studies/xixoio/abstract.svg") center no-repeat;
   text-align: center;
   padding-top: 6em;
 
@@ -66,10 +69,13 @@ hr.purple {
 // Section: About - Description //
 .about {
   .description {
-    padding: 84px 74px 44px;
-    background: url("/images/intro_bgnd.png") top center no-repeat;
-    max-width: 1100px;
+    padding: 5.25em 4.625em 2.75em; //84px 74px 44px
+    background: url("/images/case-studies/xixoio/intro_bgnd.png") top center no-repeat;
+    max-width: 68.75em; //1 100px
     margin: 0 auto;
+    p {
+      margin-bottom: 1em;
+    }
   }
 
   a {
@@ -85,7 +91,7 @@ hr.purple {
 
 // Section: TM - Blockchain Team //
 .team {
-  max-width: 1100px;
+  max-width: 68.75em; //1 100px
   margin: 0 auto;
   color: #FFFFFF;
 }
@@ -93,12 +99,32 @@ hr.purple {
 // Section: Proposal //
 .proposal {
   color: #FFFFFF;
-  background: url("/images/waves.png") center no-repeat;
+  background: url("/images/case-studies/xixoio/waves.png") center no-repeat;
 }
 
 // Section: Implementation //
 .implementation, .testing {
   background-color: #FFFFFF;
+}
+
+.implementation {
+  h3 {
+    align-self: center;
+    padding-left: 2em;
+  }
+
+  a {
+    font-size: 5em; //80px
+    color: var(--tm-xixo-purple);
+    align-self: center;
+    font-weight: bold;
+  }
+
+  .implementation_box {
+    display: inline-flex;
+    border: 2px solid var(--tm-xixo-purple);
+    padding: 2em 2.75em; //24px 44px
+  }
 }
 
 // Section: Testing //
@@ -109,4 +135,7 @@ hr.purple {
 .timeline {
   color: #FFFFFF;
   background: linear-gradient(to bottom right, #6551E0 0, #6B359D 78%);
+  h3 {
+    font-weight: lighter;
+  }
 }
