@@ -117,6 +117,9 @@ jobs:
       - run:
           name: Install deps
           command: yarn
+      - run:
+          name: Install Pulumi plugins
+          command: pulumi plugin install
       - pulumi/update:
           stack: topmonks-webs
           skip-preview: true
