@@ -219,9 +219,6 @@ p, a {
     background: url("https://res.cloudinary.com/topmonks/image/upload/v1548594687/topmonks.com/rounded_bgnd.png") center 46.5% no-repeat;
     background-size: 100%;
   }
-}
-
-@media screen and (min-width: 1440px) {
   #gallery {
     display: unset;
     --mdc-layout-grid-gutter-desktop: 0;
@@ -234,6 +231,7 @@ p, a {
     }
   }
 }
+
 
 @media (max-width: 840px) {
   .mdc-layout-grid {
