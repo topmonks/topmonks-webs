@@ -1,3 +1,17 @@
+
+main {
+  @media (min-width: 1301px) and (max-width: 1800px) {
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1551973762/topmonks.com/jobs/img_side.png") center 6.5% no-repeat;
+    background-size: 440px 571px;
+    background-position-x: 0;
+  }
+  @media (min-width: 1024px) and (max-width: 1300px) {
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1551973762/topmonks.com/jobs/img_side.png") center 6.5% no-repeat;
+    background-size: 336px 467px;
+    background-position-x: 0;
+  }
+}
+
 p, a {
   line-height: 26px;
 }
@@ -50,7 +64,7 @@ p, a {
     color: #000000;
     font-size: 18px;
     text-align: center;
-    @media (max-width: 480px) {
+    @media (max-width: 1000px) {
       margin-top: 2.5em;
     }
   }
@@ -143,6 +157,7 @@ p, a {
 #gallery {
   display: none;
 }
+
 //
 
 //* Section: TopMonks Jobs Info *//
@@ -204,23 +219,19 @@ p, a {
     background: url("https://res.cloudinary.com/topmonks/image/upload/v1548594687/topmonks.com/rounded_bgnd.png") center 46.5% no-repeat;
     background-size: 100%;
   }
+}
+
+@media screen and (min-width: 1440px) {
   #gallery {
     display: unset;
     --mdc-layout-grid-gutter-desktop: 0;
     padding: 0;
+
     .gallery {
       text-align: center;
       display: flex;
       margin: 0 auto;
-
     }
-  }
-}
-@media (min-width: 1030px) and (max-width: 1800px) {
-  main {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1551973762/topmonks.com/jobs/img_side.png") center 6.5% no-repeat;
-    background-size: 440px 571px;
-    background-position-x: 0;
   }
 }
 
