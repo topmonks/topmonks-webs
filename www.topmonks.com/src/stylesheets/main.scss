@@ -509,42 +509,23 @@ li.tm-partners__item--adler {
 }
 
 .cooperation {
-  background-image: url("/images/bgnd_product_top.svg"),
-  url("/images/bgnd_curve_1.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom 0 left -800px, bottom -5px left calc(50% - 530px);
-  @media screen and (min-width: 480px) {
-    background-position: bottom -20px center,
-    bottom -120px left calc(50% - 400px);
+  background: none;
+
+  .box {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+
+    a {
+      align-items: center;
+      display: inline-flex;
+      padding: 0 2em;
+    }
   }
 
-  h2 {
-    margin-bottom: 260px;
-  }
-
-  .tm-bgnd-wrapper {
-    @media screen and (max-width: 479px) {
-      background: transparent url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_auto,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png") no-repeat left -110px top 120px;
-      background-size: 440px auto;
-    }
-    @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2),
-    screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2),
-    screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
-    screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
-    screen and (max-width: 479px) and (min-resolution: 192dpi),
-    screen and (max-width: 479px) and (min-resolution: 2dppx) {
-      background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_440,dpr_2,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png");
-    }
-    @media screen and (min-width: 480px) {
-      background: transparent url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_auto,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png") no-repeat right calc(50% + 555px) top 140px;
-      background-size: 695px auto;
-      padding-bottom: 120px;
-    }
-    @media screen and (min-width: 840px) and (min-device-pixel-ratio: 2),
-    screen and (min-width: 840px) and (min-resolution: 192dpi),
-    screen and (min-width: 840px) and (min-resolution: 2dppx) {
-      background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_695,dpr_2,q_auto,f_auto/v1533203327/topmonks.com/bgnd_1.png");
-    }
+  @media (max-width: 840px) {
+    text-align: center;
   }
 }
 
