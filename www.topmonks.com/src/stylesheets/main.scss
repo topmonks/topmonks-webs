@@ -513,6 +513,7 @@ li.tm-partners__item--adler {
 
   .box {
     align-items: center;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
     display: inline-flex;
@@ -520,7 +521,7 @@ li.tm-partners__item--adler {
     a {
       align-items: center;
       display: inline-flex;
-      padding: 0 2em;
+      padding: 0 16px;
     }
   }
 
