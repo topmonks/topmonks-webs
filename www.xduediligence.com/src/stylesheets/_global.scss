@@ -57,7 +57,7 @@ hr.light {
 }
 
 .btn-xl {
-  padding: 0.8rem 2.2rem;
+  padding: 1.2rem 3rem;
   box-shadow: 0px 10px 15px #e7e7e7;
   font-size: 0.85rem;
   font-weight: 700;
@@ -69,7 +69,7 @@ hr.light {
 
 // Page section padding
 .page-section {
-  padding: 8rem 0;
+  padding: 4rem 0;
 }
 
 .line {
@@ -93,9 +93,10 @@ hr.light {
 }
 .carousel-indicators li {
     background-color: #00C1D2;
+    height: 10px;
 }
 
-#about {
+#app {
   background: url('../img/bg-masthead.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -244,10 +245,53 @@ footer.footer {
 }
 
 .team {
-  background: url('/img/bg-masthead2.png');
+  /*background: url('/img/bg-masthead2.png');*/
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
+
+/*test*/
+
+.projects-section {
+  padding: 2rem 0;
+}
+
+@media (min-width: 640px) {
+  .projects-section {
+    padding-top: 1rem;
+    padding-bottom: 6rem;
+   
+  }
+}
+
+.projects-section .featured-text {
+  padding: 2rem;
+}
+
+@media (min-width: 992px) {
+  .projects-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #fffd54;
+  }
+}
+
+.projects-section .project-text {
+  padding: 3rem;
+}
+
+@media (min-width: 992px) {
+  .projects-section .project-text {
+    padding: 5rem;
+  }
+  .projects-section .project-text hr {
+    border-color: #fffd54;
+    border-width: .25rem;
+    width: 30%;
+  }
+}
+
+
+/*test 2*/
 
