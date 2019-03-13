@@ -513,11 +513,12 @@ li.tm-partners__item--adler {
   background: none;
 
   .box {
-    align-items: center;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     a {
       align-items: center;
