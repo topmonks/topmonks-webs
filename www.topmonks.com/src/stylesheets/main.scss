@@ -476,6 +476,7 @@ li.tm-partners__item--adler {
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
     @media screen and (max-width: 839px) {
       .tm-logo {
+        color: var(--tm-secondary);
         padding-top: 2px;
         font-size: 22px;
       }
