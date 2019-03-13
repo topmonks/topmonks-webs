@@ -1,247 +1,400 @@
 @import "@material/layout-grid/mdc-layout-grid";
 
 :root {
-  --mdc-layout-grid-margin-desktop: 24px;
-  --mdc-layout-grid-gutter-desktop: 20px;
-  --mdc-layout-grid-column-width-desktop: 60px;
+  --topmonks-caffe-orange: #F06B4F;
+  --topmonks-caffe-pink: #F64060;
+  --topmonks-caffe-dark_blue: #233341;
 
-  --tm-primary: #fe664b;
-  --tm-primary-dark: #c53321;
-  --tm-primary-light: #ff9878;
-  --tm-secondary: #5c5fd4;
-  --tm-secondary-dark: #1d35a2;
-  --tm-secondary-light: #918cff;
-  --tm-grey: #9b9b9b;
-  --tm-article-background: #f8fbfc;
-  --tm-black: #4a4a4a;
 }
 
-.tm-layout-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 16px;
-  --mdc-layout-grid-margin-desktop: 0;
-  --mdc-layout-grid-margin-tablet: 0;
-  --mdc-layout-grid-margin-phone: 0;
-}
+/*
+http://pxtoem.com/ - how to count px to em
+*/
+
 header {
-  max-width: 900px;
-  margin: 0 auto;
-}
-.tm-header {
-  margin-top: 1.5em;
+  padding-top: 2em;
 }
 
-.tm-layout-grid__cell--span-0-desktop {
-  @media screen and (min-width: 840px) {
-    display: none;
-    .opening_text {
-      margin-top: 6em;
+body {
+  margin: 0 auto;
+  max-width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: normal;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  font-variant-numeric: lining-nums slashed-zero;
+  -webkit-font-variant-ligatures: common-ligatures contextual;
+  font-variant-ligatures: common-ligatures contextual;
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+
+  color: var(--topmonks-caffe-dark_blue);
+  @media (max-width: 840px) {
+    background-size: auto;
+    .tm-layout-wrapper {
+      padding: 0 6%;
     }
   }
-}
-@media (min-width: 2024px) {
-  #uvod {
-    margin: 0 0 6em;
+  @media (min-width: 1024px) {
+    background: url("/images/caffe-bgnd.png") top no-repeat;
+    background-size: 100%;
+    .tm-layout-wrapper {
+      padding: 0 12%;
+    }
+  }
+  @media (max-width: 1023px) {
+    background: url("/images/caffe-bgnd.png") top no-repeat;
   }
 }
 
 section {
   margin: 3em 0;
-  min-height: 10em;
 }
 
-.date {
-  font-size: 0.875em;
-  color: #999999;
-}
-.news_content {
-  font-size: 0.875em;
-  background-color: #ffffff;
+.wf-active body {
+  font-family: Lato, sans-serif;
 }
 
-#uvod {
-  background: url("https://res.cloudinary.com/topmonks/image/upload/c_scale,h_590,w_1280,f_auto/v1542985969/caffe.topmonks.cz/main_BG.png")
-  no-repeat;
-  background-size: 100% 100%;
-  p {
-    font-size: 1.5em;
+.tm-logo {
+  font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+}
+
+.wf-active .tm-logo {
+  font-family: futura-pt, sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: normal;
+  line-height: 1.4em;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: normal;
+
+  &.h2_margin {
+    margin-bottom: 0;
   }
-  a {
-    text-align: right;
-  }
-  .opening_text {
-    margin-top: 6em;
-    color: #ffffff;
-    text-align: left;
+}
+
+p {
+  font-size: 1.125em;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+a {
+  color: #FFFFFF;
+  font-weight: normal;
+  text-decoration: none;
+
+  .btn_light {
+    color: #FFFFFF;
   }
 
-  .newest-news {
-    width: 228px;
-    margin: 2em 6em;
-    box-shadow: 0 0.44em 1.1em rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-    p {
-      font-size: 14px;
+  .btn_dark {
+    color: var(--topmonks-caffe-dark_blue);
+  }
+}
+
+@media (min-width: 1840px) {
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 2.25em;
+  }
+  h3 {
+    font-size: 2.25em;
+  }
+
+  h4, p, span {
+    font-size: 1.75em;
+  }
+}
+
+.btn {
+  border: 2px solid var(--topmonks-caffe-orange);
+  border-radius: 100px;
+  color: #fff;
+  background-color: var(--topmonks-caffe-orange);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .16);
+  padding: 14px 80px;
+  width: fit-content;
+
+  &:hover {
+    background-color: var(--topmonks-caffe-dark_blue);
+    border: 2px solid var(--topmonks-caffe-orange);
+
+    a {
+      color: var(--topmonks-caffe-orange);
+      font-weight: 700;
     }
-    .news_content {
-      padding: 24px 24px 0;
-    }
-    .news-img {
-      width: 228px;
-    }
-    .news_content-details {
-      span {
-        font-size: 12px;
-      }
-      svg {
-        padding: 10px 24px;
-      }
-      .date {
-        color: #233341;
-      }
-      .date {
-        padding: 18px 0;
-      }
-    }
-    hr {
-      margin-top: 38px;
-      display: block;
-      height: 1px;
-      border: 0;
-      border-top: 1px solid #eeeeee;
-      padding: 0;
-    }
-    .meetup-logo svg {
-      padding: 18px;
-    }
-    .confirm-btn {
+  }
+
+  @media (max-width: 767px) {
+    margin: 0 auto;
+    padding: 10px 30px;
+  }
+  @media (max-width: 468px) {
       margin: 0 auto;
-      align-self: center;
-      a.button {
-        background-color: #01a2c7;
-        padding: 8px 14px;
-        border: none;
-        border-radius: 4px;
-        font-size: 14px;
-        color: #ffffff;
+      font-size: 1.5em;
+      padding: 18px 60px;
+  }
+}
+
+.btn_dark {
+  &:hover {
+    background-color: transparent;
+    border: 2px solid var(--topmonks-caffe-dark_blue);
+
+    a {
+      color: var(--topmonks-caffe-dark_blue);
+      font-weight: 700;
+    }
+  }
+}
+
+ul,
+ul li {
+  padding: 0;
+
+  a {
+    color: #FFFFFF;
+  }
+}
+
+ul {
+  margin: 1em 0;
+}
+
+ul li {
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 4px 14px;
+  font-size: 14px;
+}
+
+ul#navigace {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-top: 10px;
+
+  a {
+    font-size: 1.125em;
+    padding: 4px 8px;
+
+    &:hover {
+      border-bottom: 1.4px solid var(--topmonks-caffe-orange);
+    }
+  }
+}
+
+//* Section: Introduction*//
+
+#introduction {
+  color: #FFFFFF;
+
+  a.link {
+    text-decoration: underline;
+    color: var(--topmonks-caffe-pink);
+
+    &:hover {
+      color: #FFFFFF;
+    }
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+
+}
+
+//* Section: Next event *//
+
+#next-event {
+  color: #FFFFFF;
+
+  .next-caffe_box {
+    padding: 2em 5em 3em;
+    background: linear-gradient(to bottom right, #BA3CD9 0, var(--topmonks-caffe-orange) 58%);
+    @media (max-width: 880px) {
+      padding: 4em;
+    }
+    @media (max-width: 468px) {
+      padding: 3em;
+      h3 {
+        font-size: 1.75em;
+      }
+      span {
+        font-size: 1.5em;
       }
     }
   }
-}
 
-.articles {
-  .box-shadow {
-    box-shadow: 0 12px 24px lightgrey;
-    img {
-      width: 100%;
-      background: #233341;
+  hr.line {
+    background-color: #FFFFFF;
+    height: 0.0625em; //1px
+    border: none;
+  }
+
+  .btn {
+    margin-top: 2em;
+    border: 2px solid var(--topmonks-caffe-dark_blue);
+    background-color: var(--topmonks-caffe-dark_blue);
+
+    &:hover {
+      color: #FFFFFF;
+      background-color: transparent;
+
     }
   }
+
+  .poster {
+    @media screen and (min-width: 1024px) {
+      background: url("/images/upcoming-poster.svg") center no-repeat;
+      width: 220px;
+      height: 274px;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 881px) {
+    padding: 0 12%;
+  }
+}
+
+//* Section: What is TM caffé*//
+
+#about-caffe {
+  h2 {
+    color: var(--topmonks-caffe-orange);
+  }
+
+  @media (min-width: 1740px) {
+    p {
+      width: 60%;
+    }
+  }
+  @media (min-width: 1880px) {
+    margin-top: 7em;
+    p {
+      width: 70%;
+    }
+  }
+  @media (min-width: 2200px) {
+    margin-top: 14em;
+  }
+}
+
+//* Section: Become a speaker! *//
+#speakers {
+
+  h2 {
+    font-weight: 700;
+  }
+
+  .speakers_box {
+    color: #FFFFFF;
+    background-color: var(--topmonks-caffe-orange);
+    padding: 2em;
+  }
+
+  @media screen and (min-width: 1400px) {
+    position: relative;
+    .speakers_box:after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: url(/images/microphone_icon.svg) top right no-repeat;
+      width: 307px;
+      height: 490px;
+      top: -10px;
+      right: 238px;
+    }
+  }
+}
+
+//* Section: Seance *//
+#seance {
+  img {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: var(--topmonks-caffe-dark_blue);
+  color: #FFFFFF;
+
   a {
-    float: right;
-    margin: 18px;
+    text-decoration: none;
   }
-  .news_content {
-    padding: 1.5em;
+
+  li {
+    padding-left: 0;
+  }
+
+  .menu ul li {
+    display: block;
+  }
+
+
+  @media screen and (min-width: 840px) {
+    padding: 0 12%;
+    .footer_social-buttons {
+      text-align: right;
+    }
   }
 }
 
-.box-shadow:hover {
-  -webkit-transform: scale(1.03);
-  -ms-transform: scale(1.03);
-  transform: scale(1.03);
-  transition: all 0.25s linear;
-  box-shadow: -1px 4px 24px rgba(0, 0, 0, 0.8);
-  width: 100%;
-}
 
-#recnici {
-  background: url("/images/speakers_BG.png") center no-repeat;
-  background-size: 100%;
-  height: 409px;
-  text-align: center;
-  p {
-    line-height: 0.4;
-  }
-  a {
-    font-size: 24px;
-  }
-  a:hover {
-    font-weight: bold;
-  }
-  .speakers_content {
-    margin-top: 4em;
-  }
-}
-
-//.seance {
-//  .seance_posters {
-//   margin: 0 auto;
-//  }
+///* MD GRID DESKTOP BREAKPOINT*/
+//@media (min-width: 840px) {
 //}
 
-// Docasny styl pro history events
-.history img {
-  width: 100%;
-}
-@media (max-width: 768px) {
-  #uvod {
-    .newest-news {
-      margin: 0;
-    }
-    .opening_text {
-      margin-top: 0;
-      padding-left: 2em;
-    }
-    h1 {
-      font-size: 2em;
-    }
-    p {
-      font-size: 1em;
-    }
+//* MD GRID TABLET AND ABOVE BREAKPOINT *//
+@media (min-width: 480px) {
+  body {
+    font-size: 1.125em; //18px
+  }
+  h1 {
+    font-size: 2.111em; //38px
+    line-height: 1.5em; //24px
+  }
+  h2 {
+    font-size: 1.8em; //32px
+    line-height: 1.4;
+  }
+  h3 {
+    font-size: 1.5em; //24px
+  }
+  h4 {
+    font-size: 1.111em; //20px
   }
 }
 
-@media (max-width: 480px) {
-  main #main_content {
-    background: none;
-  }
-  .upcoming-poster {
-    display: none;
-  }
-  #uvod {
-    .opening_text {
-      color: #4a4a4a;
-      margin-top: 0;
-      text-align: center;
-    }
+@media (max-width: 840px) {
+  p {
+    font-size: 1.111em; //20px
 
-    .newest-news {
-      margin: 0 auto;
-    }
-    .meetup-logo {
-      text-align: center;
-    }
-    .meetup-logo svg {
-      padding: 0;
-      margin: 0 auto;
-    }
-    .news_content-details svg {
-      padding-bottom: 0;
-    }
-    .confirm-btn {
-      padding: 24px;
-    }
-  }
-  #recnici {
-    background-size: auto;
-    height: 100%;
-    p {
-      line-height: 1.5;
-    }
-    .speakers_content {
-      margin: 0.5em 0;
-    }
   }
 }
+
+nav {
+  .active {
+    color: var(--nav-active);
+    font-weight: bold;
+  }
+}
+
+

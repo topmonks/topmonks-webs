@@ -1,0 +1,247 @@
+@import "@material/layout-grid/mdc-layout-grid";
+
+:root {
+  --mdc-layout-grid-margin-desktop: 24px;
+  --mdc-layout-grid-gutter-desktop: 20px;
+  --mdc-layout-grid-column-width-desktop: 60px;
+
+  --tm-primary: #fe664b;
+  --tm-primary-dark: #c53321;
+  --tm-primary-light: #ff9878;
+  --tm-secondary: #5c5fd4;
+  --tm-secondary-dark: #1d35a2;
+  --tm-secondary-light: #918cff;
+  --tm-grey: #9b9b9b;
+  --tm-article-background: #f8fbfc;
+  --tm-black: #4a4a4a;
+}
+
+.tm-layout-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+  --mdc-layout-grid-margin-desktop: 0;
+  --mdc-layout-grid-margin-tablet: 0;
+  --mdc-layout-grid-margin-phone: 0;
+}
+header {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.tm-header {
+  margin-top: 1.5em;
+}
+
+.tm-layout-grid__cell--span-0-desktop {
+  @media screen and (min-width: 840px) {
+    display: none;
+    .opening_text {
+      margin-top: 6em;
+    }
+  }
+}
+@media (min-width: 2024px) {
+  #uvod {
+    margin: 0 0 6em;
+  }
+}
+
+section {
+  margin: 3em 0;
+  min-height: 10em;
+}
+
+.date {
+  font-size: 0.875em;
+  color: #999999;
+}
+.news_content {
+  font-size: 0.875em;
+  background-color: #ffffff;
+}
+
+#uvod {
+  background: url("https://res.cloudinary.com/topmonks/image/upload/c_scale,h_590,w_1280,f_auto/v1542985969/caffe.topmonks.cz/main_BG.png")
+  no-repeat;
+  background-size: 100% 100%;
+  p {
+    font-size: 1.5em;
+  }
+  a {
+    text-align: right;
+  }
+  .opening_text {
+    margin-top: 6em;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  .newest-news {
+    width: 228px;
+    margin: 2em 6em;
+    box-shadow: 0 0.44em 1.1em rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    p {
+      font-size: 14px;
+    }
+    .news_content {
+      padding: 24px 24px 0;
+    }
+    .news-img {
+      width: 228px;
+    }
+    .news_content-details {
+      span {
+        font-size: 12px;
+      }
+      svg {
+        padding: 10px 24px;
+      }
+      .date {
+        color: #233341;
+      }
+      .date {
+        padding: 18px 0;
+      }
+    }
+    hr {
+      margin-top: 38px;
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #eeeeee;
+      padding: 0;
+    }
+    .meetup-logo svg {
+      padding: 18px;
+    }
+    .confirm-btn {
+      margin: 0 auto;
+      align-self: center;
+      a.button {
+        background-color: #01a2c7;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.articles {
+  .box-shadow {
+    box-shadow: 0 12px 24px lightgrey;
+    img {
+      width: 100%;
+      background: #233341;
+    }
+  }
+  a {
+    float: right;
+    margin: 18px;
+  }
+  .news_content {
+    padding: 1.5em;
+  }
+}
+
+.box-shadow:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
+  transition: all 0.25s linear;
+  box-shadow: -1px 4px 24px rgba(0, 0, 0, 0.8);
+  width: 100%;
+}
+
+#recnici {
+  background: url("/images/speakers_BG.png") center no-repeat;
+  background-size: 100%;
+  height: 409px;
+  text-align: center;
+  p {
+    line-height: 0.4;
+  }
+  a {
+    font-size: 24px;
+  }
+  a:hover {
+    font-weight: bold;
+  }
+  .speakers_content {
+    margin-top: 4em;
+  }
+}
+
+//.seance {
+//  .seance_posters {
+//   margin: 0 auto;
+//  }
+//}
+
+// Docasny styl pro history events
+.history img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  #uvod {
+    .newest-news {
+      margin: 0;
+    }
+    .opening_text {
+      margin-top: 0;
+      padding-left: 2em;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1em;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  main #main_content {
+    background: none;
+  }
+  .upcoming-poster {
+    display: none;
+  }
+  #uvod {
+    .opening_text {
+      color: #4a4a4a;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .newest-news {
+      margin: 0 auto;
+    }
+    .meetup-logo {
+      text-align: center;
+    }
+    .meetup-logo svg {
+      padding: 0;
+      margin: 0 auto;
+    }
+    .news_content-details svg {
+      padding-bottom: 0;
+    }
+    .confirm-btn {
+      padding: 24px;
+    }
+  }
+  #recnici {
+    background-size: auto;
+    height: 100%;
+    p {
+      line-height: 1.5;
+    }
+    .speakers_content {
+      margin: 0.5em 0;
+    }
+  }
+}
