@@ -349,7 +349,7 @@ li.tm-partners__item--adler {
   }
 }
 
-.customers {
+.testimonials {
   padding: 3% 0 0;
   background: #fff url("/images/bgnd_curve_4.svg") center top no-repeat;
   background-size: 100% auto;
@@ -565,7 +565,7 @@ li.tm-partners__item--adler {
       margin-top: calc(var(--mdc-layout-grid-gutter-desktop) * 2);
     }
   }
-  .customers blockquote p {
+  .testimonials blockquote p {
     font-size: 1.66em;
     &::before,
     &::after {
