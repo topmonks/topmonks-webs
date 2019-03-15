@@ -14,8 +14,7 @@
   --tm-grey: #9b9b9b;
   --tm-article-background: #f8fbfc;
   --tm-black: #4a4a4a;
-  --tm-black-title: #3C3C3B;
-
+  --tm-black-title: #3c3c3b;
 }
 
 body {
@@ -23,19 +22,9 @@ body {
   margin: 0;
 }
 
-//section:target {
-//  @media screen and (max-width: 479px) {
-//    margin-top: 96px;
-//  }
-//  @media screen and (min-width: 480px) {
-//    margin-top: 88px;
-//  }
-//}
-
 .tm-layout-wrapper {
   max-width: 1008px;
   margin: 0 auto;
-  //padding: 16px;
   --mdc-layout-grid-margin-desktop: 0;
   --mdc-layout-grid-margin-tablet: 0;
   --mdc-layout-grid-margin-phone: 0;
@@ -114,53 +103,6 @@ p {
   color: white;
 }
 
-.main-info {
-  h2 {
-    color: var(--tm-black-title);
-    text-align: center;
-    border-radius: 50px;
-    padding: 8px;
-    background-color: white;
-  }
-
-  .box--lead {
-    padding: 20px 8px;
-  }
-
-  @media (min-width: 480px) {
-    position: relative;
-
-    h2 {
-      text-align: left;
-      background: none;
-      margin: 4em 0 0.5em; //64px 0 8px
-    }
-
-    .jumbotron__lead {
-      box-shadow: none;
-    }
-
-    .jumbotron__lead p {
-      max-width: 20em; //320px
-    }
-
-    .box--lead {
-      height: auto;
-    }
-  }
-  @media (max-width: 740px) {
-    h2 {
-      margin-top: 2em; //32px
-    }
-    .box--lead {
-      padding: 20px 18px;
-    }
-    .action-button {
-      margin: 0;
-    }
-  }
-}
-
 .page_sub-title p {
   font-size: 24px;
   color: var(--tm-black);
@@ -219,90 +161,6 @@ p {
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0.12);
   }
-}
-
-.cooperation {
-  background: none;
-
-  .box {
-    align-items: center;
-    margin: 0 auto;
-    a {
-      align-items: center;
-      display: inline-flex;
-      padding: 0 2em;
-    }
-  }
-
-  @media (max-width: 840px) {
-    text-align: center;
-  }
-}
-
-.how-we-work {
-  h2 {
-    font-family: futura-pt, sans-serif;
-    font-weight: 700;
-    position: relative;
-    z-index: 10;
-    @media screen and (max-width: 839px) {
-      display: none;
-    }
-  }
-
-  h2::before {
-    content: "";
-    display: block;
-    width: 66.666%;
-    height: 150px;
-    border: 1px solid #ccc;
-    border-bottom: none;
-    border-radius: 56px;
-    position: absolute;
-    left: 16.6666%;
-    top: 32px;
-    z-index: -1;
-  }
-
-  h2::after {
-    content: "";
-    display: block;
-    height: 100px;
-    border: 1px solid #ccc;
-    border-right: none;
-    position: absolute;
-    left: 50%;
-    top: 32px;
-    z-index: -1;
-  }
-
-  .box {
-    padding-top: 2em; //32px
-    z-index: 15;
-    position: relative;
-    display: grid;
-
-    & > svg {
-      margin: 0 auto;
-      height: 140px;
-    }
-
-    h3 {
-      text-align: left;
-    }
-  }
-
-
-  .box--purple {
-    font-size: 20px;
-    padding: 4px 16px;
-  }
-
-  .how-we-work_btn {
-    text-align: center;
-    margin: 2em auto; //32px
-  }
-
 }
 
 .tm-partners {
@@ -369,7 +227,8 @@ li.tm-partners__item--adler {
     background-position-y: 220px;
     z-index: 200;
     .tm-layout-wrapper {
-      background: url(https://res.cloudinary.com/topmonks/image/upload/v1550609656/topmonks.com/svg/Group.svg) center no-repeat;
+      background: url(https://res.cloudinary.com/topmonks/image/upload/v1550609656/topmonks.com/svg/Group.svg)
+        center no-repeat;
       background-size: 100% 100%;
       background-position: 10em 10em;
     }
@@ -387,7 +246,7 @@ li.tm-partners__item--adler {
 
   .tm-layout-wrapper {
     background: url("/images/bgnd_product_top_mobile.svg") top center no-repeat,
-    url("/images/bgnd_product_mobile.svg") bottom center no-repeat;
+      url("/images/bgnd_product_mobile.svg") bottom center no-repeat;
     background-size: 100% auto;
     padding-top: 110px;
     padding-bottom: 110px;
@@ -486,236 +345,72 @@ li.tm-partners__item--adler {
   }
 }
 
-  .customers {
-    text-align: center;
-    background: #fff url("https://res.cloudinary.com/topmonks/image/upload/v1550567115/topmonks.com/bgnd_grey.png") center top no-repeat;
-    @media screen and (min-width: 840px) {
-      background-size: 100% auto;
-    }
-
-    .box {
-      text-align: left;
-      line-height: 1.625em; //26px
-      padding-bottom: 3em; //48px
-      blockquote {
-        height: 15.25em; //244px
-        margin-bottom: 2em; //32px
-      }
-
-      figcaption {
-        padding-top: 1em; //16px
-      }
-
-      @media screen and (min-width: 840px) {
-        margin: 2em auto;
-      }
-    }
-
-    hr.line-between_grey {
-      background-color: #f3f3f3;
-      height: 2px;
-      border: none;
-    }
-
-    .name {
-      font-size: 1em; //16px
-      color: var(--tm-grey);
-      text-align: center;
-    }
-
-    svg {
-      display: flex;
-      margin: 3em 0 1em; //48px 0 16px
-    }
+.contact {
+  .contact_title p {
+    color: var(--tm-black);
   }
 
-
-  .contact {
-    .contact_title p {
-      color: var(--tm-black);
-    }
-
-    .person--photo img {
-      border-radius: 50%;
-      width: 112px;
-      filter: saturate(0);
-    }
-
-    .box_member-contact {
-      align-self: center;
-    }
-
-    .box {
-      padding: 14px 24px 0;
-
-      h3, p {
-        text-align: left;
-      }
-    }
-
-    svg {
-      margin-top: 8px;
-    }
-
-    @media screen and (min-width: 840px) {
-      text-align: center;
-    }
-    @media (max-width: 740px) {
-      .box_member-contact p {
-        text-align: center;
-      }
-    }
+  .person--photo img {
+    border-radius: 50%;
+    width: 112px;
+    filter: saturate(0);
   }
 
-  #page-topmonks-index {
-    @media screen and (max-width: 479px) {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/v1550565219/topmonks.com/HP_top-bgnd.png") right top -1px no-repeat;
-      background-size: 50% auto;
-      overflow-x: hidden;
-    }
-    @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2),
-    screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2),
-    screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
-    screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
-    screen and (max-width: 479px) and (min-resolution: 192dpi),
-    screen and (max-width: 479px) and (min-resolution: 2dppx) {
-      background-image: url("https://res.cloudinary.com/topmonks/image/upload/v1550565219/topmonks.com/HP_top-bgnd.png");
-    }
-    @media screen and (min-width: 480px) {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/v1550565219/topmonks.com/HP_top-bgnd.png") right top -1px no-repeat;
-      background-size: 50% auto;
-      overflow-x: hidden;
-    }
-    @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2),
-    screen and (min-width: 480px) and (min-resolution: 192dpi),
-    screen and (min-width: 480px) and (min-resolution: 2dppx) {
-      background-image: url("https://res.cloudinary.com/topmonks/image/upload/v1550565219/topmonks.com/HP_top-bgnd.png");
-    }
-    @media screen and (min-width: 600px) and (max-width: 839px) {
-      background-position: right top;
-    }
-
-    .tm-logo {
-      @media screen and (min-width: 840px) {
-        font-size: 1.6em;
-        color: var(--tm-secondary);
-        &:hover {
-          color: var(--tm-secondary-dark);
-        }
-      }
-    }
-
-    .tm-hamburger {
-      .tm-hamburger__container::after {
-        color: rgba(0, 0, 0, 0.25);
-      }
-
-      .tm-hamburger__bar {
-        background-color: var(--tm-primary);
-      }
-    }
-
-    .tm-app-bar {
-      background-color: transparent;
-      @media screen and (max-width: 839px) {
-        &.tm-app-bar--sticky {
-          background-color: #fff;
-        }
-        .tm-logo {
-          padding-top: 2px;
-          font-size: 22px;
-        }
-      }
-      @media screen and (min-width: 840px) {
-        height: 112px;
-        &.tm-app-bar--sticky {
-          background-color: #fff;
-          height: 72px;
-
-          .tm-layout-wrapper {
-            padding: 20px 0 0 16px;
-          }
-
-          + main {
-            margin-top: 72px;
-          }
-
-          .tm-menu__list a {
-            color: var(--tm-black-title);
-          }
-        }
-        .tm-layout-wrapper {
-          padding: 46px 0 0 16px;
-          transition: padding 0.25s;
-        }
-        + main {
-          margin-top: 112px;
-        }
-      }
-    }
-
-    .tm-menu__list a {
-      color: var(--tm-black-title);
-    }
-
-    .tm-app-bar--open {
-      color: #fff;
-
-      .tm-hamburger__container::after {
-        color: rgba(255, 255, 255, 0.5);
-      }
-
-      .tm-hamburger__bar {
-        background-color: #fff;
-      }
-    }
+  .box_member-contact {
+    align-self: center;
   }
 
-  footer {
+  .box {
+    padding: 14px 24px 0;
+
+    h3,
     p {
-      color: #fff;
+      text-align: left;
     }
   }
 
-  /* MD GRID TABLET AND ABOVE BREAKPOINT */
-  @media (min-width: 480px) {
-    .action-button {
-      display: inline-block;
-      margin: 0;
-    }
-    .customers blockquote p {
-      font-size: 1.66em;
-
-      &::before,
-      &::after {
-        font-size: 2.22em;
-        position: relative;
-      }
-
-      &::before {
-        left: -8px;
-        top: 16px;
-      }
-
-      &::after {
-        bottom: -2px;
-      }
-    }
-    .box.box--mobile-only {
-      background: none;
-      box-shadow: none;
-    }
-  }
-
-  /* MD GRID TABLET ONLY BREAKPOINT */
-  @media screen and (min-width: 480px) and (max-width: 839px) {
-    .tm-case-studies__clients {
-      align-content: space-between;
-    }
+  svg {
+    margin-top: 8px;
   }
 
   @media screen and (min-width: 840px) {
-    .tm-layout-wrapper {
-      padding: 24px;
+    text-align: center;
+  }
+  @media (max-width: 740px) {
+    .box_member-contact p {
+      text-align: center;
     }
   }
+}
+
+footer {
+  p {
+    color: #fff;
+  }
+}
+
+/* MD GRID TABLET AND ABOVE BREAKPOINT */
+@media (min-width: 480px) {
+  .action-button {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .box.box--mobile-only {
+    background: none;
+    box-shadow: none;
+  }
+}
+
+/* MD GRID TABLET ONLY BREAKPOINT */
+@media screen and (min-width: 480px) and (max-width: 839px) {
+  .tm-case-studies__clients {
+    align-content: space-between;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .tm-layout-wrapper {
+    padding: 24px;
+  }
+}

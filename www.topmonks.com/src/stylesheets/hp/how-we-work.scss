@@ -1,0 +1,64 @@
+.how-we-work {
+  h2 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    position: relative;
+    z-index: 10;
+
+    @media screen and (max-width: 839px) {
+      transform: translateX(-100000px); //a11y - screen reader visible
+    }
+  }
+
+  h2::before {
+    content: "";
+    display: block;
+    width: 66.666%;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-radius: 56px;
+    position: absolute;
+    left: 16.6666%;
+    top: 32px;
+    z-index: -1;
+  }
+
+  h2::after {
+    content: "";
+    display: block;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-right: none;
+    position: absolute;
+    left: 50%;
+    top: 32px;
+    z-index: -1;
+  }
+
+  .box {
+    padding-top: 2em; //32px
+    z-index: 15;
+    position: relative;
+    display: grid;
+
+    & > svg {
+      margin: 0 auto;
+      height: 140px;
+    }
+
+    h3 {
+      text-align: left;
+    }
+  }
+
+  .box--purple {
+    font-size: 20px;
+    padding: 4px 16px;
+  }
+
+  .how-we-work_btn {
+    text-align: center;
+    margin: 2em auto; //32px
+  }
+}

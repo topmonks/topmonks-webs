@@ -1,0 +1,66 @@
+.testimonials {
+  text-align: center;
+  background: #fff
+    url("https://res.cloudinary.com/topmonks/image/upload/v1550567115/topmonks.com/bgnd_grey.png")
+    center top no-repeat;
+
+  @media screen and (min-width: 840px) {
+    background-size: 100% auto;
+  }
+
+  .box {
+    text-align: left;
+    line-height: 1.625em; //26px
+    padding-bottom: 3em; //48px
+    blockquote {
+      height: 15.25em; //244px
+      margin-bottom: 2em; //32px
+    }
+
+    figcaption {
+      padding-top: 1em; //16px
+    }
+
+    @media screen and (min-width: 840px) {
+      margin: 2em auto;
+    }
+  }
+
+  hr.line-between_grey {
+    background-color: #f3f3f3;
+    height: 2px;
+    border: none;
+  }
+
+  .name {
+    font-size: 1em; //16px
+    color: var(--tm-grey);
+    text-align: center;
+  }
+
+  svg {
+    display: flex;
+    margin: 3em 0 1em; //48px 0 16px
+  }
+
+  @media (min-width: 480px) {
+    blockquote p {
+      font-size: 1.66em;
+
+      &::before,
+      &::after {
+        font-size: 2.22em;
+        position: relative;
+      }
+
+      &::before {
+        left: -8px;
+        top: 16px;
+      }
+
+      &::after {
+        bottom: -2px;
+      }
+    }
+  }
+}

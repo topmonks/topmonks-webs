@@ -1,0 +1,47 @@
+.jumbotron {
+  h2 {
+    color: var(--tm-black-title);
+    text-align: center;
+    border-radius: 50px;
+    padding: 8px;
+    background-color: white;
+  }
+
+  .box--lead {
+    padding: 20px 8px;
+  }
+
+  @media (min-width: 480px) {
+    position: relative;
+
+    h2 {
+      text-align: left;
+      background: none;
+      margin: 4em 0 0.5em; //64px 0 8px
+    }
+
+    .jumbotron__lead {
+      box-shadow: none;
+    }
+
+    .jumbotron__lead p {
+      max-width: 20em; //320px
+    }
+
+    .box--lead {
+      height: auto;
+    }
+  }
+
+  @media (max-width: 740px) {
+    h2 {
+      margin-top: 2em; //32px
+    }
+    .box--lead {
+      padding: 20px 18px;
+    }
+    .action-button {
+      margin: 0;
+    }
+  }
+}

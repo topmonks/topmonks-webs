@@ -22,11 +22,50 @@ TopMonks - Software development partner for your business
 <meta property="og:url" content="https://www.topmonks.com/">
 <meta property="og:site_name" content="TopMonks.com">
 <link rel="stylesheet" href="/stylesheets/main.css">
-
-
+<style>
+  @media screen and (max-width: 479px) {
+    body {
+      background: url("https://res.cloudinary.com/topmonks/image/upload/v1550565219/topmonks.com/HP_top-bgnd.png") right top -1px no-repeat;
+      background-size: 50% auto;
+      overflow-x: hidden;
+    }
+  }
+  @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2),
+      screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2),
+      screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1),
+      screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
+      screen and (max-width: 479px) and (min-resolution: 192dpi),
+      screen and (max-width: 479px) and (min-resolution: 2dppx) {
+    body {
+      background-image: url("https://res.cloudinary.com/topmonks/image/upload/v1550565219/topmonks.com/HP_top-bgnd.png");
+    }
+  }
+  @media screen and (min-width: 480px) {
+    body {
+      background: url("https://res.cloudinary.com/topmonks/image/upload/v1550565219/topmonks.com/HP_top-bgnd.png") right top -1px no-repeat;
+      background-size: 50% auto;
+      overflow-x: hidden;
+    }
+  }
+  @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2),
+      screen and (min-width: 480px) and (min-resolution: 192dpi),
+      screen and (min-width: 480px) and (min-resolution: 2dppx) {
+    body {
+      background-image: url("https://res.cloudinary.com/topmonks/image/upload/v1550565219/topmonks.com/HP_top-bgnd.png");
+    }
+  }
+  @media screen and (min-width: 600px) and (max-width: 839px) {
+    body {
+      background-position: right top;
+    }
+  }
+</style>
+<link rel="stylesheet" href="/stylesheets/hp/header.css">
 {% endblock %}
 
 {% block content %}
+<script>document.querySelector(".tm-app-bar").classList.add("tm-app-bar--sticky")</script>
+<link rel="stylesheet" href="/stylesheets/hp/jumbotron.css">
 <section class="main-info jumbotron">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
@@ -43,6 +82,8 @@ TopMonks - Software development partner for your business
     </div>
   </div>
 </section>
+
+<link rel="stylesheet" href="/stylesheets/hp/cooperation.css">
 <section class="cooperation">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
@@ -63,6 +104,7 @@ TopMonks - Software development partner for your business
   </div>
 </section>
 
+<link rel="stylesheet" href="/stylesheets/hp/how-we-work.css">
 <section id="how-we-work" class="how-we-work">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
@@ -394,7 +436,7 @@ TopMonks - Software development partner for your business
   </div>
 </section>
 
-
+<link rel="stylesheet" href="/stylesheets/hp/funnel.css">
 <!--<section class="steps">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
@@ -472,8 +514,8 @@ TopMonks - Software development partner for your business
 {% set caseStudiesData = { title : 'Case Studies', subTitle : 'We have learned something from every collaboration with our clients.'} %}
 {% include 'components/case-studies/index.html' %}
 
-
-<section class="customers">
+<link rel="stylesheet" href="/stylesheets/hp/testimonials.css">
+<section class="testimonials">
   <div class="tm-bgnd-wrapper">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">

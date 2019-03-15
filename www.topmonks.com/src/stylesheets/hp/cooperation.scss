@@ -1,0 +1,22 @@
+.cooperation {
+  background: none;
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: wrap;
+    margin: 0;
+    padding: 0;
+
+    a {
+      align-items: center;
+      display: inline-flex;
+      padding: 0 16px;
+    }
+  }
+
+  @media (max-width: 840px) {
+    text-align: center;
+  }
+}
