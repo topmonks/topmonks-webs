@@ -13,6 +13,7 @@ header.masthead {
   h1 {
     font-size: 2.6rem;
     font-weight: 900;
+    text-align: center !important;
   }
 
   @include media-breakpoint-up(lg) {
@@ -25,15 +26,13 @@ header.masthead {
     }
     h1 {
       font-size: 3rem;
+      text-align: left !important;
     }
   }
   @include media-breakpoint-up(xl) {
     h1 {
       font-size: 4rem;
-    }
-
-    h2 {
-      font-size: 3rem;
+      text-align: left !important;
     }
   }
 }
@@ -41,5 +40,11 @@ header.masthead {
 @include media-breakpoint-up(xl) {
     h2 {
       font-size: 3rem;
+    }
+  }
+
+@media(max-width:700px)  {
+    .button-container  {
+      text-align: center;
     }
   }
