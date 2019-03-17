@@ -58,30 +58,6 @@
 			"body": "",
 			"updatedAt": "2018-08-15T08:57:21.802Z"
 		},
-		"david-votrubec": {
-			"id": "david-votrubec",
-			"name": "David",
-			"surname": "Votrubec",
-			"job_title": "Sharp Developer",
-			"twitter": "davidvotrubec",
-			"github": "DavidVotrubec",
-			"linkedin": "in/david-votrubec-75b13215",
-			"quote": "Keep calm and rationalize your way out.",
-			"body": "<p>Never stop learning</p>\n",
-			"updatedAt": "2018-10-18T12:01:39.900Z"
-		},
-		"david-zabrz": {
-			"id": "david-zabrz",
-			"name": "David",
-			"surname": "Zábrž",
-			"job_title": "Marketing Guy",
-			"twitter": null,
-			"github": null,
-			"linkedin": null,
-			"quote": null,
-			"body": "<p>Just tell us something we don&#39;t know</p>\n",
-			"updatedAt": "2018-08-21T14:57:44.304Z"
-		},
 		"filip-maly": {
 			"id": "filip-maly",
 			"name": "Filip",
@@ -418,6 +394,18 @@
 			"quote": null,
 			"body": "",
 			"updatedAt": "2018-08-15T08:57:21.808Z"
+		},
+		"ondrej-tupy": {
+			"id": "ondrej-tupy",
+			"name": "Ondrej",
+			"surname": "Tupý",
+			"job_title": "Project Manager",
+			"twitter": "tupyondrej",
+			"github": null,
+			"linkedin": "in/ondrejtupy",
+			"quote": null,
+			"body": "",
+			"updatedAt": "2019-03-13T16:21:25.780Z"
 		},
 		"pavel-lobodinsky": {
 			"id": "pavel-lobodinsky",
