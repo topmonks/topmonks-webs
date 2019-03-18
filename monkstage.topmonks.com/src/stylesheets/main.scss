@@ -85,6 +85,21 @@ hr {
       text-decoration: none;
     }
   }
+  &.tm-btn--disabled {
+    position: relative;
+    display: inline;
+    &::after {
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: "";
+      position: absolute;
+      background: rgba(255, 255, 255, 0.5);
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+  }
 }
 
 .tm-box {
