@@ -61,7 +61,7 @@ hr {
   height: 0;
   border: 0;
   margin: 1.5em -1em;
-  border-top: 1px solid rgba(218, 218, 218, 0.4);;
+  border-top: 1px solid rgba(218, 218, 218, 0.4);
 }
 
 .tm-btn {
@@ -77,11 +77,12 @@ hr {
 
   &.tm-btn--inverse {
     color: var(--tm-secondary);
-    background: linear-gradient(187.18deg, #EE72E9 -23.89%, #8363F9 107.68%);
+    background: linear-gradient(187.18deg, #ee72e9 -23.89%, #8363f9 107.68%);
     transition: all 0.1s ease-in-out;
 
     &:hover {
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(187.18deg, #EE72E9 -23.89%, #8363F9 107.68%);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(187.18deg, #ee72e9 -23.89%, #8363f9 107.68%);
       text-decoration: none;
     }
   }
@@ -103,14 +104,15 @@ hr {
 }
 
 .tm-box {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 4px 10px 20px rgba(79, 103, 135, 0.1);
   border-radius: 20px;
   padding: 3em 3em 1em;
   border-bottom: 4px solid var(--tm-primary);
 
   &.tm-box--testimonial {
-    background: url("../images/bgnd_testimonial.svg") left 1.5em top 1.5em no-repeat;
+    background: url("../images/bgnd_testimonial.svg") left 1.5em top 1.5em
+      no-repeat;
   }
 }
 
@@ -129,10 +131,10 @@ hr {
   }
 }
 
-
 .tm-strip {
-  background: #FFFFFF no-repeat;
-  background-image: url("../images/bgnd_ticket.png"), url("../images/bgnd_ticket_btm.png");
+  background: #ffffff no-repeat;
+  background-image: url("../images/bgnd_ticket.png"),
+    url("../images/bgnd_ticket_btm.png");
   background-position: top 0 left 14%, bottom 0 left 14%;
   background-size: 32px 10px;
   color: var(--tm-secondary_text);
@@ -147,7 +149,7 @@ hr {
     flex-wrap: nowrap;
   }
   &::after {
-    color: #FF5358;;
+    color: #ff5358;
     display: flex;
     position: absolute;
     content: "ZRUŠENO";
@@ -165,7 +167,7 @@ hr {
 .tm-strip__info {
   display: flex;
   line-height: 1.5;
-  border-bottom: 1px dashed #DADADA;
+  border-bottom: 1px dashed #dadada;
   padding: 1em;
   width: 100%;
   @media (min-width: 840px) {
@@ -173,7 +175,7 @@ hr {
     align-items: center;
     padding: 1em 3% 1em 0;
     margin-right: 3%;
-    border-right: 1px dashed #DADADA;
+    border-right: 1px dashed #dadada;
     border-bottom: none;
     height: 3em;
   }
@@ -260,7 +262,7 @@ hr {
 }
 
 .tm-footer {
-  background: #F6F6F6 url("../images/bgnd_footer.svg") top center no-repeat;
+  background: #f6f6f6 url("../images/bgnd_footer.svg") top center no-repeat;
   background-size: 100% auto;
   padding-top: 3em;
 
@@ -268,4 +270,3 @@ hr {
     width: 300px;
   }
 }
-
