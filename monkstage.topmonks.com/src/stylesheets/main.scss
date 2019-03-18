@@ -127,8 +127,23 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
   @media (min-width: 840px) {
     flex-wrap: nowrap;
+  }
+  &::after {
+    color: #FF5358;;
+    display: flex;
+    position: absolute;
+    content: "ZRUŠENO";
+    font-size: 3em;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 840px) {
+      height: 90%;
+    }
   }
 }
 
