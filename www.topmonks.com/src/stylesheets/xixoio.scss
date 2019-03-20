@@ -20,26 +20,36 @@
 }
 
 body {
-  font-family: Avenir, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background: linear-gradient(to bottom right, #6551E0 0, #6B359D 78%);
+  font-family: Avenir, Avenir light -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: linear-gradient(to bottom right, #6551E0 0, #6B359D 78%) no-repeat;
+  background-size: 100% 55%;
   line-height: 2.25em; //36px
   font-weight: lighter;
+  margin: 0;
 }
 
 // Typography //
 
 h1 {
   color: #FFFFFF;
+  font-size: 2.25em; //36px
+  font-weight: lighter;
+  letter-spacing: 2px;
+  line-height: normal;
 }
 
-h1, h2 {
+h2 {
   font-size: 2.25em; //36px
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: normal;
   text-align: center;
 }
 
 h3, p {
   font-size: 1.25em; //20px
+  line-height: 2.1em; //33px;
 }
 
 .text-center {
@@ -61,7 +71,7 @@ a.btn {
 
 a.btn_purple {
   background: url("/images/case-studies/xixoio/union.png") center no-repeat;
-margin: 2em 0;
+  margin: 2em 0;
 }
 
 // Section: Introduction //
@@ -83,6 +93,7 @@ margin: 2em 0;
     background: url("/images/case-studies/xixoio/intro_bgnd.png") top center no-repeat;
     max-width: 68.75em; //1 100px
     margin: 0 auto;
+
     p {
       margin-bottom: 1em;
     }
@@ -135,17 +146,110 @@ margin: 2em 0;
     border: 2px solid var(--tm-xixo-purple);
     padding: 2em 2.75em; //24px 44px
   }
+
+  @media screen and (min-width: 1024px) {
+    padding: 3em 0 2em;
+  }
 }
 
 // Section: Testing //
 .testing {
+  @media screen and (min-width: 1024px) {
+    padding-bottom: 2em;
+  }
 }
 
 // Section: Timeline //
 .timeline {
   color: #FFFFFF;
   background: linear-gradient(to bottom right, #6551E0 0, #6B359D 78%);
+
   h3 {
     font-weight: lighter;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 3em 0 4em;
+  }
+}
+
+// Section: Our Work //
+
+.our-work {
+  margin-top: 2em;
+  font-size: 30px;
+  text-transform: uppercase;
+
+  p {
+    margin-bottom: 0;
+  }
+  p.work_shadow-box {
+    font-size: 14px;
+    line-height: 23px;
+    box-shadow: 0 2px 23px 0 rgba(0,0,0,.1);
+    width: max-content;
+    padding: 4px 12px;
+  }
+
+  .string_1 {
+    background: url("/images/case-studies/xixoio/String/01.API.svg") center no-repeat;
+  }
+
+  .string_2 {
+    background: url("/images/case-studies/xixoio/String/02.Infrastructure.svg") center no-repeat;
+  }
+
+  .string_3 {
+    background: url("/images/case-studies/xixoio/String/03.Crypto.svg") center no-repeat;
+  }
+
+  .string_4 {
+    background: url("/images/case-studies/xixoio/String/04.Development.svg") center no-repeat;
+  }
+
+  .string_5 {
+    background: url("/images/case-studies/xixoio/String/05.Contracts.svg") center no-repeat;
+  }
+
+  .string_6 {
+    background: url("/images/case-studies/xixoio/String/06.Testing.svg") center no-repeat;
+  }
+
+  .string_7 {
+    background: url("/images/case-studies/xixoio/String/07.Audit.svg") center no-repeat;
+  }
+
+  .string_8 {
+    background: url("/images/case-studies/xixoio/String/08.Finalizations.svg") center no-repeat;
+  }
+
+  .string_9 {
+    background: url("/images/case-studies/xixoio/String/09.Training.svg") center no-repeat;
+  }
+
+  .string_10 {
+    background: url("/images/case-studies/xixoio/String/10.Audit.svg") center no-repeat;
+  }
+
+  .top-diamond {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .right-float {
+      p {
+        text-align: right;
+        margin-right: 60%;
+      }
+      p.work_shadow-box {
+        float: right;
+      }
+    }
+
+    .left-float {
+      p {
+        margin-left: 60%;
+      }
+    }
   }
 }
