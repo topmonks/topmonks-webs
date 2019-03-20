@@ -348,9 +348,10 @@
   dependencies:
     arrify "^1.0.1"
 
-"@fortawesome/fontawesome-free@5.7.2":
-  version "5.7.2"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.7.2.tgz#1498c3eb78ee7c78c5488418707de90aaf58d5d7"
+"@fortawesome/fontawesome-free@5.8.0":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.8.0.tgz#e22f161b0f95d633f4223b43773241edfcba6fdc"
+  integrity sha512-fWy8Aq/O8sj3EFyeubTsWSdpbmcJiIXoUcO0AaAXazQ0SuxnDQv+Q5tUSJLvEkmuj/x9kRTOKreizQX5GSuwmg==
 
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
