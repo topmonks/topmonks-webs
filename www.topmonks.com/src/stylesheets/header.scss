@@ -92,19 +92,19 @@
     }
   }
   @media screen and (min-width: 840px) {
-    height: 72px;
+    height: 78px;
     .tm-layout-wrapper {
-      padding: 20px 0 0 16px;
+      padding: 23px 0 0 16px;
     }
     + main {
-      margin-top: 72px;
+      margin-top: 78px;
     }
   }
 }
 
 .tm-app-bar--sticky {
   background-color: #fff;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 10px rgba(92, 95, 212, 0.1);
   .tm-logo {
     color: var(--tm-secondary);
   }
@@ -115,15 +115,18 @@
     color: rgba(0, 0, 0, 0.25);
   }
   @media screen and (min-width: 840px) {
-    height: 72px;
+    height: 78px;
     .tm-layout-wrapper {
-      padding: 20px 0 0 16px;
+      padding: 23px 0 0 16px;
     }
     + main {
-      margin-top: 72px;
+      margin-top: 78px;
     }
     .tm-menu__list a {
-      color: var(--tm-primary);
+      color: var(--tm-black-title);
+      &:hover {
+        color: var(--tm-primary);
+      }
     }
   }
 }

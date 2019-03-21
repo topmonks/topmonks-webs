@@ -1,10 +1,16 @@
 :root {
   --insight-negative-color: #e13c1e;
   --insight-positive-color: #7e9204;
-  --topmonks-orange: #fe664b;
-  --topmonks-grey: #9b9b9b;
-  --topmonks-article-background: #f8fbfc;
-  --topmonks-black: #4a4a4a;
+  --tm-primary: #fe664b;
+  --tm-primary-dark: #c53321;
+  --tm-primary-light: #ff9878;
+  --tm-secondary: #5c5fd4;
+  --tm-secondary-dark: #1d35a2;
+  --tm-secondary-light: #918cff;
+  --tm-grey: #9b9b9b;
+  --tm-article-background: #f8fbfc;
+  --tm-black: #4a4a4a;
+  --tm-black-title: #3c3c3b;
 }
 
 /*
@@ -12,7 +18,7 @@ http://pxtoem.com/ - how to count px to em
 */
 
 body {
-  color: var(--topmonks-black);
+  color: var(--tm-black);
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -49,7 +55,7 @@ h2 {
   line-height: 1.143em; //32px
   text-transform: uppercase;
   text-align: center;
-  color: #3C3C3B;
+  color: var(--tm-black-title);
   margin-bottom: 18px;
   font-weight: 900;
 }
@@ -57,7 +63,7 @@ h3 {
   font-size: 1.5em; //24px
   line-height: 1.167em; //28px
   text-align: center;
-  color: #3C3C3B;
+  color: var(--tm-black-title);
   font-weight: 900;
 }
 h4 {
@@ -69,7 +75,7 @@ p {
   margin: 0 0 1em;
 }
 a {
-  color: var(--topmonks-orange);
+  color: var(--tm-orange);
   text-decoration: none;
 
   &:hover {
