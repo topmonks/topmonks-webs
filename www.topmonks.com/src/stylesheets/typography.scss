@@ -25,7 +25,7 @@ body {
   letter-spacing: 0;
   line-height: 1.444em; //22/26px
   font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
   font-variant-ligatures: common-ligatures contextual;
@@ -42,8 +42,8 @@ body {
 }
 .tm-logo {
   font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
 }
 .wf-active .tm-logo {
   font-family: futura-pt, sans-serif;
@@ -52,7 +52,7 @@ body {
 h1,
 h2 {
   font-size: 1.75em; //28px
-  line-height: 1.143em; //32px
+  line-height: 1.214em; //34px
   text-transform: uppercase;
   text-align: center;
   color: var(--tm-black-title);
@@ -114,7 +114,7 @@ ul.formatted {
   h1,
   h2 {
     font-size: 2.111em; //38px
-    line-height: 1.211em; //46px
+    line-height: 1.447em; //55px
   }
   h3 {
     font-size: 1.333em; //24px
