@@ -151,45 +151,6 @@ p {
     background-color: rgba(0, 0, 0, 0.12);
   }
 }
-
-.tm-partners {
-  padding: 0 0 3%;
-  background: #fff url("/images/bgnd_curve_3.svg") center bottom no-repeat;
-  background-size: 100% auto;
-
-  .tm-bgnd-wrapper {
-    background-color: #f3f3f3;
-  }
-}
-
-.tm-partners__list {
-  color: var(--tm-grey);
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  @media screen and (max-width: 479px) {
-    flex-direction: column;
-  }
-  margin: 0;
-
-  li {
-    width: 164px;
-    @media screen and (min-width: 480px) {
-      margin-right: 24px;
-    }
-  }
-
-  svg {
-    width: 100%;
-    fill: currentColor;
-    stroke: currentColor;
-  }
-}
-
-li.tm-partners__item--adler {
-  width: 100px;
-}
-
 .steps {
   h3 {
     text-align: left;
