@@ -74,6 +74,24 @@ a.btn_purple {
   margin: 2em 0;
 }
 
+a.dead-button {
+  font-size: 1.875em; //30px
+  font-weight: 500;
+  display: block;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #9371C1;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, .16);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .16);
+  padding: 14px 58px;
+  text-decoration: none;
+  width: max-content;
+  margin: 0 auto;
+}
+p.text-italic {
+  font-style: italic;
+}
+
 // Section: Introduction //
 .intro {
   height: 46.875em; //750px
@@ -90,7 +108,7 @@ a.btn_purple {
 .about {
   .description {
     padding: 5.25em 4.625em 2.75em; //84px 74px 44px
-    background: url("/images/case-studies/xixoio/intro_bgnd.png") top center no-repeat;
+    background-color: white;
     max-width: 68.75em; //1 100px
     margin: 0 auto;
 
@@ -120,7 +138,25 @@ a.btn_purple {
 // Section: Proposal //
 .proposal {
   color: #FFFFFF;
-  background: url("/images/case-studies/xixoio/waves.png") center no-repeat;
+  @media screen and (min-width: 1040px) {
+    background: url("/images/case-studies/xixoio/waves.png") center no-repeat;
+    background-size: 100% 100%;
+  }
+  @media (max-width: 1039px) {
+    background: url("/images/case-studies/xixoio/waves.png") center no-repeat;
+    background-size: auto;
+  }
+
+  .apps-icons_desktop {
+    @media (max-width: 1040px) {
+      display: none;
+    }
+  }
+  .apps-icons_phone {
+    @media screen and (min-width: 1039px) {
+      display: none;
+    }
+  }
 }
 
 // Section: Implementation //
@@ -183,10 +219,11 @@ a.btn_purple {
   p {
     margin-bottom: 0;
   }
+
   p.work_shadow-box {
     font-size: 14px;
     line-height: 23px;
-    box-shadow: 0 2px 23px 0 rgba(0,0,0,.1);
+    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, .1);
     width: max-content;
     padding: 4px 12px;
   }
@@ -241,6 +278,7 @@ a.btn_purple {
         text-align: right;
         margin-right: 60%;
       }
+
       p.work_shadow-box {
         float: right;
       }
