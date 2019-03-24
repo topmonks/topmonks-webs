@@ -127,6 +127,33 @@ jobs:
           root: .
           paths: .pulumi
 
+  preview-provision:
+    docker:
+      - image: "circleci/node:10"
+    working_directory: ~/topmonks-webs
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - run:
+          name: "Install Pulumi CLI, if needed"
+          command: |
+            curl -L https://get.pulumi.com/ | bash -s
+            # Add to PATH
+            echo 'export PATH=/home/circleci/.pulumi/bin:$PATH' >> $BASH_ENV
+            source $BASH_ENV
+      - run:
+          name: "Log into Pulumi"
+          command: pulumi login file:///home/circleci/topmonks-webs
+      - run:
+          name: Install deps
+          command: yarn
+      - run:
+          name: Install Pulumi plugins
+          command: pulumi plugin install
+      - pulumi/preview:
+          stack: topmonks-webs
+
   post-provision:
     docker:
       - image: "cibuilds/aws:latest"
@@ -249,11 +276,18 @@ workflows:
       - build
       - pre-provision:
           context: org-global
+      - preview-provision:
+          context: org-global
+          filters:
+            branches:
+              ignore: master
+          requires:
+            - pre-provision
+      - provision:
+          context: org-global
           filters:
             branches:
               only: master
-      - provision:
-          context: org-global
           requires:
             - pre-provision
       - post-provision:
