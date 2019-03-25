@@ -15,6 +15,8 @@ In development, check that your work conforms to [Lighthouse](https://developers
 
 **Be responsible, keep our quality bar high.**
 
+[![CodeScene](https://codescene.io/projects/4460/status.svg) Get more details at **codescene.io**.](https://codescene.io/projects/4460/jobs/latest-successful/results)
+
 ## Local development
 
 _We use `www.topmonks.com` as example site. You can use any site likewise._
