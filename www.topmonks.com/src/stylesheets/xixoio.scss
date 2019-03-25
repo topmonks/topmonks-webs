@@ -104,15 +104,15 @@ a.dead-button {
 }
 
 a.dead-button_cube {
-  padding: 2.3em 3em 1em;//36.8px 48px 16px
+  padding: 2.3em 3em 1em; //36.8px 48px 16px
   @media (max-width: 768px) {
-    padding: 2.3em 1em 1em;//36.8px 16px 16px
+    padding: 2.3em 1em 1em; //36.8px 16px 16px
   }
 }
 
 .dead-button_cube {
   background: #9371C1;
-  padding: 2em 5.5em 0;//32px 88px 0
+  padding: 2em 5.5em 0; //32px 88px 0
   margin: 0 auto;
   background: url("/images/case-studies/xixoio/Union.svg") center no-repeat;
 }
@@ -121,15 +121,15 @@ a.dead-button_cube {
 .dead-button_transparent {
   background-color: transparent;
   border: 1px solid white;
-  padding: 0.875em 3em;//14px 48px;
+  padding: 0.875em 3em; //14px 48px;
   margin: 0 auto;
 }
 
 p.text-italic {
   font-style: italic;
 }
-//
 
+//
 
 
 // Section: Introduction //
@@ -137,7 +137,7 @@ p.text-italic {
   height: 46.875em; //750px
   background: url("/images/case-studies/xixoio/abstract.svg") center no-repeat;
   text-align: center;
-  padding-top: 6em;//96px
+  padding-top: 6em; //96px
 
   .intro_text {
     margin-top: 17%;
@@ -149,17 +149,19 @@ p.text-italic {
   .tm-layout-wrapper {
     background-color: #FFFFFF;
   }
+
   .description {
-    padding: 4.25em 2.625em 2.75em;//68px 42px 44px;
+    padding: 4.25em 2.625em 2.75em; //68px 42px 44px;
     max-width: 68.75em; //1,100px
     margin: 0 auto;
     background: url("/images/case-studies/xixoio/box-top-triangle.svg") center top -10% no-repeat;
+
     p {
-      margin-bottom: 1em;//16px
+      margin-bottom: 1em; //16px
     }
 
     @media (max-width: 768px) {
-      padding: 1.25em 1.625em 1.75em;//20px 26px 28px
+      padding: 1.25em 1.625em 1.75em; //20px 26px 28px
     }
   }
 
@@ -287,6 +289,7 @@ p.text-italic {
     width: max-content;
     padding: 4px 12px;
   }
+
   .last-diamond {
     background: url("/images/case-studies/xixoio/release_bgnd.svg") center no-repeat;
     background-size: 100% 100%;
@@ -294,7 +297,10 @@ p.text-italic {
   }
 
   @media screen and (min-width: 701px) {
-    background: url("/images/case-studies/xixoio/line.svg") center no-repeat;
+    background: url("/images/case-studies/xixoio/String/line.svg") center no-repeat;
+    .mdc-layout-grid {
+      padding-bottom: 0;
+    }
     .right-float {
       p {
         text-align: right;
@@ -364,9 +370,9 @@ p.text-italic {
     }
   }
   @media (max-width: 700px) {
-    background: url("/images/case-studies/xixoio/line.svg") left no-repeat;
+    background: url("/images/case-studies/xixoio/String/line.svg") left no-repeat;
     background-size: 1% 90%;
-    background-position-x: 13.5%;
+    background-position-x: 13%;
     margin-top: 0;
     p, p.work_shadow-box {
       margin-left: 4em;
@@ -429,13 +435,14 @@ p.text-italic {
     .last-diamond {
       background: url("/images/case-studies/xixoio/release_bgnd.svg") left no-repeat;
       background-size: 20% 100%;
+
       svg {
         width: 20%;
         height: 80%;
       }
     }
     .string_2, .string_3, .string_4, .string_5, .string_6, .string_7, .string_8, .string_9, .string_10 {
-      background-size: 10% 60%;
+      background-size: 11.5% 60%;
       margin: 0 0 0.5em 0.5em;
 
       p, p.work_shadow-box {
@@ -443,12 +450,35 @@ p.text-italic {
       }
     }
   }
+  @media (min-width: 400px) and (max-width: 490px) {
+    background: url("/images/case-studies/xixoio/String/line.svg") left no-repeat;
+    background-size: 1% 90%;
+    background-position-x: 13%;
+    .string_2, .string_3, .string_4, .string_5, .string_6, .string_7, .string_8, .string_9, .string_10 {
+      margin: 0 0 0.5em 0.7em;
+    }
+  }
+  @media (max-width: 399px) {
+    background: url("/images/case-studies/xixoio/String/line.svg") left no-repeat;
+    background-size: 1% 90%;
+    background-position-x: 13.5%;
+    .string_2, .string_3, .string_4, .string_5, .string_6, .string_7, .string_8, .string_9, .string_10 {
+      background-size: 10% 60%;
+      margin: 0 0 0.5em 0.5em;
+    }
+  }
 }
+
 
 // Section: Closure//
 
 .closure {
-  font-size: 1.25em;//20px
-  max-width: 50em;//800px
+  font-size: 1.25em; //20px
+  max-width: 50em; //800px
   margin: 0 auto;
+  @media screen and (min-width: 1024px) {
+    .mdc-layout-grid {
+      padding-top: 0;
+    }
+  }
 }
