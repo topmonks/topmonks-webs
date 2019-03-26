@@ -64,6 +64,12 @@ section {
   font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
   Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
+  @media (min-width: 2200px) {
+    svg {
+      width: 300px;
+      height: 100px;
+    }
+  }
 }
 
 .wf-active .tm-logo {
@@ -182,6 +188,9 @@ ul li {
   display: inline-block;
   padding: 4px 14px;
   font-size: 14px;
+  @media (min-width: 2200px) {
+  font-size: 24px;
+  }
 }
 
 ul#navigace {

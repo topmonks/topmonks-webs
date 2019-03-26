@@ -703,6 +703,21 @@
 			"videoLink": null,
 			"body": "",
 			"updatedAt": "2019-01-22T21:56:14.233Z"
+		},
+		"55": {
+			"sessionNumber": 55,
+			"title": "Revenue & Satisfaction Hacking",
+			"shortTitle": "Revenue & Satisfaction Hacking",
+			"lecturers": "Václav Lorenc, David Šimek, Aleš Roubíček",
+			"date": "7. března 2019",
+			"address": "Jamm Club<br>Pod kaštany 3, 160 00 Praha",
+			"mapLink": "https://goo.gl/maps/D2WMNNpDZ9D2",
+			"link": "https://www.meetup.com/TopMonks-Caffe/events/259359848/",
+			"picture": "/images/posters-small/empty.png",
+			"presentationLink": null,
+			"videoLink": null,
+			"body": "",
+			"updatedAt": "2019-03-26T09:09:49.010Z"
 		}
 	}
 }
