@@ -35,14 +35,15 @@ body {
   color: var(--topmonks-caffe-dark_blue);
   background: url("/images/caffe-bgnd.png") top no-repeat;
 
-  @media (min-width: 2500px) {
-    background-size: 100% 5%;
-  }
-  @media (min-width: 1624px) and (max-width: 2499px) {
-    background-size: 100% 6%;
+  @media (min-width: 1724px){
+    background: url("/images/caffe-bgnd.png") top no-repeat;
+    background-size: 100% 5.5%;
     }
+  @media (min-width: 1500px) and (max-width: 1723px) {
+    background: url("/images/caffe-bgnd.png") top no-repeat;
+    background-size: 100% 6.5%;
+  }
   @media (min-width: 1024px) {
-    background-size: 100%;
     .tm-layout-wrapper {
       padding: 0 12%;
     }
@@ -190,7 +191,7 @@ ul li {
   margin: 0;
   display: inline-block;
   padding: 4px 14px;
-  font-size: 14px;
+  font-size: 16px;
   @media (min-width: 2200px) {
     font-size: 24px;
   }
@@ -200,8 +201,6 @@ ul#navigace {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  margin-top: 10px;
-
   a {
     font-size: 1.125em;
     padding: 4px 8px;
