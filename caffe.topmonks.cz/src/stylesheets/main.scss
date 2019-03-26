@@ -32,23 +32,26 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
-
   color: var(--topmonks-caffe-dark_blue);
-  @media (max-width: 840px) {
-    background-size: auto;
-    .tm-layout-wrapper {
-      padding: 0 6%;
-    }
+  background: url("/images/caffe-bgnd.png") top no-repeat;
+
+  @media (min-width: 2500px) {
+    background-size: 100% 5%;
   }
+  @media (min-width: 1624px) {
+    background-size: 100% 6%;
+    }
   @media (min-width: 1024px) {
-    background: url("/images/caffe-bgnd.png") top no-repeat;
     background-size: 100%;
     .tm-layout-wrapper {
       padding: 0 12%;
     }
   }
-  @media (max-width: 1023px) {
-    background: url("/images/caffe-bgnd.png") top no-repeat;
+  @media (max-width: 840px) {
+    background-size: auto;
+    .tm-layout-wrapper {
+      padding: 0 6%;
+    }
   }
 }
 
@@ -151,9 +154,9 @@ a {
     padding: 10px 30px;
   }
   @media (max-width: 468px) {
-      margin: 0 auto;
-      font-size: 1.5em;
-      padding: 18px 60px;
+    margin: 0 auto;
+    font-size: 1.5em;
+    padding: 18px 60px;
   }
 }
 
@@ -189,7 +192,7 @@ ul li {
   padding: 4px 14px;
   font-size: 14px;
   @media (min-width: 2200px) {
-  font-size: 24px;
+    font-size: 24px;
   }
 }
 
@@ -296,13 +299,10 @@ ul#navigace {
     }
   }
   @media (min-width: 1880px) {
-    margin-top: 7em;
+    margin-top: 10em;
     p {
       width: 70%;
     }
-  }
-  @media (min-width: 2200px) {
-    margin-top: 14em;
   }
 }
 
