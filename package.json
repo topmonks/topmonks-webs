@@ -10,7 +10,7 @@
     "@fortawesome/fontawesome-free": "5.7.2",
     "@material/layout-grid": "^0.41.0",
     "@pulumi/aws": "^0.17.1",
-    "@pulumi/pulumi": "^0.17.2",
+    "@pulumi/pulumi": "^0.17.4",
     "bootstrap": "4.3.1",
     "jquery": "3.3.1",
     "jquery.easing": "^1.4.1",
