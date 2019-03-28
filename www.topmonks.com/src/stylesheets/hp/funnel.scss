@@ -1,10 +1,11 @@
 .product {
   @media (max-width: 479px) {
-    background: url("/images/bgnd_product_mobile.svg") bottom center no-repeat;
+    background: url("/images/bgnd_funnel_mobile.svg") bottom center no-repeat;
     background-size: 100% auto;
     padding-bottom: 110px;
     .tm-bgnd-wrapper {
-      background: url("/images/bgnd_product_top_mobile.svg") top center no-repeat;
+      background: url("/images/bgnd_funnel_product_mobile.svg") top center
+        no-repeat;
       padding-top: 110px;
       background-size: 100% auto;
       margin-left: -24px;
@@ -12,10 +13,13 @@
     }
   }
   @media screen and (min-width: 840px) {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/w_903,dpr_auto,q_auto,f_auto/v1553775999/topmonks.com/bgnd_funnel.png") no-repeat left calc(50% - 500px) top 230px;
+    background: url("https://res.cloudinary.com/topmonks/image/upload/w_903,dpr_auto,q_auto,f_auto/v1553775999/topmonks.com/bgnd_funnel.png")
+      no-repeat left calc(50% - 500px) top 230px;
     background-size: 903px auto;
   }
-  @media screen and (min-width: 840px) and (min-device-pixel-ratio: 2), screen and (min-width: 840px) and (min-resolution: 192dpi), screen and (min-width: 840px) and (min-resolution: 2dppx) {
+  @media screen and (min-width: 840px) and (min-device-pixel-ratio: 2),
+    screen and (min-width: 840px) and (min-resolution: 192dpi),
+    screen and (min-width: 840px) and (min-resolution: 2dppx) {
     background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_903,dpr_2,q_auto,f_auto/v1553775999/topmonks.com/bgnd_funnel.png");
   }
 
@@ -27,11 +31,13 @@
       padding-left: calc(25% - 37px);
       padding-top: 150px;
       padding-bottom: 50px;
-      background: url("/images/bgnd_funnel_product.svg") left calc(25% - 22px) bottom no-repeat, url("/images/bgnd_funnel.svg") left calc(25% - 22px) top no-repeat;
+      background: url("/images/bgnd_funnel_product.svg") left calc(25% - 22px)
+          bottom no-repeat,
+        url("/images/bgnd_funnel.svg") left calc(25% - 22px) top no-repeat;
     }
-    @media screen and (min-width: 840px){
+    @media screen and (min-width: 840px) {
       padding-left: calc(50% - 37px);
-      background-position:  center bottom, center top;
+      background-position: center bottom, center top;
     }
   }
   .steps__step {
