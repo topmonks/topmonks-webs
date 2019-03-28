@@ -1,10 +1,10 @@
 .product {
   @media (max-width: 479px) {
-    background: url("/images/bgnd_funnel_mobile.svg") bottom center no-repeat;
+    background: url("/images/bgnd_funnel_product_mobile.svg") bottom center no-repeat;
     background-size: 100% auto;
     padding-bottom: 110px;
     .tm-bgnd-wrapper {
-      background: url("/images/bgnd_funnel_product_mobile.svg") top center
+      background: url("/images/bgnd_funnel_mobile.svg") top center
         no-repeat;
       padding-top: 110px;
       background-size: 100% auto;
