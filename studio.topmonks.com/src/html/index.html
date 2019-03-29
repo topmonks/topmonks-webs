@@ -569,40 +569,74 @@
               <path d="M23.3984 12.8005V10.6667C23.3984 7.13135 20.5324 4.26538 16.997 4.26538C13.4617 4.26538 10.5957 7.13135 10.5957 10.6667C10.5957 14.2021 13.4617 17.068 16.997 17.068C17.2917 17.068 17.5305 16.8292 17.5305 16.5346C17.5305 16.24 17.2917 16.0012 16.997 16.0012C14.0509 16.0012 11.6626 13.6129 11.6626 10.6668C11.6626 7.72066 14.0509 5.33235 16.997 5.33235C19.9432 5.33235 22.3315 7.72066 22.3315 10.6668V12.8005C22.3315 13.3898 21.8538 13.8674 21.2646 13.8674C20.6753 13.8674 20.1976 13.3898 20.1976 12.8005V10.6668C20.1976 10.3722 19.9588 10.1334 19.6642 10.1334C19.3696 10.1334 19.1308 10.3722 19.1308 10.6668C19.1308 11.8452 18.1755 12.8005 16.997 12.8005C15.8186 12.8005 14.8633 11.8452 14.8633 10.6668C14.8633 9.48834 15.8186 8.53302 16.997 8.53302C17.2917 8.53302 17.5305 8.29422 17.5305 7.9996C17.5305 7.70497 17.2917 7.46617 16.997 7.46617C15.5646 7.46299 14.3044 8.41199 13.9118 9.78966C13.5192 11.1673 14.0897 12.6381 15.3087 13.3905C16.5278 14.1429 18.0982 13.9937 19.1537 13.0252C19.2699 14.1533 20.2504 14.9921 21.3829 14.9322C22.5154 14.8722 23.4019 13.9346 23.3984 12.8005Z" fill="white"/>
             </svg>
           </div>
-          <a href="mailto:studio@topmonks.com ">studio@topmonks.com</a>
+          <a href="mailto:studio@topmonks.com">studio@topmonks.com</a>
         </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script>
-      let toggleFieldState = function(elm){
-        if (elm.value != '')
-          elm.classList.add('has-value');
-        else
-          elm.classList.remove('has-value');
-      };
-      $(document).ready(function() {
-        $(".tm-form__contact").submit(function (e) {
-          e.stopImmediatePropagation();
-          e.preventDefault();
-          if (typeof window["fetch"] === "undefined") return;
-          var data = {};
-          var $form = $(this);
-          $form.serializeArray().forEach(function (x) {
-            data[x.name] = x.value;
-          });
-
-          fetch("https://uwjqzwx0d3.execute-api.eu-central-1.amazonaws.com/production/startupstudio-contact-form", {
-            method: "POST",
-            body: JSON.stringify(data)
-          }).then(alert('Thanks a lot for contacting us! We will get back to you soon!'));
-        });
-        $('.tm-form__contact .tm-form-control__field')
-          .on('blur', function(e){ toggleFieldState(e.target) })
-          .each(function(i, obj){ toggleFieldState(obj) });
-        });
-    </script>
   </section>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+  let toggleFieldState = function(elm){
+    if (elm.value != '')
+      elm.classList.add('has-value');
+    else
+      elm.classList.remove('has-value');
+  };
+  $(document).ready(function() {
+    $(".tm-form__contact").submit(function (e) {
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      if (typeof window["fetch"] === "undefined") return;
+      var data = {};
+      var $form = $(this);
+      $form.serializeArray().forEach(function (x) {
+        data[x.name] = x.value;
+      });
+
+      fetch("https://uwjqzwx0d3.execute-api.eu-central-1.amazonaws.com/production/startupstudio-contact-form", {
+        method: "POST",
+        body: JSON.stringify(data)
+      }).then($('.modal').toggleClass('is-visible')).then($form[0].reset());
+    });
+    $('.tm-form__contact .tm-form-control__field')
+      .on('blur', function(e){ toggleFieldState(e.target) })
+      .each(function(i, obj){ toggleFieldState(obj) });
+
+    $('.modal-toggle').on('click', function(e) {
+      e.preventDefault();
+      $('.modal').toggleClass('is-visible');
+    });
+  });
+</script>
+
+<link rel="stylesheet" href="/stylesheets/modal.css">
+<div class="modal">
+  <div class="modal-overlay modal-toggle"></div>
+  <div class="modal-wrapper modal-transition">
+    <div class="modal-body">
+      <button class="modal-close modal-toggle"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22.0688 7.90147L15.9706 13.9997L21.807 19.8362L19.879 21.7642L14.0426 15.9277L7.9015 22.0687L5.80783 19.9751L11.9489 13.834L6.14108 8.02621L8.06909 6.09821L13.8769 11.906L19.9751 5.8078L22.0688 7.90147Z" fill="#FF7A7E"/>
+      </svg></button>
+      <div class="modal-content">
+        <h2>Thanks!</h2>
+        <svg width="125" height="125" viewBox="0 0 125 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.7" d="M36.5153 82.1959C37.3369 81.3743 37.3369 80.0597 36.5153 79.2381C35.6937 78.4166 34.3791 78.4165 33.5575 79.2381C32.736 80.0597 25.0678 90.6857 25.0678 90.6857C25.0678 90.6857 35.6937 83.0175 36.5153 82.1959Z" fill="#6E70FB"/>
+          <path opacity="0.7" d="M32.0237 95.7794C32.8453 94.9578 32.8453 93.6432 32.0237 92.8216C31.2021 92 29.8876 92 29.066 92.8216C28.2444 93.6432 20.5762 104.269 20.5762 104.269C20.5762 104.269 31.2021 96.601 32.0237 95.7794Z" fill="#6E70FB"/>
+          <path opacity="0.7" d="M44.3294 92.9679C45.151 92.1463 45.151 90.8317 44.3294 90.0101C43.5078 89.1885 42.1933 89.1885 41.3717 90.0101C40.5501 90.8317 32.8819 101.458 32.8819 101.458C32.8819 101.458 43.5078 93.7894 44.3294 92.9679Z" fill="#6E70FB"/>
+          <path d="M45.8449 79.074L39.9477 73.1768L36.0588 77.0656L41.956 82.9628L45.8449 79.074Z" fill="white"/>
+          <path d="M47.2325 77.6863C55.9779 86.4317 58.0045 99.3398 53.3123 110.021C56.5439 108.615 59.5746 106.57 62.222 103.922C73.6147 92.5297 73.6147 74.053 62.2402 62.6785C50.8475 51.3223 32.389 51.304 20.9963 62.6968C18.3489 65.3441 16.3406 68.3749 14.8982 71.6065C25.5972 66.9326 38.5053 68.9592 47.2325 77.6863Z" fill="#FF7A7E"/>
+          <path d="M66.823 68.6487L51.8152 83.6564C56.5257 91.7263 57.0369 101.585 53.3306 110.039C56.5622 108.633 59.5929 106.588 62.2403 103.941C71.8073 94.3737 73.3409 79.8041 66.823 68.6487Z" fill="#FF7A7E"/>
+          <path d="M44.5486 80.37C47.0864 82.9078 49.1312 85.756 50.7014 88.7868C61.0169 85.2996 71.9532 78.453 81.6663 68.7399C97.1122 53.294 105.292 34.7442 104.287 20.6311C90.1926 19.6087 71.6611 27.8063 56.2152 43.2523C46.5021 52.9653 39.6555 63.9382 36.1683 74.2172C39.1991 75.7873 42.029 77.8505 44.5486 80.37Z" fill="#FFDDBE"/>
+          <path d="M89.6815 35.2372C92.8766 38.4323 95.9073 41.6822 98.7738 44.9503C102.882 36.3509 104.835 27.8977 104.306 20.6129C97.0393 20.1017 88.586 22.0552 79.9684 26.1449C83.2365 29.0114 86.4864 32.0421 89.6815 35.2372Z" fill="#FF7A7E"/>
+          <path d="M63.4818 61.4369C59.1182 62.5506 52.4542 66.9872 46.0275 73.4139C39.6008 79.8406 35.1642 86.5046 34.0505 90.8682C38.4141 89.7545 45.0781 85.3179 51.5048 78.8912C57.9315 72.4645 62.3863 65.7822 63.4818 61.4369Z" fill="#FF7A7E"/>
+          <path d="M81.0639 43.8548C78.3252 41.1162 73.8704 41.1162 71.1135 43.8365C68.3748 46.5752 68.3748 51.03 71.1317 53.7869C73.8704 56.5256 78.3252 56.5256 81.0639 53.7869C83.8208 51.0666 83.839 46.5934 81.0639 43.8548Z" fill="white"/>
+        </svg>
+        <p>Your message has been successfully sent and we appreciate you contacting us.<br/>  We'll be in touch soon.</p>
+        <button class="modal-toggle button">Return to Startup studio</button>
+      </div>
+    </div>
+  </div>
 </div>
 <link rel="stylesheet" href="/stylesheets/footer.css">
 {% set extraNavLinks = { 'EU Grants' : 'eu-grants.pdf'} %}
