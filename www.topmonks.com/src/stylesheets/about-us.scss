@@ -1,3 +1,15 @@
+//* Section: How We Work *//
+#how-we-work {
+  background-image: url("/images/bgnd_curve_1.svg");
+  background-repeat: no-repeat;
+  background-position: bottom -5px left calc(50% - 530px);
+  @media screen and (min-width: 480px) {
+    background-position: bottom -120px left calc(50% - 400px);
+  }
+}
+
+//* Section: Team *//
+
 #team:target .show-more,
 .show-less
 {
@@ -58,13 +70,5 @@
 
   .tm-bgnd-wrapper {
     background-color: #f3f3f3;
-  }
-}
-#how-we-work {
-  background-image: url("/images/bgnd_curve_1.svg");
-  background-repeat: no-repeat;
-  background-position: bottom -5px left calc(50% - 530px);
-  @media screen and (min-width: 480px) {
-    background-position: bottom -120px left calc(50% - 400px);
   }
 }

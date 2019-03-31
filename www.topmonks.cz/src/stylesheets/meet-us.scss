@@ -34,6 +34,11 @@
   & a:hover {
     text-decoration: none;
   }
+  @media screen and (min-width: 840px) {
+    .tm-events_text {
+      padding: 14px 34px 0 0;
+    }
+  }
 }
 
 .other-events {
@@ -47,12 +52,6 @@
 
   .other-events_logos {
     text-align: center;
-  }
-}
-
-@media screen and (min-width: 840px) {
-  .tm-events_text {
-    padding: 14px 34px 0 0;
   }
 }
 

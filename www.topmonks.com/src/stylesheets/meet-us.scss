@@ -34,6 +34,11 @@
   & a:hover {
     text-decoration: none;
   }
+  @media screen and (min-width: 840px) {
+    .tm-events_text {
+      padding: 14px 34px 0 0;
+    }
+  }
 }
 
 .other-events {
@@ -50,11 +55,6 @@
   }
 }
 
-@media screen and (min-width: 840px) {
-  .tm-events_text {
-    padding: 14px 34px 0 0;
-  }
-}
 
 @media (min-width: 740px) {
   .tm-meetup {
