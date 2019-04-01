@@ -114,7 +114,7 @@ a.dead-button_cube {
   background: #9371C1;
   padding: 2em 5.5em 0; //32px 88px 0
   margin: 0 auto;
-  background: url("/images/case-studies/xixoio/Union.svg") center no-repeat;
+  background: url("/images/case-studies/xixoio/Union.png") center no-repeat;
 }
 
 
@@ -146,16 +146,17 @@ p.text-italic {
 
 // Section: About - Description //
 .about {
-  .tm-layout-wrapper {
-    background-color: #FFFFFF;
-  }
 
+    background: url("/images/case-studies/xixoio/box-top-triangle.svg") center top -10% no-repeat;
+    position: relative;
+    z-index: 2;
   .description {
     padding: 4.25em 2.625em 2.75em; //68px 42px 44px;
     max-width: 68.75em; //1,100px
     margin: 0 auto;
-    background: url("/images/case-studies/xixoio/box-top-triangle.svg") center top -10% no-repeat;
-
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 1;
     p {
       margin-bottom: 1em; //16px
     }
@@ -164,7 +165,6 @@ p.text-italic {
       padding: 1.25em 1.625em 1.75em; //20px 26px 28px
     }
   }
-
 
   a {
     text-decoration: none;
