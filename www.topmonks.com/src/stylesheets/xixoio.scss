@@ -290,12 +290,6 @@ p.text-italic {
     padding: 4px 12px;
   }
 
-  .last-diamond {
-    background: url("/images/case-studies/xixoio/release_bgnd.svg") center no-repeat;
-    background-size: 100% 100%;
-    opacity: unset;
-  }
-
   @media screen and (min-width: 701px) {
     background: url("/images/case-studies/xixoio/String/line.svg") center no-repeat;
     .mdc-layout-grid {
@@ -356,9 +350,12 @@ p.text-italic {
     .string_10 {
       background: url("/images/case-studies/xixoio/String/10.Audit.svg") center no-repeat;
     }
-
     .last-diamond {
-      text-align: center;
+      background: url("/images/case-studies/xixoio/String/Release.svg") center no-repeat;
+      height: -webkit-fill-available;
+      p.contracts_title {
+        padding-top: 1em;
+      }
     }
   }
   @media (min-width: 500px) and (max-width: 800px) {
@@ -433,13 +430,9 @@ p.text-italic {
       }
     }
     .last-diamond {
-      background: url("/images/case-studies/xixoio/release_bgnd.svg") left no-repeat;
+      background: url("/images/case-studies/xixoio/String/Release.svg") left no-repeat;
       background-size: 20% 100%;
-
-      svg {
-        width: 20%;
-        height: 80%;
-      }
+      background-position-x: 0.6%;
     }
     .string_2, .string_3, .string_4, .string_5, .string_6, .string_7, .string_8, .string_9, .string_10 {
       background-size: 11.5% 60%;
