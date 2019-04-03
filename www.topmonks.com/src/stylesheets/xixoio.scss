@@ -147,11 +147,11 @@ p.text-italic {
 // Section: About - Description //
 .about {
 
-    background: url("/images/case-studies/xixoio/box-top-triangle.svg") center top -10% no-repeat;
-    position: relative;
-    z-index: 2;
+   // background: url("/images/case-studies/xixoio/box-top-triangle.svg") center top -10% no-repeat;
+  //  position: relative;
+   // z-index: 2;
   .description {
-    padding: 4.25em 2.625em 2.75em; //68px 42px 44px;
+    padding: 2.75em 2.625em; //44px 42px;
     max-width: 68.75em; //1,100px
     margin: 0 auto;
     background-color: #FFFFFF;
@@ -352,7 +352,6 @@ p.text-italic {
     }
     .last-diamond {
       background: url("/images/case-studies/xixoio/String/Release.svg") center no-repeat;
-      height: -webkit-fill-available;
       p.contracts_title {
         padding-top: 1em;
       }
