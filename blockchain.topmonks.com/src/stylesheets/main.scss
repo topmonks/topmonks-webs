@@ -250,6 +250,13 @@ a.button:hover {
       font-style: normal;
       font-size: 18px;
     }
+    p.case-study_link {
+      padding-top: 1em;
+      margin: 2.5em 0 0.3em;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   .tm-case-study__author {
     color: #000000;
