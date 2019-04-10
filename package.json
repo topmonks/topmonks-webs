@@ -12,7 +12,7 @@
     "@pulumi/aws": "^0.17.1",
     "@pulumi/pulumi": "^0.17.4",
     "bootstrap": "4.3.1",
-    "jquery": "3.3.1",
+    "jquery": "3.4.0",
     "jquery.easing": "^1.4.1",
     "popper.js": "^1.14.7"
   },
