@@ -14,7 +14,7 @@
     "bootstrap": "4.3.1",
     "jquery": "3.3.1",
     "jquery.easing": "^1.4.1",
-    "popper.js": "^1.14.7"
+    "popper.js": "^1.15.0"
   },
   "devDependencies": {
     "@topmonks/blendid": "git://github.com/topmonks/blendid.git",
