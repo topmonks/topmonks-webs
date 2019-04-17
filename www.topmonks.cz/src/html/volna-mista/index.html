@@ -14,41 +14,46 @@
         k&nbsp;nám!</p>
     </div>
     <div class="box jobs_positions mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-      <h3>OTEVŘENÉ POZICE</h3>
-      <div class="mdc-layout-grid__inner">
-        <div
-          class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <a>Backend Developer (Node.js)</a>
-        </div>
-        <div
-          class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <p>Prague, Czech Republic</p>
-        </div>
-        <div class="line-between line-between_grey mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <hr>
-        </div>
-
-        <div
-          class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <a>Office Manager / HR Assistant</a>
-        </div>
-        <div
-          class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <p>Prague, Czech Republic</p>
-        </div>
-        <div class="line-between line-between_grey mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <hr>
-        </div>
-
-        <div
-          class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <a>Project manager</a>
-        </div>
-        <div
-          class="middle-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <p>Prague, Czech Republic</p>
-        </div>
+      <h3>Otevřené pozice</h3>
+      <div class="hire-jobs">
+        <ul>
+          <li><a href=""></a> <span class="location"></span></li>
+        </ul>
       </div>
+      <script>
+        getJobs();
+
+        var list = document.querySelector(".hire-jobs ul");
+        var item = list.querySelector("li");
+        list.removeChild(item);
+
+        async function getJobs() {
+          (await fetch("https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs", {
+            mode: "cors"
+          }).then(r => r.json()))
+            .map(jobPostingItem)
+            .forEach(n => list.append(n));
+        }
+
+        function jobPostingItem({ title, url, jobLocation }) {
+          var node = item.cloneNode(true);
+          var a = node.querySelector("a");
+          a.innerText = title;
+          a.href = url;
+          var loc = node.querySelector(".location");
+
+          loc.innerText = address(jobLocation);
+          return node;
+        }
+
+        function address({address}) {
+          if (address.addressLocality) {
+            return address.addressLocality + ", " + address.addressCountry;
+          }
+          return address.addressCountry;
+        }
+      </script>
+    </div>
     </div>
     <div class="contact-info mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
       <p>Máš zájem? Ozvi se Aničce! <a href="mailto:happy@topmonks.com">happy@topmonks.com</a> / <a
