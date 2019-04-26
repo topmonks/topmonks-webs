@@ -40,11 +40,13 @@ body {
 .wf-active body {
   font-family: Lato, sans-serif;
 }
+
 .tm-logo {
   font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
   Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
 }
+
 .wf-active .tm-logo {
   font-family: futura-pt, sans-serif;
 }
@@ -59,6 +61,7 @@ h2 {
   margin-bottom: 18px;
   font-weight: 900;
 }
+
 h3 {
   font-size: 1.5em; //24px
   line-height: 1.167em; //28px
@@ -66,6 +69,7 @@ h3 {
   color: var(--tm-black-title);
   font-weight: 900;
 }
+
 h4 {
   font-size: 1em; //16px
   margin-bottom: 0.25em; //4px
@@ -74,6 +78,7 @@ h4 {
 p {
   margin: 0 0 1em;
 }
+
 a {
   color: var(--tm-primary);
   text-decoration: none;
@@ -87,15 +92,19 @@ ul,
 ul li {
   padding: 0;
 }
+
 ul {
   margin: 1em 0;
 }
+
 ul li {
   list-style: none;
   margin: 0;
 }
+
 ul.formatted {
   padding-left: 1em;
+
   li {
     list-style: initial;
     margin-bottom: 0.5em;
@@ -130,12 +139,15 @@ nav {
     font-weight: bold;
   }
 }
+
 strong abbr {
   text-decoration: none;
 }
+
 .no-transform {
   text-transform: none;
 }
+
 .tm-text--margin-top {
   margin-top: 1em;
 }

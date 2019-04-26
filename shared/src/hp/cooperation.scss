@@ -1,0 +1,43 @@
+.cooperation {
+  background: none;
+
+  .box {
+    margin: 0;
+    padding: 0;
+    @media (min-width: 480px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-flow: wrap;
+    }
+    a {
+      display: block;
+      padding: 0 16px;
+      align-items: center;
+      text-align: center;
+      @media (min-width: 480px) {
+        display: inline-flex;
+      }
+    }
+    .sprite {
+      display: inline-block;
+      width: 145px;
+    }
+    .-img_logo_adler {
+      width: 100px;
+    }
+  }
+
+  @media (max-width: 840px) {
+    text-align: center;
+  }
+  //svg logo colors
+  .-img_logo_pricefx {
+    --color-1: #0f243e;
+    --color-2: #5a96c6;
+  }
+  .-img_logo_erste-group {
+    --color-1: #eb2227;
+    --color-2: #0a4a7b;
+  }
+}
