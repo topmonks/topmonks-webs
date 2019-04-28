@@ -44,11 +44,12 @@ body {
 
   a {
     text-decoration: none;
-    &:hover {
-      border-bottom: 1px solid var(--tm-xixo-purple);
-    }
+
     @media screen and (min-width: 840px) {
       color: white;
+      &:hover {
+        border-bottom: 1px solid var(--tm-xixo-purple);
+      }
     }
     @media (max-width: 839px) {
       color: black;
@@ -57,7 +58,6 @@ body {
 
   @media (max-width: 479px) {
     background-color: #FFFFFF;
-
     li {
       border-bottom: 1px solid var(--tm-xixo-purple);
     }
@@ -141,7 +141,6 @@ body {
 }
 
 .tm-app-bar {
-  position: fixed;
   width: 100vw;
   z-index: 1000;
   top: 0;
@@ -149,6 +148,7 @@ body {
   background-color: var(--tm-secondary);
   @media screen and (max-width: 839px) {
     height: 52px;
+    position: fixed;
     .tm-layout-wrapper {
       padding: 8px 16px 0 8px;
     }
