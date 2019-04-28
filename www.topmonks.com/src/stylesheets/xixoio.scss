@@ -77,6 +77,9 @@ body {
     font-size: 24px;
     padding-top: 2px;
     justify-content: flex-end;
+    svg {
+      display: none;
+    }
   }
   @media screen and (max-width: 839px) {
     font-size: 24px;
@@ -369,7 +372,7 @@ p.text-italic {
 
   .intro_text {
     margin-top: 17%;
-    @media (max-width: 560px) {
+    @media screen and (max-width: 560px) {
       svg {
         max-width: 280px;
       }
