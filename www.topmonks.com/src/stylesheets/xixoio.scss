@@ -47,6 +47,12 @@ body {
     &:hover {
       border-bottom: 1px solid var(--tm-xixo-purple);
     }
+    @media screen and (min-width: 840px) {
+      color: white;
+    }
+    @media (max-width: 839px) {
+      color: black;
+    }
   }
 
   @media (max-width: 479px) {
@@ -54,10 +60,6 @@ body {
 
     li {
       border-bottom: 1px solid var(--tm-xixo-purple);
-    }
-    a {
-      color: #000000;
-      font-weight: bold;
     }
   }
 }
@@ -80,6 +82,11 @@ body {
     font-size: 24px;
     padding-top: 2px;
     justify-content: flex-end;
+  }
+  @media (max-width: 425px) {
+    .logo svg {
+       display: none;
+    }
   }
 }
 
@@ -242,9 +249,6 @@ body {
   }
 }
 
-.tm-menu__list a {
-  color: #fff;
-}
 
 .tm-menu--horizontal .tm-menu__list {
   display: flex;
@@ -370,6 +374,11 @@ p.text-italic {
 
   .intro_text {
     margin-top: 17%;
+    @media (max-width: 560px) {
+      svg {
+        max-width: 280px;
+      }
+    }
   }
 }
 
