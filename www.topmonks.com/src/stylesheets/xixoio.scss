@@ -83,11 +83,6 @@ body {
     padding-top: 2px;
     justify-content: flex-end;
   }
-  @media (max-width: 425px) {
-    .logo svg {
-       display: none;
-    }
-  }
 }
 
 .tm-logo .monk {
