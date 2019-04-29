@@ -412,19 +412,19 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
 
-"@pulumi/aws@^0.17.1":
-  version "0.17.1"
-  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-0.17.1.tgz#1aa2042a9ff466f5556c2332ffe4ebe8f0322ace"
-  integrity sha512-XWJWt9kWncBZJTeL7J1bcy0vE2bXKkqeK9F6DExZwD9uq6zwUPyy+F1LllzZDOLA1ZY1u1uM8SaEjGe4GQwCPQ==
+"@pulumi/aws@^0.18.3":
+  version "0.18.3"
+  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-0.18.3.tgz#03cb83a1f131565935d6b3f9f185b9335a26c6ac"
+  integrity sha512-1j89hTDZycuvCREEC9/ACjE7Vcbf4xhVzhb5rbJANAFW0YN5ZA5vfQXE/KCXi52L8HyyO7wO12nSjm6J7T9vjA==
   dependencies:
-    "@pulumi/pulumi" "^0.17.1"
+    "@pulumi/pulumi" "^0.17.8"
     aws-sdk "^2.0.0"
     builtin-modules "3.0.0"
     mime "^2.0.0"
     read-package-tree "^5.2.1"
     resolve "^1.7.1"
 
-"@pulumi/pulumi@^0.17.1", "@pulumi/pulumi@^0.17.8":
+"@pulumi/pulumi@^0.17.8":
   version "0.17.8"
   resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.17.8.tgz#7b1e4cff0840f9c317092ff9e02cda131fb5a4d1"
   integrity sha512-rwMgZ57jKB89WK8uzVQjWQa/Q0HTvMdusjqHyBR8WN1oSafO8S8U/R3buhxyfrItNwly1uNUYN/7CEH79il4TA==
