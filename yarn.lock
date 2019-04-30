@@ -424,10 +424,10 @@
     read-package-tree "^5.2.1"
     resolve "^1.7.1"
 
-"@pulumi/pulumi@^0.17.1", "@pulumi/pulumi@^0.17.8":
-  version "0.17.8"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.17.8.tgz#7b1e4cff0840f9c317092ff9e02cda131fb5a4d1"
-  integrity sha512-rwMgZ57jKB89WK8uzVQjWQa/Q0HTvMdusjqHyBR8WN1oSafO8S8U/R3buhxyfrItNwly1uNUYN/7CEH79il4TA==
+"@pulumi/pulumi@^0.17.1", "@pulumi/pulumi@^0.17.9":
+  version "0.17.9"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.17.9.tgz#e09aa2cc9e9024ff1bd4fd815cbd31120d5c06a1"
+  integrity sha512-k7HKNrp1fI0MzrGWJc44T1XhZge0UslOAj2OqH2P/cefIDXTWISW6rqfieONpL941/wQhvbZSE7cndTEl3aNNQ==
   dependencies:
     google-protobuf "^3.5.0"
     grpc "^1.12.2"
