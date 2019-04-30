@@ -1,2 +1,139 @@
+@import "@material/layout-grid/mdc-layout-grid";
+
+:root {
+  --tm-po-black: #484D57;
+}
+
+body {
+  font-family: "Neue Einstellung", Arial;
+  color: var(--tm-po-black);
+}
+
+.tm-layout-wrapper {
+  max-width: 1008px;
+  margin: 0 auto;
+  --mdc-layout-grid-margin-desktop: 0;
+  --mdc-layout-grid-margin-tablet: 0;
+  --mdc-layout-grid-margin-phone: 0;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p, a, span {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+img {
+  text-align: center;
+}
+
+ul.polygon_yellow, ul.polygon_blue, ul.polygon_green {
+  li {
+    list-style: none;
+    padding-bottom: 1em;
+  }
+
+  li::before {
+    content: url("https://res.cloudinary.com/topmonks/image/upload/v1556628327/topmonks.com/profi-option/polygon_yellow.svg");
+    display: inline-block;
+    width: 2em;
+    color: #FED766;
+    vertical-align: middle;
+    font-weight: bold;
+    margin-left: -2em;
+  }
+}
+
+ul.polygon_blue li::before {
+  content: url("https://res.cloudinary.com/topmonks/image/upload/v1556628327/topmonks.com/profi-option/polygon_blue.svg");
+}
+
+ul.polygon_green li::before {
+  content: url("https://res.cloudinary.com/topmonks/image/upload/v1556628327/topmonks.com/profi-option/polygon_green.svg");
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Section: Introduction //
+.intro {
+  .intro_main-text {
+    max-width: 674px;
+    margin: 0 auto;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// Section: Our Process //
+.process {
+  .process_list {
+    margin: 0 auto;
+    max-width: 244px;
+
+    ul li {
+      list-style: none;
+      padding: 12px 0;
+
+    }
+
+    img {
+      text-align: center;
+    }
+  }
+}
+
+// Section: Original Design Platform //
+
+.design {
+  .our-design {
+    max-width: 674px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
   @media (min-width: 1024px) {
     .mdc-layout-grid {
+      padding: 0;
+    }
+  }
+}
+
+
+// Tablets and Phones Devices //
+@media screen and (min-width: 840px) {
+  body {
+    line-height: 25px;
+  }
+}
+@media (max-width: 839px) {
+  h1 {
+    font-size: 34px;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+}
