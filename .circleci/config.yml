@@ -120,6 +120,9 @@ jobs:
       - run:
           name: Install Pulumi plugins
           command: pulumi plugin install
+      - run:
+          name: List available pulumi stacks
+          command: pulumi stack ls
       - pulumi/update:
           stack: topmonks-webs
           skip-preview: true
