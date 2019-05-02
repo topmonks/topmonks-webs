@@ -51,6 +51,11 @@ hr {
   border: 0.5px solid #E5E5E5;
 }
 
+ul li {
+  list-style: none;
+  margin: 0;
+}
+
 ul.polygon_yellow, ul.polygon_blue, ul.polygon_green {
   li {
     list-style: none;
@@ -83,9 +88,12 @@ ul.polygon_green li::before {
 .text-center {
   text-align: center;
 }
+
 // HEADER //
 .tm-logo {
-  font-family: futura-pt, sans-serif;
+  font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
   display: flex;
   align-items: center;
   font-size: 24px;
@@ -105,17 +113,20 @@ ul.polygon_green li::before {
     padding-top: 2px;
     justify-content: flex-end;
   }
+
   .monk {
     fill: currentColor;
     padding-right: 6px;
   }
 }
+
 .tm-hamburger {
   @media screen and (min-width: 840px) {
     display: none;
   }
   display: flex;
   align-items: center;
+
   .tm-hamburger__container {
     display: inline-block;
     cursor: pointer;
@@ -124,6 +135,7 @@ ul.polygon_green li::before {
     height: 18px;
     position: relative;
   }
+
   .tm-hamburger__container::after {
     content: "menu";
     color: #fff;
@@ -133,6 +145,7 @@ ul.polygon_green li::before {
     top: 7px;
     left: 36px;
   }
+
   .tm-hamburger__bar {
     background-color: #fff;
     width: 20px;
@@ -140,13 +153,16 @@ ul.polygon_green li::before {
     position: absolute;
     top: 16px;
     transition: transform 0.4s;
+
     &:first-of-type {
       transform: translateY(-6px);
     }
+
     &:last-of-type {
       transform: translateY(6px);
     }
   }
+
   .tm-hamburger__container--open {
     .tm-hamburger__bar:first-of-type {
       transform: rotate(-45deg);
@@ -167,7 +183,7 @@ ul.polygon_green li::before {
   z-index: 1000;
   transition: all 0.2s;
   top: 0;
-  box-shadow: 0 1px 10px rgba(0,0,0,.1);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
   //background-color: #2d3d90;
   @media screen and (max-width: 839px) {
     position: fixed;
@@ -208,12 +224,6 @@ ul.polygon_green li::before {
     .tm-menu li:hover {
       border-bottom-color: rgba(45, 61, 144, 0.5);
     }
-  }
-}
-.tm-menu__list {
-  list-style: none;
-  li:hover {
-    border-bottom: 1px solid var(--tm-po-black);
   }
 }
 
@@ -261,12 +271,18 @@ ul.polygon_green li::before {
   padding: 0;
   line-height: 32px;
 }
+
 .tm-menu--horizontal .tm-menu__list a {
   display: inline-block;
   padding: 4px 8px;
 }
+
 .tm-menu--horizontal .tm-menu__list li + li {
   margin-left: 4px;
+}
+
+.tm-text--margin-top {
+  margin-top: 1em;
 }
 
 // Section: Introduction //
@@ -275,6 +291,7 @@ ul.polygon_green li::before {
     width: 100%;
     height: auto;
   }
+
   .intro_main-text {
     background: url("https://res.cloudinary.com/topmonks/image/upload/v1556827186/topmonks.com/profi-option/tag_case-study.svg") top right no-repeat;
     margin: 0 auto;
@@ -452,6 +469,7 @@ ul.polygon_green li::before {
   span {
     color: #5C5FD4;
   }
+
   hr {
     margin: 1em 0;
   }
@@ -481,10 +499,12 @@ ul.polygon_green li::before {
       text-decoration: none;
     }
   }
+
   .box_member-contact {
-    p  {
+    p {
       color: black;
     }
+
     span {
       text-align: left;
     }
@@ -502,16 +522,20 @@ ul.polygon_green li::before {
 
 // FOOTER //
 footer {
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  text-align: left;
   background-color: #212142;
 
   h4, a {
     color: #FFFFFF;
     text-align: left;
     font-size: 18px;
+    text-decoration: none;
   }
 
   h4 {
-    font-weight: bold;
+    font-weight: 800;
   }
 
   .social-buttons {
@@ -526,6 +550,9 @@ footer {
       border-radius: 80%;
       padding: 0 4px;
     }
+  }
+  ul {
+    padding-left: 0;
   }
 
   .mailto a {
