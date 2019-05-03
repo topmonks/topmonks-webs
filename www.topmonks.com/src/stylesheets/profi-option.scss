@@ -218,9 +218,12 @@ ul.polygon_green li::before {
       transform: translate(-8px, -64px);
       z-index: -1;
     }
-    .tm-menu__list a {
-      color: #2d3d90;
-      text-align: left;
+    .tm-menu__list {
+      background-color: #0c0449;
+      a {
+        color: white;
+        text-align: left;
+      }
     }
     .tm-menu li:hover {
       border-bottom-color: rgba(45, 61, 144, 0.5);
@@ -294,11 +297,15 @@ ul.polygon_green li::before {
   }
 
   .intro_main-text {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1556827186/topmonks.com/profi-option/tag_case-study.svg") top right no-repeat;
     margin: 0 auto;
   }
-  @media screen and (max-width: 839px) {
-    margin-top: 5em;
+  @media screen and (min-width: 840px) {
+    .intro_main-text {
+      background: url("https://res.cloudinary.com/topmonks/image/upload/v1556827186/topmonks.com/profi-option/tag_case-study.svg") top 5% right -2% no-repeat;
+    }
+  }
+    @media screen and (max-width: 839px) {
+    margin-top: 3em;
   }
 }
 
