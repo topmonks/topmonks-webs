@@ -112,6 +112,7 @@ ul.polygon_green li::before {
     font-size: 24px;
     padding-top: 2px;
     justify-content: flex-end;
+    color: #FFFFFF;
   }
 
   .monk {
@@ -295,6 +296,9 @@ ul.polygon_green li::before {
   .intro_main-text {
     background: url("https://res.cloudinary.com/topmonks/image/upload/v1556827186/topmonks.com/profi-option/tag_case-study.svg") top right no-repeat;
     margin: 0 auto;
+  }
+  @media screen and (max-width: 839px) {
+    margin-top: 5em;
   }
 }
 
@@ -512,10 +516,16 @@ ul.polygon_green li::before {
 
   @media screen and (min-width: 840px) {
     margin-bottom: 2em;
+    .contact .contact_box {
+      align-self: center;
+    }
   }
   @media (max-width: 839px) {
-    .box_member-contact {
-      padding: 12px;
+    .contact .contact_box {
+      padding: 12px 8px;
+      img {
+        margin: 0.5em auto;
+      }
     }
   }
 }
@@ -551,6 +561,7 @@ footer {
       padding: 0 4px;
     }
   }
+
   ul {
     padding-left: 0;
   }
