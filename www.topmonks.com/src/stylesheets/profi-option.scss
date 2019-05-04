@@ -4,6 +4,13 @@
   --tm-po-black: #484D57;
 }
 
+@font-face {
+  font-family: 'Arvo';
+  font-display: auto;
+  src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v9/rC7kKhY-eUDY-ucISTIf5PesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+}
+
+
 body {
   font-family: "Neue Einstellung", Arial;
   color: var(--tm-po-black);
@@ -36,6 +43,7 @@ h3 {
 h4, p, a, span {
   font-size: 16px;
   font-weight: normal;
+  contrast: 8.39;
 }
 
 span {
@@ -220,6 +228,7 @@ ul.polygon_green li::before {
     }
     .tm-menu__list {
       background-color: #0c0449;
+
       a {
         color: white;
         text-align: left;
@@ -299,12 +308,29 @@ ul.polygon_green li::before {
   .intro_main-text {
     margin: 0 auto;
   }
+
   @media screen and (min-width: 840px) {
-    .intro_main-text {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/v1556827186/topmonks.com/profi-option/tag_case-study.svg") top 5% right -2% no-repeat;
+    .intro_main-text h1 {
+      position: relative;
+
+      &::after {
+        content: "case study";
+        position: absolute;
+        background-color: #FED766;
+        color: white;
+        display: block;
+        padding: 8px;
+        border-radius: 8px;
+        z-index: 100;
+        font-size: 16px;
+        line-height: 2;
+        text-transform: uppercase;
+        right: 20px;
+        top: 10px;
+      }
     }
   }
-    @media screen and (max-width: 839px) {
+  @media screen and (max-width: 839px) {
     margin-top: 3em;
   }
 }
@@ -408,8 +434,31 @@ ul.polygon_green li::before {
 
   .stylization_font {
     max-width: 735px;
-    @media screen and (min-width: 1024px) {
+
+    p, h2 {
+      font-weight: 400;
+      padding-bottom: 16px;
+    }
+    h2.font_bold {
+      font-weight: 800;
+      margin-bottom: 0;
+    }
+
+
+    @media screen and (min-width: 840px) {
       padding-bottom: 2.5em;
+      h2.font_bold {
+        line-height: 60px;
+      }
+    }
+
+    @media (max-width: 839px) {
+      h2 {
+        padding-bottom: 0;
+      }
+      p {
+        padding-bottom: 6px;
+      }
     }
   }
 
@@ -531,6 +580,7 @@ ul.polygon_green li::before {
     margin-bottom: 2em;
     .contact .contact_box {
       padding: 12px 8px;
+
       img {
         margin: 0.5em auto;
       }
