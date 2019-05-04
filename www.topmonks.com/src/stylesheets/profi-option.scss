@@ -1,6 +1,6 @@
 @import "@material/layout-grid/mdc-layout-grid";
 
-:root { 
+:root {
   --tm-po-black: #484D57;
 }
 
@@ -141,9 +141,9 @@ ul.polygon_green li::before {
     content: "menu";
     color: #fff;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 14px;
     position: absolute;
-    top: 7px;
+    top: 10px;
     left: 36px;
   }
 
