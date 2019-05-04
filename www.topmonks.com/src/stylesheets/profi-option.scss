@@ -43,7 +43,6 @@ h3 {
 h4, p, a, span {
   font-size: 16px;
   font-weight: normal;
-  contrast: 8.39;
 }
 
 span {
@@ -325,8 +324,8 @@ ul.polygon_green li::before {
         font-size: 16px;
         line-height: 2;
         text-transform: uppercase;
-        right: 20px;
-        top: 10px;
+        right: 0;
+        top: -40px;
       }
     }
   }
@@ -439,6 +438,7 @@ ul.polygon_green li::before {
       font-weight: 400;
       padding-bottom: 16px;
     }
+
     h2.font_bold {
       font-weight: 800;
       margin-bottom: 0;
