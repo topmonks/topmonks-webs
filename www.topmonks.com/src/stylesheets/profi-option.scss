@@ -17,7 +17,7 @@ body {
 }
 
 .tm-layout-wrapper {
-  max-width: 63.000em; //1,008px;
+  max-width: 1008px;
   margin: 0 auto;
   --mdc-layout-grid-margin-desktop: 0;
   --mdc-layout-grid-margin-tablet: 0;
@@ -29,25 +29,25 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 4em; //64px;
+  font-size: 64px;
 }
 
 h2 {
-  font-size: 3em; //48px;
+  font-size: 48px;
 }
 
 h3 {
-  font-size: 1.5em; //24px;
+  font-size: 24px;
 }
 
 h4, p, a, span {
-  font-size: 1em; //16px;
+  font-size: 16px;
   font-weight: normal;
 }
 
 span {
-  font-size: 0.875em; //14px;
-  line-height: 1.375em; //22px;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 img {
@@ -55,7 +55,7 @@ img {
 }
 
 hr {
-  border: 0.031em solid #E5E5E5;
+  border: 0.5px solid #E5E5E5;
 }
 
 ul li {
@@ -66,17 +66,17 @@ ul li {
 ul.polygon_yellow, ul.polygon_blue, ul.polygon_green {
   li {
     list-style: none;
-    padding-bottom: 1em; //16px;
+    padding-bottom: 1em;
   }
 
   li::before {
     content: url("https://res.cloudinary.com/topmonks/image/upload/v1556628327/topmonks.com/profi-option/polygon_yellow.svg");
     display: inline-block;
-    width: 2em; // 32px;
+    width: 2em;
     color: #FED766;
     vertical-align: middle;
     font-weight: bold;
-    margin-left: -2em; // -32px;
+    margin-left: -2em;
   }
 }
 
@@ -89,7 +89,7 @@ ul.polygon_green li::before {
 }
 
 .title_box {
-  max-width: 41.875em; //670px;
+  max-width: 670px;
 }
 
 .text-center {
@@ -103,23 +103,28 @@ ul.polygon_green li::before {
   "Segoe UI Symbol";
   display: flex;
   align-items: center;
-  font-size: 1.5em; //24px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 2em; //32px;
-  letter-spacing: -0.063em; //-1px;
+  line-height: 32px;
+  letter-spacing: -1px;
   text-decoration: none;
   text-transform: uppercase;
   color: #233341;
+  @media screen and (max-width: 479px) {
+    font-size: 24px;
+    padding-top: 2px;
+    justify-content: flex-end;
+  }
   @media screen and (max-width: 839px) {
-    font-size: 1.5em; //24px;
-    padding-top: 0.125em; //2px;
+    font-size: 24px;
+    padding-top: 2px;
     justify-content: flex-end;
     color: #FFFFFF;
   }
 
   .monk {
     fill: currentColor;
-    padding-right: 0.375em; //6px;
+    padding-right: 6px;
   }
 }
 
@@ -133,9 +138,9 @@ ul.polygon_green li::before {
   .tm-hamburger__container {
     display: inline-block;
     cursor: pointer;
-    padding: 0.5em; //8px;
-    width: 1.125em; //18px;
-    height: 1.125em; //18px;
+    padding: 8px;
+    width: 18px;
+    height: 18px;
     position: relative;
   }
 
@@ -143,18 +148,23 @@ ul.polygon_green li::before {
     content: "menu";
     color: #fff;
     text-transform: uppercase;
-    font-size: 0.875em; //14px;
+    font-size: 13px;
     position: absolute;
+<<<<<<< HEAD
     top: 0.65em;
     left: 2.5em;
+=======
+    top: 7px;
+    left: 36px;
+>>>>>>> parent of bcd9cb9... Profi Option - css px to em
   }
 
   .tm-hamburger__bar {
     background-color: #fff;
-    width: 1.25em; //20px;
-    height: 0.125em; //2px;
+    width: 20px;
+    height: 2px;
     position: absolute;
-    top: 1em; //16px;
+    top: 16px;
     transition: transform 0.4s;
 
     &:first-of-type {
@@ -192,23 +202,23 @@ ul.polygon_green li::before {
   z-index: 1000;
   transition: all 0.2s;
   top: 0;
-  box-shadow: 0 0.063em 0.625em rgba(0, 0, 0, .1); //0 1px, 10px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
   //background-color: #2d3d90;
   @media screen and (max-width: 839px) {
     position: fixed;
     background-color: #1a1d57;
-    height: 3.75em; //60px;
+    height: 60px;
     .tm-layout-wrapper {
-      padding: 0.5em 1em 0 0.5em;
+      padding: 8px 16px 0 8px;
     }
   }
   @media screen and (min-width: 840px) {
-    height: 5em; //80px
+    height: 80px;
     .tm-layout-wrapper {
-      padding: 1.25em 0 0 1em; //20px 0 0 16px;
+      padding: 20px 0 0 16px;
     }
     svg {
-      padding-right: 0.3em; //4px;
+      padding-right: 0.3em;
     }
   }
 }
@@ -246,7 +256,11 @@ ul.polygon_green li::before {
   @media screen and (max-width: 839px) {
     width: 100vw;
     height: 100vh;
+<<<<<<< HEAD
     padding-top: 2.2em;
+=======
+    padding-top: 64px;
+>>>>>>> parent of bcd9cb9... Profi Option - css px to em
     transform: translate(calc(-100vw - 12px), -64px);
     transform: translate(calc(-140vw - 12px), -64px);
     position: fixed;
@@ -257,16 +271,16 @@ ul.polygon_green li::before {
     color: #2d3d90;
 
     .tm-menu__list li {
-      margin: 0 1.5em; //0 24px;
-      border-bottom: 0.063em solid transparent;
+      margin: 0 24px;
+      border-bottom: 1px solid transparent;
     }
     .tm-menu__list li + li {
-      border-top: 0.063em solid rgba(45, 61, 144, 0.5);
+      border-top: 1px solid rgba(45, 61, 144, 0.5);
     }
     .tm-menu__list a {
       display: block;
-      padding: 0.75em; //12px;
-      margin: 0.25em; //4px;
+      padding: 12px;
+      margin: 4px;
       text-transform: capitalize;
     }
   }
@@ -284,16 +298,16 @@ ul.polygon_green li::before {
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  line-height: 2em; //32px;
+  line-height: 32px;
 }
 
 .tm-menu--horizontal .tm-menu__list a {
   display: inline-block;
-  padding: 0.25em 0.5em; //4px 8px;
+  padding: 4px 8px;
 }
 
 .tm-menu--horizontal .tm-menu__list li + li {
-  margin-left: 0.25em; //4px;
+  margin-left: 4px;
 }
 
 .tm-text--margin-top {
@@ -321,20 +335,23 @@ ul.polygon_green li::before {
         background-color: #FED766;
         color: white;
         display: block;
-        padding: 0.5em; //8px;
-        border-radius: 0.5em; //8px;
+        padding: 8px;
+        border-radius: 8px;
         z-index: 100;
         font-size: 16px;
+<<<<<<< HEAD
         font-weight: 800;
+=======
+>>>>>>> parent of bcd9cb9... Profi Option - css px to em
         line-height: 2;
         text-transform: uppercase;
         right: 0;
-        top: -2.5em; //-40px;
+        top: -40px;
       }
     }
   }
   @media screen and (max-width: 839px) {
-    margin-top: 3em; //48px;
+    margin-top: 3em;
   }
 }
 
@@ -342,11 +359,11 @@ ul.polygon_green li::before {
 .process {
   .process_list {
     margin: 0 auto;
-    max-width: 15.25em; //244px;
+    max-width: 244px;
 
     ul li {
       list-style: none;
-      padding: 0.75em 0;
+      padding: 12px 0;
 
     }
 
@@ -360,7 +377,7 @@ ul.polygon_green li::before {
 
 .design {
   .our-design {
-    max-width: 42.125em; //674px;
+    max-width: 674px;
   }
 }
 
@@ -398,8 +415,8 @@ ul.polygon_green li::before {
   }
 
   p {
-    font-size: 0.875em;
-    line-height: 1.313em; //21px;
+    font-size: 14px;
+    line-height: 21px;
     color: #9197A3;
     margin-bottom: 0;
     font-family: 'Muli', sans-serif;
@@ -419,7 +436,7 @@ ul.polygon_green li::before {
   }
 
   .box {
-    max-width: 63em; //1008px;
+    max-width: 1008px;
     margin: 0 auto;
     padding-bottom: 1em;
   }
@@ -431,11 +448,11 @@ ul.polygon_green li::before {
   }
 
   .stylization_font {
-    max-width: 45.938em; //735px;
+    max-width: 735px;
 
     p, h2 {
       font-weight: 400;
-      padding-bottom: 1em;
+      padding-bottom: 16px;
     }
 
     h2.font_bold {
@@ -455,14 +472,14 @@ ul.polygon_green li::before {
         padding-bottom: 0;
       }
       p {
-        padding-bottom: 0.375em;
+        padding-bottom: 6px;
       }
     }
   }
 
   @media screen and (min-width: 840px) {
     h3 {
-      font-size: 2em; //32px;
+      font-size: 32px;
       text-align: center;
     }
     ul {
@@ -474,14 +491,14 @@ ul.polygon_green li::before {
         display: inline-flex;
 
         a {
-          padding: 0.25em; //4px; 3em;
+          padding: 4px 3em;
         }
       }
     }
   }
   @media (min-width: 640px) and (max-width: 839px) {
     .box {
-      padding: 1.5em 2.25em; // 24px 36px;
+      padding: 24px 36px;
     }
   }
 }
@@ -507,13 +524,13 @@ ul.polygon_green li::before {
     }
     .box {
       background: url("https://res.cloudinary.com/topmonks/image/upload/v1556824260/topmonks.com/profi-option/quote.svg") top 16% left 2% no-repeat;
-      padding: 1.750em;
+      padding: 28px;
     }
   }
   @media (max-width: 839px) {
     .box {
       background: url("https://res.cloudinary.com/topmonks/image/upload/v1556824260/topmonks.com/profi-option/quote.svg") top 10% left 3% no-repeat;
-      padding: 1.75em 1.5em;
+      padding: 28px 24px;
     }
     hr.mid-line {
       margin: 3em 0 0;
@@ -541,11 +558,11 @@ ul.polygon_green li::before {
   }
 
   .contact_box {
-    padding: 0.75em;
+    padding: 12px;
     text-align: left;
 
     p {
-      line-height: 1.563em; //25px;
+      line-height: 25px;
       margin: 0 auto;
     }
 
@@ -577,7 +594,7 @@ ul.polygon_green li::before {
   @media (max-width: 839px) {
     margin-bottom: 2em;
     .contact .contact_box {
-      padding: 0.75em 0.5em;
+      padding: 12px 8px;
 
       img {
         margin: 0.5em auto;
@@ -589,14 +606,14 @@ ul.polygon_green li::before {
 // FOOTER //
 footer {
   font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: 1.125em;
+  font-size: 18px;
   text-align: left;
   background-color: #212142;
 
   h4, a, span {
     color: #FFFFFF;
     text-align: left;
-    font-size: 1.125em;
+    font-size: 18px;
     text-decoration: none;
   }
 
@@ -607,14 +624,14 @@ footer {
   .social-buttons {
     margin-top: 0.5em;
     background-color: #fff;
-    border-radius: 3.25em; //52px;
+    border-radius: 52px;
     display: inline-block;
-    padding: 0.313em 0.5em 0;
+    padding: 5px 8px 0px;
 
     svg {
       background-color: #ffffff;
       border-radius: 80%;
-      padding: 0 0.25em; //4px;;
+      padding: 0 4px;
     }
   }
 
@@ -627,15 +644,15 @@ footer {
   }
 
   .copy-and-media .tm-layout-wrapper {
-    border-top: 0.063em solid hsla(0, 0%, 100%, .5);
-    padding-top: 1.5em;
+    border-top: 1px solid hsla(0, 0%, 100%, .5);
+    padding-top: 24px;
   }
 }
 
 // Tablets and Phones Devices //
 @media screen and (min-width: 840px) {
   body {
-    line-height: 1.563em; //25px
+    line-height: 25px;
   }
   .references, .contact {
     .mdc-layout-grid .tm-layout-wrapper {
@@ -646,13 +663,13 @@ footer {
 
 @media (max-width: 839px) {
   h1 {
-    font-size: 2.125em; //34px;
+    font-size: 34px;
   }
   h2 {
-    font-size: 1.75em;
-    line-height: 2.5em; //40px;
+    font-size: 28px;
+    line-height: 40px;
   }
   h3 {
-    font-size: 1.5em;
+    font-size: 24px;
   }
 }
