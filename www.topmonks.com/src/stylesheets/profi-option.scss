@@ -1,15 +1,8 @@
 @import "@material/layout-grid/mdc-layout-grid";
 
-:root {
+:root { 
   --tm-po-black: #484D57;
 }
-
-@font-face {
-  font-family: 'Arvo';
-  font-display: auto;
-  src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v9/rC7kKhY-eUDY-ucISTIf5PesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
-}
-
 
 body {
   font-family: "Neue Einstellung", Arial;
@@ -66,17 +59,17 @@ ul li {
 ul.polygon_yellow, ul.polygon_blue, ul.polygon_green {
   li {
     list-style: none;
-    padding-bottom: 1em;
+    padding-bottom: 16px;
   }
 
   li::before {
     content: url("https://res.cloudinary.com/topmonks/image/upload/v1556628327/topmonks.com/profi-option/polygon_yellow.svg");
     display: inline-block;
-    width: 2em;
+    width: 32px;
     color: #FED766;
     vertical-align: middle;
     font-weight: bold;
-    margin-left: -2em;
+    margin-left: -32px;
   }
 }
 
@@ -150,13 +143,8 @@ ul.polygon_green li::before {
     text-transform: uppercase;
     font-size: 13px;
     position: absolute;
-<<<<<<< HEAD
-    top: 0.65em;
-    left: 2.5em;
-=======
     top: 7px;
     left: 36px;
->>>>>>> parent of bcd9cb9... Profi Option - css px to em
   }
 
   .tm-hamburger__bar {
@@ -218,7 +206,7 @@ ul.polygon_green li::before {
       padding: 20px 0 0 16px;
     }
     svg {
-      padding-right: 0.3em;
+      padding-right:4px;
     }
   }
 }
@@ -239,7 +227,7 @@ ul.polygon_green li::before {
     }
     .tm-menu__list {
       background-color: #0c0449;
-      padding: 1em 0;
+      padding: 16px 0;
 
       a {
         color: white;
@@ -256,11 +244,8 @@ ul.polygon_green li::before {
   @media screen and (max-width: 839px) {
     width: 100vw;
     height: 100vh;
-<<<<<<< HEAD
-    padding-top: 2.2em;
-=======
+    padding-top: 35px;
     padding-top: 64px;
->>>>>>> parent of bcd9cb9... Profi Option - css px to em
     transform: translate(calc(-100vw - 12px), -64px);
     transform: translate(calc(-140vw - 12px), -64px);
     position: fixed;
@@ -311,7 +296,7 @@ ul.polygon_green li::before {
 }
 
 .tm-text--margin-top {
-  margin-top: 1em;
+  margin-top: 16px;
 }
 
 // Section: Introduction //
@@ -339,10 +324,7 @@ ul.polygon_green li::before {
         border-radius: 8px;
         z-index: 100;
         font-size: 16px;
-<<<<<<< HEAD
         font-weight: 800;
-=======
->>>>>>> parent of bcd9cb9... Profi Option - css px to em
         line-height: 2;
         text-transform: uppercase;
         right: 0;
@@ -351,7 +333,7 @@ ul.polygon_green li::before {
     }
   }
   @media screen and (max-width: 839px) {
-    margin-top: 3em;
+    margin-top: 48px;
   }
 }
 
@@ -425,7 +407,7 @@ ul.polygon_green li::before {
 
   hr {
     width: 90%;
-    margin: 1em auto;
+    margin: 16px auto;
   }
 
   .styled-title {
@@ -438,7 +420,7 @@ ul.polygon_green li::before {
   .box {
     max-width: 1008px;
     margin: 0 auto;
-    padding-bottom: 1em;
+    padding-bottom: 16px;
   }
 
   .empty-box {
@@ -461,7 +443,7 @@ ul.polygon_green li::before {
     }
 
     @media screen and (min-width: 840px) {
-      padding-bottom: 2.5em;
+      padding-bottom: 40px;
       h2.font_bold {
         line-height: 60px;
       }
@@ -491,7 +473,7 @@ ul.polygon_green li::before {
         display: inline-flex;
 
         a {
-          padding: 4px 3em;
+          padding: 4px 48px;
         }
       }
     }
@@ -506,12 +488,12 @@ ul.polygon_green li::before {
 
 // Section: Prototypes //
 .prototypes_design {
-  margin: 0 -1em;
+  margin: 0 -16px;
   @media screen and (min-width: 1024px) {
-    padding-bottom: 2.5em;
+    padding-bottom: 40px;
     img {
       width: 100%;
-      margin: 0 -1em;
+      margin: 0 -16px;
     }
   }
 }
@@ -520,7 +502,7 @@ ul.polygon_green li::before {
 .references {
   @media screen and (min-width: 840px) {
     hr.mid-line {
-      margin-top: 4em;
+      margin-top: 64px;
     }
     .box {
       background: url("https://res.cloudinary.com/topmonks/image/upload/v1556824260/topmonks.com/profi-option/quote.svg") top 16% left 2% no-repeat;
@@ -533,7 +515,7 @@ ul.polygon_green li::before {
       padding: 28px 24px;
     }
     hr.mid-line {
-      margin: 3em 0 0;
+      margin: 48px 0 0;
     }
   }
 
@@ -546,7 +528,7 @@ ul.polygon_green li::before {
   }
 
   hr {
-    margin: 1em 0;
+    margin: 16px 0;
   }
 }
 
@@ -579,25 +561,24 @@ ul.polygon_green li::before {
     p {
       color: black;
     }
-
     span {
       text-align: left;
     }
   }
 
   @media screen and (min-width: 840px) {
-    margin-bottom: 2em;
+    margin-bottom: 32px;
     .contact .contact_box {
       align-self: center;
     }
   }
   @media (max-width: 839px) {
-    margin-bottom: 2em;
+    margin-bottom: 32px;
     .contact .contact_box {
       padding: 12px 8px;
 
       img {
-        margin: 0.5em auto;
+        margin: 8px auto;
       }
     }
   }
@@ -609,20 +590,18 @@ footer {
   font-size: 18px;
   text-align: left;
   background-color: #212142;
-
   h4, a, span {
     color: #FFFFFF;
     text-align: left;
     font-size: 18px;
     text-decoration: none;
   }
-
   h4 {
     font-weight: 800;
   }
 
   .social-buttons {
-    margin-top: 0.5em;
+    margin-top: 8px;
     background-color: #fff;
     border-radius: 52px;
     display: inline-block;
