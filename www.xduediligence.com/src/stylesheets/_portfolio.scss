@@ -10,18 +10,13 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-
         width: 100%;
         height: 100%;
-
         position: absolute;
         bottom: 0;
-
-        text-align: center;
         opacity: 0;
-
         color: $white;
-        background: fade-out($primary, .1);
+        background: fade-out ($primary, .1);
         transition: opacity 0.25s ease;
         text-align: center;
         .project-category {

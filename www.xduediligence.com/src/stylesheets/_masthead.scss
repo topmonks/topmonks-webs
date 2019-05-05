@@ -4,7 +4,7 @@ header.masthead {
   padding-bottom: calc(10rem - #{$navbar-height});
   // replace the masthead.jpg image in the /img directory to change the image
   // if the image name change, make sure to update the url path below!
-  background: url('../img/bg-masthead.jpg');
+  background: url('https://res.cloudinary.com/topmonks/image/upload/v1557038305/www.xduediligence.com/bg-masthead.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -43,7 +43,7 @@ header.masthead {
     }
   }
 
-@media(max-width:700px)  {
+@media (max-width: 700px)  {
     .button-container  {
       text-align: center;
     }

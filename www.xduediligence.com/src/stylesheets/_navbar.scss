@@ -32,7 +32,7 @@
     box-shadow: none;
     background-color: transparent;
     .navbar-brand {
-      color: fade-out($white, .3);
+      color: fade-out ($white, .3);
       &:hover {
         color: $white;
       }
@@ -40,7 +40,7 @@
     .navbar-nav {
       .nav-item {
         .nav-link {
-          color: fade-out($black, .4);
+          color: fade-out ($black, .4);
           padding: 0 1rem;
           &:hover {
             color: $primary;

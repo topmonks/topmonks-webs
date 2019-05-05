@@ -7,7 +7,7 @@ html {
 
 // Typography
 .text-white-75 {
-  color: fade-out($white, .25);
+  color: fade-out ($white, .25);
 }
 
 .h2, h2 {
@@ -25,7 +25,7 @@ html {
 }
 
 .bgtext {
-  background-image: url('/img/bg-text.png');
+  background-image: url('https://res.cloudinary.com/topmonks/image/upload/v1557038210/www.xduediligence.com/bg-text.png');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: 0% 80%;
@@ -97,7 +97,7 @@ hr.light {
 }
 
 #app {
-  background: url('../img/bg-masthead.png');
+  background: url('https://res.cloudinary.com/topmonks/image/upload/v1557038240/www.xduediligence.com/bg-masthead.png');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
