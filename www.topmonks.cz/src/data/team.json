@@ -35,17 +35,6 @@
 			"body": "<p>Just tell us something we don&#39;t know</p>\n",
 			"updatedAt": "2018-08-21T14:57:44.303Z"
 		},
-		"berenika-alexandre": {
-			"id": "berenika-alexandre",
-			"name": "Berenika",
-			"surname": "Alexandre",
-			"job_title": "US Sales Representative",
-			"linkedin": "in/berenikaalexandre",
-			"quote": null,
-			"pickup": true,
-			"body": "",
-			"updatedAt": "2018-10-18T12:01:39.899Z"
-		},
 		"daniel-hromada": {
 			"id": "daniel-hromada",
 			"name": "Daniel",
@@ -316,6 +305,17 @@
 			"body": "<p>Love to put together awesome teams and form business alliances to make this world a better place.</p>\n",
 			"updatedAt": "2018-08-15T08:57:21.807Z"
 		},
+		"libor-mika": {
+			"id": "libor-mika",
+			"name": "Libor",
+			"surname": "Mika",
+			"job_title": "Java developer",
+			"github": "alaris83",
+			"linkedin": "in/mikalibor",
+			"quote": "I would love to change the world, but they won't give me the source code.",
+			"body": "<p>I have passion for learning and improving my experience in Java related technology. Seeking new challenges that interested me and taught me something new.</p>\n",
+			"updatedAt": "2019-04-25T17:34:17.182Z"
+		},
 		"linh-nguyen": {
 			"id": "linh-nguyen",
 			"name": "Linh",
@@ -327,6 +327,18 @@
 			"quote": null,
 			"body": "<p>Just tell us something we don&#39;t know</p>\n",
 			"updatedAt": "2018-08-21T14:57:44.311Z"
+		},
+		"lukas-sirhal": {
+			"id": "lukas-sirhal",
+			"name": "Lukáš",
+			"surname": "Širhal",
+			"job_title": "Just developer",
+			"twitter": "LukSirhal",
+			"github": "laster04",
+			"linkedin": "in/lukas-sirhal/",
+			"quote": "stay calm and relax",
+			"body": "<p>Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.</p>\n",
+			"updatedAt": "2019-03-31T09:57:25.711Z"
 		},
 		"lumir-mrkva": {
 			"id": "lumir-mrkva",
@@ -484,7 +496,7 @@
 			"linkedin": null,
 			"quote": null,
 			"body": "<p>Just a free spirit. I like to reinvent the wheel.</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.809Z"
+			"updatedAt": "2019-04-30T14:00:28.073Z"
 		},
 		"premysl-novak": {
 			"id": "premysl-novak",
@@ -509,6 +521,19 @@
 			"quote": "Play a game with the world, even when you are not a child anymore.",
 			"body": "<p>Making websites and apps feel better about themselves.</p>\n",
 			"updatedAt": "2018-08-15T08:57:21.809Z"
+		},
+		"simona-zabrzova": {
+			"id": "simona-zabrzova",
+			"name": "Simona",
+			"surname": "Zábržová",
+			"job_title": "Global Business Development",
+			"twitter": null,
+			"github": null,
+			"linkedin": null,
+			"quote": null,
+			"pickup": true,
+			"body": "",
+			"updatedAt": "2019-04-25T17:34:17.182Z"
 		},
 		"tomas-brejla": {
 			"id": "tomas-brejla",
