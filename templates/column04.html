@@ -29,7 +29,7 @@
       font-size: 48px;
       text-align: left;
       font-weight: 400;
-      padding: 0.5em 0 0.5em 2em;
+      padding: 8px 0 34px 34px;
       margin: 0;
     }
 
@@ -37,14 +37,6 @@
       font-size: 28px;
       font-weight: 400;
       text-align: center;
-    }
-
-    h3 {
-      font-size: 38px;
-      font-weight: 400;
-      display: inline-flex;
-      padding: 0 2em 0 2em;
-
     }
 
     section {
@@ -111,18 +103,59 @@
       font-size: 0.5em;
       text-anchor: middle;
     }
-
-    .horizontal_chart {
-      padding: 0 0 2em 4.5em;
-
+    .name {
+      font-size: 34px;
+      font-weight: 400;
+      flex: 1 1 auto;
+      color: #000;
+    }
+    .state {
+      display: none;
+      font-size: .9rem;
+      font-weight: 600;
+      margin-right: 10px;
+    }
+    .uptime {
+      font-size: 34px;
+      font-weight: 400;
     }
 
-    .bar {
-      width: 10px;
-      height: 101px;
-      padding: 0 2px;
-      background-color: #0a4a7b;
-      display: inline-table;
+    .check {
+      padding: 8px 34px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 25px;
+    }
+    .info {
+      display: flex;
+      padding: 5px 0;
+    }
+    .points {
+      display: flex;
+      height: 30px;
+    }
+    .point {
+      position: relative;
+      margin-right: 4px;
+      background: #E6EDF4;
+      width: 6px;
+    }
+    .error{
+      height: 30px;
+      top: 0;
+      background: #E03131;
+      display: block;
+      position: absolute;
+      width: 6px;
+    }
+    .ok {
+      background: #4DADF7;
+      height: 30px;
+      opacity: 1;
+      top: 0;
+      display: block;
+      position: absolute;
+      width: 6px;
     }
 
   </style>
@@ -134,7 +167,7 @@
 
 <section class="score-card">
   <h1>TopMonks.com</h1>
-  <div class="flex-wrapper">
+  <div class="flex-wrapper" style="padding: 24px 0">
     <div class="single-chart">
       <svg viewBox="0 0 36 36" class="circular-chart orange" width="110px" height="110px">
         <path class="circle-bg"
@@ -152,8 +185,6 @@
       </svg>
       <h2>Perfomance</h2>
     </div>
-
-
     <div class="single-chart">
       <svg viewBox="0 0 36 36" class="circular-chart orange" width="110px" height="110px">
         <path class="circle-bg"
@@ -171,7 +202,6 @@
         <h2>Accessibility</h2>
       </svg>
     </div>
-
     <div class="single-chart">
       <svg viewBox="0 0 36 36" class="circular-chart green" width="110px" height="110px">
         <path class="circle-bg"
@@ -189,7 +219,6 @@
         <h2>Best practices</h2>
       </svg>
     </div>
-
     <div class="single-chart">
       <svg viewBox="0 0 36 36" class="circular-chart green" width="110px" height="110px">
         <path class="circle-bg"
@@ -208,72 +237,469 @@
       </svg>
     </div>
   </div>
-  <h3>Last build: 24/4/2019</h3>
-  <h3 style="float: right">100% uptime</h3>
-  <div class="horizontal_chart">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
+
+  <div class="check state-Operational">
+    <div class="info">
+      <div class="name">Last build: 24/4/2019</div>
+      <div class="state">(Operational)</div>
+      <div class="uptime">100% uptime</div>
+    </div>
+    <div class="points">
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 06 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 07 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 08 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 09 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 10 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 11 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 12 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 13 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 14 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 15 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 16 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 17 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 18 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 19 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 20 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 21 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 22 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 23 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 24 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 25 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 26 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 27 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on February 28 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 01 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 02 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 03 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 04 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 05 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 06 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 07 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 08 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 09 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 10 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 11 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 12 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 13 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 14 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 15 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 16 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 17 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 18 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 19 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 20 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 21 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 22 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 23 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 24 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 25 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 26 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 27 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 28 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 29 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 30 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on March 31 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 01 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 02 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 03 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 04 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 05 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 06 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 07 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 08 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 09 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 10 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 11 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 12 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 13 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 14 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 15 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 16 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 17 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 18 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 19 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 20 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 21 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 22 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 23 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 24 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 25 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 26 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 27 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 28 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 29 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on April 30 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on May 01 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on May 02 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on May 03 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on May 04 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on May 05 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on May 06 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+      <div class="point" data-tippy="" data-original-title="100% uptime on May 07 UTC">
+        <div class="error" style="height: 30px; top: 0px"></div>
+        <div class="ok" style="height: 30px; opacity: 1; top: 0px"></div>
+      </div>
+
+    </div>
   </div>
 </section>
