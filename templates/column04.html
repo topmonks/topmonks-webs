@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #FFFFFF;
+      color: #283443;
+      font: 18px/1.3333333 vista-sans, sans-serif;
+      font-variant-numeric: lining-nums;
+      font-variant-ligatures: common-ligatures;
+      -webkit-font-feature-settings: "kern", "liga", "clig", "lnum";
+      font-feature-settings: "kern", "liga", "clig", "lnum";
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+      height: 100vh;
+      overflow: hidden;
+      padding: 8px;
+    }
+
+    h1 {
+      font-size: 48px;
+      text-align: left;
+      font-weight: 400;
+      padding: 0.5em 0 0.5em 2em;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 38px;
+      font-weight: 400;
+      display: inline-flex;
+      padding: 0 2em 0 2em;
+
+    }
+
+    section {
+      border-radius: 4px;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+      padding: 12px 24px;
+    }
+
+    section + section {
+      margin-top: 16px;
+    }
+
+    .score-card {
+      padding: 8px 24px;
+    }
+
+    .flex-wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    .single-chart {
+      width: 33%;
+      justify-content: space-around;
+    }
+
+    .circular-chart {
+      display: block;
+      margin: 10px auto;
+      max-width: 80%;
+      max-height: 250px;
+    }
+
+    .circle-bg {
+      fill: none;
+      stroke: #eee;
+      stroke-width: 3.8;
+    }
+
+    .circle {
+      fill: none;
+      stroke-width: 2.8;
+      stroke-linecap: round;
+      animation: progress 1s ease-out forwards;
+    }
+
+    @keyframes progress {
+      0% {
+        stroke-dasharray: 0 100;
+      }
+    }
+
+    .circular-chart.orange .circle {
+      stroke: #E37921;
+    }
+
+    .circular-chart.green .circle {
+      stroke: #1F803C;
+    }
+
+    .percentage {
+      fill: #666;
+      font-family: sans-serif;
+      font-size: 0.5em;
+      text-anchor: middle;
+    }
+
+    .horizontal_chart {
+      padding: 0 0 2em 4.5em;
+
+    }
+
+    .bar {
+      width: 10px;
+      height: 101px;
+      padding: 0 2px;
+      background-color: #0a4a7b;
+      display: inline-table;
+    }
+
+  </style>
+</head>
+<body>
+
+</body>
+</html>
+
+<section class="score-card">
+  <h1>TopMonks.com</h1>
+  <div class="flex-wrapper">
+    <div class="single-chart">
+      <svg viewBox="0 0 36 36" class="circular-chart orange" width="110px" height="110px">
+        <path class="circle-bg"
+              d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+        <path class="circle"
+              stroke-dasharray="76, 100"
+              d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+        <text x="18" y="20.35" class="percentage">76</text>
+      </svg>
+      <h2>Perfomance</h2>
+    </div>
+
+
+    <div class="single-chart">
+      <svg viewBox="0 0 36 36" class="circular-chart orange" width="110px" height="110px">
+        <path class="circle-bg"
+              d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+        <path class="circle"
+              stroke-dasharray="81, 100"
+              d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+        <text x="18" y="20.35" class="percentage">81</text>
+        <h2>Accessibility</h2>
+      </svg>
+    </div>
+
+    <div class="single-chart">
+      <svg viewBox="0 0 36 36" class="circular-chart green" width="110px" height="110px">
+        <path class="circle-bg"
+              d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+        <path class="circle"
+              stroke-dasharray="92, 100"
+              d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+        <text x="18" y="20.35" class="percentage">92</text>
+        <h2>Best practices</h2>
+      </svg>
+    </div>
+
+    <div class="single-chart">
+      <svg viewBox="0 0 36 36" class="circular-chart green" width="110px" height="110px">
+        <path class="circle-bg"
+              d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+        <path class="circle"
+              stroke-dasharray="98, 100"
+              d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+        <text x="18" y="20.35" class="percentage">98</text>
+        <h2>SEO</h2>
+      </svg>
+    </div>
+  </div>
+  <h3>Last build: 24/4/2019</h3>
+  <h3 style="float: right">100% uptime</h3>
+  <div class="horizontal_chart">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</section>
