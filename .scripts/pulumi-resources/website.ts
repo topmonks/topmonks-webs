@@ -115,7 +115,7 @@ function createCloudFront(
           {
             eventType: "viewer-response",
             lambdaArn:
-              "arn:aws:lambda:us-east-1:661884430919:function:SecurityHeaders:6"
+              "arn:aws:lambda:us-east-1:661884430919:function:SecurityHeaders:7"
           }
         ]
       },
