@@ -441,27 +441,10 @@
     read-package-tree "^5.2.1"
     resolve "^1.7.1"
 
-"@pulumi/pulumi@^0.17.1":
-  version "0.17.8"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.17.8.tgz#7b1e4cff0840f9c317092ff9e02cda131fb5a4d1"
-  integrity sha512-rwMgZ57jKB89WK8uzVQjWQa/Q0HTvMdusjqHyBR8WN1oSafO8S8U/R3buhxyfrItNwly1uNUYN/7CEH79il4TA==
-  dependencies:
-    google-protobuf "^3.5.0"
-    grpc "^1.12.2"
-    minimist "^1.2.0"
-    normalize-package-data "^2.4.0"
-    protobufjs "^6.8.6"
-    read-package-tree "^5.2.1"
-    require-from-string "^2.0.1"
-    source-map-support "^0.4.16"
-    ts-node "^7.0.0"
-    typescript "^3.0.0"
-    upath "^1.1.0"
-
-"@pulumi/pulumi@^0.17.8":
-  version "0.17.12"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.17.12.tgz#f4e2c3f26e44cbeaa81ba8a87f00f6433e9b7ef4"
-  integrity sha512-JPf0FwJboAdOP8upy26w0zhpDFPBKIMcw/6jRpgXHZKp9FZjRa4Yzn+nOKeUMUsUTqIbGHKpYNDFJTdTItCCaA==
+"@pulumi/pulumi@^0.17.1", "@pulumi/pulumi@^0.17.13":
+  version "0.17.13"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.17.13.tgz#361a319ecb169ae0e295881af94f1c0c1d7985a7"
+  integrity sha512-C7n2Defy97iKHJCvh5X8sjLgoHW0feCkw9TLiPSwNJ5HDkOc9Sud5hjMLlHOvGHP9bfOqPsrg+GkLmgohWnj2A==
   dependencies:
     google-protobuf "^3.5.0"
     grpc "^1.20.2"
@@ -472,7 +455,7 @@
     require-from-string "^2.0.1"
     source-map-support "^0.4.16"
     ts-node "^7.0.0"
-    typescript "^3.0.0"
+    typescript "^3.4.1"
     upath "^1.1.0"
 
 "@topmonks/blendid@git://github.com/topmonks/blendid.git":
@@ -4940,7 +4923,7 @@ growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
 
-grpc@^1.12.2, grpc@^1.20.2:
+grpc@^1.20.2:
   version "1.20.3"
   resolved "https://registry.yarnpkg.com/grpc/-/grpc-1.20.3.tgz#a74d36718f1e89c4a64f2fb9441199c3c8f78978"
   integrity sha512-GsEsi0NVj6usS/xor8pF/xDbDiwZQR59aZl5NUZ59Sy2bdPQFZ3UePr5wevZjHboirRCIQCKRI1cCgvSWUe2ag==
@@ -10236,15 +10219,7 @@ source-map-support@^0.4.15, source-map-support@^0.4.16:
   dependencies:
     source-map "^0.5.6"
 
-source-map-support@^0.5.11:
-  version "0.5.11"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.11.tgz#efac2ce0800355d026326a0ca23e162aeac9a4e2"
-  integrity sha512-//sajEx/fGL3iw6fltKMdPvy8kL3kJ2O3iuYlRoT3k9Kb4BjOoZ+BZzaNHeuaruSt+Kf3Zk9tnfAQg9/AJqUVQ==
-  dependencies:
-    buffer-from "^1.0.0"
-    source-map "^0.6.0"
-
-source-map-support@^0.5.6:
+source-map-support@^0.5.11, source-map-support@^0.5.6:
   version "0.5.12"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.12.tgz#b4f3b10d51857a5af0138d3ce8003b201613d599"
   integrity sha512-4h2Pbvyy15EE02G+JOZpUCmqWJuqrs+sEkzewTm++BPi7Hvn/HwcqLAcNxYAyI0x13CpPPn+kMjl+hplXMHITQ==
@@ -11214,7 +11189,7 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript@^3.0.0:
+typescript@^3.4.1:
   version "3.4.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.5.tgz#2d2618d10bb566572b8d7aad5180d84257d70a99"
   integrity sha512-YycBxUb49UUhdNMU5aJ7z5Ej2XGmaIBL0x34vZ82fn3hGvD+bgrMrVDpatgz2f7YxUMJxMkbWxJZeAvDxVe7Vw==
