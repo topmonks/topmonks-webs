@@ -12,6 +12,7 @@ test-site: &test-site
     - restore_cache:
         keys:
           - v3-dependencies-{{ checksum "yarn.lock" }}
+    - run: certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n lws-cert -i ./node_modules/lws/ssl/lws-cert.pem
     - run:
         command: yarn run ws --compress --http2 -d ./public/$HOST
         background: true
