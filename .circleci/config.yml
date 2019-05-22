@@ -13,7 +13,7 @@ test-site: &test-site
         keys:
           - v3-dependencies-{{ checksum "yarn.lock" }}
     - run:
-        command: yarn run http-server ./public/$HOST
+        command: yarn run ws --compress --http2 -d ./public/$HOST
         background: true
     - run: |
         mkdir results
