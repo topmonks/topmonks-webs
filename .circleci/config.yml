@@ -329,14 +329,10 @@ workflows:
           filters:
             branches:
               only: master
-      - test-www-xduediligence-com:
-          requires:
-            - build
       - deploy-www-xduediligence-com:
           context: org-global
           requires:
             - provision
-            #- test-www-xduediligence-com
             - build
           filters:
             branches:
