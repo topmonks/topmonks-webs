@@ -17,7 +17,7 @@
 }
 
 body {
-  background: #ecf6ff url("/images/html_bg.jpg") top center no-repeat;
+  background: #ecf6ff url("https://res.cloudinary.com/topmonks/image/upload/v1558767522/startup%20studio/html_bg.jpg") top center no-repeat;
   background-size: contain;
 }
 
@@ -155,7 +155,7 @@ button {
 
 /*Pitch us*/
 .pitch-us {
-  background: url("/images/pitch-bg.jpg") top no-repeat;
+  background: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,dpr_auto/v1558767435/startup%20studio/pitch-bg.jpg") top no-repeat;
   .white-box {
     --mdc-layout-grid-gutter-desktop: 0;
     --mdc-layout-grid-gutter-tablet: 0;
@@ -193,7 +193,7 @@ button {
 
 /*IDEA*/
 .idea {
-  background: #fff url("/images/idea-bg.jpg") no-repeat top;
+  background: #fff url("https://res.cloudinary.com/topmonks/image/upload/f_auto,dpr_auto/v1558767483/startup%20studio/idea-bg.jpg") no-repeat top;
   min-height: 220px;
   margin-top: -2em;
   padding-bottom: 1em;
@@ -252,7 +252,7 @@ button {
   }
   .data_triangle {
     margin: 0 auto;
-    background: url("/images/triangle.jpg") center no-repeat;
+    background: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,dpr_auto/v1558766952/startup%20studio/triangle.jpg") center no-repeat;
     background-size: 100%;
     width: 100%;
     height: 240px;
@@ -713,7 +713,7 @@ blockquote {
 
 @media (max-width: 480px) {
   body {
-    background: url("/images/mobile_bg.jpg") top center no-repeat;
+    background: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,dpr_auto/v1558767079/startup%20studio/mobile_bg.jpg") top center no-repeat;
     background-size: 100%;
   }
   .tm-logo {
