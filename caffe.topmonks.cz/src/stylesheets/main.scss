@@ -11,9 +11,6 @@
 http://pxtoem.com/ - how to count px to em
 */
 
-header {
-  padding-top: 2em;
-}
 
 body {
   margin: 0 auto;
@@ -35,10 +32,10 @@ body {
   color: var(--topmonks-caffe-dark_blue);
   background: url("/images/caffe-bgnd.png") top no-repeat;
 
-  @media (min-width: 1724px){
+  @media (min-width: 1724px) {
     background: url("/images/caffe-bgnd.png") top no-repeat;
     background-size: 100% 5.5%;
-    }
+  }
   @media (min-width: 1500px) and (max-width: 1723px) {
     background: url("/images/caffe-bgnd.png") top no-repeat;
     background-size: 100% 6.5%;
@@ -57,7 +54,12 @@ body {
 }
 
 section {
-  margin: 3em 0;
+  @media screen and (min-width: 1024px) {
+    margin: 3em 0;
+  }
+  @media (max-width: 1023px) {
+    margin: 1em 0;
+  }
 }
 
 .wf-active body {
@@ -101,6 +103,15 @@ p {
   line-height: 1.6;
 }
 
+@media (max-width: 839px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
 a {
   color: #FFFFFF;
   font-weight: normal;
@@ -137,7 +148,6 @@ a {
   color: #fff;
   background-color: var(--topmonks-caffe-orange);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, .16);
-  padding: 14px 80px;
   width: fit-content;
 
   &:hover {
@@ -150,14 +160,13 @@ a {
     }
   }
 
-  @media (max-width: 767px) {
-    margin: 0 auto;
-    padding: 10px 30px;
+  @media screen and (min-width: 840px) {
+    padding: 14px 80px;
   }
-  @media (max-width: 468px) {
-    margin: 0 auto;
-    font-size: 1.5em;
-    padding: 18px 60px;
+
+  @media (max-width: 839px) {
+    font-size: 1em;
+    padding: 10px 18px;
   }
 }
 
@@ -201,6 +210,7 @@ ul#navigace {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
+
   a {
     font-size: 1.125em;
     padding: 4px 8px;
@@ -215,15 +225,15 @@ ul#navigace {
 
 #introduction {
   color: #FFFFFF;
-
+  @media (max-width: 839px) {
+    padding: 5em 1em 2em;
+  }
   a.link {
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--topmonks-caffe-pink);
-
     &:hover {
       color: #FFFFFF;
     }
-
     svg {
       vertical-align: middle;
     }
@@ -239,16 +249,14 @@ ul#navigace {
   .next-caffe_box {
     padding: 2em 5em 3em;
     background: linear-gradient(to bottom right, #BA3CD9 0, var(--topmonks-caffe-orange) 58%);
-    @media (max-width: 880px) {
-      padding: 4em;
-    }
-    @media (max-width: 468px) {
-      padding: 3em;
+    @media (max-width: 839px) {
+      padding: 2em;
       h3 {
-        font-size: 1.75em;
+        font-size: 1.5em;
+        margin-bottom: 0;
       }
       span {
-        font-size: 1.5em;
+        font-size: 1.4em;
       }
     }
   }
@@ -307,7 +315,6 @@ ul#navigace {
 
 //* Section: Become a speaker! *//
 #speakers {
-
   h2 {
     font-weight: 700;
   }
@@ -315,7 +322,7 @@ ul#navigace {
   .speakers_box {
     color: #FFFFFF;
     background-color: var(--topmonks-caffe-orange);
-    padding: 2em;
+    padding: 1em 2em 2em;
   }
 
   @media screen and (min-width: 1400px) {

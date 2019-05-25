@@ -37,16 +37,24 @@
 
   <link rel="stylesheet" href="/stylesheets/main.css">
   <link rel="stylesheet" href="/stylesheets/footer.css">
+  <link rel="stylesheet" href="/stylesheets/header.css">
 
 
 </head>
 
 <body>
-<header>
-  <div class="mdc-layout-grid tm-header tm-layout-wrapper">
+<header class="tm-app-bar">
+  <div class="mdc-layout-grid tm-layout-wrapper">
     <div class="mdc-layout-grid__inner">
       <div
-        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop">
+        class="tm-hamburger mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-5-tablet">
+        <div class="tm-hamburger__container">
+          <div class="tm-hamburger__bar"></div>
+          <div class="tm-hamburger__bar"></div>
+          <div class="tm-hamburger__bar"></div>
+        </div>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-2-desktop">
         <a class="tm-logo" href="/" title="Go to homepage">
           <svg width="201" height="61" viewBox="0 0 201 61" fill="none" xmlns="http://www.w3.org/2000/svg">
             <title>TopMonks Caffe Logo</title>
@@ -106,25 +114,61 @@
           </svg>
         </a>
       </div>
-      <div
-        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop">
-        <ul id="navigace">
-          <li>
-            <a href="#next-event">Nadcházející caffé</a>
-          </li>
-          <li>
-            <a href="#seance">Předchozí seance</a>
-          </li>
-          <li>
-            <a href="#speakers">Staňte se řečníky</a>
-          </li>
-          <li>
-            <a href="https://www.topmonks.cz/">TopMonks.cz</a>
-          </li>
-        </ul>
+      <div class="caffe_menu mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-10-desktop">
+        <nav id="navigation" class="tm-menu tm-menu--horizontal">
+          <ul class="tm-menu__list">
+            <li>
+              <a href="#next-event">Nadcházející caffé</a>
+            </li>
+            <li>
+              <a href="#seance">Předchozí seance</a>
+            </li>
+            <li>
+              <a href="#speakers">Staňte se řečníky</a>
+            </li>
+            <li>
+              <a href="https://www.topmonks.cz/">TopMonks.cz</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </div>
+  <script>var appBar = document.querySelector(".tm-app-bar");
+  var hamburger = document.querySelector(".tm-hamburger__container");
+  var menu = document.querySelector(".tm-menu");
+  var links = menu.getElementsByTagName("a");
+  for (var i = 0, len = links.length; i < len; i++) {
+    links[i].onclick = toggleMenu(hamburger);
+  }
+  hamburger.addEventListener("click", toggleMenu());
+
+  function toggleMenu() {
+    return function() {
+      hamburger.classList.toggle("tm-hamburger__container--open");
+      appBar.classList.toggle("tm-app-bar--open");
+    };
+  }
+
+  var ticking = false;
+
+  window.addEventListener("resize", function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        if (window.matchMedia("(min-width: 841px)").matches) {
+          menu.classList.add("tm-menu--horizontal");
+        } else {
+          menu.classList.remove("tm-menu--horizontal");
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  if (window.matchMedia("(min-width: 841px)").matches) {
+    menu.classList.toggle("tm-menu--horizontal");
+  }</script>
 </header>
 <main>
   <section id="introduction" class="introduction">
@@ -134,15 +178,16 @@
           <h1>TopMonks Caffé</h1>
           <p>Přednášky a diskuze každý první čtvrtek v&nbsp;měsíci se zajímavými
             lidmi a o&nbsp;tématech, která nás&nbsp;baví.<br>
-            Přihlaš se přes stránky <a class="link" href="https://www.meetup.com/TopMonks-Caffe/events/258122001/"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                 y="0px"
-                 width="95px" height="30px" viewBox="0 0 5573.111 1990.154"
-                 enable-background="new 0 0 5573.111 1990.154"
-                 xml:space="preserve">
+            Přihlaš se přes stránky <a class="link" href="https://www.meetup.com/TopMonks-Caffe/events/258122001/">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                   y="0px"
+                   width="95px" height="30px" viewBox="0 0 5573.111 1990.154"
+                   enable-background="new 0 0 5573.111 1990.154"
+                   xml:space="preserve">
       <title>[logo] Meet Up</title>
 
-              <path fill="#F64060" d="M3283.748,1072.614c-7.664,11.584-12.557,19.528-17.893,27.18
+                <path fill="#F64060" d="M3283.748,1072.614c-7.664,11.584-12.557,19.528-17.893,27.18
 	c-49.844,71.39-105.776,136.571-182.021,181.676c-102.199,60.419-212.97,85.341-328.428,60.315
 	c-59.242-12.853-114.359-46.009-170.154-72.463c-12.86-6.069-19.889-6.223-31.32,0.524c-47.857,28.227-94.404,59.867-145.076,81.812
 	c-89.938,38.936-184.639,60.752-282.521,34.857c-61.352-16.232-114.425-50.798-162.374-92.377
@@ -217,9 +262,11 @@
 	c-12.595-27.388-45.062-39.713-73.776-32.202c-30.389,7.972-42.406,22.456-39.253,59.894c2.772,32.585,10.259,65.081,18.93,96.732
 	c6.36,23.262,16.159,46.061,27.743,67.252c15.586,28.547,31.871,28.829,47.198,1.188
 	C2021.73,912.255,2038.056,872.29,2041.107,825.755z"/>
-          </svg></a>
+          </svg>
+            </a>
             a dostávej upozornění na zajímavé
-            Caffé přednášky.</p>
+            Caffé přednášky.
+          </p>
         </div>
       </div>
     </div>
@@ -297,8 +344,8 @@
   <section id="seance" class="seance">
     <div class="mdc-layout-grid tm-layout-wrapper">
       <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>Předchozí seance</h2>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="border-bottom: 1px solid #233341">
+          <h2 style="margin-bottom: 0.3em">Předchozí seance</h2>
         </div>
         {% for i in range(eventsCount -1, 0, -1) -%}
         {{ macros.eventInfo(eventsList[i].value) }}
