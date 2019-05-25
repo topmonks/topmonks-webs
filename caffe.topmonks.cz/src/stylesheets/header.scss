@@ -132,20 +132,21 @@
       background-color: #233341;
     }
     .tm-menu {
-      transform: translate(-300px, -44px);
+      transform: translate(-300px, -64px);
       z-index: -1;
     }
     .tm-menu__list {
+      display: inline-grid;
+      width: 100%;
       background: linear-gradient(to bottom right, #BA3CD9 0, var(--topmonks-caffe-orange) 58%);
       padding: 16px 0;
-
       a {
         color: white;
         text-align: left;
       }
     }
     .tm-menu li:hover {
-      border-bottom-color: rgba(45, 61, 144, 0.5);
+      border-bottom-color: white;
     }
   }
 }
