@@ -21,15 +21,16 @@
         import { html, render } from "https://unpkg.com/lit-html?module";
         const list = document.querySelector(".hire-jobs");
         const listItem = ({ title, url, jobLocation }) => html`
-               <li>
-                 <a href="${url}">${title}</a>
-                  <span class="location">${address(jobLocation)}</span>
-               </li>`;
+         <li>
+           <a href="${url}">${title}</a>
+           <span class="location">${address(jobLocation)}</span>
+         </li>`;
 
-        async function getJobs() {
+        getJobs().then(jobs => render(html`<ul>${jobs.map(listItem)}</ul>`, list));
+
+        function getJobs() {
           return fetch("https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs", { mode: "cors" })
             .then(r => r.json())
-            .then(jobs => jobs.map(listItem))
         }
 
         function address({ address }) {
@@ -38,8 +39,6 @@
           }
           return address.addressCountry;
         }
-
-        getJobs().then(jobs => render(html`<ul>${jobs}</ul>`,list));
       </script>
     </div>
   </div>
