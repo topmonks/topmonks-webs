@@ -15,23 +15,23 @@
     </div>
     <div class="box jobs_positions mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
       <h3>Open positions</h3>
-      <div class="hire-jobs">
-      </div>
+      <div class="hire-jobs"></div>
       <script type="module">
         import { html, render } from "https://unpkg.com/lit-html?module";
         const list = document.querySelector(".hire-jobs");
-        const listItem = ({ title, url, jobLocation }) => html`
-         <li>
-           <a href="${url}">${title}</a>
-           <span class="location">${address(jobLocation)}</span>
-         </li>`;
+        const jobsList = jobs => html`
+          <ul>
+            ${jobs.map(({ title, url, jobLocation }) => html`
+              <li>
+                <a href="${url}">${title}</a>
+                <span class="location">${address(jobLocation)}</span>
+              </li>`
+            )}
+          </ul>`;
 
-        getJobs().then(jobs => render(html`<ul>${jobs.map(listItem)}</ul>`, list));
-
-        function getJobs() {
-          return fetch("https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs", { mode: "cors" })
-            .then(r => r.json())
-        }
+        fetch("https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs", { mode: "cors" })
+          .then(r => r.json())
+          .then(jobs => render(jobsList(jobs), list));
 
         function address({ address }) {
           if (address.addressLocality) {
