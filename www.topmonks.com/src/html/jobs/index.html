@@ -2,6 +2,8 @@
 {% set page = 'topmonks-jobs' %}
 {% block title %}TopMonks Opened Job Positions{% endblock %}
 {% block head %}
+<link rel="preload" as="script" href="https://unpkg.com/lit-html?module">
+<link rel="preload" as="fetch" href="https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs">
 <link rel="stylesheet" href="/stylesheets/jobs.css">
 {% endblock %}
 
