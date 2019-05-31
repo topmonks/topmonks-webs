@@ -308,7 +308,7 @@ a.btn {
 }
 
 a.btn_purple {
-  background: url("/images/case-studies/xixoio/union.png") center no-repeat;
+  background: url("/assets/img/case-studies/xixoio/union.png") center no-repeat;
   margin: 2em 0;
 }
 
@@ -345,7 +345,7 @@ a.dead-button_cube {
   background: #9371C1;
   padding: 2em 5.5em 0; //32px 88px 0
   margin: 0 auto;
-  background: url("/images/case-studies/xixoio/Union.png") center no-repeat;
+  background: url("/assets/img/case-studies/xixoio/Union.png") center no-repeat;
 }
 
 
@@ -366,7 +366,7 @@ p.text-italic {
 // Section: Introduction //
 .intro {
   height: 46.875em; //750px
-  background: url("/images/case-studies/xixoio/abstract.svg") center no-repeat;
+  background: url("/assets/img/case-studies/xixoio/abstract.svg") center no-repeat;
   text-align: center;
   padding-top: 6em;
 
@@ -383,7 +383,7 @@ p.text-italic {
 // Section: About - Description //
 .about {
 
-  // background: url("/images/case-studies/xixoio/box-top-triangle.svg") center top -10% no-repeat;
+  // background: url("/assets/img/case-studies/xixoio/box-top-triangle.svg") center top -10% no-repeat;
   //  position: relative;
   // z-index: 2;
   .description {
@@ -531,7 +531,7 @@ p.text-italic {
   }
 
   @media screen and (min-width: 701px) {
-    background: url("/images/case-studies/xixoio/String/line.svg") center no-repeat;
+    background: url("/assets/img/case-studies/xixoio/String/line.svg") center no-repeat;
     .mdc-layout-grid {
       padding-bottom: 0;
     }
@@ -552,46 +552,46 @@ p.text-italic {
       }
     }
     .string_1 {
-      background: url("/images/case-studies/xixoio/String/01.API.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/01.API.svg") center no-repeat;
     }
 
     .string_2 {
-      background: url("/images/case-studies/xixoio/String/02.Infrastructure.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/02.Infrastructure.svg") center no-repeat;
     }
 
     .string_3 {
-      background: url("/images/case-studies/xixoio/String/03.Crypto.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/03.Crypto.svg") center no-repeat;
     }
 
     .string_4 {
-      background: url("/images/case-studies/xixoio/String/04.Development.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/04.Development.svg") center no-repeat;
     }
 
     .string_5 {
-      background: url("/images/case-studies/xixoio/String/05.Contracts.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/05.Contracts.svg") center no-repeat;
     }
 
     .string_6 {
-      background: url("/images/case-studies/xixoio/String/06.Testing.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/06.Testing.svg") center no-repeat;
     }
 
     .string_7 {
-      background: url("/images/case-studies/xixoio/String/07.Audit.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/07.Audit.svg") center no-repeat;
     }
 
     .string_8 {
-      background: url("/images/case-studies/xixoio/String/08.Finalizations.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/08.Finalizations.svg") center no-repeat;
     }
 
     .string_9 {
-      background: url("/images/case-studies/xixoio/String/09.Training.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/09.Training.svg") center no-repeat;
     }
 
     .string_10 {
-      background: url("/images/case-studies/xixoio/String/10.Audit.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/10.Audit.svg") center no-repeat;
     }
     .last-diamond {
-      background: url("/images/case-studies/xixoio/String/Release.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/Release.svg") center no-repeat;
 
       p.contracts_title {
         padding-top: 1em;
@@ -607,7 +607,7 @@ p.text-italic {
     }
   }
   @media (max-width: 700px) {
-    background: url("/images/case-studies/xixoio/String/line.svg") left no-repeat;
+    background: url("/assets/img/case-studies/xixoio/String/line.svg") left no-repeat;
     background-size: 1% 90%;
     background-position-x: 13%;
     margin-top: 0;
@@ -615,43 +615,43 @@ p.text-italic {
       margin-left: 4em;
     }
     .string_1 {
-      background: url("/images/case-studies/xixoio/String/01.API.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/01.API.svg") left no-repeat;
     }
 
     .string_2 {
-      background: url("/images/case-studies/xixoio/String/02.Infrastructure.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/02.Infrastructure.svg") left no-repeat;
     }
 
     .string_3 {
-      background: url("/images/case-studies/xixoio/String/03.Crypto.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/03.Crypto.svg") left no-repeat;
     }
 
     .string_4 {
-      background: url("/images/case-studies/xixoio/String/04.Development.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/04.Development.svg") left no-repeat;
     }
 
     .string_5 {
-      background: url("/images/case-studies/xixoio/String/05.Contracts.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/05.Contracts.svg") left no-repeat;
     }
 
     .string_6 {
-      background: url("/images/case-studies/xixoio/String/06.Testing.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/06.Testing.svg") left no-repeat;
     }
 
     .string_7 {
-      background: url("/images/case-studies/xixoio/String/07.Audit.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/07.Audit.svg") left no-repeat;
     }
 
     .string_8 {
-      background: url("/images/case-studies/xixoio/String/08.Finalizations.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/08.Finalizations.svg") left no-repeat;
     }
 
     .string_9 {
-      background: url("/images/case-studies/xixoio/String/09.Training.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/09.Training.svg") left no-repeat;
     }
 
     .string_10 {
-      background: url("/images/case-studies/xixoio/String/10.Audit.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/10.Audit.svg") left no-repeat;
     }
 
     .last-diamond, .string_1 {
@@ -670,7 +670,7 @@ p.text-italic {
       }
     }
     .last-diamond {
-      background: url("/images/case-studies/xixoio/String/Release.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/Release.svg") left no-repeat;
       background-size: 20% 100%;
       background-position-x: 0.6%;
     }
@@ -684,7 +684,7 @@ p.text-italic {
     }
   }
   @media (min-width: 400px) and (max-width: 490px) {
-    background: url("/images/case-studies/xixoio/String/line.svg") left no-repeat;
+    background: url("/assets/img/case-studies/xixoio/String/line.svg") left no-repeat;
     background-size: 1% 90%;
     background-position-x: 13%;
     .string_2, .string_3, .string_4, .string_5, .string_6, .string_7, .string_8, .string_9, .string_10 {
@@ -692,7 +692,7 @@ p.text-italic {
     }
   }
   @media (max-width: 399px) {
-    background: url("/images/case-studies/xixoio/String/line.svg") left no-repeat;
+    background: url("/assets/img/case-studies/xixoio/String/line.svg") left no-repeat;
     background-size: 1% 90%;
     background-position-x: 13.5%;
     .string_2, .string_3, .string_4, .string_5, .string_6, .string_7, .string_8, .string_9, .string_10 {
