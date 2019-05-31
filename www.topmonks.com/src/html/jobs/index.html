@@ -1,10 +1,12 @@
 {% extends 'layouts/topmonks.html' %}
 {% set page = 'topmonks-jobs' %}
 {% block title %}TopMonks Opened Job Positions{% endblock %}
+{% block preload %}
+<link rel="preload" as="script" href="https://unpkg.com/lit-html@1.1.0/lit-html.js?module" crossorigin="anonymous">
+<link rel="preload" as="fetch" href="https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs" crossorigin="anonymous">
+{% endblock %}
 {% block head %}
-<link rel="preload" as="script" href="https://unpkg.com/lit-html@1.1.0/lit-html.js?module">
-<link rel="preload" as="fetch" href="https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs">
-<link rel="stylesheet" href="/stylesheets/jobs.css">
+<link rel="stylesheet" href="/assets/css/jobs.css">
 {% endblock %}
 
 {% block content %}
@@ -635,7 +637,7 @@
                        https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto,dpr_1.5/https://insight.topmonks.com/avatar/anna-kovacsova 1.5x,
                        https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto,dpr_2/https://insight.topmonks.com/avatar/anna-kovacsova 2x,
                        https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto,dpr_3/https://insight.topmonks.com/avatar/anna-kovacsova 3x,"
-               onerror="this.onerror=null; this.src='/images/monk_logo-c877778634.png'"
+               onerror="this.onerror=null; this.src='/assets/img/monk_logo-c877778634.png'"
                width="112" height="112"></div>
         <div
           class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-4-iphone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-10-desktop">

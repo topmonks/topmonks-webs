@@ -1,12 +1,12 @@
 {% macro sprite(id, altText, viewBox, classes) %}
 {% set viewBox = viewBox or "0 0 1 1"%}
 <span class='sprite -{{id}} {{classes}}'>
-  <svg viewBox="{{viewBox}}" alt="{{altText}}"><use xlink:href='/images/icons.svg#{{id}}'></use></svg>
+  <svg viewBox="{{viewBox}}" alt="{{altText}}"><use xlink:href='/assets/img/icons.svg#{{id}}'></use></svg>
 </span>
 {% endmacro %}
 
 {% macro css(stylesheet) -%}
-<link rel="stylesheet" href="{{ '/stylesheets/components/' ~ stylesheet ~ '/index.css' }}">
+<link rel="stylesheet" href="{{ '/assets/css/components/' ~ stylesheet ~ '/index.css' }}">
 {%- endmacro %}
 
 {% macro teamMember(member, hero) -%}
@@ -19,7 +19,7 @@
                https://res.cloudinary.com/topmonks/image/fetch/w_{{imageSize}},dpr_1.5,f_auto/https://insight.topmonks.com/avatar/{{member.id}} 1.5x,
                https://res.cloudinary.com/topmonks/image/fetch/w_{{imageSize}},dpr_2,f_auto/https://insight.topmonks.com/avatar/{{member.id}} 2x,
                https://res.cloudinary.com/topmonks/image/fetch/w_{{imageSize}},dpr_3,f_auto/https://insight.topmonks.com/avatar/{{member.id}} 3x"
-       onerror="this.onerror=null; this.src='/images/monk_logo.png'" 
+       onerror="this.onerror=null; this.src='/assets/img/monk_logo.png'"
        width="{{imageSize}}" height="{{imageSize}}">
   <div class="content">
     <strong>{{fullName}}</strong>

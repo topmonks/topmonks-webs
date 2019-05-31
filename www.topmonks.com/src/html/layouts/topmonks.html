@@ -9,15 +9,17 @@
   <title>{% block title %}{{ language[page].title }}{% endblock %}</title>
 
   <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="//res.cloudinary.com">
-  <link rel="preconnect" href="//cdnjs.cloudflare.com">
-  <link rel="preconnect" href="//use.typekit.net">
-  <link rel="preconnect" href="//cdn.jsdelivr.net">
-  <link rel="preconnect" href="//www.google-analytics.com">
-  <link rel="preconnect" href="//static.hotjar.com">
-  <link rel="preload" href="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" as="script" crossorigin>
-  <link rel="preload" href="https://use.typekit.net/her1ktw.js" as="script">
-  <link rel="preload" href="https://www.googletagmanager.com/gtm.js?id=GTM-WW7T986" as="script">
+  <link rel="preconnect" href="https://res.cloudinary.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://use.typekit.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://static.hotjar.com">
+  {% block preconnect %}{% endblock %}
+  <link rel="preload" as="script" href="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" crossorigin="anonymous">
+  <link rel="preload" as="script" href="https://use.typekit.net/her1ktw.js" crossorigin="anonymous">
+  <link rel="preload" as="script" href="https://www.googletagmanager.com/gtm.js?id=GTM-WW7T986" crossorigin="use-credentials">
+  {% block preload %}{% endblock %}
 
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -25,12 +27,10 @@
   <![endif]-->
 
   <script>WebFontConfig = { typekit: {id: 'her1ktw'}, async: true }</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async defer
-          integrity="sha384-pvXSwSU09c+q9mPyY++ygUHWIYRoaxgnJ/JC5wcOzMb/NVVu+IDniiB9qWp3ZNWM"
-          crossorigin="anonymous"></script>
+  <script async src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" defer crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="/stylesheets/typography.css">
-  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/assets/css/typography.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
 
   {% block head %}{% endblock %}
   {% include "shared/app-icons.html" %}
@@ -44,7 +44,7 @@
   {% block content %}{% endblock %}
 </main>
 
-<link rel="stylesheet" href="/stylesheets/footer.css">
+<link rel="stylesheet" href="/assets/css/footer.css">
 {% include 'common/footer.html' %}
 
 {% block javascript %}
