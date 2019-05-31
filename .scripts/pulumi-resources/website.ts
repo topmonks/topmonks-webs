@@ -119,6 +119,40 @@ function createCloudFront(
           }
         ]
       },
+      orderedCacheBehaviors: [
+        {
+          allowedMethods: ["GET", "HEAD", "OPTIONS"],
+          cachedMethods: ["GET", "HEAD", "OPTIONS"],
+          compress: true,
+          defaultTtl: 31536000,
+          forwardedValues: {
+            cookies: {
+              forward: "none"
+            },
+            headers: ["Origin"],
+            queryString: false
+          },
+          maxTtl: 31536000,
+          minTtl: 31536000,
+          pathPattern: "/assets/*",
+          targetOriginId: contentBucket.arn,
+          viewerProtocolPolicy: "redirect-to-https",
+          lambdaFunctionAssociations: [
+            // add lambda edge with security headers for A+ SSL Grade
+            {
+              eventType: "viewer-response",
+              lambdaArn:
+                "arn:aws:lambda:us-east-1:661884430919:function:SecurityHeaders:7"
+            },
+            // add lambda edge with cache headers for immutable assets
+            {
+              eventType: "viewer-response",
+              lambdaArn:
+                "arn:aws:lambda:us-east-1:661884430919:function:CacheHeaders:2"
+            }
+          ]
+        }
+      ],
       priceClass: "PriceClass_100",
       restrictions: {
         geoRestriction: {
