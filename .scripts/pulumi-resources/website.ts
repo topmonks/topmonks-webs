@@ -138,12 +138,6 @@ function createCloudFront(
           targetOriginId: contentBucket.arn,
           viewerProtocolPolicy: "redirect-to-https",
           lambdaFunctionAssociations: [
-            // add lambda edge with security headers for A+ SSL Grade
-            {
-              eventType: "viewer-response",
-              lambdaArn:
-                "arn:aws:lambda:us-east-1:661884430919:function:SecurityHeaders:7"
-            },
             // add lambda edge with cache headers for immutable assets
             {
               eventType: "viewer-response",
