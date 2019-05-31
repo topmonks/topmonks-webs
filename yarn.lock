@@ -429,34 +429,17 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
-"@pulumi/aws@^0.17.1":
-  version "0.17.1"
-  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-0.17.1.tgz#1aa2042a9ff466f5556c2332ffe4ebe8f0322ace"
-  integrity sha512-XWJWt9kWncBZJTeL7J1bcy0vE2bXKkqeK9F6DExZwD9uq6zwUPyy+F1LllzZDOLA1ZY1u1uM8SaEjGe4GQwCPQ==
+"@pulumi/aws@^0.18.6":
+  version "0.18.6"
+  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-0.18.6.tgz#6c695967b38ac8870316473a9c51b590aeed930c"
+  integrity sha512-HLdQUCpzSR3g6lJT+/VcFMJ8+VuMSgxCB3IowIDQufIGEQHy2Og4ZkVZ5Y9bDwzpCbwiVbbuWr1iN+7KPi+e6w==
   dependencies:
-    "@pulumi/pulumi" "^0.17.1"
+    "@pulumi/pulumi" "^0.17.8"
     aws-sdk "^2.0.0"
     builtin-modules "3.0.0"
     mime "^2.0.0"
     read-package-tree "^5.2.1"
     resolve "^1.7.1"
-
-"@pulumi/pulumi@^0.17.1":
-  version "0.17.8"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.17.8.tgz#7b1e4cff0840f9c317092ff9e02cda131fb5a4d1"
-  integrity sha512-rwMgZ57jKB89WK8uzVQjWQa/Q0HTvMdusjqHyBR8WN1oSafO8S8U/R3buhxyfrItNwly1uNUYN/7CEH79il4TA==
-  dependencies:
-    google-protobuf "^3.5.0"
-    grpc "^1.12.2"
-    minimist "^1.2.0"
-    normalize-package-data "^2.4.0"
-    protobufjs "^6.8.6"
-    read-package-tree "^5.2.1"
-    require-from-string "^2.0.1"
-    source-map-support "^0.4.16"
-    ts-node "^7.0.0"
-    typescript "^3.0.0"
-    upath "^1.1.0"
 
 "@pulumi/pulumi@^0.17.8":
   version "0.17.12"
@@ -4940,7 +4923,7 @@ growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
 
-grpc@^1.12.2, grpc@^1.20.2:
+grpc@^1.20.2:
   version "1.20.3"
   resolved "https://registry.yarnpkg.com/grpc/-/grpc-1.20.3.tgz#a74d36718f1e89c4a64f2fb9441199c3c8f78978"
   integrity sha512-GsEsi0NVj6usS/xor8pF/xDbDiwZQR59aZl5NUZ59Sy2bdPQFZ3UePr5wevZjHboirRCIQCKRI1cCgvSWUe2ag==
@@ -9722,13 +9705,7 @@ resolve-url@^0.2.1:
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
   integrity sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
 
-resolve@^1.1.6, resolve@^1.1.7, resolve@^1.3.2, resolve@^1.4.0, resolve@^1.7.1:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.10.0.tgz#3bdaaeaf45cc07f375656dfd2e54ed0810b101ba"
-  dependencies:
-    path-parse "^1.0.6"
-
-resolve@^1.10.0, resolve@^1.10.1:
+resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.3.2, resolve@^1.4.0, resolve@^1.7.1:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.11.0.tgz#4014870ba296176b86343d50b60f3b50609ce232"
   integrity sha512-WL2pBDjqT6pGUNSUzMw00o4T7If+z4H2x3Gz893WoUQ5KW8Vr9txp00ykiP16VBaZF5+j/OcXJHZ9+PCvdiDKw==
