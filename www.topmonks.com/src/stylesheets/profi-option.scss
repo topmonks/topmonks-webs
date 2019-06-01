@@ -5,8 +5,30 @@
 }
 
 body {
-  font-family: "Neue Einstellung", Arial;
   color: var(--tm-po-black);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 1.444em; //22/26px
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-kerning: normal;
+  font-variant-numeric: lining-nums slashed-zero;
+  font-variant-ligatures: common-ligatures contextual;
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+.wf-active body {
+  font-family: Lato, sans-serif;
+}
+
+.wf-futurapt-n6-active .tm-logo {
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
 }
 
 .tm-layout-wrapper {

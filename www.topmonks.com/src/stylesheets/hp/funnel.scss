@@ -1,10 +1,10 @@
 .product {
   @media (max-width: 479px) {
-    background: url("/images/bgnd_funnel_product_mobile.svg") bottom center no-repeat;
+    background: url("/assets/img/bgnd_funnel_product_mobile.svg") bottom center no-repeat;
     background-size: 100% auto;
     padding-bottom: 110px;
     .tm-bgnd-wrapper {
-      background: url("/images/bgnd_funnel_mobile.svg") top center
+      background: url("/assets/img/bgnd_funnel_mobile.svg") top center
         no-repeat;
       padding-top: 110px;
       background-size: 100% auto;
@@ -31,9 +31,9 @@
       padding-left: calc(25% - 37px);
       padding-top: 150px;
       padding-bottom: 50px;
-      background: url("/images/bgnd_funnel_product.svg") left calc(25% - 22px)
+      background: url("/assets/img/bgnd_funnel_product.svg") left calc(25% - 22px)
           bottom no-repeat,
-        url("/images/bgnd_funnel.svg") left calc(25% - 22px) top no-repeat;
+        url("/assets/img/bgnd_funnel.svg") left calc(25% - 22px) top no-repeat;
     }
     @media screen and (min-width: 840px) {
       padding-left: calc(50% - 37px);

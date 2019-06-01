@@ -1937,10 +1937,10 @@ bluebird@^2.3.5, bluebird@^2.6.2, bluebird@^2.8.1, bluebird@^2.8.2:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-2.11.0.tgz#534b9033c022c9579c56ba3b3e5a5caafbb650e1"
 
-bluebird@^3.5.3, bluebird@^3.5.4:
-  version "3.5.4"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.4.tgz#d6cc661595de30d5b3af5fcedd3c0b3ef6ec5714"
-  integrity sha512-FG+nFEZChJrbQ9tIccIfZJBz3J7mLrAhxakAbnrJWn8d7aKOC+LWifa0G+p4ZqKp4y13T7juYvdhq9NzKdsrjw==
+bluebird@^3.5.3, bluebird@^3.5.5:
+  version "3.5.5"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.5.tgz#a8d0afd73251effbbd5fe384a77d73003c17a71f"
+  integrity sha512-5am6HnnfN+urzt4yfg7IgTbotDjIT/u8AJpEt0sIU9FtXfVeezXAPKswrG+xKUCOYAINpSdgZVDU6QFh+cuH3w==
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.8"
@@ -6614,10 +6614,10 @@ lighthouse-logger@^1.0.0, lighthouse-logger@^1.2.0:
     debug "^2.6.8"
     marky "^1.2.0"
 
-lighthouse@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-5.0.0.tgz#bca0f2a3ca36877d44bef5ba6478b135820d1cfb"
-  integrity sha512-s9S2ZujnAYF+F5EqKKGL72H1PQ1tPf7YxEl79LmvF9QHXElrITjQfYgi+8ZmHrNrCkKra5aKPzKRN3IIfF5Q9w==
+lighthouse@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-5.1.0.tgz#f4f9a1f46f653cb3e53b0895a8a92162dd84a4a7"
+  integrity sha512-T+6VYefgRgSRHCgWhSQzsS1Jyu6JJ5I3cnrH/Q7BvwoJwnMhHME+JQ4ib5Oek2ZTfOakoarLDqrFPDtYNxk0KA==
   dependencies:
     axe-core "3.2.2"
     chrome-launcher "^0.10.7"
@@ -7781,17 +7781,17 @@ node-releases@^1.1.3:
   dependencies:
     semver "^5.3.0"
 
-node-sass-glob-importer@^5.0.0-alpha.5, node-sass-glob-importer@^5.3.1:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/node-sass-glob-importer/-/node-sass-glob-importer-5.3.1.tgz#41affb02e8168d814610f1dc73f989f7c7fef03d"
-  integrity sha512-pc0Z82PLZqa1lva+s+8b4lBcfxKfMklUnrCngN7UO+90pOQf4MJ0fjlHlyl1T+ju+i0WcGDtYLWC5t2QGfmkgA==
+node-sass-glob-importer@^5.0.0-alpha.5, node-sass-glob-importer@^5.3.2:
+  version "5.3.2"
+  resolved "https://registry.yarnpkg.com/node-sass-glob-importer/-/node-sass-glob-importer-5.3.2.tgz#465581e46027c0e9520e6d87f7e6eda858a14acb"
+  integrity sha512-QTX7KPsISgp55REV6pMH703nzHfWCOEYEQC0cDyTRo7XO6WDvyC0OAzekuQ4gs505IZcxv9KxZ3uPJ5s5H9D3g==
   dependencies:
-    node-sass-magic-importer "^5.3.1"
+    node-sass-magic-importer "^5.3.2"
 
-node-sass-magic-importer@^5.3.1:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/node-sass-magic-importer/-/node-sass-magic-importer-5.3.1.tgz#a34d786399820a425b6dbcfa49ae47439d94e12b"
-  integrity sha512-YV01gIyhU5Sw9XPW0dA6ntnpE8VHtpX7ojIAJDFJseLFcHOm8d6CstmGP8EzQu2fGbIelr5Y3KPDFQh6t4Ml9w==
+node-sass-magic-importer@^5.3.2:
+  version "5.3.2"
+  resolved "https://registry.yarnpkg.com/node-sass-magic-importer/-/node-sass-magic-importer-5.3.2.tgz#2f2248bb2e5cdb275ba34102ebf995edadf99175"
+  integrity sha512-T3wTUdUoXQE3QN+EsyPpUXRI1Gj1lEsrySQ9Kzlzi15QGKi+uRa9fmvkcSy2y3BKgoj//7Mt9+s+7p0poMpg6Q==
   dependencies:
     css-node-extract "^2.1.3"
     css-selector-extract "^3.3.6"
@@ -7799,7 +7799,7 @@ node-sass-magic-importer@^5.3.1:
     glob "^7.1.3"
     object-hash "^1.3.1"
     postcss-scss "^2.0.0"
-    resolve "^1.10.0"
+    resolve "^1.10.1"
 
 node-sass@^4.8.3:
   version "4.11.0"
@@ -9728,7 +9728,7 @@ resolve@^1.1.6, resolve@^1.1.7, resolve@^1.3.2, resolve@^1.4.0, resolve@^1.7.1:
   dependencies:
     path-parse "^1.0.6"
 
-resolve@^1.10.0:
+resolve@^1.10.0, resolve@^1.10.1:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.11.0.tgz#4014870ba296176b86343d50b60f3b50609ce232"
   integrity sha512-WL2pBDjqT6pGUNSUzMw00o4T7If+z4H2x3Gz893WoUQ5KW8Vr9txp00ykiP16VBaZF5+j/OcXJHZ9+PCvdiDKw==

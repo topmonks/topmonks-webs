@@ -16,21 +16,24 @@
     <div class="box jobs_positions mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
       <h3>Otevřené pozice</h3>
       <div class="hire-jobs">
+        <a href="https://hire.withgoogle.com/public/jobs/topmonkscom">Prohlédněte si otevřené pozice na Google Hire</a>
       </div>
       <script type="module">
-        import { html, render } from "https://unpkg.com/lit-html?module";
+        import { html, render } from "https://unpkg.com/lit-html@1.1.0/lit-html.js?module";
         const list = document.querySelector(".hire-jobs");
-        const listItem = ({ title, url, jobLocation }) => html`
-               <li>
-                 <a href="${url}">${title}</a>
-                  <span class="location">${address(jobLocation)}</span>
-               </li>`;
+        const jobsList = jobs => html`
+          <ul>
+            ${jobs.map(({ title, url, jobLocation }) => html`
+              <li>
+                <a href="${url}">${title}</a>
+                <span class="location">${address(jobLocation)}</span>
+              </li>`
+        )}
+          </ul>`;
 
-        async function getJobs() {
-          return fetch("https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs", { mode: "cors" })
-            .then(r => r.json())
-            .then(jobs => jobs.map(listItem))
-        }
+        fetch("https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs", { mode: "cors" })
+          .then(r => r.json())
+          .then(jobs => render(jobsList(jobs), list));
 
         function address({ address }) {
           if (address.addressLocality) {
@@ -38,8 +41,6 @@
           }
           return address.addressCountry;
         }
-
-        getJobs().then(jobs => render(html`<ul>${jobs}</ul>`,list));
       </script>
     </div>
   </div>
