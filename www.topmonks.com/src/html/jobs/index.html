@@ -2,7 +2,7 @@
 {% set page = 'topmonks-jobs' %}
 {% block title %}TopMonks Opened Job Positions{% endblock %}
 {% block preload %}
-<link rel="preload" as="script" href="https://unpkg.com/lit-html@1.1.0/lit-html.js?module" crossorigin="anonymous">
+<link rel="modulepreload" href="https://unpkg.com/lit-html@1.1.0/lit-html.js?module">
 <link rel="preload" as="fetch" href="https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs" crossorigin="anonymous">
 {% endblock %}
 {% block head %}
@@ -83,7 +83,6 @@
       <h3 class="value-purple">Freedom</h3>
       <p>Your freedom can’t affect the freedom of others.</p>
     </div>
-
     <div
       class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
       <h3 class="value-purple">Independence</h3>
@@ -93,7 +92,6 @@
     <div
       class="tm-values_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
       <h3 class="value-orange">Cooperation</h3>
-
       <p>Our company is a living organism interconnected with our partners, customers, and community. There are no
         borders.</p>
     </div>
@@ -112,7 +110,6 @@
       <h3 class="value-purple">Weirdness</h3>
       <p>Weirdness, non-conformity is welcome.</p>
     </div>
-
   </div>
 </section>
 <div
@@ -640,11 +637,12 @@
                        https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto,dpr_2/https://insight.topmonks.com/avatar/anna-kovacsova 2x,
                        https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto,dpr_3/https://insight.topmonks.com/avatar/anna-kovacsova 3x,"
                onerror="this.onerror=null; this.src='/assets/img/monk_logo-c877778634.png'"
-               width="112" height="112"></div>
+               width="112" height="112">
+        </div>
         <div
           class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-4-iphone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-10-desktop">
           <p><span itemprop="name">Anička Kovácsová</span>
-            <br><a itemprop="telephone" href="tel:+420777556859">+420&nbsp;777 556 859</a>
+            <br><a itemprop="telephone" href="tel:+420777556859">+420&nbsp;777&nbsp;556&nbsp;859</a>
             <br><a itemprop="email" href="mailto:happy@topmonks.com">happy@topmonks.com</a>
           </p></div>
       </div>

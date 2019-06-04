@@ -1,9 +1,13 @@
 {% extends 'layouts/topmonks.html' %}
 {% set page = 'topmonks-jobs' %}
-{% block title %}volné pracovní pozice v TopMonks{% endblock %}
+{% block title %}Volné pracovní pozice v TopMonks{% endblock %}
+
 {% block head %}
+<link rel="modulepreload" href="https://unpkg.com/lit-html@1.1.0/lit-html.js?module">
+<link rel="preload" as="fetch" href="https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs" crossorigin="anonymous">
 <link rel="stylesheet" href="/stylesheets/jobs.css">
 {% endblock %}
+
 {% block content %}
 <section id="jobs-main" class="main mdc-layout-grid">
   <div class="mdc-layout-grid__inner tm-layout-wrapper">
@@ -28,7 +32,7 @@
                 <a href="${url}">${title}</a>
                 <span class="location">${address(jobLocation)}</span>
               </li>`
-        )}
+            )}
           </ul>`;
 
         fetch("https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs", { mode: "cors" })
@@ -45,9 +49,8 @@
     </div>
   </div>
   <div class="contact-info mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-    <p>Máš zájem? Ozvi se Aničce! <a href="mailto:happy@topmonks.com">happy@topmonks.com</a> / <a
-      href="tel:+420 777 556 859">+420 777 556 859</a></p>
-  </div>
+    <p>Máš zájem? Ozvi se Aničce! <a href="mailto:happy@topmonks.com">happy@topmonks.com</a> /
+      <a href="tel:+420 777 556 859">+420&nbsp;777&nbsp;556&nbsp;859</a></p>
   </div>
 </section>
 <div
@@ -109,7 +112,6 @@
       <h3 class="value-purple">Zvláštnost</h3>
       <p>Zvláštnost, nekonvenčnost je vítána.</p>
     </div>
-
   </div>
 </section>
 <div
@@ -479,31 +481,63 @@
 <section id="gallery">
   <div class="mdc-layout-grid__inner">
     <div class="gallery mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-      <img alt="Gallery Photo"
-           src="https://res.cloudinary.com/topmonks/image/upload/v1552317514/topmonks.com/jobs/galerry/img_meet1.png"
+      <img alt="Gallery Photo" loading="lazy"
+           src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240/v1552317514/topmonks.com/jobs/galerry/img_meet1.png"
+           srcset="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240/v1552317514/topmonks.com/jobs/galerry/img_meet1.png 1x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240,dpr_1.5/v1552317514/topmonks.com/jobs/galerry/img_meet1.png 1.5x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240,dpr_2/v1552317514/topmonks.com/jobs/galerry/img_meet1.png 2x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240,dpr_3/v1552317514/topmonks.com/jobs/galerry/img_meet1.png 3x"
            width="240" height="310">
-      <img alt="Gallery Photo"
-           src="https://res.cloudinary.com/topmonks/image/upload/v1552317285/topmonks.com/jobs/galerry/img_meet2.png"
+      <img alt="Gallery Photo" loading="lazy"
+           src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_630/v1552317285/topmonks.com/jobs/galerry/img_meet2.png"
+           srcset="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_630/v1552317285/topmonks.com/jobs/galerry/img_meet2.png 1x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_630,dpr_1.5/v1552317285/topmonks.com/jobs/galerry/img_meet2.png 1.5x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_630,dpr_2/v1552317285/topmonks.com/jobs/galerry/img_meet2.png 2x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_630,dpr_3/v1552317285/topmonks.com/jobs/galerry/img_meet2.png 3x"
            width="630" height="310">
-      <img alt="Gallery Photo"
-           src="https://res.cloudinary.com/topmonks/image/upload/v1552317658/topmonks.com/jobs/galerry/img_meet3.png"
+      <img alt="Gallery Photo" loading="lazy"
+           src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_310/v1552317658/topmonks.com/jobs/galerry/img_meet3.png"
+           srcset="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_310/v1552317658/topmonks.com/jobs/galerry/img_meet3.png 1x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_310,dpr_1.5/v1552317658/topmonks.com/jobs/galerry/img_meet3.png 1.5x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_310,dpr_2/v1552317658/topmonks.com/jobs/galerry/img_meet3.png 2x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_310,dpr_3/v1552317658/topmonks.com/jobs/galerry/img_meet3.png 3x"
            width="310" height="310">
-      <img alt="Gallery Photo"
-           src="https://res.cloudinary.com/topmonks/image/upload/v1552317381/topmonks.com/jobs/galerry/img_meet4.png"
+      <img alt="Gallery Photo" loading="lazy"
+           src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240/v1552317381/topmonks.com/jobs/galerry/img_meet4.png"
+           srcset="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240/v1552317381/topmonks.com/jobs/galerry/img_meet4.png 1x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240,dpr_1.5/v1552317381/topmonks.com/jobs/galerry/img_meet4.png 1.5x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240,dpr_2/v1552317381/topmonks.com/jobs/galerry/img_meet4.png 2x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240,dpr_3/v1552317381/topmonks.com/jobs/galerry/img_meet4.png 3x"
            width="240" height="310">
     </div>
     <div class="gallery mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-      <img alt="Gallery Photo"
-           src="https://res.cloudinary.com/topmonks/image/upload/v1552317538/topmonks.com/jobs/galerry/img_meet5.png"
+      <img alt="Gallery Photo" loading="lazy"
+           src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240/v1552317538/topmonks.com/jobs/galerry/img_meet5.png"
+           srcset="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240/v1552317538/topmonks.com/jobs/galerry/img_meet5.png 1x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240,dpr_1.5/v1552317538/topmonks.com/jobs/galerry/img_meet5.png 1.5x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240,dpr_2/v1552317538/topmonks.com/jobs/galerry/img_meet5.png 2x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_240,dpr_3/v1552317538/topmonks.com/jobs/galerry/img_meet5.png 3x"
            width="240" height="310">
-      <img alt="Gallery Photo"
-           src="https://res.cloudinary.com/topmonks/image/upload/v1552317620/topmonks.com/jobs/galerry/img_meet6.png"
+      <img alt="Gallery Photo" loading="lazy"
+           src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_307/v1552317620/topmonks.com/jobs/galerry/img_meet6.png"
+           srcset="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_307/v1552317620/topmonks.com/jobs/galerry/img_meet6.png 1x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_307,dpr_1.5/v1552317620/topmonks.com/jobs/galerry/img_meet6.png 1.5x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_307,dpr_2/v1552317620/topmonks.com/jobs/galerry/img_meet6.png 2x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_307,dpr_3/v1552317620/topmonks.com/jobs/galerry/img_meet6.png 3x"
            width="307" height="310">
-      <img alt="Gallery Photo"
-           src="https://res.cloudinary.com/topmonks/image/upload/v1552317723/topmonks.com/jobs/galerry/img_meet7.png"
+      <img alt="Gallery Photo" loading="lazy"
+           src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_562/v1552317723/topmonks.com/jobs/galerry/img_meet7.png"
+           srcset="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_562/v1552317723/topmonks.com/jobs/galerry/img_meet7.png 1x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_562,dpr_1.5/v1552317723/topmonks.com/jobs/galerry/img_meet7.png 1.5x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_562,dpr_2/v1552317723/topmonks.com/jobs/galerry/img_meet7.png 2x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_562,dpr_3/v1552317723/topmonks.com/jobs/galerry/img_meet7.png 3x"
            width="562" height="310">
-      <img alt="Gallery Photo"
-           src="https://res.cloudinary.com/topmonks/image/upload/v1552317420/topmonks.com/jobs/galerry/img_meet8.png"
+      <img alt="Gallery Photo" loading="lazy"
+           src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_310/v1552317420/topmonks.com/jobs/galerry/img_meet8.png"
+           srcset="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_310/v1552317420/topmonks.com/jobs/galerry/img_meet8.png 1x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_310,dpr_1.5/v1552317420/topmonks.com/jobs/galerry/img_meet8.png 1.5x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_310,dpr_2/v1552317420/topmonks.com/jobs/galerry/img_meet8.png 2x,
+                   https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_310,dpr_3/v1552317420/topmonks.com/jobs/galerry/img_meet8.png 3x"
            width="310" height="310">
     </div>
   </div>
@@ -532,16 +566,22 @@
       <div class="mdc-layout-grid__inner">
         <div
           class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-iphone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <img alt="[foto] Anička Kovácsová"
-               src="https://insight.topmonks.com/avatar/anna-kovacsova"
+          <img alt="[foto] Anička Kovácsová" loading="lazy"
+               src="https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto/https://insight.topmonks.com/avatar/anna-kovacsova"
+               srcset="https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto/https://insight.topmonks.com/avatar/anna-kovacsova 1x,
+                       https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto,dpr_1.5/https://insight.topmonks.com/avatar/anna-kovacsova 1.5x,
+                       https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto,dpr_2/https://insight.topmonks.com/avatar/anna-kovacsova 2x,
+                       https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto,dpr_3/https://insight.topmonks.com/avatar/anna-kovacsova 3x,"
                onerror="this.onerror=null; this.src='/images/monk_logo-c877778634.png'"
-               width="112" height="112"></div>
+               width="112" height="112">
+        </div>
         <div
           class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-4-iphone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-10-desktop">
-          <p><span itemprop="name">Anička Kovácsová</span><br><a
-            itemprop="telephone" href="tel:+420777556859">+420&nbsp;777 556 859</a><br><a itemprop="email"
-                                                                                          href="mailto:happy@topmonks.com">happy@topmonks.com</a>
-          </p></div>
+          <p><span itemprop="name">Anička Kovácsová</span><br>
+            <a itemprop="telephone" href="tel:+420777556859">+420&nbsp;777&nbsp;556&nbsp;859</a><br>
+            <a itemprop="email" href="mailto:happy@topmonks.com">happy@topmonks.com</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>
