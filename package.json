@@ -37,7 +37,7 @@
     "prettier": "^1.17.1",
     "stylelint": "^10.0.1",
     "stylelint-config-prettier": "^5.2.0",
-    "tap-xunit": "^2.3.0"
+    "tap-xunit": "^2.4.0"
   },
   "scripts": {
     "create-site": "node ./.scripts/create-site",
