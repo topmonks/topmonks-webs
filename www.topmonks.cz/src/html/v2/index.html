@@ -1,0 +1,136 @@
+{% extends 'layouts/topmonks.html' %}
+{% from 'macros/helpers.html' import sprite %}
+
+{% set page = 'topmonks-index' %}
+
+{% block title %}TopMonks - Pomůžeme vašemu revenue růst{% endblock %}
+
+{% block head %}
+<meta name="description" content="Jsme IT profesionálové, kteří pomůžou vašemu revenue růst.">
+<meta name="twitter:description" property="og:description" content="Jsme IT profesionálové, kteří pomůžou vašemu revenue růst.">
+<link rel="canonical" href="https://www.topmonks.cz/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@topmonks">
+<meta name="twitter:title" property="og:title" content="TopMonks - IT profesionálové pro váš byznys">
+<meta name="twitter:image" property="og:image" content="https://www.topmonks.cz/images/og-image.png">
+<meta property="og:type" content="company">
+<meta property="og:url" content="https://www.topmonks.cz/">
+<meta property="og:site_name" content="TopMonks.cz">
+<link rel="stylesheet" href="/stylesheets/main.css">
+<style>
+  @media screen and (max-width: 479px) {
+    body {
+      background: url("https://res.cloudinary.com/topmonks/image/upload/w_603,dpr_auto,q_auto,f_auto/v1560151932/www.topmonks.cz/img_abovefold.png")
+      no-repeat right calc(50% - 165px) top -105px;
+      background-size: 603px auto;
+      overflow-x: hidden;
+    }
+  }
+
+  @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1), screen and (max-width: 479px) and (min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min-resolution: 192dpi), screen and (max-width: 479px) and (min-resolution: 2dppx) {
+    body {
+      background: url("https://res.cloudinary.com/topmonks/image/upload/w_603,dpr_2,q_auto,f_auto/v1553097490/www.topmonks.cz/img_abovefold.png")
+      no-repeat right calc(50% - 165px) top -105px;
+      background-size: 603px auto;
+      overflow-x: hidden;
+    }
+  }
+  @media screen and (min-width: 480px) {
+    body {
+      background: url("https://res.cloudinary.com/topmonks/image/upload/w_919,dpr_auto,q_auto,f_auto/v1553097490/www.topmonks.cz/img_abovefold.png")
+      no-repeat right calc(50% - 430px) top 75px;
+      background-size: 919px auto;
+      overflow-x: hidden;
+    }
+  }
+
+  @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+    body {
+      background: url("https://res.cloudinary.com/topmonks/image/upload/w_919,dpr_2,q_auto,f_auto/v1553097490/www.topmonks.cz/img_abovefold.png")
+      no-repeat right calc(50% - 430px) top 75px;
+      background-size: 919px auto;
+      overflow-x: hidden;
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 839px) {
+    body {
+      background-position: right calc(50% - 460px) top 50px;
+    }
+  }
+</style>
+<link rel="stylesheet" href="/stylesheets/v2.css">
+{% endblock %}
+
+{% block content %}
+<script>document.querySelector(".tm-app-bar").classList.add("tm-app-bar--sticky");</script>
+
+<link rel="stylesheet" href="/stylesheets/hp/jumbotron.css">
+<section class="main-info jumbotron">
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+        <h2 class="jumbotron__title">Vývojáři <br>pro vaše rostoucí revenue</h2>
+        <div class="box box--lead box--mobile-only">
+          <p>Pomáháme našim klientům odemknout potenciál jejich IT.
+            Díky tomu jsou pak schopni pružně reagovat na potřeby trhu a více vydělat.</p>
+        </div>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="akcelerace-webu">
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Nechte váš web vydělávát rychleji</h2>
+        <p>Věděli jste, že váš web vám může vydělávat víc? Máme mnohaleté zkušenosti s tvorbou a optimalizací webů,
+          tak, aby se uživatelé rádi vraceli a našli přesně to, co hledají: <strong>Vaše služby</strong>.</p>
+      </div>
+      <div class="mdc-layout-grid__cell box">
+        <h3>UX analýza</h3>
+      </div>
+      <div class="mdc-layout-grid__cell box">
+        <h3>Analýza bezpečnosti</h3>
+      </div>
+      <div class="mdc-layout-grid__cell box">
+        <h3>Analýza výkonu</h3>
+        <p>Lidé stále častě navštěvují weby z mobilních zařízení,
+          kterým na staré postupy tvorby webů nestačí dech. Umíme najít slabá místa
+          a vdechnout vaším stránkám nový život. Proč jezdit se zataženou ruční brzdou?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Optimalizujte své ceny s ohledem na konkurenci</h2>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="devops">
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Odemkněte potenciál vašeho IT oddělení</h2>
+        <p>Máte problém pružně reagovat na potřeby vašich zákazníků?
+          Je vaše IT oddělení neustále busy, ale váš obchod nedostává požadovanou hodnotu?
+          Máme za sebou více než dekádu zkušeností s adopcí a implemetací
+          Agilních metod vývoje a z nich vycházejících myšlenek jako Continuous
+          Delivery nebo DevOps, které reálně pomáhají doručovat hodnotu častěji.
+          Pomůžeme vám rozhýbat stojaté vody vašeho IT rybníčku.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
