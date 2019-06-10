@@ -1,3 +1,14 @@
 :root {
 
 }
+
+.how-we-work .box {
+  padding-top: 2em;
+  z-index: 15;
+  position: relative;
+  display: grid; }
+.how-we-work .box > svg {
+  margin: 0 auto;
+  height: 140px; }
+.how-we-work .box h3 {
+  text-align: left; }
