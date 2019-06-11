@@ -1,5 +1,25 @@
 :root {
+  --tm-primary: #F6C143;
+  --tm-primary-hover: #F7BD32;
+}
 
+.tm-footer {
+  background-color: var(--tm-black)!important;
+}
+
+.tm-app-bar {
+  color: var(--tm-primary-dark);
+  background-color: white!important;
+
+  box-shadow: 2px 4px 10px rgba(92, 95, 212, 0.1)!important;
+}
+
+.tm-menu__list a {
+  color: var(--tm-black)!important;
+}
+
+.tm-logo {
+  color: var(--tm-black)!important;
 }
 
 .how-we-work .box {
@@ -10,5 +30,47 @@
 .how-we-work .box > svg {
   margin: 0 auto;
   height: 140px; }
-.how-we-work .box h3 {
-  text-align: left; }
+
+.action-button {
+  color: var(--tm-black);
+  padding: 16px 24px;
+  border-radius: 4px;
+
+  box-shadow: 0px 20px 32px -12px rgba(246,193,67,0.35);
+
+  -webkit-transition: all 100ms ease-in-out;
+  -ms-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+
+  &:hover {
+    background-color: var(--tm-primary-hover);
+    box-shadow: 0px 20px 32px -12px rgba(246,193,67,0.10);
+  }
+}
+
+.jumbotron .jumbotron__cta {
+  margin-top: 1.667em!important;
+}
+
+.box {
+  border-radius: 6px;
+
+  box-shadow: 0px 20px 32px -12px rgba(0,0,0,0.1);
+}
+
+hr {
+  background-color: #F3F3F3;
+  height: 2px;
+  border: none;
+}
+
+.center-cta {
+  text-align: center;
+
+  > a {
+    margin-top: 2em;
+  }
+}
+p > strong {
+  color: var(--tm-primary);
+}
