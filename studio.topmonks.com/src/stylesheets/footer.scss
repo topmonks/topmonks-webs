@@ -1,6 +1,5 @@
-
 .tm-footer {
-  background-color: #5C5FD4;
+  background-color: #5c5fd4;
   color: #fff;
 }
 
@@ -35,7 +34,7 @@
 .footer_social-buttons {
   text-align: right;
 }
-.tm-footer nav a{
+.tm-footer nav a {
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -52,7 +51,7 @@
   display: inline-block;
   height: 32px;
   margin: 0;
-  &:first-child{
+  &:first-child {
     padding-left: 6px;
   }
   &:last-child {
