@@ -1,4 +1,5 @@
 {% extends 'layouts/topmonks.html' %}
+{% from 'macros/helpers.html' import avatar %}
 {% set page = 'topmonks-contact' %}
 {% block title %}TopMonks Contacts{% endblock %}
 
@@ -39,7 +40,7 @@
   }
 
   body {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1543140261/topmonks.com/bngd_site.png") center 30% no-repeat;
+    background: url("https://res.cloudinary.com/topmonks/image/upload/f_auto/v1543140261/topmonks.com/bngd_site.png") center 30% no-repeat;
     background-size: 100%;
   }
 
@@ -147,36 +148,15 @@
       </div>
 
       <div
-        class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
-        itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
-        <h3><b>US Sales</b></h3>
-        <p class="box_text-about">We are open for new deals and experiences in the United States. In case you have
-          something interesting to say,
-          contact Simona.</p>
-        <div class="mdc-layout-grid__inner">
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-            <img alt="[foto] Simona Zábržová" src="https://insight.topmonks.com/avatar/simona-zabrzova"
-                 onerror="this.onerror=null; this.src='/images/monk_logo-c877778634.png'" width="112" height="112">
-          </div>
-          <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-            <p><span itemprop="name">Simona Zábržová</span><br/>
-              <a itemprop="telephone" href="tel:+420777285544">+420 777 285 544</a><br>
-              <a itemprop="email" href="mailto:simona.zabrzova&#64;topmonks.com">simona.zabrzova@​topmonks.com</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
+        class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
         itemprop="employee" itemscope
         itemtype="https://schema.org/Person">
-        <h3><b>Sales</b></h3>
+        <h3>Sales</h3>
         <p class="box_text-about">If you're medium or large size organization and you're looking to solve
           existing challenge, please get in touch with&nbsp;Ondrej.</p>
         <div class="mdc-layout-grid__inner">
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-            <img alt="[foto] Ondrej Tupý" src="https://insight.topmonks.com/avatar/ondrej-tupy"
-                 onerror="this.onerror=null; this.src='/assets/img/monk_logo-c877778634.png'" width="112" height="112">
+          <div class="mdc-layout-grid__cell">
+            {{ avatar(members['ondrej-tupy'], 112) }}
           </div>
           <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
             <p><span itemprop="name">Ondrej Tupý</span><br>
@@ -187,17 +167,35 @@
       </div>
 
       <div
-        class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
+        class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
         itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
-        <h3><b>Startup studio</b></h3>
+        <h3>Blockchain studio</h3>
+        <p class="box_text-about">If you are ready to
+          <a href="https://blockchain.topmonks.com">bring blockchain to your business</a>,
+          don't hesitate to contact Lea.</p>
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell">
+            {{ avatar(members['lea-petrasova'], 112) }}
+          </div>
+          <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+            <p><span itemprop="name">Lea Petrášová</span><br/>
+              <a itemprop="telephone" href="tel:+421948609650">+421&nbsp;948&nbsp;609&nbsp;650</a><br>
+              <a itemprop="email" href="mailto:blockchain&#64;topmonks.com">blockchain<!---->@​topmonks.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
+        <h3>Startup studio</h3>
         <p class="box_text-about"><a href="https://studio.topmonks.com/">TopMonks Startup Monastery</a> can boost your
           idea from scratch. We are
           your tech
           angels &amp; first investors.</p>
         <div class="mdc-layout-grid__inner">
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-            <img alt="[foto] Jiří Pénzeš" src="https://insight.topmonks.com/avatar/jiri-penzes"
-                 onerror="this.onerror=null; this.src='/assets/img/monk_logo-c877778634.png'" width="112" height="112">
+          <div class="mdc-layout-grid__cell">
+            {{ avatar(members['jiri-penzes'], 112) }}
           </div>
           <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
             <p><span itemprop="name">Jirka Pénzeš</span><br>
@@ -208,16 +206,15 @@
       </div>
 
       <div
-        class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
+        class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
         itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
-        <h3><b>Happy Maker AKA HR</b></h3>
+        <h3>Happy Maker AKA HR</h3>
         <p class="box_text-about">We are always on the lookout for talented Monks to join our team. Take a look at <a
           href="https://www.topmonks.com/jobs">Jobs</a> page
           or just contact Anička.</p>
         <div class="mdc-layout-grid__inner">
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-            <img alt="[foto] Anička Kovácsová" src="https://insight.topmonks.com/avatar/anna-kovacsova"
-                 onerror="this.onerror=null; this.src='/assets/img/monk_logo-c877778634.png'" width="112" height="112">
+          <div class="mdc-layout-grid__cell">
+            {{ avatar(members['anna-kovacsova'], 112) }}
           </div>
           <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
             <p><span itemprop="name">Anička Kovácsová</span><br>
@@ -229,6 +226,16 @@
     </div>
   </section>
 
+{% macro map(alt, src) %}
+  <img alt="{{ alt }}"
+       src="https://res.cloudinary.com/topmonks/image/upload/c_scale,w_366,f_auto/{{ src }}"
+       srcset="https://res.cloudinary.com/topmonks/image/upload/c_scale,w_366,f_auto/{{ src }} 1x,
+               https://res.cloudinary.com/topmonks/image/upload/c_scale,w_366,f_auto,dpr_1.5/{{ src }} 1.5x,
+               https://res.cloudinary.com/topmonks/image/upload/c_scale,w_366,f_auto,dpr_2/{{ src }} 2x,
+               https://res.cloudinary.com/topmonks/image/upload/c_scale,w_366,f_auto,dpr_3/{{ src }} 3x,"
+       width="100%">
+{% endmacro %}
+
   <section id="offices" class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -238,9 +245,7 @@
            itemtype="https://schema.org/Organization"
            id="prague">
         <a href="https://goo.gl/maps/SBK1BRsmgu22" class="map" title="Show Prague Office on map">
-          <img alt="[mapa] Praha Spořilov"
-               src="https://res.cloudinary.com/topmonks/image/upload/v1544699864/topmonks.com/Contact/map_prague.png"
-               width="100%">
+          {{ map(alt="[mapa] Praha Spořilov", src="v1544699864/topmonks.com/Contact/map_prague.png") }}
         </a>
         <div class="content">
           <h3 itemprop="name">Prague</h3>
@@ -264,9 +269,7 @@
            itemtype="https://schema.org/Organization"
            id="ostrava">
         <a href="https://goo.gl/maps/SkoWqfoKgg12" class="map" title="Show Ostrava Office on map">
-          <img alt="[mapa] Ostrava"
-               src="https://res.cloudinary.com/topmonks/image/upload/v1544690834/topmonks.com/Contact/map_ostrava.png"
-               width="100%">
+          {{ map(alt="[mapa] Ostrava", src="v1544690834/topmonks.com/Contact/map_ostrava.png") }}
         </a>
         <div class="content">
           <h3 itemprop="name">Ostrava</h3>
@@ -290,9 +293,7 @@
            itemtype="https://schema.org/Organization"
            id="san-francisco">
         <a href="https://goo.gl/maps/YAJRUb1rDox" class="map" title="Show San Francisco Office on map">
-          <img alt="[mapa] San Francisco"
-               src="https://res.cloudinary.com/topmonks/image/upload/v1544690861/topmonks.com/Contact/map_sanfrancisco.png"
-               width="100%">
+          {{ map(alt="[mapa] San Francisco", src="v1544690861/topmonks.com/Contact/map_sanfrancisco.png") }}
         </a>
         <div class="content">
           <h3 itemprop="name">San Francisco</h3>
@@ -306,10 +307,10 @@
               <span itemprop="addressCountry">United States</span>
             </div>
             <a href="https://goo.gl/maps/UXjifMwu2h42" class="button" data-marker="san-francisco">show on map</a>
-            <!--<div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-              <meta itemprop="latitude" content="37.336482">
-              <meta itemprop="longitude" content="-121.8905285">
-            </div>-->
+            <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+              <meta itemprop="latitude" content="37.7812056">
+              <meta itemprop="longitude" content="-122.4102898">
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 {% extends 'layouts/topmonks.html' %}
+{% from 'macros/helpers.html' import avatar %}
 {% set page = 'topmonks-jobs' %}
 {% block title %}TopMonks Opened Job Positions{% endblock %}
 {% block preload %}
@@ -630,14 +631,7 @@
       <div class="mdc-layout-grid__inner">
         <div
           class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-iphone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <img alt="[foto] Anička Kovácsová" loading="lazy"
-               src="https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto/https://insight.topmonks.com/avatar/anna-kovacsova"
-               srcset="https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto/https://insight.topmonks.com/avatar/anna-kovacsova 1x,
-                       https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto,dpr_1.5/https://insight.topmonks.com/avatar/anna-kovacsova 1.5x,
-                       https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto,dpr_2/https://insight.topmonks.com/avatar/anna-kovacsova 2x,
-                       https://res.cloudinary.com/topmonks/image/fetch/w_112,f_auto,dpr_3/https://insight.topmonks.com/avatar/anna-kovacsova 3x,"
-               onerror="this.onerror=null; this.src='/assets/img/monk_logo-c877778634.png'"
-               width="112" height="112">
+          {{ avatar(members['anna-kovacsova'], 112) }}
         </div>
         <div
           class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-4-iphone mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-10-desktop">
