@@ -6925,10 +6925,10 @@ loader-utils@^1.0.2, loader-utils@^1.1.0:
     emojis-list "^2.0.0"
     json5 "^1.0.1"
 
-local-web-server@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/local-web-server/-/local-web-server-3.0.0.tgz#4f381241673deb244b860926eafb162184d11bfd"
-  integrity sha512-Kh6hopvUriCVusLN6zd1aA4YkbrNJb+PEEQjzH392XOyJcv8BukIQhwKf8knUObE85qhDY7ageTzsadYxYwxXQ==
+local-web-server@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/local-web-server/-/local-web-server-3.0.1.tgz#60e133881e692c5f03fb7c0c77acfb5d18094949"
+  integrity sha512-lXCqMW1DqKfw+5UeVYJ1FmCDP3I0AEimGQ1dZmxUjNSxRyoTyxgFrDH9BT1K8icOvRR0mMlo2VD5tEqC81x0iw==
   dependencies:
     lws "2.0.0"
     lws-basic-auth "^1.0.3"
@@ -6943,9 +6943,9 @@ local-web-server@^3.0.0:
     lws-mime "^1.0.1"
     lws-range "^2.0.1"
     lws-request-monitor "^1.0.4"
-    lws-rewrite "^2.0.2"
+    lws-rewrite "^2.0.3"
     lws-spa "^2.0.1"
-    lws-static "^1.1.2"
+    lws-static "^1.1.3"
     node-version-matches "^1.0.1"
 
 localtunnel@1.9.1:
@@ -7301,7 +7301,7 @@ lws-request-monitor@^1.0.4:
   dependencies:
     byte-size "^5.0.1"
 
-lws-rewrite@^2.0.2:
+lws-rewrite@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/lws-rewrite/-/lws-rewrite-2.0.3.tgz#7449e969c5ea3f03225ea7d7dc42bf9fb38aa56d"
   integrity sha512-Kr1dTnkvWOv4kzMdZZWL+Fe84g2z0UsZw5CrRNPqxQ1ee85v+/CFGde2ky8+PLx5jl6NHWpWmqWKAAid6cd5qw==
@@ -7320,10 +7320,10 @@ lws-spa@^2.0.1:
   dependencies:
     koa-send "^5.0.0"
 
-lws-static@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/lws-static/-/lws-static-1.1.2.tgz#4c8b9ebafc9b6dfeb20d08f989e3f3c7e521bd5c"
-  integrity sha512-d42u7bM9W2+BGCne9jD7F8I6oe9i7kqtw/0GIX5C6c2zSTUI67U8RXAthKOaXay8UBAyro+Xoy4R8nbD7bAlXg==
+lws-static@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/lws-static/-/lws-static-1.1.3.tgz#22b91d9638366507ebeb2796f71fd3f2612c7e84"
+  integrity sha512-0f9kiddam/QZ05y9X+HwNtvdaOppub3vkZ+9lq2Vkt4tZ9IaXydsjBjOkjIQf70dsgFPlVqkC+NysYTXEuO19g==
   dependencies:
     koa-static "^5.0.0"
 
