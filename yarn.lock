@@ -433,10 +433,10 @@
     read-package-tree "^5.2.1"
     resolve "^1.7.1"
 
-"@pulumi/pulumi@^0.17.1", "@pulumi/pulumi@^0.17.16":
-  version "0.17.16"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.17.16.tgz#4b381fd9b515a6d70174603b992f40e44dc4ab9d"
-  integrity sha512-qSaGnwkMBtjEOdYNmTsL813VbC0Q6tlpA3rfxOllV3QVVw203EtzHLhViAHFsgLs46aroqYD0J8KkxvCMyE8BQ==
+"@pulumi/pulumi@^0.17.1", "@pulumi/pulumi@^0.17.17":
+  version "0.17.17"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.17.17.tgz#c2a8c855ebe71d16e2aff3a3cb7aa1c1a01fb235"
+  integrity sha512-eCf/ZX9J7rxuZKcGsZ/EKi+rIwkvyJC/hnlzIpQ7Spm0qsj/6uQySL2+Hp8i4Lbkjei0F540wuhnjzZFqkzQOA==
   dependencies:
     "@pulumi/query" "^0.3.0"
     google-protobuf "^3.5.0"
