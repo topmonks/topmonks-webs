@@ -33,7 +33,7 @@ To setup your macOS run these commands in Terminal application
 ```
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# Insatll git
+# Install git
 brew install git
 # Install Node.js Version Manager
 brew install nvm
