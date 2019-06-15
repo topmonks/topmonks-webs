@@ -1,6 +1,6 @@
 :root {
-  --tm-primary: #F6C143;
-  --tm-primary-hover: #F7BD32;
+  --tm-primary: #f3d250;
+  --tm-primary-hover: #ffcb00;
 }
 
 .tm-footer {
@@ -30,6 +30,10 @@
 .how-we-work .box > svg {
   margin: 0 auto;
   height: 140px; }
+
+.how-we-work .box > h3 {
+  text-align: left;
+}
 
 .action-button {
   color: var(--tm-black);
