@@ -2932,10 +2932,10 @@ commander@^2.2.0, commander@^2.20.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
   integrity sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
 
-common-log-format@~0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/common-log-format/-/common-log-format-0.1.4.tgz#39ba6ccb5c46c2f89aa92f232866d18f18075ba9"
-  integrity sha512-BXcgq+wzr2htmBmnT7cL7YHzPAWketWbr4kozjoM9kWe4sk3+zMgjcH0HO+EddjDlEw2LZysqLpVRwbF318tDw==
+common-log-format@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/common-log-format/-/common-log-format-1.0.0.tgz#0ecfb959ca637b44a9c3e6e08a3bee3e9db67f3f"
+  integrity sha512-fFn/WPNbsTCGTTwdCpZfVZSa5mgqMEkA0gMTRApFSlEsYN+9B2FPfiqch5FT+jsv5IV1RHV3GeZvCa7Qg+jssw==
 
 common-path-prefix@^1.0.0:
   version "1.0.0"
@@ -6925,12 +6925,12 @@ loader-utils@^1.0.2, loader-utils@^1.1.0:
     emojis-list "^2.0.0"
     json5 "^1.0.1"
 
-local-web-server@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/local-web-server/-/local-web-server-3.0.1.tgz#60e133881e692c5f03fb7c0c77acfb5d18094949"
-  integrity sha512-lXCqMW1DqKfw+5UeVYJ1FmCDP3I0AEimGQ1dZmxUjNSxRyoTyxgFrDH9BT1K8icOvRR0mMlo2VD5tEqC81x0iw==
+local-web-server@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/local-web-server/-/local-web-server-3.0.2.tgz#f0dcc6f2d8f55ac005923e28e2c3171d8e1828e9"
+  integrity sha512-Jp5UO1WwhIk86j82HVnXs8kiZ//YBl/a+Gjief4xE9xc00LSU+dvxm2s3+4OfhisyHifQrT90aTlFYEe5Zp/Ng==
   dependencies:
-    lws "2.0.0"
+    lws "^2.0.1"
     lws-basic-auth "^1.0.3"
     lws-blacklist "^2.0.2"
     lws-body-parser "^1.0.2"
@@ -6939,7 +6939,7 @@ local-web-server@^3.0.1:
     lws-cors "^2.0.1"
     lws-index "^1.0.4"
     lws-json "^1.0.1"
-    lws-log "^1.0.2"
+    lws-log "^1.0.3"
     lws-mime "^1.0.1"
     lws-range "^2.0.1"
     lws-request-monitor "^1.0.4"
@@ -7274,13 +7274,13 @@ lws-json@^1.0.1:
   dependencies:
     koa-json "^2.0.2"
 
-lws-log@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/lws-log/-/lws-log-1.0.2.tgz#382639d32ae0201ec979946bee1b39ef56a4d4fb"
-  integrity sha512-bJVcNiO43nnVtC/+QSnH1noNfBfgXJc98uLwCgofeDieTcQ56fWi+lX3DdXP5yN7p8J4ZrKVFBraA93TOF+p1g==
+lws-log@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/lws-log/-/lws-log-1.0.3.tgz#58ec675ae95679c4c7e14622f6dc100878ab0d7f"
+  integrity sha512-lxOsQgXbWd7Xwny5dVZnYUu7b6nSoT3o5A+OEuktxomEAG7Eirb6o8eOkeTMbfhE9/qfviXb5W2rFDcWk+UAlA==
   dependencies:
     koa-morgan "^1.0.1"
-    stream-log-stats "^3.0.0"
+    stream-log-stats "^3.0.1"
 
 lws-mime@^1.0.1:
   version "1.0.1"
@@ -7327,10 +7327,10 @@ lws-static@^1.1.3:
   dependencies:
     koa-static "^5.0.0"
 
-lws@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/lws/-/lws-2.0.0.tgz#ebb0077b09762f2b9ed06a457ccc50d4f8160098"
-  integrity sha512-OgAJ7Od6nteHv1p8QQPc28xFNZrPLBkyOu8lHsVH0Eo4qYPiY/401LHnIKwJEAQZAV8YF0lSL7/mtSxAM+mAVg==
+lws@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/lws/-/lws-2.0.1.tgz#a11642e95e3032779db5039a8dfa73ea852ca8a2"
+  integrity sha512-9aXsOibjPeHxb9xfPws5beM2YAyRW4QWj9rORBKOe/W9Pca67Ftx8zPSyUsgLTo7QUFi6hFK/J+xCYnvzGMzzw==
   dependencies:
     ansi-escape-sequences "^4.1.0"
     array-back "^3.1.0"
@@ -10675,15 +10675,15 @@ stream-length@^1.0.1, stream-length@^1.0.2:
   dependencies:
     bluebird "^2.6.2"
 
-stream-log-stats@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/stream-log-stats/-/stream-log-stats-3.0.0.tgz#072cdf861f6db55066e41a46ce015b029be2e9c2"
-  integrity sha512-rv7anqmc2fYKfCkLeISQbtw1ebyiapl34AltF04cknL/l1IGbffAB0DN2NvH3ec57kXwzJBOK6ZsjxP41Ai5IA==
+stream-log-stats@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/stream-log-stats/-/stream-log-stats-3.0.1.tgz#bf5ab9f5ee4e089f653a61fcac2a16fd86120f02"
+  integrity sha512-FmaeaSGmhuYkYfD9HAnTJxmqH2nASpUvYl4/KiWF5mOUW3i0EEfqWJOka20M/rLKotsl8HEQM3OtNqd2xZnZfQ==
   dependencies:
     JSONStream "^1.3.5"
     ansi-escape-sequences "^4.1.0"
     byte-size "^5.0.1"
-    common-log-format "~0.1.4"
+    common-log-format "^1.0.0"
     lodash.throttle "^4.1.1"
     stream-via "^1.0.4"
     table-layout "~0.4.4"
