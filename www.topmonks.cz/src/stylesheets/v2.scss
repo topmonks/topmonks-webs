@@ -2,44 +2,40 @@
   --tm-primary: #F7BD41;
   --tm-primary-hover: #F4A23A;
   --tm-primary-light: #FDEFC5;
-
   --tm-secondary: #7462e0;
   --tm-link: #133490;
+  --tm-black-title: #001F3F;
+  --tm-logo: #001F3F;
 
-  --tm-black: #001F3F;
-}
-
-body, h1, h2, h3{
-  color: var(--tm-black)!important;
-}
-
-.tm-footer {
-  background-color: var(--tm-black)!important;
-}
-
-.tm-app-bar {
-  color: var(--tm-primary-dark);
-  background-color: white!important;
-
-  box-shadow: 2px 4px 10px rgba(92, 95, 212, 0.1)!important;
-}
-
-.tm-menu__list a {
-  color: var(--tm-black)!important;
-
-  &:hover {
-    color: var(--tm-primary)!important;
-    text-decoration: none;
-    border-bottom: 2px solid var(--tm-primary-light);
-  }
+  --tm-hamburger-label: rgba(0,0,0,0.25);
 }
 
 .tm-logo {
-  color: var(--tm-black)!important;
+  color: var(--tm-logo);
+}
+.tm-footer {
+  background-color: var(--tm-black-title);
 }
 
-.jumbotron h2 {
-  color: var(--tm-black)!important;
+.tm-app-bar {
+  color: var(--tm-black-title);
+  background-color: var(--tm-white);
+  box-shadow: var(--tm-basic-shadow);
+}
+
+.tm-hamburger .tm-hamburger__container::after {
+  color: var(--tm-hamburger-label);
+}
+
+
+.tm-menu__list a {
+  color: var(--tm-black-title);
+
+  &:hover {
+    color: var(--tm-primary);
+    text-decoration: none;
+    border-bottom: 2px solid var(--tm-primary-light);
+  }
 }
 
 .how-we-work .box {
@@ -79,7 +75,7 @@ body, h1, h2, h3{
 .box {
   border-radius: 6px;
 
-  box-shadow: 0px 20px 32px -12px rgba(0,0,0,0.1);
+  box-shadow: var(--tm-basic-shadow);
 }
 
 hr {

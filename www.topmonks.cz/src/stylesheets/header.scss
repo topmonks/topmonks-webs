@@ -7,7 +7,7 @@
   letter-spacing: -1px;
   text-decoration: none;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--tm-logo);
   @media screen and (max-width: 479px) {
     font-size: 24px;
     padding-top: 2px;
@@ -39,7 +39,7 @@
   }
   .tm-hamburger__container::after {
     content: "menu";
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--tm-hamburger-label);
     text-transform: uppercase;
     font-size: 13px;
     position: absolute;
@@ -47,7 +47,7 @@
     left: 36px;
   }
   .tm-hamburger__bar {
-    background-color: #fff;
+    background-color: var(--tm-primary);
     width: 20px;
     height: 2px;
     position: absolute;
@@ -81,7 +81,7 @@
   z-index: 1000;
   top: 0;
   transition: all 0.2s;
-  background-color: var(--tm-secondary);
+  background-color: var(--tm-white);
   @media screen and (max-width: 839px) {
     height: 52px;
     .tm-layout-wrapper {
@@ -103,10 +103,10 @@
 }
 
 .tm-app-bar--sticky {
-  background-color: #fff;
-  box-shadow: 2px 4px 10px rgba(92, 95, 212, 0.1);
+  background: var(--tm-white);
+  box-shadow: var(--tm-basic-shadow);
   .tm-logo {
-    color: var(--tm-secondary);
+    color: var(--tm-black-title);
   }
   .tm-hamburger .tm-hamburger__bar {
     background-color: var(--tm-primary);
@@ -177,9 +177,9 @@
   }
 }
 
-.tm-menu__list a {
-  color: #fff;
-}
+/*.tm-menu__list a {
+  color: var(--tm-white);
+}*/
 
 .tm-menu--horizontal .tm-menu__list {
   display: flex;
@@ -192,7 +192,15 @@
   font-weight: bold;
   display: inline-block;
   padding: 4px 8px;
+  color: var(--tm-black-title);
+
+  &:hover {
+    color: var(--tm-primary);
+  }
 }
+
+
+
 .tm-menu--horizontal .tm-menu__list li + li {
   margin-left: 4px;
 }
