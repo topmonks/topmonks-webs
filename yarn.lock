@@ -421,19 +421,19 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
-"@pulumi/aws@^0.17.1":
-  version "0.17.1"
-  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-0.17.1.tgz#1aa2042a9ff466f5556c2332ffe4ebe8f0322ace"
-  integrity sha512-XWJWt9kWncBZJTeL7J1bcy0vE2bXKkqeK9F6DExZwD9uq6zwUPyy+F1LllzZDOLA1ZY1u1uM8SaEjGe4GQwCPQ==
+"@pulumi/aws@^0.18.11":
+  version "0.18.11"
+  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-0.18.11.tgz#01a3040d03614a21dd5195b682837a0eda292bd6"
+  integrity sha512-wBUzAhG1RlmBHf2mp2qu/m+BRFb1zhuBx5NPrRA4J1JsGpM9oTCbjFTXZoeysSV1WspZHev8foYdf8ZK130W3Q==
   dependencies:
-    "@pulumi/pulumi" "^0.17.1"
+    "@pulumi/pulumi" "^0.17.16"
     aws-sdk "^2.0.0"
     builtin-modules "3.0.0"
     mime "^2.0.0"
     read-package-tree "^5.2.1"
     resolve "^1.7.1"
 
-"@pulumi/pulumi@^0.17.1", "@pulumi/pulumi@^0.17.16":
+"@pulumi/pulumi@^0.17.16":
   version "0.17.16"
   resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.17.16.tgz#4b381fd9b515a6d70174603b992f40e44dc4ab9d"
   integrity sha512-qSaGnwkMBtjEOdYNmTsL813VbC0Q6tlpA3rfxOllV3QVVw203EtzHLhViAHFsgLs46aroqYD0J8KkxvCMyE8BQ==
@@ -9978,13 +9978,7 @@ resolve-url@^0.2.1:
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
   integrity sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
 
-resolve@^1.1.6, resolve@^1.1.7, resolve@^1.3.2, resolve@^1.4.0, resolve@^1.7.1:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.10.0.tgz#3bdaaeaf45cc07f375656dfd2e54ed0810b101ba"
-  dependencies:
-    path-parse "^1.0.6"
-
-resolve@^1.10.0, resolve@^1.10.1:
+resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.3.2, resolve@^1.4.0, resolve@^1.7.1:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.11.0.tgz#4014870ba296176b86343d50b60f3b50609ce232"
   integrity sha512-WL2pBDjqT6pGUNSUzMw00o4T7If+z4H2x3Gz893WoUQ5KW8Vr9txp00ykiP16VBaZF5+j/OcXJHZ9+PCvdiDKw==
