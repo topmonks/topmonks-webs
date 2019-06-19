@@ -5,6 +5,8 @@
   --topmonks-caffe-pink: #F64060;
   --topmonks-caffe-dark_blue: #233341;
 
+  --tm-btn-transition: all 100ms ease-in-out;
+
 }
 
 /*
@@ -149,6 +151,8 @@ a {
   background-color: var(--topmonks-caffe-orange);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, .16);
   width: fit-content;
+
+  transition: var(--tm-btn-transition);
 
   &:hover {
     background-color: var(--topmonks-caffe-dark_blue);
@@ -417,5 +421,3 @@ nav {
     font-weight: bold;
   }
 }
-
-
