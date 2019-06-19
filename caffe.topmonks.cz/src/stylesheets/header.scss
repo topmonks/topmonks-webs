@@ -153,6 +153,9 @@
 
 .tm-menu {
   @media screen and (min-width: 1024px) {
+    a {
+      border-bottom: 1px solid transparent;
+    }
     a:hover {
       border-bottom: 1px solid #F64060;
     }
