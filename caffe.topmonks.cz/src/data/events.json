@@ -462,7 +462,7 @@
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-02-06T19:47:15.805Z"
+			"updatedAt": "2019-06-24T06:46:21.685Z"
 		},
 		"39": {
 			"sessionNumber": 39,
@@ -522,7 +522,7 @@
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-02-06T19:47:15.805Z"
+			"updatedAt": "2019-06-24T06:50:39.141Z"
 		},
 		"43": {
 			"sessionNumber": 43,
@@ -642,12 +642,12 @@
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-02-06T19:47:15.806Z"
+			"updatedAt": "2019-06-24T06:46:07.352Z"
 		},
 		"51": {
 			"sessionNumber": 51,
 			"title": "It depends - designeři TopMonks o UX",
-			"shortTitle": "It depends - designeři TopMonks o UX",
+			"shortTitle": "It depends",
 			"lecturers": "Pavel Trnka, Radek Jakl, Tomáš Paulus",
 			"date": "1. listopadu 2018",
 			"address": "Jamm Club, Pod kaštany 3, 160 00 Praha",
@@ -657,7 +657,7 @@
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-02-06T19:47:15.807Z"
+			"updatedAt": "2019-06-24T06:50:19.490Z"
 		},
 		"52": {
 			"sessionNumber": 52,
@@ -672,7 +672,7 @@
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-02-06T19:47:15.807Z"
+			"updatedAt": "2019-06-24T06:50:29.816Z"
 		},
 		"53": {
 			"sessionNumber": 53,
@@ -698,11 +698,11 @@
 			"address": "Jamm Club<br>Pod kaštany 3, 160 00 Praha",
 			"mapLink": "https://goo.gl/maps/D2WMNNpDZ9D2",
 			"link": "https://www.meetup.com/TopMonks-Caffe/events/258122001/",
-			"picture": "/images/posters-small/2019-02-06.jpg",
+			"picture": "/images/posters-small/2019-02-07.jpg",
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-02-06T19:47:15.807Z"
+			"updatedAt": "2019-06-24T06:51:52.791Z"
 		},
 		"55": {
 			"sessionNumber": 55,
@@ -717,7 +717,7 @@
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-06-11T07:08:00.364Z"
+			"updatedAt": "2019-06-24T06:44:09.695Z"
 		},
 		"56": {
 			"sessionNumber": 56,
@@ -732,12 +732,12 @@
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-06-11T07:08:00.365Z"
+			"updatedAt": "2019-06-24T06:54:41.620Z"
 		},
 		"57": {
 			"sessionNumber": 57,
 			"title": "PWA, Java a Reactor Flux",
-			"shortTitle": "PWA, Java, Reactor Flux",
+			"shortTitle": "PWA, Java a Reactor Flux",
 			"lecturers": "Aleš Roubíček, Jirka Pénzeš, Libor Míka",
 			"date": "2. května 2019",
 			"address": "Jamm Club<br>Pod kaštany 3, 160 00 Praha",
@@ -747,13 +747,12 @@
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-06-11T07:08:00.365Z"
-		}
-		,
+			"updatedAt": "2019-06-24T06:50:09.923Z"
+		},
 		"58": {
 			"sessionNumber": 58,
 			"title": "Bezpečnosť, optimalizace a uživatelské testování",
-			"shortTitle": "Owasp, optimalizace a testovanie",
+			"shortTitle": "Bezpečnosť, optimalizace a uživatelské testování",
 			"lecturers": "Aleš Roubíček, Jirka Jansa, Tom Paulus",
 			"date": "6. června 2019",
 			"address": "OSSEGG Praha, Římská 2135/45 · Praha-Vinohrady",
@@ -763,7 +762,7 @@
 			"presentationLink": null,
 			"videoLink": null,
 			"body": "",
-			"updatedAt": "2019-06-11T07:08:00.365Z"
+			"updatedAt": "2019-06-24T06:49:59.652Z"
 		}
 	}
 }
