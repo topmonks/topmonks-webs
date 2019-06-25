@@ -14,7 +14,11 @@
   <a href="{{eventData.link}}">
     <img alt="TopMonks Caffè - {{eventData.title}}"
          loading="lazy"
-         src="https://res.cloudinary.com/topmonks/image/fetch/f_auto,dpr_auto,w_320/http://caffe.topmonks.cz{{eventData.picture}}">
+         src="https://res.cloudinary.com/topmonks/image/fetch/f_auto,dpr_auto,w_320/http://caffe.topmonks.cz{{eventData.picture}}"
+         srcset="https://res.cloudinary.com/topmonks/image/fetch/f_auto,dpr_1,w_320/http://caffe.topmonks.cz{{eventData.picture}} 1x,
+                 https://res.cloudinary.com/topmonks/image/fetch/f_auto,dpr_1.5,w_320/http://caffe.topmonks.cz{{eventData.picture}} 1.5x,
+                 https://res.cloudinary.com/topmonks/image/fetch/f_auto,dpr_2,w_320/http://caffe.topmonks.cz{{eventData.picture}} 2x,
+                 https://res.cloudinary.com/topmonks/image/fetch/f_auto,dpr_3,w_320/http://caffe.topmonks.cz{{eventData.picture}} 3x">
   </a>
   <h4>{{eventData.shortTitle}}</h4>
   <p>
