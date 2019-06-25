@@ -281,7 +281,8 @@ jobs:
 workflows:
   build_and_deploy:
     jobs:
-      - build
+      - build:
+          context: org-global
       - pre-provision:
           context: org-global
       - preview-provision:
