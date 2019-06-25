@@ -1,5 +1,4 @@
-{%- import 'macros/helpers.html' as macros -%}
-
+{%- from 'macros/helpers.html' import eventInfo -%}
 {% set eventsCount = events | length %}
 {% set eventsList = events | list %}
 {% set upcomingEvent = eventsList | last %}
@@ -38,8 +37,6 @@
   <link rel="stylesheet" href="/stylesheets/main.css">
   <link rel="stylesheet" href="/stylesheets/footer.css">
   <link rel="stylesheet" href="/stylesheets/header.css">
-
-
 </head>
 
 <body>
@@ -348,7 +345,7 @@
           <h2 style="margin-bottom: 0.3em">Předchozí seance</h2>
         </div>
         {% for i in range(eventsCount -1, 0, -1) -%}
-        {{ macros.eventInfo(eventsList[i].value) }}
+          {{ eventInfo(eventsList[i].value, posters) }}
         {%- endfor %}
         <!--div class="seance_posters mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <a href="">Zobrazit všechny...</a>

@@ -67,6 +67,15 @@ Start `www.topmonks.com` development with following command:
 yarn start:www.topmonks.com
 ```
 
+TopMonks Caffè site has ability to automatically upload posters to Cloudinary.
+For local development you'll need to generate local posters data file. One time run this command:
+
+```
+yarn start:caffe.topmonks.cz upload-posters
+```
+
+In production this is generated automatically. In development it not - for sane build times and to keep upload quotas.
+
 ### Sites available
 
 The following sites can be build and ran using the `yarn start:[SITE]` command.
