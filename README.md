@@ -68,9 +68,12 @@ yarn start:www.topmonks.com
 ```
 
 TopMonks Caffè site has ability to automatically upload posters to Cloudinary.
-For local development you'll need to generate local posters data file. One time run this command:
+For local development you'll need to generate local posters data file. 
+Go to [Cloudinary console](https://cloudinary.com/console) (credentials are in TopMonks 1pwd)
+and copy the `Environment variable` with credentials. One time run those commands:
 
 ```
+pbpaste > .env
 yarn start:caffe.topmonks.cz upload-posters
 ```
 
