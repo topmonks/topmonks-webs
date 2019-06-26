@@ -353,9 +353,10 @@
   dependencies:
     vary "^1.1.2"
 
-"@material/layout-grid@^0.41.0":
-  version "0.41.0"
-  resolved "https://registry.yarnpkg.com/@material/layout-grid/-/layout-grid-0.41.0.tgz#2e7d3be76313e0684d573b10c2c6a88b3230d251"
+"@material/layout-grid@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@material/layout-grid/-/layout-grid-3.0.0.tgz#910912fe5ec7fb369cf62d64cbb8619d611a9663"
+  integrity sha512-MZu6/0vc/1Pum1t63KoxQSTkmIs1FxSmaRWqbdAFT9fTlbB+0VEiPI1m4n/y5R/mQUCzMLq2gj4slrjVFjvtUQ==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
