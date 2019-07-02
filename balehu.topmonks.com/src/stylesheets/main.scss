@@ -8,6 +8,7 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: "Proxima Nova", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .bl-layout-wrapper {
@@ -72,5 +73,37 @@ body {
     border-bottom: 4px solid #B1AEF8;
   }
 
+}
+
+h1 {
+  font-size: 54px;
+}
+h2.title {
+  font-size: 24px;
+}
+h2 {
+  font-size: 48px;
+}
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: -webkit-inline-flex;
+}
+header {
+  .logo {
+    align-self: center;
+    font-size: 24px;
+    font-weight: 900;
+  }
+  ul.menu_list {
+    display: inline-flex;
+    li {
+      font-size: 18px;
+      padding-right: 28px;
+      list-style: none;
+    }
+  }
 }
 
