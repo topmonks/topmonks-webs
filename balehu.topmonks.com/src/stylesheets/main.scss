@@ -1,4 +1,5 @@
 @import "@material/layout-grid/mdc-layout-grid";
+
 :root {
   --mdc-layout-grid-margin-desktop: 24px;
   --mdc-layout-grid-gutter-desktop: 20px;
@@ -11,8 +12,25 @@ body {
   font-family: "Proxima Nova", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+header {
+  background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
+  li a, .logo {
+    color: #FFFFFF;
+  }
+}
+
+footer {
+  li a {
+    color: black;
+  }
+}
+
+section {
+  margin: 24px 0;
+}
+
 .bl-layout-wrapper {
-  max-width: 1030px;
+  max-width: 1060px;
   margin: 0 auto;
   //--mdc-layout-grid-margin-desktop: 0;
   //--mdc-layout-grid-margin-tablet: 0;
@@ -37,12 +55,15 @@ body {
       border: 0;
     }
   }
+
   &-item img {
     width: 100%;
   }
+
   &-slider {
     padding-left: 0;
   }
+
   &-outer [data-action] {
     display: block;
     margin: 10px auto;
@@ -54,7 +75,7 @@ body {
   }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
   .bl-layout--order-1-mobile {
     order: 1;
   }
@@ -64,10 +85,12 @@ body {
   &__input {
     border: none;
   }
+
   &__output {
     min-width: 3em;
     display: inline-block;
   }
+
   &__input,
   &__output {
     border-bottom: 4px solid #B1AEF8;
@@ -75,15 +98,56 @@ body {
 
 }
 
-h1 {
-  font-size: 54px;
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 54px;
+    color: #FFFFFF;
+  }
+
+  h2.title {
+    font-size: 24px;
+  }
+  h2.title_center {
+    text-align: center;
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 48px;
+    padding-bottom: 36px;
+  }
+  nav a:hover {
+    color: #32305D;
+  }
 }
-h2.title {
-  font-size: 24px;
+
+@media (max-width: 999px) {
+  h1 {
+    font-size: 26px;
+    color: #FFFFFF;
+  }
+
+  h2.title {
+    font-size: 18px;
+  }
+  h2.title_center {
+    text-align: center;
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
 }
-h2 {
-  font-size: 48px;
-}
+
 a {
   text-decoration: none;
 }
@@ -91,19 +155,141 @@ a {
 nav {
   display: -webkit-inline-flex;
 }
-header {
-  .logo {
-    align-self: center;
-    font-size: 24px;
-    font-weight: 900;
+
+.button {
+  border-radius: 3.61742px;
+  font-size: 1.33em;
+  color: #FFFFFF;
+  background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
+  padding: .77em 2.2em;
+  box-shadow: 0px 14.4697px 43.4091px rgba(138, 130, 219, 0.2);
+
+  &:hover {
+    background-color: rebeccapurple;
   }
-  ul.menu_list {
-    display: inline-flex;
-    li {
-      font-size: 18px;
-      padding-right: 28px;
-      list-style: none;
+}
+
+.logo {
+  align-self: center;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+ul.menu_list {
+  display: inline-flex;
+
+  li {
+    font-size: 18px;
+    padding-right: 28px;
+    list-style: none;
+  }
+}
+
+.intro {
+  background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
+  img {
+    display: none;
+  }
+  @media screen and (min-width: 1020px) {
+    h1 {
+      margin-top: 3em;
+      line-height: 1.4;
     }
   }
 }
 
+.digital {
+
+  p {
+    color: #B4B4B4;
+  }
+  @media screen and (min-width: 1020px) {
+    position: relative;
+    .upper-text {
+      position: absolute;
+      top: 30%;
+      width: 300px;
+    }
+    .lower-text {
+      position: absolute;
+      bottom: 20%;
+      width: 300px;
+    }
+    h3 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #B4B4B4;
+    }
+  }
+}
+.wallet {
+  h2.title_center {
+    padding-bottom: 36px;
+  }
+}
+
+.benefits {
+  .box {
+    box-shadow: 0px 20px 60px rgba(138, 130, 219, 0.2);
+    text-align: center;
+    height: 430px;
+
+    h3 {
+      font-size: 26px;
+      line-height: 20px;
+      padding: 8px 24px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #B4B4B4;
+      width: 240px;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: 1020px) {
+    .box_margin {
+      margin-top: 14px;
+    }
+  }
+}
+
+.closure {
+  text-align: center;
+}
+
+
+
+/*.intro {
+  @media screen and (min-width: 1020px) {
+    h1 {
+      margin-top: 3em;
+      line-height: 1.4;
+    }
+    img {
+      min-width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: -100;
+    }
+    .bl-layout-wrapper {
+      position: relative;
+    }
+
+    .mdc-layout-grid__inner {
+      display: grid;
+      margin: 0;
+    }
+  }
+  @media (max-width: 1019px) {
+    img {
+      display: none;
+    }
+    background-color: #0c0449;
+  }
+}*/
