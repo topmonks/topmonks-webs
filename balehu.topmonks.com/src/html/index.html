@@ -14,30 +14,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
 </head>
 <body>
+
+
 <header>
   <div class="bl-layout-wrapper">
-    <nav id="navigation" class="">
-      <ul class="menu_list">
-        <li>
-          <a href="#next-event">Home</a>
-        </li>
-        <li>
-          <a href="#seance">Contact</a>
-        </li>
-        <li>
-          <a href="#speakers">Get started for free</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+    <div class="mdc-layout-grid__inner">
+      <div class="logo mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+        <a class="logo" href="/" title="Logo Balehu">Balehu</a>
+      </div>
+      <div class="menu mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+        <nav id="navigation" class="">
+          <ul class="menu_list">
+            <li>
+              <a href="#next-event">Home</a>
+            </li>
+            <li>
+              <a href="#seance">Contact</a>
+            </li>
+            <li>
+              <a href="#speakers">Get started for free</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
 </header>
 <section id="intro" class="">
   <div class="mdc-layout-grid bl-layout-wrapper">
     <div class="mdc-layout-grid__inner">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <a class="logo" href="/" title="Logo Balehu">Balehu
-        </a>
-        <h2>Powering Merchants, Empowering Consumers</h2>
+        <h2 class="title">Powering Merchants, Empowering Consumers</h2>
       </div>
     </div>
   </div>
@@ -80,7 +86,7 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-        <p>If your revenue is ______, Balehu can save up to ____ per year on transaction fees over traditional credit&nbsp;cards</p>
+        <p>If your revenue is <input type="number" id="revenue-input" class="bh-revenue__input" />, Balehu can save up to <span id="revenue-output" class="bh-revenue__output"></span> per year on transaction fees over traditional credit&nbsp;cards</p>
       </div>
       <a href="" class="button">Request Demo</a>
     </div>
@@ -162,14 +168,34 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
 <script>
+<<<<<<< HEAD
   var slider = tns({
-    container: '.my-slider',
-    slideBy: 'page',
+    container: ".my-slider",
+    slideBy: "page",
     autoplay: true,
-    navPosition: 'bottom',
-    autoplayPosition: 'bottom',
+    navPosition: "bottom",
+    autoplayPosition: "bottom",
     controls: false,
-    "autoplayText": [ "▶", "❚❚" ]
+    "autoplayText": ["▶", "❚❚"]
+=======
+  document.addEventListener("DOMContentLoaded", function() {
+    //initialize screenshot slider
+    var slider = tns({
+      container: '.my-slider',
+      slideBy: 'page',
+      autoplay: true,
+      navPosition: 'bottom',
+      autoplayPosition: 'bottom',
+      controls: false,
+      "autoplayText": ["▶", "❚❚"]
+    });
+
+    //initialize revenue calculator
+    var revenueOutputElm = document.getElementById('revenue-output');
+    document.getElementById('revenue-input').addEventListener('input', function() {
+      revenueOutputElm.innerText = Math.round((this.value * 3.25) * .75) / 100;
+    })
+>>>>>>> fd0c1952542946454a2e39d852e1e5df97b90b23
   });
 </script>
 </body>

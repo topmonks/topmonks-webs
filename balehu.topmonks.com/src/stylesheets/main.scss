@@ -8,6 +8,7 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: "Proxima Nova", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .bl-layout-wrapper {
@@ -58,3 +59,56 @@ body {
     order: 1;
   }
 }
+<<<<<<< HEAD
+header {
+  .logo {
+    align-self: center;
+    a {
+      font-size: 24px;
+    }
+  }
+  nav {
+    display: -webkit-inline-box;
+  }
+  ul.menu_list {
+    display: inline-flex;
+    li {
+      list-style: none;
+      padding-right: 28px;
+      font-size: 18px;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}
+a {
+
+}
+h1 {
+  font-size: 54px;
+}
+h2.title {
+  font-size: 24px;
+}
+h2 {
+  font-size: 50px;
+}
+=======
+
+.bh-revenue {
+  &__input {
+    border: none;
+  }
+  &__output {
+    min-width: 3em;
+    display: inline-block;
+  }
+  &__input,
+  &__output {
+    border-bottom: 4px solid #B1AEF8;
+  }
+
+}
+>>>>>>> fd0c1952542946454a2e39d852e1e5df97b90b23
+
