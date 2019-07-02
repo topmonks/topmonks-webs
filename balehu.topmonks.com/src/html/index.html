@@ -80,7 +80,7 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-        <p>If your revenue is ______, Balehu can save up to ____ per year on transaction fees over traditional credit&nbsp;cards</p>
+        <p>If your revenue is <input type="number" id="revenue-input" class="bh-revenue__input" />, Balehu can save up to <span id="revenue-output" class="bh-revenue__output"></span> per year on transaction fees over traditional credit&nbsp;cards</p>
       </div>
       <a href="" class="button">Request Demo</a>
     </div>
@@ -162,14 +162,23 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
 <script>
-  var slider = tns({
-    container: '.my-slider',
-    slideBy: 'page',
-    autoplay: true,
-    navPosition: 'bottom',
-    autoplayPosition: 'bottom',
-    controls: false,
-    "autoplayText": [ "▶", "❚❚" ]
+  document.addEventListener("DOMContentLoaded", function() {
+    //initialize screenshot slider
+    var slider = tns({
+      container: '.my-slider',
+      slideBy: 'page',
+      autoplay: true,
+      navPosition: 'bottom',
+      autoplayPosition: 'bottom',
+      controls: false,
+      "autoplayText": ["▶", "❚❚"]
+    });
+
+    //initialize revenue calculator
+    var revenueOutputElm = document.getElementById('revenue-output');
+    document.getElementById('revenue-input').addEventListener('input', function() {
+      revenueOutputElm.innerText = Math.round((this.value * 3.25) * .75) / 100;
+    })
   });
 </script>
 </body>

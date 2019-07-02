@@ -58,3 +58,19 @@ body {
     order: 1;
   }
 }
+
+.bh-revenue {
+  &__input {
+    border: none;
+  }
+  &__output {
+    min-width: 3em;
+    display: inline-block;
+  }
+  &__input,
+  &__output {
+    border-bottom: 4px solid #B1AEF8;
+  }
+
+}
+
