@@ -2963,15 +2963,15 @@ command-line-args@^5.1.1:
     lodash.camelcase "^4.3.0"
     typical "^4.0.0"
 
-command-line-usage@^5.0.5:
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/command-line-usage/-/command-line-usage-5.0.5.tgz#5f25933ffe6dedd983c635d38a21d7e623fda357"
-  integrity sha512-d8NrGylA5oCXSbGoKz05FkehDAzSmIm4K03S5VDh4d5lZAtTWfc3D1RuETtuQCn8129nYfJfDdF7P/lwcz1BlA==
+command-line-usage@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/command-line-usage/-/command-line-usage-6.0.1.tgz#2c2a2758a974d52485c25ccebd16d8bff4bfce7d"
+  integrity sha512-jrKZUGLSwHoVDHjcLf3O5silOEo21yy0ju2whGw67f0KWp2s8mRdSlMJsVm/8dfR5a8cAOo2SUuXwAzMLBCyJw==
   dependencies:
-    array-back "^2.0.0"
-    chalk "^2.4.1"
-    table-layout "^0.4.3"
-    typical "^2.6.1"
+    array-back "^3.1.0"
+    chalk "^2.4.2"
+    table-layout "^1.0.0"
+    typical "^5.1.0"
 
 commander@2.17.x, commander@~2.17.1:
   version "2.17.1"
@@ -6891,12 +6891,12 @@ loader-utils@^1.0.2, loader-utils@^1.1.0:
     emojis-list "^2.0.0"
     json5 "^1.0.1"
 
-local-web-server@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/local-web-server/-/local-web-server-3.0.3.tgz#3894034861e361af3247504ea23997deefac2f35"
-  integrity sha512-8AaTO1Rome7/UHAvP4vHOBMAOX1fcfMwuqxmOxGl7KPV7ZJb4VE5Qg/eFJVZSZMb6d75DpsGB8H25RTAtIk2Og==
+local-web-server@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/local-web-server/-/local-web-server-3.0.4.tgz#d6fba9038c33f186d1fc89479581be8341adc213"
+  integrity sha512-Rddg07XLKI2tyzxtSwAq7WZnsLNpbCYOn/KC38n0idhKEBzsAJKTbwfItplqUWK409jiGG4l8fbdZm8NaxmYBA==
   dependencies:
-    lws "^2.0.1"
+    lws "^2.0.3"
     lws-basic-auth "^1.0.3"
     lws-blacklist "^2.0.2"
     lws-body-parser "^1.0.2"
@@ -6909,8 +6909,8 @@ local-web-server@^3.0.3:
     lws-mime "^1.0.1"
     lws-range "^2.0.1"
     lws-request-monitor "^1.0.4"
-    lws-rewrite "^2.0.4"
-    lws-spa "^2.0.1"
+    lws-rewrite "^2.0.5"
+    lws-spa "^2.0.2"
     lws-static "^1.1.3"
     node-version-matches "^1.0.1"
 
@@ -7264,10 +7264,10 @@ lws-request-monitor@^1.0.4:
   dependencies:
     byte-size "^5.0.1"
 
-lws-rewrite@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/lws-rewrite/-/lws-rewrite-2.0.4.tgz#86e49c0cae885e470dbde9692d3844535a93ee21"
-  integrity sha512-724c5tiQjxKhJEDBIsnf36Bonvkqm2JPTD2ixzLuh9ebYDTuy/fgz8ACA9Y6Iu7Hz/eKudp0TExLcT015Zp4bA==
+lws-rewrite@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/lws-rewrite/-/lws-rewrite-2.0.5.tgz#6b89981af340dd904f018e763ecfa128d8afe915"
+  integrity sha512-VbD86rd4reocdMBWV6mrRkwR7BRG2Xi4sDyFbehH7p1aIopG4o8WwDk9dtICc9is6FIWBw3ChYZ3Hz8vZjCoog==
   dependencies:
     array-back "^3.1.0"
     koa-rewrite-75lb "^3.0.1"
@@ -7275,10 +7275,10 @@ lws-rewrite@^2.0.4:
     path-to-regexp "^3.0.0"
     request "^2.88.0"
 
-lws-spa@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/lws-spa/-/lws-spa-2.0.1.tgz#843d737e3cdee6e45fb38f6047a6bfb369065b45"
-  integrity sha512-E2Q76EW5MHD60w3JnFyJXHjJwSpOpFh/+VKLyiB6fFoo5ABSoPQPXYLwotyqewpMBxsPoooHeoc4+jv1tgz/cQ==
+lws-spa@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/lws-spa/-/lws-spa-2.0.2.tgz#a609a3f0430fce86d4c0bb9984b5df3e8735f680"
+  integrity sha512-rCFzp/wC3r9CXBsFfVgURu7cc2oM/YCmPFSdRF21ws5UiYLdrgSwOV+vRfVuoXHUvfmLOuhx1sste9cFayDZEw==
   dependencies:
     koa-send "^5.0.0"
 
@@ -7289,24 +7289,24 @@ lws-static@^1.1.3:
   dependencies:
     koa-static "^5.0.0"
 
-lws@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/lws/-/lws-2.0.1.tgz#a11642e95e3032779db5039a8dfa73ea852ca8a2"
-  integrity sha512-9aXsOibjPeHxb9xfPws5beM2YAyRW4QWj9rORBKOe/W9Pca67Ftx8zPSyUsgLTo7QUFi6hFK/J+xCYnvzGMzzw==
+lws@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/lws/-/lws-2.0.3.tgz#63ad889d569d3da7a8a2caa09339d4a318f9a2a8"
+  integrity sha512-a5Civu1FmHsWKzJ89lIa69I/tzDkRyonYvu/QECIyMJOxXIWgzfM8Ed14zkBWocVNjdWq8+D0C65qYPLjw/0MA==
   dependencies:
     ansi-escape-sequences "^4.1.0"
     array-back "^3.1.0"
     byte-size "^5.0.1"
     command-line-args "^5.1.1"
-    command-line-usage "^5.0.5"
+    command-line-usage "^6.0.1"
     create-mixin "^2.0.1"
     koa "^2.7.0"
     load-module "^2.0.1"
     lodash.assignwith "^4.2.0"
     node-version-matches "^1.0.1"
-    open "^6.3.0"
+    open "^6.4.0"
     reduce-flatten "^2.0.0"
-    typical "^5.0.0"
+    typical "^5.1.0"
     walk-back "^3.0.1"
 
 make-dir@^1.0.0:
@@ -8280,10 +8280,10 @@ open@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/open/-/open-0.0.5.tgz#42c3e18ec95466b6bf0dc42f3a2945c3f0cad8fc"
 
-open@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/open/-/open-6.3.0.tgz#60d0b845ee38fae0631f5d739a21bd40e3d2a527"
-  integrity sha512-6AHdrJxPvAXIowO/aIaeHZ8CeMdDf7qCyRNq8NwJpinmCdXhz+NZR7ie1Too94lpciCDsG+qHGO9Mt0svA4OqA==
+open@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/open/-/open-6.4.0.tgz#5c13e96d0dc894686164f18965ecfe889ecfc8a9"
+  integrity sha512-IFenVPgF70fSm1keSd2iDBIDIBZkroLeuffXq+wKTzTJlBpesFWojV9lb8mzOfaAzM1sr7HQHuO0vtV0zYekGg==
   dependencies:
     is-wsl "^1.1.0"
 
@@ -10978,7 +10978,17 @@ symbol-observable@^1.0.4:
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
 
-table-layout@^0.4.3, table-layout@~0.4.4:
+table-layout@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/table-layout/-/table-layout-1.0.0.tgz#fbca8a8c0e07e9de97591643f2d25a7e32008d25"
+  integrity sha512-o8V8u943KXX9gLNK/Ss1n6Nn4YhpyY/RRnp3hKv/zTA+SXYiQnzJQlR8CZQf1RqYqgkiWMJ54Mv+Vq9Kfzxz1A==
+  dependencies:
+    array-back "^3.1.0"
+    deep-extend "~0.6.0"
+    typical "^5.0.0"
+    wordwrapjs "^4.0.0"
+
+table-layout@~0.4.4:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/table-layout/-/table-layout-0.4.4.tgz#bc5398b2a05e58b67b05dd9238354b89ef27be0f"
   integrity sha512-uNaR3SRMJwfdp9OUr36eyEi6LLsbcTqTO/hfTsNviKsNeyMBPICJCC7QXRF3+07bAP6FRwA8rczJPBqXDc0CkQ==
@@ -11411,6 +11421,11 @@ typical@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/typical/-/typical-5.0.0.tgz#ded1253286c42c0e72bf8dd86518a23505c35c95"
   integrity sha512-EiYNG3wi45n7ZvDJaU/ekW8OiAJ0EfYNq8tQJUMVok5k8+g7mj54pFWOXFsstmQoVHfy4CjzgNgJtGUAVR8kFQ==
+
+typical@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/typical/-/typical-5.1.0.tgz#7116ca103caf2574985fc84fbaa8fd0ee5ea1684"
+  integrity sha512-t5Ik8UAwBal1P1XzuVE4dc+RYQZicLUGJdvqr/vdqsED7SQECgsGBylldSsfWZL7RQjxT3xhQcKHWhLaVSR6YQ==
 
 ua-parser-js@0.7.17:
   version "0.7.17"
@@ -12042,6 +12057,14 @@ wordwrapjs@^3.0.0:
   dependencies:
     reduce-flatten "^1.0.1"
     typical "^2.6.1"
+
+wordwrapjs@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/wordwrapjs/-/wordwrapjs-4.0.0.tgz#9aa9394155993476e831ba8e59fb5795ebde6800"
+  integrity sha512-Svqw723a3R34KvsMgpjFBYCgNOSdcW3mQFK4wIfhGQhtaFVOJmdYoXgi63ne3dTlWgatVcUc7t4HtQ/+bUVIzQ==
+  dependencies:
+    reduce-flatten "^2.0.0"
+    typical "^5.0.0"
 
 workbox-background-sync@^4.3.1:
   version "4.3.1"
