@@ -17,3 +17,21 @@ body {
   //--mdc-layout-grid-margin-tablet: 0;
   //--mdc-layout-grid-margin-phone: 0;
 }
+
+.tns-nav {
+  text-align: center;
+
+  > .tns-nav-active {
+    background: #999;
+  }
+
+  > [aria-controls] {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #ddd;
+    border: 0;
+  }
+}
