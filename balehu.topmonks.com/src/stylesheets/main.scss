@@ -22,7 +22,11 @@ header {
 footer {
   li a {
     color: black;
+    &:hover {
+      color: #C36DE6;
+    }
   }
+
 }
 
 section {
