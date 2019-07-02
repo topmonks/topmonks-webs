@@ -42,6 +42,15 @@ body {
   &-slider {
     padding-left: 0;
   }
+  &-outer [data-action] {
+    display: block;
+    margin: 10px auto;
+    font-size: 17px;
+    min-width: 3em;
+    text-align: center;
+    background: transparent;
+    border: 0;
+  }
 }
 
 @media screen and (max-width: 480px){
