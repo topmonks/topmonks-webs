@@ -12,14 +12,6 @@ body {
   font-family: "Proxima Nova", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-header {
-  background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
-
-  li a, .logo {
-    color: #FFFFFF;
-  }
-}
-
 section {
   margin: 24px 0;
 }
@@ -32,9 +24,24 @@ section {
   //--mdc-layout-grid-margin-phone: 0;
 }
 
+// Section - Header //
+header {
+  background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
+
+  li a, .logo {
+    color: #FFFFFF;
+  }
+
+  &:hover {
+    color: #000;
+  }
+}
+
+// Section - Slider //
 .tns {
   &-nav {
     text-align: center;
+
     > [aria-controls] {
       width: 9px;
       height: 9px;
@@ -44,14 +51,15 @@ section {
       background: #C4C4C4;
       border: 0;
     }
+
     > .tns-nav-active {
       background: #6C6AB9;
     }
   }
 
-  &-item
-  {
+  &-item {
     padding-right: 20px;
+
     img {
       width: 100%;
       max-width: 305px;
@@ -150,7 +158,6 @@ section {
 }
 
 // Buttons //
-
 .button {
   border-radius: 3.61742px;
   font-size: 1.33em;
@@ -166,13 +173,19 @@ section {
 
 // Menu //
 
-.logo {
-  align-self: center;
-  font-size: 24px;
-  font-weight: 900;
+header {
+  li a, .logo {
+    color: #FFFFFF;
+  }
 
-  &:hover {
-    color: #32305D;
+  .logo {
+    align-self: center;
+    font-size: 24px;
+    font-weight: 900;
+
+    &:hover {
+      color: #32305D;
+    }
   }
 }
 
@@ -180,6 +193,7 @@ nav {
   ul {
     display: -webkit-inline-flex;
   }
+
   .menu_list {
     li {
       font-size: 18px;
@@ -192,6 +206,7 @@ nav {
 a {
   text-decoration: none;
 }
+
 
 // Section - Introduction //
 
@@ -264,6 +279,7 @@ a {
   h2 {
     padding-bottom: 0;
   }
+
   .box {
     box-shadow: 0px 20px 60px rgba(138, 130, 219, 0.2);
     text-align: center;
