@@ -303,6 +303,10 @@ footer {
     @media screen and (max-width: 870px){
       display: block;
       text-align: center;
+      li {
+        display: block;
+        margin-bottom: 0.5em;
+      }
     }
     max-width: 620px;
     margin-left: auto;
