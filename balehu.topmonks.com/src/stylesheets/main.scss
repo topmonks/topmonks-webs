@@ -209,12 +209,16 @@ header {
 nav {
   ul {
     display: flex;
+    justify-content: space-around;
   }
 
   .menu_list {
+    padding-left: 0;
     li {
+      display: flex;
+      align-items: center;
       font-size: 18px;
-      padding-right: 28px;
+      font-weight: 700;
       list-style: none;
     }
   }
@@ -310,26 +314,21 @@ a {
 
 // Footer //
 footer {
-  li a {
-    color: #000000;
-
-    &:hover {
-      color: #C36DE6;
-    }
-  }
-
-  @media screen and (min-width: 561px) {
-    .social-icon {
-      text-align: right;
-    }
-  }
-  @media (max-width: 560px) {
-    .social-icon {
-      padding: 24px 0;
+  .menu_list {
+    @media screen and (max-width: 870px){
+      display: block;
       text-align: center;
     }
-    nav {
-      display: none;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    a {
+
+      color: #000000;
+
+      &:hover {
+        color: #C36DE6;
+      }
     }
   }
 }
