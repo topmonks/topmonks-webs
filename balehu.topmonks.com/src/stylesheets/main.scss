@@ -115,7 +115,7 @@ section {
   }
 }
 
-@media (max-width: 999px) {
+@media screen and (max-width: 999px) {
   h1 {
     font-size: 26px;
     color: #FFFFFF;
@@ -180,6 +180,7 @@ header {
     align-self: center;
     font-size: 24px;
     font-weight: 900;
+
     &:hover {
       color: #32305D;
     }
@@ -213,13 +214,15 @@ a {
     color: #B4B4B4;
   }
 
+  position: relative;
+
   @media screen and (min-width: 1020px) {
-    position: relative;
     .upper-text {
       position: absolute;
       top: 55%;
       width: 300px;
     }
+
     .lower-text {
       position: absolute;
       bottom: 15%;
@@ -231,6 +234,30 @@ a {
 
     p {
       font-size: 18px;
+    }
+  }
+
+  @media (min-width: 700px) and (max-width: 839px) {
+    .upper-text {
+      position: absolute;
+      width: 300px;
+    }
+
+    .lower-text {
+      position: absolute;
+      width: 300px;
+    }
+    .upper-text_1 {
+      top: 45%;
+    }
+    .upper-text_2 {
+      top: 57%;
+    }
+    .lower-text_1 {
+      bottom: 25%;
+    }
+    .lower-text_2 {
+      bottom: 15%;
     }
   }
 }
