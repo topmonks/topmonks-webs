@@ -337,9 +337,9 @@ workflows:
       - test-www-hookamonk-com:
           requires:
             - build
-      - test-balehu-topmonks-com:
-          requires:
-            - build
+#      - test-balehu-topmonks-com:
+#          requires:
+#            - build
       - deploy-www-hookamonk-com:
           context: org-global
           requires:
@@ -424,7 +424,7 @@ workflows:
           context: org-global
           requires:
             - provision
-            - test-balehu-topmonks-com
+#            - test-balehu-topmonks-com
           filters:
             branches:
               only: master
