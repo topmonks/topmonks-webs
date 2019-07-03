@@ -181,25 +181,10 @@ header {
   background-size: cover;
   color: #FFFFFF;
 
-  .menu_list a,
-  .logo {
-    color: #FFFFFF;
-  }
-
   @media screen and (min-width: 1020px) {
     h1 {
       margin: 2.5em 0 4em;
       line-height: 1.4;
-    }
-  }
-
-  .logo {
-    align-self: center;
-    font-size: 24px;
-    font-weight: 900;
-
-    &:hover {
-      color: #32305D;
     }
   }
 }
