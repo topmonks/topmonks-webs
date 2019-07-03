@@ -424,6 +424,7 @@ workflows:
           context: org-global
           requires:
             - provision
+            - build
 #            - test-balehu-topmonks-com
           filters:
             branches:
