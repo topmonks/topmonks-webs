@@ -4,6 +4,7 @@ a {
 
 header {
   color: #FFFFFF;
+  position: relative;
 
   .menu_list a,
   .logo {
@@ -24,6 +25,19 @@ header {
   }
   @media (max-width: 759px) {
     background: linear-gradient(132.11deg, rebeccapurple 14.23%, rgba(44, 77, 255, 0.5) 96.23%);
+  }
+  .bl-continue {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #FAFAFA;
+    box-shadow: 0px 19px 66px rgba(0, 0, 0, 0.16);
+    width: 50px;
+    height: 50px;
+    bottom: -25px;
+    left: calc(50% - 25px);
   }
 }
 
@@ -136,7 +150,7 @@ header {
       background-color: #FFFFFF;
     }
     .bl-menu {
-      transform: translate(-8px, -64px);
+      transform: translate(-16px, -70px);
       z-index: -1;
     }
     .menu_list a {
@@ -161,13 +175,12 @@ header {
     width: 100vw;
     height: 100vh;
     padding-top: 64px;
-    transform: translate(calc(-100vw - 12px), -64px);
-    transform: translate(calc(-140vw - 12px), -64px);
+    transform: translate(calc(-140vw - 8px), -64px);
     position: fixed;
     z-index: 3;
     transition: transform 0.3s;
     overflow: hidden;
-    background-color: var(--bl-secondary);
+    background-color: rebeccapurple;
     color: #2d3d90;
 
     .menu_list li {
