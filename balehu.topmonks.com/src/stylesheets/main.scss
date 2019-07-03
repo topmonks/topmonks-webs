@@ -14,9 +14,18 @@ body {
 
 header {
   background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
+  background-image: url("../images/bgnd_header.png");
+  background-size: cover;
 
-  li a, .logo {
+  .menu_list a,
+  .logo {
     color: #FFFFFF;
+  }
+  @media screen and (min-width: 1020px) {
+    h1 {
+      margin: 2.5em 0 4em;
+      line-height: 1.4;
+    }
   }
 }
 
@@ -193,23 +202,6 @@ a {
   text-decoration: none;
 }
 
-// Section - Introduction //
-
-.intro {
-  background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
-
-  img {
-    display: none;
-  }
-
-  @media screen and (min-width: 1020px) {
-    h1 {
-      margin-top: 3em;
-      line-height: 1.4;
-    }
-  }
-}
-
 // Section - Create & scale your digital economy //
 
 .digital {
@@ -325,35 +317,3 @@ footer {
     }
   }
 }
-
-
-/*.intro {
-  @media screen and (min-width: 1020px) {
-    h1 {
-      margin-top: 3em;
-      line-height: 1.4;
-    }
-    img {
-      min-width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      z-index: -100;
-    }
-    .bl-layout-wrapper {
-      position: relative;
-    }
-
-    .mdc-layout-grid__inner {
-      display: grid;
-      margin: 0;
-    }
-  }
-  @media (max-width: 1019px) {
-    img {
-      display: none;
-    }
-    background-color: #0c0449;
-  }
-}*/
