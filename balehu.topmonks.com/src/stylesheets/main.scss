@@ -9,7 +9,9 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Proxima Nova", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 section {
@@ -19,9 +21,6 @@ section {
 .bl-layout-wrapper {
   max-width: 1060px;
   margin: 0 auto;
-  //--mdc-layout-grid-margin-desktop: 0;
-  //--mdc-layout-grid-margin-tablet: 0;
-  //--mdc-layout-grid-margin-phone: 0;
 }
 
 .tns {
@@ -44,8 +43,6 @@ section {
   }
 
   &-item {
-    padding-right: 20px;
-
     img {
       width: 100%;
       max-width: 305px;
