@@ -26,6 +26,12 @@ section {
 
 .bl-bgnd-wrapper {
   background-color: #F8F8F8;
+  background-image: url("../images/bgnd_section_white.png");
+  background-position: bottom -150px center;
+  background-repeat: repeat-x;
+  .wallet & {
+    background-position: bottom 0 center;
+  }
 }
 
 .tns {
@@ -280,6 +286,7 @@ a {
     box-shadow: 0px 20px 60px rgba(138, 130, 219, 0.2);
     text-align: center;
     height: 430px;
+    background-color: #ffffff;
 
     h3 {
       font-size: 26px;
