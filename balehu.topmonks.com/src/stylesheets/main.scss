@@ -12,23 +12,6 @@ body {
   font-family: "Proxima Nova", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-header {
-  background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
-  background-image: url("../images/bgnd_header.png");
-  background-size: cover;
-
-  .menu_list a,
-  .logo {
-    color: #FFFFFF;
-  }
-  @media screen and (min-width: 1020px) {
-    h1 {
-      margin: 2.5em 0 4em;
-      line-height: 1.4;
-    }
-  }
-}
-
 section {
   margin: 24px 0;
 }
@@ -174,11 +157,22 @@ section {
   }
 }
 
-// Menu //
+// Header //
 
 header {
-  li a, .logo {
+  background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
+  background-image: url("../images/bgnd_header.png");
+  background-size: cover;
+
+  .menu_list a,
+  .logo {
     color: #FFFFFF;
+  }
+  @media screen and (min-width: 1020px) {
+    h1 {
+      margin: 2.5em 0 4em;
+      line-height: 1.4;
+    }
   }
 
   .logo {
@@ -191,6 +185,8 @@ header {
     }
   }
 }
+
+// Menu //
 
 nav {
   ul {
