@@ -24,6 +24,10 @@ section {
   margin: 0 auto;
 }
 
+.bl-bgnd-wrapper {
+  background-color: #F8F8F8;
+}
+
 .tns {
   &-nav {
     text-align: center;
@@ -65,7 +69,7 @@ section {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 839px) {
   .bl-layout--order-1-mobile {
     order: 1;
   }
@@ -75,17 +79,20 @@ section {
   color: #B1AEF8;
   white-space: nowrap;
   &__input {
+    display: inline-block;
     border: none;
     font-size: 48px;
     color: #B1AEF8;
     font-weight: 700;
-    min-width: 3em;
     max-width: 5em;
     -moz-appearance:textfield;
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
+    }
+    @media screen and (max-width: 999px) {
+      font-size: 24px;
     }
   }
 
@@ -236,30 +243,6 @@ a {
 
     p {
       font-size: 18px;
-    }
-  }
-
-  @media (min-width: 700px) and (max-width: 839px) {
-    .upper-text {
-      position: absolute;
-      width: 300px;
-    }
-
-    .lower-text {
-      position: absolute;
-      width: 300px;
-    }
-    .upper-text_1 {
-      top: 45%;
-    }
-    .upper-text_2 {
-      top: 57%;
-    }
-    .lower-text_1 {
-      bottom: 25%;
-    }
-    .lower-text_2 {
-      bottom: 15%;
     }
   }
 }
