@@ -44,24 +44,27 @@ section {
 .tns {
   &-nav {
     text-align: center;
-
-    > .tns-nav-active {
-      background: #999;
-    }
-
     > [aria-controls] {
       width: 9px;
       height: 9px;
       padding: 0;
       margin: 0 5px;
       border-radius: 50%;
-      background: #ddd;
+      background: #C4C4C4;
       border: 0;
+    }
+    > .tns-nav-active {
+      background: #6C6AB9;
     }
   }
 
-  &-item img {
-    width: 100%;
+  &-item
+  {
+    padding-right: 20px;
+    img {
+      width: 100%;
+      max-width: 305px;
+    }
   }
 
   &-slider {
