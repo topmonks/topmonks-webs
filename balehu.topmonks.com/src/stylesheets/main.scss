@@ -12,6 +12,7 @@ body {
   font-family: proxima-nova, sans-serif;
   font-weight: 400;
   font-style: normal;
+  line-height: 1.4;
 }
 
 section {
@@ -124,7 +125,7 @@ section {
   }
 }
 
-@media (max-width: 999px) {
+@media screen and (max-width: 999px) {
   h1 {
     font-size: 26px;
     color: #FFFFFF;
@@ -137,6 +138,7 @@ section {
     text-align: center;
     max-width: 660px;
     margin: 0 auto;
+    padding-bottom: 24px;
   }
 
   h2 {
@@ -170,11 +172,13 @@ header {
   background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
   background-image: url("../images/bgnd_header.png");
   background-size: cover;
+  color: #FFFFFF;
 
   .menu_list a,
   .logo {
     color: #FFFFFF;
   }
+
   @media screen and (min-width: 1020px) {
     h1 {
       margin: 2.5em 0 4em;
@@ -234,6 +238,30 @@ a {
       font-size: 18px;
     }
   }
+
+  @media (min-width: 700px) and (max-width: 839px) {
+    .upper-text {
+      position: absolute;
+      width: 300px;
+    }
+
+    .lower-text {
+      position: absolute;
+      width: 300px;
+    }
+    .upper-text_1 {
+      top: 45%;
+    }
+    .upper-text_2 {
+      top: 57%;
+    }
+    .lower-text_1 {
+      bottom: 25%;
+    }
+    .lower-text_2 {
+      bottom: 15%;
+    }
+  }
 }
 
 // Section - Get started for free, Wallet calculator //
@@ -279,10 +307,10 @@ a {
       margin: 0 auto;
       padding: 0 24px 4px;
     }
-  }
 
-  @media (max-width: 320px) {
-    height: 410px;
+    @media (max-width: 320px) {
+      height: 410px;
+    }
   }
   @media screen and (min-width: 1030px) {
     .box_margin {
@@ -300,7 +328,7 @@ a {
 // Footer //
 footer {
   li a {
-    color: black;
+    color: #000000;
 
     &:hover {
       color: #C36DE6;
