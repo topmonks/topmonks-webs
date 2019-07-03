@@ -14,19 +14,10 @@ body {
 
 header {
   background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
+
   li a, .logo {
     color: #FFFFFF;
   }
-}
-
-footer {
-  li a {
-    color: black;
-    &:hover {
-      color: #C36DE6;
-    }
-  }
-
 }
 
 section {
@@ -44,24 +35,27 @@ section {
 .tns {
   &-nav {
     text-align: center;
-
-    > .tns-nav-active {
-      background: #999;
-    }
-
     > [aria-controls] {
       width: 9px;
       height: 9px;
       padding: 0;
       margin: 0 5px;
       border-radius: 50%;
-      background: #ddd;
+      background: #C4C4C4;
       border: 0;
+    }
+    > .tns-nav-active {
+      background: #6C6AB9;
     }
   }
 
-  &-item img {
-    width: 100%;
+  &-item
+  {
+    padding-right: 20px;
+    img {
+      width: 100%;
+      max-width: 305px;
+    }
   }
 
   &-slider {
@@ -124,6 +118,9 @@ section {
   nav a:hover {
     color: #32305D;
   }
+  footer .bl-layout-wrapper, header .bl-layout-wrapper, ul.menu_list {
+    display: -webkit-box;
+  }
 }
 
 @media (max-width: 999px) {
@@ -152,13 +149,7 @@ section {
   }
 }
 
-a {
-  text-decoration: none;
-}
-
-nav {
-  display: -webkit-inline-flex;
-}
+// Buttons //
 
 .button {
   border-radius: 3.61742px;
@@ -173,27 +164,44 @@ nav {
   }
 }
 
+// Menu //
+
 .logo {
   align-self: center;
   font-size: 24px;
   font-weight: 900;
-}
 
-ul.menu_list {
-  display: inline-flex;
-
-  li {
-    font-size: 18px;
-    padding-right: 28px;
-    list-style: none;
+  &:hover {
+    color: #32305D;
   }
 }
+
+nav {
+  ul {
+    display: -webkit-inline-flex;
+  }
+  .menu_list {
+    li {
+      font-size: 18px;
+      padding-right: 28px;
+      list-style: none;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+// Section - Introduction //
 
 .intro {
   background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
+
   img {
     display: none;
   }
+
   @media screen and (min-width: 1020px) {
     h1 {
       margin-top: 3em;
@@ -202,16 +210,18 @@ ul.menu_list {
   }
 }
 
-.digital {
+// Section - Create & scale your digital economy //
 
+.digital {
   p {
     color: #B4B4B4;
   }
+
   @media screen and (min-width: 1020px) {
     position: relative;
     .upper-text {
       position: absolute;
-      top: 30%;
+      top: 50%;
       width: 300px;
     }
     .lower-text {
@@ -225,17 +235,35 @@ ul.menu_list {
 
     p {
       font-size: 18px;
-      color: #B4B4B4;
     }
   }
 }
+
+// Section - Get started for free, Wallet calculator //
+
 .wallet {
   h2.title_center {
     padding-bottom: 36px;
   }
+
+  @media screen and (min-width: 1020px) {
+    img.iphone-phone {
+      display: none;
+    }
+  }
+  @media (max-width: 1019px) {
+    img.iphone-desktop {
+      display: none;
+    }
+  }
 }
 
+// Section - How your business benefits //
+
 .benefits {
+  h2 {
+    padding-bottom: 0;
+  }
   .box {
     box-shadow: 0px 20px 60px rgba(138, 130, 219, 0.2);
     text-align: center;
@@ -250,9 +278,13 @@ ul.menu_list {
     p {
       font-size: 16px;
       color: #B4B4B4;
-      width: 240px;
       margin: 0 auto;
+      padding: 0 24px 4px;
     }
+  }
+
+  @media (max-width: 320px) {
+    height: 410px;
   }
   @media screen and (min-width: 1020px) {
     .box_margin {
@@ -261,10 +293,38 @@ ul.menu_list {
   }
 }
 
+// Section - Get started Today //
+
 .closure {
   text-align: center;
 }
 
+// Footer //
+
+footer {
+  li a {
+    color: black;
+
+    &:hover {
+      color: #C36DE6;
+    }
+  }
+
+  @media screen and (min-width: 561px) {
+    .social-icon {
+      text-align: right;
+    }
+  }
+  @media (max-width: 560px) {
+    .social-icon {
+      padding: 24px 0;
+      text-align: center;
+    }
+    nav {
+      display: none;
+    }
+  }
+}
 
 
 /*.intro {
