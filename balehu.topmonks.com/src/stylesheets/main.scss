@@ -19,7 +19,7 @@ section {
 }
 
 .bl-layout-wrapper {
-  max-width: 1060px;
+  max-width: 1030px;
   margin: 0 auto;
 }
 
@@ -71,8 +71,21 @@ section {
 }
 
 .bh-revenue {
+  color: #B1AEF8;
+  white-space: nowrap;
   &__input {
     border: none;
+    font-size: 48px;
+    color: #B1AEF8;
+    font-weight: 700;
+    min-width: 3em;
+    max-width: 5em;
+    -moz-appearance:textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
 
   &__output {
@@ -108,9 +121,6 @@ section {
   }
   nav a:hover {
     color: #32305D;
-  }
-  footer .bl-layout-wrapper, header .bl-layout-wrapper, ul.menu_list {
-    display: -webkit-box;
   }
 }
 
@@ -187,7 +197,7 @@ header {
 
 nav {
   ul {
-    display: -webkit-inline-flex;
+    display: flex;
   }
 
   .menu_list {
@@ -210,18 +220,12 @@ a {
     color: #B4B4B4;
   }
 
-  @media screen and (min-width: 1020px) {
-    position: relative;
-    .upper-text {
-      position: absolute;
-      top: 55%;
-      width: 300px;
+  @media screen and (min-width: 1030px) {
+    &__section {
+      margin-top: 5em;
+      min-height: 9em;
     }
-    .lower-text {
-      position: absolute;
-      bottom: 15%;
-      width: 300px;
-    }
+
     h3 {
       font-size: 30px;
     }
@@ -239,7 +243,7 @@ a {
     padding-bottom: 36px;
   }
 
-  @media screen and (min-width: 1020px) {
+  @media screen and (min-width: 1030px) {
     img.iphone-phone {
       display: none;
     }
@@ -280,7 +284,7 @@ a {
   @media (max-width: 320px) {
     height: 410px;
   }
-  @media screen and (min-width: 1020px) {
+  @media screen and (min-width: 1030px) {
     .box_margin {
       margin-top: 14px;
     }
@@ -294,7 +298,6 @@ a {
 }
 
 // Footer //
-
 footer {
   li a {
     color: black;
