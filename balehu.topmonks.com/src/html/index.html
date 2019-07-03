@@ -18,23 +18,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
 </head>
 <body>
-
-<link rel="stylesheet" href="/stylesheets/header.css">
 <header>
   <div class="mdc-layout-grid bl-layout-wrapper">
-    <div class="bl-bar mdc-layout-grid__inner">
-      <div class="bl-hamburger mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-5-tablet">
-        <div class="bl-hamburger__container">
-          <div class="bl-hamburger__bar"></div>
-          <div class="bl-hamburger__bar"></div>
-          <div class="bl-hamburger__bar"></div>
-        </div>
+    <div class="mdc-layout-grid__inner">
+      <div class="logo mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+        <a class="logo" href="/" title="Logo Balehu">Balehu</a>
       </div>
-        <div class="logo mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-desktop">
-          <a class="logo" href="/" title="Logo Balehu">Balehu</a>
-        </div>
-      <div class="menu mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop">
-        <nav id="nav" class="navigation bl-menu">
+      <div class="menu mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+        <nav id="nav" class="navigation">
           <ul class="menu_list">
             <li>
               <a href="#next-event">Home</a>
@@ -55,44 +46,6 @@
       </div>
     </div>
   </div>
-
-  <script>
-    var appBar = document.querySelector(".bl-bar");
-    var hamburger = document.querySelector(".bl-hamburger__container");
-    var menu = document.querySelector(".bl-menu");
-    var links = menu.getElementsByTagName('a');
-    for(var i = 0, len = links.length; i < len; i++) {
-      links[i].onclick = toggleMenu(hamburger)
-    }
-    hamburger.addEventListener("click", toggleMenu());
-    function toggleMenu() {
-      return function() {
-        hamburger.classList.toggle("bl-hamburger__container--open");
-        appBar.classList.toggle("bl-bar--open");
-      }
-    }
-
-    var ticking = false;
-
-    window.addEventListener("resize", function() {
-      if (!ticking) {
-        window.requestAnimationFrame(function() {
-          if (window.matchMedia("(min-width: 841px)").matches) {
-            menu.classList.add("bl-menu--horizontal");
-          }
-          else {
-            menu.classList.remove("bl-menu--horizontal");
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-
-    if (window.matchMedia("(min-width: 841px)").matches) {
-      menu.classList.toggle("bl-menu--horizontal");
-    }
-  </script>
 </header>
 <section class="digital">
   <div class="mdc-layout-grid bl-layout-wrapper">
@@ -100,7 +53,7 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2 class="title_center">Create &amp; scale your <br>own digital economy</h2>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 bl-layout--order-1-mobile ">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-8-tablet bl-layout--order-1-mobile ">
         <div class="digital__section">
           <h3>Digital marketplace</h3>
           <p>Shopping, ordering, and marketing solutions including custom promotions,
@@ -111,7 +64,7 @@
           <p>Instant &amp; secure low cost transactions</p>
         </div>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-8-tablet">
         <ul class="my-slider">
           <li><img src="../images/slider/slider_01.png"></li>
           <li><img src="../images/slider/slider_02.png"></li>
@@ -120,7 +73,7 @@
           <li><img src="../images/slider/slider_05.png"></li>
         </ul>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-8-tablet">
         <div class="digital__section">
           <h3>Stable digital currency</h3>
           <p>Pegged 1:1 with any fiat currency</p>
@@ -134,26 +87,32 @@
   </div>
 </section>
 <section class="wallet">
+  <div class="bl-bgnd-wrapper">
+    <div class="mdc-layout-grid bl-layout-wrapper">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2 class="title_center">Get started for free.<br>See how much we can save your business on&nbsp;fees.</h2>
+          <img src="../images/img_digital.png" width="100%" alt="barista preparing delicious cup of coffee - get paid more for your product with Balehu">
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="mdc-layout-grid bl-layout-wrapper">
     <div class="mdc-layout-grid__inner">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2 class="title_center">Get started for free.<br>See how much we can save your business on&nbsp;fees.</h2>
-        <img src="../images/digital_bgnd.png" width="100%">
-      </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
         <img class="iphone-desktop" src="../images/balehu_wallet.png" width="100%" height="auto">
         <img class="iphone-phone" src="../images/balehu_wallet01.png" width="100%" height="auto">
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-        <h2>If your revenue is <span class="bh-revenue">$&nbsp;<input type="number" id="revenue-input" class="bh-revenue__input" min="0" max="1000000000"/></span>, Balehu can save up
-          to <span class="bh-revenue">$&nbsp;<span id="revenue-output" class="bh-revenue__output"></span></span> per year on transaction fees over traditional
+        <h2>If your revenue is <span class="bh-revenue">$ <input type="number" id="revenue-input" class="bh-revenue__input" min="0" max="1000000000" value="500" size="5"/></span>, Balehu can save up
+          to <span class="bh-revenue">$ <span id="revenue-output" class="bh-revenue__output">12.19</span></span> per year on transaction fees over traditional
           credit&nbsp;cards</h2>
         <a href="" class="button">Request Demo</a>
       </div>
     </div>
   </div>
 </section>
-<section class="benefits">
+<section class="benefits bl-bgnd-wrapper">
   <div class="mdc-layout-grid bl-layout-wrapper">
     <div class="mdc-layout-grid__inner">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -212,14 +171,14 @@
 <footer>
   <div class="mdc-layout-grid bl-layout-wrapper">
     <div class="mdc-layout-grid__inner">
-      <div class="social-icon mdc-layout-grid__cell mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-desktop">
-          <a href="https://balehu.com" title="Balehu" rel="me" itemprop="sameAs" class="Balehu">
-            <img src="../images/balehu.jpg" width="52" height="52">
-          </a>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-8-desktop">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-12-desktop">
         <nav class="navigation">
           <ul class="menu_list">
+            <li>
+              <a href="https://balehu.com" title="Balehu" rel="me" itemprop="sameAs" class="Balehu">
+                <img src="../images/ico_balehu.png" width="52" height="52">
+              </a>
+            </li>
             <li>
               <a href="#next-event">Home</a>
             </li>
