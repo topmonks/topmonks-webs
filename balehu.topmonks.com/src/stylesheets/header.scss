@@ -3,9 +3,6 @@ a {
 }
 
 header {
-  background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
-  background-image: url("../images/bgnd_header.png");
-  background-size: cover;
   color: #FFFFFF;
 
   .menu_list a,
@@ -16,11 +13,17 @@ header {
     }
   }
 
-  @media screen and (min-width: 1020px) {
+  @media screen and (min-width: 760px) {
+    background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
+    background-image: url("../images/bgnd_header.png");
+    background-size: cover;
     h1 {
       margin: 2.5em 0 4em;
       line-height: 1.4;
     }
+  }
+  @media (max-width: 759px) {
+    background: linear-gradient(132.11deg, rebeccapurple 14.23%, rgba(44, 77, 255, 0.5) 96.23%);
   }
 }
 
@@ -127,21 +130,27 @@ header {
   @media screen and (max-width: 839px) {
     position: fixed;
     .bl-hamburger__container::after {
-      color: rgba(45, 61, 144, 0.5);
+      color: white;
     }
     .bl-hamburger__bar {
-      background-color: #2d3d90;
+      background-color: #FFFFFF;
     }
     .bl-menu {
       transform: translate(-8px, -64px);
       z-index: -1;
     }
     .menu_list a {
-      color: #2d3d90;
+      color: #FFFFFF;
       text-align: left;
     }
     .bl-menu li:hover {
-      border-bottom-color: rgba(45, 61, 144, 0.5);
+      border-bottom-color: #FFFFFF;
+    }
+    .menu_list {
+      display: inline-grid;
+      width: 100%;
+      background: rebeccapurple;
+      padding: 16px 0;
     }
   }
 }
@@ -166,7 +175,7 @@ header {
       border-bottom: 1px solid transparent;
     }
     .menu_list li + li {
-      border-top: 1px solid rgba(45, 61, 144, 0.5);
+      border-top: 1px solid white;
     }
     .menu_list a {
       display: block;
