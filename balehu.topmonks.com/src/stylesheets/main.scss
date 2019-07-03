@@ -12,6 +12,7 @@ body {
   font-family: proxima-nova, sans-serif;
   font-weight: 400;
   font-style: normal;
+  line-height: 1.4;
 }
 
 section {
@@ -127,6 +128,7 @@ section {
     text-align: center;
     max-width: 660px;
     margin: 0 auto;
+    padding-bottom: 24px;
   }
 
   h2 {
@@ -160,11 +162,13 @@ header {
   background: linear-gradient(132.11deg, rgba(44, 77, 255, 0.5) 19.23%, rgba(196, 124, 217, 0.5) 94.63%);
   background-image: url("../images/bgnd_header.png");
   background-size: cover;
+  color: #FFFFFF;
 
   .menu_list a,
   .logo {
     color: #FFFFFF;
   }
+
   @media screen and (min-width: 1020px) {
     h1 {
       margin: 2.5em 0 4em;
@@ -176,7 +180,6 @@ header {
     align-self: center;
     font-size: 24px;
     font-weight: 900;
-
     &:hover {
       color: #32305D;
     }
@@ -275,11 +278,12 @@ a {
       margin: 0 auto;
       padding: 0 24px 4px;
     }
+
+    @media (max-width: 320px) {
+      height: 410px;
+    }
   }
 
-  @media (max-width: 320px) {
-    height: 410px;
-  }
   @media screen and (min-width: 1020px) {
     .box_margin {
       margin-top: 14px;
@@ -297,7 +301,7 @@ a {
 
 footer {
   li a {
-    color: black;
+    color: #000000;
 
     &:hover {
       color: #C36DE6;
