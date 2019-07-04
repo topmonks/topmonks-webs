@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Balehu.com</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description"
+        content="We help you to create and scale your own digital economy, such as wallet and stable currency. Have a digital marketplace where you can be discovered.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://balehu.com/">
+
+  <script>WebFontConfig = { typekit: { id: "dlz5yfx" }, async: true };</script>
+  <script async src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" defer
+          crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/stylesheets/header.css">
+</head>
+<body>
+<header>
+  <i class="bl-continue"><svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.11325 2.86693L10.177 10.4728L18.325 2.86693" stroke="#333333" stroke-width="5.70442" stroke-linecap="round"/>
+  </svg>
+  </i>
+  <div class="mdc-layout-grid bl-layout-wrapper">
+    <div class="bl-bar mdc-layout-grid__inner">
+      <div
+        class="bl-hamburger mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-5-tablet">
+        <div class="bl-hamburger__container">
+          <div class="bl-hamburger__bar"></div>
+          <div class="bl-hamburger__bar"></div>
+          <div class="bl-hamburger__bar"></div>
+        </div>
+      </div>
+      <div
+        class="logo mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-desktop">
+        <a class="logo" href="/" title="Logo Balehu">Balehu</a>
+      </div>
+      <div
+        class="menu mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-8-desktop">
+        <nav id="nav" class="navigation bl-menu">
+          <ul class="menu_list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#get-started">Get started for free</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        {% block hero %}{% endblock %}
+      </div>
+    </div>
+  </div>
+  <script>
+    var appBar = document.querySelector(".bl-bar");
+    var hamburger = document.querySelector(".bl-hamburger__container");
+    var menu = document.querySelector(".bl-menu");
+    var links = menu.getElementsByTagName("a");
+    for (var i = 0, len = links.length; i < len; i++) {
+      links[i].onclick = toggleMenu(hamburger);
+    }
+    hamburger.addEventListener("click", toggleMenu());
+
+    function toggleMenu() {
+      return function() {
+        hamburger.classList.toggle("bl-hamburger__container--open");
+        appBar.classList.toggle("bl-bar--open");
+      };
+    }
+
+    var ticking = false;
+
+    window.addEventListener("resize", function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          if (window.matchMedia("(min-width: 841px)").matches) {
+            menu.classList.add("bl-menu--horizontal");
+          } else {
+            menu.classList.remove("bl-menu--horizontal");
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    if (window.matchMedia("(min-width: 841px)").matches) {
+      menu.classList.toggle("bl-menu--horizontal");
+    }
+  </script>
+</header>
+<main>
+  {% block content %}{% endblock %}
+</main>
+<footer>
+  <div class="mdc-layout-grid bl-layout-wrapper">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <nav class="navigation">
+          <ul class="menu_list">
+            <li>
+              <a href="https://balehu.com" title="Balehu" rel="me" itemprop="sameAs" class="Balehu">
+                <img src="../images/ico_balehu.png" width="52" height="52">
+              </a>
+            </li>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#get-started">Get started for free</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+{% block javascript %}
+{% endblock %}
+</body>
+</html>
