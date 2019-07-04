@@ -63,6 +63,7 @@ section {
   &-slider {
     padding-left: 0;
     z-index: -1;
+    position: relative;
   }
 
   &-outer [data-action] {
