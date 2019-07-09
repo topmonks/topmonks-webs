@@ -14,6 +14,8 @@
   --tm-grey: #9b9b9b;
   --tm-article-background: #f8fbfc;
   --tm-black: #4a4a4a;
+  --blockchain-grey-dark: #48435C;
+  --tm-purple-light: #8363F9;
 }
 
 html {
@@ -25,7 +27,7 @@ body {
   margin: 0 auto;
   max-width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: normal;
   -webkit-font-kerning: normal;
   font-kerning: normal;
@@ -47,8 +49,8 @@ body {
 
 .tm-logo {
   font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
 }
 
 .wf-active .tm-logo {
@@ -119,6 +121,12 @@ ul li {
 
 ul li {
   list-style: none;
+}
+
+hr {
+  background-color: #ddd8f9;
+  border: 0.5px solid #ddd8f9;
+  margin-top: 2em;
 }
 
 /* Main_info section */
@@ -197,7 +205,7 @@ a.button:hover {
 
 /* Offers */
 #we-offer {
-  color: #48435c;
+  color: var(--blockchain-grey-dark);
 
   h3 {
     color: #4d2f72;
@@ -218,9 +226,11 @@ a.button:hover {
     text-align: left;
     margin-bottom: 0;
   }
-  p, h4, em{
-    color: #48435C;
+
+  p, h4, em {
+    color: var(--blockchain-grey-dark);
   }
+
   em {
     font-size: 16px;
   }
@@ -231,18 +241,13 @@ a.button:hover {
     width: 100%;
     padding: 4em;
     margin-bottom: 3em;
-
-    hr {
-      background-color: #ddd8f9;
-      border: 0.5px solid #ddd8f9;
-      margin-top: 2em;
-    }
   }
+
   .tm-case-study {
     text-align: center;
     margin: 2em 0;
     background-color: #fbfbfb;
-    border-bottom: 4px solid #8363f9;
+    border-bottom: 4px solid var(--tm-purple-light);
     padding: 3em 1em 1.5em;
 
     cite {
@@ -250,30 +255,36 @@ a.button:hover {
       font-style: normal;
       font-size: 18px;
     }
+
     p.case-study_link {
       padding-top: 1em;
       margin: 2.5em 0 0.3em;
+
       &:hover {
         text-decoration: underline;
       }
     }
   }
+
   .tm-case-study__author {
     color: #000000;
   }
+
   .tm-case-study__organization {
     display: block;
     color: #7e7e7e;
   }
+
   .tm-case-study__logo {
     display: inline-block;
-    margin-bottom: 1.5em;
+    margin-bottom: 24px;
   }
 }
 
 /* How we work */
 #our-work {
   background-color: #212142;
+  padding-bottom: 32px;
 }
 
 .our-work_box {
@@ -308,105 +319,135 @@ a.button:hover {
   height: 82px;
 }
 
-.our-work_crypto::before {
-  content: "";
-  display: block;
-  background: url("/images/crypto.svg") center no-repeat;
-  width: 100%;
-  height: 60px;
-}
 
-.our-work_members::before {
-  content: "";
-  display: block;
-  background: url("/images/members.svg") center no-repeat;
-  width: 100%;
-  height: 60px;
-}
+/*Blog section*/
+.articles {
+  color: var(--blockchain-grey-dark);
 
-.our-work_blockstars::before {
-  content: "";
-  display: block;
-  background: url("/images/blockstars.svg") center no-repeat;
-  width: 100%;
-  height: 60px;
-}
+  .blog_box {
+    max-width: 458px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 23px rgba(0, 0, 0, 0.1);
+    padding: 14px 24px;
 
-.our-work_blockstars a {
-  color: #ff7e71;
-  text-decoration: underline;
-}
+    h3 {
+      font-weight: normal;
+      text-align: left;
+    }
 
-.our-work_blockstars a:hover {
-  color: #ffffff;
-}
+    span {
+      font-size: 14px;
+    }
 
-.why-topmonks {
-  margin: 6em 0 4em;
-}
+    p {
+      font-size: 16px;
+    }
 
-/*References section*/
+    p.perex {
+      min-height: 120px;
+    }
 
-.references .references_text {
-  margin-left: 0.5em;
+    a {
+      font-size: 14px;
+      color: var(--tm-purple-light);
+    }
+
+    span.published-date {
+      color: #888A99;
+    }
+
+    hr {
+      margin: 1em 0;
+    }
+
+    .personal__id {
+      display: flex;
+
+      img {
+        margin: 0;
+      }
+
+      span {
+        align-self: center;
+        padding-left: 8px;
+      }
+    }
+
+    .article-link {
+      align-self: center;
+
+      a {
+        float: right;
+      }
+    }
+
+    @media screen and (min-width: 1020px) {
+      h3 {
+        width: 426px;
+      }
+      p {
+        width: 412px;
+      }
+    }
+  }
 }
 
 /*Contact section*/
-.contact,
-.references {
+.contact {
   background-color: #f4f8fb;
   color: #1c1c37;
   min-height: 490px;
-}
-
-.contact {
   text-align: center;
+
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 0 0 1em 0;
+  }
 }
 
-.contact .person__photo {
-  width: 92px;
-  height: 92px;
+.person__photo {
   margin: 0 auto;
   background-color: #f4f8fb;
   border-radius: 50%;
 }
 
-.contact h4 {
-  margin: 0;
-}
-
-.contact p {
-  margin: 0;
-  padding: 0 0 1em 0;
-}
-
 footer {
   background-color: #212142;
+
   h4, a {
     color: #FFFFFF;
     text-align: left;
     font-size: 18px;
   }
+
   h4 {
     font-weight: bold;
   }
+
   .social-buttons {
     margin-top: 0.5em;
     background-color: #fff;
     border-radius: 52px;
     display: inline-block;
     padding: 5px 8px 0px;
+
     svg {
       background-color: #ffffff;
       border-radius: 80%;
       padding: 0 4px;
     }
   }
+
   .mailto a {
     text-decoration: underline;
   }
+
   .copy-and-media .tm-layout-wrapper {
-    border-top: 1px solid hsla(0,0%,100%,.5);
+    border-top: 1px solid hsla(0, 0%, 100%, .5);
     padding-top: 24px;
   }
 }
@@ -417,7 +458,7 @@ footer {
     margin-top: 8em;
   }
   footer {
-    .footer_social-buttons{
+    .footer_social-buttons {
       text-align: right;
     }
   }
@@ -447,10 +488,6 @@ footer {
   .hidden-box {
     display: none;
   }
-  .references img {
-    height: 100%;
-    width: 100%;
-  }
 }
 
 @media (max-width: 768px) {
@@ -473,13 +510,12 @@ footer {
   main {
     background: url("/images/main-info_BG.png") top no-repeat;
   }
-  .our-work,
-  .references {
+  .our-work {
     padding: 24px;
   }
 
   .opening {
-    padding-top: 2em;
+    padding-top: 32px;
   }
 
   .welcome h2 {
@@ -488,12 +524,6 @@ footer {
 
   .values_bg {
     background-size: 1120px 920px;
-  }
-
-  .references img {
-    height: 180px;
-    width: 330px;
-    margin-top: 2em;
   }
 }
 
@@ -550,21 +580,6 @@ footer {
   .our-work_box {
     width: 100%;
     padding: 0 24px;
-  }
-
-  .references {
-    img {
-      width: 100%;
-      height: 100%;
-    }
-
-    .references_text {
-      margin-left: 0;
-    }
-
-    h3 {
-      margin-top: 0;
-    }
   }
 
   .box-1 {
