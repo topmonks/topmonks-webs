@@ -43,6 +43,7 @@
   },
   "scripts": {
     "create-site": "node ./.scripts/create-site",
+    "remove-site": "node ./.scripts/remove-site",
     "build": "run-s build:*",
     "test:ava": "ava --tap | tap-xunit > ./results/ava.xml",
     "test:lighthouse": "lighthouse https://localhost:8000/ --output json --output html --output-path ./results/lh.html --chrome-flags=\"--headless\" --no-enable-error-reporting --skip-audits themed-omnibox --skip-audits redirects-http --skip-audits load-fast-enough-for-pwa --skip-audits service-worker --skip-audits splash-screen --skip-audits webapp-install-banner --skip-audits works-offline",

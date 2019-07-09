@@ -207,7 +207,7 @@ function createPackageJsonScripts() {
 function addSiteToIaaC(name) {
   const filePath = path.resolve("./websites.json");
   Logger.log();
-  Logger.log("Adding website to websites.json manifest");
+  Logger.log(`Adding website ${name} to websites.json manifest`);
   Logger.log();
 
   return readFile(filePath, "utf8").then(data => {
