@@ -350,6 +350,9 @@ a.button:hover {
     a {
       font-size: 14px;
       color: var(--tm-purple-light);
+      &:hover {
+        font-weight: bold;
+      }
     }
 
     span.published-date {
