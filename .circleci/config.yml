@@ -278,16 +278,6 @@ jobs:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E22G4M3HL57V9Z
       HOST: xixo-demo.topmonks.com
 
-  test-balehu-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: balehu.topmonks.com
-
-  deploy-balehu-topmonks-com:
-    <<: *s3-deploy
-    environment:
-      HOST: balehu.topmonks.com
-
 workflows:
   build_and_deploy:
     jobs:
@@ -337,9 +327,6 @@ workflows:
       - test-www-hookamonk-com:
           requires:
             - build
-#      - test-balehu-topmonks-com:
-#          requires:
-#            - build
       - deploy-www-hookamonk-com:
           context: org-global
           requires:
@@ -417,15 +404,6 @@ workflows:
           requires:
             - provision
             - build
-          filters:
-            branches:
-              only: master
-      - deploy-balehu-topmonks-com:
-          context: org-global
-          requires:
-            - provision
-            - build
-#            - test-balehu-topmonks-com
           filters:
             branches:
               only: master

@@ -2,6 +2,7 @@ const commander = require("commander");
 const chalk = require("chalk");
 const fs = require("fs");
 const path = require("path");
+const rimraf = require("rimraf");
 
 const Promise = require("bluebird");
 const writeFile = Promise.promisify(fs.writeFile);
@@ -123,8 +124,20 @@ function removeSiteFromIaaC(name) {
   });
 }
 
+function deleteSiteDirectory(root) {
+
+  Logger.log();
+  Logger.log(`Removing website ${root} directory`);
+  Logger.log();
+
+  rimraf.sync(root);
+}
+
 function remove(name) {
-  removeSiteFromIaaC(name)
+  const root = path.resolve(name);
+
+    deleteSiteDirectory(root);
+    removeSiteFromIaaC(name)
     .then(() => removePackageJsonScripts())
     .then(() => {
       console.log(

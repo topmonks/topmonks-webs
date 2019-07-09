@@ -137,6 +137,23 @@ Don't forget to include your repo in `.circleci/config.yml` when ready to deploy
 yarn create-site new-site.topmonks.com -v --title "New TopMonks App"
 ```
 
+## Remove existing site
+
+If you want to create a remove existing site, e.g. `existing-site.topmonks.com`, you first must delete it's bucket contents manually, than simply run
+
+```
+yarn remove-site existing-site.topmonks.com
+```
+
+The command will delete the directory for you.
+Don't forget to remove your site from `.circleci/config.yml`.
+
+### Options
+
+- `-v`, `--verbose`
+- `-h`, `--help`
+- `<project-directory>`, project dir/name
+
 ## Shared Assets
 
 Your project can have access to the `/shared` folder to use shared assets.
