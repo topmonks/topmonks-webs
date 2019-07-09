@@ -82,9 +82,6 @@
     "test:broken-links:monkstage.topmonks.com": "blcl ./public/monkstage.topmonks.com -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
     "start:www.xduediligence.com": "BLENDID_CONFIG_PATH=./www.xduediligence.com/config/ blendid",
     "build:www.xduediligence.com": "BLENDID_CONFIG_PATH=./www.xduediligence.com/config/ blendid -- build",
-    "test:broken-links:www.xduediligence.com": "blcl ./public/www.xduediligence.com -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
-    "start:balehu.topmonks.com": "BLENDID_CONFIG_PATH=./balehu.topmonks.com/config/ blendid",
-    "build:balehu.topmonks.com": "BLENDID_CONFIG_PATH=./balehu.topmonks.com/config/ blendid -- build",
-    "test:broken-links:balehu.topmonks.com": "blcl ./public/balehu.topmonks.com -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com"
+    "test:broken-links:www.xduediligence.com": "blcl ./public/www.xduediligence.com -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com"
   }
 }

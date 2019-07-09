@@ -36,10 +36,5 @@
   },
   "www.hookamonk.com": {},
   "monkstage.topmonks.com": {},
-  "www.xduediligence.com": {},
-  "balehu.topmonks.com": {
-    "cdn": {
-      "disabled": true
-    }
-  }
+  "www.xduediligence.com": {}
 }
