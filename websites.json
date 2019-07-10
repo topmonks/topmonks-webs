@@ -25,15 +25,6 @@
   "caffe.topmonks.cz": {},
   "prodeti.topmonks.cz": {},
   "www.topmonks.cz": {},
-  "xixo-demo.topmonks.com": {
-    "bucket": {
-      "website": {
-        "indexDocument": "index.html",
-        "errorDocument": "404.html",
-        "routingRules": "[{\"Condition\":{\"HttpErrorCodeReturnedEquals\":\"404\"},\"Redirect\":{\"HostName\":\"xixo-demo.topmonks.com\",\"ReplaceKeyPrefixWith\":\"#/\"}}]"
-      }
-    }
-  },
   "www.hookamonk.com": {},
   "monkstage.topmonks.com": {},
   "www.xduediligence.com": {}
