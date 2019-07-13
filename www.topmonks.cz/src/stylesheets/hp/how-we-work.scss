@@ -20,20 +20,8 @@
     border-radius: 56px;
     position: absolute;
     left: 16.6666%;
-    top: 32px;
-    z-index: -1;
-  }
-
-  h2::after {
-    content: "";
-    display: block;
-    height: 100px;
-    border: 1px solid #ccc;
-    border-right: none;
-    position: absolute;
-    left: 50%;
-    top: 32px;
-    z-index: -1;
+    top: 210px;
+    z-index: -10;
   }
   .sub-info {
     text-align: center;
