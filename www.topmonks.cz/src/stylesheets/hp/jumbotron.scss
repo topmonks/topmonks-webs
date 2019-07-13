@@ -15,6 +15,28 @@
     margin-top: 0.667em;
   }
 
+  .represent {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 38px 20px 20px;;
+    box-shadow: 2px 10px 23px rgba(92, 95, 255, 0.1);
+
+    p {
+      text-align: center;
+    }
+
+    span {
+      font-size: 32px;
+      font-weight: bold;
+      color: var(--tm-secondary);
+    }
+  }
+
   @media (min-width: 480px) {
     position: relative;
 

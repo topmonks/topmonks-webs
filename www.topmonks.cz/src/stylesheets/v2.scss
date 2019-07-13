@@ -53,13 +53,13 @@
 
 
 .action-button {
-  color: var(--tm-black);
-  padding: 16px 24px;
-  border: 2px solid var(--tm-primary);
+  background-color: #FDEFC5;
+  color: #A2710E;
+  width: -webkit-fill-available;
+  padding: 12px 0px;
+  margin: 16px 0 18px;
   border-radius: 4px;
-
   box-shadow: none;
-
   transition: all 100ms ease-in-out;
 
   &:hover {
@@ -76,6 +76,11 @@
   border-radius: 6px;
 
   box-shadow: var(--tm-basic-shadow);
+}
+.sub-info {
+  font-size: 24px;
+  color: var(--tm-black);
+  line-height: 35px;
 }
 
 hr {

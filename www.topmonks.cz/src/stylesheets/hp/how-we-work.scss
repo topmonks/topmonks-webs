@@ -35,7 +35,9 @@
     top: 32px;
     z-index: -1;
   }
-
+  .sub-info {
+    text-align: center;
+  }
   .box {
     padding-top: 2em; //32px
     z-index: 15;
@@ -60,5 +62,8 @@
   .how-we-work_btn {
     text-align: center;
     margin: 2em auto; //32px
+  }
+  .action-button {
+    text-transform: initial;
   }
 }
