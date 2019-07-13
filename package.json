@@ -9,7 +9,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.8.2",
     "@material/layout-grid": "^3.0.0",
-    "@pulumi/aws": "^0.18.14",
+    "@pulumi/aws": "^0.18.21",
     "@pulumi/pulumi": "^0.17.22",
     "bootstrap": "4.3.1",
     "jquery": "3.4.0",
