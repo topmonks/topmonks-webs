@@ -11,6 +11,9 @@
     blockquote {
       height: 15.25em; //244px
       margin-bottom: 2em; //32px
+      @media (max-width: 800px) {
+        height: 13em; //208px
+      }
     }
 
     figcaption {
@@ -18,7 +21,7 @@
     }
 
     @media screen and (min-width: 840px) {
-      margin: 2em auto;
+      margin: 2em auto; //32px
     }
   }
 

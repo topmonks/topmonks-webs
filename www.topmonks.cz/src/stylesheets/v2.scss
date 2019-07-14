@@ -9,18 +9,22 @@
   --tm-btn: #F0BE59;
   --tm-hamburger-label: rgba(0, 0, 0, 0.25);
 }
+
 h2.jumbotron__title {
   font-weight: 900;
   font-size: 52px;
   line-height: 75px;
 }
-
-
+.sub-info {
+  font-size: 24px;
+  color: var(--tm-black-title);
+  line-height: 35px;
+}
 .tm-logo {
   color: var(--tm-logo);
 }
 
-.tm-footer {
+h3, .tm-footer {
   background-color: var(--tm-black-title);
 }
 
@@ -77,12 +81,14 @@ h2.jumbotron__title {
     box-shadow: none;
   }
 }
+
 .fake-button {
   background-color: var(--tm-secondary);
   margin: 0 auto;
   padding: 8px 28px;
   border-radius: 30px;
-  position: relative;
+  z-index: 20;
+
   a {
     color: #FFFFFF;
   }
@@ -95,12 +101,6 @@ h2.jumbotron__title {
 .box {
   border-radius: 6px;
   box-shadow: 2px 10px 23px rgba(92, 95, 255, 0.1);
-}
-
-.sub-info {
-  font-size: 24px;
-  color: var(--tm-black);
-  line-height: 35px;
 }
 
 hr {

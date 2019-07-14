@@ -28,12 +28,25 @@
 
     p {
       text-align: center;
+      @media (max-width: 580px) {
+        padding-bottom: 1em;
+      }
     }
 
     span {
       font-size: 32px;
       font-weight: bold;
       color: var(--tm-secondary);
+    }
+
+    @media (max-width: 580px) {
+      display: grid;
+    }
+  }
+  @media screen and (max-width: 839px) {
+    h2.jumbotron__title {
+      font-size: 1.75em;
+      line-height: 1.214em;
     }
   }
 

@@ -23,9 +23,11 @@
     top: 210px;
     z-index: -10;
   }
+
   .sub-info {
     text-align: center;
   }
+
   .box {
     padding-top: 2em; //32px
     z-index: 15;
@@ -51,7 +53,15 @@
     text-align: center;
     margin: 2em auto; //32px
   }
+
   .action-button {
     text-transform: initial;
   }
+}
+
+@media (min-width: 690px) and (max-width: 830px) {
+  #akcelerace-webu {
+    margin-top: 6em;
+  }
+
 }

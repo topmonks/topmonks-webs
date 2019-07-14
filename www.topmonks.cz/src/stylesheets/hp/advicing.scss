@@ -25,6 +25,9 @@
         background-color: var(--tm-primary-light);
         box-shadow: none;
       }
+      @media (max-width: 580px) {
+          padding: 18px;
+      }
     }
   }
 }
