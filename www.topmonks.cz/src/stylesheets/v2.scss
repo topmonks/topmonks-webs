@@ -10,10 +10,14 @@
   --tm-hamburger-label: rgba(0, 0, 0, 0.25);
 }
 
+
 h2.jumbotron__title {
   font-weight: 900;
   font-size: 52px;
   line-height: 75px;
+}
+h3 {
+  color: var(--tm-black-title);
 }
 .sub-info {
   font-size: 24px;
@@ -24,7 +28,7 @@ h2.jumbotron__title {
   color: var(--tm-logo);
 }
 
-h3, .tm-footer {
+.tm-footer {
   background-color: var(--tm-black-title);
 }
 
