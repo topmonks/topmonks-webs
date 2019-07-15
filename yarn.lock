@@ -491,9 +491,10 @@
 
 "@topmonks/blendid@git://github.com/topmonks/blendid.git":
   version "5.0.0"
-  resolved "git://github.com/topmonks/blendid.git#b14aa9beffe0488671ebaf5886b50bff746bb6ab"
+  uid ff005885f302381fbca93944cde94899f55912d5
+  resolved "git://github.com/topmonks/blendid.git#ff005885f302381fbca93944cde94899f55912d5"
   dependencies:
-    ansi-colors "4.0.1"
+    ansi-colors "4.1.1"
     autoprefixer "9.6.1"
     babel-core "^6.25.0"
     babel-loader "^7.1.1"
@@ -704,10 +705,10 @@ ansi-align@^3.0.0:
   dependencies:
     string-width "^3.0.0"
 
-ansi-colors@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-4.0.1.tgz#3dc29301836c6152f617a71466bde162a2e42582"
-  integrity sha512-1Qs1jdXEMSYwcVooLRfnCc5+e3365pw38v4AVkSsCxsjXRGKDTem5VLCl53SpHSpLnEy8O5DofJHZJELaRiJbg==
+ansi-colors@4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-4.1.1.tgz#cbb9ae256bf750af1eab344f229aa27fe94ba348"
+  integrity sha512-JoX0apGbHaUJBNl6yF+p6JAFYZ666/hhCGKN5t9QFjbJQKUU/g8MNbFDbvfrgKXvI1QpZplPOnwIo99lX/AAmA==
 
 ansi-colors@^1.0.1:
   version "1.1.0"
