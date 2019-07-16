@@ -491,8 +491,8 @@
 
 "@topmonks/blendid@git://github.com/topmonks/blendid.git":
   version "5.0.0"
-  uid ff005885f302381fbca93944cde94899f55912d5
-  resolved "git://github.com/topmonks/blendid.git#ff005885f302381fbca93944cde94899f55912d5"
+  uid "5f5299a194232903b000cbf8da489cd84bce3aad"
+  resolved "git://github.com/topmonks/blendid.git#5f5299a194232903b000cbf8da489cd84bce3aad"
   dependencies:
     ansi-colors "4.1.1"
     autoprefixer "9.6.1"
@@ -520,7 +520,7 @@
     gulp-sizereport "1.2.1"
     gulp-sourcemaps "2.6.5"
     gulp-svgstore "7.0.1"
-    lodash "^4.17.13"
+    lodash "^4.17.14"
     merge-stream "2.0.0"
     minimist "^1.2.0"
     node-fs-extra "^0.8.2"
@@ -7640,7 +7640,7 @@ lodash@^2.4.1, lodash@~2.4.1:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-2.4.2.tgz#fadd834b9683073da179b3eae6d9c0d15053f73e"
   integrity sha1-+t2DS5aDBz2hebPq5tnA0VBT9z4=
 
-lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.4, lodash@^4.3.0, lodash@~4.17.10:
+lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.4, lodash@^4.3.0, lodash@~4.17.10:
   version "4.17.14"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
   integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
