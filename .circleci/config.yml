@@ -12,19 +12,26 @@ test-site: &test-site
     - restore_cache:
         keys:
           - v3-dependencies-{{ checksum "yarn.lock" }}
-    - run: |
-        sudo apt-get install libnss3-tools
-        mkdir -p $HOME/.pki/nssdb
-        certutil -d $HOME/.pki/nssdb -N --empty-password
-        certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n lws-cert -i ./node_modules/lws/ssl/lws-cert.pem
     - run:
+        name: Install self-signed cert for localhost
+        command: |
+          sudo apt-get install libnss3-tools
+          mkdir -p $HOME/.pki/nssdb
+          certutil -d $HOME/.pki/nssdb -N --empty-password
+          certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n lws-cert -i ./node_modules/lws/ssl/lws-cert.pem
+    - run:
+        name: Serve site content
         command: yarn run ws --compress --http2 -d ./public/$HOST
         background: true
-    - run: |
-        mkdir results
-        yarn test:lighthouse
-        yarn test:ava
-        yarn test:broken-links:$HOST
+    - run:
+        name: Test site with Lighthouse
+        command: |
+          mkdir results
+          yarn test:lighthouse
+          yarn test:ava
+    - run:
+        name: Check site for broken links
+        command: yarn test:broken-links:$HOST
     - store_artifacts:
         path: ./results
     - store_test_results:
