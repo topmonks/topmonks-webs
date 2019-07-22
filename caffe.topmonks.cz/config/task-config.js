@@ -26,8 +26,7 @@ module.exports = {
   stylesheets: {
     sass: {
       importer: globImporter()
-    },
-    autoprefixer: { browsers: ["> 5%", "last 4 versions", "IE 8"] }
+    }
   },
 
   html: {
