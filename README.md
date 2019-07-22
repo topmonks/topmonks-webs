@@ -89,7 +89,8 @@ The following sites can be build and ran using the `yarn start:[SITE]` command.
 - `caffe.topmonks.cz`
 - `blockchain.topmonks.com`
 - `studio.topmonks.com`
-- `xixo-demo.topmonks.com`
+- `www.xduediligence.com`
+- `www.hookahmonk.com`
 
 It will start [browser-sync](https://browsersync.io/) session on [http://localhost:3000](http://localhost:3000).
 
@@ -139,7 +140,7 @@ yarn create-site new-site.topmonks.com -v --title "New TopMonks App"
 
 ## Remove existing site
 
-If you want to create a remove existing site, e.g. `existing-site.topmonks.com`, you first must delete it's bucket contents manually, than simply run
+If you want to remove an existing site, e.g. `existing-site.topmonks.com`, you first must delete it's bucket content manually, than simply run
 
 ```
 yarn remove-site existing-site.topmonks.com
