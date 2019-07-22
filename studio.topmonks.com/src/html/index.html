@@ -566,7 +566,12 @@
     </div>
   </section>
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!--[if !IE]> -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- <![endif]-->
+<!--[if IE]>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<![endif]-->
 <script>
   let toggleFieldState = function(elm){
     if (elm.value != '')
