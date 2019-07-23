@@ -348,10 +348,10 @@
   dependencies:
     vary "^1.1.2"
 
-"@material/layout-grid@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@material/layout-grid/-/layout-grid-3.0.0.tgz#910912fe5ec7fb369cf62d64cbb8619d611a9663"
-  integrity sha512-MZu6/0vc/1Pum1t63KoxQSTkmIs1FxSmaRWqbdAFT9fTlbB+0VEiPI1m4n/y5R/mQUCzMLq2gj4slrjVFjvtUQ==
+"@material/layout-grid@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@material/layout-grid/-/layout-grid-3.1.0.tgz#7f3305f3f236fd6a347ff9ae1440640ff64e84d8"
+  integrity sha512-//9LggCNibXNtUkqijvDBK85fL1GSB+uIPYVx6ATToqDej1/35eedUxDSsw/ugm7zZ0OSyPLimbBuNMMnQtlqQ==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
