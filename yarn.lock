@@ -657,6 +657,13 @@ after@0.8.2:
   resolved "https://registry.yarnpkg.com/after/-/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
   integrity sha1-/ts5T58OAqqXaOcCvaI7UF+ufh8=
 
+agent-base@4, agent-base@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-4.3.0.tgz#8165f01c436009bccad0b1d122f05ed770efc6ee"
+  integrity sha512-salcGninV0nPrwpGNn4VTXBb1SOuXQBiqbrNXoeizJsHrsL6ERFM2Ne3JUSBWRE6aeNJI2ROP/WEEIDUiDe3cg==
+  dependencies:
+    es6-promisify "^5.0.0"
+
 ajv-keywords@^3.1.0:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.4.1.tgz#ef916e271c64ac12171fd8384eaae6b2345854da"
@@ -3750,19 +3757,19 @@ debug@2.6.9, debug@^2.1.1, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.
   dependencies:
     ms "2.0.0"
 
+debug@3.1.0, debug@=3.1.0, debug@~3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+  integrity sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
+  dependencies:
+    ms "2.0.0"
+
 debug@3.X, debug@^3.1.0, debug@^3.2.6:
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
   integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
   dependencies:
     ms "^2.1.1"
-
-debug@=3.1.0, debug@~3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
-  integrity sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
-  dependencies:
-    ms "2.0.0"
 
 debuglog@^1.0.1:
   version "1.0.1"
@@ -4377,6 +4384,18 @@ es6-map@^0.1.3:
     es6-set "~0.1.5"
     es6-symbol "~3.1.1"
     event-emitter "~0.3.5"
+
+es6-promise@^4.0.3:
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
+  integrity sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
+
+es6-promisify@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/es6-promisify/-/es6-promisify-5.0.0.tgz#5109d62f3e56ea967c4b63505aef08291c8a5203"
+  integrity sha1-UQnWLz5W6pZ8S2NQWu8IKRyKUgM=
+  dependencies:
+    es6-promise "^4.0.3"
 
 es6-set@~0.1.5:
   version "0.1.5"
@@ -6030,6 +6049,14 @@ http-link-header@^0.8.0:
   resolved "https://registry.yarnpkg.com/http-link-header/-/http-link-header-0.8.0.tgz#a22b41a0c9b1e2d8fac1bf1b697c6bd532d5f5e4"
   integrity sha1-oitBoMmx4tj6wb8baXxr1TLV9eQ=
 
+http-proxy-agent@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/http-proxy-agent/-/http-proxy-agent-2.1.0.tgz#e4821beef5b2142a2026bd73926fe537631c5405"
+  integrity sha512-qwHbBLV7WviBl0rQsOzH6o5lwyOIvwp/BdFnvVxXORldu5TmjFfjzBcWUWS5kWAZhmv+JtiDhSuQCp4sBfbIgg==
+  dependencies:
+    agent-base "4"
+    debug "3.1.0"
+
 http-proxy@1.15.2:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/http-proxy/-/http-proxy-1.15.2.tgz#642fdcaffe52d3448d2bda3b0079e9409064da31"
@@ -6051,6 +6078,14 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
+
+https-proxy-agent@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.2.tgz#271ea8e90f836ac9f119daccd39c19ff7dfb0793"
+  integrity sha512-c8Ndjc9Bkpfx/vCJueCPy0jlP4ccCCSNDp8xwCZzPjKJUm+B+u9WX2x98Qx4n1PiMNTWo3D7KK5ifNV/yJyRzg==
+  dependencies:
+    agent-base "^4.3.0"
+    debug "^3.1.0"
 
 humanize-duration@^3.9.1:
   version "3.19.0"
@@ -7430,10 +7465,10 @@ loader-utils@^1.0.2, loader-utils@^1.1.0:
     emojis-list "^2.0.0"
     json5 "^1.0.1"
 
-local-web-server@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/local-web-server/-/local-web-server-3.0.4.tgz#d6fba9038c33f186d1fc89479581be8341adc213"
-  integrity sha512-Rddg07XLKI2tyzxtSwAq7WZnsLNpbCYOn/KC38n0idhKEBzsAJKTbwfItplqUWK409jiGG4l8fbdZm8NaxmYBA==
+local-web-server@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/local-web-server/-/local-web-server-3.0.6.tgz#5f85b687db154e4468461232c5752d862b73aa7a"
+  integrity sha512-tYdAF/SkdwCKKfb9TIwncpqswxQFRNlYx1E9nHxzLlHziPVuOFmU/7/UIo+7DsZb8erCVewH/2OmTzGmAcYJ6Q==
   dependencies:
     lws "^2.0.3"
     lws-basic-auth "^1.0.3"
@@ -7442,13 +7477,13 @@ local-web-server@^3.0.4:
     lws-compress "^1.0.2"
     lws-conditional-get "^1.0.1"
     lws-cors "^2.0.1"
-    lws-index "^1.0.4"
+    lws-index "^1.0.5"
     lws-json "^1.0.1"
     lws-log "^1.0.3"
     lws-mime "^1.0.1"
     lws-range "^2.0.1"
     lws-request-monitor "^1.0.4"
-    lws-rewrite "^2.0.5"
+    lws-rewrite "^2.0.7"
     lws-spa "^2.0.2"
     lws-static "^1.1.3"
     node-version-matches "^1.0.1"
@@ -7794,12 +7829,12 @@ lws-cors@^2.0.1:
   dependencies:
     "@koa/cors" "^3.0.0"
 
-lws-index@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/lws-index/-/lws-index-1.0.4.tgz#7f98d9b9a79303bfcf3956a57abf80c56cd42e7c"
-  integrity sha512-DmfnyesC4M43bdO3Jr5fjye7qYaq6kGoOBfWJu64llHxHnOpvowShEtoJeUEEzUf4Myjzzl+xO2IzYqFmpqa4w==
+lws-index@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/lws-index/-/lws-index-1.0.5.tgz#04347d224a119bdad868b8748885c18a5c135b0e"
+  integrity sha512-6zpz9Q677VCvGC8pOZYk9JX1xGdfTYSbHuKbPA7W07PxszkblFxt6M/UitE5Zs6Lc8D+3gs30orYmJV56pVflQ==
   dependencies:
-    serve-index "^1.9.1"
+    serve-index-75lb "^2.0.1"
 
 lws-json@^1.0.1:
   version "1.0.1"
@@ -7835,16 +7870,17 @@ lws-request-monitor@^1.0.4:
   dependencies:
     byte-size "^5.0.1"
 
-lws-rewrite@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/lws-rewrite/-/lws-rewrite-2.0.5.tgz#6b89981af340dd904f018e763ecfa128d8afe915"
-  integrity sha512-VbD86rd4reocdMBWV6mrRkwR7BRG2Xi4sDyFbehH7p1aIopG4o8WwDk9dtICc9is6FIWBw3ChYZ3Hz8vZjCoog==
+lws-rewrite@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/lws-rewrite/-/lws-rewrite-2.0.7.tgz#14d2c85a69e4e77769b9905ca39c7c7f01deffd2"
+  integrity sha512-fZm0y/ygxDk4j69aEXa9YtHcEqrgYZgi+bJP/vF9P0KPB0ib2V+MTAoCJUzzQQL/gdFspFyURFZjEJC6LOdz4w==
   dependencies:
     array-back "^3.1.0"
+    http-proxy-agent "^2.1.0"
+    https-proxy-agent "^2.2.2"
     koa-rewrite-75lb "^3.0.1"
     koa-route "^3.2.0"
     path-to-regexp "^3.0.0"
-    request "^2.88.0"
 
 lws-spa@^2.0.2:
   version "2.0.2"
@@ -8166,7 +8202,7 @@ mime-db@1.40.0, "mime-db@>= 1.40.0 < 2":
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.40.0.tgz#a65057e998db090f732a68f6c276d387d4126c32"
   integrity sha512-jYdeOMPy9vnxEqFRRo6ZvTZ8d9oPb+k18PKoYNYUe2stVEBPPwsln/qWzdbmaIvnhZ9v2P+CuecK+fpUfsV2mA==
 
-mime-types@^2.1.12, mime-types@^2.1.18, mime-types@~2.1.17, mime-types@~2.1.19, mime-types@~2.1.24:
+mime-types@^2.1.12, mime-types@^2.1.18, mime-types@~2.1.17, mime-types@~2.1.18, mime-types@~2.1.19, mime-types@~2.1.24:
   version "2.1.24"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.24.tgz#b6f8d0b3e951efb77dedeca194cff6d16f676f81"
   integrity sha512-WaFHS3MCl5fapm3oLxU4eYDw77IQM2ACcxQ9RIxfaC3ooc6PFuBMGZZsYpvoXS5D5QTWPieo1jjLdAm3TBP3cQ==
@@ -10949,7 +10985,20 @@ serialize-error@^2.1.0:
   resolved "https://registry.yarnpkg.com/serialize-error/-/serialize-error-2.1.0.tgz#50b679d5635cdf84667bdc8e59af4e5b81d5f60a"
   integrity sha1-ULZ51WNc34Rme9yOWa9OW4HV9go=
 
-serve-index@1.9.1, serve-index@^1.9.1:
+serve-index-75lb@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/serve-index-75lb/-/serve-index-75lb-2.0.1.tgz#f07da6462df4cdcd49d8a14bba8f2b4b8a8dce1a"
+  integrity sha512-/d9r8bqJlFQcwy0a0nb1KnWAA+Mno+V+VaoKocdkbW5aXKRQd/+4bfnRhQRQr6uEoYwTRJ4xgztOyCJvWcpBpQ==
+  dependencies:
+    accepts "~1.3.4"
+    batch "0.6.1"
+    debug "2.6.9"
+    escape-html "~1.0.3"
+    http-errors "~1.6.2"
+    mime-types "~2.1.18"
+    parseurl "~1.3.2"
+
+serve-index@1.9.1:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/serve-index/-/serve-index-1.9.1.tgz#d3768d69b1e7d82e5ce050fff5b453bea12a9239"
   integrity sha1-03aNabHn2C5c4FD/9bRTvqEqkjk=
