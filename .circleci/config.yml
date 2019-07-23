@@ -11,7 +11,7 @@ test-site: &test-site
         at: ~/topmonks-webs
     - restore_cache:
         keys:
-          - v3-dependencies-{{ checksum "yarn.lock" }}
+          - v4-dependencies-{{ checksum "yarn.lock" }}
     - run:
         name: Install self-signed cert for localhost
         command: |
@@ -73,13 +73,13 @@ jobs:
           command: pulumi login file:///home/circleci/topmonks-webs
       - restore_cache:
           keys:
-            - v3-dependencies-{{ checksum "yarn.lock" }}
+            - v4-dependencies-{{ checksum "yarn.lock" }}
 
       - run: yarn install --link-duplicates --no-progress
       - save_cache:
           paths:
             - node_modules
-          key: v3-dependencies-{{ checksum "yarn.lock" }}
+          key: v4-dependencies-{{ checksum "yarn.lock" }}
       - run: yarn run build
       - run: |
           mkdir results
