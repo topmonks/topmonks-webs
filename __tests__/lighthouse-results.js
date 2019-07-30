@@ -24,12 +24,12 @@ test(
 
 test("Lighthouse SEO", assertThreshold(results.categories.seo, 0.75));
 
-test("Lighthouse Vulnerable libraries", t =>
+test("Lighthouse Vulnerable libraries", t => {
+  const audit = results.audits["no-vulnerable-libraries"];
   t.true(
-    results.audits["no-vulnerable-libraries"].rawValue,
-    results.audits["no-vulnerable-libraries"].extendedInfo &&
+    audit.score === 1,
+    audit.details &&
       "Contains vulnerable libraries: " +
-        results.audits["no-vulnerable-libraries"].extendedInfo.jsLibs
-          .map(x => x.name + "@" + x.version)
-          .join()
-  ));
+        audit.details.items.map(x => x.detectedLib.text).join()
+  );
+});
