@@ -23,3 +23,13 @@ test(
 );
 
 test("Lighthouse SEO", assertThreshold(results.categories.seo, 0.75));
+
+test("Lighthouse Vulnerable libraries", t => {
+  const audit = results.audits["no-vulnerable-libraries"];
+  t.true(
+    audit.score === 1,
+    audit.details &&
+      "Contains vulnerable libraries: " +
+        audit.details.items.map(x => x.detectedLib.text).join()
+  );
+});

@@ -21,7 +21,7 @@ test-site: &test-site
           certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n lws-cert -i ./node_modules/lws/ssl/lws-cert.pem
     - run:
         name: Serve site content
-        command: yarn run ws --compress --http2 -d ./public/$HOST
+        command: yarn serve
         background: true
     - run:
         name: Test site with Lighthouse
