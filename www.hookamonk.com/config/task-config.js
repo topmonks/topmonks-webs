@@ -1,11 +1,13 @@
 const globImporter = require("node-sass-glob-importer");
+const pathConfig = require("./path-config.json");
 const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
+const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
 
 const config = createSharedTaskConfig(__dirname, {
   images: true,
   fonts: true,
   static: true,
-  svgSprite: true,
+  svgSprite: false,
 
   javascripts: {
     entry: {
@@ -27,7 +29,7 @@ const config = createSharedTaskConfig(__dirname, {
     server: {
       // should match `dest` in
       // path-config.json
-      baseDir: "./public/www.hookahmonk.com"
+      baseDir: pathConfig.dest
     }
   },
 
