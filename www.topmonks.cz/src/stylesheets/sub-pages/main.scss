@@ -1,0 +1,102 @@
+@media not all, screen and (min-resolution: 192dpi) and (min-width: 480px), screen and (min-resolution: 2dppx) and (min-width: 480px) {
+  body {
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1565353972/TM%20Subpages/subpages_bgnd.png") no-repeat right calc(50% - 430px) top;
+    background-size: 919px auto;
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1565353972/TM%20Subpages/subpages_bgnd.png") no-repeat right calc(50% - 430px) top -16px;
+    background-size: 919px auto;
+    overflow-x: hidden;
+  }
+}
+
+
+h2 {
+  text-align: left;
+}
+
+h3.purple {
+  color: var(--tm-secondary);
+}
+
+ul li {
+  line-height: 40px;
+}
+
+.jumbotron {
+  svg {
+    width: 100%;
+    padding-top: 24px; //1.5em;
+  }
+}
+
+// BOXES //
+.box {
+  padding: 14px;
+
+  h3 {
+    text-align: left;
+  }
+}
+
+// BUTTONS //
+.button {
+  margin: 0 auto;
+
+  .advicing_btn {
+    background-color: var(--tm-btn);
+    color: var(--tm-black-title);
+  }
+}
+
+// SECTION NETWORKING //
+.networking {
+  li {
+    display: -webkit-inline-flex;
+
+    &:before {
+      display: block;
+      content: url("/images/pre-list_subpages-icon.svg");
+      width: 16px;
+      padding: 2px 12px 0;
+    }
+  }
+}
+
+// SECTION EXAMPLES //
+.examples {
+  h3 {
+    font-size: 20px;
+    line-height: 29px;
+  }
+ .box p {
+    min-height: 100px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .advicing_btn {
+    padding: 18px 32px;
+  }
+  .box {
+    padding: 14px 28px;
+  }
+  .jumbotron {
+    p {
+      line-height: 164%;
+    }
+  }
+}
+
+@media (max-width: 839px) {
+  .page_sub-title {
+    font-size: 18px;
+  }
+  .advicing_btn {
+    padding: 18px;
+  }
+}
