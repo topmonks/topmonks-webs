@@ -20,7 +20,18 @@ const config = createSharedTaskConfig(__dirname, {
   },
 
   html: {
-    dataFile: "../data/global.json"
+    dataFile: "../data/global.json",
+    htmlmin: {
+      collapseBooleanAttributes: true,
+      decodeEntities: true,
+      minifyCSS: true,
+      minifyJS: true,
+      removeAttributeQuotes: true,
+      removeOptionalTags: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true
+    }
   },
 
   browserSync: {
