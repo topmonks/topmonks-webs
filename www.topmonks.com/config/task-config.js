@@ -28,7 +28,18 @@ const config = createSharedTaskConfig(__dirname, {
   html: {
     dataFile: "../data/team.json",
     src: "html",
-    excludeFolders: ["layouts", "shared", "macros"]
+    excludeFolders: ["layouts", "shared", "macros"],
+    htmlmin: {
+      collapseBooleanAttributes: true,
+      decodeEntities: true,
+      minifyCSS: true,
+      minifyJS: true,
+      removeAttributeQuotes: true,
+      removeOptionalTags: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true
+    }
   },
 
   browserSync: {
