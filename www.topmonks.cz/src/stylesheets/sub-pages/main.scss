@@ -22,6 +22,9 @@ h2 {
 h3.purple {
   color: var(--tm-secondary);
 }
+p > a {
+  border-bottom: none;
+}
 
 ul li {
   line-height: 40px;
@@ -53,30 +56,6 @@ ul li {
   }
 }
 
-// SECTION NETWORKING //
-.networking {
-  li {
-    display: -webkit-inline-flex;
-
-    &:before {
-      display: block;
-      content: url("/images/pre-list_subpages-icon.svg");
-      width: 16px;
-      padding: 2px 12px 0;
-    }
-  }
-}
-
-// SECTION EXAMPLES //
-.examples {
-  h3 {
-    font-size: 20px;
-    line-height: 29px;
-  }
- .box p {
-    min-height: 100px;
-  }
-}
 
 @media screen and (min-width: 840px) {
   .advicing_btn {
