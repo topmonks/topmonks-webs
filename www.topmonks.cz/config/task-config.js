@@ -25,7 +25,18 @@ module.exports = {
   },
 
   html: {
-    dataFile: "../data/team.json"
+    dataFile: "../data/team.json",
+    htmlmin: {
+      collapseBooleanAttributes: true,
+      decodeEntities: true,
+      minifyCSS: true,
+      minifyJS: true,
+      removeAttributeQuotes: true,
+      removeOptionalTags: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true
+    }
   },
 
   browserSync: {
