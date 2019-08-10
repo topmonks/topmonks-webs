@@ -1,5 +1,9 @@
-h3.purple {
-  color: var(--tm-secondary);
+h1 {
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 144%;
+  text-transform: uppercase;
+  text-align: left;
 }
 p > a {
   border-bottom: none;
@@ -18,7 +22,9 @@ ul li {
     padding-top: 24px; //1.5em;
   }
 }
-
+.purple {
+  color: var(--tm-secondary);
+}
 // BOXES //
 .box {
   padding: 14px;
@@ -27,6 +33,7 @@ ul li {
     text-align: left;
   }
 }
+
 
 // BUTTONS //
 .button {
