@@ -1,0 +1,15 @@
+<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Ikona pro sekci Tým</title>
+  <circle cx="21" cy="21" r="21" fill="#7462E0"/>
+<g clip-path="url(#clip0)">
+<path d="M25.1668 28.5V26.8333C25.1668 25.9493 24.8156 25.1014 24.1905 24.4763C23.5654 23.8512 22.7176 23.5 21.8335 23.5H15.1668C14.2828 23.5 13.4349 23.8512 12.8098 24.4763C12.1847 25.1014 11.8335 25.9493 11.8335 26.8333V28.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.4998 20.1667C20.3408 20.1667 21.8332 18.6743 21.8332 16.8333C21.8332 14.9924 20.3408 13.5 18.4998 13.5C16.6589 13.5 15.1665 14.9924 15.1665 16.8333C15.1665 18.6743 16.6589 20.1667 18.4998 20.1667Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30.1665 28.5V26.8333C30.166 26.0948 29.9201 25.3773 29.4676 24.7936C29.0152 24.2099 28.3816 23.793 27.6665 23.6083" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.3335 13.6083C25.0505 13.7919 25.686 14.2089 26.1399 14.7936C26.5937 15.3783 26.84 16.0974 26.84 16.8375C26.84 17.5776 26.5937 18.2967 26.1399 18.8814C25.686 19.4661 25.0505 19.8831 24.3335 20.0667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="20" height="20" fill="white" transform="translate(11 11)"/>
+</clipPath>
+</defs>
+</svg>

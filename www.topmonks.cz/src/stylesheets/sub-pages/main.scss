@@ -37,20 +37,46 @@ ul li {
     color: var(--tm-black-title);
   }
 }
-
+//Pre-list Icons:
 // SECTION NETWORKING //
 .networking {
   li {
     display: -webkit-inline-flex;
-
     &:before {
       display: block;
-      content: url("/images/pre-list_subpages-icon.svg");
+      content: url("/images/sub-pages/pre-list_subpages-icon.svg");
       width: 16px;
       padding: 2px 12px 0;
     }
   }
 }
+
+// SECTION DATA OF THE COMPANY //
+.data {
+  li {
+    display: -webkit-inline-flex;
+    &:before {
+      display: block;
+      content: url("/images/sub-pages/pre-list_round-icon.svg");
+      width: 18px;
+      padding: 2px 12px 0;
+    }
+  }
+}
+
+.absence {
+  li {
+    display: -webkit-inline-flex;
+    &:before {
+      display: block;
+      content: url("/images/sub-pages/pre-list_cross-icon.svg");
+      width: 16px;
+      padding: 2px 12px 0;
+    }
+  }
+}
+
+
 
 // SECTION EXAMPLES //
 .examples {
