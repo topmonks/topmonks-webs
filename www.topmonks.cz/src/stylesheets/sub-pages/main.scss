@@ -5,6 +5,7 @@ h1 {
   text-transform: uppercase;
   text-align: left;
 }
+
 p > a {
   border-bottom: none;
 }
@@ -17,14 +18,18 @@ ul li {
   h2 {
     text-align: left;
   }
+
   svg {
     width: 100%;
     padding-top: 24px; //1.5em;
   }
 }
+
 .purple {
   color: var(--tm-secondary);
 }
+
+
 // BOXES //
 .box {
   padding: 14px;
@@ -32,6 +37,11 @@ ul li {
   h3 {
     text-align: left;
   }
+}
+.consultation_box {
+  padding: 0 28px;
+  box-shadow: 2px 10px 23px rgba(92, 95, 255, 0.1);
+  border-radius: 6px;
 }
 
 
@@ -44,11 +54,13 @@ ul li {
     color: var(--tm-black-title);
   }
 }
+
 //Pre-list Icons:
 // SECTION NETWORKING //
 .networking {
   li {
     display: -webkit-inline-flex;
+
     &:before {
       display: block;
       content: url("/images/sub-pages/pre-list_subpages-icon.svg");
@@ -62,6 +74,7 @@ ul li {
 .data {
   li {
     display: -webkit-inline-flex;
+
     &:before {
       display: block;
       content: url("/images/sub-pages/pre-list_round-icon.svg");
@@ -74,6 +87,7 @@ ul li {
 .absence {
   li {
     display: -webkit-inline-flex;
+
     &:before {
       display: block;
       content: url("/images/sub-pages/pre-list_cross-icon.svg");
@@ -84,12 +98,12 @@ ul li {
 }
 
 
-
 // SECTION EXAMPLES //
 .examples {
   h2 {
     text-align: left;
   }
+
   h3 {
     font-size: 20px;
     line-height: 29px;
@@ -99,7 +113,6 @@ ul li {
     min-height: 100px;
   }
 }
-
 
 
 @media screen and (min-width: 840px) {
