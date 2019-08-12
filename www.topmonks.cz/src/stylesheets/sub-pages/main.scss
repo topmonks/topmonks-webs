@@ -52,6 +52,9 @@ ul li {
   .advicing_btn {
     background-color: var(--tm-btn);
     color: var(--tm-black-title);
+    &:hover {
+      background-color: var(--tm-primary-light);
+    }
   }
 }
 
@@ -107,6 +110,9 @@ ul li {
   h3 {
     font-size: 20px;
     line-height: 29px;
+  }
+  .sub-info {
+    color: var(--tm-black);
   }
 
   .box p {
