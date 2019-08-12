@@ -1,9 +1,11 @@
 h1 {
   font-size: 15px;
   font-weight: lighter;
+  color: var( --tm-grey);
   line-height: 144%;
   text-transform: uppercase;
   text-align: left;
+  letter-spacing: 1px;
 }
 
 p > a {
@@ -29,9 +31,12 @@ ul li {
     padding-top: 24px; //1.5em;
   }
 }
-
-.purple {
-  color: var(--tm-secondary);
+  .purple {
+    color: var(--tm-secondary);
+  }
+a.purple {
+  text-decoration: none;
+  border-bottom: none;
 }
 
 
@@ -139,7 +144,10 @@ ul li {
 }
 
 @media (max-width: 839px) {
-  .page_sub-title {
+  .jumbotron h2 {
+    font-size: 36px;
+  }
+  .page_sub-title, .sub-info {
     font-size: 18px;
   }
   .advicing_btn {
