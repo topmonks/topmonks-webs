@@ -52,6 +52,9 @@ a.purple {
   padding: 0 28px;
   box-shadow: 2px 10px 23px rgba(92, 95, 255, 0.1);
   border-radius: 6px;
+  @media (max-width: 560px) {
+    padding: 0;
+  }
 }
 
 
