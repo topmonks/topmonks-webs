@@ -500,7 +500,8 @@
 
 "@topmonks/blendid@git://github.com/topmonks/blendid.git":
   version "5.0.0"
-  resolved "git://github.com/topmonks/blendid.git#fd924b2d1f69449a2b7231ba9399eb162fb51fba"
+  uid baa57638eb0e78da96fa8d7418f4628a8adec90d
+  resolved "git://github.com/topmonks/blendid.git#baa57638eb0e78da96fa8d7418f4628a8adec90d"
   dependencies:
     ansi-colors "4.1.1"
     autoprefixer "9.6.1"
@@ -514,7 +515,7 @@
     fancy-log "^1.3.2"
     fs-extra "8.1.0"
     gulp "4.0.2"
-    gulp-changed "4.0.0"
+    gulp-changed "4.0.1"
     gulp-data "1.3.1"
     gulp-htmlmin "^5.0.1"
     gulp-if "^3.0.0"
@@ -5520,10 +5521,10 @@ grpc@1.21.1:
     node-pre-gyp "^0.13.0"
     protobufjs "^5.0.3"
 
-gulp-changed@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/gulp-changed/-/gulp-changed-4.0.0.tgz#6317372ecc99dbd1637ae855b985ba379e8c8a62"
-  integrity sha512-BiPKI25QMP48dMChfqPjKpv1a7BCT1ATg6ob2oKzS8iFE/gepVwwz3PgK4vvIOiUrPmhb/tDnXptZNHQ5kpB3g==
+gulp-changed@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/gulp-changed/-/gulp-changed-4.0.1.tgz#ca63e51651a649433a49372d271b8b26054a9acc"
+  integrity sha512-VIy/woGGKBvUzj+KuL4C7ZZckT1pvy6pjIVNe8DaCrNvy7Nmh9UW/fZR73iQlOPA2U2/Sr3xLUX2RsSKwcnl/g==
   dependencies:
     make-dir "^3.0.0"
     plugin-error "^1.0.1"
