@@ -1,0 +1,57 @@
+#team:target .show-more,
+.show-less
+{
+  display: none;
+}
+#team:target {
+  .show-less{
+    display: inline-block;
+  }
+  .tm-team__member {
+    display: flex;
+    &.tm-team__member--hero {
+      display: block;
+    }
+  }
+}
+.tm-team__members .action-button {
+  margin-top: 2em;
+}
+.tm-team__member {
+  display: none;
+  align-items: center;
+
+  img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 0;
+  }
+
+  .content {
+    padding-left: 20px;
+  }
+
+  strong {
+    display: block;
+  }
+  &.tm-team__member--hero {
+    display: block;
+    padding: 0;
+    text-align: center;
+
+    img {
+      position: static;
+      width: 100%;
+      height: auto;
+      border-radius: 20px 20px 0 0;
+    }
+    .content {
+      padding: 20px;
+    }
+  }
+}
+.tm-team {
+  background: #fff url("https://res.cloudinary.com/topmonks/image/upload/v1565755279/TM%20Subpages/subbages_shadow-bgnd.png") no-repeat;
+  background-size: 100% auto;
+}
