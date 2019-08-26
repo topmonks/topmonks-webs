@@ -7,20 +7,20 @@
   --mdc-layout-grid-column-width-desktop: 60px;
   --ml-black-title: #1D1D1D;
   --ml-black-text: #565656;
+  --ml-purple: #5C5FD4;
+  --ml-dark-purple: #4A4CAA;
 }
 
 .layout-width {
   max-width: 1200px;
 }
 
-header {
-  background: #FFFFFF;
-}
 
 body {
   font-family: Neueeinstellung, sans-serif;
   color: var(--ml-black-title);
   background: #F5F6F7;
+  margin: 0;
 }
 
 //TYPOGRAPHY
@@ -52,9 +52,8 @@ p.helper {
 a {
   color: #565656;
   text-decoration: underline;
-
   &:hover {
-    color: #5C5FD4;
+    color: var(--ml-dark-purple);
   }
 }
 
@@ -76,7 +75,7 @@ a {
 }
 
 hr {
-  height: 2px;
+  height: 1px;
   border: none;
   background: #D5D5D5;
   margin: 0;
@@ -88,27 +87,109 @@ hr {
   color: #FFFFFF;
   padding: 24px;
   text-decoration: none;
-  background-color: #5C5FD4;
+  background-color: var(--ml-purple);
+
+  &:hover {
+    color: #FFFFFF;
+    background: var(--ml-dark-purple);
+  }
 }
 
 //
+
+//HEADER *Hamburger below
+header {
+  background: #FFFFFF;
+  nav {
+    float: right;
+  }
+
+  ul li {
+    list-style: none;
+    display: inline-flex;
+
+    a {
+      color: var(--ml-black-title);
+      text-decoration: none;
+      padding-right: 34px;
+    }
+  }
+}
+
 //SECTION: INTRO
-@media screen and (min-width: 1441px){
-  background: url("/images/img_monks-lab.png") no-repeat right calc(25% - 160px) top;
-  background-size: 700px 800px;
-  overflow-x: hidden;
+.intro {
+  .email-input {
+    background: #FFFFFF;
+    box-shadow: 4px 20px 40px rgba(0, 0, 0, 0.1);
+
+    input {
+      border: none;
+      padding: 26px;
+    }
+
+    button {
+      font-size: 16px;
+      color: #FFFFFF;
+      background: var(--ml-purple);
+      border: none;
+      width: 126px;
+      height: 56px;
+      float: right;
+      margin: 8px;
+      &:hover {
+        background: var(--ml-dark-purple);
+      }
+    }
+
+    @media screen and (min-width: 740px) {
+      min-width: 700px;
+      min-height: 72px;
+      input {
+        font-size: 16px;
+        min-width: 347px;
+      }
+    }
+    @media (max-width: 739px) {
+      width: 272px;
+      height: 72px;
+      input {
+        font-size: 14px;
+        max-width: 280px;
+      }
+      button {
+        margin: 8px 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    min-height: 800px;
+    background: url("/images/img_monks-lab.png") no-repeat right calc(25% - 180px) top;
+    background-size: 728px 800px;
+    overflow-x: hidden;
+    .intro_paragraph {
+      padding: 4em 0;
+    }
+  }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    background: url("/images/img_monks-lab.png") no-repeat right calc(25% - 160px) top;
+    background-size: 568px auto;
+    overflow-x: hidden;
+  }
 }
-@media (min-width: 1024px) and (max-width: 1440px){
-  background: url("/images/img_monks-lab.png") no-repeat right calc(25% - 160px) top;
-  background-size: 500px 600px;
-  overflow-x: hidden;
-}
-.intro_paragraph {
-  padding: 4em 0;
-}
+
+
 //SECTION: MEMBERSHIP
-.paragraph {
-  max-width: 650px;
+.membership {
+  .paragraph {
+    max-width: 650px;
+  }
+  .membership_btn {
+    margin: 2em 0 5em;
+    @media (max-width: 839px) {
+      text-align: center;
+    }
+  }
 }
 
 //SECTION: ABOUT MONKS LAB
@@ -124,6 +205,7 @@ hr {
     }
   }
 }
+
 //FOOTER
 
 footer {
@@ -132,3 +214,205 @@ footer {
     color: var(--ml-black-title);
   }
 }
+
+//HAMBURGER MENU
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  @media screen and (max-width: 479px) {
+    font-size: 24px;
+    padding-top: 2px;
+    justify-content: flex-end;
+  }
+  @media screen and (max-width: 839px) {
+    font-size: 24px;
+    padding-top: 2px;
+    justify-content: flex-end;
+  }
+}
+
+.logo .monk {
+  fill: currentColor;
+  padding-right: 8px;
+}
+
+.hamburger {
+  @media screen and (min-width: 840px) {
+    display: none;
+  }
+  .hamburger__container {
+    display: inline-block;
+    cursor: pointer;
+    padding: 8px;
+    width: 18px;
+    height: 18px;
+    position: relative;
+  }
+  .hamburger__container::after {
+    content: "menu";
+    color: var(--tm-hamburger-label);
+    text-transform: uppercase;
+    font-size: 13px;
+    position: absolute;
+    top: 5px;
+    left: 36px;
+  }
+  .hamburger__bar {
+    background-color: var(--ml-black-title);
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: 16px;
+    transition: transform 0.4s;
+    &:first-of-type {
+      transform: translateY(-6px);
+    }
+    &:last-of-type {
+      transform: translateY(6px);
+    }
+  }
+  .hamburger__container--open {
+    .hamburger__bar:first-of-type {
+      transform: rotate(-45deg);
+    }
+
+    .hamburger__bar:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    .hamburger__bar:last-of-type {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.app-bar {
+  position: fixed;
+  width: 100vw;
+  z-index: 1000;
+  top: 0;
+  transition: all 0.2s;
+  background-color: #FFFFFF;
+  @media screen and (max-width: 839px) {
+    height: 52px;
+    .layout-wrapper {
+      padding: 8px 16px 0 8px;
+    }
+    + main {
+      margin-top: 52px;
+    }
+  }
+  @media screen and (min-width: 840px) {
+    height: 78px;
+    .layout-wrapper {
+      padding: 23px 0 0 16px;
+    }
+    + main {
+      margin-top: 78px;
+    }
+  }
+}
+
+.app-bar--sticky {
+  background: var(--ml-black-title);
+  box-shadow: grey;
+  .logo {
+    color: var(--ml-black-title);
+  }
+  .hamburger .hamburger__bar {
+    background-color: var(--ml-dark-purple);
+  }
+  .hamburger .hamburger__container::after {
+    color: rgba(0, 0, 0, 0.25);
+  }
+  @media screen and (min-width: 840px) {
+    height: 78px;
+    .layout-wrapper {
+      padding: 23px 0 0 16px;
+    }
+    + main {
+      margin-top: 78px;
+    }
+    .menu__list a {
+      color: var(--ml-black-title);
+      &:hover {
+        color: var(--ml-dark-purple);
+      }
+    }
+  }
+}
+
+.app-bar.app-bar--open {
+  color: #fff;
+  .hamburger__container::after {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .hamburger__bar {
+    background-color: var(--ml-black-title);
+  }
+  .menu {
+    transform: translate(-8px, -64px);
+    z-index: -1;
+  }
+}
+
+.menu {
+  @media screen and (max-width: 839px) {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 64px;
+    transform: translate(calc(-100vw - 12px), -64px);
+    transform: translate(calc(-140vw - 12px), -64px);
+    position: fixed;
+    z-index: 3;
+    transition: transform 0.3s;
+    overflow: hidden;
+    background-color: var(--ml-dark-purple);
+    color: #fff;
+
+    .menu__list li {
+      margin: 0 24px;
+    }
+    .menu__list li + li {
+      border-top: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .menu__list a {
+      display: block;
+      padding: 12px;
+      margin: 4px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.menu--horizontal .menu__list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin: 0;
+}
+.menu--horizontal .menu__list a {
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  padding: 4px 8px;
+  color: var(--ml-black-title);
+
+  &:hover {
+    color: var(--ml-dark-purple);
+  }
+}
+
+
+
+.tm-menu--horizontal .tm-menu__list li + li {
+  margin-left: 4px;
+}
+
