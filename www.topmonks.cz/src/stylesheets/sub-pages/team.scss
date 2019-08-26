@@ -16,6 +16,7 @@
 }
 .tm-team__members .action-button {
   margin-top: 2em;
+  padding: 12px 44px;
 }
 .tm-team__member {
   display: none;
@@ -54,4 +55,7 @@
 .tm-team {
   background: #fff url("https://res.cloudinary.com/topmonks/image/upload/v1565755279/TM%20Subpages/subbages_shadow-bgnd.png") no-repeat;
   background-size: 100% auto;
+  .box {
+    border-radius: 20px;
+  }
 }
