@@ -187,7 +187,7 @@ function createAliasRecord(
   const args: aws.route53.RecordArgs = {
     name: domain,
     zoneId: hostedZone.apply(x => x.zoneId),
-    ttl: 300,
+    ttl: cdn ? undefined : 300,
     type: cdn ? "A" : "CNAME",
     records: cdn ? undefined : [cname],
     aliases: cdn
