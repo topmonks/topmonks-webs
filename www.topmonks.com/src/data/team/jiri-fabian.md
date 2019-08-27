@@ -8,6 +8,7 @@ github: filemon
 linkedin: in/jirifabian
 quote: Excellence always sells.
 pickup: true
+consultant: true
 ---
 
 Love to put together awesome teams and form business alliances to make this world a better place.

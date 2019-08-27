@@ -7,6 +7,8 @@ twitter:
 github:
 linkedin:
 quote:
+consultant: true
+
 ---
 
 Just tell us something we don't know

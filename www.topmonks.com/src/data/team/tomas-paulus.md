@@ -6,7 +6,9 @@ job_title: UX designer
 twitter: 
 github: 
 linkedin: i
-quote: 
+quote:
+consultant: true
+
 ---
 
 Its up to you 
