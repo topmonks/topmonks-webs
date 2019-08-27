@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="/stylesheets/main.css">
   <link rel="stylesheet" href="/stylesheets/header.css">
 </head>
-<header class="">
+<header class="app-bar">
   <div class="mdc-layout-grid layout-width">
     <div class="mdc-layout-grid__inner">
       <div
@@ -57,7 +57,7 @@
           </svg>
         </a>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-9-desktop">
+      <div class="app-bar_menu mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-9-desktop">
         <nav id="navigation" class="menu">
           <ul class="menu__list">
             <li class=""><a href="/clenstvi">Členství</a></li>
@@ -69,9 +69,59 @@
       </div>
     </div>
   </div>
+
+  <script>
+    var appBar = document.querySelector(".app-bar");
+    var hamburger = document.querySelector(".hamburger__container");
+    var menu = document.querySelector(".menu");
+    hamburger.addEventListener("click", toggleMenu(hamburger));
+    function toggleMenu(hamburger) {
+      return function() {
+        hamburger.classList.toggle("hamburger__container--open");
+        appBar.classList.toggle("app-bar--open");
+      }
+    }
+
+    var lastPosition = 0;
+    var ticking = false;
+    document.addEventListener("scroll", function() {
+      lastPosition = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          if (lastPosition > 0) {
+            appBar.classList.add("app-bar--sticky");
+          }
+          else {
+            appBar.classList.remove("app-bar--sticky");
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    window.addEventListener("resize", function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          if (window.matchMedia("(min-width: 841px)").matches) {
+            menu.classList.add("menu--horizontal");
+          }
+          else {
+            menu.classList.remove("menu--horizontal");
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    if (window.matchMedia("(min-width: 841px)").matches) {
+      menu.classList.toggle("menu--horizontal");
+    }
+  </script>
 </header>
 <body>
-<section class="intro">
+<section class="intro hp-intro">
   <div class="mdc-layout-grid layout-width">
     <div class="mdc-layout-grid__inner">
       <div

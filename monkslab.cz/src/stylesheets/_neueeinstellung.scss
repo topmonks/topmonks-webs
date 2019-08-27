@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Neueeinstellung;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NeueEinstellung-Normal.woff2") format("woff2"),
+    url("/fonts/NeueEinstellung-Normal.woff") format("woff"),
+    url("/fonts/NeueEinstellung-Normal.eot") format("eot"),
+    local("Neue Einstellung");
+}
+@font-face {
+  font-family: Neueeinstellung;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/NeueEinstellung-Regular.woff2") format("woff2"),
+    url("/fonts/NeueEinstellung-Regular.woff") format("woff"),
+    url("/fonts/NeueEinstellung-Regular.eot") format("eot"),
+    local("Neue Einstellung");
+}
+@font-face {
+  font-family: Neueeinstellung;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/NeueEinstellung-Light.woff2") format("woff2"),
+    url("/fonts/NeueEinstellung-Light.woff") format("woff"),
+    url("/fonts/NeueEinstellung-Light.eot") format("eot"),
+    local("Neue Einstellung");
+}
