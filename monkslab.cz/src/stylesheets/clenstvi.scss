@@ -1,5 +1,52 @@
+h1, h2 {
+  text-align: center;
+}
+.box {
+  padding: 28px 34px;
+
+  p {
+    padding-bottom: 1em;
+  }
+}
+
 .intro {
-  h1 {
+  .membership_btn {
+    text-align: center;
+
+    a.btn {
+      @media screen and (min-width: 1200px) {
+        padding: 28px 123px;
+      }
+      @media (max-width: 1199px) {
+        padding: 24px 80px;
+      }
+    }
+  }
+}
+
+.membership {
+  a {
+    color: var(--ml-purple);
+    text-decoration: none;
+  }
+}
+
+.events {
+  .box-grey {
+    background-color: var(--ml-grey);
+    h3 {
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 20px;
+      color: var(--ml-black-text);
+    }
+    .event_time {
+      margin-top: 1em;
+    }
+  }
+  .event_icon {
+    align-self: center;
     text-align: center;
   }
 }

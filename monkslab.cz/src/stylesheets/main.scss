@@ -8,6 +8,7 @@
   --mdc-layout-grid-column-width-desktop: 60px;
   --ml-black-title: #1D1D1D;
   --ml-black-text: #565656;
+  --ml-grey: #F5F6F7;
   --ml-purple: #5C5FD4;
   --ml-dark-purple: #4A4CAA;
 }
@@ -16,11 +17,13 @@
   max-width: 1200px;
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Neueeinstellung, sans-serif;
   color: var(--ml-black-title);
-  background: #F5F6F7;
+  background: #FBFAFC;
   margin: 0;
 }
 
@@ -53,7 +56,6 @@ p.helper {
 a {
   color: #565656;
   text-decoration: underline;
-
   &:hover {
     color: var(--ml-dark-purple);
   }
@@ -77,11 +79,10 @@ a {
 }
 
 hr {
-  height: 2px;
+  height: 1px;
   border: none;
   background: #D5D5D5;
-  margin: 0;
-  padding: 0;
+  margin: 2em 0;
 }
 
 .btn {
@@ -96,6 +97,7 @@ hr {
     background: var(--ml-dark-purple);
   }
 }
+
 .box {
   padding: 18px 34px;
   background: #FFFFFF;
@@ -126,8 +128,12 @@ header {
 
     a {
       color: var(--ml-black-title);
+      font-weight: 600;
       text-decoration: none;
-      padding-right: 44px;
+      margin-right: 44px;
+      &:hover {
+        border-bottom: 1px solid var(--ml-dark-purple);
+      }
     }
   }
 }
@@ -202,6 +208,7 @@ header {
     max-width: 650px;
   }
 }
+
 .membership_btn {
   margin: 2em 0 5em;
   @media (max-width: 839px) {
@@ -226,6 +233,7 @@ footer {
   }
 }
 
+// HAMBURGER
 
 .logo {
   display: flex;
