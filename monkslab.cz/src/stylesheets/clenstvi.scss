@@ -44,6 +44,9 @@ h1, h2 {
     .event_time {
       margin-top: 1em;
     }
+    @media (max-width: 740px) {
+      padding: 24px;
+    }
   }
   .event_icon {
     align-self: center;

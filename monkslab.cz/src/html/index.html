@@ -128,26 +128,42 @@
         class="intro_paragraph mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop">
         <h1>Vymýšľajte, prototypujte a realizujte vaše nápady. Jsme vaše
           pražská&nbsp;dílna.</h1>
-        <div class="email-input">
-          <label>
-            <input type="email" name="EMAIL" placeholder="Zadajte váš e-mail">
-            <button>Zistiť viac</button>
-          </label>
-        </div>
-        <div class="alert alert_red">
-          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-          A&nbsp;sakra! Něco je fakt špatně.
-        </div>
-        <div class="alert alert_green">
-          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-          Váš e-mail sme si odložili. Ozveme sa.
-        </div>
+        <form id="contact-form">
+          <div class="email-input">
+            <label>
+              <input type="email" name="EMAIL" placeholder="Zadajte váš e-mail">
+              <button>Zistiť viac</button>
+            </label>
+          </div>
+          <div class="alert alert--error alert--hidden">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            A&nbsp;sakra! Něco je fakt špatně.
+          </div>
+          <div class="alert alert--success alert--hidden">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            Váš e-mail sme si odložili. Ozveme sa.
+          </div>
+        </form>
         <p class="helper">Zoscrollujte nižšie a zistite viac...</p>
       </div>
+
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
       </div>
     </div>
   </div>
+  <script type="module">
+    const form = document.querySelector("#contact-form");
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const email = e.target["EMAIL"].value;
+      const response = await fetch("", { method: "POST", mode: "no-cors", body: JSON.stringify({ email }) });
+      if (response.statusCode == 200) {
+        form.querySelector(".alert--error").classList.remove("alert--hidden")
+      } else {
+        form.querySelector(".alert--success").classList.remove("alert--hidden")
+      }
+    });
+  </script>
 </section>
 <section class="about">
   <div class="mdc-layout-grid layout-width">
@@ -331,7 +347,7 @@
       </div>
       <div
         class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-8-desktop">
-        <p style="float: right">Provozní podmínky</p>
+        <p class="conditions">Provozní podmínky</p>
       </div>
     </div>
   </div>

@@ -80,6 +80,10 @@ a {
 
   p {
     font-size: 18px;
+    line-height: 164%;
+  }
+  p.helper {
+    bottom: -10%;
   }
 }
 
@@ -125,13 +129,19 @@ hr {
   text-align: center;
   margin-top: 1em;
 }
-.alert_green {
+
+.alert--success {
   background-color: #23CE6B;
 }
 
-.alert_red {
+.alert--error {
   background-color: #FF6B6B;
 }
+
+.alert--hidden {
+  display: none;
+}
+
 .closebtn {
   margin-left: 15px;
   color: white;
@@ -146,6 +156,7 @@ hr {
 .closebtn:hover {
   color: black;
 }
+
 //
 
 //HEADER *Hamburger below
@@ -163,6 +174,7 @@ header {
     a {
       color: var(--ml-black-title);
       font-weight: 600;
+      line-height: 144%;
       text-decoration: none;
       margin-right: 44px;
 
@@ -176,6 +188,7 @@ header {
 //SECTION: INTRO
 .hp-intro {
   position: relative;
+
   .email-input {
     background: #FFFFFF;
     box-shadow: 4px 20px 40px rgba(0, 0, 0, 0.1);
@@ -209,6 +222,7 @@ header {
       }
     }
     @media (max-width: 739px) {
+      margin-top: 1em;
       width: 272px;
       height: 72px;
       input {
@@ -266,6 +280,12 @@ footer {
   p, a {
     font-size: 16px;
     color: var(--ml-black-title);
+  }
+  p.conditions {
+    float: right;
+    @media (max-width: 740px) {
+      float: left;
+    }
   }
 }
 
