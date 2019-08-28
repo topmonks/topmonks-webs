@@ -336,20 +336,6 @@ workflows:
       - test-prodeti-topmonks-cz:
           requires:
             - build
-      - test-monkslab-cz:
-          - requires:
-              - build
-#      - test-www-hookamonk-com:
-#          requires:
-#            - build
-#      - deploy-www-hookamonk-com:
-#          context: org-global
-#          requires:
-#            - provision
-#            - test-www-hookamonk-com
-#          filters:
-#            branches:
-#              only: master
       - deploy-www-xduediligence-com:
           context: org-global
           requires:
@@ -414,6 +400,9 @@ workflows:
           filters:
             branches:
               only: master
+      - test-monkslab-cz:
+          requires:
+            - build
       - deploy-monkslab-cz:
           context: org-global
           requires:
