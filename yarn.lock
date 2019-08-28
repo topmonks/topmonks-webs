@@ -500,8 +500,8 @@
 
 "@topmonks/blendid@git://github.com/topmonks/blendid.git":
   version "5.0.0"
-  uid baa57638eb0e78da96fa8d7418f4628a8adec90d
-  resolved "git://github.com/topmonks/blendid.git#baa57638eb0e78da96fa8d7418f4628a8adec90d"
+  uid "64149473813d917ccbea1e0e0a425a9f342c663d"
+  resolved "git://github.com/topmonks/blendid.git#64149473813d917ccbea1e0e0a425a9f342c663d"
   dependencies:
     ansi-colors "4.1.1"
     autoprefixer "9.6.1"
