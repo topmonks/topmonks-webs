@@ -20,6 +20,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: Neueeinstellung, sans-serif;
   color: var(--ml-black-title);
@@ -51,11 +52,15 @@ p {
 
 p.helper {
   font-size: 14px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
 }
 
 a {
   color: #565656;
   text-decoration: underline;
+
   &:hover {
     color: var(--ml-dark-purple);
   }
@@ -112,6 +117,35 @@ hr {
   }
 }
 
+// ALERT BOX
+.alert {
+  padding: 20px;
+  background-color: #FF6B6B;
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+}
+.alert_green {
+  background-color: #23CE6B;
+}
+
+.alert_red {
+  background-color: #FF6B6B;
+}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 16px;
+  line-height: 144%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
 //
 
 //HEADER *Hamburger below
@@ -131,6 +165,7 @@ header {
       font-weight: 600;
       text-decoration: none;
       margin-right: 44px;
+
       &:hover {
         border-bottom: 1px solid var(--ml-dark-purple);
       }
@@ -140,6 +175,7 @@ header {
 
 //SECTION: INTRO
 .hp-intro {
+  position: relative;
   .email-input {
     background: #FFFFFF;
     box-shadow: 4px 20px 40px rgba(0, 0, 0, 0.1);

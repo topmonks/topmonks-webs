@@ -57,11 +57,12 @@
           </svg>
         </a>
       </div>
-      <div class="app-bar_menu mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-9-desktop">
+      <div
+        class="app-bar_menu mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-9-desktop">
         <nav id="navigation" class="menu">
           <ul class="menu__list">
             <li class=""><a href="/clenstvi">Členství</a></li>
-            <li class=""><a href="">Akce</a></li>
+            <li class=""><a href="/clenstvi#events">Akce</a></li>
             <li class=""><a href="">Wiki</a></li>
             <li class=""><a href="/kontakt">Kontakt</a></li>
           </ul>
@@ -75,11 +76,12 @@
     var hamburger = document.querySelector(".hamburger__container");
     var menu = document.querySelector(".menu");
     hamburger.addEventListener("click", toggleMenu(hamburger));
+
     function toggleMenu(hamburger) {
       return function() {
         hamburger.classList.toggle("hamburger__container--open");
         appBar.classList.toggle("app-bar--open");
-      }
+      };
     }
 
     var lastPosition = 0;
@@ -90,8 +92,7 @@
         window.requestAnimationFrame(function() {
           if (lastPosition > 0) {
             appBar.classList.add("app-bar--sticky");
-          }
-          else {
+          } else {
             appBar.classList.remove("app-bar--sticky");
           }
           ticking = false;
@@ -105,8 +106,7 @@
         window.requestAnimationFrame(function() {
           if (window.matchMedia("(min-width: 841px)").matches) {
             menu.classList.add("menu--horizontal");
-          }
-          else {
+          } else {
             menu.classList.remove("menu--horizontal");
           }
           ticking = false;
@@ -133,6 +133,14 @@
             <input type="email" name="EMAIL" placeholder="Zadajte váš e-mail">
             <button>Zistiť viac</button>
           </label>
+        </div>
+        <div class="alert alert_red">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          A&nbsp;sakra! Něco je fakt špatně.
+        </div>
+        <div class="alert alert_green">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          Váš e-mail sme si odložili. Ozveme sa.
         </div>
         <p class="helper">Zoscrollujte nižšie a zistite viac...</p>
       </div>
@@ -280,7 +288,7 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
       </div>
       <div class="membership_btn mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-        <a class="btn" href="">Stát se členem Monks Labu</a>
+        <a class="btn" href="/clenstvi">Stát se členem Monks Labu</a>
       </div>
     </div>
   </div>
