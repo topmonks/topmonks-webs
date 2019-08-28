@@ -1,0 +1,31 @@
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+.intro {
+  .box {
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      margin-top: 1em;
+    }
+    p, .location {
+      font-size: 24px;
+      line-height: 144%;
+    }
+  }
+}
+
+.direction {
+  h3, span {
+    font-size: 24px;
+    font-weight: normal;
+    color: var(--ml-black-text);
+    line-height: 144%;
+  }
+}
