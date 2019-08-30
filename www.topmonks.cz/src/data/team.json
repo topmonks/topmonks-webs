@@ -9,8 +9,9 @@
 			"github": "rarous",
 			"linkedin": "in/rarous",
 			"quote": "Not everything is awesome.",
+			"consultant": true,
 			"body": "<p>The feeling when you solve complex problems with really simple solutions. This is what drives me forward.</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.802Z"
+			"updatedAt": "2019-08-27T09:32:40.209Z"
 		},
 		"anna-cihlova": {
 			"id": "anna-cihlova",
@@ -68,8 +69,9 @@
 			"github": "janfabian",
 			"linkedin": "in/jan-fabian-6b7b6531",
 			"quote": "I don't wanna vote no party. All I wanna do is party.",
+			"consultant": true,
 			"body": "<p>I integrate friends from different nodes using my very own logic formulas. At work I do the same with prices. </p>\n",
-			"updatedAt": "2018-08-15T08:57:21.804Z"
+			"updatedAt": "2019-08-27T09:32:40.210Z"
 		},
 		"jan-hlisnikovsky": {
 			"id": "jan-hlisnikovsky",
@@ -140,8 +142,9 @@
 			"linkedin": "in/jirifabian",
 			"quote": "Excellence always sells.",
 			"pickup": true,
+			"consultant": true,
 			"body": "<p>Love to put together awesome teams and form business alliances to make this world a better place.</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.805Z"
+			"updatedAt": "2019-08-27T09:43:55.960Z"
 		},
 		"jirka-jansa": {
 			"id": "jirka-jansa",
@@ -151,8 +154,9 @@
 			"twitter": "jurri_cz",
 			"github": "jurri-cz",
 			"quote": "Never stop learning, share your wisdom.",
+			"consultant": true,
 			"body": "<p>Programming enthusiast with respect to both legacy and future.</p>\n",
-			"updatedAt": "2018-08-31T20:44:34.348Z"
+			"updatedAt": "2019-08-27T09:45:00.912Z"
 		},
 		"jiri-kubala": {
 			"id": "jiri-kubala",
@@ -186,8 +190,9 @@
 			"github": "jirkapenzes",
 			"linkedin": "in/jirkapenzes",
 			"quote": "Simplicity is the way.",
+			"consultant": true,
 			"body": "<p>Any code is not the problem. I&#39;m monk with open mind!</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.805Z"
+			"updatedAt": "2019-08-27T09:32:40.211Z"
 		},
 		"jiri-pisa": {
 			"id": "jiri-pisa",
@@ -314,8 +319,9 @@
 			"twitter": "mrq1911",
 			"github": "lumir-mrkva",
 			"quote": "Expect perfection and you will never innovate.",
+			"consultant": true,
 			"body": "<p>Tireless innovator and evangelist working for our enterprise customers.</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.807Z"
+			"updatedAt": "2019-08-27T09:32:40.212Z"
 		},
 		"marian-mrozek": {
 			"id": "marian-mrozek",
@@ -417,8 +423,9 @@
 			"github": "nohaapav",
 			"linkedin": "in/pavol-noha-0220184a",
 			"quote": "The only way to get rid of a temptation is to yield to it.",
+			"consultant": true,
 			"body": "<p>Surprising our clients with technical skills. And sometimes my tattoo too too.</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.808Z"
+			"updatedAt": "2019-08-27T09:32:40.213Z"
 		},
 		"petr-kubin": {
 			"id": "petr-kubin",
@@ -476,6 +483,19 @@
 			"body": "<p>Making websites and apps feel better about themselves.</p>\n",
 			"updatedAt": "2018-08-15T08:57:21.809Z"
 		},
+		"simona-zabrzova": {
+			"id": "simona-zabrzova",
+			"name": "Simona",
+			"surname": "Zábržová",
+			"job_title": "Global Business Development",
+			"twitter": null,
+			"github": null,
+			"linkedin": null,
+			"quote": null,
+			"consultant": true,
+			"body": "",
+			"updatedAt": "2019-08-27T09:34:40.596Z"
+		},
 		"tomas-brejla": {
 			"id": "tomas-brejla",
 			"name": "Tomáš",
@@ -508,8 +528,9 @@
 			"github": null,
 			"linkedin": "i",
 			"quote": null,
+			"consultant": true,
 			"body": "<p>Its up to you </p>\n",
-			"updatedAt": "2018-08-15T08:57:21.809Z"
+			"updatedAt": "2019-08-27T09:32:40.213Z"
 		},
 		"tomas-zalusky": {
 			"id": "tomas-zalusky",
@@ -544,8 +565,9 @@
 			"github": null,
 			"linkedin": null,
 			"quote": null,
+			"consultant": true,
 			"body": "<p>Just tell us something we don&#39;t know</p>\n",
-			"updatedAt": "2018-08-21T14:57:44.314Z"
+			"updatedAt": "2019-08-27T09:32:40.214Z"
 		},
 		"vladimira-kubertova": {
 			"id": "vladimira-kubertova",
