@@ -101,6 +101,8 @@ hr {
   text-decoration: none;
   background-color: var(--ml-purple);
 
+  transition: all .1s ease-in-out;
+
   &:hover {
     color: #FFFFFF;
     background: var(--ml-dark-purple);
@@ -178,7 +180,10 @@ header {
       text-decoration: none;
       margin-right: 44px;
 
-      &:hover {
+      border-bottom: 1px solid transparent;
+
+      &:hover, &.active {
+        color: var(--ml-purple);
         border-bottom: 1px solid var(--ml-dark-purple);
       }
     }
