@@ -9,9 +9,13 @@
     h3 {
       font-size: 20px;
       font-weight: bold;
-      color: var(--tm-secondary);
+      color: var(--tm-black-title);
       text-align: left;
     }
+  }
+
+  a.box {
+    border: 2px solid transparent;
   }
 
   .advicing_btn {
@@ -22,6 +26,7 @@
       color: var(--tm-black-title);
       padding: 18px 32px;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.162704);
+
 
       &:hover {
         background-color: var(--tm-primary-light);
@@ -35,10 +40,17 @@
   }
 
   a {
+    transition: all 100ms ease-in-out;
     text-decoration: none;
 
     p {
       color: var(--tm-black);
     }
   }
+
+  a.box:hover {
+    border: 2px solid var(--tm-primary);
+    background-color: var(--tm-primary-light);
+  }
+
 }
