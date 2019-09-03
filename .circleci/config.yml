@@ -411,3 +411,11 @@ workflows:
           filters:
             branches:
               only: master
+      - deploy-www-hookamonk-com:
+          context: org-global
+          requires:
+            - provision
+            - build 
+          filters:
+            branches:
+              only: master
