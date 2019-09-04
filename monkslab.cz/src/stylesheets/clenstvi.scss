@@ -32,9 +32,16 @@ h1, h2 {
 }
 
 .events {
-  .box-grey {
+  a {
+    text-decoration: none;
+    &:hover {
+      color: var(--ml-black-title);
+    }
+  }
+  .box--grey {
     background-color: var(--ml-grey);
     h3 {
+      color: var(--ml-black-title);
       margin-bottom: 0;
     }
     p {
@@ -46,6 +53,9 @@ h1, h2 {
     }
     @media (max-width: 740px) {
       padding: 24px;
+    }
+    &:hover {
+      background-color: rgba(92, 95, 212, 0.6);
     }
   }
   .event_icon {
