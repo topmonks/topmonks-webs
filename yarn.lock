@@ -449,37 +449,17 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
-"@pulumi/aws@^0.18.27":
-  version "0.18.27"
-  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-0.18.27.tgz#49085cf0fe0beb07b79d807ab84bf604eace7e17"
-  integrity sha512-jrtgV3hfxsebttliQxBGGZaUSwiJsgc0VlpIaJPrggMOi1pDPYDlYRPUS2PRi972gE6C1ddBlViRisdqVF9UAg==
+"@pulumi/aws@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-1.0.0.tgz#7d0cb61737e07eb3a4f7b5be58f703daf488c3bd"
+  integrity sha512-juAkc60+eCwGBLrYXDBDk4bVMi8zCyU0Hu4yI66Xu3X/r6qUVkBOSvQtagBPKUjvIVBD4FTWN0pAbLJsggRNBw==
   dependencies:
-    "@pulumi/pulumi" "^0.17.27"
+    "@pulumi/pulumi" "^1.0.0"
     aws-sdk "^2.0.0"
     builtin-modules "3.0.0"
     mime "^2.0.0"
     read-package-tree "^5.2.1"
     resolve "^1.7.1"
-
-"@pulumi/pulumi@^0.17.27":
-  version "0.17.28"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.17.28.tgz#26f27c0075685b98647263565bfe8bb12adc0542"
-  integrity sha512-pVKahH9Ryl6wIpzdOKjsu2gEshDCA7elB34paJpPXw+3ARViSPri7y/2uTdmMRg36jsbrOdNGEohKJEqIZLioA==
-  dependencies:
-    "@pulumi/query" "^0.3.0"
-    deasync "^0.1.15"
-    google-protobuf "^3.5.0"
-    grpc "1.21.1"
-    minimist "^1.2.0"
-    normalize-package-data "^2.4.0"
-    protobufjs "^6.8.6"
-    read-package-tree "^5.3.1"
-    require-from-string "^2.0.1"
-    semver "^6.1.0"
-    source-map-support "^0.4.16"
-    ts-node "^7.0.0"
-    typescript "^3.0.0"
-    upath "^1.1.0"
 
 "@pulumi/pulumi@^1.0.0":
   version "1.0.0"
