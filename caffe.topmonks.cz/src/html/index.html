@@ -293,8 +293,10 @@
               <h3>Kde?</h3>
               <span>{{ upcomingEvent.address | safe }}</span>
             </div>
-            <div class="poster mdc-layout-grid__cell">
-
+            <div class=" mdc-layout-grid__cell">
+              {% for i in range(eventsCount -1, 0, -1) -%}
+                {{ eventInfo(eventsList[i].value, posters) }}
+              {%- endfor %}
             </div>
           </div>
         </div>
