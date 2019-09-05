@@ -195,7 +195,9 @@ header {
 //SECTION: INTRO
 .hp-intro {
   position: relative;
-
+h1 {
+  font-size: 32px;
+}
   .email-input {
     background: #FFFFFF;
     box-shadow: 4px 20px 40px rgba(0, 0, 0, 0.1);
