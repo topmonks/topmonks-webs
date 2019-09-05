@@ -2,7 +2,7 @@
   blockquote {
     margin: 1em 0 2.5em;
     @media screen and (min-width: 768px) {
-      height: 140px;
+      min-height: 140px;
     }
   }
 }
