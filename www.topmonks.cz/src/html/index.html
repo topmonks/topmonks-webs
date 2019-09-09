@@ -6,399 +6,422 @@
 {% block title %}TopMonks - Pomůžeme vašemu revenue růst{% endblock %}
 
 {% block head %}
-<meta name="description" content="Jsme IT profesionálové, kteří pomůžou vašemu revenue růst.">
-<meta name="twitter:description" property="og:description"
-      content="Jsme IT profesionálové, kteří pomůžou vašemu revenue růst.">
-<link rel="canonical" href="https://www.topmonks.cz/">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@topmonks">
-<meta name="twitter:title" property="og:title" content="TopMonks - IT profesionálové pro váš byznys">
-<meta name="twitter:image" property="og:image" content="https://www.topmonks.cz/images/og-image.png">
-<meta property="og:type" content="company">
-<meta property="og:url" content="https://www.topmonks.cz/">
-<meta property="og:site_name" content="TopMonks.cz">
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
-<style>
+  <meta name="description" content="Jsme IT profesionálové, kteří pomůžou vašemu revenue růst.">
+  <meta name="twitter:description" property="og:description"
+        content="Jsme IT profesionálové, kteří pomůžou vašemu revenue růst.">
+  <link rel="canonical" href="https://www.topmonks.cz/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@topmonks">
+  <meta name="twitter:title" property="og:title" content="TopMonks - IT profesionálové pro váš byznys">
+  <meta name="twitter:image" property="og:image" content="https://www.topmonks.cz/images/og-image.png">
+  <meta property="og:type" content="company">
+  <meta property="og:url" content="https://www.topmonks.cz/">
+  <meta property="og:site_name" content="TopMonks.cz">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+  <style>
 
-  @media screen and (max-width: 479px) {
-    body {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/w_603,dpr_auto,q_auto,f_auto/v1563018647/www.topmonks.cz/TM-HP_img.png") no-repeat right calc(50% - 165px) top -105px;
-      background-size: 603px auto;
-      overflow-x: hidden;
+    @media screen and (max-width: 479px) {
+      body {
+        background: url("https://res.cloudinary.com/topmonks/image/upload/w_603,dpr_auto,q_auto,f_auto/v1563018647/www.topmonks.cz/TM-HP_img.png") no-repeat right calc(50% - 165px) top -105px;
+        background-size: 603px auto;
+        overflow-x: hidden;
+      }
     }
-  }
 
-  @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1), screen and (max-width: 479px) and (min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min-resolution: 192dpi), screen and (max-width: 479px) and (min-resolution: 2dppx) {
-    body {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/w_603,dpr_2,q_auto,f_auto/v1563018647/www.topmonks.cz/TM-HP_img.png") no-repeat right calc(50% - 165px) top -105px;
-      background-size: 603px auto;
-      overflow-x: hidden;
+    @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1), screen and (max-width: 479px) and (min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min-resolution: 192dpi), screen and (max-width: 479px) and (min-resolution: 2dppx) {
+      body {
+        background: url("https://res.cloudinary.com/topmonks/image/upload/w_603,dpr_2,q_auto,f_auto/v1563018647/www.topmonks.cz/TM-HP_img.png") no-repeat right calc(50% - 165px) top -105px;
+        background-size: 603px auto;
+        overflow-x: hidden;
+      }
     }
-  }
 
-  @media screen and (min-width: 480px) {
-    body {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/w_919,dpr_auto,q_auto,f_auto/v1563018647/www.topmonks.cz/TM-HP_img.png") no-repeat right calc(50% - 430px) top 75px;
-      background-size: 919px auto;
-      overflow-x: hidden;
+    @media screen and (min-width: 480px) {
+      body {
+        background: url("https://res.cloudinary.com/topmonks/image/upload/w_919,dpr_auto,q_auto,f_auto/v1563018647/www.topmonks.cz/TM-HP_img.png") no-repeat right calc(50% - 430px) top 75px;
+        background-size: 919px auto;
+        overflow-x: hidden;
+      }
     }
-  }
 
-  @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
-    body {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/w_919,dpr_2,q_auto,f_auto/v1563018647/www.topmonks.cz/TM-HP_img.png") no-repeat right calc(50% - 430px) top 75px;
-      background-size: 919px auto;
-      overflow-x: hidden;
+    @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+      body {
+        background: url("https://res.cloudinary.com/topmonks/image/upload/w_919,dpr_2,q_auto,f_auto/v1563018647/www.topmonks.cz/TM-HP_img.png") no-repeat right calc(50% - 430px) top 75px;
+        background-size: 919px auto;
+        overflow-x: hidden;
+      }
     }
-  }
 
-  @media screen and (min-width: 480px) and (max-width: 839px) {
-    body {
-      background-position: right calc(50% - 460px) top 50px;
+    @media screen and (min-width: 480px) and (max-width: 839px) {
+      body {
+        background-position: right calc(50% - 460px) top 50px;
+      }
     }
-  }
-</style>
-<link rel="stylesheet" href="/stylesheets/v2.css">
+  </style>
+  <link rel="stylesheet" href="/stylesheets/v2.css">
 {% endblock %}
 
 {% block content %}
-<script>document.querySelector(".tm-app-bar").classList.add("tm-app-bar--sticky");</script>
+  <script>document.querySelector(".tm-app-bar").classList.add("tm-app-bar--sticky");</script>
 
-<link rel="stylesheet" href="/stylesheets/hp/jumbotron.css">
-<section class="main-info jumbotron">
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-        <h2 class="jumbotron__title">Jsme IT konzultanti a seniorní vývojáři.</h2>
-        <div class="box box--lead box--mobile-only">
-          <p class="sub-info">Pracujeme s&nbsp;IT systémy, které už máte ve firmě zavedené a máme jasný
-            cíl. Zvýšit vaše zisky napříč všemi distribučními kanály.</p>
+  <link rel="stylesheet" href="/stylesheets/hp/jumbotron.css">
+  <section class="main-info jumbotron">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <h2 class="jumbotron__title">Jsme IT konzultanti a seniorní vývojáři.</h2>
+          <div class="box box--lead box--mobile-only">
+            <p class="sub-info">Pracujeme s&nbsp;IT systémy, které už máte ve firmě zavedené a máme jasný
+              cíl. Zvýšit vaše zisky napříč všemi distribučními kanály.</p>
+          </div>
         </div>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-      </div>
-      <div class="box represent mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
-          <p><span>8</span><br>Let na trhu</p>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
-          <p><span>55</span><br>Vývojářů</p>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
-          <p><span>18</span><br>Konzultantů</p>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
-          <p><span>100+</span><br>Zákazníků</p>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
-          <p><span>12</span><br>Startupů</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<link rel="stylesheet" href="/stylesheets/hp/how-we-work.css">
-<section id="akcelerace-webu" class="how-we-work">
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2>Chcete vyšší zisky?</h2>
-        <p class="sub-info">Konzultujeme vaše IT systémy napříč různými obory.<br>
-          Stačí si vybrat, který je vaší činnosti nejbližší.</p>
-      </div>
-      <div class="fake-button mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <a class="jumbotron__cta" href="https://calendly.com/simona-zabrzova/nezavazna-schuzka">CHCI KONZULTOVAT</a>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-        <div class="mdc-layout-grid__cell box">
-          <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <title>IT v Retailu [Icon]</title>
-            <path
-              d="M19.0148 26.2105C21.1599 26.2105 22.9049 24.4655 22.9049 22.3211V15.3473C22.9049 11.3818 26.1058 8.09527 30.0589 7.98085C34.0127 8.09527 37.2136 11.3818 37.2136 15.3473V22.3204C37.2136 24.4655 38.9586 26.2105 41.1037 26.2105C43.2482 26.2105 44.9931 24.4655 44.9931 22.3204V15.5569C44.9931 7.21489 38.303 0.326013 30.0795 0.200636L30.0589 0.199951L30.039 0.200636C21.8156 0.326013 15.1254 7.21489 15.1254 15.5569V22.3211C15.1254 24.4655 16.8704 26.2105 19.0148 26.2105ZM17.7562 15.5569C17.7562 8.65022 23.2735 2.94591 30.0589 2.8315C36.845 2.94591 42.3623 8.65022 42.3623 15.5569V22.3211C42.3623 23.0151 41.7978 23.5797 41.1037 23.5797C40.4097 23.5797 39.8445 23.0151 39.8445 22.3211V15.3473C39.8445 9.96153 35.4933 5.49935 30.1233 5.35068L29.9952 5.34794V5.35068C24.6252 5.49935 20.274 9.96153 20.274 15.3473V22.3204C20.274 23.0151 19.7088 23.5797 19.0148 23.5797C18.3208 23.5797 17.7562 23.0144 17.7562 22.3204V15.5569Z"
-              fill="#7462E0"/>
-            <path
-              d="M69.5862 58.194C67.7467 58.194 66.2497 59.691 66.2497 61.5305V63.9976C66.2497 65.4898 65.6598 66.8874 64.5889 67.9336C63.5181 68.9791 62.1074 69.5389 60.6132 69.4998C57.6514 69.4299 55.2425 66.9046 55.2425 63.8702V61.5305C55.2425 59.691 53.7455 58.194 51.906 58.194C50.0664 58.194 48.5695 59.691 48.5695 61.5305V63.9976C48.5695 67.2807 49.8609 70.361 52.2061 72.6705C54.5047 74.9349 57.5301 76.1749 60.744 76.1749C60.8078 76.1749 60.8715 76.1742 60.9352 76.1736C67.5452 76.0722 72.9234 70.5364 72.9234 63.8332V61.5305C72.9227 59.691 71.4257 58.194 69.5862 58.194V58.194ZM70.2919 63.8332C70.2919 69.1079 66.0763 73.4639 60.8948 73.5427C58.3242 73.5845 55.89 72.6068 54.0518 70.7961C52.2129 68.9853 51.1996 66.5709 51.1996 63.9976V61.5305C51.1996 61.1414 51.5162 60.8255 51.906 60.8255C52.2951 60.8255 52.611 61.142 52.611 61.5305V63.8702C52.611 68.3207 56.1729 72.0265 60.5502 72.13C62.7569 72.1814 64.8452 71.3599 66.4264 69.8156C68.0091 68.27 68.8805 66.2044 68.8805 63.9976V61.5305C68.8805 61.1414 69.197 60.8255 69.5862 60.8255C69.9753 60.8255 70.2919 61.142 70.2919 61.5305V63.8332Z"
-              fill="#7462E0"/>
-            <path
-              d="M86.0537 53.2803H35.4377L31.6922 86.0913L35.1801 89.9999H86.3113L89.7993 86.0913L86.0537 53.2803ZM85.1329 87.3691H36.3586L34.4402 85.2185L37.7857 55.9111H83.7065L87.0519 85.2185L85.1329 87.3691Z"
-              fill="#7462E0"/>
-            <path
-              d="M42.1109 40.6638H43.2304V38.033H20.0254L19.2773 35.2308H12.509V37.8617H17.2569L21.8506 55.0575H22.4309C22.2939 55.4556 22.2192 55.8817 22.2192 56.3257C22.2192 58.4756 23.9683 60.2247 26.1182 60.2247C28.2674 60.2247 30.0165 58.4756 30.0165 56.3257C30.0165 55.8817 29.9418 55.4556 29.8048 55.0575H33.3716V52.4266H23.871L23.6011 51.4147H39.2341L42.1109 40.6638ZM26.1182 55.0582C26.817 55.0582 27.3857 55.6268 27.3857 56.3257C27.3857 57.0252 26.817 57.5938 26.1182 57.5938C25.4187 57.5938 24.85 57.0252 24.85 56.3257C24.85 55.6268 25.4187 55.0582 26.1182 55.0582ZM25.7373 48.7839H22.905L22.1705 46.0393H25.7373V48.7839ZM25.7373 43.4084H21.4662L20.7318 40.6638H25.7373V43.4084ZM31.7512 48.7839H28.3681V46.0393H31.7512V48.7839ZM31.7512 43.4084H28.3681V40.6638H31.7512V43.4084ZM37.2144 48.7839H34.3821V46.0393H37.9488L37.2144 48.7839ZM34.3821 43.4084V40.6638H39.3876L38.6531 43.4084H34.3821Z"
-              fill="#7462E0"/>
-            <path
-              d="M4.97876 87.0457C4.16416 86.1982 3.54275 85.5514 2.67334 84.6471L2.69663 84.0503H22.017V81.4195H2.80077L5.33023 17.443H12.9337V14.8121H2.80145L0 85.6638L0.388463 86.0673C1.47232 87.1943 2.15128 87.9007 3.08167 88.8688L4.16827 89.9999H31.0674V87.369H5.28912L4.97876 87.0457Z"
-              fill="#7462E0"/>
-            <path d="M25.0974 14.8121H35.0214V17.443H25.0974V14.8121Z" fill="#7462E0"/>
-            <path d="M56.5512 51.1392L59.1807 51.0351L57.7502 14.8121H47.1856V17.443H55.2207L56.5512 51.1392Z"
-                  fill="#7462E0"/>
-            <path
-              d="M51.8614 49.78L51.0633 29.5758L53.6921 29.4717L54.4902 49.6758L51.8614 49.78ZM50.9941 27.8233L50.8899 25.1938L53.5187 25.0903L53.6229 27.7191L50.9941 27.8233ZM50.8207 23.4412L50.7173 20.8124L53.3461 20.709L53.4495 23.3378L50.8207 23.4412Z"
-              fill="#7462E0"/>
-            <path
-              d="M82.3821 84.2984L80.5207 67.9926L83.1351 67.6945L84.9959 84.0004L82.3821 84.2984ZM80.322 66.2503L80.024 63.6366L82.6377 63.3379L82.9357 65.9516L80.322 66.2503ZM79.8246 61.8936L79.5266 59.2799L82.1403 58.9812L82.439 61.5956L79.8246 61.8936Z"
-              fill="#7462E0"/>
-          </svg>
-          <h3>IT v&nbsp;Retailu</h3>
-          <p>Máte kamenné prodejny, sklady, eshop, věrnostní program? Řešíte
-            vyšší prodej u&nbsp;sezónního zboží, chtěli byste zavést dynamický pricing
-            nebo zoptimalizovat predikci výroby? Chtěli byste efektivně plánovat směny?
-            Nebo nevíte, zda se vám vyplatí&nbsp;cloud?</p>
-          <a class="action-button jumbotron__cta" href="https://www.topmonks.cz/it-retail/">Více o službě</a>
-
-        </div>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-
-        <div class="mdc-layout-grid__cell box">
-          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <title>IT v E-commerce [Icon]</title>
-            <g clip-path="url(#clip0)">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M82.1617 25.9576L79.4223 28.6598C79.0435 29.0367 79.0376 29.6526 79.4113 30.0334C79.5988 30.2274 79.8474 30.3244 80.0994 30.3244C80.3428 30.3244 80.5889 30.2339 80.7783 30.0483L83.5176 27.3468C83.8972 26.9692 83.903 26.3534 83.5294 25.9726C83.3419 25.7786 83.0919 25.6823 82.8406 25.6823C82.5959 25.6823 82.3504 25.774 82.1617 25.9576Z"
-                    fill="#F0BE59"/>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M84.6784 12.9499L76.2828 21.3983C75.9059 21.7772 75.9059 22.393 76.2828 22.7719C76.4729 22.9606 76.7202 23.055 76.9676 23.055C77.2156 23.055 77.463 22.9606 77.6505 22.7719L86.0468 14.3241C86.423 13.9453 86.423 13.3294 86.0468 12.9499C85.8573 12.7611 85.61 12.6667 85.362 12.6667C85.1146 12.6667 84.8672 12.7611 84.6784 12.9499Z"
-                    fill="#F0BE59"/>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M62.0334 3.98119C62.0334 3.69703 62.2637 3.46667 62.5479 3.46667C62.832 3.46667 63.0624 3.69703 63.0624 3.98119V5.78366L64.2211 4.40277C64.4037 4.18509 64.7283 4.1567 64.946 4.33935C65.1636 4.52201 65.192 4.84654 65.0094 5.06422L63.851 6.44473L65.6256 6.13181C65.9055 6.08247 66.1723 6.26933 66.2217 6.54917C66.271 6.82901 66.0842 7.09587 65.8043 7.14521L64.0296 7.45814L65.5903 8.35923C65.8364 8.50131 65.9208 8.81598 65.7787 9.06207C65.6366 9.30816 65.3219 9.39248 65.0758 9.2504L63.515 8.34926L64.1314 10.0428C64.2286 10.3098 64.0909 10.6051 63.8239 10.7023C63.5569 10.7995 63.2616 10.6618 63.1644 10.3948L62.548 8.70101L61.9315 10.3947C61.8343 10.6617 61.5391 10.7994 61.2721 10.7022C61.005 10.605 60.8674 10.3098 60.9645 10.0427L61.5809 8.34943L60.0204 9.25037C59.7743 9.39245 59.4596 9.30814 59.3175 9.06205C59.1755 8.81596 59.2598 8.50128 59.5059 8.3592L61.0665 7.45815L59.2919 7.14523C59.0121 7.09588 58.8252 6.82903 58.8745 6.54918C58.9239 6.26934 59.1907 6.08248 59.4706 6.13182L61.2454 6.44477L60.087 5.06421C59.9043 4.84653 59.9327 4.522 60.1504 4.33934C60.3681 4.15669 60.6926 4.18508 60.8753 4.40276L62.0334 5.78294V3.98119ZM62.2884 6.48367C62.2587 6.56679 62.2072 6.64337 62.1347 6.7042C62.0622 6.76508 61.9778 6.80251 61.8907 6.81731C61.9214 6.90013 61.9312 6.99197 61.9147 7.08525C61.8983 7.17853 61.8577 7.26147 61.8005 7.32879C61.8772 7.37247 61.9437 7.4365 61.9911 7.51849C62.0384 7.6005 62.0606 7.69012 62.0601 7.77843C62.1469 7.76259 62.239 7.7689 62.3279 7.80128C62.417 7.83369 62.4916 7.88814 62.548 7.95622C62.6044 7.88817 62.679 7.83375 62.7681 7.80134C62.8571 7.76894 62.9493 7.76264 63.0362 7.77854C63.0356 7.69021 63.0578 7.60055 63.1052 7.51852C63.1525 7.43653 63.219 7.3725 63.2957 7.32882C63.2385 7.2615 63.1979 7.17854 63.1814 7.08524C63.165 6.99196 63.1748 6.90012 63.2055 6.8173C63.1185 6.80248 63.0341 6.76506 62.9616 6.70421C62.889 6.64331 62.8375 6.56662 62.8078 6.48339C62.7315 6.52813 62.6427 6.55378 62.5479 6.55378C62.4533 6.55378 62.3646 6.52824 62.2884 6.48367Z"
-                    fill="#F0BE59"/>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M19.1668 63.8479C19.1668 63.5637 19.3972 63.3334 19.6813 63.3334C19.9655 63.3334 20.1959 63.5637 20.1959 63.8479V65.6504L21.3546 64.2695C21.5372 64.0518 21.8618 64.0234 22.0794 64.2061C22.2971 64.3887 22.3255 64.7132 22.1428 64.9309L20.9845 66.3114L22.7591 65.9985C23.0389 65.9492 23.3058 66.136 23.3551 66.4159C23.4045 66.6957 23.2176 66.9626 22.9378 67.0119L21.1631 67.3248L22.7238 68.2259C22.9699 68.368 23.0542 68.6827 22.9121 68.9288C22.7701 69.1749 22.4554 69.2592 22.2093 69.1171L20.6485 68.216L21.2649 69.9095C21.3621 70.1765 21.2244 70.4718 20.9574 70.569C20.6904 70.6662 20.3951 70.5285 20.2979 70.2615L19.6814 68.5677L19.065 70.2614C18.9678 70.5284 18.6726 70.6661 18.4055 70.5689C18.1385 70.4717 18.0008 70.1765 18.098 69.9094L18.7143 68.2161L17.1539 69.1171C16.9078 69.2591 16.5931 69.1748 16.451 68.9287C16.3089 68.6827 16.3932 68.368 16.6393 68.2259L18.2 67.3248L16.4254 67.0119C16.1455 66.9626 15.9587 66.6957 16.008 66.4159C16.0574 66.136 16.3242 65.9492 16.6041 65.9985L18.3789 66.3115L17.2204 64.9309C17.0378 64.7132 17.0662 64.3887 17.2839 64.206C17.5015 64.0234 17.8261 64.0518 18.0087 64.2695L19.1668 65.6496V63.8479ZM19.4219 66.3504C19.3922 66.4335 19.3407 66.5101 19.2682 66.5709C19.1956 66.6318 19.1112 66.6692 19.0241 66.684C19.0549 66.7668 19.0647 66.8587 19.0482 66.952C19.0318 67.0452 18.9912 67.1282 18.934 67.1955C19.0107 67.2392 19.0772 67.3032 19.1245 67.3852C19.1719 67.4672 19.1941 67.5568 19.1935 67.6451C19.2804 67.6293 19.3724 67.6356 19.4614 67.668C19.5504 67.7004 19.6251 67.7548 19.6815 67.8229C19.7378 67.7549 19.8125 67.7004 19.9015 67.668C19.9906 67.6356 20.0827 67.6293 20.1696 67.6452C20.1691 67.5569 20.1913 67.4673 20.2387 67.3852C20.286 67.3032 20.3525 67.2392 20.4292 67.1955C20.372 67.1282 20.3314 67.0452 20.3149 66.9519C20.2985 66.8587 20.3083 66.7668 20.339 66.684C20.252 66.6692 20.1676 66.6318 20.0951 66.5709C20.0225 66.51 19.971 66.4333 19.9413 66.3501C19.865 66.3948 19.7762 66.4205 19.6813 66.4205C19.5867 66.4205 19.4981 66.3949 19.4219 66.3504Z"
-                    fill="#F0BE59"/>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M12.8785 47.1333C14.1368 47.1333 15.1569 48.1534 15.1569 49.4117C15.1569 50.67 14.1368 51.6901 12.8785 51.6901C11.6201 51.6901 10.6 50.67 10.6 49.4117C10.6 48.1534 11.6201 47.1333 12.8785 47.1333ZM12.8783 47.7842C11.9795 47.7842 11.2509 48.5129 11.2509 49.4117C11.2509 50.3105 11.9795 51.0391 12.8783 51.0391C13.7771 51.0391 14.5057 50.3105 14.5057 49.4117C14.5057 48.5129 13.7771 47.7842 12.8783 47.7842Z"
-                    fill="#F0BE59"/>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M1.25535 100C1.08735 100 0.918016 99.9351 0.790689 99.8052C0.536049 99.5467 0.536049 99.1252 0.793319 98.8681L2.28837 97.3664C2.54433 97.1105 2.96041 97.1079 3.21637 97.369C3.47101 97.6275 3.47101 98.049 3.21374 98.3061L1.71869 99.8078C1.59006 99.9351 1.42336 100 1.25535 100Z"
-                    fill="#F0BE59"/>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M1.25535 96.4561C1.08735 96.4561 0.918016 96.3911 0.790689 96.2612C0.536049 96.0028 0.536049 95.5826 0.793319 95.3241L3.31088 92.7925C3.56684 92.5367 3.98292 92.534 4.23888 92.7952C4.49352 93.0536 4.49352 93.4738 4.23625 93.7323L1.71869 96.2639C1.59006 96.3911 1.42336 96.4561 1.25535 96.4561Z"
-                    fill="#F0BE59"/>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M97.8246 91.9041C97.8246 91.6257 97.5989 91.4 97.3205 91.4C97.0421 91.4 96.8164 91.6257 96.8164 91.9041V93.4165H95.3041C95.0257 93.4165 94.8 93.6422 94.8 93.9206C94.8 94.199 95.0257 94.4247 95.3042 94.4247H96.8164V95.937C96.8164 96.2154 97.0421 96.4411 97.3205 96.4411C97.5989 96.4411 97.8246 96.2154 97.8246 95.937V94.4247H99.337C99.6154 94.4247 99.8411 94.199 99.8411 93.9206C99.8411 93.6422 99.6154 93.4165 99.337 93.4165H97.8246V91.9041Z"
-                    fill="#F0BE59"/>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M81.8167 39.9333C84.1087 39.9333 85.9667 41.7914 85.9667 44.0833C85.9667 46.3753 84.1087 48.2333 81.8167 48.2333C79.5248 48.2333 77.6668 46.3753 77.6668 44.0833C77.6668 41.7914 79.5248 39.9333 81.8167 39.9333ZM81.8166 41.119C80.1795 41.119 78.8524 42.4462 78.8524 44.0833C78.8524 45.7204 80.1795 47.0475 81.8166 47.0475C83.4538 47.0475 84.7809 45.7204 84.7809 44.0833C84.7809 42.4462 83.4538 41.119 81.8166 41.119Z"
-                    fill="#F0BE59"/>
-              <g clip-path="url(#clip1)">
-                <path
-                  d="M64.8248 60.8153C65.5754 60.8271 66.2879 61.1476 66.7946 61.7012L81.6657 77.811L83.8514 75.7891L73.7865 64.889H73.8222V24.689C73.8174 20.5796 70.4871 17.2493 66.3778 17.2445H60.4222V20.2223H66.3778C68.8447 20.2223 70.8444 22.222 70.8444 24.689V26.1778H60.4222V29.1556H70.8444V61.7012L68.9803 59.6778C67.9264 58.5297 66.4472 57.8649 64.8889 57.8391C64.4932 57.8219 64.097 57.8473 63.7067 57.915L64.8516 53.3382L66.0517 48.5112H67.8666V45.5334H64.8889C64.2055 45.5336 63.6101 45.9989 63.4446 46.662L62.2386 51.4889H39.5778C38.7555 51.4891 38.0891 52.156 38.0892 52.9782C38.0892 53.0996 38.1041 53.2203 38.1335 53.3382L41.1113 65.2493C41.2768 65.9124 41.8721 66.3777 42.5555 66.3778H59.776C59.974 66.7367 60.2102 67.0732 60.4803 67.3814L61.6476 68.6945C61.3736 69.104 60.9148 69.3515 60.4222 69.3556H41.0666V72.3334H60.4222C61.6414 72.328 62.8054 71.8246 63.6442 70.9398L69.1784 77.1663C68.1289 81.0196 68.6437 85.1313 70.6107 88.6069C70.0164 90.4429 68.3075 91.6873 66.3778 91.6889H36.6C34.1331 91.6889 32.1333 89.6892 32.1333 87.2223V85.7334H66.3778V82.7556H32.1333V41.0667H29.1555V87.2223C29.1604 91.3316 32.4906 94.6619 36.6 94.6667H66.3778C68.8571 94.6667 71.1737 93.4326 72.5566 91.3748C73.0506 91.9218 73.5823 92.4332 74.1483 92.9054L75.8471 94.3228L77.7529 92.0329L76.0555 90.617C72.1457 87.3853 70.6349 82.0765 72.2574 77.2706C72.426 76.766 72.3125 76.2097 71.9596 75.8114L62.7091 65.4041C61.7412 64.3124 61.7894 62.656 62.8193 61.6223C63.3598 61.1064 64.0776 60.8176 64.8248 60.8153ZM42.2295 57.4445L41.485 54.4667H45.7075L46.0797 57.4445H42.2295ZM43.7184 63.4001L42.9739 60.4223H46.452L46.8242 63.4001H43.7184ZM53.152 63.4001H49.8258L49.4536 60.4223H53.5242L53.152 63.4001ZM53.8964 57.4445H49.0813L48.7091 54.4667H54.2686L53.8964 57.4445ZM59.0346 63.4001H56.1536L56.5258 60.4223H59.9755C59.3921 61.3085 59.0664 62.3394 59.0346 63.4001ZM60.7483 57.4445H56.898L57.2702 54.4667H61.4927L60.7483 57.4445Z"
-                  fill="#7462E0"/>
-                <path
-                  d="M44.0444 79.7778C45.689 79.7778 47.0222 78.4446 47.0222 76.8C47.0222 75.1555 45.689 73.8223 44.0444 73.8223C42.3998 73.8223 41.0666 75.1555 41.0666 76.8C41.0666 78.4446 42.3998 79.7778 44.0444 79.7778Z"
-                  fill="#7462E0"/>
-                <path
-                  d="M58.9333 79.7778C60.5779 79.7778 61.9111 78.4446 61.9111 76.8C61.9111 75.1555 60.5779 73.8223 58.9333 73.8223C57.2887 73.8223 55.9555 75.1555 55.9555 76.8C55.9555 78.4446 57.2887 79.7778 58.9333 79.7778Z"
-                  fill="#7462E0"/>
-                <path
-                  d="M51.4889 5.33337H12.7777C9.4886 5.33337 6.82219 7.99979 6.82219 11.2889V32.1334C6.82219 35.4225 9.4886 38.0889 12.7777 38.0889H51.4889C54.778 38.0889 57.4444 35.4225 57.4444 32.1334V11.2889C57.4444 7.99979 54.778 5.33337 51.4889 5.33337ZM54.4666 32.1334C54.4666 33.778 53.1335 35.1112 51.4889 35.1112H12.7777C11.1331 35.1112 9.79997 33.778 9.79997 32.1334V11.2889C9.79997 9.64427 11.1331 8.31115 12.7777 8.31115H51.4889C53.1335 8.31115 54.4666 9.64427 54.4666 11.2889V32.1334Z"
-                  fill="#7462E0"/>
-                <path d="M39.5777 12.7778H12.7777V15.7556H39.5777V12.7778Z" fill="#7462E0"/>
-                <path
-                  d="M49.3054 22.3291C47.9079 21.5072 46.1747 21.5072 44.777 22.3291C44.1044 21.9297 43.3378 21.7164 42.5556 21.7112C40.0887 21.7112 38.0889 23.7109 38.0889 26.1778C38.0889 28.6447 40.0887 30.6445 42.5556 30.6445C43.3374 30.6402 44.1042 30.4281 44.777 30.0296C46.9035 31.2801 49.641 30.5701 50.8915 28.4436C52.142 26.3171 51.4318 23.5796 49.3054 22.3291ZM42.5556 27.6667C41.7333 27.6667 41.0667 27.0001 41.0667 26.1778C41.0667 25.3556 41.7333 24.689 42.5556 24.689C43.3778 24.689 44.0445 25.3556 44.0445 26.1778C44.0445 27.0001 43.3778 27.6667 42.5556 27.6667ZM47.0222 27.6667C46.9335 27.6625 46.8452 27.65 46.7587 27.6295C47.1091 26.6939 47.1091 25.6632 46.7587 24.7277C46.8452 24.7072 46.9335 24.6942 47.0222 24.689C47.8445 24.689 48.5111 25.3556 48.5111 26.1778C48.5111 27.0001 47.8445 27.6667 47.0222 27.6667Z"
-                  fill="#7462E0"/>
-                <path d="M15.7555 21.7112H12.7777V24.689H15.7555V21.7112Z" fill="#7462E0"/>
-                <path d="M21.7111 21.7112H18.7333V24.689H21.7111V21.7112Z" fill="#7462E0"/>
-                <path d="M27.6666 21.7112H24.6888V24.689H27.6666V21.7112Z" fill="#7462E0"/>
-                <path d="M33.6222 21.7112H30.6445V24.689H33.6222V21.7112Z" fill="#7462E0"/>
-                <path d="M33.6222 27.6667H12.7777V30.6445H33.6222V27.6667Z" fill="#7462E0"/>
-                <path
-                  d="M90.4055 62.8045L77.8988 48.9966L75.6923 50.9947L88.2064 64.816C89.4897 66.1921 90.2023 68.0041 90.2 69.8857V94.6667H93.1778V69.8857C93.1843 67.2593 92.1935 64.7284 90.4055 62.8045Z"
-                  fill="#7462E0"/>
-                <path
-                  d="M55.1292 42.8057L52.9778 44.2395V41.0667H50V44.2395L47.8485 42.8057L46.1959 45.2832L50.6625 48.261C51.1628 48.5949 51.8149 48.5949 52.3152 48.261L56.7819 45.2832L55.1292 42.8057Z"
-                  fill="#7462E0"/>
-              </g>
-            </g>
-            <defs>
-              <clipPath id="clip0">
-                <rect width="100" height="100" fill="white"/>
-              </clipPath>
-              <clipPath id="clip1">
-                <rect width="89.3333" height="89.3333" fill="white" transform="translate(5.33333 5.33337)"/>
-              </clipPath>
-            </defs>
-          </svg>
-          <h3>IT v&nbsp;E-commerce</h3>
-          <p>Máte fungující eshop, váš byznys stojí na logistice, ale nevíte, jak
-            ji zoptimalizovat? Potřebujete zvýšit konverzní poměr při nákupu? Ocenili
-            byste upozornění aplikace na optimalizaci zboží v&nbsp;čase? Chcete zavést
-            dynamický pricing a nevíte&nbsp;jak?</p>
-          <a class="action-button jumbotron__cta" href="https://www.topmonks.cz/it-ecommerce/">Více o službě</a>
+        <div class="box represent mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <p><span>8</span><br>Let na trhu</p>
+          </div>
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <p><span>55</span><br>Vývojářů</p>
+          </div>
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <p><span>18</span><br>Konzultantů</p>
+          </div>
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <p><span>100+</span><br>Zákazníků</p>
+          </div>
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <p><span>12</span><br>Startupů</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<link rel="stylesheet" href="/stylesheets/hp/cooperation.css">
-<section class="cooperation">
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <p>Klienti, kterým jsme pomohli</p>
-      </div>
-      <div class="cooperation__logos mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <a href="https://www.erstegroupit.com/en/home" title="jdi na Erste Group homepage">{{sprite('img_logo_erste-group',
-          '[logo] Erste Group')}}</a>
-        <a href="https://www.pricefx.eu/site/" title="jdi na Pricefx homepage">{{sprite('img_logo_pricefx', '[logo]
-          Pricefx')}}</a>
-        <a href="https://zonky.cz/" title="jdi na Zonky homepage">{{sprite('img_logo_zonky', '[logo] Zonky')}}</a>
-        <a href="https://www.adler.info/" title="jdi na Adler homepage">{{sprite('img_logo_adler', '[logo] Adler')}}</a>
-        <a href="https://www.countrylife.cz/" title="jdi na Country Life homepage">{{sprite('countrylifelogo', '[logo] Country Life')}}</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<div class="tm-layout-wrapper line-between mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-  <hr>
-</div>
-
-<link rel="stylesheet" href="/stylesheets/hp/advicing.css">
-<section id="advicing" class="we-advice">
-  <div class="mdc-layout-grid">
-    <a class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2>Řešíte konkrétní situaci?</h2>
-        <p>Potřebujete poradit s&nbsp;jedním konkrétním problémem a najít jeho
-          efektivní řešení? Vybrali jsme pro vás nejčastější situace, které
-          s&nbsp;klienty řešíme.</p>
-      </div>
-      <a href="/digitalni-audit/" class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-        <h3>Chci web, co prodává</h3>
-        <p>Chcete zvýšit zisky díky marketingu. Zrealizujeme podrobný digitální
-          audit vašich webových stránek.</p>
-      </a>
-      <a href="/optimalizace-cenotvorby/" class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-        <h3>Chci optimalizovat ceny</h3>
-         <p>Chcete zavést dynamický pricing, sledovat výkon slev a automaticky reagovat na ceny konkurence.</p>
-      </a>
-      <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-        <h3>Chci poradit s&nbsp;IT</h3>
-        <p>Potřebujete konzultovat váš nápad, výsledky analýzy, nezávislou
-          nabídku z&nbsp;tendru.</p>
-      </div>
-      <a href="/bezpecnostni-audit/" class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-        <h3>Chci poradit s bezpečností webu nebo aplikace</h3>
-        <p>Potřebujete se podívat na infrastrukturu, analýzu bezpečnosti systému,
-          analýzu výkonu systému.</p>
-      </a>
-      <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-        <h3>Chci HR 2.0</h3>
-        <p>Chcete zavést remote týmy, distribuovanou zodpovědnost, efektivní
-          řízení lidí nebo HR analytiku.</p>
-      </div>
-      <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-        <h3>Chci vývojový team</h3>
-        <p>Jste ve fázi vývoje nového produktu nebo služby a potřebujete celý
-          programátorský&nbsp;tým.</p>
-      </div>
-      <div class="advicing_btn mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <a class="action-button jumbotron__cta" href="https://calendly.com/simona-zabrzova/nezavazna-schuzka">NENAŠLI
-          JSTE, CO VÁS TRÁPÍ?</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="tm-layout-wrapper line-between mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-  <hr>
-</div>
-
-<link rel="stylesheet" href="/stylesheets/hp/testimonials.css">
-<section class="testimonials">
-  <div class="tm-bgnd-wrapper">
+  <link rel="stylesheet" href="/stylesheets/hp/how-we-work.css">
+  <section id="akcelerace-webu" class="how-we-work">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>Naši zákazníci říkají, že...</h2>
+          <h2>Chcete vyšší zisky?</h2>
+          <p class="sub-info">Konzultujeme vaše IT systémy napříč různými obory.<br>
+            Stačí si vybrat, který je vaší činnosti nejbližší.</p>
         </div>
-        <div
-          class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-          <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <title>Quotation</title>
-            <path
-              d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
-              fill="#D3D3D3"/>
-          </svg>
-          <blockquote>Velmi mile nás překvapilo, s jakou pružností dokázali TopMonks reagovat na náš konzultační požadavek a v jak krátké době poskytly požadovaná data. Byla to příjemná nápomocná spolupráce.
-          </blockquote>
-          <hr class="line-between_grey">
-          <figcaption><b>Sam Müller</b><br>Country life</figcaption>
+        <div class="fake-button mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <a class="jumbotron__cta" href="https://calendly.com/simona-zabrzova/nezavazna-schuzka">CHCI KONZULTOVAT</a>
         </div>
-        <div
-          class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-          <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <title>Quotation</title>
-            <path
-              d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
-              fill="#D3D3D3"/>
-          </svg>
-          <blockquote>
-            Tomáš v rámci auditu webu odhalil na našem eshopu řadu chyb, kterých jsem si jako majitel eshopu nevšiml. Většinu změn jsme zapracovali a postupně se nám začaly dostávat výsledky. Objednávky nám narostly o 20%. Děkujeme a doporučujeme!
-          </blockquote>
-          <hr class="line-between_grey">
-          <figcaption><b>Radek Blaha</b><br>Top-style.cz</figcaption>
-        </div>
-        <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-          <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <title>Quotation</title>
-            <path
-              d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
-              fill="#D3D3D3"/>
-          </svg>
-          <blockquote>Vývojáři a konzultanti v TopMonks jsou velmi chytří, vlidní, proaktivní a spolehliví. Pokud akceptujete jejich svobodnějšího ducha a nebudete se snažit je v korporaci příliš svazovat, budete velmi spokojení s jejich výsledky a spoluprací s nimi jako takovou.
-          </blockquote>
-          <hr class="line-between_grey">
-          <figcaption><b>Tomáš Doležal</b><br>Erste API Hub</figcaption>
-        </div>
-        <div
-          class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-          <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <title>Quotation</title>
-            <path
-              d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
-              fill="#D3D3D3"/>
-          </svg>
-          <blockquote>
-Po několika úpravách webu "předními odborníky" jsme se i s tímto požadavkem obrátili na TopMonks - konkrétně jejich UX konzultační tým. Profesionální přístup Tomáše a nekompromisní pointy Veroniky vedly k velmi rychlému redesignu webu, který nyní plní nastavené cíle, je přehledný a jednoduchý, a přivádí nám leady takřka "až pod nos".          </blockquote>
-          <hr class="line-between_grey">
-          <figcaption><b>Kamil Tomáš</b><br>Purposefly</figcaption>
-        </div>
-        <div
-          class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-          <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <title>Quotation</title>
-            <path
-              d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
-              fill="#D3D3D3"/>
-          </svg>
-          <blockquote>
-Když se náš Startup Incubator rozrůstal, TopMonks byli velmi vlídní a nápomocní. Potřebovali jsme pomoct s front-endem, back-endem a blockchain technologií. Vždy dodali skvělou práci a v určeném termínu. Byli mi doporučeni jedním ze zakladatelů jiného startupu a já je s radostí doporučuji také.          </blockquote>
-          <hr class="line-between_grey">
-          <figcaption><b>Tom Counsell</b><br>B Hub Prague, Startup Incubator</figcaption>
-        </div>
-        <div
-          class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-          <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <title>Quotation</title>
-            <path
-              d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
-              fill="#D3D3D3"/>
-          </svg>
-          <blockquote>
-Lumír je neuvěřitelně cenný týmový hráč, který velmi dobře zapadá do našeho senior/dev týmu, kde naplno využívá rychlé a inovativní myšlenky při navrhování a auditu architektury.          </blockquote>
-          <hr class="line-between_grey">
-          <figcaption><b>Patrik Tjokord</b><br>DEBNK</figcaption>
-        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+          <div class="mdc-layout-grid__cell box">
+            <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <title>IT v Retailu [Icon]</title>
+              <path
+                d="M19.0148 26.2105C21.1599 26.2105 22.9049 24.4655 22.9049 22.3211V15.3473C22.9049 11.3818 26.1058 8.09527 30.0589 7.98085C34.0127 8.09527 37.2136 11.3818 37.2136 15.3473V22.3204C37.2136 24.4655 38.9586 26.2105 41.1037 26.2105C43.2482 26.2105 44.9931 24.4655 44.9931 22.3204V15.5569C44.9931 7.21489 38.303 0.326013 30.0795 0.200636L30.0589 0.199951L30.039 0.200636C21.8156 0.326013 15.1254 7.21489 15.1254 15.5569V22.3211C15.1254 24.4655 16.8704 26.2105 19.0148 26.2105ZM17.7562 15.5569C17.7562 8.65022 23.2735 2.94591 30.0589 2.8315C36.845 2.94591 42.3623 8.65022 42.3623 15.5569V22.3211C42.3623 23.0151 41.7978 23.5797 41.1037 23.5797C40.4097 23.5797 39.8445 23.0151 39.8445 22.3211V15.3473C39.8445 9.96153 35.4933 5.49935 30.1233 5.35068L29.9952 5.34794V5.35068C24.6252 5.49935 20.274 9.96153 20.274 15.3473V22.3204C20.274 23.0151 19.7088 23.5797 19.0148 23.5797C18.3208 23.5797 17.7562 23.0144 17.7562 22.3204V15.5569Z"
+                fill="#7462E0"/>
+              <path
+                d="M69.5862 58.194C67.7467 58.194 66.2497 59.691 66.2497 61.5305V63.9976C66.2497 65.4898 65.6598 66.8874 64.5889 67.9336C63.5181 68.9791 62.1074 69.5389 60.6132 69.4998C57.6514 69.4299 55.2425 66.9046 55.2425 63.8702V61.5305C55.2425 59.691 53.7455 58.194 51.906 58.194C50.0664 58.194 48.5695 59.691 48.5695 61.5305V63.9976C48.5695 67.2807 49.8609 70.361 52.2061 72.6705C54.5047 74.9349 57.5301 76.1749 60.744 76.1749C60.8078 76.1749 60.8715 76.1742 60.9352 76.1736C67.5452 76.0722 72.9234 70.5364 72.9234 63.8332V61.5305C72.9227 59.691 71.4257 58.194 69.5862 58.194V58.194ZM70.2919 63.8332C70.2919 69.1079 66.0763 73.4639 60.8948 73.5427C58.3242 73.5845 55.89 72.6068 54.0518 70.7961C52.2129 68.9853 51.1996 66.5709 51.1996 63.9976V61.5305C51.1996 61.1414 51.5162 60.8255 51.906 60.8255C52.2951 60.8255 52.611 61.142 52.611 61.5305V63.8702C52.611 68.3207 56.1729 72.0265 60.5502 72.13C62.7569 72.1814 64.8452 71.3599 66.4264 69.8156C68.0091 68.27 68.8805 66.2044 68.8805 63.9976V61.5305C68.8805 61.1414 69.197 60.8255 69.5862 60.8255C69.9753 60.8255 70.2919 61.142 70.2919 61.5305V63.8332Z"
+                fill="#7462E0"/>
+              <path
+                d="M86.0537 53.2803H35.4377L31.6922 86.0913L35.1801 89.9999H86.3113L89.7993 86.0913L86.0537 53.2803ZM85.1329 87.3691H36.3586L34.4402 85.2185L37.7857 55.9111H83.7065L87.0519 85.2185L85.1329 87.3691Z"
+                fill="#7462E0"/>
+              <path
+                d="M42.1109 40.6638H43.2304V38.033H20.0254L19.2773 35.2308H12.509V37.8617H17.2569L21.8506 55.0575H22.4309C22.2939 55.4556 22.2192 55.8817 22.2192 56.3257C22.2192 58.4756 23.9683 60.2247 26.1182 60.2247C28.2674 60.2247 30.0165 58.4756 30.0165 56.3257C30.0165 55.8817 29.9418 55.4556 29.8048 55.0575H33.3716V52.4266H23.871L23.6011 51.4147H39.2341L42.1109 40.6638ZM26.1182 55.0582C26.817 55.0582 27.3857 55.6268 27.3857 56.3257C27.3857 57.0252 26.817 57.5938 26.1182 57.5938C25.4187 57.5938 24.85 57.0252 24.85 56.3257C24.85 55.6268 25.4187 55.0582 26.1182 55.0582ZM25.7373 48.7839H22.905L22.1705 46.0393H25.7373V48.7839ZM25.7373 43.4084H21.4662L20.7318 40.6638H25.7373V43.4084ZM31.7512 48.7839H28.3681V46.0393H31.7512V48.7839ZM31.7512 43.4084H28.3681V40.6638H31.7512V43.4084ZM37.2144 48.7839H34.3821V46.0393H37.9488L37.2144 48.7839ZM34.3821 43.4084V40.6638H39.3876L38.6531 43.4084H34.3821Z"
+                fill="#7462E0"/>
+              <path
+                d="M4.97876 87.0457C4.16416 86.1982 3.54275 85.5514 2.67334 84.6471L2.69663 84.0503H22.017V81.4195H2.80077L5.33023 17.443H12.9337V14.8121H2.80145L0 85.6638L0.388463 86.0673C1.47232 87.1943 2.15128 87.9007 3.08167 88.8688L4.16827 89.9999H31.0674V87.369H5.28912L4.97876 87.0457Z"
+                fill="#7462E0"/>
+              <path d="M25.0974 14.8121H35.0214V17.443H25.0974V14.8121Z" fill="#7462E0"/>
+              <path d="M56.5512 51.1392L59.1807 51.0351L57.7502 14.8121H47.1856V17.443H55.2207L56.5512 51.1392Z"
+                    fill="#7462E0"/>
+              <path
+                d="M51.8614 49.78L51.0633 29.5758L53.6921 29.4717L54.4902 49.6758L51.8614 49.78ZM50.9941 27.8233L50.8899 25.1938L53.5187 25.0903L53.6229 27.7191L50.9941 27.8233ZM50.8207 23.4412L50.7173 20.8124L53.3461 20.709L53.4495 23.3378L50.8207 23.4412Z"
+                fill="#7462E0"/>
+              <path
+                d="M82.3821 84.2984L80.5207 67.9926L83.1351 67.6945L84.9959 84.0004L82.3821 84.2984ZM80.322 66.2503L80.024 63.6366L82.6377 63.3379L82.9357 65.9516L80.322 66.2503ZM79.8246 61.8936L79.5266 59.2799L82.1403 58.9812L82.439 61.5956L79.8246 61.8936Z"
+                fill="#7462E0"/>
+            </svg>
+            <h3>IT v&nbsp;Retailu</h3>
+            <p>Máte kamenné prodejny, sklady, eshop, věrnostní program? Řešíte
+              vyšší prodej u&nbsp;sezónního zboží, chtěli byste zavést dynamický pricing
+              nebo zoptimalizovat predikci výroby? Chtěli byste efektivně plánovat směny?
+              Nebo nevíte, zda se vám vyplatí&nbsp;cloud?</p>
+            <a class="action-button jumbotron__cta" href="https://www.topmonks.cz/it-retail/">Více o službě</a>
 
+          </div>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+
+          <div class="mdc-layout-grid__cell box">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <title>IT v E-commerce [Icon]</title>
+              <g clip-path="url(#clip0)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M82.1617 25.9576L79.4223 28.6598C79.0435 29.0367 79.0376 29.6526 79.4113 30.0334C79.5988 30.2274 79.8474 30.3244 80.0994 30.3244C80.3428 30.3244 80.5889 30.2339 80.7783 30.0483L83.5176 27.3468C83.8972 26.9692 83.903 26.3534 83.5294 25.9726C83.3419 25.7786 83.0919 25.6823 82.8406 25.6823C82.5959 25.6823 82.3504 25.774 82.1617 25.9576Z"
+                      fill="#F0BE59"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M84.6784 12.9499L76.2828 21.3983C75.9059 21.7772 75.9059 22.393 76.2828 22.7719C76.4729 22.9606 76.7202 23.055 76.9676 23.055C77.2156 23.055 77.463 22.9606 77.6505 22.7719L86.0468 14.3241C86.423 13.9453 86.423 13.3294 86.0468 12.9499C85.8573 12.7611 85.61 12.6667 85.362 12.6667C85.1146 12.6667 84.8672 12.7611 84.6784 12.9499Z"
+                      fill="#F0BE59"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M62.0334 3.98119C62.0334 3.69703 62.2637 3.46667 62.5479 3.46667C62.832 3.46667 63.0624 3.69703 63.0624 3.98119V5.78366L64.2211 4.40277C64.4037 4.18509 64.7283 4.1567 64.946 4.33935C65.1636 4.52201 65.192 4.84654 65.0094 5.06422L63.851 6.44473L65.6256 6.13181C65.9055 6.08247 66.1723 6.26933 66.2217 6.54917C66.271 6.82901 66.0842 7.09587 65.8043 7.14521L64.0296 7.45814L65.5903 8.35923C65.8364 8.50131 65.9208 8.81598 65.7787 9.06207C65.6366 9.30816 65.3219 9.39248 65.0758 9.2504L63.515 8.34926L64.1314 10.0428C64.2286 10.3098 64.0909 10.6051 63.8239 10.7023C63.5569 10.7995 63.2616 10.6618 63.1644 10.3948L62.548 8.70101L61.9315 10.3947C61.8343 10.6617 61.5391 10.7994 61.2721 10.7022C61.005 10.605 60.8674 10.3098 60.9645 10.0427L61.5809 8.34943L60.0204 9.25037C59.7743 9.39245 59.4596 9.30814 59.3175 9.06205C59.1755 8.81596 59.2598 8.50128 59.5059 8.3592L61.0665 7.45815L59.2919 7.14523C59.0121 7.09588 58.8252 6.82903 58.8745 6.54918C58.9239 6.26934 59.1907 6.08248 59.4706 6.13182L61.2454 6.44477L60.087 5.06421C59.9043 4.84653 59.9327 4.522 60.1504 4.33934C60.3681 4.15669 60.6926 4.18508 60.8753 4.40276L62.0334 5.78294V3.98119ZM62.2884 6.48367C62.2587 6.56679 62.2072 6.64337 62.1347 6.7042C62.0622 6.76508 61.9778 6.80251 61.8907 6.81731C61.9214 6.90013 61.9312 6.99197 61.9147 7.08525C61.8983 7.17853 61.8577 7.26147 61.8005 7.32879C61.8772 7.37247 61.9437 7.4365 61.9911 7.51849C62.0384 7.6005 62.0606 7.69012 62.0601 7.77843C62.1469 7.76259 62.239 7.7689 62.3279 7.80128C62.417 7.83369 62.4916 7.88814 62.548 7.95622C62.6044 7.88817 62.679 7.83375 62.7681 7.80134C62.8571 7.76894 62.9493 7.76264 63.0362 7.77854C63.0356 7.69021 63.0578 7.60055 63.1052 7.51852C63.1525 7.43653 63.219 7.3725 63.2957 7.32882C63.2385 7.2615 63.1979 7.17854 63.1814 7.08524C63.165 6.99196 63.1748 6.90012 63.2055 6.8173C63.1185 6.80248 63.0341 6.76506 62.9616 6.70421C62.889 6.64331 62.8375 6.56662 62.8078 6.48339C62.7315 6.52813 62.6427 6.55378 62.5479 6.55378C62.4533 6.55378 62.3646 6.52824 62.2884 6.48367Z"
+                      fill="#F0BE59"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M19.1668 63.8479C19.1668 63.5637 19.3972 63.3334 19.6813 63.3334C19.9655 63.3334 20.1959 63.5637 20.1959 63.8479V65.6504L21.3546 64.2695C21.5372 64.0518 21.8618 64.0234 22.0794 64.2061C22.2971 64.3887 22.3255 64.7132 22.1428 64.9309L20.9845 66.3114L22.7591 65.9985C23.0389 65.9492 23.3058 66.136 23.3551 66.4159C23.4045 66.6957 23.2176 66.9626 22.9378 67.0119L21.1631 67.3248L22.7238 68.2259C22.9699 68.368 23.0542 68.6827 22.9121 68.9288C22.7701 69.1749 22.4554 69.2592 22.2093 69.1171L20.6485 68.216L21.2649 69.9095C21.3621 70.1765 21.2244 70.4718 20.9574 70.569C20.6904 70.6662 20.3951 70.5285 20.2979 70.2615L19.6814 68.5677L19.065 70.2614C18.9678 70.5284 18.6726 70.6661 18.4055 70.5689C18.1385 70.4717 18.0008 70.1765 18.098 69.9094L18.7143 68.2161L17.1539 69.1171C16.9078 69.2591 16.5931 69.1748 16.451 68.9287C16.3089 68.6827 16.3932 68.368 16.6393 68.2259L18.2 67.3248L16.4254 67.0119C16.1455 66.9626 15.9587 66.6957 16.008 66.4159C16.0574 66.136 16.3242 65.9492 16.6041 65.9985L18.3789 66.3115L17.2204 64.9309C17.0378 64.7132 17.0662 64.3887 17.2839 64.206C17.5015 64.0234 17.8261 64.0518 18.0087 64.2695L19.1668 65.6496V63.8479ZM19.4219 66.3504C19.3922 66.4335 19.3407 66.5101 19.2682 66.5709C19.1956 66.6318 19.1112 66.6692 19.0241 66.684C19.0549 66.7668 19.0647 66.8587 19.0482 66.952C19.0318 67.0452 18.9912 67.1282 18.934 67.1955C19.0107 67.2392 19.0772 67.3032 19.1245 67.3852C19.1719 67.4672 19.1941 67.5568 19.1935 67.6451C19.2804 67.6293 19.3724 67.6356 19.4614 67.668C19.5504 67.7004 19.6251 67.7548 19.6815 67.8229C19.7378 67.7549 19.8125 67.7004 19.9015 67.668C19.9906 67.6356 20.0827 67.6293 20.1696 67.6452C20.1691 67.5569 20.1913 67.4673 20.2387 67.3852C20.286 67.3032 20.3525 67.2392 20.4292 67.1955C20.372 67.1282 20.3314 67.0452 20.3149 66.9519C20.2985 66.8587 20.3083 66.7668 20.339 66.684C20.252 66.6692 20.1676 66.6318 20.0951 66.5709C20.0225 66.51 19.971 66.4333 19.9413 66.3501C19.865 66.3948 19.7762 66.4205 19.6813 66.4205C19.5867 66.4205 19.4981 66.3949 19.4219 66.3504Z"
+                      fill="#F0BE59"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.8785 47.1333C14.1368 47.1333 15.1569 48.1534 15.1569 49.4117C15.1569 50.67 14.1368 51.6901 12.8785 51.6901C11.6201 51.6901 10.6 50.67 10.6 49.4117C10.6 48.1534 11.6201 47.1333 12.8785 47.1333ZM12.8783 47.7842C11.9795 47.7842 11.2509 48.5129 11.2509 49.4117C11.2509 50.3105 11.9795 51.0391 12.8783 51.0391C13.7771 51.0391 14.5057 50.3105 14.5057 49.4117C14.5057 48.5129 13.7771 47.7842 12.8783 47.7842Z"
+                      fill="#F0BE59"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.25535 100C1.08735 100 0.918016 99.9351 0.790689 99.8052C0.536049 99.5467 0.536049 99.1252 0.793319 98.8681L2.28837 97.3664C2.54433 97.1105 2.96041 97.1079 3.21637 97.369C3.47101 97.6275 3.47101 98.049 3.21374 98.3061L1.71869 99.8078C1.59006 99.9351 1.42336 100 1.25535 100Z"
+                      fill="#F0BE59"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.25535 96.4561C1.08735 96.4561 0.918016 96.3911 0.790689 96.2612C0.536049 96.0028 0.536049 95.5826 0.793319 95.3241L3.31088 92.7925C3.56684 92.5367 3.98292 92.534 4.23888 92.7952C4.49352 93.0536 4.49352 93.4738 4.23625 93.7323L1.71869 96.2639C1.59006 96.3911 1.42336 96.4561 1.25535 96.4561Z"
+                      fill="#F0BE59"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M97.8246 91.9041C97.8246 91.6257 97.5989 91.4 97.3205 91.4C97.0421 91.4 96.8164 91.6257 96.8164 91.9041V93.4165H95.3041C95.0257 93.4165 94.8 93.6422 94.8 93.9206C94.8 94.199 95.0257 94.4247 95.3042 94.4247H96.8164V95.937C96.8164 96.2154 97.0421 96.4411 97.3205 96.4411C97.5989 96.4411 97.8246 96.2154 97.8246 95.937V94.4247H99.337C99.6154 94.4247 99.8411 94.199 99.8411 93.9206C99.8411 93.6422 99.6154 93.4165 99.337 93.4165H97.8246V91.9041Z"
+                      fill="#F0BE59"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M81.8167 39.9333C84.1087 39.9333 85.9667 41.7914 85.9667 44.0833C85.9667 46.3753 84.1087 48.2333 81.8167 48.2333C79.5248 48.2333 77.6668 46.3753 77.6668 44.0833C77.6668 41.7914 79.5248 39.9333 81.8167 39.9333ZM81.8166 41.119C80.1795 41.119 78.8524 42.4462 78.8524 44.0833C78.8524 45.7204 80.1795 47.0475 81.8166 47.0475C83.4538 47.0475 84.7809 45.7204 84.7809 44.0833C84.7809 42.4462 83.4538 41.119 81.8166 41.119Z"
+                      fill="#F0BE59"/>
+                <g clip-path="url(#clip1)">
+                  <path
+                    d="M64.8248 60.8153C65.5754 60.8271 66.2879 61.1476 66.7946 61.7012L81.6657 77.811L83.8514 75.7891L73.7865 64.889H73.8222V24.689C73.8174 20.5796 70.4871 17.2493 66.3778 17.2445H60.4222V20.2223H66.3778C68.8447 20.2223 70.8444 22.222 70.8444 24.689V26.1778H60.4222V29.1556H70.8444V61.7012L68.9803 59.6778C67.9264 58.5297 66.4472 57.8649 64.8889 57.8391C64.4932 57.8219 64.097 57.8473 63.7067 57.915L64.8516 53.3382L66.0517 48.5112H67.8666V45.5334H64.8889C64.2055 45.5336 63.6101 45.9989 63.4446 46.662L62.2386 51.4889H39.5778C38.7555 51.4891 38.0891 52.156 38.0892 52.9782C38.0892 53.0996 38.1041 53.2203 38.1335 53.3382L41.1113 65.2493C41.2768 65.9124 41.8721 66.3777 42.5555 66.3778H59.776C59.974 66.7367 60.2102 67.0732 60.4803 67.3814L61.6476 68.6945C61.3736 69.104 60.9148 69.3515 60.4222 69.3556H41.0666V72.3334H60.4222C61.6414 72.328 62.8054 71.8246 63.6442 70.9398L69.1784 77.1663C68.1289 81.0196 68.6437 85.1313 70.6107 88.6069C70.0164 90.4429 68.3075 91.6873 66.3778 91.6889H36.6C34.1331 91.6889 32.1333 89.6892 32.1333 87.2223V85.7334H66.3778V82.7556H32.1333V41.0667H29.1555V87.2223C29.1604 91.3316 32.4906 94.6619 36.6 94.6667H66.3778C68.8571 94.6667 71.1737 93.4326 72.5566 91.3748C73.0506 91.9218 73.5823 92.4332 74.1483 92.9054L75.8471 94.3228L77.7529 92.0329L76.0555 90.617C72.1457 87.3853 70.6349 82.0765 72.2574 77.2706C72.426 76.766 72.3125 76.2097 71.9596 75.8114L62.7091 65.4041C61.7412 64.3124 61.7894 62.656 62.8193 61.6223C63.3598 61.1064 64.0776 60.8176 64.8248 60.8153ZM42.2295 57.4445L41.485 54.4667H45.7075L46.0797 57.4445H42.2295ZM43.7184 63.4001L42.9739 60.4223H46.452L46.8242 63.4001H43.7184ZM53.152 63.4001H49.8258L49.4536 60.4223H53.5242L53.152 63.4001ZM53.8964 57.4445H49.0813L48.7091 54.4667H54.2686L53.8964 57.4445ZM59.0346 63.4001H56.1536L56.5258 60.4223H59.9755C59.3921 61.3085 59.0664 62.3394 59.0346 63.4001ZM60.7483 57.4445H56.898L57.2702 54.4667H61.4927L60.7483 57.4445Z"
+                    fill="#7462E0"/>
+                  <path
+                    d="M44.0444 79.7778C45.689 79.7778 47.0222 78.4446 47.0222 76.8C47.0222 75.1555 45.689 73.8223 44.0444 73.8223C42.3998 73.8223 41.0666 75.1555 41.0666 76.8C41.0666 78.4446 42.3998 79.7778 44.0444 79.7778Z"
+                    fill="#7462E0"/>
+                  <path
+                    d="M58.9333 79.7778C60.5779 79.7778 61.9111 78.4446 61.9111 76.8C61.9111 75.1555 60.5779 73.8223 58.9333 73.8223C57.2887 73.8223 55.9555 75.1555 55.9555 76.8C55.9555 78.4446 57.2887 79.7778 58.9333 79.7778Z"
+                    fill="#7462E0"/>
+                  <path
+                    d="M51.4889 5.33337H12.7777C9.4886 5.33337 6.82219 7.99979 6.82219 11.2889V32.1334C6.82219 35.4225 9.4886 38.0889 12.7777 38.0889H51.4889C54.778 38.0889 57.4444 35.4225 57.4444 32.1334V11.2889C57.4444 7.99979 54.778 5.33337 51.4889 5.33337ZM54.4666 32.1334C54.4666 33.778 53.1335 35.1112 51.4889 35.1112H12.7777C11.1331 35.1112 9.79997 33.778 9.79997 32.1334V11.2889C9.79997 9.64427 11.1331 8.31115 12.7777 8.31115H51.4889C53.1335 8.31115 54.4666 9.64427 54.4666 11.2889V32.1334Z"
+                    fill="#7462E0"/>
+                  <path d="M39.5777 12.7778H12.7777V15.7556H39.5777V12.7778Z" fill="#7462E0"/>
+                  <path
+                    d="M49.3054 22.3291C47.9079 21.5072 46.1747 21.5072 44.777 22.3291C44.1044 21.9297 43.3378 21.7164 42.5556 21.7112C40.0887 21.7112 38.0889 23.7109 38.0889 26.1778C38.0889 28.6447 40.0887 30.6445 42.5556 30.6445C43.3374 30.6402 44.1042 30.4281 44.777 30.0296C46.9035 31.2801 49.641 30.5701 50.8915 28.4436C52.142 26.3171 51.4318 23.5796 49.3054 22.3291ZM42.5556 27.6667C41.7333 27.6667 41.0667 27.0001 41.0667 26.1778C41.0667 25.3556 41.7333 24.689 42.5556 24.689C43.3778 24.689 44.0445 25.3556 44.0445 26.1778C44.0445 27.0001 43.3778 27.6667 42.5556 27.6667ZM47.0222 27.6667C46.9335 27.6625 46.8452 27.65 46.7587 27.6295C47.1091 26.6939 47.1091 25.6632 46.7587 24.7277C46.8452 24.7072 46.9335 24.6942 47.0222 24.689C47.8445 24.689 48.5111 25.3556 48.5111 26.1778C48.5111 27.0001 47.8445 27.6667 47.0222 27.6667Z"
+                    fill="#7462E0"/>
+                  <path d="M15.7555 21.7112H12.7777V24.689H15.7555V21.7112Z" fill="#7462E0"/>
+                  <path d="M21.7111 21.7112H18.7333V24.689H21.7111V21.7112Z" fill="#7462E0"/>
+                  <path d="M27.6666 21.7112H24.6888V24.689H27.6666V21.7112Z" fill="#7462E0"/>
+                  <path d="M33.6222 21.7112H30.6445V24.689H33.6222V21.7112Z" fill="#7462E0"/>
+                  <path d="M33.6222 27.6667H12.7777V30.6445H33.6222V27.6667Z" fill="#7462E0"/>
+                  <path
+                    d="M90.4055 62.8045L77.8988 48.9966L75.6923 50.9947L88.2064 64.816C89.4897 66.1921 90.2023 68.0041 90.2 69.8857V94.6667H93.1778V69.8857C93.1843 67.2593 92.1935 64.7284 90.4055 62.8045Z"
+                    fill="#7462E0"/>
+                  <path
+                    d="M55.1292 42.8057L52.9778 44.2395V41.0667H50V44.2395L47.8485 42.8057L46.1959 45.2832L50.6625 48.261C51.1628 48.5949 51.8149 48.5949 52.3152 48.261L56.7819 45.2832L55.1292 42.8057Z"
+                    fill="#7462E0"/>
+                </g>
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="100" height="100" fill="white"/>
+                </clipPath>
+                <clipPath id="clip1">
+                  <rect width="89.3333" height="89.3333" fill="white" transform="translate(5.33333 5.33337)"/>
+                </clipPath>
+              </defs>
+            </svg>
+            <h3>IT v&nbsp;E-commerce</h3>
+            <p>Máte fungující eshop, váš byznys stojí na logistice, ale nevíte, jak
+              ji zoptimalizovat? Potřebujete zvýšit konverzní poměr při nákupu? Ocenili
+              byste upozornění aplikace na optimalizaci zboží v&nbsp;čase? Chcete zavést
+              dynamický pricing a nevíte&nbsp;jak?</p>
+            <a class="action-button jumbotron__cta" href="https://www.topmonks.cz/it-ecommerce/">Více o službě</a>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
+
+  <link rel="stylesheet" href="/stylesheets/hp/cooperation.css">
+  <section class="cooperation">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <p>Klienti, kterým jsme pomohli</p>
+        </div>
+        <div class="cooperation__logos mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <a href="https://www.erstegroupit.com/en/home"
+             title="jdi na Erste Group homepage">{{ sprite('img_logo_erste-group',
+              '[logo] Erste Group') }}</a>
+          <a href="https://www.pricefx.eu/site/" title="jdi na Pricefx homepage">{{ sprite('img_logo_pricefx', '[logo]
+          Pricefx') }}</a>
+          <a href="https://zonky.cz/" title="jdi na Zonky homepage">{{ sprite('img_logo_zonky', '[logo] Zonky') }}</a>
+          <a href="https://www.adler.info/"
+             title="jdi na Adler homepage">{{ sprite('img_logo_adler', '[logo] Adler') }}</a>
+          <a href="https://www.countrylife.cz/"
+             title="jdi na Country Life homepage">{{ sprite('countrylifelogo', '[logo] Country Life') }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="tm-layout-wrapper line-between mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+    <hr>
   </div>
-</section>
+
+  <link rel="stylesheet" href="/stylesheets/hp/advicing.css">
+  <section id="advicing" class="we-advice">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Řešíte konkrétní situaci?</h2>
+          <p>Potřebujete poradit s&nbsp;jedním konkrétním problémem a najít jeho
+            efektivní řešení? Vybrali jsme pro vás nejčastější situace, které
+            s&nbsp;klienty řešíme.</p>
+        </div>
+        <a href="/digitalni-audit/"
+           class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+          <h3>Chci web, co prodává</h3>
+          <p>Chcete zvýšit zisky díky marketingu. Zrealizujeme podrobný digitální
+            audit vašich webových stránek.</p>
+        </a>
+        <a href="/optimalizace-cenotvorby/"
+           class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+          <h3>Chci optimalizovat ceny</h3>
+          <p>Chcete zavést dynamický pricing, sledovat výkon slev a automaticky reagovat na ceny konkurence.</p>
+        </a>
+        <div
+          class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+          <h3>Chci poradit s&nbsp;IT</h3>
+          <p>Potřebujete konzultovat váš nápad, výsledky analýzy, nezávislou
+            nabídku z&nbsp;tendru.</p>
+        </div>
+        <a href="/bezpecnostni-audit/"
+           class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+          <h3>Chci poradit s bezpečností webu nebo aplikace</h3>
+          <p>Potřebujete se podívat na infrastrukturu, analýzu bezpečnosti systému,
+            analýzu výkonu systému.</p>
+        </a>
+        <div
+          class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+          <h3>Chci HR 2.0</h3>
+          <p>Chcete zavést remote týmy, distribuovanou zodpovědnost, efektivní
+            řízení lidí nebo HR analytiku.</p>
+        </div>
+        <div
+          class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+          <h3>Chci vývojový team</h3>
+          <p>Jste ve fázi vývoje nového produktu nebo služby a potřebujete celý
+            programátorský&nbsp;tým.</p>
+        </div>
+        <div class="advicing_btn mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <a class="action-button jumbotron__cta" href="https://calendly.com/simona-zabrzova/nezavazna-schuzka">NENAŠLI
+            JSTE, CO VÁS TRÁPÍ?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="tm-layout-wrapper line-between mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+    <hr>
+  </div>
+
+  <link rel="stylesheet" href="/stylesheets/hp/testimonials.css">
+  <section class="testimonials">
+    <div class="tm-bgnd-wrapper">
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner tm-layout-wrapper">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <h2>Naši zákazníci říkají, že...</h2>
+          </div>
+          <div
+            class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <title>Quotation</title>
+              <path
+                d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
+                fill="#D3D3D3"/>
+            </svg>
+            <blockquote>Velmi mile nás překvapilo, s jakou pružností dokázali TopMonks reagovat na náš konzultační
+              požadavek a v jak krátké době poskytly požadovaná data. Byla to příjemná nápomocná spolupráce.
+            </blockquote>
+            <hr class="line-between_grey">
+            <figcaption><b>Sam Müller</b><br>Country life</figcaption>
+          </div>
+          <div
+            class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <title>Quotation</title>
+              <path
+                d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
+                fill="#D3D3D3"/>
+            </svg>
+            <blockquote>
+              Tomáš v rámci auditu webu odhalil na našem eshopu řadu chyb, kterých jsem si jako majitel eshopu nevšiml.
+              Většinu změn jsme zapracovali a postupně se nám začaly dostávat výsledky. Objednávky nám narostly o 20%.
+              Děkujeme a doporučujeme!
+            </blockquote>
+            <hr class="line-between_grey">
+            <figcaption><b>Radek Blaha</b><br>Top-style.cz</figcaption>
+          </div>
+          <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <title>Quotation</title>
+              <path
+                d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
+                fill="#D3D3D3"/>
+            </svg>
+            <blockquote>Vývojáři a konzultanti v TopMonks jsou velmi chytří, vlidní, proaktivní a spolehliví. Pokud
+              akceptujete jejich svobodnějšího ducha a nebudete se snažit je v korporaci příliš svazovat, budete velmi
+              spokojení s jejich výsledky a spoluprací s nimi jako takovou.
+            </blockquote>
+            <hr class="line-between_grey">
+            <figcaption><b>Tomáš Doležal</b><br>Erste API Hub</figcaption>
+          </div>
+          <div
+            class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <title>Quotation</title>
+              <path
+                d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
+                fill="#D3D3D3"/>
+            </svg>
+            <blockquote>
+              Po několika úpravách webu "předními odborníky" jsme se i s tímto požadavkem obrátili na TopMonks -
+              konkrétně jejich UX konzultační tým. Profesionální přístup Tomáše a nekompromisní pointy Veroniky vedly k
+              velmi rychlému redesignu webu, který nyní plní nastavené cíle, je přehledný a jednoduchý, a přivádí nám
+              leady takřka "až pod nos".
+            </blockquote>
+            <hr class="line-between_grey">
+            <figcaption><b>Kamil Tomáš</b><br>Purposefly</figcaption>
+          </div>
+          <div
+            class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <title>Quotation</title>
+              <path
+                d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
+                fill="#D3D3D3"/>
+            </svg>
+            <blockquote>
+              Když se náš Startup Incubator rozrůstal, TopMonks byli velmi vlídní a nápomocní. Potřebovali jsme pomoct s
+              front-endem, back-endem a blockchain technologií. Vždy dodali skvělou práci a v určeném termínu. Byli mi
+              doporučeni jedním ze zakladatelů jiného startupu a já je s radostí doporučuji také.
+            </blockquote>
+            <hr class="line-between_grey">
+            <figcaption><b>Tom Counsell</b><br>B Hub Prague, Startup Incubator</figcaption>
+          </div>
+          <div
+            class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <title>Quotation</title>
+              <path
+                d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
+                fill="#D3D3D3"/>
+            </svg>
+            <blockquote>
+              Lumír je neuvěřitelně cenný týmový hráč, který velmi dobře zapadá do našeho senior/dev týmu, kde naplno
+              využívá rychlé a inovativní myšlenky při navrhování a auditu architektury.
+            </blockquote>
+            <hr class="line-between_grey">
+            <figcaption><b>Patrik Tjokord</b><br>DEBNK</figcaption>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 {% endblock %}
