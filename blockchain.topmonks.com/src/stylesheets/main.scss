@@ -149,18 +149,18 @@ a.button {
   border-radius: 32px;
   padding: 12px 54px;
   color: #fff;
-}
 
-a.button:hover {
-  background: none;
-  border: 4px solid #fff;
-  font-weight: 900;
+  &:hover {
+    background: none;
+    border: 2px solid #fff;
+    font-weight: 700;
+  }
 }
 
 #contact a.button:hover {
   background: none;
-  border: 4px solid #db0f7f;
-  font-weight: 900;
+  border: 2px solid #db0f7f;
+  font-weight: 700;
   color: #db0f7f;
 }
 
@@ -321,6 +321,7 @@ a.button:hover {
 
 
 /*Blog section*/
+
 .articles {
   color: var(--blockchain-grey-dark);
 
@@ -396,6 +397,20 @@ a.button:hover {
       p {
         width: 412px;
       }
+    }
+  }
+  #more {
+    display: none;
+  }
+  #more.show--more {
+    display: grid;
+  }
+  .show-more_btn {
+    text-align: center;
+    margin: 2em auto;
+    a.button:hover {
+      border: 2px solid #db0f7f;
+      color: #db0f7f;
     }
   }
 }
