@@ -7,5 +7,6 @@ twitter: tupyondrej
 github:
 linkedin: in/ondrejtupy
 quote:
+pickup: true
 ---
 

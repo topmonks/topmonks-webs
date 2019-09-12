@@ -52,28 +52,26 @@
   <section class="tm-team" id="team">
     <div id="team--collapsed" class="tm-bgnd-wrapper mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Our Team</h2>
+        </div>
         {{ macros.teamMember(members['jiri-fabian'], true) }}
-        {{ macros.teamMember(members['jirka-jansa'], true) }}
         {{ macros.teamMember(members['ales-roubicek'], true) }}
-        {{ macros.teamMember(members['tomas-paulus'], true) }}
-        {{ macros.teamMember(members['jiri-penzes'], true) }}
-        {{ macros.teamMember(members['lumir-mrkva'], true) }}
-        {{ macros.teamMember(members['pavol-noha'], true) }}
-        {{ macros.teamMember(members['veronika-tomasova'], true) }}
-        {{ macros.teamMember(members['simona-zabrzova'], true) }}
+        {{ macros.teamMember(members['lea-petrasova'], true) }}
+        {{ macros.teamMember(members['ondrej-tupy'], true) }}
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <div class="mdc-layout-grid tm-team__members">
             <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
-                <a href="#team" class="action-button show-more">Ukaž více</a>
+                <a href="#team" class="action-button show-more">Show more</a>
               </div>
               {% for id, member in members %}
-                {% if not member.consultant %}
+                {% if not member.pickup %}
                   {{ macros.teamMember(member) }}
                 {% endif %}
               {% endfor %}
               <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
-                <a href="#team--collapsed" class="action-button show-less">Ukaž méně</a>
+                <a href="#team--collapsed" class="action-button show-less">Show Less</a>
               </div>
             </div>
           </div>

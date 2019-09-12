@@ -24,7 +24,7 @@
 {% macro teamMember(member, hero) -%}
 {% set fullName = member.name + ' ' + member.surname %}
 {% set imageSize = 450 if hero else 75 %}
-<div class="box mdc-layout-grid__cell tm-team__member {% if hero %}mdc-layout-grid__cell--span-3-desktop tm-team__member--hero{% endif %}">
+<div class="box mdc-layout-grid__cell tm-team__member {% if hero %} mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop tm-team__member--hero{% endif %}">
   {{ avatar(member, imageSize) }}
   <div class="content">
     <strong>{{fullName}}</strong>
