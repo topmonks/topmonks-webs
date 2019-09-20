@@ -33,8 +33,9 @@ module.exports = {
     nunjucksRender: {
       manageEnv(env) {
         env.addFilter("split", (str, seperator) => str.split(seperator));
-        env.addFilter("transformation", (s, t) =>
-          s && s.replace("/upload/", `/upload/${t}/`)
+        env.addFilter(
+          "transformation",
+          (s, t) => s && s.replace("/upload/", `/upload/${t}/`)
         );
       }
     },
