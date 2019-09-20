@@ -34,7 +34,7 @@ module.exports = {
       manageEnv(env) {
         env.addFilter("split", (str, seperator) => str.split(seperator));
         env.addFilter("transformation", (s, t) =>
-          s.replace("/upload/", `/upload/${t}/`)
+          s && s.replace("/upload/", `/upload/${t}/`)
         );
       }
     },
