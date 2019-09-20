@@ -176,7 +176,7 @@
           <p>Přednášky a diskuze každý první čtvrtek v&nbsp;měsíci se zajímavými
             lidmi a o&nbsp;tématech, která nás&nbsp;baví.<br>
             Přihlaš se přes stránky <a class="link" href="http://meetu.ps/c/2GNS0/cSTNb/d">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                    y="0px"
                    width="95px" height="30px" viewBox="0 0 5573.111 1990.154"
@@ -280,11 +280,14 @@
             <div class="mdc-layout-grid__cell">
               <h3>Téma</h3>
               <span>{{upcomingEvent.shortTitle}}</span>
+              {% if upComingEvent.lecturers %}
               <br>
               <h3>Přednášející</h3>
-              <span>   {% for lecturer in upcomingEvent.lecturers | split(",") %}
-      {{ lecturer }}<br/>
-    {% endfor %}</span>
+              <span>
+                {% for lecturer in upcomingEvent.lecturers | split(",") %}
+                  {{ lecturer }}<br/>
+                {% endfor %}</span>
+              {% endif  %}
             </div>
             <div class="mdc-layout-grid__cell">
               <h3>Kdy?</h3>
@@ -513,7 +516,7 @@
             </svg>
           </a><a href="https://dribbble.com/TopMonks" title="TopMonks on Dribbble" rel="me" itemprop="sameAs"
                  class="dribbble">
-            <svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512"
+            <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512"
                  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" width="33px" height="33px"><g id="Layer_1_1_"><circle cx="256" cy="256" fill="#E94E8A" r="238.2"></circle><title>[Logo icon] Dribbble</title></g>
               <g><circle cx="256" cy="256" fill="none" r="140.5" stroke="#FAFAFA" stroke-miterlimit="10" stroke-width="10"></circle>
                 <path d="M203,124.5c49.9,46.1,112.1,183.4,116.6,256.8" fill="none" stroke="#FAFAFA"
