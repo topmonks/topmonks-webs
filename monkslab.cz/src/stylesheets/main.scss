@@ -194,6 +194,7 @@ header {
 
 //SECTION: INTRO
 .hp-intro {
+  min-height: 440px;
   position: relative;
 h1 {
   font-size: 32px;
@@ -203,13 +204,13 @@ h1 {
     box-shadow: 4px 20px 40px rgba(0, 0, 0, 0.1);
 
     input {
-      font-family: Neue Einstellung;
+      font-family: inherit;
       border: none;
       padding: 26px;
     }
 
     button {
-      font-family: Neue Einstellung;
+      font-family: inherit;
       font-size: 16px;
       color: #FFFFFF;
       background: var(--ml-purple);
@@ -259,6 +260,7 @@ h1 {
     background: url("/images/img_monks-lab.png") no-repeat right calc(25% - 160px) top;
     background-size: 568px auto;
     overflow-x: hidden;
+    min-height: 610px;
   }
 }
 
