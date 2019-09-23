@@ -12,7 +12,9 @@
 /*
 http://pxtoem.com/ - how to count px to em
 */
-
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0 auto;

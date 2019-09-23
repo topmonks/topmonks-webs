@@ -145,9 +145,6 @@
         text-align: left;
       }
     }
-    .tm-menu li:hover {
-      border-bottom-color: white;
-    }
   }
 }
 
@@ -157,6 +154,7 @@
       border-bottom: 1px solid transparent;
     }
     a:hover {
+      color: #F64060;
       border-bottom: 1px solid #F64060;
     }
   }
