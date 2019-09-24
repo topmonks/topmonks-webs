@@ -39,7 +39,7 @@
     "prettier": "^1.18.2",
     "rimraf": "^3.0.0",
     "stylelint": "^10.1.0",
-    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-prettier": "^6.0.0",
     "tap-xunit": "^2.4.1"
   },
   "scripts": {
