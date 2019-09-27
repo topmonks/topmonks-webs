@@ -2,157 +2,168 @@
 {%- import 'macros/helpers.html' as macros -%}
 {% block title %}Náš Tým - TopMonks{% endblock %}
 {% block head %}
-<link rel="stylesheet" href="/stylesheets/team.css">
-<link rel="stylesheet" href="/stylesheets/v2.css">
-<link rel="stylesheet" href="/stylesheets/sub-pages/main.css">
+  <link rel="stylesheet" href="/stylesheets/team.css">
+  <link rel="stylesheet" href="/stylesheets/v2.css">
+  <link rel="stylesheet" href="/stylesheets/sub-pages/main.css">
 {% endblock %}
 
 {% block content %}
-<section class="jumbotron">
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop">
-        <h1>Topmonks konzultanti</h1>
-        <h2>Náš konzultantský tým</h2>
-        <p class="sub-info">Náš tým se skládá ze seniorních vývojářů a expertů na danou
-          problematiku. V&nbsp;týmu se interně i&nbsp;externě pravidelně vzděláváme.
-          V&nbsp;rámci naší decentralizované firmy je každá specializace zastupitelná
-          více kolegy. Níže uvádíme základní&nbsp;tým.</p>
+  <section class="jumbotron">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop">
+          <h1>Topmonks konzultanti</h1>
+          <h2>Náš konzultantský tým</h2>
+          <p class="sub-info">Náš tým se skládá ze seniorních vývojářů a expertů na danou
+            problematiku. V&nbsp;týmu se interně i&nbsp;externě pravidelně vzděláváme.
+            V&nbsp;rámci naší decentralizované firmy je každá specializace zastupitelná
+            více kolegy. Níže uvádíme základní&nbsp;tým.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<link rel="stylesheet" href="/stylesheets/sub-pages/team.css">
-<section class="tm-team" id="team">
-  <div id="team--collapsed" class="tm-bgnd-wrapper mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      {{ macros.teamMember(members['jiri-fabian'], true) }}
-      {{ macros.teamMember(members['jirka-jansa'], true) }}
-      {{ macros.teamMember(members['ales-roubicek'], true) }}
-      {{ macros.teamMember(members['tomas-paulus'], true) }}
-      {{ macros.teamMember(members['jiri-penzes'], true) }}
-      {{ macros.teamMember(members['lumir-mrkva'], true) }}
-      {{ macros.teamMember(members['pavol-noha'], true) }}
-      {{ macros.teamMember(members['veronika-tomasova'], true) }}
-      {{ macros.teamMember(members['simona-zabrzova'], true) }}
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <div class="mdc-layout-grid tm-team__members">
-          <div class="mdc-layout-grid__inner">
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
-              <a href="#team" class="action-button show-more">Ukaž více</a>
-            </div>
-            {% for id, member in members %}
-            {% if not member.consultant %}
-            {{ macros.teamMember(member) }}
-            {% endif %}
-            {% endfor %}
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
-              <a href="#team--collapsed" class="action-button show-less">Ukaž méně</a>
+  </section>
+  <link rel="stylesheet" href="/stylesheets/sub-pages/team.css">
+  <section class="tm-team" id="team">
+    <div id="team--collapsed" class="tm-bgnd-wrapper mdc-layout-grid">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        {{ macros.teamMember(members['jiri-fabian'], true) }}
+        {{ macros.teamMember(members['jirka-jansa'], true) }}
+        {{ macros.teamMember(members['ales-roubicek'], true) }}
+        {{ macros.teamMember(members['tomas-paulus'], true) }}
+        {{ macros.teamMember(members['jiri-penzes'], true) }}
+        <div
+          class="box mdc-layout-grid__cell tm-team__member mdc-layout-grid__cell--span-4-desktop tm-team__member--hero">
+          <img alt="[photo] Lumír Mrkva" loading="lazy"
+               src="https://res.cloudinary.com/topmonks/image/upload/w_450,dpr_auto,f_auto/v1569583487/lumír-mrkva.jpg"
+               srcset="https://res.cloudinary.com/topmonks/image/upload//w_450,dpr_auto,f_auto/v1569583487/lumír-mrkva.jpg,
+               https://res.cloudinary.com/topmonks/image/upload/w_450,dpr_1.5,f_auto/v1569583487/lumír-mrkva.jpg 1.5x,
+               https://res.cloudinary.com/topmonks/image/upload/w_450,dpr_2,f_auto/v1569583487/lumír-mrkva.jpg 2x,
+               https://res.cloudinary.com/topmonks/image/upload/w_450,dpr_3,f_auto/v1569583487/lumír-mrkva.jpg 3x"
+               onerror="this.onerror=null,this.src=&quot;/assets/img/monk_logo.png&quot;" width="450" height="450">
+          <div class="content"><strong>Lumír Mrkva</strong>
+            <span>Team leader</span></div>
+        </div>
+        {{ macros.teamMember(members['pavol-noha'], true) }}
+        {{ macros.teamMember(members['veronika-tomasova'], true) }}
+        {{ macros.teamMember(members['simona-zabrzova'], true) }}
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div class="mdc-layout-grid tm-team__members">
+            <div class="mdc-layout-grid__inner">
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
+                <a href="#team" class="action-button show-more">Ukaž více</a>
+              </div>
+              {% for id, member in members %}
+                {% if not member.consultant %}
+                  {{ macros.teamMember(member) }}
+                {% endif %}
+              {% endfor %}
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
+                <a href="#team--collapsed" class="action-button show-less">Ukaž méně</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
+  <div class="tm-layout-wrapper line-between mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+    <hr>
   </div>
-</section>
-<div class="tm-layout-wrapper line-between mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-  <hr>
-</div>
-<link rel="stylesheet" href="/stylesheets/sub-pages/testimonials.css">
-<section class="testimonials">
-  <div class="tm-bgnd-wrapper">
-    <div class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner tm-layout-wrapper">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>Co o&nbsp;našem teamu říkají zákazníci?</h2>
-        </div>
-        <div
-          class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <title>Quotation</title>
-            <path
-              d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
-              fill="#D3D3D3"/>
-          </svg>
-          <blockquote>
-            Velmi mile nás překvapilo, s&nbsp;jakou pružností dokázali TopMonks reagovat
-            na náš konzultační požadavek a v&nbsp;jak krátké době poskytly požadovaná
-            data. Byla to příjemná nápomocná spolupráce.
-          </blockquote>
-          <hr class="line-between_grey">
-          <figcaption><b>Sam Müller</b><br>Country life</figcaption>
-        </div>
-        <div
-          class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <title>Quotation</title>
-            <path
-              d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
-              fill="#D3D3D3"/>
-          </svg>
-          <blockquote>Tomáš v&nbsp;rámci auditu webu odhalil na našem eshopu řadu chyb, kterých
-            jsem si jako majitel eshopu nevšiml. Většinu změn jsme zapracovali a
-            postupně se nám začaly dostávat výsledky. Objednávky nám narostli o&nbsp;20%.
-            Děkujeme a doporučujeme!
-          </blockquote>
-          <hr class="line-between_grey">
-          <figcaption><b>Radek Blaha</b><br>Top-style.cz</figcaption>
+  <link rel="stylesheet" href="/stylesheets/sub-pages/testimonials.css">
+  <section class="testimonials">
+    <div class="tm-bgnd-wrapper">
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner tm-layout-wrapper">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <h2>Co o&nbsp;našem teamu říkají zákazníci?</h2>
+          </div>
+          <div
+            class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+            <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <title>Quotation</title>
+              <path
+                d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
+                fill="#D3D3D3"/>
+            </svg>
+            <blockquote>
+              Velmi mile nás překvapilo, s&nbsp;jakou pružností dokázali TopMonks reagovat
+              na náš konzultační požadavek a v&nbsp;jak krátké době poskytly požadovaná
+              data. Byla to příjemná nápomocná spolupráce.
+            </blockquote>
+            <hr class="line-between_grey">
+            <figcaption><b>Sam Müller</b><br>Country life</figcaption>
+          </div>
+          <div
+            class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+            <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <title>Quotation</title>
+              <path
+                d="M3.16 25C2.09333 23.3516 1.29333 21.7164 0.76 20.0942C0.253333 18.4458 0 16.8106 0 15.1884C0 12.3888 0.746667 9.70696 2.24 7.14286C3.73333 4.55259 5.93333 2.17164 8.84 0L12.76 2.27629C13.08 2.48561 13.3067 2.72109 13.44 2.98273C13.6 3.21821 13.68 3.46677 13.68 3.72842C13.68 4.01622 13.6133 4.29095 13.48 4.55259C13.3467 4.81424 13.1867 5.03663 13 5.21978C12.7067 5.53375 12.3733 5.92622 12 6.39717C11.6533 6.84197 11.32 7.37834 11 8.00628C10.68 8.60806 10.4 9.28833 10.16 10.0471C9.94667 10.7797 9.84 11.5777 9.84 12.4411C9.84 13.383 10 14.3904 10.32 15.4631C10.6667 16.5358 11.2267 17.6871 12 18.9168C12.2667 19.3354 12.4 19.7541 12.4 20.1727C12.4 20.6436 12.24 21.0623 11.92 21.4286C11.6 21.7949 11.16 22.0827 10.6 22.292L3.16 25ZM17.48 25C16.4133 23.3516 15.6133 21.7164 15.08 20.0942C14.5733 18.4458 14.32 16.8106 14.32 15.1884C14.32 12.3888 15.0667 9.70696 16.56 7.14286C18.0533 4.55259 20.2533 2.17164 23.16 0L27.08 2.27629C27.4 2.48561 27.6267 2.72109 27.76 2.98273C27.92 3.21821 28 3.46677 28 3.72842C28 4.01622 27.9333 4.29095 27.8 4.55259C27.6667 4.81424 27.5067 5.03663 27.32 5.21978C27.0267 5.53375 26.6933 5.92622 26.32 6.39717C25.9733 6.84197 25.64 7.37834 25.32 8.00628C25 8.60806 24.72 9.28833 24.48 10.0471C24.2667 10.7797 24.16 11.5777 24.16 12.4411C24.16 13.383 24.32 14.3904 24.64 15.4631C24.9867 16.5358 25.5467 17.6871 26.32 18.9168C26.5867 19.3354 26.72 19.7541 26.72 20.1727C26.72 20.6436 26.56 21.0623 26.24 21.4286C25.92 21.7949 25.48 22.0827 24.92 22.292L17.48 25Z"
+                fill="#D3D3D3"/>
+            </svg>
+            <blockquote>Tomáš v&nbsp;rámci auditu webu odhalil na našem eshopu řadu chyb, kterých
+              jsem si jako majitel eshopu nevšiml. Většinu změn jsme zapracovali a
+              postupně se nám začaly dostávat výsledky. Objednávky nám narostli o&nbsp;20%.
+              Děkujeme a doporučujeme!
+            </blockquote>
+            <hr class="line-between_grey">
+            <figcaption><b>Radek Blaha</b><br>Top-style.cz</figcaption>
+          </div>
         </div>
       </div>
     </div>
+  </section>
+  <div class="tm-layout-wrapper line-between mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+    <hr>
   </div>
-</section>
-<div class="tm-layout-wrapper line-between mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-  <hr>
-</div>
-<link rel="stylesheet" href="/stylesheets/sub-pages/contact-us.css">
-<section class="contact-us mdc-layout-grid">
-  <div class="mdc-layout-grid__inner tm-layout-wrapper">
-    <div class="page_sub-title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-      <h2>Kontaktujte nás</h2>
-      <p>Zanalyzujeme stav vašeho IT, doporučíme další kroky a po vašem schválení jednotlivé kroky implementujeme.</p>
-    </div>
-    <div
-      class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
-      itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
-      <h3><b>Konzultace v&nbsp;retailu a ecommerce</b></h3>
-      <p class="box_text-about">Know-How v&nbsp;oblasti retail a ecommerce nejlépe prodiskutujete se
-        Simonou.</p>
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-          <img alt="[foto] Simona Zábržová"
-               src="https://res.cloudinary.com/topmonks/image/upload/v1563262501/avatars/simona-zabrzova_zsr1ad.png"
-               onerror="this.onerror=null; this.src='/images/monk_logo-c877778634.png'" width="112" height="112">
+  <link rel="stylesheet" href="/stylesheets/sub-pages/contact-us.css">
+  <section class="contact-us mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div class="page_sub-title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Kontaktujte nás</h2>
+        <p>Zanalyzujeme stav vašeho IT, doporučíme další kroky a po vašem schválení jednotlivé kroky implementujeme.</p>
+      </div>
+      <div
+        class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
+        itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
+        <h3><b>Konzultace v&nbsp;retailu a ecommerce</b></h3>
+        <p class="box_text-about">Know-How v&nbsp;oblasti retail a ecommerce nejlépe prodiskutujete se
+          Simonou.</p>
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <img alt="[foto] Simona Zábržová"
+                 src="https://res.cloudinary.com/topmonks/image/upload/v1563262501/avatars/simona-zabrzova_zsr1ad.png"
+                 onerror="this.onerror=null; this.src='/images/monk_logo-c877778634.png'" width="112" height="112">
+          </div>
+          <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+            <p><span itemprop="name">Simona Zábržová</span><br/>
+              <a itemprop="telephone" href="tel:+420777285544">+420 777 285 544</a><br>
+              <a itemprop="email" href="mailto:simona.zabrzova&#64;topmonks.com">simona.zabrzova@​topmonks.com</a></p>
+            </p>
+          </div>
         </div>
-        <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-          <p><span itemprop="name">Simona Zábržová</span><br/>
-            <a itemprop="telephone" href="tel:+420777285544">+420 777 285 544</a><br>
-            <a itemprop="email" href="mailto:simona.zabrzova&#64;topmonks.com">simona.zabrzova@​topmonks.com</a></p>
-          </p>
+      </div>
+      <div
+        class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
+        itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
+        <h3><b>Konzultace v&nbsp;retailu a fintechu</b></h3>
+        <p class="box_text-about">Know-how v&nbsp;oblasti retailu a fintechu nejlépe proberete s&nbsp;Ondrou.</p>
+        <div class="mdc-layout-grid__inner">
+          <div class="person--photo mdc-layout-grid__cell mdc-layout-grid__cell--span-4"><img alt="[photo] Ondrej Tupý"
+                                                                                              loading="lazy"
+                                                                                              src="https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_auto,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy"
+                                                                                              srcset="https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_1,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy, https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_1.5,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy 1.5x, https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_2,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy 2x, https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_3,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy 3x"
+                                                                                              onerror="this.onerror=null; this.src='/assets/img/monk_logo-c877778634.png'"
+                                                                                              width="112" height="112">
+          </div>
+          <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+            <p><span itemprop="name">Ondrej Tupý</span><br>
+              <a itemprop="telephone" href="tel:+420730581488">+420 730 581 488</a><br>
+              <a itemprop="email" href="mailto:sales@​topmonks.com">sales@​topmonks.com</a></p>
+          </div>
         </div>
       </div>
     </div>
-    <div
-      class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop"
-      itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
-      <h3><b>Konzultace v&nbsp;retailu a fintechu</b></h3>
-      <p class="box_text-about">Know-how v&nbsp;oblasti retailu a fintechu nejlépe proberete s&nbsp;Ondrou.</p>
-      <div class="mdc-layout-grid__inner">
-        <div class="person--photo mdc-layout-grid__cell mdc-layout-grid__cell--span-4"><img alt="[photo] Ondrej Tupý"
-                                                                                            loading="lazy"
-                                                                                            src="https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_auto,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy"
-                                                                                            srcset="https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_1,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy, https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_1.5,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy 1.5x, https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_2,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy 2x, https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_3,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy 3x"
-                                                                                            onerror="this.onerror=null; this.src='/assets/img/monk_logo-c877778634.png'"
-                                                                                            width="112" height="112">
-        </div>
-        <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-          <p><span itemprop="name">Ondrej Tupý</span><br>
-            <a itemprop="telephone" href="tel:+420730581488">+420 730 581 488</a><br>
-            <a itemprop="email" href="mailto:sales@​topmonks.com">sales@​topmonks.com</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 {% endblock %}

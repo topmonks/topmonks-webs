@@ -10,8 +10,9 @@
 			"linkedin": "in/rarous",
 			"quote": "Not everything is awesome.",
 			"consultant": true,
+			"pickup": true,
 			"body": "<p>The feeling when you solve complex problems with really simple solutions. This is what drives me forward.</p>\n",
-			"updatedAt": "2019-08-27T09:32:40.209Z"
+			"updatedAt": "2019-09-12T10:53:57.294Z"
 		},
 		"anna-cihlova": {
 			"id": "anna-cihlova",
@@ -388,8 +389,9 @@
 			"github": null,
 			"linkedin": "in/ondrejtupy",
 			"quote": null,
+			"pickup": true,
 			"body": "",
-			"updatedAt": "2019-03-13T16:21:25.780Z"
+			"updatedAt": "2019-09-12T10:55:15.338Z"
 		},
 		"pavel-lobodinsky": {
 			"id": "pavel-lobodinsky",
@@ -494,7 +496,7 @@
 			"quote": null,
 			"consultant": true,
 			"body": "",
-			"updatedAt": "2019-08-27T09:34:40.596Z"
+			"updatedAt": "2019-09-12T11:01:58.296Z"
 		},
 		"tomas-brejla": {
 			"id": "tomas-brejla",
