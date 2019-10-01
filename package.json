@@ -19,7 +19,7 @@
   "devDependencies": {
     "@topmonks/blendid": "git://github.com/topmonks/blendid.git",
     "ava": "^2.4.0",
-    "bluebird": "^3.5.5",
+    "bluebird": "^3.7.0",
     "broken-link-checker-local": "^0.2.1",
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
