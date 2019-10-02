@@ -24,6 +24,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background: url("/images/main-top_bgnd.svg") top center no-repeat;
+  background-size: 100%;
 }
 
 // TYPOGRAPHY //
@@ -246,7 +247,7 @@ header {
   }
 
   @media screen and (min-width: 1024px) {
-    margin: 3em auto;
+    margin: 4em auto;
     p {
       font-size: 24px;
       line-height: 29px;
