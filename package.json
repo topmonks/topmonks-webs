@@ -84,6 +84,9 @@
     "test:broken-links:www.xduediligence.com": "blcl ./public/www.xduediligence.com -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
     "start:monkslab.cz": "BLENDID_CONFIG_PATH=./monkslab.cz/config/ blendid",
     "build:monkslab.cz": "BLENDID_CONFIG_PATH=./monkslab.cz/config/ blendid -- build",
-    "test:broken-links:monkslab.cz": "blcl ./public/monkslab.cz -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com"
+    "test:broken-links:monkslab.cz": "blcl ./public/monkslab.cz -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
+    "start:www.hlidacshopu.cz": "BLENDID_CONFIG_PATH=./www.hlidacshopu.cz/config/ blendid",
+    "build:www.hlidacshopu.cz": "BLENDID_CONFIG_PATH=./www.hlidacshopu.cz/config/ blendid -- build",
+    "test:broken-links:www.hlidacshopu.cz": "blcl ./public/www.hlidacshopu.cz -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com"
   }
 }
