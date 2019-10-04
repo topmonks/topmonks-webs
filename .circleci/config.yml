@@ -290,6 +290,17 @@ jobs:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E1P5V9ZE9J2UMI
       HOST: monkslab.cz
 
+  test-www-hlidacshopu-cz:
+    <<: *test-site
+    environment:
+      HOST: www.hlidacshopu.cz
+
+  deploy-www-hlidacshopu-cz:
+    <<: *s3-deploy
+    environment:
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E107VH184U5I4G
+      HOST: www.hlidacshopu.cz
+
 workflows:
   build_and_deploy:
     jobs:
@@ -416,6 +427,17 @@ workflows:
           requires:
             - provision
             - build 
+          filters:
+            branches:
+              only: master
+      - test-www-hlidacshopu-cz:
+          requires:
+            - build
+      - deploy-www-hlidacshopu-cz:
+          context: org-global
+          requires:
+            - provision
+            - test-www-hlidacshopu-cz
           filters:
             branches:
               only: master

@@ -321,12 +321,14 @@ export class WebSite extends pulumi.ComponentResource {
       cdn = createCloudFront(website, domain, contentBucket);
       website.cdn = cdn;
     }
-    website.dnsRecord = createAliasRecord(
-      website,
-      domain,
-      cdn,
-      contentBucket.bucketDomainName
-    );
+    if (!(settings.dns && settings.dns.disabled)) {
+      website.dnsRecord = createAliasRecord(
+        website,
+        domain,
+        cdn,
+        contentBucket.bucketDomainName
+      );
+    }
 
     const outputs: pulumi.Inputs = {
       contentBucketUri: website.s3BucketUri,

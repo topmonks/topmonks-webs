@@ -29,5 +29,7 @@
   "monkstage.topmonks.com": {},
   "www.xduediligence.com": {},
   "monkslab.cz": {},
-  "www.hlidacshopu.cz": {}
+  "www.hlidacshopu.cz": {
+    "dns": { "disabled": true }
+  }
 }
