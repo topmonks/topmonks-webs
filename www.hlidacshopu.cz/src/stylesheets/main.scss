@@ -176,6 +176,13 @@ header {
 
 // Section: MAIN //
 .main {
+  h2 {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 16px;
+    text-align: left;
+
+  }
   .email-input {
     background: #FFFFFF;
     box-shadow: 0px 20px 20px rgba(92, 98, 205, 0.1);
@@ -202,6 +209,10 @@ header {
       float: right;
     }
   }
+  .logos {
+    display: flex;
+    min-height: 50px;
+  }
 
   @media screen and (min-width: 840px) {
     .email-input {
@@ -225,39 +236,6 @@ header {
       border-radius: 8px;
     }
   }
-}
-
-
-//Section: REFERENCES //
-.referee {
-  text-align: center;
-
-  p {
-    color: #000000;
-    font-weight: bold;
-    line-height: 22px;
-    margin: 24px auto;
-    max-width: 700px;
-  }
-
-  span {
-    font-size: 15px;
-    line-height: 24px;
-    text-transform: initial;
-  }
-
-  @media screen and (min-width: 1024px) {
-    margin: 4em auto;
-    p {
-      font-size: 24px;
-      line-height: 29px;
-    }
-  }
-}
-
-// Section: Skills //
-.feature {
-  align-self: center;
 }
 
 
