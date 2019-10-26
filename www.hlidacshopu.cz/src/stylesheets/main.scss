@@ -2,6 +2,8 @@
 @import "common/colors";
 
 :root {
+  --light-black: #2E2828;
+  --grey-sub-text: #4F4F4F;
   --grey: #B1B1B1;
   --dark-grey: #455A64;
   --light-grey: #8A99A1;
@@ -272,6 +274,23 @@ p.numbers {
   line-height: 54px;
   text-align: center;
   margin-top: 0;
+}
+
+// Section: References //
+
+.references {
+  p {
+    color: var(--light-black);
+  }
+  .references_link {
+    font-size: 18px;
+    color: var(--purple);
+    font-weight: bold;
+    margin: 0 auto;
+    a:hover {
+      font-weight: lighter;
+    }
+  }
 }
 
 // FOOTER //
