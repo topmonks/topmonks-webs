@@ -52,6 +52,7 @@ h3 {
 p {
   font-size: 18px;
   color: var(--light-grey);
+  line-height: 28px;
 }
 
 hr {
@@ -125,15 +126,11 @@ img, svg {
 
 header {
   .hs_logo {
-    margin: 0 auto;
+    display: flex;
   }
 
   nav {
     float: right;
-
-    .menu__list {
-
-    }
   }
 
   .menu--horizontal .menu__list {
@@ -201,9 +198,11 @@ header {
 
     button {
       font-family: inherit;
+      font-size: 15px;
+      line-height: 18px;
       color: #FFFFFF;
       background: var(--purple);
-      width: 160px;
+      width: 200px;
       height: 54px;
       box-shadow: 0px 20px 20px rgba(92, 98, 205, 0.1);
       border-radius: 0px 8px 8px 0px;
