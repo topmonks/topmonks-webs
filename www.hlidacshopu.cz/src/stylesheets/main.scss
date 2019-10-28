@@ -27,6 +27,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: url("https://res.cloudinary.com/topmonks/image/upload/v1572182178/www.hlidacshopu.cz/background.jpg") top center no-repeat;
   background-size: 100%;
+  margin: 0;
 }
 
 header {
@@ -264,6 +265,11 @@ header {
 .guidance {
   .browser-support {
     text-align: center;
+
+    img {
+      max-width: 67px;
+      max-height: 67px;
+    }
   }
 
 
@@ -312,11 +318,18 @@ p.numbers {
 // FOOTER //
 
 footer {
+  background: rgba(84, 95, 239, 0.07);
+
+  h3 {
+    font-weight: normal;
+  }
+
   ul {
     padding-left: 0;
 
     li {
-      font-size: 13px;
+      font-size: 14px;
+      font-weight: normal;
       color: var(--purple);
       line-height: 26px;
       text-decoration: none;
@@ -328,13 +341,39 @@ footer {
     }
   }
 
-  svg {
-    width: auto;
+  img {
+    max-width: 183px;
+    height: 40px;
+    text-align: left;
+  }
+
+  .text-about {
+    p {
+      font-size: 14px;
+      line-height: 26px;
+    }
+
+    a:hover {
+      font-weight: lighter;
+    }
   }
 
   .company, .terms {
     font-size: 13px;
-    color: #8896A7;
+    line-height: 26px;
+
+    a, span {
+      color: #8896A7;
+      text-decoration: none;
+    }
+  }
+
+  .logo-box {
+    display: grid;
+    align-content: center;
+    p {
+      height: 40px;
+    }
   }
 
   .terms {
