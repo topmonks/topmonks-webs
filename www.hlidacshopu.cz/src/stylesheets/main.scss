@@ -93,18 +93,23 @@ img, svg {
 }
 
 @media (max-width: 839px) {
+  h1 {
+    text-align: center;
+  }
   h1, h2 {
     font-size: 24px;
     line-height: 29px;
   }
 
   p {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--grey);
+    text-align: left;
   }
   .icon svg {
     height: 100%;
   }
+
 }
 
 .btn {
@@ -228,12 +233,17 @@ header {
       border-radius: 0px 8px 8px 0px;
       border: none;
       float: right;
+      @media (max-width: 839px) {
+        border-radius: 8px;
+      }
     }
+
   }
 
   .logos {
     display: flex;
     margin: 0.5em 0;
+
     a {
       height: 40px;
       margin: 0 0.5em;
@@ -250,17 +260,23 @@ header {
     }
   }
   @media (max-width: 839px) {
+    h2.sub-title {
+      margin-top: 7em;
+    }
+    h2.sub-title:last-of-type {
+      margin-top: 2em;
+    }
     .email-input {
+      font-size: 10px;
       margin: 0 auto;
       width: 100%;
       min-height: 54px;
+
+      input {
+        font-size: 10px;
+      }
     }
-    input {
-      font-size: 12px;
-    }
-    button {
-      border-radius: 8px;
-    }
+
   }
 }
 
@@ -279,6 +295,16 @@ header {
     img {
       max-width: 67px;
       max-height: 67px;
+    }
+
+    @media (max-width: 839px) {
+      .sub-info--grey {
+        text-align: center;
+      }
+      img {
+        max-width: 80px;
+        max-height: 80px;
+      }
     }
   }
 
@@ -345,12 +371,14 @@ p.numbers {
     text-align: left;
     border-bottom: 1px solid #DADADA;
   }
+
   h3 {
     margin: 0 0 10px 0;
     padding: 0;
     font-size: 24px;
     line-height: 29px;
   }
+
   p.media__date {
     font-size: 14px;
     line-height: 17px;
@@ -358,17 +386,21 @@ p.numbers {
     margin: 12px 0;
     padding: 0;
   }
+
   .media__description {
     font-size: 18px;
     line-height: 28px;
     text-align: justify;
     color: #626262;
   }
+
   .media-article-item {
     margin-bottom: 15px;
+
     .media-article-item__image {
       position: relative;
       display: flex;
+
       .media-article-item__image-tag {
         position: absolute;
         bottom: 0;
@@ -379,9 +411,11 @@ p.numbers {
         padding: 3px 7px;
         color: #fff;
       }
+
       .media-tag--press {
         background-color: var(--purple);
       }
+
       .media-tag--about-us {
         color: #727272;
         background-color: #fff;
@@ -391,6 +425,7 @@ p.numbers {
 
   .media-press-grid {
     margin-bottom: 30px;
+
     .media-press__all {
       color: var(--purple);
       font-weight: bold;
