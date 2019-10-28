@@ -28,6 +28,7 @@ body {
   background: url("https://res.cloudinary.com/topmonks/image/upload/v1572182178/www.hlidacshopu.cz/background.jpg") top center no-repeat;
   background-size: 100%;
   margin: 0;
+  padding: 0;
 }
 
 header {
@@ -332,6 +333,73 @@ p.numbers {
 
     a:hover {
       font-weight: lighter;
+    }
+  }
+}
+
+// Media //
+.media {
+  h2.media-heading {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 1px solid #DADADA;
+  }
+  h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  p.media__date {
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--purple);
+    margin: 12px 0;
+    padding: 0;
+  }
+  .media__description {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+    color: #626262;
+  }
+  .media-article-item {
+    margin-bottom: 15px;
+    .media-article-item__image {
+      position: relative;
+      display: flex;
+      .media-article-item__image-tag {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 14px;
+        line-height: 18px;
+        width: 105px;
+        padding: 3px 7px;
+        color: #fff;
+      }
+      .media-tag--press {
+        background-color: var(--purple);
+      }
+      .media-tag--about-us {
+        color: #727272;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .media-press-grid {
+    margin-bottom: 30px;
+    .media-press__all {
+      color: var(--purple);
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      display: block;
+      margin-top: 15px;
     }
   }
 }
