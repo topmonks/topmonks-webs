@@ -12,6 +12,7 @@
   <meta property="og:url" content="https://www.hlidacshopu.cz/">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/stylesheets/media.css">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -21,19 +22,19 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-    w[l] = w[l] || [];
-    w[l].push({
-      "gtm.start":
-        new Date().getTime(), event: "gtm.js"
-    });
-    var f = d.getElementsByTagName(s)[0],
-      j = d.createElement(s), dl = l != "dataLayer" ? "&l=" + l : "";
-    j.async = true;
-    j.src =
-      "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-    f.parentNode.insertBefore(j, f);
-  })(window, document, "script", "dataLayer", "GTM-58WNT3B");</script>
+  <script>(function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start":
+          new Date().getTime(), event: "gtm.js"
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src =
+        "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-58WNT3B");</script>
   <!-- End Google Tag Manager -->
 
 </head>
@@ -137,9 +138,9 @@
         class="app-bar_menu mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-9-desktop">
         <nav id="navigation" class="menu">
           <ul class="menu__list">
-            <li class="list_item">OVĚŘIT VÝVOJ CENY</li>
-            <li class="list_item">PROČ TO DĚLÁME</li>
-            <li class="list_item">MÉDIA</li>
+            <li class="list_item"><a href="">OVĚŘIT VÝVOJ CENY</a></li>
+            <li class="list_item"><a href="/proc-to-delame">PROČ TO DĚLÁME</a></li>
+            <li class="list_item"><a href="/media">MÉDIA</a></li>
           </ul>
         </nav>
       </div>
@@ -153,7 +154,7 @@
     hamburger.addEventListener("click", toggleMenu(hamburger));
 
     function toggleMenu(hamburger) {
-      return function () {
+      return function() {
         hamburger.classList.toggle("hamburger__container--open");
         appBar.classList.toggle("app-bar--open");
       };
@@ -161,10 +162,10 @@
 
     var lastPosition = 0;
     var ticking = false;
-    document.addEventListener("scroll", function () {
+    document.addEventListener("scroll", function() {
       lastPosition = window.scrollY;
       if (!ticking) {
-        window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function() {
           if (lastPosition > 0) {
             appBar.classList.add("app-bar--sticky");
           } else {
@@ -176,9 +177,9 @@
       }
     });
 
-    window.addEventListener("resize", function () {
+    window.addEventListener("resize", function() {
       if (!ticking) {
-        window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function() {
           if (window.matchMedia("(min-width: 841px)").matches) {
             menu.classList.add("menu--horizontal");
           } else {
@@ -203,7 +204,8 @@
       <h2 class="media-heading">Média</h2>
       <section class="media-article-list layout-wrapper">
         <div class="media-article-item mdc-layout-grid__inner">
-          <div class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
+          <div
+            class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
             <div class="media-article-item__image">
               <img src="../../images/black-friday-slevy-e-commerce-1-prev%201.png" alt="clanek"/>
               <span class="media-article-item__image-tag media-tag--press">Tisková zpráva</span>
@@ -222,7 +224,8 @@
           </div>
         </div>
         <div class="media-article-item mdc-layout-grid__inner">
-          <div class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
+          <div
+            class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
             <div class="media-article-item__image">
               <img src="../../images/black-friday-slevy-e-commerce-1-prev%201.png" alt="clanek"/>
               <span class="media-article-item__image-tag media-tag--about-us">Napsali o&nbsp;nás</span>
@@ -241,7 +244,8 @@
           </div>
         </div>
         <div class="media-article-item mdc-layout-grid__inner">
-          <div class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
+          <div
+            class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
             <div class="media-article-item__image">
               <img src="../../images/black-friday-slevy-e-commerce-1-prev%201.png" alt="clanek"/>
               <span class="media-article-item__image-tag media-tag--about-us">Napsali o&nbsp;nás</span>
@@ -260,7 +264,8 @@
           </div>
         </div>
         <div class="media-article-item mdc-layout-grid__inner">
-          <div class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
+          <div
+            class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
             <div class="media-article-item__image">
               <img src="../../images/black-friday-slevy-e-commerce-1-prev%201.png" alt="clanek"/>
             </div>
@@ -281,20 +286,23 @@
       <h2 class="media-heading">Tiskové zprávy</h2>
       <section class="media-press-grid layout-wrapper">
         <div class="mdc-layout-grid__inner">
-          <div class="media-press-grid__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-desktop">
+          <div
+            class="media-press-grid__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-desktop">
             <h3>Black Friday po česku: kouzla se slevami po roce</h3>
             <p class="media__date">10.prosince 2019</p>
             <div class="media__description">Po loňské úspěšné analýze slev v&nbsp;rámci Black Friday jsme se opět&nbsp;…
             </div>
           </div>
-          <div class="media-press-grid__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-desktop">
+          <div
+            class="media-press-grid__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-desktop">
             <h3>Black Friday po česku: kouzla se slevami po roce</h3>
             <p class="media__date">10.prosince 2019</p>
             <div class="media__description">
               Po loňské úspěšné analýze slev v&nbsp;rámci Black Friday jsme se opět&nbsp;…
             </div>
           </div>
-          <div class="media-press-grid__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone  mdc-layout-grid__cell--span-4-desktop">
+          <div
+            class="media-press-grid__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone  mdc-layout-grid__cell--span-4-desktop">
             <h3>Black Friday po česku: kouzla se slevami po roce</h3>
             <p class="media__date">10.prosince 2019</p>
             <div class="media__description">
@@ -310,7 +318,8 @@
       </section>
       <section class="media-article-list layout-wrapper">
         <div class="media-article-item mdc-layout-grid__inner">
-          <div class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
+          <div
+            class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
             <div class="media-article-item__image">
               <img src="../../images/black-friday-slevy-e-commerce-1-prev%201.png" alt="clanek"/>
               <span class="media-article-item__image-tag media-tag--press">
@@ -331,7 +340,8 @@
           </div>
         </div>
         <div class="media-article-item mdc-layout-grid__inner">
-          <div class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
+          <div
+            class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
             <div class="media-article-item__image">
               <img src="../../images/black-friday-slevy-e-commerce-1-prev%201.png" alt="clanek"/>
               <span class="media-article-item__image-tag media-tag--about-us">
@@ -352,7 +362,8 @@
           </div>
         </div>
         <div class="media-article-item mdc-layout-grid__inner">
-          <div class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
+          <div
+            class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
             <div class="media-article-item__image">
               <img src="../../images/black-friday-slevy-e-commerce-1-prev%201.png" alt="clanek"/>
               <span class="media-article-item__image-tag media-tag--about-us">
@@ -373,7 +384,8 @@
           </div>
         </div>
         <div class="media-article-item mdc-layout-grid__inner">
-          <div class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
+          <div
+            class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-3-desktop">
             <div class="media-article-item__image">
               <img src="../../images/black-friday-slevy-e-commerce-1-prev%201.png" alt="clanek"/>
             </div>
@@ -413,9 +425,9 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
         <h3>NAVIGACE</h3>
         <ul>
-          <li><a>OVĚŘIT VÝVOJ CENY</a></li>
-          <li><a>PROČ TO DĚLÁME</a></li>
-          <li><a>MÉDIA</a></li>
+          <li class="list_item"><a href="">OVĚŘIT VÝVOJ CENY</a></li>
+          <li class="list_item"><a href="/proc-to-delame">PROČ TO DĚLÁME</a></li>
+          <li class="list_item"><a href="/media">MÉDIA</a></li>
         </ul>
       </div>
       <div class="logo-box mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
