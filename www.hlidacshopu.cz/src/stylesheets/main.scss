@@ -32,9 +32,21 @@ body {
 }
 
 header {
+
   background-color: white;
   height: 60px;
   padding-top: 24px;
+
+  .hs_logo {
+    display: flex;
+  }
+  li a {
+    color: black;
+
+    &:hover {
+      color: var(--purple);
+    }
+  }
 
   .app-bar {
     position: fixed;
@@ -45,6 +57,12 @@ header {
     -o-transition: all .2s;
     transition: all .2s;
     background-color: var(--tm-white);
+  }
+}
+
+header, footer {
+  a {
+    text-decoration: none;
   }
 }
 
@@ -167,9 +185,6 @@ img, svg {
 // HEADER //
 
 header {
-  .hs_logo {
-    display: flex;
-  }
 
   nav {
     float: right;
@@ -201,6 +216,16 @@ header {
     }
   }
 
+}
+
+.logos {
+  display: flex;
+  margin: 0.5em 0;
+
+  a {
+    height: 40px;
+    margin: 0 0.5em;
+  }
 }
 
 
@@ -240,16 +265,6 @@ header {
 
   }
 
-  .logos {
-    display: flex;
-    margin: 0.5em 0;
-
-    a {
-      height: 40px;
-      margin: 0 0.5em;
-    }
-  }
-
   @media screen and (min-width: 840px) {
     .email-input {
       min-width: 474px;
@@ -257,6 +272,13 @@ header {
     }
     input {
       min-width: 360px;
+    }
+    .main-bgnd {
+      align-self: center;
+
+      img {
+        width: 480px;
+      }
     }
   }
   @media (max-width: 839px) {
@@ -280,6 +302,27 @@ header {
   }
 }
 
+// Section: watcher //
+
+.attendant {
+  .mdc-layout-grid__cell {
+    margin: 0 auto;
+  }
+
+  .sub-title {
+    text-align: center;
+  }
+
+  img {
+    -webkit-filter: saturate(0);
+    filter: saturate(0);
+    max-width: 180px;
+    &:hover {
+      filter: saturate(1.0);
+    }
+  }
+}
+
 // Section: Illustration //
 
 .illustration {
@@ -290,7 +333,15 @@ header {
 
 .guidance {
   .browser-support {
+    vertical-align: top;
+    display: inline-block;
     text-align: center;
+    width: 120px;
+
+    p {
+      display: block;
+
+    }
 
     img {
       max-width: 67px;
@@ -306,6 +357,10 @@ header {
         max-height: 80px;
       }
     }
+  }
+
+  .steps {
+    text-align: center;
   }
 
 
@@ -363,80 +418,9 @@ p.numbers {
   }
 }
 
-// Media //
-.media {
-  h2.media-heading {
-    font-size: 22px;
-    font-weight: bold;
-    text-align: left;
-    border-bottom: 1px solid #DADADA;
-  }
-
-  h3 {
-    margin: 0 0 10px 0;
-    padding: 0;
-    font-size: 24px;
-    line-height: 29px;
-  }
-
-  p.media__date {
-    font-size: 14px;
-    line-height: 17px;
-    color: var(--purple);
-    margin: 12px 0;
-    padding: 0;
-  }
-
-  .media__description {
-    font-size: 18px;
-    line-height: 28px;
-    text-align: justify;
-    color: #626262;
-  }
-
-  .media-article-item {
-    margin-bottom: 15px;
-
-    .media-article-item__image {
-      position: relative;
-      display: flex;
-
-      .media-article-item__image-tag {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        font-size: 14px;
-        line-height: 18px;
-        width: 105px;
-        padding: 3px 7px;
-        color: #fff;
-      }
-
-      .media-tag--press {
-        background-color: var(--purple);
-      }
-
-      .media-tag--about-us {
-        color: #727272;
-        background-color: #fff;
-      }
-    }
-  }
-
-  .media-press-grid {
-    margin-bottom: 30px;
-
-    .media-press__all {
-      color: var(--purple);
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 20px;
-      letter-spacing: 0.01em;
-      text-decoration: none;
-      display: block;
-      margin-top: 15px;
-    }
-  }
+// Section: Sales - News //
+.news {
+  background: rgba(84, 95, 239, 0.07);
 }
 
 // FOOTER //
@@ -464,6 +448,15 @@ footer {
       }
     }
   }
+
+  a {
+    color: var(--purple);
+
+    &:hover {
+      color: black;
+    }
+  }
+
 
   img {
     max-width: 183px;
