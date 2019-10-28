@@ -226,6 +226,13 @@ header {
     height: 40px;
     margin: 0 0.5em;
   }
+  img {
+    -webkit-filter: saturate(0);
+    filter: saturate(0);
+    &:hover {
+      filter: saturate(1.0);
+    }
+  }
 }
 
 
