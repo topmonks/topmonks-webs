@@ -130,7 +130,7 @@ img, svg {
 }
 
 .text--grey {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--grey);
   text-align: center;
   text-transform: uppercase;
@@ -141,6 +141,11 @@ img, svg {
   color: var(--dark-grey);
   line-height: 16px;
   text-transform: uppercase;
+}
+
+.text--light-grey {
+  font-size: 14px;
+  color: var(--light-grey);
 }
 
 .sub-info--grey {
@@ -227,7 +232,11 @@ header {
 
   .logos {
     display: flex;
-    margin: 2em 0;
+    margin: 1em 0;
+    img {
+      height: 50px;
+      margin: 0 0.5em;
+    }
   }
 
   @media screen and (min-width: 840px) {
@@ -281,6 +290,13 @@ header {
     .step_3 {
       margin-top: 132px;
     }
+    .final-step {
+      text-align: center;
+
+      p {
+        margin-bottom: 2em;
+      }
+    }
   }
   @media (max-width: 767px) {
     .step_1, .step_2, .step_3 {
@@ -290,6 +306,11 @@ header {
 }
 
 // Section: Numbers //
+
+p.text--grey {
+  font-size: 13px;
+  line-height: 16px;
+}
 
 p.numbers {
   font-size: 44px;
@@ -371,6 +392,7 @@ footer {
   .logo-box {
     display: grid;
     align-content: center;
+
     p {
       height: 40px;
     }
