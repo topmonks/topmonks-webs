@@ -11,7 +11,8 @@ test-site: &test-site
         at: ~/topmonks-webs
     - restore_cache:
         keys:
-          - v4-dependencies-{{ checksum "yarn.lock" }}
+          - v5-dependencies-{{ checksum "yarn.lock" }}
+    - run: yarn install --link-duplicates --no-progress
     - run:
         name: Install self-signed cert for localhost
         command: |
@@ -73,13 +74,13 @@ jobs:
           command: pulumi login file:///home/circleci/topmonks-webs
       - restore_cache:
           keys:
-            - v4-dependencies-{{ checksum "yarn.lock" }}
+            - v5-dependencies-{{ checksum "yarn.lock" }}
 
       - run: yarn install --link-duplicates --no-progress
       - save_cache:
           paths:
-            - node_modules
-          key: v4-dependencies-{{ checksum "yarn.lock" }}
+            - ~/.cache/yarn
+          key: v5-dependencies-{{ checksum "yarn.lock" }}
       - run: yarn run build
       - run: |
           mkdir results
@@ -126,15 +127,15 @@ jobs:
       - run:
           name: "Log into Pulumi"
           command: pulumi login file:///home/circleci/topmonks-webs
+      - restore_cache:
+          keys:
+            - v5-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install deps
-          command: yarn
+          command: yarn install --production --no-progress --link-duplicates
       - run:
           name: Install Pulumi plugins
           command: pulumi plugin install
-      - run:
-          name: List available pulumi stacks
-          command: pulumi stack ls
       - pulumi/update:
           stack: topmonks-webs
           skip-preview: true
@@ -160,9 +161,12 @@ jobs:
       - run:
           name: "Log into Pulumi"
           command: pulumi login file:///home/circleci/topmonks-webs
+      - restore_cache:
+          keys:
+            - v5-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install deps
-          command: yarn
+          command: yarn install --production --no-progress --link-duplicates
       - run:
           name: Install Pulumi plugins
           command: pulumi plugin install
