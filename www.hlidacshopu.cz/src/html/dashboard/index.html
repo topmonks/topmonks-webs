@@ -1,6 +1,7 @@
 {% extends 'layouts/master.html' %}
+{% from 'macros/helpers.html' import sprite %}
+
 {% block title %}Dashboard Hlídače shopů{% endblock %}
-{% from 'layouts/helpers.html' import sprite %}
 
 {% block main %}
 <section class="dashboard">
@@ -93,7 +94,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('kasa-logo', '[logo] kasa.cz')}}
+          {{sprite('kasa_logo', '[logo] kasa.cz')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>
@@ -161,8 +162,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-<!--          {{sprite('mironet-logo', '[logo] Mironet')}}-->
-          <img src="/images/logos/mironet-logo.svg" alt="[logo] Mironet" />
+          {{sprite('mironet_logo', '[logo] Mironet')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>
@@ -179,7 +179,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('mountfield-logo', '[logo] Mountfield')}}
+          {{sprite('mountfield_logo', '[logo] Mountfield')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>

@@ -2,13 +2,12 @@
 @import "common/colors";
 
 :root {
-  --grey: #2E2828;
-  --dark-grey: #455A64;
-  --light-grey: #4F4F4F;
+  --grey: #2e2828;
+  --dark-grey: #455a64;
+  --light-grey: #4f4f4f;
   --sub-info-grey: #979797;
   --sub-title: #515151;
-  --purple: #545FEF;
-
+  --purple: #545fef;
 
   --mdc-layout-grid-margin-desktop: 24px;
   --mdc-layout-grid-gutter-desktop: 20px;
@@ -24,15 +23,12 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: url("https://res.cloudinary.com/topmonks/image/upload/v1572182178/www.hlidacshopu.cz/background.jpg") top center no-repeat;
-  background-size: 100%;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
 }
 
 header {
-
   background-color: white;
   height: 60px;
   padding-top: 24px;
@@ -53,14 +49,15 @@ header {
     width: 100vw;
     z-index: 1000;
     top: 0;
-    -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
     background-color: var(--tm-white);
   }
 }
 
-header, footer {
+header,
+footer {
   a {
     text-decoration: none;
   }
@@ -87,6 +84,7 @@ h2.sub-title {
   line-height: 16px;
   text-align: left;
   margin-top: 2em;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -102,11 +100,12 @@ p {
 }
 
 hr {
-  background-color: #EBEEF2;
-  border: 1px solid #EBEEF2;
+  background-color: #ebeef2;
+  border: 1px solid #ebeef2;
 }
 
-img, svg {
+img,
+svg {
   width: 100%;
 }
 
@@ -114,7 +113,8 @@ img, svg {
   h1 {
     text-align: center;
   }
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 24px;
     line-height: 29px;
   }
@@ -127,7 +127,6 @@ img, svg {
   .icon svg {
     height: 100%;
   }
-
 }
 
 .btn {
@@ -135,14 +134,14 @@ img, svg {
 
   a {
     font-size: 15px;
-    color: #FFFFFF;
+    color: #ffffff;
     background-color: var(--purple);
     padding: 14px 48px;
     text-transform: uppercase;
     border-radius: 8px;
 
     &:hover {
-      background-color: #3A42A0;
+      background-color: #3a42a0;
     }
 
     @media (max-width: 739px) {
@@ -185,7 +184,6 @@ img, svg {
 // HEADER //
 
 header {
-
   nav {
     float: right;
   }
@@ -215,7 +213,6 @@ header {
       color: var(--purple);
     }
   }
-
 }
 
 .logos {
@@ -248,46 +245,65 @@ header {
     filter: saturate(0);
     transition: 0.3s filter ease-in;
     &:hover {
-      filter: saturate(1.0);
+      filter: saturate(1);
     }
   }
 }
 
-
 // Section: MAIN //
 .main {
+  .url-input {
+    display: flex;
 
-  .email-input {
-    background: #FFFFFF;
-    box-shadow: 0px 20px 20px rgba(92, 98, 205, 0.1);
-    border-radius: 8px 0px 0px 8px;
-    border: none;
+    @media (max-width: 839px) {
+      flex-flow: column;
+      align-items: center;
+    }
+    @media (min-width: 840px) {
+      background: #fff;
+      box-shadow: 0 20px 20px rgba(92, 98, 205, 0.1);
+      border-radius: 8px;
+      justify-content: space-between;
+    }
 
     input {
       font-size: 14px;
+      line-height: 54px;
       color: #676767;
       font-family: inherit;
-      border: none;
-      padding: 18px 0 18px 60px;
+      padding: 0 1em;
+      -webkit-appearance: none;
+
+      @media (max-width: 839px) {
+        background: #fff;
+        box-shadow: 0 20px 20px rgba(92, 98, 205, 0.1);
+        border: none;
+        border-radius: 8px;
+        width: calc(100% - 4em);
+        max-width: 640px;
+        margin: 1em 2em;
+      }
+      @media (min-width: 840px) {
+        border: none;
+        background: none;
+        flex-grow: 2;
+      }
     }
 
     button {
       font-family: inherit;
       font-size: 15px;
       line-height: 18px;
-      color: #FFFFFF;
+      color: #ffffff;
       background: var(--purple);
       width: 200px;
       height: 54px;
-      box-shadow: 0px 20px 20px rgba(92, 98, 205, 0.1);
-      border-radius: 0px 8px 8px 0px;
+      border-radius: 0 8px 8px 0;
       border: none;
-      float: right;
       @media (max-width: 839px) {
         border-radius: 8px;
       }
     }
-
   }
 
   @media screen and (min-width: 840px) {
@@ -323,7 +339,6 @@ header {
         font-size: 10px;
       }
     }
-
   }
 }
 
@@ -343,7 +358,7 @@ header {
     filter: saturate(0);
     max-width: 180px;
     &:hover {
-      filter: saturate(1.0);
+      filter: saturate(1);
     }
   }
 }
@@ -365,7 +380,6 @@ header {
 
     p {
       display: block;
-
     }
 
     img {
@@ -388,7 +402,6 @@ header {
     text-align: center;
   }
 
-
   @media screen and (min-width: 768px) {
     .step_2 {
       margin-top: 66px;
@@ -406,7 +419,9 @@ header {
     }
   }
   @media (max-width: 767px) {
-    .step_1, .step_2, .step_3 {
+    .step_1,
+    .step_2,
+    .step_3 {
       margin-top: 34px;
     }
   }
@@ -451,7 +466,7 @@ p.numbers {
 // DASHBOARD //
 .dashboard {
   .dashboard-header {
-    border-bottom: 1px solid #DADADA;
+    border-bottom: 1px solid #dadada;
     padding-bottom: 7px;
     margin-bottom: 26px;
     h2 {
@@ -469,7 +484,7 @@ p.numbers {
   .dashboard-row {
     background-color: #fff;
     margin-bottom: 13px;
-    border: 1px solid #EBEEF2;
+    border: 1px solid #ebeef2;
     box-sizing: border-box;
     border-radius: 6px;
     span {
@@ -533,7 +548,6 @@ footer {
     }
   }
 
-
   img {
     max-width: 183px;
     height: 40px;
@@ -551,12 +565,14 @@ footer {
     }
   }
 
-  .company, .terms {
+  .company,
+  .terms {
     font-size: 13px;
     line-height: 26px;
 
-    a, span {
-      color: #8896A7;
+    a,
+    span {
+      color: #8896a7;
       text-decoration: none;
     }
   }
@@ -576,6 +592,43 @@ footer {
 
 // HAMBURGER //
 
+.app-bar {
+  &.app-bar--sticky {
+    position: fixed;
+    width: 100vw;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  @media screen and (max-width: 839px) {
+    padding-top: 8px;
+    height: 48px;
+
+    .app-bar_menu {
+      display: none;
+    }
+    &.app-bar--open .app-bar_menu {
+      display: block;
+      .menu {
+        background: var(--purple);
+        z-index: 1000;
+        margin-top: 56px;
+      }
+    }
+    .hs_logo {
+      order: 1;
+      display: flex;
+      align-items: baseline;
+      padding-top: 4px;
+      padding-left: 16px;
+    }
+    .hamburger {
+      order: 2;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 16px;
+    }
+  }
+}
 
 .app-bar_menu {
   align-self: center;
@@ -677,7 +730,7 @@ footer {
       border-top: 1px solid rgba(255, 255, 255, 0.25);
     }
     .menu__list a {
-      color: #FFFFFF;
+      color: #ffffff;
       display: block;
       padding: 12px;
       margin: 4px;

@@ -1,89 +1,42 @@
 {% extends 'layouts/master.html' %}
+{% from 'macros/helpers.html' import sprite %}
+
 {% block title %}Hlídač shopů{% endblock %}
-{% from 'layouts/helpers.html' import sprite %}
 
 {% block main %}
 <section class="main">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner layout-wrapper">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
         <h1>Ujistěte se, že nakupujete opravdu se slevou</h1>
-        <form id="contact-form">
+        <form id="compare-form">
           <p>Není sleva jako sleva. Někdy obchody těsně před vlnou slev uměle
             navyšují původní ceny, aby konečná sleva působila výhodně. Hlídač
             Shopů vám zobrazí původní cenu produktu a její vývoj v&nbsp;čase, takže
             díky němu snadno poznáte, jestli nakupujete se slevou nebo&nbsp;ne.</p>
-          <div class="email-input">
-            <label>
-              <input type="url" name="url" placeholder="Zde si můžete ověřit odkaz vašeho produktu&hellip;">
-              <button>OVĚŘIT VÝVOJ CENY</button>
-            </label>
-          </div>
-          <!--
-          <div class="alert alert--error alert--hidden">
-            <span class="closebtn" onclick="this.parentElement.style.display=quot;none&quot;">×</span>
-            A&nbsp;sakra! Něco je fakt špatně.
-          </div>
-          <div class="alert alert--success alert--hidden">
-            <span class="closebtn" onclick="this.parentElement.style.display=quot;none&quot;">×</span>
-            Váš e-mail sme si odložili. Ozveme sa.
-          </div>-->
 
-          <h2 class="sub-title">AKTUÁLNĚ MONITORUJEME TYTO ESHOPY</h2>
-          <div class="logos mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-            <a href="https://www.alza.cz/">
-              {{sprite('alza_logo', '[logo] Alza')}}
-<!--              <img alt="Barevné Logo Alza.cz" src="/images/logos/alza_logo.svg" height="24">-->
-            </a>
-            <a href="https://www.czc.cz/">
-              {{sprite('czc.cz_logo', '[logo] CZC')}}
-<!--              <img alt="Barevné Logo CZC.cz" src="/images/logos/czc.cz_logo.svg">-->
-            </a>
-            <a href="https://www.datart.cz/">
-              {{sprite('datart_logo', '[logo] Datart')}}
-<!--              <img alt="Barevné Logo Datart" src="/images/logos/datart_logo.svg">-->
-            </a>
-            <a href="https://www.itesco.cz/">
-              {{sprite('tesco_logo', '[logo] Tesco')}}
-<!--              <img alt="Barevné Logo Tesco" src="/images/logos/tesco_logo.svg">-->
-            </a>
-            <a href="https://www.kasa.cz/">
-              {{sprite('kasa-logo', '[logo] kasa.cz')}}
-<!--              <img alt="Barevné Logo Kasa.cz" src="/images/logos/kasa_logo.svg">-->
-            </a>
-            <a href="https://www.kosik.cz/">
-              {{sprite('kosik_logo', '[logo] kosik.cz')}}
-<!--              <img alt="Barevné Logo Košík.cz" src="/images/logos/kosik_logo.svg">-->
-            </a>
-            <a href="https://www.lekarna.cz/">
-              {{sprite('lekarna_logo', '[logo] lekarna.cz')}}
-<!--              <img alt="Barevné Logo Lékárna.cz" src="/images/logos/lekarna_logo.svg">-->
-            </a>
-            <a href="https://www.mountfield.cz/">
-              {{sprite('mountfield-logo', '[logo] Mountfield')}}
-<!--              <img alt="Barevné Logo Mountfield" src="/images/logos/mountfield_logo.svg">-->
-            </a>
-            <a href="https://www.notino.cz/">
-              {{sprite('notino_logo', '[logo] Notino')}}
-<!--              <img alt="Barevné Logo Notino" src="/images/logos/notino_logo.svg">-->
-            </a>
-            <a href="https://www.rohlik.cz/">
-              {{sprite('rohlik_logo', '[logo] rohlik.cz')}}
-<!--              <img alt="Barevné Logo Rohlik.cz" src="/images/logos/rohlik_logo.svg">-->
-            </a>
-            <a href="https://www.tsbohemia.cz/">
-              {{sprite('tsbohemia_logo', '[logo] TSBohemia')}}
-<!--              <img alt="Barevné Logo TSBohemia"  src="/images/logos/tsbohemia_logo.svg">-->
-            </a>
-            <a href="https://www.mironet.cz/">
-              <img class="shops" alt="Barevné Logo Mironet" src="/images/logos/mironet-logo.svg">
-            </a>
-            <a href="https://www.mall.cz/">
-              {{sprite('mall_logo', '[logo] mall.cz')}}
-<!--              <img alt="Barevné Logo Mall.cz" src="/images/logos/mall_logo.svg">-->
-            </a>
-          </div>
+          <label class="url-input">
+            <input type="url" name="url" placeholder="Zde si můžete ověřit odkaz vašeho produktu&hellip;">
+            <button>OVĚŘIT VÝVOJ CENY</button>
+          </label>
         </form>
+
+        <h2 class="sub-title">AKTUÁLNĚ MONITORUJEME TYTO ESHOPY</h2>
+        <div class="logos mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <a href="https://www.alza.cz/">{{sprite('alza_logo', '[logo] Alza')}}</a>
+          <a href="https://www.czc.cz/">{{sprite('czc.cz_logo', '[logo] CZC')}}</a>
+          <a href="https://www.datart.cz/">{{sprite('datart_logo', '[logo] Datart')}}</a>
+          <a href="https://www.itesco.cz/">{{sprite('tesco_logo', '[logo] Tesco')}}</a>
+          <a href="https://www.kasa.cz/">{{sprite('kasa_logo', '[logo] kasa.cz')}}</a>
+          <a href="https://www.kosik.cz/">{{sprite('kosik_logo', '[logo] kosik.cz')}}</a>
+          <a href="https://www.lekarna.cz/">{{sprite('lekarna_logo', '[logo] lekarna.cz')}}</a>
+          <a href="https://www.mountfield.cz/">{{sprite('mountfield_logo', '[logo] Mountfield')}}</a>
+          <a href="https://www.notino.cz/">{{sprite('notino_logo', '[logo] Notino')}}</a>
+          <a href="https://www.rohlik.cz/">{{sprite('rohlik_logo', '[logo] rohlik.cz')}}</a>
+          <a href="https://www.tsbohemia.cz/">{{sprite('tsbohemia_logo', '[logo] TSBohemia')}}</a>
+          <a href="https://www.mironet.cz/">{{sprite('mironet_logo', '[logo] Mironet')}}</a>
+          <a href="https://www.mall.cz/">{{sprite('mall_logo', '[logo] mall.cz')}}</a>
+        </div>
       </div>
       <div
         class="main-bgnd mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet">
@@ -93,19 +46,6 @@
       </div>
     </div>
   </div>
-  <script type="module">
-    const form = document.querySelector("#contact-form");
-    form.addEventListener("submit", async function(e) {
-      e.preventDefault();
-      const email = e.target["EMAIL"].value;
-      const response = await fetch("", { method: "POST", mode: "no-cors", body: JSON.stringify({ email }) });
-      if (response.statusCode == 200) {
-        form.querySelector(".alert--error").classList.remove("alert--hidden");
-      } else {
-        form.querySelector(".alert--success").classList.remove("alert--hidden");
-      }
-    });
-  </script>
 </section>
 <section class="attendant">
   <div class="mdc-layout-grid">
@@ -113,9 +53,9 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12">
         <h2 class="sub-title">HLÍDAČ SHOPŮ VÁM PŘINÁŠÍ</h2>
         <div class="logos">
-          <img src="/images/logos/topmonks_logo.svg" alt="TopMonks Logo" width="180">
-          <img src="/images/logos/apify_logo.svg" alt="Apify Logo" width="180">
-          <img src="/images/logos/keboola_logo.svg" alt="Keboola Logo" width="180">
+          <a href="https://www.topmonks.cz/"><img src="/images/logos/topmonks_logo.svg" alt="TopMonks Logo" width="180"></a>
+          <a href="https://apify.com/"><img src="/images/logos/apify_logo.svg" alt="Apify Logo" width="180"></a>
+          <a href="https://www.keboola.com/"><img src="/images/logos/keboola_logo.svg" alt="Keboola Logo" width="180"></a>
         </div>
       </div>
     </div>
