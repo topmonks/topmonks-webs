@@ -456,12 +456,18 @@ p.numbers {
     border-radius: 6px;
     img {
       margin-left: 23px;
+      @media (max-width: 479px) {
+        padding-top: 5px;
+      }
     }
     span {
       font-size: 18px;
       line-height: 22px;
       display: block;
       padding: 19px 0 13px 0;
+      @media (max-width: 479px) {
+        font-size: 16px;
+      }
     }
   }
 }
