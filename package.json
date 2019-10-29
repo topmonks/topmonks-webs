@@ -91,6 +91,6 @@
     "test:broken-links:monkslab.cz": "blcl ./public/monkslab.cz -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com",
     "start:www.hlidacshopu.cz": "BLENDID_CONFIG_PATH=./www.hlidacshopu.cz/config/ blendid",
     "build:www.hlidacshopu.cz": "BLENDID_CONFIG_PATH=./www.hlidacshopu.cz/config/ blendid -- build",
-    "test:broken-links:www.hlidacshopu.cz": "blcl ./public/www.hlidacshopu.cz -ro --exclude www.alza.cz"
+    "test:broken-links:www.hlidacshopu.cz": "blcl ./public/www.hlidacshopu.cz -ro --exclude www.alza.cz --exclude alza.cz"
   }
 }
