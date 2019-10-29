@@ -1,14 +1,9 @@
 {% extends 'layouts/master.html' %}
 {% block title %}Dashboard Hlídače shopů{% endblock %}
+{% from 'layouts/helpers.html' import sprite %}
 
 {% block main %}
 <section class="dashboard">
-  {% macro sprite(id, altText, viewBox, classes) %}
-  {% set viewBox = viewBox or "0 0 1 1"%}
-  <span class='sprite -{{id}} {{classes}}'>
-      <svg viewBox="{{viewBox}}" alt="{{altText}}"><use xlink:href='/assets/img/icons.svg#{{id}}'></use></svg>
-    </span>
-  {% endmacro %}
   <div class="mdc-layout-grid">
     <div class="layout-wrapper">
       <div class="dashboard-header mdc-layout-grid__inner">

@@ -229,7 +229,19 @@ header {
     line-height: 40px;
     margin: 0 0.5em;
   }
+  span {
+    svg {
+      width: 59px;
+      vertical-align: middle;
+      filter: saturate(0);
+      transition: 0.3s filter ease-in;
+      &:hover {
+        filter: saturate(1.0);
+      }
+    }
+  }
   img {
+    margin-top: 13px;
     vertical-align: middle;
     filter: saturate(0);
     transition: 0.3s filter ease-in;
