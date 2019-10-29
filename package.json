@@ -23,7 +23,7 @@
     "bluebird": "^3.7.1",
     "broken-link-checker-local": "^0.2.1",
     "chalk": "^2.4.2",
-    "commander": "^2.20.0",
+    "commander": "^3.0.2",
     "dotenv-cli": "^3.0.0",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
