@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Hlídač Shopů - Média</title>
+  <title>Hlídač Shopů - Dashboard</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -198,7 +198,12 @@
 
 <body>
 <section class="dashboard">
-
+  {% macro sprite(id, altText, viewBox, classes) %}
+  {% set viewBox = viewBox or "0 0 1 1"%}
+  <span class='sprite -{{id}} {{classes}}'>
+      <svg viewBox="{{viewBox}}" alt="{{altText}}"><use xlink:href='/assets/img/icons.svg#{{id}}'></use></svg>
+    </span>
+  {% endmacro %}
   <div class="mdc-layout-grid">
     <div class="layout-wrapper">
       <div class="dashboard-header mdc-layout-grid__inner">
@@ -220,7 +225,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          <img src="../../images/logos/alza_logo.svg" alt="[logo] Alza">
+          {{sprite('alza_logo', '[logo] Alza')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">100 000</span>
@@ -237,7 +242,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          <img src="../../images/logos/czc.cz_logo.svg" alt="[logo] CZC">
+          {{sprite('czc.cz_logo', '[logo] CZC')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>
@@ -254,7 +259,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          <img src="../../images/logos/datart_logo.svg" alt="[logo] Datart">
+          {{sprite('datart_logo', '[logo] Datart')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>
@@ -271,7 +276,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          <img src="../../images/logos/tesco_logo.svg" alt="[logo] Tesco">
+          {{sprite('tesco_logo', '[logo] Tesco')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>
@@ -288,7 +293,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          <img src="../../images/logos/kasa_logo.svg" alt="[logo] kasa.cz">
+          {{sprite('kasa-logo', '[logo] kasa.cz')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>
@@ -305,7 +310,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          <img src="../../images/logos/kosik_logo.svg" alt="[logo] kosik.cz">
+          {{sprite('kosik_logo', '[logo] kosik.cz')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>
@@ -322,7 +327,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          <img src="../../images/logos/lekarna_logo.svg" alt="[logo] lekarna.cz">
+          {{sprite('lekarna_logo', '[logo] lekarna.cz')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>
@@ -339,7 +344,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          <img src="../../images/logos/mall_logo.svg" alt="[logo] mall.cz">
+          {{sprite('mall_logo', '[logo] mall.cz')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>
@@ -356,7 +361,8 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          <img src="../../images/logos/mironet_logo.svg" alt="[logo] Mironet">
+<!--          {{sprite('mironet-logo', '[logo] Mironet')}}-->
+          <img src="../../images/logos/mironet-logo.svg" alt="[logo] Mironet" />
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>
@@ -373,7 +379,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          <img src="../../images/logos/mountfield_logo.svg" alt="[logo] Mountfield">
+          {{sprite('mountfield-logo', '[logo] Mountfield')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>
@@ -390,7 +396,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          <img src="../../images/logos/notino_logo.svg" alt="[logo] Notino">
+          {{sprite('notino_logo', '[logo] Notino')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>
@@ -407,7 +413,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          <img src="../../images/logos/rohlik_logo.svg" alt="[logo] rohlik.cz">
+          {{sprite('rohlik_logo', '[logo] rohlik.cz')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>
@@ -424,7 +430,7 @@
       </div>
       <div class="dashboard-row mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          <img src="../../images/logos/tsbohemia_logo.svg" alt="[logo] TSBohemia">
+          {{sprite('tsbohemia_logo', '[logo] TSBohemia')}}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
           <span class="media-heading">40 000</span>

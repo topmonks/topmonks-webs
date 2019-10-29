@@ -34,6 +34,6 @@
 
   "icons": {
     "src": "icons",
-    "dest": "images"
+    "dest": "assets/img"
   }
 }
