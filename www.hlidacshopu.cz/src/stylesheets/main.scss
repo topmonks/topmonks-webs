@@ -241,7 +241,9 @@ header {
     }
   }
   img {
-    margin-top: 13px;
+    &.shops{
+      margin-top: 13px;
+    }
     vertical-align: middle;
     filter: saturate(0);
     transition: 0.3s filter ease-in;
