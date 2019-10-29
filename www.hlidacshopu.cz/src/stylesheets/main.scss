@@ -220,15 +220,19 @@ header {
 
 .logos {
   display: flex;
+  flex-flow: wrap;
+  align-items: center;
   margin: 0.5em 0;
 
   a {
     height: 40px;
+    line-height: 40px;
     margin: 0 0.5em;
   }
   img {
-    -webkit-filter: saturate(0);
+    vertical-align: middle;
     filter: saturate(0);
+    transition: 0.3s filter ease-in;
     &:hover {
       filter: saturate(1.0);
     }
@@ -535,10 +539,7 @@ footer {
   }
 
   .logo-box {
-    display: grid;
-    align-content: center;
-
-    p {
+    .sub-info--grey {
       height: 40px;
     }
   }
