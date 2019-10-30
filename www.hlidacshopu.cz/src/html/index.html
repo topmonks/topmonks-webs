@@ -3,21 +3,35 @@
 
 {% block title %}Hlídač shopů{% endblock %}
 
+{% block preload %}
+<!-- <link rel="modulepreload" href="https://unpkg.com/lit-html@1.1.2/lit-html.js?module"> -->
+{% endblock %}
+
 {% block main %}
 <section class="main">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner layout-wrapper">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
         <h1>Ujistěte se, že nakupujete opravdu se slevou</h1>
-        <form id="compare-form">
+        <form id="compare-form" action="/">
           <p>Není sleva jako sleva. Někdy obchody těsně před vlnou slev uměle
             navyšují původní ceny, aby konečná sleva působila výhodně. Hlídač
             Shopů vám zobrazí původní cenu produktu a její vývoj v&nbsp;čase, takže
             díky němu snadno poznáte, jestli nakupujete se slevou nebo&nbsp;ne.</p>
 
           <label class="url-input">
-            <input type="url" name="url" placeholder="Zde si můžete ověřit odkaz vašeho produktu&hellip;">
-            <button>OVĚŘIT VÝVOJ CENY</button>
+            <div class="url-input__icon">
+              <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <title>[icon] Search - Grey Color</title>
+                <path
+                  d="M24.7144 22.1558L20.6248 18.067C20.4403 17.8824 20.1901 17.7799 19.9275 17.7799H19.2589C20.391 16.3322 21.0637 14.5113 21.0637 12.5304C21.0637 7.81818 17.2449 4 12.5319 4C7.81883 4 4 7.81818 4 12.5304C4 17.2427 7.81883 21.0608 12.5319 21.0608C14.5131 21.0608 16.3343 20.3882 17.7823 19.2563V19.9248C17.7823 20.1873 17.8848 20.4375 18.0694 20.622L22.1589 24.7109C22.5445 25.0964 23.168 25.0964 23.5495 24.7109L24.7103 23.5502C25.0959 23.1647 25.0959 22.5414 24.7144 22.1558ZM12.5319 17.7799C9.63186 17.7799 7.28149 15.434 7.28149 12.5304C7.28149 9.6309 9.62776 7.28093 12.5319 7.28093C15.4319 7.28093 17.7823 9.62679 17.7823 12.5304C17.7823 15.4299 15.436 17.7799 12.5319 17.7799Z"
+                  fill="#CFD4DE"/>
+              </svg>
+            </div>
+            <input required type="url" name="url"
+                   placeholder="Zde si můžete ověřit odkaz vašeho produktu&hellip;"
+                   title="Zadejte adresu stránky s detailem produktu.">
+            <button type="submit">OVĚŘIT VÝVOJ CENY</button>
           </label>
         </form>
 
@@ -30,19 +44,19 @@
           <a href="https://www.kasa.cz/">{{sprite('kasa_logo', '[logo] kasa.cz')}}</a>
           <a href="https://www.kosik.cz/">{{sprite('kosik_logo', '[logo] kosik.cz')}}</a>
           <a href="https://www.lekarna.cz/">{{sprite('lekarna_logo', '[logo] lekarna.cz')}}</a>
+          <a href="https://www.mall.cz/">{{sprite('mall_logo', '[logo] mall.cz')}}</a>
+          <a href="https://www.mironet.cz/">{{sprite('mironet_logo', '[logo] Mironet')}}</a>
           <a href="https://www.mountfield.cz/">{{sprite('mountfield_logo', '[logo] Mountfield')}}</a>
           <a href="https://www.notino.cz/">{{sprite('notino_logo', '[logo] Notino')}}</a>
           <a href="https://www.rohlik.cz/">{{sprite('rohlik_logo', '[logo] rohlik.cz')}}</a>
           <a href="https://www.tsbohemia.cz/">{{sprite('tsbohemia_logo', '[logo] TSBohemia')}}</a>
-          <a href="https://www.mironet.cz/">{{sprite('mironet_logo', '[logo] Mironet')}}</a>
-          <a href="https://www.mall.cz/">{{sprite('mall_logo', '[logo] mall.cz')}}</a>
         </div>
       </div>
       <div
-        class="main-bgnd mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet">
+        class="mdc-layout-grid__cell">
         <img alt="Hlídač Shopů - Ukázka"
-             src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto/v1572271246/www.hlidacshopu.cz/porovnani-cen.svg"
-             width="480px">
+             src="/images/porovnani-cen.png"
+             width="100%">
       </div>
     </div>
   </div>
@@ -68,7 +82,7 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Jak Hlídač Shopů vypadá a jak číst graf?</h2>
         <img alt="Jak Hlídač Shopů vypadá a jak číst graf?"
-             src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto/v1572120642/www.hlidacshopu.cz/second-bgnd.jpg"
+             src="/images/jak-cist-graf.png"
              width="784">
         <p>Hlídač Shopů si můžete <b>nainstalovat přímo do svého prohlížeče</b> a
           hlídat tak největší e-shopy a jejich někdy prapodivné taktiky při
@@ -115,7 +129,7 @@
           src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto/v1572121993/www.hlidacshopu.cz/search.jpg"
           alt="Najít Rozšíření - Obrázkový Průvodce" style="max-width: 342px">
         <h3>Najděte rozšíření v&nbsp;obchodě</h3>
-        <p class="grey-text">Přejděte do <b class="text--purple">obchodu Chrome</b> na stránku Hlídače Shopů.</p>
+        <p class="grey-text">Přejděte do <a href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk" class="text--purple">obchodu Chrome</a> na stránku Hlídače Shopů.</p>
       </div>
       <div class="step_2 mdc-layout-grid__cell">
         <img
@@ -136,7 +150,7 @@
           Teď už jen stačí přejít do vašeho oblíbeného e-shopu a vesele kontrolovat jeho cenotvorbu.
         </p>
         <div class="btn">
-          <a class="button" type="button">Nainstalovat do prohlížeče</a>
+          <a class="button" role="button" href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk">Nainstalovat do prohlížeče</a>
         </div>
       </div>
     </div>
@@ -179,9 +193,9 @@
             <span class="text--light-grey">10. 12. 2018</span>
           </div>
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-            <p>Skvělý doplněka a výborný nápad něco takového vytvořit. Clovek si
+            <p>Skvělý doplněk a výborný nápad něco takového vytvořit. Človek si
               tak udelá představu o&nbsp;tom jak funguji slevy a z&nbsp;jake ceny se
-              slevuje&nbsp;…</p>
+              slevuje…</p>
           </div>
         </div>
       </div>
@@ -207,13 +221,13 @@
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
           </div>
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-            <span class="text--grey">Marek Sukup</span><br>
-            <span class="text--light-grey">10. 12. 2018</span>
+            <span class="text--grey">Jan Verner</span><br>
+            <span class="text--light-grey">14. 12. 2018</span>
           </div>
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-            <p>Skvělý doplněka a výborný nápad něco takového vytvořit. Clovek si
-              tak udelá představu o&nbsp;tom jak funguji slevy a z&nbsp;jake ceny se
-              slevuje&nbsp;…</p>
+            <p>Poprvé, kdy píšu recenzi na nějaký plugin chromu. A to proto, jak je úžasný.
+              Miluje ho každý, komu ho v okolí ukazuji. Super práce, samozřejmě by bylo super,
+              kdyby to hlídalo více e-shopů, klidně napsat API tak, aby mohli lidé pomáhat.</p>
           </div>
         </div>
       </div>
@@ -233,4 +247,248 @@
     </div>
   </div>
 </section>
+
+<div id="hlidac-shopu-modal" class="modal modal--hidden">
+  <div class="modal__inner mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2><a href="#" id="product-name">Název Produktu</a></h2>
+        <div>
+          <a href="/">close</a>
+        </div>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box--purple">
+        <time id="latest-date" datetime="2019-10-30">30. října 2019</time>
+        <div>Uváděná původní cena <del id="original-price">2 600,-</del></div>
+        <div>Prodejní cena <span id="current-price">2 799,-</span></div>
+        <div>Reálná sleva <span id="real-discount">-7.5 %</span></div>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <canvas id="hlidac-shopu-chart" width="100%"></canvas>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <div style="display:flex;justify-content: flex-end">
+          <div style="width:12px;height:12px;background-color:#5C62CD;border-radius:2px;margin-right:5px;margin-top:2px;"></div>
+          <span>Uváděná původní cena</span>
+          <div style="width:12px;height:12px;background-color:#FF8787;border-radius:2px;margin: 2px 5px 0 8px;"></div>
+          <span>Prodejní cena</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js" integrity="sha256-8xsohuS5beL9mPWPwuzrAHckEZZnVE6/hNYhj6FLCzU=" crossorigin="anonymous"></script>
+<script>
+  const clearTime = d => new Date(d.getFullYear(), d.getMonth(), d.getDay());
+
+  function* daysBetween(start, end) {
+    const startDay = clearTime(start);
+    const endDay = clearTime(end);
+    for (const d = startDay; d <= endDay; d.setDate(d.getDate() + 1)) {
+      yield new Date(d.getTime());
+    }
+  }
+
+  function stretchData(data) {
+    const dataMap = new Map(data.map(i => [clearTime(i.date).getTime(), i]));
+    const final = [];
+    let lastDay = data[0];
+    for (const day of daysBetween(data[0].date, data[data.length - 1].date)) {
+      let item = dataMap.get(day.getTime());
+      if (!item) {
+        item = lastDay;
+      } else {
+        lastDay = item;
+      }
+      const { originalPrice, currentPrice } = item;
+      final.push({
+        date: day,
+        originalPrice,
+        currentPrice,
+      });
+    }
+    return final;
+  }
+
+  Chart.plugins.register({
+    afterDraw: function({chart, data}) {
+      if (data.datasets.every(({data}) => data.length == 0)) {
+        // No data is present
+        var ctx = chart.ctx;
+        var width = chart.width;
+        var height = chart.height;
+
+        ctx.save();
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.font = "16px normal 'Helvetica Nueue'";
+        ctx.fillText("Chybí data", width / 2, height / 2);
+        ctx.restore();
+      }
+    }
+  });
+
+  function plot(canvas, prices) {
+    const min = Math.min(...prices.currentPrice.filter(p => p.y !== null).map(p => p.y));
+    const max = Math.max(...prices.currentPrice.filter(p => p.y !== null).map(p => p.y));
+    const ctx = canvas.getContext("2d");
+    const blueGradient  = ctx.createLinearGradient(canvas.width / 2, 0, canvas.width / 2, canvas.height);
+    blueGradient.addColorStop(0, "rgba(92, 98, 205, 0.15)");
+    blueGradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+
+    const redGradient  = ctx.createLinearGradient(canvas.width / 2, 0, canvas.width / 2, canvas.height);
+    redGradient.addColorStop(0, "rgba(235, 111, 85, 0.2)");
+    redGradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+
+    return new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: prices.currentPrice.map(p => p.x),
+        datasets: [
+          {
+            label: "Uváděná původní cena",
+            steppedLine: "after",
+            borderColor: "#5C62CD",
+            borderWidth: 3,
+            borderJoinStyle: "round",
+            borderCapStyle: "round",
+            fill: "origin",
+            backgroundColor: blueGradient,
+            pointRadius: 0,
+            spanGaps: false,
+            data: prices.originalPrice,
+          },
+          {
+            label: "Prodejní cena",
+            steppedLine: "after",
+            borderColor: "#EB6F55",
+            borderWidth: 3,
+            borderJoinStyle: "round",
+            borderCapStyle: "round",
+            fill: "origin",
+            backgroundColor: redGradient,
+            pointRadius: 0,
+            spanGaps: false,
+            data: prices.currentPrice,
+          }
+        ]
+      },
+      options: {
+        legend: {
+          display: false,
+        },
+        tooltips: {
+          mode: "index",
+          intersect: false,
+          callbacks: {
+            title(item, data) {
+              const date = data.labels[item[0].index];
+              return date.toLocaleDateString(undefined, { day: "numeric", month: "numeric", year: "numeric" });
+            },
+            label(item, _data) {
+              if (item.datasetIndex === 0) {
+                return `Původní: ${item.yLabel.toLocaleString()}`;
+              }
+              return `Prodejní: ${item.yLabel.toLocaleString()}`;
+            },
+            labelColor(item, _chart) {
+              const blue = "#FF8787";
+              const red = "#5C62CD";
+              const color = item.datasetIndex === 1 ? blue : red;
+
+              return {
+                borderColor: color,
+                backgroundColor: color,
+              };
+            },
+          }
+        },
+        scales: {
+          xAxes: [{
+            type: "time",
+            time: {
+              unit: "day",
+              stepSize: "15",
+              displayFormats: {
+                day: "D. M. YYYY"
+              }
+            },
+          }],
+          yAxes: [{
+            ticks: {
+              suggestedMax: max,
+              suggestedMin: min,
+            }
+          }]
+        }
+      },
+    });
+  }
+</script>
+
+<script type="module">
+  //import "https://unpkg.com/dile-modal@1.5.2/dile-modal.js";
+  //import {html, svg, render} from "https://unpkg.com/lit-html@1.1.2/lit-html.js?module";
+  const form = document.getElementById("compare-form");
+  const chart = document.getElementById("hlidac-shopu-chart");
+  const modal = document.getElementById("hlidac-shopu-modal");
+  const currentPrice = document.getElementById("current-price");
+  const originalPrice = document.getElementById("original-price");
+  const productName = document.getElementById("product-name");
+  const latestDate = document.getElementById("latest-date");
+  const realDiscount = document.getElementById("real-discount");
+  const apiUrl = detailUri => `https://api.hlidacshopu.cz/shop?url=${encodeURIComponent(detailUri)}`;
+  const originalPriceIPlot = ({date, originalPrice}) => ({ x: date, y: originalPrice });
+  const currentPricePlot = ({date, currentPrice}) => ({ x: date, y: currentPrice });
+  const entry = ({d, o, c}) => ({
+    date: new Date(d),
+    originalPrice: o === "" ? null : o,
+    currentPrice: c === "" ? null : c,
+  });
+
+  addEventListener("load", e => {
+    const searchParams = new URLSearchParams(location.search);
+    if (searchParams.has("url")) {
+      showResultsModal(searchParams.get("url"));
+    }
+  });
+
+  async function showResultsModal(detailUri) {
+    modal.classList.toggle("modal--hidden");
+    const resp = await fetch(apiUrl(detailUri));
+    if (resp.statusCode === 404) {
+      // TODO: handle 404
+      return;
+    }
+    const data = await resp.json();
+    const chartData = stretchData(data.map(entry));
+    fillProductDetailsData(detailUri, chartData);
+    plot(chart, {
+      originalPrice: chartData.map(originalPriceIPlot),
+      currentPrice: chartData.map(currentPricePlot)
+    });
+  }
+
+  function fillProductDetailsData(detailUri, chartData) {
+    if (!chartData.length) return;
+    const orig = chartData[0];
+    const actual = chartData[chartData.length - 1];
+    const discount = Math.round(100 * (orig.currentPrice - actual.currentPrice) / orig.currentPrice);
+    productName.href = detailUri;
+    // TODO: productName.innerText = chartData.meta.name;
+    currentPrice.innerText = `${actual.currentPrice},–`;
+    originalPrice.innerText = `${actual.originalPrice},–`;
+    latestDate.datetime = actual.date.toISOString();
+    latestDate.innerText = actual.date.toLocaleDateString("cs", {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
+    realDiscount.innerText = `${discount} %`;
+  }
+
+</script>
 {% endblock %}

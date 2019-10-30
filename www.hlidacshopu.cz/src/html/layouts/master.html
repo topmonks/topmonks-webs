@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>{% block title %}Hlídač shopů{% endblock %}</title>
+  {% block preload %}{% endblock %}
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -11,7 +12,7 @@
   <meta property="og:url" content="https://www.hlidacshopu.cz/">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/main.css">
-  <link rel="stylesheet" href="/stylesheets/media.css">
+  {% block styles %}{% endblock %}
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -35,15 +36,14 @@
     f.parentNode.insertBefore(j, f);
   })(window, document, "script", "dataLayer", "GTM-58WNT3B");</script>
   <!-- End Google Tag Manager -->
-
 </head>
+<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58WNT3B"
           height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
-<body>
 <header class="app-bar">
   <div class="mdc-layout-grid layout-wrapper">
     <div class="mdc-layout-grid__inner">
@@ -206,7 +206,7 @@
         <img src="/images/logos/hlidacshopu_logo.svg" alt="Logo Hlídač Shopů" width="183">
         <p>Hlídač shopů je neziskový projekt, jehož cílem je chránit české
           spotřebitele před vynalézavostí marketingových oddělení velkých
-          českých eshopů. <b class="text--purple"><a href="/proc-to-delame/">Více o&nbsp;nás&nbsp;…</a></b></p>
+          českých eshopů. <b class="text--purple"><a href="/proc-to-delame/">Více o&nbsp;nás…</a></b></p>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
         <h3>NAVIGACE</h3>
@@ -217,10 +217,6 @@
         </ul>
       </div>
       <div class="logo-box mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
-        <a href="https://www.topmonks.cz/"><img src="/images/logos/topmonks_logo.svg" alt="Logo Hlídač Shopů"></a>
-        <p class="sub-info--grey">Vyvíjíme software, stavíme startupty</p>
-      </div>
-      <div class="logo-box mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
         <a href="https://apify.com/"><img src="/images/logos/apify_logo.svg" alt="Logo Apify"></a>
         <p class="sub-info--grey">Scrapujeme data i z omítek</p>
       </div>
@@ -228,12 +224,16 @@
         <a href="https://www.keboola.com/"><img src="/images/logos/keboola_logo.svg" alt="Logo Keboola"></a>
         <p class="sub-info--grey">DataOps &amp; Automation</p>
       </div>
+      <div class="logo-box mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+        <a href="https://www.topmonks.cz/"><img src="/images/logos/topmonks_logo.svg" alt="Logo Hlídač Shopů"></a>
+        <p class="sub-info--grey">Vyvíjíme software, stavíme startupty</p>
+      </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <hr class="layout-wrapper">
       </div>
       <div
         class="company mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-        <span>© 2019 TopMonks, Apify, Keboola</span>
+        <span>© 2019 Apify, Keboola &amp; TopMonks</span>
       </div>
       <div
         class="terms mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
@@ -242,5 +242,7 @@
     </div>
   </div>
 </footer>
+
+{% block scripts %}{% endblock %}
 </body>
 </html>

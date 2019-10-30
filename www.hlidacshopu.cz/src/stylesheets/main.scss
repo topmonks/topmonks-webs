@@ -26,12 +26,17 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 header {
   background-color: white;
   height: 60px;
   padding-top: 24px;
+  z-index: 10;
 
   .hs_logo {
     display: flex;
@@ -254,6 +259,7 @@ header {
 .main {
   .url-input {
     display: flex;
+    align-items: center;
 
     @media (max-width: 839px) {
       flex-flow: column;
@@ -264,6 +270,16 @@ header {
       box-shadow: 0 20px 20px rgba(92, 98, 205, 0.1);
       border-radius: 8px;
       justify-content: space-between;
+    }
+
+    .url-input__icon {
+      @media (max-width: 839px) {
+        display: none;
+      }
+      @media (min-width: 840px) {
+        width: 29px;
+        padding: 0 13px
+      }
     }
 
     input {
@@ -744,4 +760,27 @@ footer {
   align-items: flex-end;
   justify-content: flex-end;
   margin: 0;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.modal--hidden {
+    display: none;
+  }
+
+  &__inner {
+    background: #fff;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 620px;
+  }
 }
