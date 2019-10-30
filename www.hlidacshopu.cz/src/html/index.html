@@ -253,15 +253,15 @@
     <div class="mdc-layout-grid__inner">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2><a href="#" id="product-name">Název Produktu</a></h2>
-        <div>
-          <a href="/">close</a>
+        <div class="modal__close">
+          <a href="/" title="Zavřít">&times;</a>
         </div>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box--purple">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple">
         <time id="latest-date" datetime="2019-10-30">30. října 2019</time>
-        <div>Uváděná původní cena <del id="original-price">2 600,-</del></div>
-        <div>Prodejní cena <span id="current-price">2 799,-</span></div>
-        <div>Reálná sleva <span id="real-discount">-7.5 %</span></div>
+        <div class="claimed-price">Uváděná původní cena <del id="original-price">2 600,-</del></div>
+        <div class="actual-price">Prodejní cena <span id="current-price">2 799,-</span></div>
+        <div>Reálná sleva <b class="discount"><span id="real-discount">-7.5 %</span></b></div>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <canvas id="hlidac-shopu-chart" width="100%"></canvas>
@@ -458,6 +458,7 @@
 
   async function showResultsModal(detailUri) {
     modal.classList.toggle("modal--hidden");
+    document.body.classList.toggle("no-scroll");
     const resp = await fetch(apiUrl(detailUri));
     if (resp.statusCode === 404) {
       // TODO: handle 404
