@@ -22,7 +22,7 @@
           <label class="url-input">
             <div class="url-input__icon">
               <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <title>[icon] Search - Grey Color</title>
+                <title>Hledat</title>
                 <path
                   d="M24.7144 22.1558L20.6248 18.067C20.4403 17.8824 20.1901 17.7799 19.9275 17.7799H19.2589C20.391 16.3322 21.0637 14.5113 21.0637 12.5304C21.0637 7.81818 17.2449 4 12.5319 4C7.81883 4 4 7.81818 4 12.5304C4 17.2427 7.81883 21.0608 12.5319 21.0608C14.5131 21.0608 16.3343 20.3882 17.7823 19.2563V19.9248C17.7823 20.1873 17.8848 20.4375 18.0694 20.622L22.1589 24.7109C22.5445 25.0964 23.168 25.0964 23.5495 24.7109L24.7103 23.5502C25.0959 23.1647 25.0959 22.5414 24.7144 22.1558ZM12.5319 17.7799C9.63186 17.7799 7.28149 15.434 7.28149 12.5304C7.28149 9.6309 9.62776 7.28093 12.5319 7.28093C15.4319 7.28093 17.7823 9.62679 17.7823 12.5304C17.7823 15.4299 15.436 17.7799 12.5319 17.7799Z"
                   fill="#CFD4DE"/>
@@ -31,17 +31,28 @@
             <input required type="url" name="url"
                    placeholder="Zde si můžete ověřit odkaz vašeho produktu&hellip;"
                    title="Zadejte adresu stránky s detailem produktu.">
-            <button type="submit">OVĚŘIT VÝVOJ CENY</button>
           </label>
+          <button type="submit">OVĚŘIT VÝVOJ CENY</button>
         </form>
       </div>
       <div class="example mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop">
-        <img alt="Hlídač Shopů - Ukázka"
-             src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572499143/www.hlidacshopu.cz/porovnani-cen.png"
-             srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_500/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 1x,
-                     https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_500/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 1.5x,
-                     https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_500/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 2x"
-             width="100%">
+        <picture>
+          <source media="screen and (max-width: 479px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_380/v1572527403/www.hlidacshopu.cz/porovnani-cen-mobile.png 1x,
+                          https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_380/v1572527403/www.hlidacshopu.cz/porovnani-cen-mobile.png 1.5x,
+                          https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_380/v1572527403/www.hlidacshopu.cz/porovnani-cen-mobile.png 2x">
+          <source media="screen and (min-width: 480px) and (max-width: 839px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_740/v1572527403/www.hlidacshopu.cz/porovnani-cen-mobile.png 1x,
+                          https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_740/v1572527403/www.hlidacshopu.cz/porovnani-cen-mobile.png 1.5x,
+                          https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_740/v1572527403/www.hlidacshopu.cz/porovnani-cen-mobile.png 2x">
+          <source media="screen and (min-width: 840px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_500/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 1x,
+                          https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_500/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 1.5x,
+                          https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_500/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 2x">
+          <img alt="Hlídač Shopů - Ukázka"
+               src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572499143/www.hlidacshopu.cz/porovnani-cen.png"
+               width="100%">
+        </picture>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2 class="sub-title">AKTUÁLNĚ MONITORUJEME TYTO ESHOPY</h2>
@@ -84,12 +95,19 @@
     <div class="mdc-layout-grid__inner layout-wrapper">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Jak Hlídač Shopů vypadá a jak číst graf?</h2>
-        <img alt="Jak Hlídač Shopů vypadá a jak číst graf?"
-             src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png"
-             srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_1008/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 1x,
-                     https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_1008/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 1.5x,
-                     https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_1008/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 2x"
-             width="784">
+        <picture>
+          <source media="screen and (max-width: 479px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_460/v1572535440/www.hlidacshopu.cz/jak-cist-graf-mobile.png 1x,
+                          https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_460/v1572535440/www.hlidacshopu.cz/jak-cist-graf-mobile.png 1.5x,
+                          https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_460/v1572535440/www.hlidacshopu.cz/jak-cist-graf-mobile.png 2x,">
+          <source media="screen and (min-width: 480px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_1008/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 1x,
+                          https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_1008/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 1.5x,
+                          https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_1008/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 2x">
+          <img alt="Jak Hlídač Shopů vypadá a jak číst graf?"
+               src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png"
+               width="100%">
+        </picture>
         <p>Hlídač Shopů si můžete <b>nainstalovat přímo do svého prohlížeče</b> a
           hlídat tak největší e-shopy a jejich někdy prapodivné taktiky při
           tvoření&nbsp;slev.</p>
@@ -98,7 +116,7 @@
   </div>
 </section>
 
-<section class="guidance">
+<section class="guidance purple-gradient">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner layout-wrapper">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -106,16 +124,24 @@
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 browser-list">
         <div class="browser-support">
-          <img src="/images/google_icon.svg" alt="Barevná ikona prohlížeče Google Chrome">
-          <p class="sub-info--grey">Podporujeme<br>Chrome prohlížeč</p>
+          <div class="browser-support__icon">
+            <img src="/images/chrome.svg" alt="Barevná ikona prohlížeče Google Chrome"></div>
+          <p class="sub-info--grey">Podporujeme<br>prohlížeč Google&nbsp;Chrome</p>
         </div>
         <div class="browser-support">
-          <img src="/images/firefox_icon.jpg" alt="Barevná ikona prohlížeče FireFox">
-          <p class="sub-info--grey">Brzy podpora pro<br>Firefox prohlížeč</p>
+          <div class="browser-support__icon browser-support__icon--disabled">
+            <img src="/images/firefox.svg" alt="Barevná ikona prohlížeče Firefox"></div>
+          <p class="sub-info--grey">Brzy podpora pro<br>prohlížeč Firefox</p>
         </div>
         <div class="browser-support">
-          <img src="/images/brave_icon.svg" alt="Šedá ikona prohlížeče Brave">
-          <p class="sub-info--grey">Brzy podpora pro<br>Brave prohlížeč</p>
+          <div class="browser-support__icon browser-support__icon--disabled">
+            <img src="/images/brave.svg" alt="Šedá ikona prohlížeče Brave"></div>
+          <p class="sub-info--grey">Brzy podpora pro<br>prohlížeč Brave</p>
+        </div>
+        <div class="browser-support">
+          <div class="browser-support__icon browser-support__icon--disabled">
+            <img src="/images/edge.svg" alt="Šedá ikona prohlížeče Microsoft Edge"></div>
+          <p class="sub-info--grey">Brzy podpora pro<br>prohlížeč Microsoft&nbsp;Edge</p>
         </div>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
@@ -266,7 +292,7 @@
            srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1x,
                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1.5x,
                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 2x"
-           width="722">
+           width="100%">
     </div>
   </div>
 </section>
