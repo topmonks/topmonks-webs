@@ -11,7 +11,7 @@
 <section class="main">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner layout-wrapper">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop">
         <h1>Ujistěte se, že nakupujete opravdu se slevou</h1>
         <form id="compare-form" action="/">
           <p>Není sleva jako sleva. Někdy obchody těsně před vlnou slev uměle
@@ -34,7 +34,16 @@
             <button type="submit">OVĚŘIT VÝVOJ CENY</button>
           </label>
         </form>
-
+      </div>
+      <div class="example mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop">
+        <img alt="Hlídač Shopů - Ukázka"
+             src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto/v1572499143/www.hlidacshopu.cz/porovnani-cen.png"
+             srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 1x,
+                     https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 1.5x,
+                     https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 2x"
+             width="100%">
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2 class="sub-title">AKTUÁLNĚ MONITORUJEME TYTO ESHOPY</h2>
         <div class="logos mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <a href="https://www.alza.cz/">{{sprite('alza_logo', '[logo] Alza')}}</a>
@@ -52,12 +61,6 @@
           <a href="https://www.tsbohemia.cz/">{{sprite('tsbohemia_logo', '[logo] TSBohemia')}}</a>
         </div>
       </div>
-      <div
-        class="mdc-layout-grid__cell">
-        <img alt="Hlídač Shopů - Ukázka"
-             src="/images/porovnani-cen.png"
-             width="100%">
-      </div>
     </div>
   </div>
 </section>
@@ -67,9 +70,9 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12">
         <h2 class="sub-title">HLÍDAČ SHOPŮ VÁM PŘINÁŠÍ</h2>
         <div class="logos">
-          <a href="https://www.topmonks.cz/"><img src="/images/logos/topmonks_logo.svg" alt="TopMonks Logo" width="180"></a>
-          <a href="https://apify.com/"><img src="/images/logos/apify_logo.svg" alt="Apify Logo" width="180"></a>
-          <a href="https://www.keboola.com/"><img src="/images/logos/keboola_logo.svg" alt="Keboola Logo" width="180"></a>
+          <a href="https://apify.com/"><img src="/images/logos/apify_logo.svg" alt="Apify Logo" height="40"></a>
+          <a href="https://www.keboola.com/"><img src="/images/logos/keboola_logo.svg" alt="Keboola Logo" height="40"></a>
+          <a href="https://www.topmonks.cz/"><img src="/images/logos/topmonks_logo.svg" alt="TopMonks Logo" height="40"></a>
         </div>
       </div>
     </div>
@@ -82,7 +85,10 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Jak Hlídač Shopů vypadá a jak číst graf?</h2>
         <img alt="Jak Hlídač Shopů vypadá a jak číst graf?"
-             src="/images/jak-cist-graf.png"
+             src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png"
+             srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 1x,
+                     https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 1.5x,
+                     https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 2x"
              width="784">
         <p>Hlídač Shopů si můžete <b>nainstalovat přímo do svého prohlížeče</b> a
           hlídat tak největší e-shopy a jejich někdy prapodivné taktiky při
@@ -98,22 +104,27 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Jak a proč nainstalovat rozšíření Hlídač Shopů?</h2>
       </div>
-      <div
-        class="browser-support mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <img src="/images/google_icon.svg" alt="Barevná ikona prohlížeče Google Chrome">
-        <p class="sub-info--grey">Podporujeme<br>Chrome prohlížeč</p>
-        <img src="/images/firefox_icon.jpg" alt="Barevná ikona prohlížeče FireFox">
-        <p class="sub-info--grey">Brzy podpora pro<br>Firefox prohlížeč</p>
-        <img src="/images/brave_icon.svg" alt="Šedá ikona prohlížeče Brave">
-        <p class="sub-info--grey">Brzy podpora pro<br>Brave prohlížeč</p>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 browser-list">
+        <div class="browser-support">
+          <img src="/images/google_icon.svg" alt="Barevná ikona prohlížeče Google Chrome">
+          <p class="sub-info--grey">Podporujeme<br>Chrome prohlížeč</p>
+        </div>
+        <div class="browser-support">
+          <img src="/images/firefox_icon.jpg" alt="Barevná ikona prohlížeče FireFox">
+          <p class="sub-info--grey">Brzy podpora pro<br>Firefox prohlížeč</p>
+        </div>
+        <div class="browser-support">
+          <img src="/images/brave_icon.svg" alt="Šedá ikona prohlížeče Brave">
+          <p class="sub-info--grey">Brzy podpora pro<br>Brave prohlížeč</p>
+        </div>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
         <h3>Instalace Hlídače Shopů do prohlížeče</h3>
         <p>Aktuálně si můžete Hlídače Shopů nainstalovat pouze do Chromu a
           Firefoxu. Pokud Chrome a Firefox nepoužíváte, vydržte. Usilovně makáme na
           verzích rozšíření Hlídače Shopů i&nbsp;pro další prohlížeče.</p>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
         <h3>Proč byste si měli rozšíření Hlídače Shopů instalovat a jak to vlastně vypadá?</h3>
         <p>Rozšíření v&nbsp;prohlížeči vám umožňuje kontrolovat ceny rovnou na
           stránkách e-shopů. Nemusíte se pracně vracet na tento web s&nbsp;odkazem
@@ -123,24 +134,32 @@
         <h3>Instalace probíhá ve třech jednoduchých krocích</h3>
       </div>
 
-
-      <div class="step_1 mdc-layout-grid__cell">
+      <div class="step_1 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
         <img
           src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto/v1572121993/www.hlidacshopu.cz/search.jpg"
+          srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto/v1572121993/www.hlidacshopu.cz/search.jpg 1x,
+                  https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto/v1572121993/www.hlidacshopu.cz/search.jpg 1.5x,
+                  https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto/v1572121993/www.hlidacshopu.cz/search.jpg 2x"
           alt="Najít Rozšíření - Obrázkový Průvodce" style="max-width: 342px">
         <h3>Najděte rozšíření v&nbsp;obchodě</h3>
         <p class="grey-text">Přejděte do <a href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk" class="text--purple">obchodu Chrome</a> na stránku Hlídače Shopů.</p>
       </div>
-      <div class="step_2 mdc-layout-grid__cell">
+      <div class="step_2 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
         <img
           src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto/v1572121995/www.hlidacshopu.cz/install.jpg"
+          srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto/v1572121995/www.hlidacshopu.cz/install.jpg 1x,
+                  https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto/v1572121995/www.hlidacshopu.cz/install.jpg 1.5x,
+                  https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto/v1572121995/www.hlidacshopu.cz/install.jpg 2x,"
           alt="Instalovat Rozšíření - Obrázkový Průvodce" style="max-width: 342px">
         <h3>Přidejte si rozšíření do prohlížeče</h3>
         <p class="grey-text">Vpravo nahoře klikněte na tlačítko Přidat do Chromu</p>
       </div>
-      <div class="step_3 mdc-layout-grid__cell">
+      <div class="step_3 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
         <img
           src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto/v1572290612/www.hlidacshopu.cz/usage.jpg"
+          srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto/v1572290612/www.hlidacshopu.cz/usage.jpg 1x,
+                  https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto/v1572290612/www.hlidacshopu.cz/usage.jpg 1.5x,
+                  https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto/v1572290612/www.hlidacshopu.cz/usage.jpg 2x,"
           alt="Použití Rozšíření - Obrázkový Průvodce" style="max-width: 342px">
         <h3>Potvrďte instalaci rozšíření</h3>
         <p class="grey-text">Poté na vás vyskočí okno, kde potvrdíte přidání do Chromu tlačítkem Přidat rozšíření.</p>
@@ -163,17 +182,17 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Naše čísla</h2>
       </div>
-      <div class="mdc-layout-grid__cell">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
         <p class="text--grey">Počet stažení</p>
-        <p class="numbers">3 800 +</p>
+        <p class="numbers">3 600+</p>
       </div>
-      <div class="mdc-layout-grid__cell">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
         <p class="text--grey">Počet e-shopů</p>
-        <p class="numbers">13 +</p>
+        <p class="numbers">13</p>
       </div>
-      <div class="mdc-layout-grid__cell">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
         <p class="text--grey">Počet produktů</p>
-        <p class="numbers">2 000 000 +</p>
+        <p class="numbers">2 000 000+</p>
       </div>
     </div>
   </div>
@@ -231,19 +250,23 @@
           </div>
         </div>
       </div>
-      <div class="references_link mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <a>Další hodnocení nalezente zde</a>
-      </div>
+      <!--div class="references_link mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <a href="/recenze/">Další hodnocení nalezente zde</a>
+      </div-->
     </div>
   </div>
 </section>
-<section class="news">
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner layout-wrapper">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2>Nejzajímavější slevy</h2>
-        <img alt="Obrázek nejzajímavějších slev" src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto/v1572292361/www.hlidacshopu.cz/sales--news.svg" width="722">
-      </div>
+
+<section class="news mdc-layout-grid">
+  <div class="mdc-layout-grid__inner layout-wrapper">
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+      <h2>Nejzajímavější slevy</h2>
+      <img alt="Obrázek nejzajímavějších slev"
+           src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto/v1572499143/www.hlidacshopu.cz/mall-black-friday.png"
+           srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1x,
+                   https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1.5x,
+                   https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 2x"
+           width="722">
     </div>
   </div>
 </section>

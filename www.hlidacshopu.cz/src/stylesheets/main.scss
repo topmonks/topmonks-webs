@@ -67,6 +67,10 @@ header,
 footer {
   a {
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -329,15 +333,9 @@ header {
       min-width: 474px;
       min-height: 54px;
     }
-    input {
-      min-width: 360px;
-    }
-    .main-bgnd {
-      align-self: center;
-
-      img {
-        width: 480px;
-      }
+    .example {
+      display: flex;
+      align-items: center;
     }
   }
   @media (max-width: 839px) {
@@ -390,14 +388,17 @@ header {
 // Section: Guidance //
 
 .guidance {
+  .browser-list {
+    text-align: center;
+  }
   .browser-support {
-    vertical-align: top;
     display: inline-block;
     text-align: center;
     width: 120px;
 
     p {
       display: block;
+      margin: 0;
     }
 
     img {
@@ -436,11 +437,12 @@ header {
       }
     }
   }
-  @media (max-width: 767px) {
+  @media (max-width: 840px) {
     .step_1,
     .step_2,
     .step_3 {
       margin-top: 34px;
+      text-align: center;
     }
   }
 }
@@ -539,6 +541,7 @@ footer {
 
   h3 {
     font-weight: normal;
+    margin: 0.5em 0 1.1em;
   }
 
   ul {
@@ -552,9 +555,6 @@ footer {
       text-decoration: none;
       list-style: none;
 
-      a:hover {
-        font-weight: 700;
-      }
     }
   }
 
@@ -567,19 +567,15 @@ footer {
   }
 
   img {
-    max-width: 183px;
-    height: 40px;
-    text-align: left;
+    height: 32px;
+    width: auto;
+    margin: 0;
   }
 
   .text-about {
     p {
       font-size: 14px;
       line-height: 26px;
-    }
-
-    a:hover {
-      font-weight: lighter;
     }
   }
 
