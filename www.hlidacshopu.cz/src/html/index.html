@@ -29,7 +29,7 @@
               </svg>
             </div>
             <input required type="url" name="url"
-                   placeholder="Zde si můžete ověřit odkaz vašeho produktu&hellip;"
+                   placeholder="Zadejte odkaz produktu&hellip;"
                    title="Zadejte adresu stránky s detailem produktu.">
           </label>
           <button type="submit">OVĚŘIT VÝVOJ CENY</button>
@@ -331,35 +331,38 @@
 {% block scripts %}
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js" integrity="sha256-8xsohuS5beL9mPWPwuzrAHckEZZnVE6/hNYhj6FLCzU=" crossorigin="anonymous"></script>
 <script>
-  const clearTime = d => new Date(d.getFullYear(), d.getMonth(), d.getDay());
+  const parseTime = s => {
+    const d = new Date(s);
+    d.setHours(0, 0, 0, 0);
+    return d;
+  };
 
   function* daysBetween(start, end) {
-    const startDay = clearTime(start);
-    const endDay = clearTime(end);
+    const startDay = parseTime(start);
+    const endDay = parseTime(end);
     for (const d = startDay; d <= endDay; d.setDate(d.getDate() + 1)) {
       yield new Date(d.getTime());
     }
   }
 
-  function stretchData(data) {
-    const dataMap = new Map(data.map(i => [clearTime(i.date).getTime(), i]));
-    const final = [];
+  function createDataset(data) {
+    const dataMap = new Map(data.map(i => [parseTime(i.d).getTime(), i]));
+    const dataset = {
+      originalPrice: [],
+      currentPrice: [],
+    };
     let lastDay = data[0];
-    for (const day of daysBetween(data[0].date, data[data.length - 1].date)) {
+    for (const day of daysBetween(parseTime(data[0].d), parseTime(data[data.length - 1].d))) {
       let item = dataMap.get(day.getTime());
       if (!item) {
         item = lastDay;
       } else {
         lastDay = item;
       }
-      const { originalPrice, currentPrice } = item;
-      final.push({
-        date: day,
-        originalPrice,
-        currentPrice,
-      });
+      dataset.originalPrice.push({ x: day, y: item.o === "" ? null : item.o });
+      dataset.currentPrice.push({ x: day, y: item.c === "" ? null : item.c });
     }
-    return final;
+    return dataset;
   }
 
   Chart.plugins.register({
@@ -484,19 +487,12 @@
   const form = document.getElementById("compare-form");
   const chart = document.getElementById("hlidac-shopu-chart");
   const modal = document.getElementById("hlidac-shopu-modal");
-  const currentPrice = document.getElementById("current-price");
-  const originalPrice = document.getElementById("original-price");
+  const currentPriceEl = document.getElementById("current-price");
+  const originalPriceEl = document.getElementById("original-price");
   const productName = document.getElementById("product-name");
   const latestDate = document.getElementById("latest-date");
   const realDiscount = document.getElementById("real-discount");
   const apiUrl = detailUri => `https://api.hlidacshopu.cz/shop?url=${encodeURIComponent(detailUri)}`;
-  const originalPriceIPlot = ({date, originalPrice}) => ({ x: date, y: originalPrice });
-  const currentPricePlot = ({date, currentPrice}) => ({ x: date, y: currentPrice });
-  const entry = ({d, o, c}) => ({
-    date: new Date(d),
-    originalPrice: o === "" ? null : o,
-    currentPrice: c === "" ? null : c,
-  });
 
   addEventListener("load", e => {
     const searchParams = new URLSearchParams(location.search);
@@ -514,25 +510,22 @@
       return;
     }
     const data = await resp.json();
-    const chartData = stretchData(data.map(entry));
+    const chartData = createDataset(data);
     fillProductDetailsData(detailUri, chartData);
-    plot(chart, {
-      originalPrice: chartData.map(originalPriceIPlot),
-      currentPrice: chartData.map(currentPricePlot)
-    });
+    plot(chart, chartData);
   }
 
-  function fillProductDetailsData(detailUri, chartData) {
-    if (!chartData.length) return;
-    const orig = chartData[0];
-    const actual = chartData[chartData.length - 1];
-    const discount = Math.round(100 * (orig.currentPrice - actual.currentPrice) / orig.currentPrice);
+  function fillProductDetailsData(detailUri, {currentPrice, originalPrice}) {
+    if (!currentPrice.length) return;
+    const origPrice = parseInt(currentPrice[0].y);
+    const actualPrice = parseInt(currentPrice[currentPrice.length - 1].y);
+    const discount = Math.round(100 * (origPrice - actualPrice) / origPrice);
     productName.href = detailUri;
     // TODO: productName.innerText = chartData.meta.name;
-    currentPrice.innerText = `${actual.currentPrice},–`;
-    originalPrice.innerText = `${actual.originalPrice},–`;
-    latestDate.datetime = actual.date.toISOString();
-    latestDate.innerText = actual.date.toLocaleDateString("cs", {
+    currentPriceEl.innerText = `${actualPrice},–`;
+    originalPriceEl.innerText = `${originalPrice[originalPrice.length - 1].y},–`;
+    latestDate.datetime = currentPrice[currentPrice.length - 1].x.toISOString();
+    latestDate.innerText = currentPrice[currentPrice.length - 1].x.toLocaleDateString("cs", {
       year: "numeric",
       month: "long",
       day: "numeric"
