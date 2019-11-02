@@ -618,7 +618,7 @@
     if (!resp.ok) throw new Error("API error");
     const data = await resp.json();
     return {
-      meta: data.metadata && data.metadata.map(meta) || {},
+      meta: data.metadata && meta(data.metadata) || {},
       data: createDataset(data.data || data)
     };
   }
