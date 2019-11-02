@@ -36,7 +36,7 @@ header {
   height: 60px;
   padding-top: 24px;
   z-index: 10;
-  --mdc-layout-grid-margin-desktop: 0;
+  --mdc-layout-grid-margin-desktop: 0 24px;
   --mdc-layout-grid-margin-tablet: 0;
   --mdc-layout-grid-margin-phone: 0;
 
@@ -224,7 +224,7 @@ header {
     margin: 0 0.5em;
   }
   svg {
-    max-height: 59px;
+    height: 59px;
     filter: saturate(0);
     transition: 0.3s filter ease-in;
     &:hover {
@@ -250,6 +250,7 @@ section.purple-gradient {
     rgba(255, 255, 255, 0.1) 24.48%,
     rgba(84, 95, 239, 0.1) 100%
   );
+  padding-bottom: 2em;
 }
 
 // Section: MAIN //
