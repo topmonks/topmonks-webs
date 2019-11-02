@@ -630,26 +630,25 @@ footer {
     height: 48px;
 
     .app-bar_menu {
-      transform: scaleY(0);
+      transform: scaleY(0) translateY(-64px);
       transform-origin: top;
       transition: transform 0.3s ease;
       order: 3;
     }
     &.app-bar--open .app-bar_menu {
-      transform: scaleY(1);
+      transform: scaleY(1) translateY(-4px);
     }
     .hs_logo {
       order: 1;
       display: flex;
       align-items: baseline;
-      padding-top: 4px;
-      padding-left: 16px;
+      transform: translate(16px, 8px);
     }
     .hamburger {
       order: 2;
       display: flex;
       justify-content: flex-end;
-      padding-right: 16px;
+      transform: translate(-12px, 4px);
     }
   }
 }
