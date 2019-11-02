@@ -33,8 +33,7 @@ body {
 
 header {
   background-color: white;
-  height: 60px;
-  padding-top: 24px;
+  padding-top: 16px;
   z-index: 10;
   --mdc-layout-grid-margin-desktop: 0 24px;
   --mdc-layout-grid-margin-tablet: 0;
@@ -42,6 +41,7 @@ header {
 
   .hs_logo {
     display: flex;
+    transform: translate(-24px, 4px);
   }
   li a {
     color: black;
@@ -56,10 +56,7 @@ header {
     width: 100vw;
     z-index: 1000;
     top: 0;
-    -webkit-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-    background-color: var(--tm-white);
+    background-color: #fff;
   }
 }
 
@@ -142,6 +139,7 @@ hr {
     font-size: 15px;
     color: #ffffff;
     background-color: var(--purple);
+    box-shadow: 0 20px 20px rgba(92, 98, 205, 0.1);
     padding: 14px 48px;
     text-transform: uppercase;
     border-radius: 8px;
@@ -328,10 +326,15 @@ section.purple-gradient {
     line-height: 18px;
     color: #ffffff;
     background: var(--purple);
+    box-shadow: 0 20px 20px rgba(92, 98, 205, 0.1);
     width: 200px;
     height: 54px;
     border: none;
     border-radius: 8px;
+
+    &:hover {
+      background-color: #3a42a0;
+    }
   }
 }
 
@@ -619,6 +622,8 @@ footer {
 // HAMBURGER //
 
 .app-bar {
+  height: 48px;
+
   &.app-bar--sticky {
     position: fixed;
     width: 100vw;
@@ -627,7 +632,6 @@ footer {
 
   @media screen and (max-width: 839px) {
     padding-top: 8px;
-    height: 48px;
 
     .app-bar_menu {
       transform: scaleY(0) translateY(-64px);
