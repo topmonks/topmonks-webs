@@ -443,13 +443,14 @@
     const min = Math.min(...prices.currentPrice.filter(p => p.y !== null).map(p => p.y));
     const max = Math.max(...prices.currentPrice.filter(p => p.y !== null).map(p => p.y));
     const ctx = canvas.getContext("2d");
-    const blueGradient  = ctx.createLinearGradient(canvas.width / 2, 0, canvas.width / 2, canvas.height);
-    blueGradient.addColorStop(0, "rgba(92, 98, 205, 0.15)");
-    blueGradient.addColorStop(1, "rgba(255, 255, 255, 0)");
-
-    const redGradient  = ctx.createLinearGradient(canvas.width / 2, 0, canvas.width / 2, canvas.height);
-    redGradient.addColorStop(0, "rgba(235, 111, 85, 0.2)");
-    redGradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+    const gradient = (start, stop) => {
+      const g = ctx.createLinearGradient(canvas.width / 2, 0, canvas.width / 2, canvas.height);
+      g.addColorStop(0, start);
+      g.addColorStop(1, stop);
+      return g;
+    };
+    const blueGradient = gradient("rgba(92, 98, 205, 0.15)", "rgba(255, 255, 255, 0)");
+    const redGradient = gradient("rgba(235, 111, 85, 0.2)", "rgba(255, 255, 255, 0)");
 
     return new Chart(ctx, {
       type: "line",
@@ -466,7 +467,7 @@
             fill: "origin",
             backgroundColor: blueGradient,
             pointRadius: 0,
-            spanGaps: false,
+            spanGaps: true,
             data: prices.originalPrice,
           },
           {
@@ -479,7 +480,7 @@
             fill: "origin",
             backgroundColor: redGradient,
             pointRadius: 0,
-            spanGaps: false,
+            spanGaps: true,
             data: prices.currentPrice,
           }
         ]
@@ -550,12 +551,30 @@
   const realDiscount = document.getElementById("real-discount");
   const apiUrl = detailUri => `https://api.hlidacshopu.cz/shop?url=${encodeURIComponent(detailUri)}`;
 
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    showResultsModal(e.target["url"].value);
+  });
+
+  modal.addEventListener("click", e => {
+    e.preventDefault();
+    const target = e.target;
+    if (target === modal || target.classList.contains("modal__close") || target.parentElement.classList.contains("modal__close")) {
+      hideResultsModal();
+    }
+  });
+
   addEventListener("load", e => {
     const searchParams = new URLSearchParams(location.search);
     if (searchParams.has("url")) {
       showResultsModal(searchParams.get("url"));
     }
   });
+
+  function hideResultsModal() {
+    modal.classList.toggle("modal--hidden");
+    document.body.classList.toggle("no-scroll");
+  }
 
   async function showResultsModal(detailUri) {
     modal.classList.toggle("modal--hidden");

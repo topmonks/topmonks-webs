@@ -771,9 +771,12 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: scale(1) translate(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 
   &.modal--hidden {
-    display: none;
+    transform: scale(0) translateX(-100vw);
   }
 
   &__inner {
