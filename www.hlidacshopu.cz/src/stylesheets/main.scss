@@ -9,6 +9,7 @@
   --sub-title: #515151;
   --purple: #545fef;
   --light-purple: #f7f7ff;
+  --dark-purple: #3a42a0;
   --red: #ca0505;
 
   --mdc-layout-grid-margin-desktop: 24px;
@@ -148,7 +149,7 @@ hr {
     text-decoration: none;
 
     &:hover {
-      background-color: #3a42a0;
+      background-color: var(--dark-purple);
     }
 
     @media (max-width: 739px) {
@@ -803,11 +804,18 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
     a {
       font-weight: bold;
       font-size: 1.6em;
       text-decoration: none;
+    }
+    &:hover {
+      border-color: var(--dark-purple);
+      a {
+        color: var(--dark-purple) !important;
+      }
     }
   }
 
