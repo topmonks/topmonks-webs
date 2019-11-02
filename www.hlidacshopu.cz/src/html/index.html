@@ -4,6 +4,7 @@
 {% block title %}Hlídač shopů{% endblock %}
 
 {% block preload %}
+<link rel="prefetch" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js" as="script" crossorigin="anonymous">
 <!-- <link rel="modulepreload" href="https://unpkg.com/lit-html@1.1.2/lit-html.js?module"> -->
 {% endblock %}
 
@@ -57,19 +58,19 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2 class="sub-title">AKTUÁLNĚ MONITORUJEME TYTO ESHOPY</h2>
         <div class="logos mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <a href="https://www.alza.cz/">{{sprite('alza_logo', '[logo] Alza')}}</a>
-          <a href="https://www.czc.cz/">{{sprite('czc.cz_logo', '[logo] CZC')}}</a>
-          <a href="https://www.datart.cz/">{{sprite('datart_logo', '[logo] Datart')}}</a>
-          <a href="https://www.itesco.cz/">{{sprite('tesco_logo', '[logo] Tesco')}}</a>
-          <a href="https://www.kasa.cz/">{{sprite('kasa_logo', '[logo] kasa.cz')}}</a>
-          <a href="https://www.kosik.cz/">{{sprite('kosik_logo', '[logo] kosik.cz')}}</a>
-          <a href="https://www.lekarna.cz/">{{sprite('lekarna_logo', '[logo] lekarna.cz')}}</a>
-          <a href="https://www.mall.cz/">{{sprite('mall_logo', '[logo] mall.cz')}}</a>
-          <a href="https://www.mironet.cz/">{{sprite('mironet_logo', '[logo] Mironet')}}</a>
-          <a href="https://www.mountfield.cz/">{{sprite('mountfield_logo', '[logo] Mountfield')}}</a>
-          <a href="https://www.notino.cz/">{{sprite('notino_logo', '[logo] Notino')}}</a>
-          <a href="https://www.rohlik.cz/">{{sprite('rohlik_logo', '[logo] rohlik.cz')}}</a>
-          <a href="https://www.tsbohemia.cz/">{{sprite('tsbohemia_logo', '[logo] TSBohemia')}}</a>
+          <a href="https://www.alza.cz/">{{sprite('alza_logo', 'Alza')}}</a>
+          <a href="https://www.czc.cz/">{{sprite('czc.cz_logo', 'CZC')}}</a>
+          <a href="https://www.datart.cz/">{{sprite('datart_logo', 'Datart')}}</a>
+          <a href="https://www.itesco.cz/">{{sprite('tesco_logo', 'iTesco')}}</a>
+          <a href="https://www.kasa.cz/">{{sprite('kasa_logo', 'kasa.cz')}}</a>
+          <a href="https://www.kosik.cz/">{{sprite('kosik_logo', 'Košík.cz')}}</a>
+          <a href="https://www.lekarna.cz/">{{sprite('lekarna_logo', 'Lékárna.cz')}}</a>
+          <a href="https://www.mall.cz/">{{sprite('mall_logo', 'Mall.cz')}}</a>
+          <a href="https://www.mironet.cz/">{{sprite('mironet_logo', 'Mironet')}}</a>
+          <a href="https://www.mountfield.cz/">{{sprite('mountfield_logo', 'Mountfield')}}</a>
+          <a href="https://www.notino.cz/">{{sprite('notino_logo', 'Notino')}}</a>
+          <a href="https://www.rohlik.cz/">{{sprite('rohlik_logo', 'Rohlík.cz')}}</a>
+          <a href="https://www.tsbohemia.cz/">{{sprite('tsbohemia_logo', 'TSBohemia')}}</a>
         </div>
       </div>
     </div>
@@ -81,9 +82,9 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12">
         <h2 class="sub-title">HLÍDAČ SHOPŮ VÁM PŘINÁŠÍ</h2>
         <div class="logos">
-          <a href="https://apify.com/"><img src="/images/logos/apify_logo.svg" alt="Apify Logo" height="40"></a>
-          <a href="https://www.keboola.com/"><img src="/images/logos/keboola_logo.svg" alt="Keboola Logo" height="40"></a>
-          <a href="https://www.topmonks.cz/"><img src="/images/logos/topmonks_logo.svg" alt="TopMonks Logo" height="40"></a>
+          <a href="https://apify.com/"><img src="/images/logos/apify_logo.svg" alt="Apify" height="40"></a>
+          <a href="https://www.keboola.com/"><img src="/images/logos/keboola_logo.svg" alt="Keboola" height="40"></a>
+          <a href="https://www.topmonks.cz/"><img src="/images/logos/topmonks_logo.svg" alt="TopMonks" height="40"></a>
         </div>
       </div>
     </div>
@@ -97,14 +98,19 @@
         <h2>Jak Hlídač Shopů vypadá a jak číst graf?</h2>
         <picture>
           <source media="screen and (max-width: 479px)"
-                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_460/v1572535440/www.hlidacshopu.cz/jak-cist-graf-mobile.png 1x,
-                          https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_460/v1572535440/www.hlidacshopu.cz/jak-cist-graf-mobile.png 1.5x,
-                          https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_460/v1572535440/www.hlidacshopu.cz/jak-cist-graf-mobile.png 2x,">
-          <source media="screen and (min-width: 480px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_420/v1572535440/www.hlidacshopu.cz/jak-cist-graf-mobile.png 1x,
+                          https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_420/v1572535440/www.hlidacshopu.cz/jak-cist-graf-mobile.png 1.5x,
+                          https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_420/v1572535440/www.hlidacshopu.cz/jak-cist-graf-mobile.png 2x,">
+          <source media="screen and (min-width: 480px) and (max-width: 879px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_740/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 1x,
+                          https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_740/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 1.5x,
+                          https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_740/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 2x">
+          <source media="screen and (min-width: 840px)"
                   srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_1008/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 1x,
                           https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_1008/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 1.5x,
                           https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_1008/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png 2x">
-          <img alt="Jak Hlídač Shopů vypadá a jak číst graf?"
+          <img loading="lazy"
+               alt="Jak Hlídač Shopů vypadá a jak číst graf?"
                src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572499144/www.hlidacshopu.cz/jak-cist-graf.png"
                width="100%">
         </picture>
@@ -125,17 +131,17 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 browser-list">
         <div class="browser-support">
           <div class="browser-support__icon">
-            <img src="/images/chrome.svg" alt="Barevná ikona prohlížeče Google Chrome"></div>
+            <img loading="lazy" src="/images/chrome.svg" alt="Barevná ikona prohlížeče Google Chrome"></div>
           <p class="sub-info--grey">Podporujeme<br>prohlížeč Google&nbsp;Chrome</p>
         </div>
         <div class="browser-support">
           <div class="browser-support__icon browser-support__icon--disabled">
-            <img src="/images/firefox.svg" alt="Barevná ikona prohlížeče Firefox"></div>
+            <img loading="lazy" src="/images/firefox.svg" alt="Barevná ikona prohlížeče Firefox"></div>
           <p class="sub-info--grey">Brzy podpora pro<br>prohlížeč Firefox</p>
         </div>
         <div class="browser-support">
           <div class="browser-support__icon browser-support__icon--disabled">
-            <img src="/images/brave.svg" alt="Šedá ikona prohlížeče Brave"></div>
+            <img loading="lazy" src="/images/brave.svg" alt="Šedá ikona prohlížeče Brave"></div>
           <p class="sub-info--grey">Brzy podpora pro<br>prohlížeč Brave</p>
         </div>
         <div class="browser-support">
@@ -161,33 +167,70 @@
       </div>
 
       <div class="step_1 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-        <img
-          src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572515560/www.hlidacshopu.cz/search.png"
-          srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_640/v1572515560/www.hlidacshopu.cz/search.png 1x,
-                  https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_640/v1572515560/www.hlidacshopu.cz/search.png 1.5x,
-                  https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_640/v1572515560/www.hlidacshopu.cz/search.png 2x"
-          alt="Najít Rozšíření - Obrázkový Průvodce" style="max-width: 342px">
+
+        <picture>
+          <source media="screen and (max-width: 479px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_380/v1572515560/www.hlidacshopu.cz/search.png 1x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_380/v1572515560/www.hlidacshopu.cz/search.png 1.5x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_380/v1572515560/www.hlidacshopu.cz/search.png 2x">
+          <source media="screen and (min-width: 480px) and (max-width: 839px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_740/v1572515560/www.hlidacshopu.cz/search.png 1x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_740/v1572515560/www.hlidacshopu.cz/search.png 1.5x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_740/v1572515560/www.hlidacshopu.cz/search.png 2x">
+          <source media="screen and (min-width: 840px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_340/v1572515560/www.hlidacshopu.cz/search.png 1x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_340/v1572515560/www.hlidacshopu.cz/search.png 1.5x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_340/v1572515560/www.hlidacshopu.cz/search.png 2x">
+          <img loading="lazy"
+               src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572515560/www.hlidacshopu.cz/search.png"
+               alt="Najít Rozšíření - Obrázkový Průvodce"
+               width="100%">
+        </picture>
         <h3>Najděte rozšíření v&nbsp;obchodě</h3>
         <p class="grey-text">Přejděte do <a href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk" class="text--purple">obchodu Chrome</a> na stránku Hlídače Shopů.</p>
       </div>
       <div class="step_2 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-        <img
-          src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572515567/www.hlidacshopu.cz/install.png"
-          srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_640/v1572515567/www.hlidacshopu.cz/install.png 1x,
-                  https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_640/v1572515567/www.hlidacshopu.cz/install.png 1.5x,
-                  https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_640/v1572515567/www.hlidacshopu.cz/install.png 2x,"
-
-          alt="Instalovat Rozšíření - Obrázkový Průvodce" style="max-width: 342px">
+        <picture>
+          <source media="screen and (max-width: 479px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_380/v1572515567/www.hlidacshopu.cz/install.png 1x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_380/v1572515567/www.hlidacshopu.cz/install.png 1.5x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_380/v1572515567/www.hlidacshopu.cz/install.png 2x">
+          <source media="screen and (min-width: 480px) and (max-width: 839px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_740/v1572515567/www.hlidacshopu.cz/install.png 1x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_740/v1572515567/www.hlidacshopu.cz/install.png 1.5x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_740/v1572515567/www.hlidacshopu.cz/install.png 2x">
+          <source media="screen and (min-width: 840px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_340/v1572515567/www.hlidacshopu.cz/install.png 1x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_340/v1572515567/www.hlidacshopu.cz/install.png 1.5x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_340/v1572515567/www.hlidacshopu.cz/install.png 2x">
+          <img loading="lazy"
+               src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572515567/www.hlidacshopu.cz/install.png"
+               alt="Instalovat Rozšíření - Obrázkový Průvodce"
+               width="100%">
+        </picture>
         <h3>Přidejte si rozšíření do prohlížeče</h3>
         <p class="grey-text">Vpravo nahoře klikněte na tlačítko Přidat do Chromu</p>
       </div>
       <div class="step_3 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-        <img
-          src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572515574/www.hlidacshopu.cz/usage.png"
-          srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_640/v1572515574/www.hlidacshopu.cz/usage.png 1x,
-                  https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_640/v1572515574/www.hlidacshopu.cz/usage.png 1.5x,
-                  https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_640/v1572515574/www.hlidacshopu.cz/usage.png 2x,"
-          alt="Použití Rozšíření - Obrázkový Průvodce" style="max-width: 342px">
+
+        <picture>
+          <source media="screen and (max-width: 479px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_380/v1572515574/www.hlidacshopu.cz/usage.png 1x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_380/v1572515574/www.hlidacshopu.cz/usage.png 1.5x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_380/v1572515574/www.hlidacshopu.cz/usage.png 2x">
+          <source media="screen and (min-width: 480px) and (max-width: 839px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_740/v1572515574/www.hlidacshopu.cz/usage.png 1x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_740/v1572515574/www.hlidacshopu.cz/usage.png 1.5x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_740/v1572515574/www.hlidacshopu.cz/usage.png 2x">
+          <source media="screen and (min-width: 840px)"
+                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_340/v1572515574/www.hlidacshopu.cz/usage.png1x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_340/v1572515574/www.hlidacshopu.cz/usage.png 1.5x,
+                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_340/v1572515574/www.hlidacshopu.cz/usage.png 2x">
+          <img loading="lazy"
+               src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572515574/www.hlidacshopu.cz/usage.png"
+               alt="Použití Rozšíření - Obrázkový Průvodce"
+               width="100%">
+        </picture>
         <h3>Potvrďte instalaci rozšíření</h3>
         <p class="grey-text">Poté na vás vyskočí okno, kde potvrdíte přidání do Chromu tlačítkem Přidat rozšíření.</p>
       </div>
@@ -288,12 +331,24 @@
   <div class="mdc-layout-grid__inner layout-wrapper">
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
       <h2>Nejzajímavější slevy</h2>
-      <img alt="Obrázek nejzajímavějších slev"
-           src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572499143/www.hlidacshopu.cz/mall-black-friday.png"
-           srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1x,
-                   https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1.5x,
-                   https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 2x"
-           width="100%">
+      <picture>
+        <source media="screen and (max-width: 479px)"
+                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_420/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1x,
+                        https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_420/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1.5x,
+                        https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_420/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 2x">
+        <source media="screen and (min-width: 480px) and (max-width: 839px)"
+                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_800/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1x,
+                        https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_800/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1.5x,
+                        https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_800/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 2x">
+        <source media="screen and (min-width: 840px)"
+                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1x,
+                        https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1.5x,
+                        https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 2x">
+        <img loading="lazy"
+             alt="Obrázek nejzajímavějších slev"
+             src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572499143/www.hlidacshopu.cz/mall-black-friday.png"
+             width="100%">
+      </picture>
     </div>
   </div>
 </section>
