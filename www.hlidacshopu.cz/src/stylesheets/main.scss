@@ -36,12 +36,14 @@ header {
   padding-top: 16px;
   z-index: 10;
   --mdc-layout-grid-margin-desktop: 0 24px;
-  --mdc-layout-grid-margin-tablet: 0;
+  --mdc-layout-grid-margin-tablet: 0 16px;
   --mdc-layout-grid-margin-phone: 0;
 
   .hs_logo {
     display: flex;
-    transform: translate(-24px, 4px);
+    @media screen and (min-width: 1032px){
+      transform: translate(-24px, 4px);
+    }
   }
   li a {
     color: black;
@@ -763,7 +765,7 @@ footer {
 
 .modal {
   background: rgba(0, 0, 0, 0.4);
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -794,6 +796,7 @@ footer {
     right: 16px;
     width: 32px;
     height: 32px;
+    z-index: 1001;
     line-height: 32px;
     border: 1px solid var(--purple);
     border-radius: 50%;
@@ -806,6 +809,11 @@ footer {
       font-size: 1.6em;
       text-decoration: none;
     }
+  }
+
+  h2 {
+    margin-bottom: 0;
+    font-size: 1.5em;
   }
 }
 
@@ -861,4 +869,41 @@ footer {
     height: 48px;
     line-height: 48px;
   }
+
+  .result {
+    transform: scaleY(1);
+    transition: transform 0.3s ease;
+  }
+  .result--hidden {
+    transform: scaleY(0);
+    display: none;
+  }
 }
+
+.loader,.loader::after {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px
+}
+
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border: 4px solid rgba(255,255,255,0.8);
+  border-left-color: var(--red);
+  transform: translateZ(0);
+  animation: load8 1.1s infinite linear
+}
+
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+

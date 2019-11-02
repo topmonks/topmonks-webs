@@ -355,12 +355,20 @@
 
 <div id="hlidac-shopu-modal" class="modal modal--hidden">
   <div class="modal__inner mdc-layout-grid">
-    <div class="mdc-layout-grid__inner">
+    <div class="modal__close">
+      <a href="/" title="Zavřít">&times;</a>
+    </div>
+    <div id="hlidac-shopu-modal__loader" class="result mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Pracuji&hellip;</h2>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple">
+        <div class=loading-container><div class=loader aria-label="Načítám data…">Načítám data&hellip;</div></div>
+      </div>
+    </div>
+    <div id="hlidac-shopu-modal__found" class="result mdc-layout-grid__inner">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2><a href="#" id="product-name">Název Produktu</a></h2>
-        <div class="modal__close">
-          <a href="/" title="Zavřít">&times;</a>
-        </div>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple">
         <time id="latest-date" datetime="2019-10-30">30. října 2019</time>
@@ -378,6 +386,14 @@
           <div style="width:12px;height:12px;background-color:#FF8787;border-radius:2px;margin: 2px 5px 0 8px;"></div>
           <span>Prodejní cena</span>
         </div>
+      </div>
+    </div>
+    <div id="hlidac-shopu-modal__not-found" class="result mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Nenalezeno</h2>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple">
+        <p>Je nám líto, ale hledaný produkt nebo e-shop nemáme v naší databázi.</p>
       </div>
     </div>
   </div>
@@ -402,28 +418,32 @@
   }
 
   function createDataset(data) {
-    const dataMap = new Map(data.map(i => [parseTime(i.d).getTime(), i]));
-    const dataset = {
-      originalPrice: [],
-      currentPrice: [],
-    };
-    let lastDay = data[0];
-    for (const day of daysBetween(parseTime(data[0].d), parseTime(data[data.length - 1].d))) {
-      let item = dataMap.get(day.getTime());
-      if (!item) {
-        item = lastDay;
-      } else {
-        lastDay = item;
-      }
-      dataset.originalPrice.push({ x: day, y: item.o === "" ? null : item.o });
-      dataset.currentPrice.push({ x: day, y: item.c === "" ? null : item.c });
+    if (typeof data === "string") {
+      data = JSON.parse(data);
     }
-    return dataset;
+    const dataMap = new Map(data.map(x => [parseTime(x.d).getTime(), x]));
+    let lastDay = data[0];
+    const days = Array.from(daysBetween(parseTime(data[0].d), parseTime(data[data.length - 1].d)));
+    const originalPrice = new Array(days.length);
+    const currentPrice = new Array(days.length);
+    for (let i = 0, l = days.length; i < l; i++) {
+      const day  = days[i];
+      const item = dataMap.get(day.getTime()) || lastDay;
+      lastDay = item;
+      originalPrice[i] = { x: day, y: item.o === "" ? null : item.o };
+      currentPrice[i] = { x: day, y: item.c === "" ? null : item.c };
+    }
+    return {
+      originalPrice,
+      currentPrice
+    };
   }
 
+  Chart.defaults.global.defaultFontFamily = "'Montserrat', sans-serif";
+  Chart.defaults.global.defaultFontSize = 16;
   Chart.plugins.register({
     afterDraw: function({chart, data}) {
-      if (data.datasets.every(({data}) => data.length == 0)) {
+      if (data.datasets.every(({data}) => data.length === 0)) {
         // No data is present
         var ctx = chart.ctx;
         var width = chart.width;
@@ -432,25 +452,16 @@
         ctx.save();
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        ctx.font = "16px normal 'Helvetica Nueue'";
         ctx.fillText("Chybí data", width / 2, height / 2);
         ctx.restore();
       }
     }
   });
 
-  function plot(canvas, prices) {
+  function plot(canvas, {data: prices}) {
     const min = Math.min(...prices.currentPrice.filter(p => p.y !== null).map(p => p.y));
     const max = Math.max(...prices.currentPrice.filter(p => p.y !== null).map(p => p.y));
     const ctx = canvas.getContext("2d");
-    const gradient = (start, stop) => {
-      const g = ctx.createLinearGradient(canvas.width / 2, 0, canvas.width / 2, canvas.height);
-      g.addColorStop(0, start);
-      g.addColorStop(1, stop);
-      return g;
-    };
-    const blueGradient = gradient("rgba(92, 98, 205, 0.15)", "rgba(255, 255, 255, 0)");
-    const redGradient = gradient("rgba(235, 111, 85, 0.2)", "rgba(255, 255, 255, 0)");
 
     return new Chart(ctx, {
       type: "line",
@@ -465,7 +476,7 @@
             borderJoinStyle: "round",
             borderCapStyle: "round",
             fill: "origin",
-            backgroundColor: blueGradient,
+            backgroundColor: "#ffffff00",
             pointRadius: 0,
             spanGaps: true,
             data: prices.originalPrice,
@@ -473,12 +484,12 @@
           {
             label: "Prodejní cena",
             steppedLine: "after",
-            borderColor: "#EB6F55",
+            borderColor: "#FF8787",
             borderWidth: 3,
             borderJoinStyle: "round",
             borderCapStyle: "round",
             fill: "origin",
-            backgroundColor: redGradient,
+            backgroundColor: "#ffffff00",
             pointRadius: 0,
             spanGaps: true,
             data: prices.currentPrice,
@@ -495,18 +506,18 @@
           callbacks: {
             title(item, data) {
               const date = data.labels[item[0].index];
-              return date.toLocaleDateString(undefined, { day: "numeric", month: "numeric", year: "numeric" });
+              return date.toLocaleDateString("cs", { day: "numeric", month: "long", year: "numeric" });
             },
             label(item, _data) {
               if (item.datasetIndex === 0) {
-                return `Původní: ${item.yLabel.toLocaleString()}`;
+                return `Uváděná původní cena: ${item.yLabel.toLocaleString("cs")},- Kč`;
               }
-              return `Prodejní: ${item.yLabel.toLocaleString()}`;
+              return `Prodejní cena: ${item.yLabel.toLocaleString("cs")},- Kč`;
             },
             labelColor(item, _chart) {
-              const blue = "#FF8787";
-              const red = "#5C62CD";
-              const color = item.datasetIndex === 1 ? blue : red;
+              const red = "#FF8787";
+              const blue = "#5C62CD";
+              const color = item.datasetIndex === 1 ? red : blue;
 
               return {
                 borderColor: color,
@@ -520,16 +531,16 @@
             type: "time",
             time: {
               unit: "day",
-              stepSize: "15",
+              stepSize: 14,
               displayFormats: {
-                day: "D. M. YYYY"
+                day: "D. MM. YYYY"
               }
             },
           }],
           yAxes: [{
             ticks: {
-              suggestedMax: max,
-              suggestedMin: min,
+              suggestedMax: max + 0.1 * max,
+              suggestedMin: min - 0.1 * min,
             }
           }]
         }
@@ -544,22 +555,29 @@
   const form = document.getElementById("compare-form");
   const chart = document.getElementById("hlidac-shopu-chart");
   const modal = document.getElementById("hlidac-shopu-modal");
+  const loader = document.getElementById("hlidac-shopu-modal__loader");
+  const found = document.getElementById("hlidac-shopu-modal__found");
+  const notFound = document.getElementById("hlidac-shopu-modal__not-found");
   const currentPriceEl = document.getElementById("current-price");
   const originalPriceEl = document.getElementById("original-price");
   const productName = document.getElementById("product-name");
   const latestDate = document.getElementById("latest-date");
   const realDiscount = document.getElementById("real-discount");
-  const apiUrl = detailUri => `https://api.hlidacshopu.cz/shop?url=${encodeURIComponent(detailUri)}`;
+  const apiUrl = detailUri => `https://api.hlidacshopu.cz/shop?url=${encodeURIComponent(detailUri)}&metadata=1`;
+  const meta = ({itemImage, itemName}) => ({name: itemName, imageUrl: itemImage});
 
   form.addEventListener("submit", e => {
     e.preventDefault();
-    showResultsModal(e.target["url"].value);
+    const detailUri = e.target["url"].value;
+    history.pushState({showModal: true, detailUri}, null, `?url=${encodeURIComponent(detailUri)}`)
+    showResultsModal(detailUri);
   });
 
   modal.addEventListener("click", e => {
     e.preventDefault();
     const target = e.target;
     if (target === modal || target.classList.contains("modal__close") || target.parentElement.classList.contains("modal__close")) {
+      history.pushState({showModal: false}, null, "/");
       hideResultsModal();
     }
   });
@@ -571,32 +589,68 @@
     }
   });
 
+  addEventListener("popstate", e => {
+    if (!history.state) {
+      hideResultsModal();
+      return;
+    }
+    const {showModal, detailUri} = history.state;
+    if (showModal) {
+      showResultsModal(detailUri);
+    }
+    else {
+      hideResultsModal();
+    }
+  });
+
   function hideResultsModal() {
     modal.classList.toggle("modal--hidden");
     document.body.classList.toggle("no-scroll");
   }
 
-  async function showResultsModal(detailUri) {
-    modal.classList.toggle("modal--hidden");
-    document.body.classList.toggle("no-scroll");
-    const resp = await fetch(apiUrl(detailUri));
-    if (resp.statusCode === 404) {
-      // TODO: handle 404
-      return;
-    }
-    const data = await resp.json();
-    const chartData = createDataset(data);
-    fillProductDetailsData(detailUri, chartData);
-    plot(chart, chartData);
+  function timeout(ms, promise) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => reject(new Error("timeout")), ms);
+      promise.then(resolve, reject);
+    });
   }
 
-  function fillProductDetailsData(detailUri, {currentPrice, originalPrice}) {
+  async function fetchDataSet(detailUri) {
+    const resp = await timeout(4000, fetch(apiUrl(detailUri)));
+    if (!resp.ok) throw new Error("API error");
+    const data = await resp.json();
+    return {
+      meta: data.metadata && data.metadata.map(meta) || {},
+      data: createDataset(data.data || data)
+    };
+  }
+
+  async function showResultsModal(detailUri) {
+    loader.classList.remove("result--hidden");
+    notFound.classList.add("result--hidden");
+    found.classList.add("result--hidden");
+    modal.classList.toggle("modal--hidden");
+    document.body.classList.toggle("no-scroll");
+    try {
+      const chartData = await fetchDataSet(detailUri);
+      fillProductDetailsData(detailUri, chartData);
+      plot(chart, chartData);
+      found.classList.remove("result--hidden");
+    }
+    catch (ex) {
+      console.error(ex);
+      notFound.classList.remove("result--hidden");
+    }
+    loader.classList.add("result--hidden");
+  }
+
+  function fillProductDetailsData(detailUri, {meta, data: {currentPrice, originalPrice}}) {
     if (!currentPrice.length) return;
     const origPrice = parseInt(currentPrice[0].y);
     const actualPrice = parseInt(currentPrice[currentPrice.length - 1].y);
     const discount = Math.round(100 * (origPrice - actualPrice) / origPrice);
     productName.href = detailUri;
-    // TODO: productName.innerText = chartData.meta.name;
+    productName.innerText = meta.name || "Název produktu";
     currentPriceEl.innerText = `${actualPrice},–`;
     originalPriceEl.innerText = `${originalPrice[originalPrice.length - 1].y},–`;
     latestDate.datetime = currentPrice[currentPrice.length - 1].x.toISOString();
