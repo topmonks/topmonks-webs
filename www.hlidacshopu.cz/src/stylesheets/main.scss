@@ -602,13 +602,14 @@ footer {
 
     a,
     span {
-      color: #8896a7;
+      color: var(--dark-grey);
       text-decoration: none;
     }
   }
 
   .logo-box {
     .sub-info--grey {
+      color: var(--dark-grey);
       height: 40px;
     }
   }
