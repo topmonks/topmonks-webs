@@ -6,6 +6,11 @@
     border-bottom: 1px solid #DADADA;
   }
 
+  article {
+    margin-bottom: 15px;
+    display: flex;
+  }
+
   h3 {
     margin: 0 0 10px 0;
     padding: 0;
@@ -13,7 +18,25 @@
     line-height: 29px;
   }
 
-  p.media__date {
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: #000;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: var(--dark-purple);
+  }
+
+  img { width: 250px; }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 0.5em;
+  }
+
+  &__date {
     font-size: 14px;
     line-height: 17px;
     color: var(--purple);
@@ -21,70 +44,14 @@
     padding: 0;
   }
 
-  .media__description {
+  &__description {
     font-size: 18px;
     line-height: 28px;
     text-align: justify;
     color: #626262;
   }
 
-  .media-article-item {
-    margin-bottom: 15px;
-
-    .media-article-item__image {
-      position: relative;
-      display: flex;
-
-      .media-article-item__image-tag {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        font-size: 14px;
-        line-height: 18px;
-        width: 105px;
-        padding: 3px 7px;
-        color: #fff;
-      }
-
-      .media-tag--press {
-        background-color: var(--purple);
-      }
-
-      .media-tag--about-us {
-        color: #727272;
-        background-color: #fff;
-      }
-    }
-  }
-
-  .media-press-grid {
-    margin-bottom: 30px;
-
-    .media-press__all {
-      color: var(--purple);
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 20px;
-      letter-spacing: 0.01em;
-      text-decoration: none;
-      display: block;
-      margin-top: 15px;
-    }
-  }
-
-  .media-next-articles {
-    margin-top: 50px;
-    .mdc-layout-grid__inner{
-      text-align: center;
-    }
-    button {
-      color: #fff;
-      background-color: var(--purple);
-      border: none;
-      box-sizing: border-box;
-      border-radius: 6px;
-      padding: 15px 60px;
-      font-size: 16px;
-    }
+  &__image {
+    margin-right: 24px;
   }
 }
