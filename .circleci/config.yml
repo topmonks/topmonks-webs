@@ -272,17 +272,6 @@ jobs:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E2EF8JLZURG0RI
       HOST: www.hookamonk.com
 
-  test-www-xduediligence-com:
-    <<: *test-site
-    environment:
-      HOST: www.xduediligence.com
-
-  deploy-www-xduediligence-com:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E3CP5QY5Q88VXM
-      HOST: www.xduediligence.com
-
   test-monkslab-cz:
     <<: *test-site
     environment:
@@ -351,14 +340,6 @@ workflows:
       - test-prodeti-topmonks-cz:
           requires:
             - build
-      - deploy-www-xduediligence-com:
-          context: org-global
-          requires:
-            - provision
-            - build
-          filters:
-            branches:
-              only: master
       - deploy-prodeti-topmonks-cz:
           context: org-global
           requires:
