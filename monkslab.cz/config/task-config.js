@@ -3,15 +3,10 @@ const createSharedTaskConfig = require("../../shared/config/createSharedTaskConf
 
 const config = createSharedTaskConfig(__dirname, {
   images: true,
+  javascripts: false,
   fonts: true,
   static: true,
   svgSprite: true,
-
-  javascripts: {
-    entry: {
-      app: ["./index.js"]
-    }
-  },
 
   stylesheets: {
     sass: {

@@ -8,16 +8,11 @@ const path = require("path");
 const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
 
 const config = createSharedTaskConfig(__dirname, {
+  javascripts: false,
   images: true,
   fonts: true,
   static: true,
   svgSprite: true,
-
-  javascripts: {
-    entry: {
-      app: ["./index.js"]
-    }
-  },
 
   stylesheets: {
     sass: {

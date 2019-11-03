@@ -8,15 +8,10 @@ const pathConfig = require("./path-config.json");
 
 module.exports = {
   images: true,
+  javascripts: false,
   fonts: true,
   static: true,
   svgSprite: true,
-
-  javascripts: {
-    entry: {
-      app: ["./index.js"]
-    }
-  },
 
   stylesheets: {
     sass: {

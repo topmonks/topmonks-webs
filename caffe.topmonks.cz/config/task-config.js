@@ -13,15 +13,10 @@ const jsonData = n => fs.readFile(dataFile(n), "utf8").then(f => JSON.parse(f));
 
 module.exports = {
   images: true,
+  javascripts: false,
   fonts: true,
   static: true,
   svgSprite: true,
-
-  javascripts: {
-    entry: {
-      app: ["./index.js"]
-    }
-  },
 
   stylesheets: {
     sass: {

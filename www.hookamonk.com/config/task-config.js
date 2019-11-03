@@ -5,15 +5,10 @@ const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
 
 const config = createSharedTaskConfig(__dirname, {
   images: true,
+  javascripts: false,
   fonts: true,
   static: true,
   svgSprite: false,
-
-  javascripts: {
-    entry: {
-      app: ["./index.js"]
-    }
-  },
 
   stylesheets: {
     sass: {
