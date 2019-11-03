@@ -1,6 +1,6 @@
 <svg width="60" height="19" viewBox="0 0 60 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <title>[logo] Alza</title>
-  <g clip-path="url(#clip0)">
+  <title>Alza.cz</title>
+  <g>
     <path fill-rule="evenodd" clip-rule="evenodd"
           d="M2.69188 8.27765L4.55953 4.20435L8.89286 3.31134L14.0929 3.94038L15.1603 6.85389L13.7097 15.0805L3.55996 14.964L2.15887 12.9449L2.69188 8.27765Z"
           fill="white"/>
@@ -21,9 +21,4 @@
       d="M58.5673 11.9789L58.3397 13.3423H53.4324L53.6374 12.1179L56.3632 9.21842H54.3104L54.5323 7.89575H59.2573L59.0777 8.94742L56.2063 11.9789H58.5673Z"
       fill="#231F20"/>
   </g>
-  <defs>
-    <clipPath id="clip0">
-      <rect width="59.2571" height="17.9402" fill="white" transform="translate(0 0.63092)"/>
-    </clipPath>
-  </defs>
 </svg>
