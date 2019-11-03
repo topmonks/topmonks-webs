@@ -534,6 +534,7 @@
     const target = e.target;
     if (haveToCloseModal(target)) {
       history.pushState({showModal: false}, null, "/");
+      hideResultsModal();
     }
   });
 
