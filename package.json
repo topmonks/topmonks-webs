@@ -11,6 +11,7 @@
     "@material/layout-grid": "^3.1.0",
     "@pulumi/aws": "^1.7.0",
     "@pulumi/pulumi": "^1.4.0",
+    "@types/node": "^12.12.0",
     "bootstrap": "4.3.1",
     "jquery": "3.4.1",
     "jquery.easing": "^1.4.1",
@@ -19,7 +20,6 @@
   "devDependencies": {
     "@topmonks/blendid": "git://github.com/topmonks/blendid.git",
     "@types/chart.js": "^2.8.10",
-    "@types/node": "^12.12.0",
     "ava": "^2.4.0",
     "bluebird": "^3.7.1",
     "broken-link-checker-local": "^0.2.1",
