@@ -517,11 +517,26 @@
   const modalRenderRoot = document.getElementById("hlidac-shopu-modal__placeholder");
   const chart = () => document.getElementById("hlidac-shopu-chart");
   const apiUrl = detailUri => `https://api.hlidacshopu.cz/shop?url=${encodeURIComponent(detailUri)}&metadata=1`;
-  const meta = ({itemImage, itemName}) => ({name: itemName, imageUrl: itemImage === "null" ? null : itemImage});
+  const meta = ({itemImage, itemName, shop}) => ({shop, name: itemName, imageUrl: itemImage === "null" ? null : itemImage});
   const formatMoney = x => x.toLocaleString("cs", {minimumFractionDigits: 2, maximumFractionDigits: 2}).replace(/,00/g, ",-");
   const formatPercents = x => `${Math.round(100 * x).toLocaleString("cs")} %`;
   const haveToCloseModal = t => t === modal || t.classList.contains("modal__close") || t.parentElement.classList.contains("modal__close");
   const timeout = ms => new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), ms));
+  const shops = new Map([
+    ["alza", {name: "Alza", logo: "alza_logo", url: "https://www.alza.cz/"}],
+    ["czc", {name: "CZC.CZ", logo: "czc.cz_logo", url: "https://www.czc.cz/"}],
+    ["datart", {name: "Datart", logo: "datart_logo", url: "https://www.datart.cz/"}],
+    ["itesco", {name: "iTesco", logo: "tesco_logo", url: "https://www.itesco.cz/"}],
+    ["kasa", {name: "kasa.cz", logo: "kasa_logo", url: "https://www.kasa.cz/"}],
+    ["kosik", {name: "Košík.cz", logo: "kosik_logo", url: "https://www.kosik.cz/"}],
+    ["lekarna", {name: "Lékárna.cz", logo: "lekarna_logo", url: "https://www.lekarna.cz/"}],
+    ["mall", {name: "Mall.cz", logo: "mall_logo", url: "https://www.mall.cz/"}],
+    ["mironet", {name: "Mironet", logo: "mironet_logo", url: "https://www.mironet.cz/"}],
+    ["mountfield", {name: "Mountfield", logo: "mountfield_logo", url: "https://www.mountfield.cz/"}],
+    ["notino", {name: "Notino", logo: "notino_logo", url: "https://www.notino.cz/"}],
+    ["rohlik", {name: "Rohlík.cz", logo: "rohlik_logo", url: "https://www.rohlik.cz/"}],
+    ["tsbohemia", {name: "TSBohemia", logo: "tsbohemia_logo", url: "https://www.tsbohemia.cz/"}]
+  ]);
 
   form.addEventListener("submit", e => {
     e.preventDefault();
@@ -580,14 +595,12 @@
     };
   }
 
-  function templateData(detailUrl, { meta: { name, imageUrl }, data: { currentPrice, originalPrice } }) {
-    const lastActualPrice = currentPrice.filter(({ y }) => y).pop();
+  function templateData(detailUrl, { meta: { shop, name, imageUrl }, data: { currentPrice, originalPrice } }) {
     const lastClaimedPrice = originalPrice.map(x => x.y).filter(y => y).pop();
-    const actualPrice = lastActualPrice.y;
-    const date = lastActualPrice.x;
-    const origPrice = currentPrice.map(x => x.y).filter(y => y)[0];
+    const { y: actualPrice, x: date } = currentPrice.filter(({ y }) => y).pop();
+    const origPrice = currentPrice.map(x => x.y).filter(y => y).shift();
     const discount = (origPrice - actualPrice) / origPrice;
-    return { detailUrl, name, imageUrl, discount, actualPrice, date, lastClaimedPrice };
+    return { detailUrl, name, shop, imageUrl, discount, actualPrice, date, lastClaimedPrice };
   }
 
   async function renderResultsModal(detailUrl) {
