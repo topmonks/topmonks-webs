@@ -5,7 +5,7 @@
 
 {% block preload %}
 <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js" as="script" crossorigin="anonymous">
-<!-- <link rel="modulepreload" href="https://unpkg.com/lit-html@1.1.2/lit-html.js?module"> -->
+<link rel="modulepreload" href="https://unpkg.com/lit-html@1.1.1/lit-html.js?module" crossorigin="anonymous">
 {% endblock %}
 
 {% block main %}
@@ -356,44 +356,7 @@
     <div class="modal__close">
       <a href="/" title="Zavřít">&times;</a>
     </div>
-    <div id="hlidac-shopu-modal__loader" class="result mdc-layout-grid__inner">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2>Pracuji&hellip;</h2>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple">
-        <div class=loading-container><div class=loader aria-label="Načítám data…">Načítám data&hellip;</div></div>
-      </div>
-    </div>
-    <div id="hlidac-shopu-modal__found" class="result mdc-layout-grid__inner">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2><a href="#" id="product-name">Název Produktu</a></h2>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple">
-        <time id="latest-date" datetime="2019-10-30">30. října 2019</time>
-        <div class="claimed-price">Uváděná původní cena <del id="original-price">2 600,-</del></div>
-        <div class="actual-price">Prodejní cena <span id="current-price">2 799,-</span></div>
-        <div>Reálná sleva <b class="discount"><span id="real-discount">-7.5 %</span></b></div>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <canvas id="hlidac-shopu-chart" width="100%"></canvas>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <div style="display:flex;justify-content: flex-end">
-          <div style="width:12px;height:12px;background-color:#5C62CD;border-radius:2px;margin-right:5px;margin-top:2px;"></div>
-          <span>Uváděná původní cena</span>
-          <div style="width:12px;height:12px;background-color:#FF8787;border-radius:2px;margin: 2px 5px 0 8px;"></div>
-          <span>Prodejní cena</span>
-        </div>
-      </div>
-    </div>
-    <div id="hlidac-shopu-modal__not-found" class="result mdc-layout-grid__inner">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2>Nenalezeno</h2>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple">
-        <p>Je nám líto, ale hledaný produkt nebo e-shop nemáme v naší databázi.</p>
-      </div>
-    </div>
+    <div id="hlidac-shopu-modal__placeholder"></div>
   </div>
 </div>
 {% endblock %}
@@ -428,8 +391,8 @@
       const day  = days[i];
       const item = dataMap.get(day.getTime()) || lastDay;
       lastDay = item;
-      originalPrice[i] = { x: day, y: item.o === "" ? null : item.o };
-      currentPrice[i] = { x: day, y: item.c === "" ? null : item.c };
+      originalPrice[i] = { x: day, y: item.o === "" ? null : parseInt(item.o) };
+      currentPrice[i] = { x: day, y: item.c === "" ? null : parseInt(item.c) };
     }
     return {
       originalPrice,
@@ -547,43 +510,37 @@
   }
 </script>
 
-<script type="module">
-  //import "https://unpkg.com/dile-modal@1.5.2/dile-modal.js";
-  //import {html, svg, render} from "https://unpkg.com/lit-html@1.1.2/lit-html.js?module";
+<script type="module" crossorigin="anonymous">
+  import {html, render} from "https://unpkg.com/lit-html@1.1.1/lit-html.js?module";
   const form = document.getElementById("compare-form");
-  const chart = document.getElementById("hlidac-shopu-chart");
   const modal = document.getElementById("hlidac-shopu-modal");
-  const loader = document.getElementById("hlidac-shopu-modal__loader");
-  const found = document.getElementById("hlidac-shopu-modal__found");
-  const notFound = document.getElementById("hlidac-shopu-modal__not-found");
-  const currentPriceEl = document.getElementById("current-price");
-  const originalPriceEl = document.getElementById("original-price");
-  const productName = document.getElementById("product-name");
-  const latestDate = document.getElementById("latest-date");
-  const realDiscount = document.getElementById("real-discount");
+  const modalRenderRoot = document.getElementById("hlidac-shopu-modal__placeholder");
+  const chart = () => document.getElementById("hlidac-shopu-chart");
   const apiUrl = detailUri => `https://api.hlidacshopu.cz/shop?url=${encodeURIComponent(detailUri)}&metadata=1`;
-  const meta = ({itemImage, itemName}) => ({name: itemName, imageUrl: itemImage});
+  const meta = ({itemImage, itemName}) => ({name: itemName, imageUrl: itemImage === "null" ? null : itemImage});
+  const formatMoney = x => x.toLocaleString("cs", {minimumFractionDigits: 2, maximumFractionDigits: 2}).replace(/,00/g, ",-");
+  const formatPercents = x => `${Math.round(100 * x).toLocaleString("cs")} %`;
+  const haveToCloseModal = t => t === modal || t.classList.contains("modal__close") || t.parentElement.classList.contains("modal__close");
 
   form.addEventListener("submit", e => {
     e.preventDefault();
     const detailUri = e.target["url"].value;
-    history.pushState({showModal: true, detailUri}, null, `?url=${encodeURIComponent(detailUri)}`)
-    showResultsModal(detailUri);
+    history.pushState({showModal: true, detailUri}, null, `?url=${encodeURIComponent(detailUri)}`);
+    renderResultsModal(detailUri);
   });
 
   modal.addEventListener("click", e => {
     e.preventDefault();
     const target = e.target;
-    if (target === modal || target.classList.contains("modal__close") || target.parentElement.classList.contains("modal__close")) {
+    if (haveToCloseModal(target)) {
       history.pushState({showModal: false}, null, "/");
-      hideResultsModal();
     }
   });
 
   addEventListener("load", e => {
     const searchParams = new URLSearchParams(location.search);
     if (searchParams.has("url")) {
-      showResultsModal(searchParams.get("url"));
+      renderResultsModal(searchParams.get("url"));
     }
   });
 
@@ -594,16 +551,21 @@
     }
     const {showModal, detailUri} = history.state;
     if (showModal) {
-      showResultsModal(detailUri);
+      renderResultsModal(detailUri);
     }
     else {
       hideResultsModal();
     }
   });
 
+  function showResultsModal() {
+    modal.classList.remove("modal--hidden");
+    document.body.classList.add("no-scroll");
+  }
+
   function hideResultsModal() {
-    modal.classList.toggle("modal--hidden");
-    document.body.classList.toggle("no-scroll");
+    modal.classList.add("modal--hidden");
+    document.body.classList.remove("no-scroll");
   }
 
   function timeout(ms, promise) {
@@ -616,49 +578,93 @@
   async function fetchDataSet(detailUri) {
     const resp = await timeout(4000, fetch(apiUrl(detailUri)));
     if (!resp.ok) throw new Error("API error");
-    const data = await resp.json();
+    const {data, metadata} = await resp.json();
     return {
-      meta: data.metadata && meta(data.metadata) || {},
-      data: createDataset(data.data || data)
+      meta: meta(metadata),
+      data: createDataset(data)
     };
   }
 
-  async function showResultsModal(detailUri) {
-    loader.classList.remove("result--hidden");
-    notFound.classList.add("result--hidden");
-    found.classList.add("result--hidden");
-    modal.classList.toggle("modal--hidden");
-    document.body.classList.toggle("no-scroll");
+  function templateData(detailUrl, { meta: { name, imageUrl }, data: { currentPrice, originalPrice } }) {
+    const lastActualPrice = currentPrice.filter(({ y }) => y).pop();
+    const lastClaimedPrice = originalPrice.map(x => x.y).filter(y => y).pop();
+    const actualPrice = lastActualPrice.y;
+    const date = lastActualPrice.x;
+    const origPrice = currentPrice.map(x => x.y).filter(y => y)[0];
+    const discount = (origPrice - actualPrice) / origPrice;
+    return { detailUrl, name, imageUrl, discount, actualPrice, date, lastClaimedPrice };
+  }
+
+  async function renderResultsModal(detailUrl) {
+    render(loaderTemplate(), modalRenderRoot);
+    showResultsModal();
     try {
-      const chartData = await fetchDataSet(detailUri);
-      fillProductDetailsData(detailUri, chartData);
-      plot(chart, chartData);
-      found.classList.remove("result--hidden");
+      const chartData = await fetchDataSet(detailUrl);
+      render(resultTemplate(templateData(detailUrl, chartData)), modalRenderRoot);
+      plot(chart(), chartData);
     }
     catch (ex) {
       console.error(ex);
-      notFound.classList.remove("result--hidden");
+      render(notFoundTemplate(), modalRenderRoot);
     }
-    loader.classList.add("result--hidden");
   }
 
-  function fillProductDetailsData(detailUri, {meta, data: {currentPrice, originalPrice}}) {
-    if (!currentPrice.length) return;
-    const origPrice = parseInt(currentPrice[0].y);
-    const actualPrice = parseInt(currentPrice[currentPrice.length - 1].y);
-    const discount = Math.round(100 * (origPrice - actualPrice) / origPrice);
-    productName.href = detailUri;
-    productName.innerText = meta.name || "Název produktu";
-    currentPriceEl.innerText = `${actualPrice},–`;
-    originalPriceEl.innerText = `${originalPrice[originalPrice.length - 1].y},–`;
-    latestDate.datetime = currentPrice[currentPrice.length - 1].x.toISOString();
-    latestDate.innerText = currentPrice[currentPrice.length - 1].x.toLocaleDateString("cs", {
-      year: "numeric",
-      month: "long",
-      day: "numeric"
-    });
-    realDiscount.innerText = `${discount} %`;
+  function notFoundTemplate() {
+    return html`
+      <div id="hlidac-shopu-modal__not-found" class="result mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Nenalezeno</h2>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple">
+          <p>Je nám líto, ale hledaný produkt nebo e-shop nemáme v naší databázi.</p>
+        </div>
+      </div>
+    `;
   }
 
+  function loaderTemplate() {
+    return html`
+      <div id="hlidac-shopu-modal__loader" class="result mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Pracuji&hellip;</h2>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple">
+          <div class=loading-container>
+            <div class=loader aria-label="Načítám data…">Načítám data&hellip;</div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function resultTemplate({detailUrl, name, imageUrl, lastClaimedPrice, actualPrice, discount, date}) {
+    const claimedPrice = x => x && html`<div class="claimed-price">Uváděná původní cena <del id="original-price">${formatMoney(x)}</del></div>`;
+    const realDiscount = x => x && html`<div>Reálná sleva <b class="discount"><span id="real-discount">${formatPercents(x)}</span></b></div>`;
+    const crawlDate = x => x && html`<time id="latest-date" datetime="${x.toISOString()}">${x.toLocaleString("cs", {day: "numeric", month: "long", year: "numeric"})}</time>`;
+    return html`
+      <div id="hlidac-shopu-modal__found" class="result mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2><a href="${detailUrl}" id="product-name">${name}</a></h2>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple">
+          ${crawlDate(date)}
+          ${claimedPrice(lastClaimedPrice)}
+          <div class="actual-price">Prodejní cena <span id="current-price">${formatMoney(actualPrice)}</span></div>
+          ${realDiscount(discount)}
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <canvas id="hlidac-shopu-chart" width="100%"></canvas>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div style="display:flex;justify-content: flex-end">
+            <div style="width:12px;height:12px;background-color:#5C62CD;border-radius:2px;margin-right:5px;margin-top:2px;"></div>
+            <span>Uváděná původní cena</span>
+            <div style="width:12px;height:12px;background-color:#FF8787;border-radius:2px;margin: 2px 5px 0 8px;"></div>
+            <span>Prodejní cena</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }
 </script>
 {% endblock %}
