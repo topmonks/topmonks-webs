@@ -217,6 +217,39 @@
 }
 
 .references {
+  .review {
+    .avatar {
+      float: left;
+      border-radius: 50%;
+      margin-right: 1.25em;
+    }
+    &__header {
+      position: relative;
+      ::after {
+        content: "";
+        position: absolute;
+        width: 72px;
+        height: 72px;
+        top: 32px;
+        left: 24px;
+        background: url("/assets/img/quote.svg") no-repeat;
+        background-size: cover;
+      }
+    }
+    &__author {
+      font-weight: bold;
+      line-height: 2;
+    }
+    &__date {
+      font-size: 14px;
+      line-height: 2;
+    }
+    &__content {
+      clear: both;
+      padding-top: 0.5em;
+    }
+  }
+
   .references_link {
     font-size: 18px;
     color: var(--purple);
