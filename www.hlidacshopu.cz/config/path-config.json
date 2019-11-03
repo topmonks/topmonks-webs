@@ -14,17 +14,17 @@
 
   "javascripts": {
     "src": "javascripts",
-    "dest": "javascripts"
+    "dest": "assets/js"
   },
 
   "stylesheets": {
     "src": "stylesheets",
-    "dest": "stylesheets"
+    "dest": "assets/css"
   },
 
   "images": {
     "src": "images",
-    "dest": "images"
+    "dest": "assets/img"
   },
 
   "fonts": {
