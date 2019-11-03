@@ -521,6 +521,7 @@
   const formatMoney = x => x.toLocaleString("cs", {minimumFractionDigits: 2, maximumFractionDigits: 2}).replace(/,00/g, ",-");
   const formatPercents = x => `${Math.round(100 * x).toLocaleString("cs")} %`;
   const haveToCloseModal = t => t === modal || t.classList.contains("modal__close") || t.parentElement.classList.contains("modal__close");
+  const timeout = ms => new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), ms));
 
   form.addEventListener("submit", e => {
     e.preventDefault();
@@ -569,15 +570,8 @@
     document.body.classList.remove("no-scroll");
   }
 
-  function timeout(ms, promise) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => reject(new Error("timeout")), ms);
-      promise.then(resolve, reject);
-    });
-  }
-
   async function fetchDataSet(detailUri) {
-    const resp = await timeout(4000, fetch(apiUrl(detailUri)));
+    const resp = await Promise.race([timeout(4000), fetch(apiUrl(detailUri))]);
     if (!resp.ok) throw new Error("API error");
     const {data, metadata} = await resp.json();
     return {
