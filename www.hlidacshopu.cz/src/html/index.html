@@ -8,6 +8,10 @@
 <link rel="modulepreload" href="https://unpkg.com/lit-html@1.1.1/lit-html.js?module" crossorigin="anonymous">
 {% endblock %}
 
+{% block styles %}
+<link rel="stylesheet" href="/assets/css/index.css">
+{% endblock %}
+
 {% block main %}
 <section class="main">
   <div class="mdc-layout-grid">
@@ -57,20 +61,7 @@
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2 class="sub-title">AKTUÁLNĚ MONITORUJEME TYTO ESHOPY</h2>
-        <div class="logos mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <a href="https://www.alza.cz/">{{sprite('alza_logo', 'Alza')}}</a>
-          <a href="https://www.czc.cz/">{{sprite('czc.cz_logo', 'CZC')}}</a>
-          <a href="https://www.datart.cz/">{{sprite('datart_logo', 'Datart')}}</a>
-          <a href="https://www.itesco.cz/">{{sprite('tesco_logo', 'iTesco')}}</a>
-          <a href="https://www.kasa.cz/">{{sprite('kasa_logo', 'kasa.cz')}}</a>
-          <a href="https://www.kosik.cz/">{{sprite('kosik_logo', 'Košík.cz')}}</a>
-          <a href="https://www.lekarna.cz/">{{sprite('lekarna_logo', 'Lékárna.cz')}}</a>
-          <a href="https://www.mall.cz/">{{sprite('mall_logo', 'Mall.cz')}}</a>
-          <a href="https://www.mironet.cz/">{{sprite('mironet_logo', 'Mironet')}}</a>
-          <a href="https://www.mountfield.cz/">{{sprite('mountfield_logo', 'Mountfield')}}</a>
-          <a href="https://www.notino.cz/">{{sprite('notino_logo', 'Notino')}}</a>
-          <a href="https://www.rohlik.cz/">{{sprite('rohlik_logo', 'Rohlík.cz')}}</a>
-          <a href="https://www.tsbohemia.cz/">{{sprite('tsbohemia_logo', 'TSBohemia')}}</a>
+        <div id="e-shopy" class="logos mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         </div>
       </div>
     </div>
@@ -80,11 +71,25 @@
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner layout-wrapper">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12">
-        <h2 class="sub-title">HLÍDAČ SHOPŮ VÁM PŘINÁŠÍ</h2>
+        <h2 class="sub-title">HLÍDAČE SHOPŮ VÁM PŘINÁŠÍ</h2>
         <div class="logos">
-          <a href="https://apify.com/"><img src="/assets/img/logos/apify_logo.svg" alt="Apify" height="40"></a>
-          <a href="https://www.keboola.com/"><img src="/assets/img/logos/keboola_logo.svg" alt="Keboola" height="40"></a>
-          <a href="https://www.topmonks.cz/"><img src="/assets/img/logos/topmonks_logo.svg" alt="TopMonks" height="40"></a>
+          <ul>
+            <li>
+              <a href="https://apify.com/">
+                <img src="/assets/img/logos/apify_logo.svg" alt="Apify" height="40">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.keboola.com/">
+                <img src="/assets/img/logos/keboola_logo.svg" alt="Keboola" height="40">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.topmonks.cz/">
+                <img src="/assets/img/logos/topmonks_logo.svg" alt="TopMonks" height="40">
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -250,21 +255,22 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Naše čísla</h2>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-        <p class="text--grey">Počet stažení</p>
-        <p class="numbers">3 600+</p>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-        <p class="text--grey">Počet e-shopů</p>
-        <p class="numbers">13</p>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-        <p class="text--grey">Počet produktů</p>
-        <p class="numbers">2 000 000+</p>
-      </div>
+      <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+        <dt class="text--grey">Nainstalovaných rozšíření</dt>
+        <dd class="number">3 600+</dd>
+      </dl>
+      <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+        <dt class="text--grey">Počet e-shopů</dt>
+        <dd id="e-shops-count" class="number">13</dd>
+      </dl>
+      <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+        <dt class="text--grey">Počet produktů</dt>
+        <dd class="number">2 000 000+</dd>
+      </dl>
     </div>
   </div>
 </section>
+
 <section class="references">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner layout-wrapper">
@@ -511,8 +517,10 @@
 </script>
 
 <script type="module" crossorigin="anonymous">
-  import {html, render} from "https://unpkg.com/lit-html@1.1.1/lit-html.js?module";
+  import {html, svg, render} from "https://unpkg.com/lit-html@1.1.1/lit-html.js?module";
   const form = document.getElementById("compare-form");
+  const eShops = document.getElementById("e-shopy");
+  const eShopsCount = document.getElementById("e-shops-count");
   const modal = document.getElementById("hlidac-shopu-modal");
   const modalRenderRoot = document.getElementById("hlidac-shopu-modal__placeholder");
   const chart = () => document.getElementById("hlidac-shopu-chart");
@@ -523,19 +531,19 @@
   const haveToCloseModal = t => t === modal || t.classList.contains("modal__close") || t.parentElement.classList.contains("modal__close");
   const timeout = ms => new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), ms));
   const shops = new Map([
-    ["alza", {name: "Alza", logo: "alza_logo", url: "https://www.alza.cz/"}],
-    ["czc", {name: "CZC.CZ", logo: "czc.cz_logo", url: "https://www.czc.cz/"}],
-    ["datart", {name: "Datart", logo: "datart_logo", url: "https://www.datart.cz/"}],
-    ["itesco", {name: "iTesco", logo: "tesco_logo", url: "https://www.itesco.cz/"}],
-    ["kasa", {name: "kasa.cz", logo: "kasa_logo", url: "https://www.kasa.cz/"}],
-    ["kosik", {name: "Košík.cz", logo: "kosik_logo", url: "https://www.kosik.cz/"}],
-    ["lekarna", {name: "Lékárna.cz", logo: "lekarna_logo", url: "https://www.lekarna.cz/"}],
-    ["mall", {name: "Mall.cz", logo: "mall_logo", url: "https://www.mall.cz/"}],
-    ["mironet", {name: "Mironet", logo: "mironet_logo", url: "https://www.mironet.cz/"}],
-    ["mountfield", {name: "Mountfield", logo: "mountfield_logo", url: "https://www.mountfield.cz/"}],
-    ["notino", {name: "Notino", logo: "notino_logo", url: "https://www.notino.cz/"}],
-    ["rohlik", {name: "Rohlík.cz", logo: "rohlik_logo", url: "https://www.rohlik.cz/"}],
-    ["tsbohemia", {name: "TSBohemia", logo: "tsbohemia_logo", url: "https://www.tsbohemia.cz/"}]
+    ["alza", {name: "Alza", logo: "alza_logo", url: "https://www.alza.cz/", viewBox: "0 0 60 19"}],
+    ["czc", {name: "CZC.CZ", logo: "czc.cz_logo", url: "https://www.czc.cz/", viewBox: "0 0 55 13"}],
+    ["datart", {name: "Datart", logo: "datart_logo", url: "https://www.datart.cz/", viewBox: "0 0 98 13"}],
+    ["itesco", {name: "iTesco", logo: "tesco_logo", url: "https://www.itesco.cz/", viewBox: "0 0 55 18"}],
+    ["kasa", {name: "kasa.cz", logo: "kasa_logo", url: "https://www.kasa.cz/", viewBox: "0 0 70 18"}],
+    ["kosik", {name: "Košík.cz", logo: "kosik_logo", url: "https://www.kosik.cz/", viewBox: "0 0 71 22"}],
+    ["lekarna", {name: "Lékárna.cz", logo: "lekarna_logo", url: "https://www.lekarna.cz/", viewBox: "0 0 79 20"}],
+    ["mall", {name: "Mall.cz", logo: "mall_logo", url: "https://www.mall.cz/", viewBox: "0 0 68 19"}],
+    ["mironet", {name: "Mironet", logo: "mironet_logo", url: "https://www.mironet.cz/", viewBox: "0 0 59 20"}],
+    ["mountfield", {name: "Mountfield", logo: "mountfield_logo", url: "https://www.mountfield.cz/", viewBox: "0 0 64 11"}],
+    ["notino", {name: "Notino", logo: "notino_logo", url: "https://www.notino.cz/", viewBox: "0 0 68 13"}],
+    ["rohlik", {name: "Rohlík.cz", logo: "rohlik_logo", url: "https://www.rohlik.cz/", viewBox: "0 0 51 28"}],
+    ["tsbohemia", {name: "TSBohemia", logo: "tsbohemia_logo", url: "https://www.tsbohemia.cz/", viewBox: "0 0 115 15"}]
   ]);
 
   form.addEventListener("submit", e => {
@@ -559,6 +567,8 @@
     if (searchParams.has("url")) {
       renderResultsModal(searchParams.get("url"));
     }
+    render(eShopList(Array.from(shops.values())), eShops);
+    eShopsCount.innerText = shops.size.toLocaleString("cs");
   });
 
   addEventListener("popstate", e => {
@@ -645,7 +655,7 @@
     `;
   }
 
-  function resultTemplate({detailUrl, name, imageUrl, lastClaimedPrice, actualPrice, discount, date}) {
+  function resultTemplate({detailUrl, name, lastClaimedPrice, actualPrice, discount, date}) {
     const claimedPrice = x => x && html`<div class="claimed-price">Uváděná původní cena <del id="original-price">${formatMoney(x)}</del></div>`;
     const realDiscount = x => x && html`<div>Reálná sleva <b class="discount"><span id="real-discount">${formatPercents(x)}</span></b></div>`;
     const crawlDate = x => x && html`<time id="latest-date" datetime="${x.toISOString()}">${x.toLocaleString("cs", {day: "numeric", month: "long", year: "numeric"})}</time>`;
@@ -672,6 +682,24 @@
           </div>
         </div>
       </div>
+    `;
+  }
+
+  function logoTemplate({ logo, name, url, viewBox }) {
+    const image = svg`
+      <svg viewBox="${viewBox}">
+        <title>${name}</title>
+        <use href="/assets/img/icons.svg#${logo}"/>
+      </svg>
+    `;
+    return html`<a href="${url}" class='sprite sprite--${logo}' title="${name}">${image}</a>`;
+  }
+
+  function eShopList(shops) {
+    return html`
+      <ul>
+        ${shops.map(x => html`<li>${logoTemplate(x)}</li>`)}
+      </ul>
     `;
   }
 </script>
