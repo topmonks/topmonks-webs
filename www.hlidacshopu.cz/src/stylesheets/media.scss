@@ -9,6 +9,9 @@
   article {
     margin-bottom: 15px;
     display: flex;
+    @media screen and (max-width: 479px) {
+      flex-flow: column;
+    }
   }
 
   h3 {
@@ -47,7 +50,6 @@
   &__description {
     font-size: 18px;
     line-height: 28px;
-    text-align: justify;
     color: #626262;
   }
 
