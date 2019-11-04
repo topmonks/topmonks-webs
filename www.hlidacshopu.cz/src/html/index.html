@@ -550,6 +550,7 @@
       e.preventDefault();
       history.pushState({showModal: false}, null, "/");
       hideResultsModal();
+      clearAndFocusInput();
     }
   });
 
@@ -557,8 +558,7 @@
     if (e.key === "Escape" && history.state && history.state.showModal) {
       history.pushState({showModal: false}, null, "/");
       hideResultsModal();
-      form["url"].value = "";
-      form["url"].focus();
+      clearAndFocusInput();
     }
   });
 
@@ -586,6 +586,11 @@
       hideResultsModal();
     }
   });
+
+  function clearAndFocusInput() {
+    form["url"].value = "";
+    form["url"].focus();
+  }
 
   function showResultsModal() {
     modal.classList.remove("modal--hidden");
