@@ -545,9 +545,9 @@
   });
 
   modal.addEventListener("click", e => {
-    e.preventDefault();
     const target = e.target;
     if (haveToCloseModal(target)) {
+      e.preventDefault();
       history.pushState({showModal: false}, null, "/");
       hideResultsModal();
     }
