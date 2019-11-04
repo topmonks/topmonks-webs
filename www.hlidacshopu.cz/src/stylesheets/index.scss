@@ -317,6 +317,14 @@
       padding: 16px;
     }
   }
+  .sprite {
+    display: block;
+    padding-bottom: 0.5em;
+
+    svg {
+      height: 32px;
+    }
+  }
   .actual-price {
     color: var(--red);
     font-weight: bold;

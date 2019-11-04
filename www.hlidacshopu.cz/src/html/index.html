@@ -657,14 +657,15 @@
     `;
   }
 
-  function resultTemplate({detailUrl, name, lastClaimedPrice, actualPrice, discount, date}) {
+  function resultTemplate({detailUrl, name, shop, lastClaimedPrice, actualPrice, discount, date}) {
     const claimedPrice = x => x && html`<div class="claimed-price">Uváděná původní cena <del id="original-price">${formatMoney(x)}</del></div>`;
     const realDiscount = x => x && html`<div>Reálná sleva <b class="discount"><span id="real-discount">${formatPercents(x)}</span></b></div>`;
     const crawlDate = x => x && html`<time id="latest-date" datetime="${x.toISOString()}">${x.toLocaleString("cs", {day: "numeric", month: "long", year: "numeric"})}</time>`;
+    const shopLogo = x => x && logoTemplate(x);
     return html`
       <div id="hlidac-shopu-modal__found" class="result mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2><a href="${detailUrl}" id="product-name">${name}</a></h2>
+          <h2>${shopLogo(shops.get(shop))}<a href="${detailUrl}" id="product-name">${name || "Vámi vybraný produkt"}</a></h2>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple">
           ${crawlDate(date)}
