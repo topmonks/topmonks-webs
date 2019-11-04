@@ -5,6 +5,14 @@
 <link rel="stylesheet" href="/assets/css/media.css">
 {% endblock %}
 
+{% macro mediaImage(path) %}
+<img src="https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_auto/{{path}}"
+     srcset="https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_1/{{path}} 1x,
+             https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_1.5/{{path}} 1.5x,
+             https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_2/{{path}} 2x"
+     alt="" width="250" height="142" role="presentation">
+{% endmacro %}
+
 {% block main %}
 <section class="media">
   <div class="mdc-layout-grid">
@@ -14,7 +22,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://www.podnikatel.cz/clanky/dny-dopravy-zdarma-letos-nebudou-nektere-e-shopy-ale-uz-startuji-black-friday/">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572804369/www.hlidacshopu.cz/media/2019-11-01-podnikatel.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572804369/www.hlidacshopu.cz/media/2019-11-01-podnikatel.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -36,7 +44,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://www.lupa.cz/clanky/black-friday-po-cesku-kouzla-se-slevami-po-roce/">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572804368/www.hlidacshopu.cz/media/2018-12-10-lupa.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572804368/www.hlidacshopu.cz/media/2018-12-10-lupa.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -56,7 +64,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://www.podnikatel.cz/clanky/chceme-vubec-black-friday-zastavme-uz-tu-nesmyslnou-spiralu-slev-a-lzi/">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572804369/www.hlidacshopu.cz/media/2018-12-11-podnikatel.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572804369/www.hlidacshopu.cz/media/2018-12-11-podnikatel.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -74,7 +82,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://www.zive.cz/clanky/jak-dopadlo-black-friday-apify-spocitalo-jak-moc-byly-slevy-e-shopu-realne/sc-3-a-196281/default.aspx">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572804369/www.hlidacshopu.cz/media/2018-12-10-zive.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572804369/www.hlidacshopu.cz/media/2018-12-10-zive.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -94,7 +102,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://echo24.cz/a/StRBV/mene-oklamanych-zakazniku-e-shopy-letos-na-cerny-patek-omezily-triky-s-cenami">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572804369/www.hlidacshopu.cz/media/2018-12-07-zive.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572804369/www.hlidacshopu.cz/media/2018-12-07-zive.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -116,7 +124,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://www.tyden.cz/rubriky/byznys/cesko/min-triku-nez-pred-rokem-e-shopy-omezily-carovani-s-cenami_505980.html?showTab=diskutovane">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572804368/www.hlidacshopu.cz/media/2018-12-07-tyden.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572804369/www.hlidacshopu.cz/media/2018-12-07-tyden.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -138,7 +146,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://www.idnes.cz/ekonomika/test-a-spotrebitel/eshop-black-friday-ceny-manipulace-podvody.A181207_154406_test_rts">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572804368/www.hlidacshopu.cz/media/2018-12-07-idnes.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572804368/www.hlidacshopu.cz/media/2018-12-07-idnes.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -158,7 +166,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://denikn.cz/25995/tyden-v-penezence-slevy-black-friday-penzijni-fondy-okamzite-platby/">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572804368/www.hlidacshopu.cz/media/2018-11-25-denikn.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572804368/www.hlidacshopu.cz/media/2018-11-25-denikn.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -177,7 +185,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://www.blesk.cz/clanek/vanoce-vanocni-zpravy/578242/black-friday-po-cesku-slevy-se-nemusi-vzdy-vyplatit-varuji-odbornici.html">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572804368/www.hlidacshopu.cz/media/2018-11-20-blesk.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572804368/www.hlidacshopu.cz/media/2018-11-20-blesk.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -200,7 +208,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://insmart.cz/alza-mall-czc-black-friday-skutecne-ceny/">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572804369/www.hlidacshopu.cz/media/2018-11-12-insmart.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572804369/www.hlidacshopu.cz/media/2018-11-12-insmart.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -220,7 +228,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://www.info.cz/black-friday-2018">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572804369/www.hlidacshopu.cz/media/2018-09-29-info.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572804369/www.hlidacshopu.cz/media/2018-09-29-info.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -242,7 +250,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://video.aktualne.cz/dvtv/nekupujte-veci-jen-proto-ze-jsou-ve-sleve-casto-tak-nakoupit/r~5d1c7aeee00d11e7afac0cc47ab5f122/">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572805593/www.hlidacshopu.cz/media/2017-12-13-dvtv.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572805593/www.hlidacshopu.cz/media/2017-12-13-dvtv.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -262,7 +270,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://www.lupa.cz/clanky/nemoralni-mozna-nezakonne-nikoli-co-rika-coi-na-manipulace-e-shopu-s-cenami/">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572805593/www.hlidacshopu.cz/media/2017-11-29-lupa.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572805593/www.hlidacshopu.cz/media/2017-11-29-lupa.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -281,7 +289,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://www.lupa.cz/clanky/slevy-az-80-jak-e-shopy-kouzli-s-cenami-aneb-black-friday-po-cesku/">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572805593/www.hlidacshopu.cz/media/2017-11-28-lupa.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572805593/www.hlidacshopu.cz/media/2017-11-28-lupa.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -301,7 +309,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://zpravy.aktualne.cz/finance/nakupovani/naleteli-jste-pri-black-friday-co-delat-kdyz-je-obri-sleva-j/r~b06bc9b0d55511e7b6830cc47ab5f122/">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572805594/www.hlidacshopu.cz/media/2017-11-30-aktualne.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572805594/www.hlidacshopu.cz/media/2017-11-30-aktualne.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -317,7 +325,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://zpravy.aktualne.cz/finance/nakupovani/black-friday-skutecne-slevy-porovnani/r~ab190004d43d11e7984d0cc47ab5f122/">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572805593/www.hlidacshopu.cz/media/2017-11-28-aktualne.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572805593/www.hlidacshopu.cz/media/2017-11-28-aktualne.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -339,7 +347,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://zpravy.e15.cz/byznys/obchod-a-sluzby/internetove-obchody-na-black-friday-nadsazovaly-slevy-slo-o-lidska-pochybeni-rikaji-e-shopy-1340338">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572805593/www.hlidacshopu.cz/media/2017-11-28-e15.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572805593/www.hlidacshopu.cz/media/2017-11-28-e15.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -363,7 +371,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://www.novinky.cz/ekonomika/456282-nektere-obchody-na-cerny-patek-u-pokladny-nezapocetly-slevu-zjistila-inspekce.html">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572805593/www.hlidacshopu.cz/media/2017-11-29-novinky.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572805593/www.hlidacshopu.cz/media/2017-11-29-novinky.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -385,7 +393,7 @@
         <article class="media-article-item">
           <div class="media__image">
             <a href="https://byznys.ihned.cz/c1-65971770-e-shopy-umele-navysovaly-ceny-aby-mohly-avizovat-vyssi-slevy-behem-akce-black-friday-zjistila-analyza">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572805594/www.hlidacshopu.cz/media/2017-11-28-ihned.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572805594/www.hlidacshopu.cz/media/2017-11-28-ihned.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -403,7 +411,7 @@
         <article class="media-article-item" lang="sk">
           <div class="media__image">
             <a href="https://www.zive.sk/clanok/129079/pripravte-sa-zacina-obdobie-vyhovoriek-e-shopov/">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572805594/www.hlidacshopu.cz/media/2017-12-03-zive.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572805594/www.hlidacshopu.cz/media/2017-12-03-zive.jpg")}}
             </a>
           </div>
           <div class="media__body">
@@ -423,7 +431,7 @@
         <article class="media-article-item" lang="en">
           <div class="media__image">
             <a href="https://prague.tv/en/s72/Directory/c209-Shopping/n11696-Black-Friday-discounts-lower-than-advertised">
-              <img src="https://res.cloudinary.com/topmonks/image/upload/v1572805593/www.hlidacshopu.cz/media/2017-11-29-praguetv.jpg" alt="" width="250" height="142" role="presentation">
+              {{mediaImage("v1572805593/www.hlidacshopu.cz/media/2017-11-29-praguetv.jpg")}}
             </a>
           </div>
           <div class="media__body">
