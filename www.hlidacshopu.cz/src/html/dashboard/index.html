@@ -3,249 +3,144 @@
 
 {% block title %}Dashboard Hlídače shopů{% endblock %}
 
+{% block styles %}
+<style>
+
+  .shops-stats {
+    border-spacing: 0 12px;
+  }
+
+  .shops-stats .sprite svg {
+    width: 80px;
+  }
+
+  .shops-stats thead th {
+    text-align: left;
+    font-weight: normal;
+    font-size: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #DADADA;
+  }
+  .shops-stats thead th:first-of-type {
+    font-weight: bold;
+  }
+
+  .dashboard-row td,
+  .dashboard-row th {
+    border: 1px solid #ebeef2;
+    border-left: none;
+    border-right: none;
+    border-collapse: collapse;
+    padding: 12px;
+  }
+  .dashboard-row th{
+    border-left: 1px solid #ebeef2;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+  .dashboard-row td {
+    text-align: right;
+  }
+  .dashboard-row td:last-of-type {
+    border-right: 1px solid #ebeef2;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+</style>
+{% endblock %}
+
 {% block main %}
 <section class="dashboard">
   <div class="mdc-layout-grid">
     <div class="layout-wrapper">
-      <div class="dashboard-header mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          <h2 class="media-heading">E-shop</h2>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">Celkový počet produktů</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">Počet produktů v akci v BF</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">Průměrná uváděná sleva v BF</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">Průměrná reálná sleva v BF</span>
-        </div>
-      </div>
-      <div class="dashboard-row mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('alza_logo', '[logo] Alza')}}
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">100 000</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">2 000</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">43 %</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">21 %</span>
-        </div>
-      </div>
-      <div class="dashboard-row mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('czc.cz_logo', '[logo] CZC')}}
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">40 000</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">1 200</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">33 %</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">17 %</span>
-        </div>
-      </div>
-      <div class="dashboard-row mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('datart_logo', '[logo] Datart')}}
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">40 000</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">1 200</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">33 %</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">17 %</span>
-        </div>
-      </div>
-      <div class="dashboard-row mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('tesco_logo', '[logo] Tesco')}}
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">40 000</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">1 200</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">33 %</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">17 %</span>
-        </div>
-      </div>
-      <div class="dashboard-row mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('kasa_logo', '[logo] kasa.cz')}}
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">40 000</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">1 200</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">33 %</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">17 %</span>
-        </div>
-      </div>
-      <div class="dashboard-row mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('kosik_logo', '[logo] kosik.cz')}}
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">40 000</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">1 200</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">33 %</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">17 %</span>
-        </div>
-      </div>
-      <div class="dashboard-row mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('lekarna_logo', '[logo] lekarna.cz')}}
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">40 000</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">1 200</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">33 %</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">17 %</span>
-        </div>
-      </div>
-      <div class="dashboard-row mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('mall_logo', '[logo] mall.cz')}}
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">40 000</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">1 200</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">33 %</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">17 %</span>
-        </div>
-      </div>
-      <div class="dashboard-row mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('mironet_logo', '[logo] Mironet')}}
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">40 000</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">1 200</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">33 %</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">17 %</span>
-        </div>
-      </div>
-      <div class="dashboard-row mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('mountfield_logo', '[logo] Mountfield')}}
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">40 000</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">1 200</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">33 %</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">17 %</span>
-        </div>
-      </div>
-      <div class="dashboard-row mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('notino_logo', '[logo] Notino')}}
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">40 000</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">1 200</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">33 %</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">17 %</span>
-        </div>
-      </div>
-      <div class="dashboard-row mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('rohlik_logo', '[logo] rohlik.cz')}}
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">40 000</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">1 200</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">33 %</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">17 %</span>
-        </div>
-      </div>
-      <div class="dashboard-row mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle mdc-layout-grid--align-left">
-          {{sprite('tsbohemia_logo', '[logo] TSBohemia')}}
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">40 000</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">1 200</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">33 %</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-1-tablet mdc-layout-grid__cell--span-2-desktop">
-          <span class="media-heading">17 %</span>
+      <div class="mdc-layout-grid__inner">
+        <div id="table-root" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+
         </div>
       </div>
     </div>
   </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<script type="module">
+  import {html, svg, render} from "https://unpkg.com/lit-html@1.1.1/lit-html.js?module";
+  const tableRoot = document.getElementById("table-root");
+  const formatPercents = x => `${Math.round(100 * x).toLocaleString("cs")} %`;
+  const timeout = ms => new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), ms));
+  const shopStats = ({key, count_all, count_bf, declared_sale, real_sale, percent_bf}) => ({key, allProducts: parseInt(count_all), bfProducts: count_bf && parseInt(count_bf) || "-", avgClaimedDiscount: "-", avgRealDiscount: "-"});
+  const shops = new Map([
+    ["alza", {name: "Alza", logo: "alza_logo", url: "https://www.alza.cz/", viewBox: "0 0 60 19"}],
+    ["czc", {name: "CZC.CZ", logo: "czc.cz_logo", url: "https://www.czc.cz/", viewBox: "0 0 55 13"}],
+    ["datart", {name: "Datart", logo: "datart_logo", url: "https://www.datart.cz/", viewBox: "0 0 98 13"}],
+    ["itesco", {name: "iTesco", logo: "tesco_logo", url: "https://www.itesco.cz/", viewBox: "0 0 55 18"}],
+    ["kasa", {name: "kasa.cz", logo: "kasa_logo", url: "https://www.kasa.cz/", viewBox: "0 0 70 18"}],
+    ["kosik", {name: "Košík.cz", logo: "kosik_logo", url: "https://www.kosik.cz/", viewBox: "0 0 71 22"}],
+    ["lekarna", {name: "Lékárna.cz", logo: "lekarna_logo", url: "https://www.lekarna.cz/", viewBox: "0 0 79 20"}],
+    ["mall", {name: "Mall.cz", logo: "mall_logo", url: "https://www.mall.cz/", viewBox: "0 0 68 19"}],
+    ["mironet", {name: "Mironet", logo: "mironet_logo", url: "https://www.mironet.cz/", viewBox: "0 0 59 20"}],
+    ["mountfield", {name: "Mountfield", logo: "mountfield_logo", url: "https://www.mountfield.cz/", viewBox: "0 0 64 11"}],
+    ["notino", {name: "Notino", logo: "notino_logo", url: "https://www.notino.cz/", viewBox: "0 0 68 13"}],
+    ["rohlik", {name: "Rohlík.cz", logo: "rohlik_logo", url: "https://www.rohlik.cz/", viewBox: "0 0 51 28"}],
+    ["tsbohemia", {name: "TSBohemia", logo: "tsbohemia_logo", url: "https://www.tsbohemia.cz/", viewBox: "0 0 115 15"}]
+  ]);
+
+  addEventListener("load", async e => {
+    try {
+      const resp = await Promise.race([timeout(4000), fetch("https://api.hlidacshopu.cz/shop-numbers")]);
+      if (!resp.ok) throw new Error("API error");
+      const shopsData = await resp.json();
+      const data = shopsData.map(shopStats).map(x => Object.assign({}, x, shops.get(x.key)));
+      render(tableTemplate(data), tableRoot);
+    }
+    catch (ex) {
+      console.error(ex);
+    }
+  });
+
+  function tableTemplate(data) {
+    return html`
+      <table class="shops-stats">
+        <colgroup>
+          <col width="150">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">E-shop</th>
+            <th scope="col">Celkový počet produktů</th>
+            <th scope="col">Počet produktů v Black Friday</th>
+            <th scope="col">Průměrná uváděná sleva</th>
+            <th scope="col">Průměrná reálná sleva</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${data.map(shopTemplate)}
+        </tbody>
+      </table>
+    `;
+  }
+
+  function shopTemplate({name, url, logo, viewBox, allProducts, bfProducts, avgClaimedDiscount, avgRealDiscount}) {
+    return html`
+      <tr class="dashboard-row">
+        <th scope="row">${logoTemplate({name, url, logo, viewBox})}</th>
+        <td>${allProducts.toLocaleString("cs")}</td>
+        <td>${bfProducts.toLocaleString("cs")}</td>
+        <td>${avgClaimedDiscount}</td>
+        <td>${avgRealDiscount}</td>
+      </tr>
+    `;
+  }
+
+  function logoTemplate({logo, name, url, viewBox}) {
+    const image = svg`
+      <svg viewBox="${viewBox}">
+        <title>${name}</title>
+        <use href="/assets/img/icons.svg#${logo}"/>
+      </svg>
+    `;
+    return html`<a href="${url}" class='sprite sprite--${logo}' title="${name}">${image}</a>`;
+  }
+</script>
 {% endblock %}

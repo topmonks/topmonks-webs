@@ -224,58 +224,6 @@ section.purple-gradient {
   padding-bottom: 2em;
 }
 
-
-// DASHBOARD //
-.dashboard {
-  .dashboard-header {
-    border-bottom: 1px solid #dadada;
-    padding-bottom: 7px;
-    margin-bottom: 26px;
-    h2 {
-      font-weight: bold;
-      font-size: 14px;
-      margin: 0;
-      line-height: 17px;
-    }
-    span {
-      font-size: 14px;
-      line-height: 17px;
-      display: block;
-    }
-  }
-  .dashboard-row {
-    background-color: #fff;
-    margin-bottom: 13px;
-    border: 1px solid #ebeef2;
-    box-sizing: border-box;
-    border-radius: 6px;
-    span {
-      font-size: 18px;
-      line-height: 22px;
-      display: block;
-      padding: 19px 0 13px 0;
-      @media (max-width: 479px) {
-        font-size: 16px;
-      }
-      &.sprite {
-        width: 72px;
-        height: 69px;
-        padding: 0;
-        margin-left: 23px;
-        @media (max-width: 479px) {
-          padding-top: 5px;
-        }
-      }
-    }
-    img {
-      margin-left: 23px;
-      @media (max-width: 479px) {
-        padding-top: 5px;
-      }
-    }
-  }
-}
-
 // FOOTER //
 
 footer {
