@@ -677,7 +677,7 @@
 
   function resultTemplate({detailUrl, name, shop, lastClaimedPrice, actualPrice, discount, date}) {
     const claimedPrice = x => x && html`<div class="claimed-price">Uváděná původní cena <del id="original-price">${formatMoney(x)}</del></div>`;
-    const realDiscount = x => x && html`<div>Reálná sleva <b class="discount"><span id="real-discount">${formatPercents(x)}</span></b></div>`;
+    const realDiscount = x => x !== null && html`<div>Reálná sleva <b class="discount"><span id="real-discount">${formatPercents(x)}</span></b></div>`;
     const crawlDate = x => x && html`<time id="latest-date" datetime="${x.toISOString()}">${x.toLocaleString("cs", {day: "numeric", month: "long", year: "numeric"})}</time>`;
     const shopLogo = x => x && logoTemplate(x);
     return html`
