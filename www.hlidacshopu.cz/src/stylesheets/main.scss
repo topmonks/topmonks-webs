@@ -366,12 +366,10 @@ footer {
     transition: transform 0.4s;
 
     &:first-of-type {
-      width: 50%;
       transform: translateY(-6px);
     }
 
     &:last-of-type {
-      width: 40%;
       transform: translateY(6px);
     }
   }
