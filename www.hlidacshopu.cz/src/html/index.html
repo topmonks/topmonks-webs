@@ -359,7 +359,8 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js" integrity="sha256-8xsohuS5beL9mPWPwuzrAHckEZZnVE6/hNYhj6FLCzU=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js"
+        integrity="sha256-8xsohuS5beL9mPWPwuzrAHckEZZnVE6/hNYhj6FLCzU=" crossorigin="anonymous"></script>
 <script>
   const parseTime = s => {
     const d = new Date(s);
@@ -385,7 +386,7 @@
     const originalPrice = new Array(days.length);
     const currentPrice = new Array(days.length);
     for (let i = 0, l = days.length; i < l; i++) {
-      const day  = days[i];
+      const day = days[i];
       const item = dataMap.get(day.getTime()) || lastDay;
       lastDay = item;
       originalPrice[i] = { x: day, y: item.o === "" ? null : parseInt(item.o) };
@@ -400,8 +401,8 @@
   Chart.defaults.global.defaultFontFamily = "'Montserrat', sans-serif";
   Chart.defaults.global.defaultFontSize = 16;
   Chart.plugins.register({
-    afterDraw: function({chart, data}) {
-      if (data.datasets.every(({data}) => data.length === 0)) {
+    afterDraw: function({ chart, data }) {
+      if (data.datasets.every(({ data }) => data.length === 0)) {
         // No data is present
         var ctx = chart.ctx;
         var width = chart.width;
@@ -416,7 +417,7 @@
     }
   });
 
-  function plot(canvas, {data: prices}) {
+  function plot(canvas, { data: prices }) {
     const values = prices.currentPrice.filter(p => p.y !== null).map(p => p.y);
     const min = Math.min(...values);
     const max = Math.max(...values);
@@ -433,7 +434,7 @@
           {
             label: "Uváděná původní cena",
             steppedLine: "after",
-            borderColor: "#5C62CD",
+            borderColor: "#5c62cd",
             borderWidth: 3,
             borderJoinStyle: "round",
             borderCapStyle: "round",
@@ -441,12 +442,12 @@
             backgroundColor: "#ffffff00",
             pointRadius: 0,
             spanGaps: true,
-            data: prices.originalPrice,
+            data: prices.originalPrice
           },
           {
             label: "Prodejní cena",
             steppedLine: "after",
-            borderColor: "#FF8787",
+            borderColor: "#ff8787",
             borderWidth: 3,
             borderJoinStyle: "round",
             borderCapStyle: "round",
@@ -454,23 +455,23 @@
             backgroundColor: "#ffffff00",
             pointRadius: 0,
             spanGaps: true,
-            data: prices.currentPrice,
+            data: prices.currentPrice
           }
         ]
       },
       options: {
         legend: {
-          display: false,
+          display: false
         },
         tooltips: {
           mode: "index",
           intersect: false,
-          backgroundColor: "#FCF4A7",
-          borderColor: "#FBEA61",
+          backgroundColor: "#fcf4a7",
+          borderColor: "#fbea61",
           borderWidth: 2,
-          bodyFontColor: "#1D3650",
+          bodyFontColor: "#1d3650",
           bodySpacing: 4,
-          titleFontColor: "#1D3650",
+          titleFontColor: "#1d3650",
           xPadding: 12,
           yPadding: 8,
           caretSize: 12,
@@ -486,15 +487,15 @@
               return `Prodejní cena: ${item.yLabel.toLocaleString("cs")},- Kč`;
             },
             labelColor(item, _chart) {
-              const red = "#FF8787";
-              const blue = "#5C62CD";
+              const red = "#ff8787";
+              const blue = "#5c62cd";
               const color = item.datasetIndex === 1 ? red : blue;
 
               return {
                 borderColor: color,
-                backgroundColor: color,
+                backgroundColor: color
               };
-            },
+            }
           }
         },
         scales: {
@@ -506,22 +507,23 @@
               displayFormats: {
                 day: "D. M. YYYY"
               }
-            },
+            }
           }],
           yAxes: [{
             ticks: {
               suggestedMax: max + 0.1 * max,
-              suggestedMin: min - 0.1 * min,
+              suggestedMin: min - 0.1 * min
             }
           }]
         }
-      },
+      }
     });
   }
 </script>
 
 <script type="module" crossorigin="anonymous">
-  import {html, svg, render} from "https://unpkg.com/lit-html@1.1.1/lit-html.js?module";
+  import { html, svg, render } from "https://unpkg.com/lit-html@1.1.1/lit-html.js?module";
+
   const form = document.getElementById("compare-form");
   const eShops = document.getElementById("e-shopy");
   const eShopsCount = document.getElementById("e-shops-count");
@@ -530,32 +532,55 @@
   const modalRenderRoot = document.getElementById("hlidac-shopu-modal__placeholder");
   const chart = () => document.getElementById("hlidac-shopu-chart");
   const apiUrl = detailUri => `https://api.hlidacshopu.cz/shop?url=${encodeURIComponent(detailUri)}&metadata=1`;
-  const meta = ({itemImage, itemName, shop}) => ({shop, name: itemName, imageUrl: itemImage === "null" ? null : itemImage});
-  const shopStats = ({key, count_all, count_bf, declared_sale, real_sale, percent_bf}) => ({key, allProducts: parseInt(count_all), bfProducts: count_bf && parseInt(count_bf) || "-", avgClaimedDiscount: "-", avgRealDiscount: "-"});
-  const formatMoney = x => x.toLocaleString("cs", {minimumFractionDigits: 2, maximumFractionDigits: 2}).replace(/,00/g, ",-");
+  const meta = ({ itemImage, itemName, shop }) => ({
+    shop,
+    name: itemName,
+    imageUrl: itemImage === "null" ? null : itemImage
+  }); // TODO: add realDiscount when ready
+  const shopStats = ({ key, count_all, count_bf, declared_sale, real_sale, percent_bf }) => ({
+    key,
+    allProducts: parseInt(count_all),
+    bfProducts: count_bf && parseInt(count_bf) || "-",
+    avgClaimedDiscount: declared_sale && parseFloat(declared_sale) || "-",
+    avgRealDiscount: real_sale && parseFloat(real_sale) || "-"
+  });
+  const formatMoney = x => x.toLocaleString("cs", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).replace(/,00/g, ",-");
   const formatPercents = x => `${Math.round(100 * x).toLocaleString("cs")} %`;
   const haveToCloseModal = t => t === modal || t.classList.contains("modal__close") || t.parentElement.classList.contains("modal__close");
   const timeout = ms => new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), ms));
   const shops = new Map([
-    ["alza", {name: "Alza", logo: "alza_logo", url: "https://www.alza.cz/", viewBox: "0 0 60 19"}],
-    ["czc", {name: "CZC.CZ", logo: "czc.cz_logo", url: "https://www.czc.cz/", viewBox: "0 0 55 13"}],
-    ["datart", {name: "Datart", logo: "datart_logo", url: "https://www.datart.cz/", viewBox: "0 0 98 13"}],
-    ["itesco", {name: "iTesco", logo: "tesco_logo", url: "https://www.itesco.cz/", viewBox: "0 0 55 18"}],
-    ["kasa", {name: "kasa.cz", logo: "kasa_logo", url: "https://www.kasa.cz/", viewBox: "0 0 70 18"}],
-    ["kosik", {name: "Košík.cz", logo: "kosik_logo", url: "https://www.kosik.cz/", viewBox: "0 0 71 22"}],
-    ["lekarna", {name: "Lékárna.cz", logo: "lekarna_logo", url: "https://www.lekarna.cz/", viewBox: "0 0 79 20"}],
-    ["mall", {name: "Mall.cz", logo: "mall_logo", url: "https://www.mall.cz/", viewBox: "0 0 68 19"}],
-    ["mironet", {name: "Mironet", logo: "mironet_logo", url: "https://www.mironet.cz/", viewBox: "0 0 59 20"}],
-    ["mountfield", {name: "Mountfield", logo: "mountfield_logo", url: "https://www.mountfield.cz/", viewBox: "0 0 64 11"}],
-    ["notino", {name: "Notino", logo: "notino_logo", url: "https://www.notino.cz/", viewBox: "0 0 68 13"}],
-    ["rohlik", {name: "Rohlík.cz", logo: "rohlik_logo", url: "https://www.rohlik.cz/", viewBox: "0 0 51 28"}],
-    ["tsbohemia", {name: "TSBohemia", logo: "tsbohemia_logo", url: "https://www.tsbohemia.cz/", viewBox: "0 0 115 15"}]
+    ["alza", { name: "Alza", logo: "alza_logo", url: "https://www.alza.cz/", viewBox: "0 0 60 19" }],
+    ["czc", { name: "CZC.CZ", logo: "czc.cz_logo", url: "https://www.czc.cz/", viewBox: "0 0 55 13" }],
+    ["datart", { name: "Datart", logo: "datart_logo", url: "https://www.datart.cz/", viewBox: "0 0 98 13" }],
+    ["itesco", { name: "iTesco", logo: "tesco_logo", url: "https://www.itesco.cz/", viewBox: "0 0 55 18" }],
+    ["kasa", { name: "kasa.cz", logo: "kasa_logo", url: "https://www.kasa.cz/", viewBox: "0 0 70 18" }],
+    ["kosik", { name: "Košík.cz", logo: "kosik_logo", url: "https://www.kosik.cz/", viewBox: "0 0 71 22" }],
+    ["lekarna", { name: "Lékárna.cz", logo: "lekarna_logo", url: "https://www.lekarna.cz/", viewBox: "0 0 79 20" }],
+    ["mall", { name: "Mall.cz", logo: "mall_logo", url: "https://www.mall.cz/", viewBox: "0 0 68 19" }],
+    ["mironet", { name: "Mironet", logo: "mironet_logo", url: "https://www.mironet.cz/", viewBox: "0 0 59 20" }],
+    ["mountfield", {
+      name: "Mountfield",
+      logo: "mountfield_logo",
+      url: "https://www.mountfield.cz/",
+      viewBox: "0 0 64 11"
+    }],
+    ["notino", { name: "Notino", logo: "notino_logo", url: "https://www.notino.cz/", viewBox: "0 0 68 13" }],
+    ["rohlik", { name: "Rohlík.cz", logo: "rohlik_logo", url: "https://www.rohlik.cz/", viewBox: "0 0 51 28" }],
+    ["tsbohemia", {
+      name: "TSBohemia",
+      logo: "tsbohemia_logo",
+      url: "https://www.tsbohemia.cz/",
+      viewBox: "0 0 115 15"
+    }]
   ]);
 
   form.addEventListener("submit", e => {
     e.preventDefault();
     const detailUri = e.target["url"].value;
-    history.pushState({showModal: true, detailUri}, null, `?url=${encodeURIComponent(detailUri)}`);
+    history.pushState({ showModal: true, detailUri }, null, `?url=${encodeURIComponent(detailUri)}`);
     renderResultsModal(detailUri);
   });
 
@@ -563,7 +588,7 @@
     const target = e.target;
     if (haveToCloseModal(target)) {
       e.preventDefault();
-      history.pushState({showModal: false}, null, "/");
+      history.pushState({ showModal: false }, null, "/");
       hideResultsModal();
       clearAndFocusInput();
     }
@@ -571,7 +596,7 @@
 
   addEventListener("keydown", e => {
     if (e.key === "Escape" && history.state && history.state.showModal) {
-      history.pushState({showModal: false}, null, "/");
+      history.pushState({ showModal: false }, null, "/");
       hideResultsModal();
       clearAndFocusInput();
     }
@@ -581,7 +606,7 @@
     const searchParams = new URLSearchParams(location.search);
     if (searchParams.has("url")) {
       const detailUri = searchParams.get("url");
-      history.replaceState({showModal: true, detailUri}, null);
+      history.replaceState({ showModal: true, detailUri }, null);
       renderResultsModal(detailUri);
     }
     render(eShopList(Array.from(shops.values())), eShops);
@@ -594,11 +619,10 @@
       hideResultsModal();
       return;
     }
-    const {showModal, detailUri} = history.state;
+    const { showModal, detailUri } = history.state;
     if (showModal) {
       renderResultsModal(detailUri);
-    }
-    else {
+    } else {
       hideResultsModal();
     }
   });
@@ -621,7 +645,7 @@
   async function fetchDataSet(detailUri) {
     const resp = await Promise.race([timeout(4000), fetch(apiUrl(detailUri))]);
     if (!resp.ok) throw new Error("API error");
-    const {data, metadata} = await resp.json();
+    const { data, metadata } = await resp.json();
     return {
       meta: meta(metadata),
       data: createDataset(data)
@@ -635,12 +659,16 @@
     return shopsData.map(shopStats).map(x => Object.assign({}, x, shops.get(x.key)));
   }
 
-  function templateData(detailUrl, { meta: { shop, name, imageUrl }, data: { currentPrice, originalPrice } }) {
-    const lastClaimedPrice = originalPrice.map(x => x.y).filter(y => y).pop();
-    const { y: actualPrice, x: date } = currentPrice.filter(({ y }) => y).pop();
+  function naieveDiscount(currentPrice, actualPrice) {
     const origPrice = currentPrice.map(x => x.y).filter(y => y).shift();
-    const discount = (origPrice - actualPrice) / origPrice;
-    return { detailUrl, name, shop, imageUrl, discount, actualPrice, date, lastClaimedPrice };
+    return (origPrice - actualPrice) / origPrice;
+  }
+
+  function templateData(detailUrl, { meta: { shop, name, imageUrl, realDiscount }, data: { currentPrice, originalPrice } }) {
+    const lastDeclaredPrice = originalPrice.map(x => x.y).filter(y => y).pop();
+    const { y: actualPrice, x: date } = currentPrice.filter(({ y }) => y).pop();
+    const discount = realDiscount || naieveDiscount(currentPrice, actualPrice);
+    return { detailUrl, name, shop, imageUrl, discount, actualPrice, date, lastDeclaredPrice };
   }
 
   async function renderResultsModal(detailUrl) {
@@ -650,8 +678,7 @@
       const chartData = await fetchDataSet(detailUrl);
       render(resultTemplate(templateData(detailUrl, chartData)), modalRenderRoot);
       plot(chart(), chartData);
-    }
-    catch (ex) {
+    } catch (ex) {
       console.error(ex);
       render(notFoundTemplate(), modalRenderRoot);
     }
@@ -685,10 +712,14 @@
     `;
   }
 
-  function resultTemplate({detailUrl, name, shop, lastClaimedPrice, actualPrice, discount, date}) {
-    const claimedPrice = x => x && html`<div class="claimed-price">Uváděná původní cena <del id="original-price">${formatMoney(x)}</del></div>`;
+  function resultTemplate({ detailUrl, name, shop, lastDeclaredPrice, actualPrice, discount, date }) {
+    const declaredOriginalPrice = x => x && html`<div class="claimed-price">Uváděná původní cena <del id="original-price">${formatMoney(x)}</del></div>`;
     const realDiscount = x => x !== null && html`<div>Reálná sleva <b class="discount"><span id="real-discount">${formatPercents(x)}</span></b></div>`;
-    const crawlDate = x => x && html`<time id="latest-date" datetime="${x.toISOString()}">${x.toLocaleString("cs", {day: "numeric", month: "long", year: "numeric"})}</time>`;
+    const crawlDate = x => x && html`<time id="latest-date" datetime="${x.toISOString()}">${x.toLocaleString("cs", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    })}</time>`;
     const shopLogo = x => x && logoTemplate(x);
     return html`
       <div id="hlidac-shopu-modal__found" class="result mdc-layout-grid__inner">
@@ -697,7 +728,7 @@
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple">
           ${crawlDate(date)}
-          ${claimedPrice(lastClaimedPrice)}
+          ${declaredOriginalPrice(lastDeclaredPrice)}
           <div class="actual-price">Prodejní cena <span id="current-price">${formatMoney(actualPrice)}</span></div>
           ${realDiscount(discount)}
         </div>
@@ -706,9 +737,9 @@
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <div style="display:flex;justify-content: flex-end">
-            <div style="width:12px;height:12px;background-color:#5C62CD;border-radius:2px;margin-right:5px;margin-top:2px;"></div>
+            <div style="width:12px;height:12px;background-color:#5c62cd;border-radius:2px;margin-right:5px;margin-top:2px;"></div>
             <span>Uváděná původní cena</span>
-            <div style="width:12px;height:12px;background-color:#FF8787;border-radius:2px;margin: 2px 5px 0 8px;"></div>
+            <div style="width:12px;height:12px;background-color:#ff8787;border-radius:2px;margin: 2px 5px 0 8px;"></div>
             <span>Prodejní cena</span>
           </div>
         </div>
