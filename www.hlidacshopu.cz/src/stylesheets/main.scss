@@ -245,7 +245,6 @@ nav {
 footer {
   background: rgba(84, 95, 239, 0.07);
 
-
   h3 {
     font-weight: normal;
     margin: 0.5em 0 1.1em;
@@ -261,7 +260,7 @@ footer {
       line-height: 26px;
       text-decoration: none;
       list-style: none;
-      @media screen and (max-width: 479px) {
+      @media screen and (max-width: 839px) {
         margin: 0.6428em 0;
         a {
           padding: 0.5em 0;
