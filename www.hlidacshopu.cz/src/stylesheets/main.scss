@@ -560,3 +560,10 @@ footer {
     transform: rotate(360deg);
   }
 }
+.fb-post.fb_iframe_widget {
+  display: flex;
+  justify-content: center;
+  &>span {
+    background: #fff;
+  }
+}

@@ -4,6 +4,7 @@
 {% block title %}Hlídač shopů{% endblock %}
 
 {% block preload %}
+<link rel="preconnect" href="https://connect.facebook.net">
 <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js" as="script" crossorigin="anonymous">
 <link rel="modulepreload" href="https://unpkg.com/lit-html@1.1.1/lit-html.js?module" crossorigin="anonymous">
 <link rel="preload" href="https://api.hlidacshopu.cz/shop-numbers" as="fetch" crossorigin="anonymous">
@@ -348,23 +349,13 @@
   <div class="mdc-layout-grid__inner layout-wrapper">
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
       <h2>Nejzajímavější slevy</h2>
-      <picture>
-        <source media="screen and (max-width: 479px)"
-                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_420/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1x,
-                        https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_420/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1.5x,
-                        https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_420/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 2x">
-        <source media="screen and (min-width: 480px) and (max-width: 839px)"
-                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_800/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1x,
-                        https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_800/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1.5x,
-                        https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_800/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 2x">
-        <source media="screen and (min-width: 840px)"
-                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1x,
-                        https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1.5x,
-                        https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 2x">
-        <img loading="lazy" class="responsive"
-             alt="Obrázek nejzajímavějších slev"
-             src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572499143/www.hlidacshopu.cz/mall-black-friday.png">
-      </picture>
+      <div id="fb-root"></div>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v5.0"></script>
+      <div class="fb-post" data-href="https://www.facebook.com/hlidacshopu/posts/149676873091906" data-width="" data-show-text="true">
+        <blockquote cite="https://developers.facebook.com/hlidacshopu/posts/149676873091906" class="fb-xfbml-parse-ignore">
+          Zveřejnil <a href="https://www.facebook.com/hlidacshopu/">Hlídač Shopů</a>
+          dne&nbsp;<a href="https://developers.facebook.com/hlidacshopu/posts/149676873091906">Středa 6. listopade 2019</a></blockquote>
+      </div>
     </div>
   </div>
 </section>
