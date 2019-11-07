@@ -3,6 +3,10 @@
 
 {% block title %}Přehled dat Hlídače shopů{% endblock %}
 
+{% block preload %}
+<link rel="preload" href="https://api.hlidacshopu.cz/shop-numbers" as="fetch" crossorigin="anonymous">
+{% endblock %}
+
 {% block styles %}
 <style>
   .shops-stats {
