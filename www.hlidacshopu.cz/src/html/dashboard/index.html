@@ -18,8 +18,9 @@
     font-weight: normal;
     font-size: 14px;
     padding: 12px;
-    border-bottom: 1px solid #DADADA;
+    border-bottom: 1px solid #dadada;
   }
+
   .shops-stats thead th:first-of-type {
     font-weight: bold;
   }
@@ -32,14 +33,17 @@
     border-collapse: collapse;
     padding: 12px;
   }
-  .dashboard-row th{
+
+  .dashboard-row th {
     border-left: 1px solid #ebeef2;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
   }
+
   .dashboard-row td {
     text-align: right;
   }
+
   .dashboard-row td:last-of-type {
     border-right: 1px solid #ebeef2;
     border-top-right-radius: 6px;
@@ -64,31 +68,42 @@
 
 {% block scripts %}
 <script type="module">
-  import {html, svg, render} from "https://unpkg.com/lit-html@1.1.1/lit-html.js?module";
+  import { html, svg, render } from "https://unpkg.com/lit-html@1.1.1/lit-html.js?module";
+
   const tableRoot = document.getElementById("table-root");
-  const formatPercents = x => `${Math.round(100 * x).toLocaleString("cs")} %`;
+  const formatPercents = x => `${Math.round(x).toLocaleString("cs")} %`;
   const timeout = ms => new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), ms));
-  const shopStats = ({key, count_all, count_bf, declared_sale, real_sale, percent_bf}) => ({
+  const shopStats = ({ key, count_all, count_bf, declared_sale, real_sale, percent_bf }) => ({
     key,
     allProducts: parseInt(count_all),
     bfProducts: count_bf && parseInt(count_bf) || "-",
-    avgClaimedDiscount: declared_sale && formatPercents(parseFloat(declared_sale)/100) || "-",
-    avgRealDiscount: real_sale && formatPercents(parseFloat(real_sale))|| "-"
+    avgClaimedDiscount: declared_sale && formatPercents(parseFloat(declared_sale)) || "-",
+    avgRealDiscount: real_sale && formatPercents(parseFloat(real_sale)) || "-"
   });
   const shops = new Map([
-    ["alza", {name: "Alza", logo: "alza_logo", url: "https://www.alza.cz/", viewBox: "0 0 60 19"}],
-    ["czc", {name: "CZC.CZ", logo: "czc.cz_logo", url: "https://www.czc.cz/", viewBox: "0 0 55 13"}],
-    ["datart", {name: "Datart", logo: "datart_logo", url: "https://www.datart.cz/", viewBox: "0 0 98 13"}],
-    ["itesco", {name: "iTesco", logo: "tesco_logo", url: "https://www.itesco.cz/", viewBox: "0 0 55 18"}],
-    ["kasa", {name: "kasa.cz", logo: "kasa_logo", url: "https://www.kasa.cz/", viewBox: "0 0 70 18"}],
-    ["kosik", {name: "Košík.cz", logo: "kosik_logo", url: "https://www.kosik.cz/", viewBox: "0 0 71 22"}],
-    ["lekarna", {name: "Lékárna.cz", logo: "lekarna_logo", url: "https://www.lekarna.cz/", viewBox: "0 0 79 20"}],
-    ["mall", {name: "Mall.cz", logo: "mall_logo", url: "https://www.mall.cz/", viewBox: "0 0 68 19"}],
-    ["mironet", {name: "Mironet", logo: "mironet_logo", url: "https://www.mironet.cz/", viewBox: "0 0 59 20"}],
-    ["mountfield", {name: "Mountfield", logo: "mountfield_logo", url: "https://www.mountfield.cz/", viewBox: "0 0 64 11"}],
-    ["notino", {name: "Notino", logo: "notino_logo", url: "https://www.notino.cz/", viewBox: "0 0 68 13"}],
-    ["rohlik", {name: "Rohlík.cz", logo: "rohlik_logo", url: "https://www.rohlik.cz/", viewBox: "0 0 51 28"}],
-    ["tsbohemia", {name: "TSBohemia", logo: "tsbohemia_logo", url: "https://www.tsbohemia.cz/", viewBox: "0 0 115 15"}]
+    ["alza", { name: "Alza", logo: "alza_logo", url: "https://www.alza.cz/", viewBox: "0 0 60 19" }],
+    ["czc", { name: "CZC.CZ", logo: "czc.cz_logo", url: "https://www.czc.cz/", viewBox: "0 0 55 13" }],
+    ["datart", { name: "Datart", logo: "datart_logo", url: "https://www.datart.cz/", viewBox: "0 0 98 13" }],
+    ["itesco", { name: "iTesco", logo: "tesco_logo", url: "https://www.itesco.cz/", viewBox: "0 0 55 18" }],
+    ["kasa", { name: "kasa.cz", logo: "kasa_logo", url: "https://www.kasa.cz/", viewBox: "0 0 70 18" }],
+    ["kosik", { name: "Košík.cz", logo: "kosik_logo", url: "https://www.kosik.cz/", viewBox: "0 0 71 22" }],
+    ["lekarna", { name: "Lékárna.cz", logo: "lekarna_logo", url: "https://www.lekarna.cz/", viewBox: "0 0 79 20" }],
+    ["mall", { name: "Mall.cz", logo: "mall_logo", url: "https://www.mall.cz/", viewBox: "0 0 68 19" }],
+    ["mironet", { name: "Mironet", logo: "mironet_logo", url: "https://www.mironet.cz/", viewBox: "0 0 59 20" }],
+    ["mountfield", {
+      name: "Mountfield",
+      logo: "mountfield_logo",
+      url: "https://www.mountfield.cz/",
+      viewBox: "0 0 64 11"
+    }],
+    ["notino", { name: "Notino", logo: "notino_logo", url: "https://www.notino.cz/", viewBox: "0 0 68 13" }],
+    ["rohlik", { name: "Rohlík.cz", logo: "rohlik_logo", url: "https://www.rohlik.cz/", viewBox: "0 0 51 28" }],
+    ["tsbohemia", {
+      name: "TSBohemia",
+      logo: "tsbohemia_logo",
+      url: "https://www.tsbohemia.cz/",
+      viewBox: "0 0 115 15"
+    }]
   ]);
 
   addEventListener("load", async e => {
@@ -99,8 +114,7 @@
       const shopsStatsData = new Map(shopsData.map(shopStats).map(x => [x.key, x]));
       const data = Array.from(shops.entries()).map(([key, x]) => Object.assign({}, x, shopsStatsData.get(key)));
       render(tableTemplate(data), tableRoot);
-    }
-    catch (ex) {
+    } catch (ex) {
       console.error(ex);
     }
   });
@@ -127,10 +141,10 @@
     `;
   }
 
-  function shopTemplate({name, url, logo, viewBox, allProducts, bfProducts, avgClaimedDiscount, avgRealDiscount}) {
+  function shopTemplate({ name, url, logo, viewBox, allProducts, bfProducts, avgClaimedDiscount, avgRealDiscount }) {
     return html`
       <tr class="dashboard-row">
-        <th scope="row">${logoTemplate({name, url, logo, viewBox})}</th>
+        <th scope="row">${logoTemplate({ name, url, logo, viewBox })}</th>
         <td>${allProducts.toLocaleString("cs")}</td>
         <td>${bfProducts.toLocaleString("cs")}</td>
         <td>${avgClaimedDiscount}</td>
@@ -139,7 +153,7 @@
     `;
   }
 
-  function logoTemplate({logo, name, url, viewBox}) {
+  function logoTemplate({ logo, name, url, viewBox }) {
     const image = svg`
       <svg viewBox="${viewBox}">
         <title>${name}</title>
