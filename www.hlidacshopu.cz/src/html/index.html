@@ -4,8 +4,8 @@
 {% block title %}Hlídač shopů{% endblock %}
 
 {% block preload %}
-<link rel="preconnect" href="https://www.facebook.com">
-<link rel="preconnect" href="https://staticxx.facebook.com">
+<link rel="preconnect" href="https://www.facebook.com" crossorigin="anonymous">
+<link rel="preconnect" href="https://staticxx.facebook.com" crossorigin="anonymous">
 <link rel="prefetch" href="https://connect.facebook.net/cs_CZ/sdk.js" as="script" crossorigin="anonymous">
 <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js" as="script" crossorigin="anonymous">
 <link rel="modulepreload" href="https://unpkg.com/lit-html@1.1.1/lit-html.js?module" crossorigin="anonymous">
@@ -59,7 +59,7 @@
                   srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_500/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 1x,
                           https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_500/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 1.5x,
                           https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_500/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 2x">
-          <img alt="Hlídač Shopů - Ukázka" class="responsive"
+          <img alt="Hlídač Shopů - Ukázka" class="responsive" loading="lazy"
                src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572499143/www.hlidacshopu.cz/porovnani-cen.png">
         </picture>
       </div>
