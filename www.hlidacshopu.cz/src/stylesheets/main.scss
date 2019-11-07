@@ -563,7 +563,19 @@ footer {
 .fb-post.fb_iframe_widget {
   display: flex;
   justify-content: center;
-  &>span {
+  & > span {
     background: #fff;
+  }
+}
+
+.social-media-link {
+  margin: 0 8px;
+  svg {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease;
+  }
+  &:hover svg {
+    box-shadow: 0 0 24px rgba(92, 98, 205, 0.4);
   }
 }
