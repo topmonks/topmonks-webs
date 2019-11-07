@@ -415,7 +415,7 @@
   }
 
   Chart.defaults.global.defaultFontFamily = "'Montserrat', sans-serif";
-  Chart.defaults.global.defaultFontSize = 16;
+  Chart.defaults.global.defaultFontSize = 12;
   Chart.plugins.register({
     afterDraw: function({ chart, data }) {
       if (data.datasets.every(({ data }) => data.length === 0)) {
@@ -548,11 +548,11 @@
   const modalRenderRoot = document.getElementById("hlidac-shopu-modal__placeholder");
   const chart = () => document.getElementById("hlidac-shopu-chart");
   const apiUrl = detailUri => `https://api.hlidacshopu.cz/shop?url=${encodeURIComponent(detailUri)}&metadata=1`;
-  const meta = ({ itemImage, itemName, shop }) => ({
-    shop,
+  const meta = ({ itemImage, itemName, ...rest }) => ({
     name: itemName,
-    imageUrl: itemImage === "null" ? null : itemImage
-  }); // TODO: add realDiscount when ready
+    imageUrl: itemImage === "null" ? null : itemImage,
+    ...rest
+  });
   const shopStats = ({ key, count_all, count_bf, declared_sale, real_sale, percent_bf }) => ({
     key,
     allProducts: parseInt(count_all),
@@ -730,7 +730,11 @@
 
   function resultTemplate({ detailUrl, name, shop, lastDeclaredPrice, actualPrice, discount, date }) {
     const declaredOriginalPrice = x => x && html`<div class="claimed-price">Uváděná původní cena <del id="original-price">${formatMoney(x)}</del></div>`;
-    const realDiscount = x => x !== null && html`<div>Reálná sleva <b class="discount"><span id="real-discount">${formatPercents(x)}</span></b></div>`;
+    const realDiscount = x => x !== null && html`
+        <div>
+          <abbr title="Reálná sleva se počítá jako aktuální cena po slevě ku maxímální ceně, za kterou se zboží prodávalo za posledních 90 dní.">Reálná sleva*</abbr>
+          <b class="discount"><span id="real-discount">${formatPercents(x)}</span></b>
+        </div>`;
     const crawlDate = x => x && html`<time id="latest-date" datetime="${x.toISOString()}">${x.toLocaleString("cs", {
       day: "numeric",
       month: "long",
