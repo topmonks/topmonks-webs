@@ -238,14 +238,13 @@ section.purple-gradient {
   padding-bottom: 2em;
 }
 
-// FOOTER //
+nav {
+  text-transform: uppercase;
+}
 
 footer {
   background: rgba(84, 95, 239, 0.07);
 
-  nav {
-    text-transform: uppercase;
-  }
 
   h3 {
     font-weight: normal;
@@ -456,7 +455,6 @@ footer {
       display: block;
       padding: 12px;
       margin: 4px;
-      text-transform: uppercase;
     }
   }
 }
