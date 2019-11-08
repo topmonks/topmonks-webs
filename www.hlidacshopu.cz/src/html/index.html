@@ -570,7 +570,7 @@
   const meta = ({ itemImage, itemName, real_sale, ...rest }) => ({
     name: itemName,
     imageUrl: itemImage === "null" ? null : itemImage,
-    realDiscount: real_sale === "null" ? null : parseFloat(real_sale),
+    realDiscount: real_sale === "null" ? null : parseFloat(real_sale) / 100,
     ...rest
   });
   const shopStats = ({ key, count_all, count_bf, declared_sale, real_sale, percent_bf }) => ({
@@ -706,7 +706,7 @@
   function templateData(detailUrl, { meta: { shop, name, imageUrl, realDiscount }, data: { currentPrice, originalPrice } }) {
     const lastDeclaredPrice = originalPrice.map(x => x.y).filter(y => y).pop();
     const { y: actualPrice, x: date } = currentPrice.filter(({ y }) => y).pop();
-    const discount = realDiscount || naieveDiscount(currentPrice, actualPrice);
+    const discount = realDiscount === null ? naieveDiscount(currentPrice, actualPrice) : realDiscount;
     return { detailUrl, name, shop, imageUrl, discount, actualPrice, date, lastDeclaredPrice };
   }
 
