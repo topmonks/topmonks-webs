@@ -112,7 +112,7 @@
       ul {
         flex-direction: column;
       }
-      li{
+      li {
         margin: 1em 0;
       }
     }
@@ -301,7 +301,7 @@
     &::after {
       content: "";
       position: absolute;
-      border-bottom: 2px solid #000000;
+      border-bottom: 2px solid black;
       transform: rotate(167.24deg);
       bottom: 0;
       left: 0;
@@ -353,5 +353,14 @@
   .result--hidden {
     transform: scaleY(0);
     display: none;
+  }
+}
+
+.fb-post.fb_iframe_widget {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  > span {
+    background: #fff;
   }
 }
