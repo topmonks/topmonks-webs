@@ -42,10 +42,9 @@
     const resp = await Promise.race([timeout(4000), fetch("https://api.hlidacshopu.cz/reviews-stats")]);
     if (!resp.ok) throw new Error("API error");
     const { reviews } = await resp.json();
-    console.log(reviews);
     return reviews
-      .map(({avatar, date, name, text, rating, type, sourceUrl}) => ({
-        imageUrl: avatar,
+      .map(({ avatar, date, name, text, rating, type, sourceUrl }) => ({
+        imageUrl: avatar.replace("s40", "s70"),
         date: new Date(Date.parse(date)),
         sortKey: Date.parse(date),
         name,
@@ -58,18 +57,28 @@
       .sort(newestFirst);
   }
 
+  function avatarTemplate({ name, imageUrl }) {
+    return imageUrl && html`
+      <img class="avatar" alt="${name}" loading="lazy"
+          src="https://${imageUrl}"
+          srcset="https://${imageUrl} 1x,
+                  https://${imageUrl.replace("s70", "s105")} 1.5x,
+                  https://${imageUrl.replace("s70", "s140")} 2x">
+    `;
+  }
+
   function reviewTemplate({ name, date, text, imageUrl }) {
     return html`
       <div class="review mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-        <div class="review__header review__header--no-avatar">
-          <img class="avatar" alt="" src="https://${imageUrl}" loading="lazy">
+        <div class="review__header ${(imageUrl === "") ? "review__header--no-avatar" : ""}">
+          ${avatarTemplate({ name, imageUrl })}
           <span class="review__author">${name}</span><br>
           <time class="review__date text--light-grey" datetime="${date.toISOString()}">
             ${date.toLocaleString("cs", {
-              year: "numeric",
-              month: "long",
-              day: "numeric"
-            })}
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    })}
           </time>
         </div>
         <div class="review__content">
