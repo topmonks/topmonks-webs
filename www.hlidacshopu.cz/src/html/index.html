@@ -4,12 +4,10 @@
 {% block title %}Hlídač shopů{% endblock %}
 
 {% block preload %}
-<link rel="preconnect" href="https://www.facebook.com" crossorigin="anonymous">
-<link rel="preconnect" href="https://staticxx.facebook.com" crossorigin="anonymous">
-<link rel="prefetch" href="https://connect.facebook.net/cs_CZ/sdk.js" as="script" crossorigin="anonymous">
 <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js" as="script" crossorigin="anonymous">
 <link rel="modulepreload" href="https://unpkg.com/lit-html@1.1.1/lit-html.js?module" crossorigin="anonymous">
 <link rel="preload" href="https://api.hlidacshopu.cz/shop-numbers" as="fetch" crossorigin="anonymous">
+<link rel="preload" href="https://api.hlidacshopu.cz/reviews-stats" as="fetch" crossorigin="anonymous">
 {% endblock %}
 
 {% block styles %}
@@ -292,7 +290,7 @@
       </div>
       <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
         <dt class="text--grey">Nainstalovaných rozšíření</dt>
-        <dd class="number">4 200+</dd>
+        <dd id="installs-count" class="number">4 500+</dd>
       </dl>
       <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
         <dt class="text--grey">Počet e-shopů</dt>
@@ -562,6 +560,7 @@
   const eShops = document.getElementById("e-shopy");
   const eShopsCount = document.getElementById("e-shops-count");
   const productsCount = document.getElementById("products-count");
+  const installsCount = document.getElementById("installs-count");
   const modal = document.getElementById("hlidac-shopu-modal");
   const modalRenderRoot = document.getElementById("hlidac-shopu-modal__placeholder");
   const installationGuide = document.getElementById("extension-install-guide");
@@ -646,11 +645,15 @@
       renderResultsModal(detailUri);
     }
     render(eShopList(Array.from(shops.values())), eShops);
-    productsCount.innerText = (await fetchShopsStats()).reduce((acc, x) => acc + x.allProducts, 0).toLocaleString("cs");
-    eShopsCount.innerText = shops.size.toLocaleString("cs");
     if (navigator.userAgent.toLowerCase().indexOf("firefox") > 0) {
       render(firefoxInstalationGuide(), installationGuide);
     }
+    eShopsCount.innerText = shops.size.toLocaleString("cs");
+    fetchDownloadStats()
+      .then(({downloads: x}) => installsCount.innerText = x.toLocaleString("cs"));
+    fetchShopsStats()
+      .then(xs => xs.reduce((acc, x) => acc + x.allProducts, 0))
+      .then(x => productsCount.innerText = x.toLocaleString("cs"));
   });
 
   addEventListener("popstate", e => {
@@ -696,6 +699,15 @@
     if (!resp.ok) throw new Error("API error");
     const shopsData = await resp.json();
     return shopsData.map(shopStats).map(x => Object.assign({}, x, shops.get(x.key)));
+  }
+
+  async function fetchDownloadStats() {
+    const resp = await Promise.race([timeout(4000), fetch("https://api.hlidacshopu.cz/reviews-stats")]);
+    if (!resp.ok) throw new Error("API error");
+    const { stats: { google, firefox } } = await resp.json();
+    return {
+      downloads: parseInt(google.downloads) + parseInt(firefox.downloads)
+    };
   }
 
   function naieveDiscount(currentPrice, actualPrice) {
@@ -754,15 +766,21 @@
   function resultTemplate({ detailUrl, name, shop, lastDeclaredPrice, actualPrice, discount, date }) {
     const declaredOriginalPrice = x => x && html`<div class="claimed-price">Uváděná původní cena <del id="original-price">${formatMoney(x)}</del></div>`;
     const realDiscount = x => x !== null && html`
-        <div>
-          <abbr title="Reálná sleva se počítá jako aktuální cena po slevě ku maxímální ceně, za kterou se zboží prodávalo za posledních 90 dní.">Reálná sleva*</abbr>
-          <b class="discount"><span id="real-discount">${formatPercents(x)}</span></b>
-        </div>`;
-    const crawlDate = x => x && html`<time id="latest-date" datetime="${x.toISOString()}">${x.toLocaleString("cs", {
-      day: "numeric",
-      month: "long",
-      year: "numeric"
-    })}</time>`;
+      <div>
+        <abbr title="Reálná sleva se počítá jako aktuální cena po slevě ku maxímální ceně, za kterou se zboží prodávalo za posledních 90 dní.">Reálná sleva*</abbr>
+        <b class="discount"><span id="real-discount">${formatPercents(x)}</span></b>
+      </div>
+    `;
+    const crawlDate = x => x && html`
+      <time id="latest-date"
+            datetime="${x.toISOString()}">
+        ${x.toLocaleString("cs", {
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        })}
+      </time>
+    `;
     const shopLogo = x => x && logoTemplate(x);
     return html`
       <div id="hlidac-shopu-modal__found" class="result mdc-layout-grid__inner">
