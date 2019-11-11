@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
+{% from '../macros/helpers.html' import sprite %}
 <head>
   <meta charset="UTF-8">
   <title>{% block title %}Hlídač shopů{% endblock %}</title>
@@ -314,16 +315,17 @@
           </ul>
         </nav>
       </div>
+
       <div class="logo-box mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-        <a href="https://apify.com/" title="Přejít na stránky Apify"><img src="/assets/img/logos/apify_logo.svg" alt="Logo Apify" height="32"></a>
+        <a href="https://apify.com/" title="Přejít na stránky Apify">{{sprite("apify_logo", "Apify", "0 0 157 42")}}</a>
         <p class="sub-info--grey">Otevíráme data z webu</p>
       </div>
       <div class="logo-box mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-        <a href="https://www.keboola.com/" title="Přejít na stránky Keboola"><img src="/assets/img/logos/keboola_logo.svg" alt="Logo Keboola" height="32"></a>
+        <a href="https://www.keboola.com/" title="Přejít na stránky Keboola">{{sprite("keboola_logo", "Keboola", "0 0 161 41")}}</a>
         <p class="sub-info--grey">DataOps &amp; Automation</p>
       </div>
       <div class="logo-box mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-2-desktop">
-        <a href="https://www.topmonks.cz/" title="Přejít na stránky TopMonks"><img src="/assets/img/logos/topmonks_logo.svg" alt="Logo TopMonks" height="32"></a>
+        <a href="https://www.topmonks.cz/" title="Přejít na stránky TopMonks">{{sprite("topmonks_logo", "TopMonks", "0 0 632 144")}}</a>
         <p class="sub-info--grey">Vyvíjíme software, stavíme startupy</p>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">

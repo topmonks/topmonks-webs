@@ -308,6 +308,9 @@ footer {
   }
 
   .logo-box {
+    svg {
+      height: 32px;
+    }
     .sub-info--grey {
       color: var(--dark-grey);
       height: 40px;
