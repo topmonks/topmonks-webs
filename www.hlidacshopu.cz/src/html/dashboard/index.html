@@ -139,7 +139,7 @@
     }]
   ]);
 
-  addEventListener("load", async e => {
+  addEventListener("DOMContentLoaded", async e => {
     try {
       const resp = await Promise.race([timeout(4000), fetch("https://api.hlidacshopu.cz/shop-numbers")]);
       if (!resp.ok) throw new Error("API error");

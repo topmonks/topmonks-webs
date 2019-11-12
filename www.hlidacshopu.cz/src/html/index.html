@@ -645,7 +645,7 @@
     }
   });
 
-  addEventListener("load", e => {
+  addEventListener("DOMContentLoaded", e => {
     const searchParams = new URLSearchParams(location.search);
     if (searchParams.has("url")) {
       const detailUri = searchParams.get("url");

@@ -34,7 +34,7 @@
   const newestFirst = (a, b) => (a.sortKey < b.sortKey) ? 1 : (a.sortKey === b.sortKey) ? 0 : -1;
   const timeout = ms => new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), ms));
 
-  addEventListener("load", e => {
+  addEventListener("DOMContentLoaded", e => {
     fetchReviews().then(x => render(x.map(reviewTemplate), reviewsRoot));
   });
 
