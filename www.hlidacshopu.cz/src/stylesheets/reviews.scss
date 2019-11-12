@@ -6,7 +6,7 @@
   }
   &__header:not(.review__header--no-avatar) {
     position: relative;
-    ::after {
+    &::after {
       content: "";
       position: absolute;
       width: 72px;
@@ -19,14 +19,38 @@
   }
   &__author {
     font-weight: bold;
-    line-height: 2;
+    line-height: 1.6;
   }
   &__date {
     font-size: 14px;
-    line-height: 2;
+    line-height: 2.2;
   }
   &__content {
     clear: both;
-    padding-top: 0.5em;
+  }
+  &__rating {
+    display: inline-block;
+    position: relative;
+    width: 126px;
+    height: 19px;
+    padding-right: 5em;
+    &::before,
+    &-value {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("/assets/img/stars.svg") top left no-repeat;
+      height: 19px;
+      z-index: 4;
+    }
+    &::before {
+      content: "";
+      filter: saturate(0);
+      right: 0;
+      z-index: 2;
+    }
+  }
+  &__rating--no-rating::before {
+    content: none;
   }
 }
