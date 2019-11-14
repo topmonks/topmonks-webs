@@ -267,10 +267,27 @@ jobs:
       HOST: www.hookamonk.com
 
   deploy-www-hookamonk-com:
-    <<: *s3-deploy
     environment:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E2EF8JLZURG0RI
       HOST: www.hookamonk.com
+    docker:
+      - image: cibuilds/aws:latest
+    working_directory: ~/topmonks-webs
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - run:
+          name: Deploy to S3
+          command: aws s3 sync "public/$HOST" "s3://$HOST/"
+      - run:
+          name: Update MIME types
+          command: aws s3 cp --exclude "*" --include "apple-app-site-association" --content-type="application/json; charset=utf-8" --metadata-directive="REPLACE" --recursive s3://www.hookamonk.com/ s3://www.hookamonk.com/
+      - run:
+          name: Invalidate CDN distribution
+          command: |
+            aws configure set preview.cloudfront true
+            aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
 
   test-monkslab-cz:
     <<: *test-site
@@ -411,7 +428,7 @@ workflows:
           context: org-global
           requires:
             - provision
-            - build 
+            - build
           filters:
             branches:
               only: master
