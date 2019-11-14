@@ -652,7 +652,7 @@
       renderResultsModal(detailUri);
     }
     render(eShopList(Array.from(shops.values())), eShops);
-    if (navigator.userAgent.toLowerCase().indexOf("firefox") > 0) {
+    if (searchParams.has("firefox") || navigator.userAgent.toLowerCase().indexOf("firefox") > 0) {
       render(firefoxInstalationGuide(), installationGuide);
     }
     eShopsCount.innerText = shops.size.toLocaleString("cs");
