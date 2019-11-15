@@ -31,8 +31,24 @@
   import { html, render } from "https://unpkg.com/lit-html@1.1.1/lit-html.js?module";
 
   const reviewsRoot = document.getElementById("reviews");
+  const review = ({ avatar, date, name, text, rating, type, sourceUrl }) => ({
+    imageUrl: avatar.replace("s40", "s70"),
+    date: new Date(Date.parse(date)),
+    sortKey: Date.parse(date),
+    name,
+    text,
+    rating: parseInt(rating),
+    source: type,
+    sourceUrl
+  });
+  const withNameAndText = x => x.name !== "" && x.text !== "";
   const newestFirst = (a, b) => (a.sortKey < b.sortKey) ? 1 : (a.sortKey === b.sortKey) ? 0 : -1;
   const timeout = ms => new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), ms));
+  const longDateFormat = {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  };
 
   addEventListener("DOMContentLoaded", e => {
     fetchReviews().then(x => render(x.map(reviewTemplate), reviewsRoot));
@@ -43,17 +59,8 @@
     if (!resp.ok) throw new Error("API error");
     const { reviews } = await resp.json();
     return reviews
-      .map(({ avatar, date, name, text, rating, type, sourceUrl }) => ({
-        imageUrl: avatar.replace("s40", "s70"),
-        date: new Date(Date.parse(date)),
-        sortKey: Date.parse(date),
-        name,
-        text,
-        rating: parseInt(rating),
-        source: type,
-        sourceUrl
-      }))
-      .filter(x => x.name !== "" && x.text !== "")
+      .map(review)
+      .filter(withNameAndText)
       .sort(newestFirst);
   }
 
@@ -69,20 +76,17 @@
 
   function reviewTemplate({ name, date, text, imageUrl, rating }) {
     const style = text.length > 260 ? "grid-row: span 2" : "";
+    const oneStarWidth = 25.2;
     return html`
       <div class="review mdc-layout-grid__cell mdc-layout-grid__cell--span-4" style="${style}">
         <div class="review__header ${(imageUrl === "") ? "review__header--no-avatar" : ""}">
           ${avatarTemplate({ name, imageUrl })}
           <span class="review__author">${name}</span><br>
           <time class="review__date text--light-grey" datetime="${date.toISOString()}">
-            ${date.toLocaleString("cs", {
-              year: "numeric",
-              month: "long",
-              day: "numeric"
-            })}
+            ${date.toLocaleString("cs", longDateFormat)}
           </time><br>
           <i class="review__rating" data-rating="${rating}" title="Hodnocení: ${rating}">
-            <b class="review__rating-value" style="width: ${(25.2 * rating)}px"></b>
+            <b class="review__rating-value" style="width: ${(oneStarWidth * rating)}px"></b>
           </i>
         </div>
         <div class="review__content">
