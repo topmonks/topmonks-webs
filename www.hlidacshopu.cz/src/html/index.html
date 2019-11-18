@@ -462,8 +462,7 @@
             label: "Uváděná původní cena",
             steppedLine: "after",
             borderColor: "#5c62cd",
-            borderWidth: 3,
-            borderJoinStyle: "round",
+            borderWidth: 2,
             borderCapStyle: "round",
             fill: "origin",
             backgroundColor: "#ffffff00",
@@ -472,16 +471,28 @@
             data: prices.originalPrice
           },
           {
+            label: "Doplněná prodejní cena",
+            steppedLine: "after",
+            borderColor: "#EB6F55",
+            borderWidth: 1,
+            borderDash: [5, 10],
+            borderCapStyle: "round",
+            fill: false,
+            backgroundColor: "#ffffff00",
+            pointRadius: 0,
+            spanGaps: true,
+            data: prices.currentPrice,
+          },
+          {
             label: "Prodejní cena",
             steppedLine: "after",
             borderColor: "#ff8787",
-            borderWidth: 3,
-            borderJoinStyle: "round",
+            borderWidth: 2,
             borderCapStyle: "round",
             fill: "origin",
             backgroundColor: "#ffffff00",
             pointRadius: 0,
-            spanGaps: true,
+            spanGaps: false,
             data: prices.currentPrice
           }
         ]
@@ -516,7 +527,7 @@
             labelColor(item, _chart) {
               const red = "#ff8787";
               const blue = "#5c62cd";
-              const color = item.datasetIndex === 1 ? red : blue;
+              const color = item.datasetIndex > 0 ? red : blue;
 
               return {
                 borderColor: color,
