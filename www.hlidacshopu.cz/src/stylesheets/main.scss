@@ -342,7 +342,7 @@ footer {
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.07);
   }
 
-  @media screen and (max-width: 839px) {
+  @media screen and (max-width: 913px) {
     padding-top: 8px;
 
     .app-bar_menu {
@@ -370,7 +370,7 @@ footer {
 }
 
 .hamburger {
-  @media screen and (min-width: 840px) {
+  @media screen and (min-width: 914px) {
     display: none;
   }
 
@@ -439,7 +439,7 @@ footer {
 }
 
 .menu {
-  @media screen and (max-width: 839px) {
+  @media screen and (max-width: 913px) {
     width: 100vw;
     overflow: hidden;
     background-color: #fff;
