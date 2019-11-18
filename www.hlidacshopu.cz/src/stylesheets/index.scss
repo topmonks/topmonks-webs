@@ -1,15 +1,50 @@
 .main {
   background: url(/assets/img/bg.svg) top center no-repeat;
+  text-align: center;
+  padding-bottom: 2em;
+
+  h1 {
+    max-width: 15em;
+    margin: 1em auto 0;
+  }
+  p {
+    max-width: 48em;
+    margin: 1em auto;
+    text-align: center;
+  }
+
+  button {
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 18px;
+    color: #ffffff;
+    width: 200px;
+    height: 54px;
+    border: none;
+    border-radius: 8px;
+    background: var(--purple);
+
+    @media screen and (max-width: 479px) {
+      box-shadow: 0 20px 20px rgba(92, 98, 205, 0.1);
+    }
+
+    &:hover {
+      background-color: #3a42a0;
+    }
+  }
 
   .url-input {
     display: flex;
     flex-flow: row;
     align-items: center;
     background-color: #fff;
-    box-shadow: 0 20px 20px rgba(92, 98, 205, 0.1);
     border-radius: 8px;
     justify-content: space-between;
-    margin-bottom: 1em;
+
+    @media screen and (max-width: 479px) {
+      box-shadow: 0 20px 20px rgba(92, 98, 205, 0.1);
+      margin: 0 auto 2em;
+    }
 
     .url-input__icon {
       width: 29px;
@@ -27,6 +62,15 @@
       background: none;
       flex-grow: 2;
     }
+  }
+
+  h2.sub-title {
+    text-align: center;
+  }
+
+  .logos {
+    max-width: 48em;
+    margin: 0 auto;
   }
 
   @media screen and (max-width: 839px) {
@@ -52,6 +96,25 @@
     }
   }
 
+  @media screen and (min-width: 480px) {
+    .form-combo {
+      display: flex;
+      border-radius: 8px;
+      box-shadow: 0 20px 20px rgba(92, 98, 205, 0.1);
+
+      .url-input {
+        flex-grow: 2;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
   @media screen and (min-width: 840px) {
     background-position: bottom center;
     .email-input {
@@ -70,6 +133,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     list-style-type: none;
     margin: 0.5em 0;
     padding: 0;
@@ -89,10 +153,6 @@
 }
 
 .attendant {
-  .mdc-layout-grid__cell {
-    margin: 0 auto;
-  }
-
   .sub-title {
     text-align: center;
   }
@@ -234,25 +294,6 @@
 
 .news {
   background: rgba(84, 95, 239, 0.07);
-}
-
-#compare-form {
-  button {
-    font-family: inherit;
-    font-size: 15px;
-    line-height: 18px;
-    color: #ffffff;
-    background: var(--purple);
-    box-shadow: 0 20px 20px rgba(92, 98, 205, 0.1);
-    width: 200px;
-    height: 54px;
-    border: none;
-    border-radius: 8px;
-
-    &:hover {
-      background-color: #3a42a0;
-    }
-  }
 }
 
 #hlidac-shopu-modal {
