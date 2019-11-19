@@ -450,7 +450,7 @@
     const max = Math.max(...values);
     const ctx = canvas.getContext("2d");
 
-    const count = values.length;
+    const count = prices.currentPrice.length;
     const stepSize = Math.floor(count / 12);
 
     return new Chart(ctx, {
