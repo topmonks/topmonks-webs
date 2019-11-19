@@ -522,7 +522,9 @@
               if (item.datasetIndex === 0) {
                 return `Uváděná původní cena: ${item.yLabel.toLocaleString("cs")},- Kč`;
               }
-              return `Prodejní cena: ${item.yLabel.toLocaleString("cs")},- Kč`;
+              else if (item.datasetIndex === 1) {
+                return `Prodejní cena: ${item.yLabel.toLocaleString("cs")},- Kč`;
+              }
             },
             labelColor(item, _chart) {
               const red = "#ff8787";
