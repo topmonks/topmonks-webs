@@ -592,7 +592,7 @@
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
   }).replace(/,00/g, ",-");
-  const formatPercents = x => x && !isNaN(x) && `${Math.round(100 * x).toLocaleString("cs")} %`;
+  const formatPercents = x => `${Math.round(100 * x).toLocaleString("cs")} %`;
   const haveToCloseModal = t => t === modal || t.classList.contains("modal__close") || t.parentElement.classList.contains("modal__close");
   const timeout = ms => new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), ms));
   const shops = new Map([
@@ -774,7 +774,7 @@
 
   function resultTemplate({ detailUrl, name, shop, lastDeclaredPrice, actualPrice, discount, date }) {
     const declaredOriginalPrice = x => x && html`<div class="claimed-price">Uváděná původní cena <del id="original-price">${formatMoney(x)}</del></div>`;
-    const realDiscount = x => x !== null && html`
+    const realDiscount = x => x !== null && !isNaN(x) && html`
       <div>
         <abbr title="Reálná sleva se počítá jako aktuální cena po slevě ku maximální ceně, za kterou se zboží prodávalo za posledních 90 dní.">Reálná sleva*</abbr>
         <b class="discount"><span id="real-discount">${formatPercents(x)}</span></b>
@@ -800,7 +800,7 @@
           ${crawlDate(date)}
           ${declaredOriginalPrice(lastDeclaredPrice)}
           <div class="actual-price">Prodejní cena <span id="current-price">${formatMoney(actualPrice)}</span></div>
-          ${realDiscount(discount)}
+          ${realDiscount(discount) || ""}
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <canvas id="hlidac-shopu-chart" width="100%"></canvas>
