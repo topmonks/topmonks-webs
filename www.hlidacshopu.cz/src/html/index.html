@@ -592,7 +592,7 @@
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
   }).replace(/,00/g, ",-");
-  const formatPercents = x => `${Math.round(100 * x).toLocaleString("cs")} %`;
+  const formatPercents = x => x && !isNaN(x) && `${Math.round(100 * x).toLocaleString("cs")} %`;
   const haveToCloseModal = t => t === modal || t.classList.contains("modal__close") || t.parentElement.classList.contains("modal__close");
   const timeout = ms => new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), ms));
   const shops = new Map([
@@ -776,7 +776,7 @@
     const declaredOriginalPrice = x => x && html`<div class="claimed-price">Uváděná původní cena <del id="original-price">${formatMoney(x)}</del></div>`;
     const realDiscount = x => x !== null && html`
       <div>
-        <abbr title="Reálná sleva se počítá jako aktuální cena po slevě ku maxímální ceně, za kterou se zboží prodávalo za posledních 90 dní.">Reálná sleva*</abbr>
+        <abbr title="Reálná sleva se počítá jako aktuální cena po slevě ku maximální ceně, za kterou se zboží prodávalo za posledních 90 dní.">Reálná sleva*</abbr>
         <b class="discount"><span id="real-discount">${formatPercents(x)}</span></b>
       </div>
     `;
