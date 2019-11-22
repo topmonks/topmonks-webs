@@ -1,6 +1,15 @@
 {% extends 'layouts/master.html' %}
 {% block title %}Zásady ochrany osobních údajů na Hlídači shopů{% endblock %}
 
+{% block styles %}
+<style>
+  main ol,
+  main ul {
+    font: 16px/1.75 "Open Sans", sans-serif;
+  }
+</style>
+{% endblock %}
+
 {% block main %}
 <section class="personal-security">
   <div class="mdc-layout-grid">
@@ -69,7 +78,7 @@
             Provozovatelem jsou příslušné české&nbsp;soudy.
           </li>
           <li>Znění Zásad může Provozovatel změnit či doplňovat.</li>
-          <li>Tyto Zásady nabývají účinnosti 20.10. 2019.</li>
+          <li>Tyto Zásady nabývají účinnosti <time datetime="2019-10-20">20. října 2019</time>.</li>
         </ol>
       </div>
     </div>
