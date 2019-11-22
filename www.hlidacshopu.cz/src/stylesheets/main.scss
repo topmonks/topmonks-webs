@@ -41,6 +41,16 @@ body {
   }
 }
 
+a:link {
+  color: var(--purple);
+}
+a:visited {
+  color: #9841BF;
+}
+a:hover {
+  color: var(--dark-purple);
+}
+
 header {
   background-color: white;
   padding-top: 16px;
@@ -58,6 +68,9 @@ header {
 
   li a {
     color: black;
+    &:link, &:visited {
+      color: black;
+    }
 
     &:hover {
       color: var(--purple);
@@ -110,8 +123,9 @@ h2.sub-title {
 
 h3 {
   font-size: 18px;
-  line-height: 22px;
+  line-height: 24px;
   font-weight: 700;
+  margin: 16px 0;
 }
 
 p {
@@ -276,9 +290,12 @@ footer {
 
   a {
     color: var(--purple);
+    &:link, &:visited {
+      color: var(--purple);
+    }
 
     &:hover {
-      color: black;
+      color: var(--dark-purple);
     }
   }
 
@@ -301,10 +318,15 @@ footer {
     font-size: 13px;
     line-height: 26px;
 
-    a,
+    a:link,
+    a:visited,
     span {
       color: var(--dark-grey);
       text-decoration: none;
+    }
+    a:hover {
+      color: var(--dark-purple);
+      text-decoration: underline;
     }
   }
 
