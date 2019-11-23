@@ -6,6 +6,7 @@
 {% block preload %}
 <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js" as="script"
   crossorigin="anonymous">
+<link rel="prefetch" href="/assets/js/extension.js" as="script">
 <link rel="modulepreload" href="https://unpkg.com/lit-html@1.1.1/lit-html.js?module" crossorigin="anonymous">
 <link rel="preload" href="https://api.hlidacshopu.cz/shop-numbers" as="fetch" crossorigin="anonymous">
 <link rel="preload" href="https://api.hlidacshopu.cz/reviews-stats" as="fetch" crossorigin="anonymous">
@@ -175,9 +176,8 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
         <h3>Instalace Hlídače Shopů do prohlížeče</h3>
         <p>Aktuálně si můžete Hlídače Shopů nainstalovat do desktopového Chromu,
-          Firefoxu, Brave a Edge Beta. Pokud ani jeden z nich nepoužíváte,
-          vydržte. Usilovně makáme na verzích rozšíření Hlídače Shopů
-          i&nbsp;pro další prohlížeče.</p>
+          Firefoxu, Safari, Brave a Edge Beta. Pokud ani jeden z nich nepoužíváte,
+          vydržte. Usilovně makáme na Hlídači Shopů pro mobilní telefony.</p>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
         <h3>Proč byste si měli rozšíření Hlídače Shopů instalovat a jak to vlastně vypadá?</h3>
@@ -185,88 +185,9 @@
           stránkách e-shopů. Nemusíte se pracně vracet na tento web s&nbsp;odkazem
           každého produktu, který chcete překontrolovat.</p>
       </div>
-      <div class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h3>Instalace probíhá ve třech jednoduchých krocích</h3>
-      </div>
 
       <div class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <div id="extension-install-guide" class="mdc-layout-grid__inner">
-          <div class="step_1 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-            <picture>
-              <source media="screen and (max-width: 479px)"
-                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_380/v1572715107/www.hlidacshopu.cz/search.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_380/v1572715107/www.hlidacshopu.cz/search.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_380/v1572715107/www.hlidacshopu.cz/search.png 2x">
-              <source media="screen and (min-width: 480px) and (max-width: 839px)"
-                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_740/v1572715107/www.hlidacshopu.cz/search.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_740/v1572715107/www.hlidacshopu.cz/search.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_740/v1572715107/www.hlidacshopu.cz/search.png 2x">
-              <source media="screen and (min-width: 840px)"
-                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_340/v1572715107/www.hlidacshopu.cz/search.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_340/v1572715107/www.hlidacshopu.cz/search.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_340/v1572715107/www.hlidacshopu.cz/search.png 2x">
-              <img loading="lazy"
-                src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572715107/www.hlidacshopu.cz/search.png"
-                alt="Najít Rozšíření - Obrázkový Průvodce" width="100%">
-            </picture>
-            <h3>Najděte rozšíření v&nbsp;obchodě</h3>
-            <p class="grey-text">Přejděte do <a
-                href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk"
-                class="text--purple">obchodu Chrome</a> na stránku Hlídače Shopů.</p>
-          </div>
-          <div class="step_2 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-            <picture>
-              <source media="screen and (max-width: 479px)"
-                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_380/v1572515567/www.hlidacshopu.cz/install.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_380/v1572515567/www.hlidacshopu.cz/install.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_380/v1572515567/www.hlidacshopu.cz/install.png 2x">
-              <source media="screen and (min-width: 480px) and (max-width: 839px)"
-                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_740/v1572515567/www.hlidacshopu.cz/install.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_740/v1572515567/www.hlidacshopu.cz/install.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_740/v1572515567/www.hlidacshopu.cz/install.png 2x">
-              <source media="screen and (min-width: 840px)"
-                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_340/v1572515567/www.hlidacshopu.cz/install.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_340/v1572515567/www.hlidacshopu.cz/install.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_340/v1572515567/www.hlidacshopu.cz/install.png 2x">
-              <img loading="lazy"
-                src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572515567/www.hlidacshopu.cz/install.png"
-                alt="Instalovat Rozšíření - Obrázkový Průvodce" width="100%">
-            </picture>
-            <h3>Přidejte si rozšíření do prohlížeče</h3>
-            <p class="grey-text">Vpravo nahoře klikněte na tlačítko Přidat do Chromu</p>
-          </div>
-          <div class="step_3 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-            <picture>
-              <source media="screen and (max-width: 479px)"
-                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_380/v1572715107/www.hlidacshopu.cz/usage.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_380/v1572715107/www.hlidacshopu.cz/usage.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_380/v1572715107/www.hlidacshopu.cz/usage.png 2x">
-              <source media="screen and (min-width: 480px) and (max-width: 839px)"
-                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_740/v1572715107/www.hlidacshopu.cz/usage.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_740/v1572715107/www.hlidacshopu.cz/usage.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_740/v1572715107/www.hlidacshopu.cz/usage.png 2x">
-              <source media="screen and (min-width: 840px)"
-                srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_340/v1572715107/www.hlidacshopu.cz/usage.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_340/v1572715107/www.hlidacshopu.cz/usage.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_340/v1572715107/www.hlidacshopu.cz/usage.png 2x">
-              <img loading="lazy"
-                src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572715107/www.hlidacshopu.cz/usage.png"
-                alt="Použití Rozšíření - Obrázkový Průvodce" width="100%">
-            </picture>
-            <h3>Potvrďte instalaci rozšíření</h3>
-            <p class="grey-text">Poté na vás vyskočí okno, kde potvrdíte přidání do Chromu tlačítkem Přidat rozšíření.
-            </p>
-          </div>
-          <div class="final-step mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-            <p><b>A&nbsp;máte hotovo! Skvěle.</b><br>
-              Teď už jen stačí přejít do vašeho oblíbeného e-shopu a vesele kontrolovat jeho cenotvorbu.
-            </p>
-            <div class="btn">
-              <a data-browser="chrome" class="button" role="button"
-                href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk">Nainstalovat
-                do prohlížeče</a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -358,22 +279,9 @@
   <div class="mdc-layout-grid__inner layout-wrapper">
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
       <h2>Nejzajímavější slevy</h2>
-      <picture>
-        <source media="screen and (max-width: 479px)"
-          srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_420/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1x,
-                        https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_420/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1.5x,
-                        https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_420/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 2x">
-        <source media="screen and (min-width: 480px) and (max-width: 839px)"
-          srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_800/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1x,
-                        https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_800/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1.5x,
-                        https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_800/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 2x">
-        <source media="screen and (min-width: 840px)"
-          srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1x,
-                        https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 1.5x,
-                        https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/mall-black-friday.png 2x">
-        <img loading="lazy" class="responsive" alt="Obrázek nejzajímavějších slev"
-          src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572499143/www.hlidacshopu.cz/mall-black-friday.png">
-      </picture>
+      <p>Sledujte naše profily na <a href="https://www.facebook.com/hlidacshopu/">Facebooku</a>
+        a na <a href="https://twitter.com/hlidacshopucz">Twitteru</a>, kde zveřejňujeme jak zajímavé slevy,
+        tak chytáky, na které byste si měli dávat pozor.</p>
     </div>
   </div>
 </section>
@@ -389,181 +297,6 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js"
-  integrity="sha256-8xsohuS5beL9mPWPwuzrAHckEZZnVE6/hNYhj6FLCzU=" crossorigin="anonymous"></script>
-<script>
-  const parseTime = s => {
-    const d = new Date(s);
-    d.setHours(0, 0, 0, 0);
-    return d;
-  };
-
-  function* daysBetween(start, end) {
-    const startDay = parseTime(start);
-    const endDay = parseTime(end);
-    for (const d = startDay; d <= endDay; d.setDate(d.getDate() + 1)) {
-      yield new Date(d.getTime());
-    }
-  }
-
-  function createDataset(data) {
-    if (typeof data === "string") {
-      data = JSON.parse(data);
-    }
-    const dataMap = new Map(data.map(x => [parseTime(x.d).getTime(), x]));
-    let lastDay = data[0];
-    const days = Array.from(daysBetween(parseTime(data[0].d), parseTime(data[data.length - 1].d)));
-    const originalPrice = new Array(days.length);
-    const currentPrice = new Array(days.length);
-    for (let i = 0, l = days.length; i < l; i++) {
-      const day = days[i];
-      const item = dataMap.get(day.getTime()) || lastDay;
-      lastDay = item;
-      originalPrice[i] = { x: day, y: item.o === "" ? null : parseInt(item.o) };
-      currentPrice[i] = { x: day, y: item.c === "" ? null : parseInt(item.c) };
-    }
-    return {
-      originalPrice,
-      currentPrice
-    };
-  }
-
-  Chart.defaults.global.defaultFontFamily = "'Montserrat', sans-serif";
-  Chart.defaults.global.defaultFontSize = 12;
-  Chart.plugins.register({
-    afterDraw: function ({ chart, data }) {
-      if (data.datasets.every(({ data }) => data.length === 0)) {
-        // No data is present
-        var ctx = chart.ctx;
-        var width = chart.width;
-        var height = chart.height;
-
-        ctx.save();
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        ctx.fillText("Chybí data", width / 2, height / 2);
-        ctx.restore();
-      }
-    }
-  });
-
-  function plot(canvas, { data: prices }) {
-    const values = prices.currentPrice.filter(p => p.y !== null).map(p => p.y);
-    const min = Math.min(...values);
-    const max = Math.max(...values);
-    const ctx = canvas.getContext("2d");
-
-    const count = prices.currentPrice.length;
-    const stepSize = Math.floor(count / 12) || 1;
-
-    return new Chart(ctx, {
-      type: "line",
-      data: {
-        labels: prices.currentPrice.map(p => p.x),
-        datasets: [
-          {
-            label: "Uváděná původní cena",
-            steppedLine: "after",
-            borderColor: "#5c62cd",
-            borderWidth: 2,
-            borderCapStyle: "round",
-            fill: "origin",
-            backgroundColor: "#ffffff00",
-            pointRadius: 0,
-            spanGaps: false,
-            data: prices.originalPrice
-          },
-          {
-            label: "Doplněná prodejní cena",
-            steppedLine: "after",
-            borderColor: "#EB6F55",
-            borderWidth: 1,
-            borderDash: [5, 10],
-            borderCapStyle: "round",
-            fill: false,
-            backgroundColor: "#ffffff00",
-            pointRadius: 0,
-            spanGaps: true,
-            data: prices.currentPrice,
-          },
-          {
-            label: "Prodejní cena",
-            steppedLine: "after",
-            borderColor: "#ff8787",
-            borderWidth: 2,
-            borderCapStyle: "round",
-            fill: "origin",
-            backgroundColor: "#ffffff00",
-            pointRadius: 0,
-            spanGaps: false,
-            data: prices.currentPrice
-          }
-        ]
-      },
-      options: {
-        legend: {
-          display: false
-        },
-        tooltips: {
-          mode: "index",
-          intersect: false,
-          backgroundColor: "#fcf4a7",
-          borderColor: "#fbea61",
-          borderWidth: 2,
-          bodyFontColor: "#1d3650",
-          bodySpacing: 4,
-          titleFontColor: "#1d3650",
-          xPadding: 12,
-          yPadding: 8,
-          caretSize: 12,
-          callbacks: {
-            title(item, data) {
-              const date = data.labels[item[0].index];
-              return date.toLocaleDateString("cs", { day: "numeric", month: "long", year: "numeric" });
-            },
-            label(item, _data) {
-              if (item.datasetIndex === 0) {
-                return `Uváděná původní cena: ${item.yLabel.toLocaleString("cs")},- Kč`;
-              }
-              else if (item.datasetIndex === 1) {
-                return `Prodejní cena: ${item.yLabel.toLocaleString("cs")},- Kč`;
-              }
-            },
-            labelColor(item, _chart) {
-              const red = "#ff8787";
-              const blue = "#5c62cd";
-              const color = item.datasetIndex > 0 ? red : blue;
-
-              return {
-                borderColor: color,
-                backgroundColor: color
-              };
-            }
-          }
-        },
-        scales: {
-          xAxes: [{
-            type: "time",
-            time: {
-              unit: "day",
-              stepSize,
-              displayFormats: {
-                day: "D. M. YYYY"
-              }
-            }
-          }],
-          yAxes: [{
-            ticks: {
-              suggestedMax: max + 0.1 * max,
-              suggestedMin: min - 0.1 * min
-            }
-          }]
-        }
-      }
-    });
-  }
-</script>
-
 <script type="module" crossorigin="anonymous">
   import { html, svg, render } from "https://unpkg.com/lit-html@1.1.1/lit-html.js?module";
 
@@ -656,8 +389,9 @@
       renderResultsModal(detailUri);
     }
     render(eShopList(Array.from(shops.values())), eShops);
-    if (searchParams.has("firefox") || navigator.userAgent.toLowerCase().indexOf("firefox") > 0) {
-      render(firefoxInstalationGuide(), installationGuide);
+    const installationGuideUrl = getInstallationGuideUrl(searchParams);
+    if (installationGuideUrl) {
+      import(installationGuideUrl).then(x => render(x.installationGuide(), installationGuide));
     }
     eShopsCount.innerText = shops.size.toLocaleString("cs");
     fetchDownloadStats()
@@ -721,29 +455,106 @@
     };
   }
 
-  function naieveDiscount(currentPrice, actualPrice) {
-    const origPrice = currentPrice.map(x => x.y).filter(y => y).shift();
-    return (origPrice - actualPrice) / origPrice;
-  }
-
-  function templateData(detailUrl, { meta: { shop, name, imageUrl, realDiscount }, data: { currentPrice, originalPrice } }) {
-    const lastDeclaredPrice = originalPrice.map(x => x.y).filter(y => y).pop();
-    const { y: actualPrice, x: date } = currentPrice.filter(({ y }) => y).pop();
-    const discount = realDiscount === null ? naieveDiscount(currentPrice, actualPrice) : realDiscount;
-    return { detailUrl, name, shop, imageUrl, discount, actualPrice, date, lastDeclaredPrice };
-  }
-
   async function renderResultsModal(detailUrl) {
     render(loaderTemplate(), modalRenderRoot);
     showResultsModal();
     try {
-      const chartData = await fetchDataSet(detailUrl);
+      const [{ plot }, chartData] = await Promise.all([
+        import("https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js")
+          .then(() => import("/assets/js/extension.js")),
+        fetchDataSet(detailUrl)
+      ]);
       render(resultTemplate(templateData(detailUrl, chartData)), modalRenderRoot);
       plot(chart(), chartData);
     } catch (ex) {
       console.error(ex);
       render(notFoundTemplate(), modalRenderRoot);
     }
+  }
+
+  function getInstallationGuideUrl(searchParams) {
+    const browsers = ["firefox", "android", "chrome", "safari"];
+    // forcing UA via get parameters has precedence
+    let browser = browsers.filter(x => searchParams.has(x)).pop();
+    if (!browser) {
+      const ua = navigator.userAgent.toLowerCase();
+      browser = browsers.filter(x => ua.indexOf(x) > 0).shift();
+    }
+    return browser && `/assets/js/${browser}.js`;
+  }
+
+  const parseTime = s => {
+    const d = new Date(s);
+    d.setHours(0, 0, 0, 0);
+    return d;
+  };
+
+  function* daysBetween(start, end) {
+    const startDay = parseTime(start);
+    const endDay = parseTime(end);
+    for (const d = startDay; d <= endDay; d.setDate(d.getDate() + 1)) {
+      yield new Date(d.getTime());
+    }
+  }
+
+  function createDataset(data) {
+    if (typeof data === "string") {
+      data = JSON.parse(data);
+    }
+    const dataMap = new Map(data.map(x => [parseTime(x.d).getTime(), x]));
+    let lastDay = data[0];
+    const days = Array.from(
+      daysBetween(parseTime(data[0].d), parseTime(data[data.length - 1].d))
+    );
+    const originalPrice = new Array(days.length);
+    const currentPrice = new Array(days.length);
+    for (let i = 0, l = days.length; i < l; i++) {
+      const day = days[i];
+      const item = dataMap.get(day.getTime()) || lastDay;
+      lastDay = item;
+      originalPrice[i] = { x: day, y: item.o === "" ? null : parseInt(item.o) };
+      currentPrice[i] = { x: day, y: item.c === "" ? null : parseInt(item.c) };
+    }
+    return {
+      originalPrice,
+      currentPrice
+    };
+  }
+
+  function naiveDiscount(currentPrice, actualPrice) {
+    const origPrice = currentPrice
+      .map(x => x.y)
+      .filter(y => y)
+      .shift();
+    return (origPrice - actualPrice) / origPrice;
+  }
+
+  function templateData(
+    detailUrl,
+    {
+      meta: { shop, name, imageUrl, realDiscount },
+      data: { currentPrice, originalPrice }
+    }
+  ) {
+    const lastDeclaredPrice = originalPrice
+      .map(x => x.y)
+      .filter(y => y)
+      .pop();
+    const { y: actualPrice, x: date } = currentPrice.filter(({ y }) => y).pop();
+    const discount =
+      realDiscount === null
+        ? naiveDiscount(currentPrice, actualPrice)
+        : realDiscount;
+    return {
+      detailUrl,
+      name,
+      shop,
+      imageUrl,
+      discount,
+      actualPrice,
+      date,
+      lastDeclaredPrice
+    };
   }
 
   function notFoundTemplate() {
@@ -786,10 +597,10 @@
       <time id="latest-date"
             datetime="${x.toISOString()}">
         ${x.toLocaleString("cs", {
-      day: "numeric",
-      month: "long",
-      year: "numeric"
-    })}
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+          })}
       </time>
     `;
     const shopLogo = x => x && logoTemplate(x);
@@ -834,89 +645,6 @@
       <ul>
         ${shops.map(x => html`<li>${logoTemplate(x)}</li>`)}
       </ul>
-    `;
-  }
-
-  function firefoxInstalationGuide() {
-    return html`
-      <div class="step_1 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-        <picture>
-          <source media="screen and (max-width: 479px)"
-                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_380/v1573135737/www.hlidacshopu.cz/search-ff.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_380/v1573135737/www.hlidacshopu.cz/search-ff.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_380/v1573135737/www.hlidacshopu.cz/search-ff.png 2x">
-          <source media="screen and (min-width: 480px) and (max-width: 839px)"
-                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_740/v1573135737/www.hlidacshopu.cz/search-ff.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_740/v1573135737/www.hlidacshopu.cz/search-ff.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_740/v1573135737/www.hlidacshopu.cz/search-ff.png 2x">
-          <source media="screen and (min-width: 840px)"
-                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_340/v1573135737/www.hlidacshopu.cz/search-ff.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_340/v1573135737/www.hlidacshopu.cz/search-ff.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_340/v1573135737/www.hlidacshopu.cz/search-ff.png 2x">
-          <img loading="lazy"
-               src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1573135737/www.hlidacshopu.cz/search-ff.png"
-               alt="Najít Rozšíření - Obrázkový Průvodce"
-               width="100%">
-        </picture>
-        <h3>Najděte rozšíření v&nbsp;obchodě</h3>
-        <p class="grey-text">Přejděte do <a
-          href="https://addons.mozilla.org/en-US/firefox/addon/hl%C3%ADda%C4%8D-shop%C5%AF/"
-          class="text--purple">obchodu Firefox</a> na stránku Hlídače Shopů.</p>
-      </div>
-      <div class="step_2 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-        <picture>
-          <source media="screen and (max-width: 479px)"
-                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_380/v1573135738/www.hlidacshopu.cz/install-ff.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_380/v1573135738/www.hlidacshopu.cz/install-ff.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_380/v1573135738/www.hlidacshopu.cz/install-ff.png 2x">
-          <source media="screen and (min-width: 480px) and (max-width: 839px)"
-                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_740/v1573135738/www.hlidacshopu.cz/install-ff.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_740/v1573135738/www.hlidacshopu.cz/install-ff.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_740/v1573135738/www.hlidacshopu.cz/install-ff.png 2x">
-          <source media="screen and (min-width: 840px)"
-                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_340/v1573135738/www.hlidacshopu.cz/install-ff.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_340/v1573135738/www.hlidacshopu.cz/install-ff.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_340/v1573135738/www.hlidacshopu.cz/install-ff.png 2x">
-          <img loading="lazy"
-               src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1573135738/www.hlidacshopu.cz/install-ff.png"
-               alt="Instalovat Rozšíření - Obrázkový Průvodce"
-               width="100%">
-        </picture>
-        <h3>Přidejte si rozšíření do prohlížeče</h3>
-        <p class="grey-text">Uprostřed klikněte na tlačítko Přidat do Firefoxu</p>
-      </div>
-      <div class="step_3 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
-        <picture>
-          <source media="screen and (max-width: 479px)"
-                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_380/v1573135738/www.hlidacshopu.cz/usage-ff.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_380/v1573135738/www.hlidacshopu.cz/usage-ff.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_380/v1573135738/www.hlidacshopu.cz/usage-ff.png 2x">
-          <source media="screen and (min-width: 480px) and (max-width: 839px)"
-                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_740/v1573135738/www.hlidacshopu.cz/usage-ff.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_740/v1573135738/www.hlidacshopu.cz/usage-ff.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_740/v1573135738/www.hlidacshopu.cz/usage-ff.png 2x">
-          <source media="screen and (min-width: 840px)"
-                  srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_340/v1573135738/www.hlidacshopu.cz/usage-ff.png 1x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_340/v1573135738/www.hlidacshopu.cz/usage-ff.png 1.5x,
-                    https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_340/v1573135738/www.hlidacshopu.cz/usage-ff.png 2x">
-          <img loading="lazy"
-               src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1573135738/www.hlidacshopu.cz/usage-ff.png"
-               alt="Použití Rozšíření - Obrázkový Průvodce"
-               width="100%">
-        </picture>
-        <h3>Potvrďte instalaci rozšíření</h3>
-        <p class="grey-text">Poté na vás vyskočí okno, kde potvrdíte přidání do Firefoxu tlačítkem Přidat.</p>
-      </div>
-      <div class="final-step mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <p><b>A&nbsp;máte hotovo! Skvěle.</b><br>
-          Teď už jen stačí přejít do vašeho oblíbeného e-shopu a vesele kontrolovat jeho cenotvorbu.
-        </p>
-        <div class="btn">
-          <a data-browser="firefox" class="button" role="button"
-             href="https://addons.mozilla.org/en-US/firefox/addon/hl%C3%ADda%C4%8D-shop%C5%AF/">Nainstalovat
-            do prohlížeče</a>
-        </div>
-      </div>
     `;
   }
 </script>
