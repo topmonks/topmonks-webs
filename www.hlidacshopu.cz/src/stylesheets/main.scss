@@ -45,7 +45,7 @@ a:link {
   color: var(--purple);
 }
 a:visited {
-  color: #9841BF;
+  color: #9841bf;
 }
 a:hover {
   color: var(--dark-purple);
@@ -68,7 +68,8 @@ header {
 
   li a {
     color: black;
-    &:link, &:visited {
+    &:link,
+    &:visited {
       color: black;
     }
 
@@ -290,7 +291,8 @@ footer {
 
   a {
     color: var(--purple);
-    &:link, &:visited {
+    &:link,
+    &:visited {
       color: var(--purple);
     }
 

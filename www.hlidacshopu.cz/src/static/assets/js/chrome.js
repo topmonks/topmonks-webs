@@ -5,7 +5,9 @@ export function installationGuide() {
     <div class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
       <h3>Instalace probíhá ve třech jednoduchých krocích</h3>
     </div>
-    <div class="step_1 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+    <div
+      class="step_1 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
+    >
       <picture>
         <source
           media="screen and (max-width: 479px)"
@@ -43,11 +45,15 @@ export function installationGuide() {
         Přejděte do
         <a
           href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk"
-          class="text--purple">obchodu Chrome</a>
+          class="text--purple"
+          >obchodu Chrome</a
+        >
         na stránku Hlídače Shopů.
       </p>
     </div>
-    <div class="step_2 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+    <div
+      class="step_2 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
+    >
       <picture>
         <source
           media="screen and (max-width: 479px)"
@@ -85,7 +91,9 @@ export function installationGuide() {
         Vpravo nahoře klikněte na tlačítko Přidat do Chromu
       </p>
     </div>
-    <div class="step_3 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+    <div
+      class="step_3 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
+    >
       <picture>
         <source
           media="screen and (max-width: 479px)"
@@ -124,7 +132,9 @@ export function installationGuide() {
         Přidat rozšíření.
       </p>
     </div>
-    <div class="final-step mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+    <div
+      class="final-step mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
+    >
       <p>
         <b>A&nbsp;máte hotovo! Skvěle.</b><br />
         Teď už jen stačí přejít do vašeho oblíbeného e-shopu a vesele
@@ -135,7 +145,9 @@ export function installationGuide() {
           data-browser="chrome"
           class="button"
           role="button"
-          href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk">Nainstalovat do prohlížeče</a>
+          href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk"
+          >Nainstalovat do prohlížeče</a
+        >
       </div>
     </div>
   `;

@@ -5,7 +5,9 @@ export function installationGuide() {
     <div class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
       <h3>Instalace probíhá ve třech jednoduchých krocích</h3>
     </div>
-    <div class="step_1 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+    <div
+      class="step_1 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
+    >
       <picture>
         <source
           media="screen and (max-width: 479px)"
@@ -43,11 +45,15 @@ export function installationGuide() {
         Přejděte do
         <a
           href="https://addons.mozilla.org/en-US/firefox/addon/hl%C3%ADda%C4%8D-shop%C5%AF/"
-          class="text--purple">obchodu Firefox</a>
+          class="text--purple"
+          >obchodu Firefox</a
+        >
         na stránku Hlídače Shopů.
       </p>
     </div>
-    <div class="step_2 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+    <div
+      class="step_2 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
+    >
       <picture>
         <source
           media="screen and (max-width: 479px)"
@@ -83,7 +89,9 @@ export function installationGuide() {
       <h3>Přidejte si rozšíření do prohlížeče</h3>
       <p class="grey-text">Uprostřed klikněte na tlačítko Přidat do Firefoxu</p>
     </div>
-    <div class="step_3 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+    <div
+      class="step_3 mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
+    >
       <picture>
         <source
           media="screen and (max-width: 479px)"
@@ -122,7 +130,9 @@ export function installationGuide() {
         Přidat.
       </p>
     </div>
-    <div class="final-step mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+    <div
+      class="final-step mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
+    >
       <p>
         <b>A&nbsp;máte hotovo! Skvěle.</b><br />
         Teď už jen stačí přejít do vašeho oblíbeného e-shopu a vesele
@@ -133,7 +143,9 @@ export function installationGuide() {
           data-browser="firefox"
           class="button"
           role="button"
-          href="https://addons.mozilla.org/en-US/firefox/addon/hl%C3%ADda%C4%8D-shop%C5%AF/">Nainstalovat do prohlížeče</a>
+          href="https://addons.mozilla.org/en-US/firefox/addon/hl%C3%ADda%C4%8D-shop%C5%AF/"
+          >Nainstalovat do prohlížeče</a
+        >
       </div>
     </div>
   `;
