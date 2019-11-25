@@ -275,29 +275,38 @@
           <h2 class="h2_margin">Nadcházející akce</h2>
           <hr class="line">
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
           <div class="mdc-layout-grid__inner">
-            <div class="mdc-layout-grid__cell">
+            <div class="mdc-layout-grid__cell--span-6">
               <h3>Téma</h3>
               <span>{{upcomingEvent.shortTitle}}</span>
               {% if upcomingEvent.lecturers %}
-              <br>
+              {% endif  %}
+            </div>
+
+            <div class="mdc-layout-grid__cell--span-6">
+              <h3>Kdy?</h3>
+              <span>{{upcomingEvent.date}}</span>
+            </div>
+
+            <div class="mdc-layout-grid__cell--span-6">
               <h3>Přednášející</h3>
               <span>
                 {% for lecturer in upcomingEvent.lecturers | split(",") %}
                   {{ lecturer }}<br/>
                 {% endfor %}</span>
-              {% endif  %}
             </div>
-            <div class="mdc-layout-grid__cell">
-              <h3>Kdy?</h3>
-              <span>{{upcomingEvent.date}}</span>
-              <span>od 19.00</span>
+
+            <div class="mdc-layout-grid__cell--span-6">
               <h3>Kde?</h3>
               <span>{{ upcomingEvent.address | safe }}</span>
             </div>
-            <div class="poster mdc-layout-grid__cell">
-            </div>
+
+          </div>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <div class="poster mdc-layout-grid__cell">
           </div>
         </div>
 
