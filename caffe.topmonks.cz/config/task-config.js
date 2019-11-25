@@ -35,9 +35,10 @@ module.exports = {
       }
     },
     dataFunction(_, cb) {
-      Promise.all([jsonData("events"), jsonData("posters")]).then(
-        ([events, posters]) => cb(null, { events, posters })
-      );
+      Promise.all([
+        jsonData("events"),
+        jsonData("posters")
+      ]).then(([events, posters]) => cb(null, { events, posters }));
     }
   },
 

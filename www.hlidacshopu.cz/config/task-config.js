@@ -63,9 +63,10 @@ const config = createSharedTaskConfig(__dirname, {
       }
     },
     dataFunction(_, cb) {
-      Promise.all([jsonData("media"), jsonData("mediaImages")]).then(
-        ([media, mediaImages]) => cb(null, { media, mediaImages })
-      );
+      Promise.all([
+        jsonData("media"),
+        jsonData("mediaImages")
+      ]).then(([media, mediaImages]) => cb(null, { media, mediaImages }));
     }
   },
 

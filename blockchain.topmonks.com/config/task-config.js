@@ -30,9 +30,10 @@ module.exports = {
   html: {
     dataFile: "../data/global.json",
     dataFunction(_, cb) {
-      Promise.all([jsonData("articles"), jsonData("podcasts")]).then(
-        ([articles, podcasts]) => cb(null, { articles, podcasts })
-      );
+      Promise.all([
+        jsonData("articles"),
+        jsonData("podcasts")
+      ]).then(([articles, podcasts]) => cb(null, { articles, podcasts }));
     },
     htmlmin: {
       collapseBooleanAttributes: true,
