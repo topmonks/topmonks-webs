@@ -16,6 +16,7 @@ const jsonData = n =>
     .catch(() => {});
 
 const config = createSharedTaskConfig(__dirname, {
+  locales: ["cs", "cs-CZ"],
   images: true,
   javascripts: false,
   fonts: true,
@@ -49,11 +50,11 @@ const config = createSharedTaskConfig(__dirname, {
     nunjucksRender: {
       manageEnv(env) {
         env.addFilter("longDate", str =>
-          new Date(Date.parse(str)).toLocaleString("cs", {
+          new Intl.DateTimeFormat("cs", {
             year: "numeric",
             month: "long",
             day: "numeric"
-          })
+          }).format(new Date(str))
         );
         env.addFilter("split", (str, seperator) => str.split(seperator));
         env.addFilter(
