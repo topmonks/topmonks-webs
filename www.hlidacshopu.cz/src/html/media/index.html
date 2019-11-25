@@ -2,47 +2,50 @@
 {% block title %}Hlídač shopů v médiích{% endblock %}
 
 {% block styles %}
-<link rel="stylesheet" href="/assets/css/media.css">
+  <link rel="stylesheet" href="/assets/css/media.css">
 {% endblock %}
 
 {% macro mediaImage(path) %}
-<img src="https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_auto/v1574665213/www.hlidacshopu.cz/media/{{path}}"
-     srcset="https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_1/v1574665213/www.hlidacshopu.cz/media/{{path}} 1x,
-             https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_1.5/v1574665213/www.hlidacshopu.cz/media/{{path}} 1.5x,
-             https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_2/v1574665213/www.hlidacshopu.cz/media/{{path}} 2x"
-     alt="" width="250" height="142" role="presentation">
+  <img
+    src="https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_auto/v1574665213/www.hlidacshopu.cz/media/{{ path }}"
+    srcset="
+      https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_1/v1574665213/www.hlidacshopu.cz/media/{{ path }} 1x,
+      https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_1.5/v1574665213/www.hlidacshopu.cz/media/{{ path }} 1.5x,
+      https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_2/v1574665213/www.hlidacshopu.cz/media/{{ path }} 2x
+    "
+    alt="" width="250" height="142" role="presentation">
 {% endmacro %}
 
 {% macro mediaArticle(article, images) %}
-<article class="media-article-item">
-  <div class="media__image">
-    <a href="{{article.url}}">
-      {{mediaImage(article.image)}}
-    </a>
-  </div>
-  <div class="media__body">
-    <h3>
-      <a href="{{article.url}}">{{article.title}}</a>
-    </h3>
-    <time datetime="{{article.published}}" class="media__date">{{article.published | longDate}}</time>
-    <div class="media__description">{{article.body | safe}}</div>
-  </div>
-</article>
+  <article class="media-article-item">
+    <div class="media__image">
+      <a href="{{ article.url }}">
+        {{ mediaImage(article.image) }}
+      </a>
+    </div>
+    <div class="media__body">
+      <h3>
+        <a href="{{ article.url }}">{{ article.title }}</a>
+      </h3>
+      <time datetime="{{ article.published }}" class="media__date">{{ article.published | longDate }}</time>
+      <div class="media__description">{{ article.body | safe }}</div>
+    </div>
+  </article>
 {% endmacro %}
 
 {% block main %}
-<section class="media">
-  <div class="mdc-layout-grid">
-    <div class="layout-wrapper">
-      {% for i in range(2019, 2016, -1) %}
-      <h2 class="media-heading">{{i}}</h2>
-      <div class="media-article-list">
-        {% for article in media[i] | sort(true, false, "published") %}
-        {{mediaArticle(article, mediaImages)}}
+  <section class="media">
+    <div class="mdc-layout-grid">
+      <div class="layout-wrapper">
+        {% for i in range(2019, 2016, -1) %}
+          <h2 class="media-heading">{{ i }}</h2>
+          <div class="media-article-list">
+            {% for article in media[i] | sort(true, false, "published") %}
+              {{ mediaArticle(article, mediaImages) }}
+            {% endfor %}
+          </div>
         {% endfor %}
       </div>
-      {% endfor %}
     </div>
-  </div>
-</section>
+  </section>
 {% endblock %}
