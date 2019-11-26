@@ -1,0 +1,189 @@
+{% set articlesList = articles[2019] | list %}
+{% set latestArticle = articlesList | last %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blockchain by TopMonks - Blog</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="//cdnjs.cloudflare.com">
+  <link rel="preconnect" href="//use.typekit.net">
+  <link rel="preconnect" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="//www.google-analytics.com">
+  <link rel="preconnect" href="//static.hotjar.com">
+  <link rel="preload" href="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" as="script" crossorigin>
+  <link rel="preload" href="https://use.typekit.net/her1ktw.js" as="script">
+  <link rel="preload" href="https://www.googletagmanager.com/gtm.js?id=GTM-T4KMQ2F" as="script">
+  <script>WebFontConfig = { typekit: { id: "her1ktw" }, async: true };</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async defer
+          integrity="sha384-pvXSwSU09c+q9mPyY++ygUHWIYRoaxgnJ/JC5wcOzMb/NVVu+IDniiB9qWp3ZNWM"
+          crossorigin="anonymous"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#C567B7">
+  <meta name="msapplication-TileColor" content="#7645C1">
+  <meta name="theme-color" content="#D5E9FF">
+  <meta name="description"
+        content="What can we do for you? We’ll take care of your dApp or blockchain development. You’re thinking about starting ICO? We’ve got you covered!">
+  <link rel="canonical" href="https://blockchain.topmonks.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@topmonks">
+  <meta name="twitter:title" property="og:title" content="We #BUIDL.">
+  <meta name="twitter:image" property="og:image" content="https://blockchain.topmonks.com/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blockchain.topmonks.com/">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start":
+          new Date().getTime(), event: "gtm.js"
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src =
+        "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-T4KMQ2F");</script>
+  <!-- End Google Tag Manager -->
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/blog.css">
+
+</head>
+<style>
+  body {
+    background: var(--mdc-theme-secondary-background);
+  }
+</style>
+{% include 'shared/header.html' %}
+<body>
+<section id="latest-article" class="">
+  <div class="mdc-layout-grid layout-wrapper">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Latest post</h2>
+      </div>
+      <div class="blog__box mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <article class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <img src="/images/articles-img/{{ latestArticle.picture }}" width="100%" height="100%">
+          </div>
+          <div class="blog__box-body mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+            <time datetime="{{ latestArticle.published }}"
+                  class="published-date">{{ latestArticle.published | safe }}</time>
+            <h3>{{ latestArticle.title }}</h3>
+            <p>{{ latestArticle.body | safe }}</p>
+              <div
+                class="personal__id">
+                <img class="person__photo" src="{{ latestArticle.authorImage }}" alt="{{ latestArticle.author }}"
+                     width="32" height="32">
+                <span class="name">{{ latestArticle.author }}</span>
+              </div>
+              <div
+                class="article-link">
+                <a href="{{ latestArticle.link }}">Show article</a>
+              </div>
+            </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% macro mediaImage(path) %}
+  <img alt="Picture of the Article" src="/images/poscasts-img/{{ podcast.picture }}" width="100%" height="100%">
+{% endmacro %}
+
+{% macro mediaArticle(article, images) %}
+
+  <div class="blog__box mdc-layout-grid__cell">
+    <article class="">
+      <a href="{{ article.link }}" class="">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <img width="100%" alt="Picture of the Podcast" src="../images/podcasts-img/{{ article.picture }}">
+          <div class="blog__box-body">
+            <time datetime="{{ article.published }}" class="media__date">{{ article.published | longDate("en") }}</time>
+            <h3>{{ article.title }}</h3>
+            <div class="personal__id">
+              <img class="person__photo" src="{{ article.authorImage }}" alt="{{ article.author }}" width="32" height="32">
+              <span class="name">{{ article.author }}</span>
+            </div>
+            <div class="article-link">
+              <a href="{{ article.link }}">Show article</a>
+            </div>
+          </div>
+        </div>
+      </a>
+    </article>
+  </div>
+{% endmacro %}
+
+<section id="podcasts" class="podcasts">
+  <div class="mdc-layout-grid layout-wrapper">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Podcasts, Lightning talks &amp; Videos</h2>
+      </div>
+      {% for year in range(2019, 2016, -1) %}
+        {% for article in podcasts[year] | sort(true, false, "published") %}
+          {{ mediaArticle(article, podcastImages) }}
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% macro mediaImage(path) %}
+  <img alt="Picture of the Article" src="/images/articles-img/{{ article.picture }}" width="100%" height="100%">
+{% endmacro %}
+
+{% macro mediaArticle(article, images) %}
+
+  <div class="blog__box mdc-layout-grid__cell">
+    <article class="">
+      <a href="{{ article.link }}" class="">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <img width="100%" alt="Picture of the Article" src="../images/articles-img/{{ article.picture }}">
+          <div class="blog__box-body">
+            <time datetime="{{ article.published }}" class="media__date">{{ article.published | longDate("en") }}</time>
+            <h3>{{ article.title }}</h3>
+            <div class="personal__id">
+              <img class="person__photo" src="{{ article.authorImage }}" alt="{{ article.author }}" width="32" height="32">
+              <span class="name">{{ article.author }}</span>
+            </div>
+            <div class="article-link">
+              <a href="{{ article.link }}">Show article</a>
+            </div>
+          </div>
+        </div>
+      </a>
+    </article>
+  </div>
+{% endmacro %}
+
+<section id="articles" class="articles">
+  <div class="mdc-layout-grid layout-wrapper">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Articles and Interviews</h2>
+      </div>
+      {% for year in range(2019, 2016, -1) %}
+        {% for article in articles[year] | sort(true, false, "published") %}
+          {{ mediaArticle(article, articleImages) }}
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+</body>
+{% include 'shared/footer.html' %}
+</html>

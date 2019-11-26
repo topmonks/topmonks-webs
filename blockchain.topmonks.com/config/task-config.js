@@ -45,7 +45,24 @@ module.exports = {
       removeRedundantAttributes: true,
       removeScriptTypeAttributes: true,
       removeStyleLinkTypeAttributes: true
-    }
+    },
+
+    nunjucksRender: {
+      manageEnv(env) {
+        env.addFilter("longDate", (str, locale) =>
+          new Intl.DateTimeFormat(locale, {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+          }).format(new Date(str))
+        );
+        env.addFilter("split", (str, seperator) => str.split(seperator));
+        env.addFilter(
+          "transformation",
+          (s, t) => s && s.replace("/upload/", `/upload/${t}/`)
+        );
+      }
+    },
   },
 
   browserSync: {

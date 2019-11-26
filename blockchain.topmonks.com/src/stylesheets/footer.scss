@@ -1,0 +1,39 @@
+footer {
+  padding: 2em 0 1em;
+  h3, li, p, span{
+    font-size: 18px;
+    line-height: 23px;
+  }
+  ul {
+    padding: 0;
+
+    li {
+      list-style: none;
+      padding-left: 0;
+      a {
+        color: var(--mdc-primary-light);
+      }
+      a:hover {
+        font-weight: 700;
+      }
+    }
+  }
+  .sro p{
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 20px;
+  }
+  .social {
+    align-self: center;
+    background: var(--mdc-primary-light);
+    border-radius: 32px;
+    .social-buttons {
+      border-radius: 32px;
+      text-align: center;
+      padding-top: 4px;
+      svg {
+        padding: 0 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>People Icon for Expertise Section</title>
+  <path
+    d="M25.5836 31.4533C26.5681 31.0965 27.375 30.7666 28.0042 30.4635C29.1056 29.9331 30.1681 29.3319 31 28.5C32.5 27 28 27 28 19.5C28 14.5005 29.9995 12 34 12C38.0005 12 40 14.5005 40 19.5C40 27 35.5 27 37 28.5C40 31.5 46 31.5 46 36M2 36C2 31.5 8 31.5 11 28.5C12.5 27 8 27 8 19.5C8 14.5005 9.9995 12 14 12C18.0005 12 20 14.5005 20 19.5C20 27 15.5 27 17 28.5C20 31.5 26 31.5 26 36H2Z"
+    stroke="#FF5D5D" stroke-width="3" stroke-linecap="round"/>
+  <path d="M24 32C24.7325 31.7527 25.2604 31.5705 25.5836 31.4534" stroke="#FF5D5D" stroke-width="3"
+        stroke-linecap="round"/>
+</svg>

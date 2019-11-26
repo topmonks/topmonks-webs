@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <title>Puzzle Icon for Integration Section</title>
+  <path
+    d="M12 8C12 5.79086 13.7909 4 16 4C18.2092 4 20 5.79086 20 8V12H30V22H34C36.2092 22 38 23.7908 38 26C38 28.2092 36.2092 30 34 30H30V40H20V36C20 33.7908 18.2092 32 16 32C13.7909 32 12 33.7908 12 36V40H2V30H6C8.20914 30 10 28.2092 10 26C10 23.7908 8.20914 22 6 22H2V12H12V8Z"
+    stroke="#FF5D5D" stroke-width="3" stroke-linecap="round"/>
+</svg>

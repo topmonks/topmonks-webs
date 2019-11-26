@@ -1,0 +1,23 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <title>Locker Icon for Security Audits Section</title>
+  <path d="M30 22H2V42H30V22Z" stroke="url(#paint0_linear)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M16 6C21.5228 6 26 10.4772 26 16V22H6V16C6 10.4772 10.4772 6 16 6Z" stroke="url(#paint1_linear)"
+        stroke-width="3" stroke-linecap="round"/>
+  <path
+    d="M16 34C17.1046 34 18 33.1046 18 32C18 30.8954 17.1046 30 16 30C14.8954 30 14 30.8954 14 32C14 33.1046 14.8954 34 16 34Z"
+    stroke="url(#paint2_linear)" stroke-width="3" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="16" y1="22" x2="16" y2="42" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7E50D3"/>
+      <stop offset="1" stop-color="#7E50D3"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="16" y1="6" x2="16" y2="22" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7E50D3"/>
+      <stop offset="1" stop-color="#7E50D3"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear" x1="16" y1="30" x2="16" y2="34" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7E50D3"/>
+      <stop offset="1" stop-color="#7E50D3"/>
+    </linearGradient>
+  </defs>
+</svg>

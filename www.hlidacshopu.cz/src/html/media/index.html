@@ -37,10 +37,10 @@
   <section class="media">
     <div class="mdc-layout-grid">
       <div class="layout-wrapper">
-        {% for i in range(2019, 2016, -1) %}
-          <h2 class="media-heading">{{ i }}</h2>
+        {% for year in range(2019, 2016, -1) %}
+          <h2 class="media-heading">{{ year }}</h2>
           <div class="media-article-list">
-            {% for article in media[i] | sort(true, false, "published") %}
+            {% for article in media[year] | sort(true, false, "published") %}
               {{ mediaArticle(article, mediaImages) }}
             {% endfor %}
           </div>

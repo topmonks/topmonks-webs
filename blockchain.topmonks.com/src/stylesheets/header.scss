@@ -1,3 +1,43 @@
+.tm-app-bar {
+  width: 100vw;
+  z-index: 1000;
+  transition: all 0.2s;
+  top: 0;
+  @media screen and (max-width: 839px) {
+    position: fixed;
+    background-color: var(--mdc-theme-background);
+    height: 60px;
+    .layout-wrapper {
+      padding: 8px 16px 0 8px;
+    }
+  }
+  @media screen and (min-width: 840px) {
+    height: 72px;
+    .layout-wrapper {
+      padding: 20px 0 0 16px;
+    }
+  }
+
+  ul li {
+    list-style: none;
+
+    a {
+      font-size: 16px;
+      font-weight: 400; //normal
+      color: var(--mdc-primary-light);
+      text-decoration: none;
+
+      border-bottom: 1px solid transparent;
+      padding-bottom: 14px;
+
+      &:hover, &:active, &:visited {
+        border-bottom: 3px solid var(--mdc-primary-light);
+      }
+    }
+  }
+}
+
+
 .tm-logo {
   display: flex;
   align-items: center;
@@ -18,17 +58,20 @@
     padding-top: 2px;
     justify-content: flex-end;
   }
+
   .monk {
     fill: currentColor;
     padding-right: 6px;
   }
 }
+
 .tm-hamburger {
   @media screen and (min-width: 840px) {
     display: none;
   }
   display: flex;
   align-items: center;
+
   .tm-hamburger__container {
     display: inline-block;
     cursor: pointer;
@@ -37,15 +80,17 @@
     height: 18px;
     position: relative;
   }
+
   .tm-hamburger__container::after {
     content: "menu";
-    color: #fff;
+    color: var(--mdc-primary-light);
     text-transform: uppercase;
     font-size: 13px;
     position: absolute;
     top: 7px;
     left: 36px;
   }
+
   .tm-hamburger__bar {
     background-color: #fff;
     width: 20px;
@@ -53,13 +98,16 @@
     position: absolute;
     top: 16px;
     transition: transform 0.4s;
+
     &:first-of-type {
       transform: translateY(-6px);
     }
+
     &:last-of-type {
       transform: translateY(6px);
     }
   }
+
   .tm-hamburger__container--open {
     .tm-hamburger__bar:first-of-type {
       transform: rotate(-45deg);
@@ -75,56 +123,30 @@
   }
 }
 
-.tm-app-bar {
-  width: 100vw;
-  z-index: 1000;
-  transition: all 0.2s;
-  top: 0;
-  //background-color: #2d3d90;
-  @media screen and (max-width: 839px) {
-    position: fixed;
-    background-color: #1a1d57;
-    height: 60px;
-    .tm-layout-wrapper {
-      padding: 8px 16px 0 8px;
-    }
-  }
-  @media screen and (min-width: 840px) {
-    height: 72px;
-    .tm-layout-wrapper {
-      padding: 20px 0 0 16px;
-    }
-  }
-}
 
 .tm-app-bar.tm-app-bar--open {
   @media screen and (max-width: 839px) {
     position: fixed;
     .tm-hamburger__container::after {
-      color: rgba(45, 61, 144, 0.5);
+      color: var(--mdc-primary-light);
     }
     .tm-hamburger__bar {
-      background-color: #2d3d90;
+      background-color: var(--mdc-primary-light);
     }
     .tm-logo {
-      color: #2d3d90;
+      color: var(--mdc-primary-light);
     }
     .tm-menu {
       transform: translate(-8px, -64px);
       z-index: -1;
     }
     .tm-menu__list a {
-      color: #2d3d90;
+      color: var(--mdc-primary-light);
       text-align: left;
     }
     .tm-menu li:hover {
       border-bottom-color: rgba(45, 61, 144, 0.5);
     }
-  }
-}
-.tm-menu__list {
-  li:hover {
-    border-bottom: 1px solid #db0f7f;
   }
 }
 
@@ -140,11 +162,13 @@
     transition: transform 0.3s;
     overflow: hidden;
     background-color: var(--tm-secondary);
-    color: #2d3d90;
-
+    color: var(--mdc-primary-light);
+    .tm-menu__list {
+      background: var(--mdc-theme-background);
+    }
     .tm-menu__list li {
       margin: 0 24px;
-      border-bottom: 1px solid transparent;
+      border-bottom: 1px solid var(--mdc-primary-light);
     }
     .tm-menu__list li + li {
       border-top: 1px solid rgba(45, 61, 144, 0.5);
@@ -154,26 +178,26 @@
       padding: 12px;
       margin: 4px;
       text-transform: capitalize;
+      color: var(--mdc-primary-light);
     }
   }
 }
 
-.tm-menu__list a {
-  color: #ffffff;
-}
-
 .tm-menu--horizontal .tm-menu__list {
-  display: flex;
+  display: inline-flex;
   align-items: baseline;
   justify-content: space-between;
-  margin: 0;
+  float: right;
   padding: 0;
+  margin: 0;
   line-height: 32px;
 }
+
 .tm-menu--horizontal .tm-menu__list a {
   display: inline-block;
-  padding: 4px 8px;
+  padding: 4px 24px 14px;
 }
+
 .tm-menu--horizontal .tm-menu__list li + li {
   margin-left: 4px;
 }

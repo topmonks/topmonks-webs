@@ -1,0 +1,12 @@
+<svg width="39" height="28" viewBox="0 0 39 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Value - Change Icon</title>
+  <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M25.0683 0V4.80874C25.0683 4.80874 39 5.85792 39 16C39 16 37.2253 11.847 30.4812 11.0601C29.4164 10.929 27.7304 10.7978 25.0683 10.7978V16L13 8L25.0683 0ZM8.51877 16.9399C9.58362 17.071 11.2696 17.2022 13.9317 17.2022V12L26 20L13.9317 28V23.1913C13.9317 23.1913 0 22.1421 0 12C0 12 1.77474 16.153 8.51877 16.9399Z"
+        fill="url(#paint0_linear)"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="19.5" y1="0" x2="19.5" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7E50D3"/>
+      <stop offset="1" stop-color="#7E50D3"/>
+    </linearGradient>
+  </defs>
+</svg>
