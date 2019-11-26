@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin-ext&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i&display=swap&subset=latin-ext");
+
+:root {
+  --grey: #2e2828;
+  --dark-grey: #455a64;
+  --light-grey: #4f4f4f;
+  --sub-info-grey: #979797;
+  --sub-title: #515151;
+  --purple: #545fef;
+  --light-purple: #f7f7ff;
+  --dark-purple: #3a42a0;
+  --red: #ca0505;
+
+  --mdc-layout-grid-margin-desktop: 24px;
+  --mdc-layout-grid-gutter-desktop: 20px;
+  --mdc-layout-grid-column-width-desktop: 60px;
+
+  --hs-theme-background: #fff;
+  --hs-theme-border: #e6e6ff;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-kerning: normal;
+  font-variant-numeric: lining-nums slashed-zero;
+  font-variant-ligatures: common-ligatures contextual;
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
