@@ -14,7 +14,9 @@
   --mdc-theme-secondary-background: #F4F8FB;
   --button-hover: #6540A9;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 header, footer {
   color: var(--mdc-primary-light);
   background: var(--mdc-theme-background);
