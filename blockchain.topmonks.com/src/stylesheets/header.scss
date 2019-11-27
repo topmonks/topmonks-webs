@@ -31,6 +31,7 @@
       padding-bottom: 14px;
 
       &:hover, &:active, &:visited {
+        font-weight: 600;
         border-bottom: 3px solid var(--mdc-primary-light);
       }
     }
