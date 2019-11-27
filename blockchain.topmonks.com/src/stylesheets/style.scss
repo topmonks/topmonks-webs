@@ -268,23 +268,19 @@ a {
   @media screen and (min-width: 840px) {
     padding: 4em 0 6em;
 
-    @keyframes pulse {
-      50% {
-        transform: scale(0.9);
-      }
-      100% {
-        transform: scale(1.0);
-      }
+    .shrink{
+      -webkit-transition:all 0.5s ease-out;
+      -moz-transition:all 0.5s ease-out;
+      -ms-transition:all 0.5s ease-out;
+      -o-transition:all 0.5s ease-out;
+      transition:all 0.5s ease-out;
     }
-    .pulse {
-      &:hover {
-        box-shadow: gray;
-        animation-name: pulse;
-        animation-duration: 0.8s;
-        animation-timing-function: ease-out;
-        animation-iteration-count: 2;
-        animation-direction: reverse;
-      }
+    .shrink:hover {
+      -webkit-transform:scale(.9);
+      -moz-transform:scale(.9);
+      -ms-transform:scale(.9);
+      -o-transform:scale(.9);
+      transform:scale(.9);
     }
   }
 }
