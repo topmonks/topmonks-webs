@@ -62,7 +62,7 @@ module.exports = {
           (s, t) => s && s.replace("/upload/", `/upload/${t}/`)
         );
       }
-    },
+    }
   },
 
   browserSync: {
