@@ -75,7 +75,7 @@
       <div class="blog__box mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <article class="mdc-layout-grid__inner">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-            <img src="/images/articles-img/{{ latestArticle.picture }}" width="100%" height="100%">
+            <img alt="{{ article.title }}" src="/images/articles-img/{{ latestArticle.picture }}" width="100%" height="100%">
           </div>
           <div class="blog__box-body mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
             <time datetime="{{ latestArticle.published }}"
@@ -84,13 +84,13 @@
             <p>{{ latestArticle.body | safe }}</p>
               <div
                 class="personal__id">
-                <img class="person__photo" src="{{ latestArticle.authorImage }}" alt="{{ latestArticle.author }}"
+                <img alt="{{ latestArticle.author }}" class="person__photo" src="{{ latestArticle.authorImage }}"
                      width="32" height="32">
                 <span class="name">{{ latestArticle.author }}</span>
               </div>
               <div
                 class="article-link">
-                <a href="{{ latestArticle.link }}">Show article</a>
+                <a name="Show Article" href="{{ latestArticle.link }}">Show article</a>
               </div>
             </div>
         </article>
@@ -107,9 +107,9 @@
 
   <div class="blog__box mdc-layout-grid__cell">
     <article class="">
-      <a href="{{ article.link }}" class="">
+      <a name="Article Link" href="{{ article.link }}" class="">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <img width="100%" alt="Picture of the Podcast" src="../images/podcasts-img/{{ article.picture }}">
+          <img alt="{{ article.title }}" width="100%" alt="Picture of the Podcast" src="../images/podcasts-img/{{ article.picture }}">
           <div class="blog__box-body">
             <time datetime="{{ article.published }}" class="media__date">{{ article.published | longDate("en") }}</time>
             <h3>{{ article.title }}</h3>
@@ -150,9 +150,9 @@
 
   <div class="blog__box mdc-layout-grid__cell">
     <article class="">
-      <a href="{{ article.link }}" class="">
+      <a name="Article Link" href="{{ article.link }}" class="">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <img width="100%" alt="Picture of the Article" src="../images/articles-img/{{ article.picture }}">
+          <img alt="{{ article.title }}" width="100%" alt="Picture of the Article" src="../images/articles-img/{{ article.picture }}">
           <div class="blog__box-body">
             <time datetime="{{ article.published }}" class="media__date">{{ article.published | longDate("en") }}</time>
             <h3>{{ article.title }}</h3>
