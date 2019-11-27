@@ -648,4 +648,12 @@
     `;
   }
 </script>
+<script type="module">
+  import { Workbox } from "https://unpkg.com/workbox-window@4.3.1/build/workbox-window.prod.mjs?module";
+
+  if ("serviceWorker" in navigator) {
+    const wb = new Workbox("/sw.js");
+    wb.register();
+  }
+</script>
 {% endblock %}
