@@ -79,7 +79,7 @@
           </div>
           <div class="blog__box-body mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
             <time datetime="{{ latestArticle.published }}"
-                  class="published-date">{{ latestArticle.published | safe }}</time>
+                  class="published-date">{{ latestArticle.published | longDate("en") }}</time>
             <h3>{{ latestArticle.title }}</h3>
             <p>{{ latestArticle.body | safe }}</p>
               <div
