@@ -360,11 +360,15 @@ footer {
 
 .app-bar {
   height: 48px;
+  overflow: hidden;
 
   &.app-bar--sticky {
     position: fixed;
     width: 100vw;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.07);
+  }
+  &.app-bar--open {
+    overflow: visible;
   }
 
   @media screen and (max-width: 913px) {
@@ -373,11 +377,13 @@ footer {
     .app-bar_menu {
       transform: scaleY(0) translateY(-64px);
       transform-origin: top;
-      transition: transform 0.3s ease;
+      transition: visibility 0.3s ease, transform 0.3s ease;
       order: 3;
+      visibility: hidden;
     }
     &.app-bar--open .app-bar_menu {
       transform: scaleY(1) translateY(-4px);
+      visibility: visible;
     }
     .hs_logo {
       order: 1;
