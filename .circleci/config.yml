@@ -376,6 +376,17 @@ workflows:
           filters:
             branches:
               only: master
+      - test-session-monk-topmonks-com:
+          requires:
+            - build
+      - deploy-session-monk-topmonks-com:
+          context: org-global
+          requires:
+            - provision
+            - test-session-monk-topmonks-com
+          filters:
+            branches:
+              only: master
       - deploy-www-topmonks-com:
           context: org-global
           requires:
