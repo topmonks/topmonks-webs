@@ -225,7 +225,7 @@ jobs:
   deploy-session-monk-topmonks-com:
     <<: *s3-deploy
     environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: XXXXXXXXXXXXX
+      AWS_CLOUDFRONT_DISTRIBUTION_ID: E17DFTNXWI9SIA
       HOST: session-monk.topmonks.com
 
   test-session-monk-topmonks-com:
