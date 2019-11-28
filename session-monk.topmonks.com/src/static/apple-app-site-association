@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "8P5697C5H7.com.topmonks.sessionmonk",
+                "paths": ["*"]
+            }
+        ]
+    }
+}

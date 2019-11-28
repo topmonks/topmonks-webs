@@ -12,7 +12,7 @@
 			"consultant": true,
 			"pickup": true,
 			"body": "<p>The feeling when you solve complex problems with really simple solutions. This is what drives me forward.</p>\n",
-			"updatedAt": "2019-09-12T10:53:57.294Z"
+			"updatedAt": "2019-11-14T14:55:14.819Z"
 		},
 		"anna-cihlova": {
 			"id": "anna-cihlova",
@@ -24,7 +24,7 @@
 			"linkedin": null,
 			"quote": null,
 			"body": "<p>Just tell us something we don&#39;t know</p>\n",
-			"updatedAt": "2018-08-21T14:57:44.303Z"
+			"updatedAt": "2018-09-17T06:38:29.131Z"
 		},
 		"daniel-hromada": {
 			"id": "daniel-hromada",
@@ -36,7 +36,7 @@
 			"linkedin": "in/junkycoder",
 			"quote": "Less is more.",
 			"body": "",
-			"updatedAt": "2018-08-15T08:57:21.802Z"
+			"updatedAt": "2018-08-15T12:52:37.616Z"
 		},
 		"filip-maly": {
 			"id": "filip-maly",
@@ -48,7 +48,7 @@
 			"linkedin": "in/filip-maly/",
 			"quote": "it is always possible to make agreement",
 			"body": "<p>Its up to you </p>\n",
-			"updatedAt": "2018-08-15T08:57:21.803Z"
+			"updatedAt": "2018-08-15T12:52:37.627Z"
 		},
 		"jakub-dusek": {
 			"id": "jakub-dusek",
@@ -60,7 +60,7 @@
 			"linkedin": null,
 			"quote": null,
 			"body": "<p>Just tell us something we don&#39;t know</p>\n",
-			"updatedAt": "2018-08-21T14:57:44.304Z"
+			"updatedAt": "2018-09-17T06:38:29.132Z"
 		},
 		"jan-fabian": {
 			"id": "jan-fabian",
@@ -72,7 +72,7 @@
 			"quote": "I don't wanna vote no party. All I wanna do is party.",
 			"consultant": true,
 			"body": "<p>I integrate friends from different nodes using my very own logic formulas. At work I do the same with prices. </p>\n",
-			"updatedAt": "2019-08-27T09:32:40.210Z"
+			"updatedAt": "2019-11-14T14:55:14.820Z"
 		},
 		"jan-hlisnikovsky": {
 			"id": "jan-hlisnikovsky",
@@ -84,7 +84,7 @@
 			"linkedin": "in/hlisnikovsky",
 			"quote": "La vita e bella!",
 			"body": "<p>Everything is possible...</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.804Z"
+			"updatedAt": "2018-08-15T12:52:37.628Z"
 		},
 		"jan-kopriva": {
 			"id": "jan-kopriva",
@@ -96,7 +96,7 @@
 			"linkedin": "pub/jan-kopriva/7/583/a64",
 			"quote": "Be now. Be real. Be yourself.",
 			"body": "<p>Seeker of the inner peace.</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.804Z"
+			"updatedAt": "2018-08-15T12:52:37.628Z"
 		},
 		"jan-machacek": {
 			"id": "jan-machacek",
@@ -108,7 +108,7 @@
 			"linkedin": null,
 			"quote": null,
 			"body": "<p>Just tell us something we don&#39;t know</p>\n",
-			"updatedAt": "2018-08-21T14:57:44.306Z"
+			"updatedAt": "2018-09-17T06:38:29.133Z"
 		},
 		"jan-uhlar": {
 			"id": "jan-uhlar",
@@ -121,7 +121,7 @@
 			"linkedin": "in/januhlar",
 			"quote": "People rarely succeed unless they have fun in what they are doing.",
 			"body": "<p>Papa Ruby at TopMonks. Bringing our startups live.</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.804Z"
+			"updatedAt": "2018-08-15T12:52:37.629Z"
 		},
 		"jaroslav-vilc": {
 			"id": "jaroslav-vilc",
@@ -131,7 +131,7 @@
 			"github": "javill",
 			"quote": "Feel free to change the future.",
 			"body": "<p>Turning ideas into proof of concept.</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.805Z"
+			"updatedAt": "2018-08-15T12:52:37.630Z"
 		},
 		"jiri-fabian": {
 			"id": "jiri-fabian",
@@ -145,7 +145,7 @@
 			"pickup": true,
 			"consultant": true,
 			"body": "<p>Love to put together awesome teams and form business alliances to make this world a better place.</p>\n",
-			"updatedAt": "2019-08-27T09:43:55.960Z"
+			"updatedAt": "2019-11-14T14:55:14.820Z"
 		},
 		"jirka-jansa": {
 			"id": "jirka-jansa",
@@ -157,7 +157,7 @@
 			"quote": "Never stop learning, share your wisdom.",
 			"consultant": true,
 			"body": "<p>Programming enthusiast with respect to both legacy and future.</p>\n",
-			"updatedAt": "2019-08-27T09:45:00.912Z"
+			"updatedAt": "2019-11-14T14:55:14.820Z"
 		},
 		"jiri-kubala": {
 			"id": "jiri-kubala",
@@ -169,7 +169,7 @@
 			"linkedin": null,
 			"quote": null,
 			"body": "<p>Nutno vyplnit</p>\n",
-			"updatedAt": "2018-08-21T14:57:44.307Z"
+			"updatedAt": "2018-09-17T06:38:29.133Z"
 		},
 		"jiri-lafek": {
 			"id": "jiri-lafek",
@@ -180,7 +180,7 @@
 			"github": "zzbazza",
 			"quote": "You either know how to program or you don't know ruby at all.",
 			"body": "<p>Ruby Mario on TopMonks startup projects.</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.805Z"
+			"updatedAt": "2018-08-15T12:52:37.631Z"
 		},
 		"jiri-penzes": {
 			"id": "jiri-penzes",
@@ -193,7 +193,7 @@
 			"quote": "Simplicity is the way.",
 			"consultant": true,
 			"body": "<p>Any code is not the problem. I&#39;m monk with open mind!</p>\n",
-			"updatedAt": "2019-08-27T09:32:40.211Z"
+			"updatedAt": "2019-11-14T14:55:14.821Z"
 		},
 		"jiri-pisa": {
 			"id": "jiri-pisa",
@@ -205,7 +205,7 @@
 			"linkedin": "in/jiripisa",
 			"quote": "The best ideas come as jokes. Make your thinking as funny as possible.",
 			"body": "<p>Bringing fresh ideas on the table.</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.806Z"
+			"updatedAt": "2018-08-15T12:52:37.632Z"
 		},
 		"kamil-novotny": {
 			"id": "kamil-novotny",
@@ -217,7 +217,7 @@
 			"linkedin": null,
 			"quote": null,
 			"body": "<p>Just tell us something we don&#39;t know</p>\n",
-			"updatedAt": "2018-08-21T14:57:44.308Z"
+			"updatedAt": "2018-09-17T06:38:29.134Z"
 		},
 		"kamil-tomas": {
 			"id": "kamil-tomas",
@@ -229,7 +229,7 @@
 			"linkedin": null,
 			"quote": null,
 			"body": "<p>Just tell us something we don&#39;t know</p>\n",
-			"updatedAt": "2018-08-21T14:57:44.309Z"
+			"updatedAt": "2018-09-17T06:38:29.134Z"
 		},
 		"karel-ploc": {
 			"id": "karel-ploc",
@@ -241,7 +241,7 @@
 			"linkedin": null,
 			"quote": null,
 			"body": "<p>Let&#39;s establish javascript state. Next to Liberland.</p>\n",
-			"updatedAt": "2018-10-18T12:01:39.901Z"
+			"updatedAt": "2019-06-14T08:01:35.841Z"
 		},
 		"karel-stefan": {
 			"id": "karel-stefan",
@@ -252,7 +252,7 @@
 			"github": "kstefan",
 			"linkedin": "in/karelstefan",
 			"body": "",
-			"updatedAt": "2018-08-15T08:57:21.806Z"
+			"updatedAt": "2018-08-15T12:52:37.632Z"
 		},
 		"katarina-merhautova": {
 			"id": "katarina-merhautova",
@@ -262,7 +262,7 @@
 			"github": null,
 			"quote": null,
 			"body": "",
-			"updatedAt": "2019-02-18T13:41:14.302Z"
+			"updatedAt": "2019-06-14T08:01:35.841Z"
 		},
 		"lea-petrasova": {
 			"id": "lea-petrasova",
@@ -275,7 +275,7 @@
 			"quote": "Excellence always sells.",
 			"pickup": true,
 			"body": "<p>Love to put together awesome teams and form business alliances to make this world a better place.</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.807Z"
+			"updatedAt": "2018-08-15T12:52:37.634Z"
 		},
 		"libor-mika": {
 			"id": "libor-mika",
@@ -286,7 +286,7 @@
 			"linkedin": "in/mikalibor",
 			"quote": "I would love to change the world, but they won't give me the source code.",
 			"body": "<p>I have passion for learning and improving my experience in Java related technology. Seeking new challenges that interested me and taught me something new.</p>\n",
-			"updatedAt": "2019-04-25T17:34:17.182Z"
+			"updatedAt": "2019-06-14T08:01:35.841Z"
 		},
 		"linh-nguyen": {
 			"id": "linh-nguyen",
@@ -298,7 +298,7 @@
 			"linkedin": null,
 			"quote": null,
 			"body": "<p>Just tell us something we don&#39;t know</p>\n",
-			"updatedAt": "2018-08-21T14:57:44.311Z"
+			"updatedAt": "2018-09-17T06:38:29.135Z"
 		},
 		"lukas-sirhal": {
 			"id": "lukas-sirhal",
@@ -310,7 +310,7 @@
 			"linkedin": "in/lukas-sirhal/",
 			"quote": "stay calm and relax",
 			"body": "<p>Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.</p>\n",
-			"updatedAt": "2019-03-31T09:57:25.711Z"
+			"updatedAt": "2019-06-14T08:01:35.842Z"
 		},
 		"lumir-mrkva": {
 			"id": "lumir-mrkva",
@@ -322,7 +322,7 @@
 			"quote": "Expect perfection and you will never innovate.",
 			"consultant": true,
 			"body": "<p>Tireless innovator and evangelist working for our enterprise customers.</p>\n",
-			"updatedAt": "2019-08-27T09:32:40.212Z"
+			"updatedAt": "2019-11-14T14:55:14.821Z"
 		},
 		"marian-mrozek": {
 			"id": "marian-mrozek",
@@ -333,7 +333,7 @@
 			"linkedin": "in/marianmrozek",
 			"quote": "There are 10 kinds of people in the world, those who can read binary and those who cannot.",
 			"body": "<p>I love my job. A happy programmer is a good programmer!</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.807Z"
+			"updatedAt": "2018-08-15T12:52:37.635Z"
 		},
 		"michal-nikodim": {
 			"id": "michal-nikodim",
@@ -345,7 +345,7 @@
 			"linkedin": "in/michal-nikodím-5b18229",
 			"quote": "Frameworks... frameworks everywhere",
 			"body": "<p>Today I have feel that it is not about programming, but only about customize existing frameworks</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.807Z"
+			"updatedAt": "2018-08-15T12:52:37.635Z"
 		},
 		"michal-skvor": {
 			"id": "michal-skvor",
@@ -357,7 +357,7 @@
 			"linkedin": null,
 			"quote": null,
 			"body": "<p>Just tell us something we don&#39;t know</p>\n",
-			"updatedAt": "2018-08-21T14:57:44.312Z"
+			"updatedAt": "2018-09-17T06:38:29.135Z"
 		},
 		"michal-velek": {
 			"id": "michal-velek",
@@ -367,7 +367,7 @@
 			"github": "mvelek",
 			"quote": "“.... there’s a difference between knowing the path and walking the path.” ― Morpheus",
 			"body": "",
-			"updatedAt": "2019-02-11T10:08:40.852Z"
+			"updatedAt": "2019-06-14T08:01:35.842Z"
 		},
 		"ondrej-svoboda": {
 			"id": "ondrej-svoboda",
@@ -378,7 +378,7 @@
 			"github": "theodik",
 			"quote": null,
 			"body": "",
-			"updatedAt": "2018-08-15T08:57:21.808Z"
+			"updatedAt": "2018-08-15T12:52:37.636Z"
 		},
 		"ondrej-tupy": {
 			"id": "ondrej-tupy",
@@ -391,7 +391,7 @@
 			"quote": null,
 			"pickup": true,
 			"body": "",
-			"updatedAt": "2019-09-12T10:55:15.338Z"
+			"updatedAt": "2019-11-14T14:55:14.822Z"
 		},
 		"pavel-lobodinsky": {
 			"id": "pavel-lobodinsky",
@@ -403,7 +403,7 @@
 			"linkedin": "in/lobodinsky",
 			"quote": "Two wheels are more than one",
 			"body": "<p>If anything is worth an effort, then do it right!</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.808Z"
+			"updatedAt": "2018-08-15T12:52:37.637Z"
 		},
 		"pavel-trnka": {
 			"id": "pavel-trnka",
@@ -415,7 +415,7 @@
 			"linkedin": "in/pavel-trnka-a2045b76",
 			"quote": "As designers, we have a great responsibility.",
 			"body": "<p>Technological enthusiast</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.808Z"
+			"updatedAt": "2018-08-15T12:52:37.637Z"
 		},
 		"pavol-noha": {
 			"id": "pavol-noha",
@@ -427,7 +427,7 @@
 			"quote": "The only way to get rid of a temptation is to yield to it.",
 			"consultant": true,
 			"body": "<p>Surprising our clients with technical skills. And sometimes my tattoo too too.</p>\n",
-			"updatedAt": "2019-08-27T09:32:40.213Z"
+			"updatedAt": "2019-11-14T14:55:14.822Z"
 		},
 		"petr-kubin": {
 			"id": "petr-kubin",
@@ -438,7 +438,7 @@
 			"linkedin": "in/petr-kubín-72654210b/",
 			"quote": null,
 			"body": "",
-			"updatedAt": "2018-10-18T12:01:39.902Z"
+			"updatedAt": "2019-06-14T08:01:35.843Z"
 		},
 		"petr-prazak": {
 			"id": "petr-prazak",
@@ -447,7 +447,7 @@
 			"job_title": null,
 			"quote": "JAVA developer",
 			"body": "",
-			"updatedAt": "2018-08-15T08:57:21.809Z"
+			"updatedAt": "2018-08-15T12:52:37.638Z"
 		},
 		"petr-simek": {
 			"id": "petr-simek",
@@ -459,7 +459,7 @@
 			"linkedin": null,
 			"quote": null,
 			"body": "",
-			"updatedAt": "2018-11-02T07:54:21.235Z"
+			"updatedAt": "2019-06-14T08:01:35.843Z"
 		},
 		"premysl-donat": {
 			"id": "premysl-donat",
@@ -471,7 +471,7 @@
 			"linkedin": null,
 			"quote": null,
 			"body": "<p>Just a free spirit. I like to reinvent the wheel.</p>\n",
-			"updatedAt": "2019-04-30T14:00:28.073Z"
+			"updatedAt": "2019-06-14T08:01:35.843Z"
 		},
 		"radek-jakl": {
 			"id": "radek-jakl",
@@ -483,7 +483,7 @@
 			"linkedin": "in/jaklradek",
 			"quote": "Play a game with the world, even when you are not a child anymore.",
 			"body": "<p>Making websites and apps feel better about themselves.</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.809Z"
+			"updatedAt": "2018-08-15T12:52:37.640Z"
 		},
 		"tomas-brejla": {
 			"id": "tomas-brejla",
@@ -495,7 +495,7 @@
 			"linkedin": "in/tomasbrejla/cs",
 			"quote": null,
 			"body": "<p>When the wind of change blows, some build walls, others build windmills</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.809Z"
+			"updatedAt": "2018-08-15T12:52:37.641Z"
 		},
 		"tomas-ganaj": {
 			"id": "tomas-ganaj",
@@ -506,7 +506,7 @@
 			"linkedin": "in/tomasganaj",
 			"quote": "Trust Yourself",
 			"body": "",
-			"updatedAt": "2018-08-15T08:57:21.809Z"
+			"updatedAt": "2018-08-15T12:52:37.642Z"
 		},
 		"tomas-paulus": {
 			"id": "tomas-paulus",
@@ -519,7 +519,7 @@
 			"quote": null,
 			"consultant": true,
 			"body": "<p>Its up to you </p>\n",
-			"updatedAt": "2019-08-27T09:32:40.213Z"
+			"updatedAt": "2019-11-14T14:55:14.822Z"
 		},
 		"tomas-zalusky": {
 			"id": "tomas-zalusky",
@@ -531,7 +531,7 @@
 			"linkedin": "in/tomaszalusky",
 			"quote": "It is better to light one small candle than to curse the darkness.",
 			"body": "<p>Dive into technology, stay in reality.</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.810Z"
+			"updatedAt": "2018-08-15T12:52:37.643Z"
 		},
 		"vaclav-slavik": {
 			"id": "vaclav-slavik",
@@ -543,7 +543,7 @@
 			"linkedin": "in/vaclav-slavik/",
 			"quote": "Give me but a base font-size on which to stand, and I shall move the web.",
 			"body": "<p>Weaving websites since 2002</p>\n",
-			"updatedAt": "2018-08-15T08:57:21.810Z"
+			"updatedAt": "2018-08-15T12:52:37.643Z"
 		},
 		"veronika-tomasova": {
 			"id": "veronika-tomasova",
@@ -556,7 +556,7 @@
 			"quote": null,
 			"consultant": true,
 			"body": "<p>Just tell us something we don&#39;t know</p>\n",
-			"updatedAt": "2019-08-27T09:32:40.214Z"
+			"updatedAt": "2019-11-14T14:55:14.823Z"
 		},
 		"vladimira-kubertova": {
 			"id": "vladimira-kubertova",
@@ -566,7 +566,7 @@
 			"github": "VladkaKubertova",
 			"quote": "A smooth sea never made a skilled sailor.",
 			"body": "<p>You can only actually help to someone who wants to be helped. </p>\n",
-			"updatedAt": "2019-02-18T13:41:14.303Z"
+			"updatedAt": "2019-06-14T08:01:35.849Z"
 		}
 	}
 }

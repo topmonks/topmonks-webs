@@ -4,7 +4,7 @@ module.exports = {
   images: false,
   javascripts: false,
   fonts: false,
-  static: false,
+  static: true,
   svgSprite: false,
   stylesheets: false,
 
