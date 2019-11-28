@@ -30,6 +30,9 @@
   "www.xduediligence.com": {},
   "monkslab.cz": {},
   "www.hlidacshopu.cz": {
-    "dns": { "disabled": true }
-  }
+    "dns": {
+      "disabled": true
+    }
+  },
+  "session-monk.topmonks.com": {}
 }

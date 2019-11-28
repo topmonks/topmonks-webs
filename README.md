@@ -91,6 +91,7 @@ The following sites can be build and ran using the `yarn start:[SITE]` command.
 - `studio.topmonks.com`
 - `www.xduediligence.com`
 - `www.hookahmonk.com`
+- `session-monk.topmonks.com`
 
 It will start [browser-sync](https://browsersync.io/) session on [http://localhost:3000](http://localhost:3000).
 
