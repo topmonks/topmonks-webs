@@ -228,7 +228,7 @@ jobs:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: XXXXXXXXXXXXX
       HOST: session-monk.topmonks.com
 
-  test-msession-monk-topmonks-com:
+  test-session-monk-topmonks-com:
     <<: *test-site
     environment:
       HOST: session-monk.topmonks.com
