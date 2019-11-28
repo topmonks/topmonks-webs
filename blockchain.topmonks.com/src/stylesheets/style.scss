@@ -7,11 +7,11 @@
 
   --mdc-theme-primary: #48435C;
   --mdc-theme-secondary: #999999;
-  --mdc-primary-light: #ffffff;
+  --mdc-theme-text-primary-on-dark: #ffffff;
   --mdc-purple-light: #8363F9;
   --mdc-pink-primary: #FF5D5D;
-  --mdc-theme-background: linear-gradient(180deg, #7E50D3 0%, #7E50D3 100%);
-  --mdc-theme-secondary-background: #F4F8FB;
+  --mdc-theme--primary-bg: linear-gradient(180deg, #7E50D3 0%, #7E50D3 100%);
+  --mdc-theme-secondary-bg: #F4F8FB;
   --button-hover: #6540A9;
 }
 
@@ -20,8 +20,8 @@ html {
 }
 
 header, footer {
-  color: var(--mdc-primary-light);
-  background: var(--mdc-theme-background);
+  color: var(--mdc-theme-text-primary-on-dark);
+  background: var(--mdc-theme--primary-bg);
 }
 
 body {
@@ -52,7 +52,7 @@ body {
 h1 {
   font-size: 96px;
   font-weight: 700; //bold
-  color: var(--mdc-primary-light);
+  color: var(--mdc-theme-text-primary-on-dark);
   line-height: 146px;
   margin-bottom: 0;
 }
@@ -81,7 +81,7 @@ a {
 }
 
 .button {
-  background: var(--mdc-theme-background);
+  background: var(--mdc-theme--primary-bg);
   box-shadow: 10px 10px 40px rgba(126, 80, 211, 0.2);
   text-align: center;
   padding: 14px;
@@ -90,7 +90,7 @@ a {
   a {
     font-size: 16px;
     font-weight: 700;
-    color: var(--mdc-primary-light);
+    color: var(--mdc-theme-text-primary-on-dark);
     line-height: 24px;
   }
 
@@ -120,13 +120,13 @@ a {
 
 .main_info {
   position: relative;
-  background: var(--mdc-theme-background);
+  background: var(--mdc-theme--primary-bg);
   background-size: 100%;
 
   p.main_sub-info {
     font-size: 24px;
     font-weight: 700; //bold
-    color: var(--mdc-primary-light);
+    color: var(--mdc-theme-text-primary-on-dark);
     line-height: 37px;
     text-align: center;
     max-width: 467px;
@@ -141,7 +141,7 @@ a {
 
   .box {
     .box-values {
-      background-color: var(--mdc-primary-light);
+      background-color: var(--mdc-theme-text-primary-on-dark);
       display: inline-flex;
       align-items: center;
       padding: 24px;
@@ -178,10 +178,10 @@ a {
 /* Section Skills */
 
 .team-skills {
-  background: var(--mdc-theme-secondary-background);
+  background: var(--mdc-theme-secondary-bg);
 
   .skills_box {
-    background-color: var(--mdc-primary-light);
+    background-color: var(--mdc-theme-text-primary-on-dark);
     padding: 24px;
 
     h3 {
@@ -202,10 +202,10 @@ a {
 /* Section Our Work */
 
 .our-work {
-  background: var(--mdc-primary-light);
+  background: var(--mdc-theme-text-primary-on-dark);
 
   .our-work_box {
-    color: var(--mdc-primary-light);
+    color: var(--mdc-theme-text-primary-on-dark);
     height: 387px;
     padding: 24px 40px 4px;
 
@@ -241,11 +241,11 @@ a {
 
 
   .box--fintech {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1573890326/blockchain.topmonks.com/image.png") right center no-repeat, var(--mdc-theme-background);
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1573890326/blockchain.topmonks.com/image.png") right center no-repeat, var(--mdc-theme--primary-bg);
     background-size: 60%;
     box-shadow: 10px 10px 40px rgba(126, 80, 211, 0.2);
     @media (max-width: 739px) {
-      background: var(--mdc-theme-background);
+      background: var(--mdc-theme--primary-bg);
     }
   }
 

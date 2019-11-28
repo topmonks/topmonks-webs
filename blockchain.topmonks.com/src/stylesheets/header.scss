@@ -5,7 +5,7 @@
   top: 0;
   @media screen and (max-width: 839px) {
     position: fixed;
-    background-color: var(--mdc-theme-background);
+    background-color: var(--mdc-theme--primary-bg);
     height: 60px;
     .layout-wrapper {
       padding: 8px 16px 0 8px;
@@ -163,11 +163,11 @@
     background-color: var(--tm-secondary);
     color: var(--mdc-primary-light);
     .tm-menu__list {
-      background: var(--mdc-theme-background);
+      background: var(--mdc-theme--primary-bg);
     }
     .tm-menu__list li {
       margin: 0 24px;
-      border-bottom: 1px solid var(--mdc-primary-light);
+      border-bottom: 1px solid var(--mdc-theme-text-primary-on-dark);
     }
     .tm-menu__list li + li {
       border-top: 1px solid rgba(45, 61, 144, 0.5);
@@ -177,7 +177,7 @@
       padding: 12px;
       margin: 4px;
       text-transform: capitalize;
-      color: var(--mdc-primary-light);
+      color: var(--mdc-theme-text-primary-on-dark);
     }
   }
 }

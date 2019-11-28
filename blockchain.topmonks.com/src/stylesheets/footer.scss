@@ -11,7 +11,7 @@ footer {
       list-style: none;
       padding-left: 0;
       a {
-        color: var(--mdc-primary-light);
+        color: var(--mdc-theme-text-primary-on-dark);
       }
       a:hover {
         font-weight: 700;
@@ -25,7 +25,7 @@ footer {
   }
   .social {
     align-self: center;
-    background: var(--mdc-primary-light);
+    background: var(--mdc-theme-text-primary-on-dark);
     border-radius: 32px;
     .social-buttons {
       border-radius: 32px;

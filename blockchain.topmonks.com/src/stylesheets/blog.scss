@@ -14,7 +14,7 @@
 }
 
 .blog {
-  background: var(--mdc-theme-secondary-background);
+  background: var(--mdc-theme-secondary-bg);
   @media screen and (min-width: 840px) {
     padding: 4em 0 6em;
   }
@@ -22,7 +22,7 @@
 
 .blog__box {
   font-size: 14px;
-  background: var(--mdc-primary-light);
+  background: var(--mdc-theme-text-primary-on-dark);
 
   h3 {
     color: var(--mdc-theme-primary);
