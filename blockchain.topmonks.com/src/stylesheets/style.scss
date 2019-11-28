@@ -14,9 +14,11 @@
   --mdc-theme-secondary-background: #F4F8FB;
   --button-hover: #6540A9;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 header, footer {
   color: var(--mdc-primary-light);
   background: var(--mdc-theme-background);
@@ -117,7 +119,9 @@ a {
 /* Section MAIN INFO */
 
 .main_info {
+  position: relative;
   background: var(--mdc-theme-background);
+  background-size: 100%;
 
   p.main_sub-info {
     font-size: 24px;
@@ -126,6 +130,9 @@ a {
     line-height: 37px;
     text-align: center;
     max-width: 467px;
+    @media screen and (min-width: 840px) {
+      min-height: 200px;
+    }
     @media (max-width: 839px) {
       text-align: left;
       margin-top: 0;
@@ -150,6 +157,19 @@ a {
         font-weight: 700; //bold
         line-height: 30px;
         max-width: 256px;
+      }
+    }
+
+    .box--bgnd-circle {
+      @media screen and (min-width: 840px) {
+        display: grid;
+        content: "";
+        position: absolute;
+        top: 80%;
+        width: 880px;
+        background: url("/images/circle.svg") center no-repeat;
+        background-size: 166px 100%;
+        padding: 40px 0;
       }
     }
   }
@@ -268,19 +288,19 @@ a {
   @media screen and (min-width: 840px) {
     padding: 4em 0 6em;
 
-    .shrink{
-      -webkit-transition:all 0.3s ease-out;
-      -moz-transition:all 0.3s ease-out;
-      -ms-transition:all 0.3s ease-out;
-      -o-transition:all 0.3s ease-out;
-      transition:all 0.3s ease-out;
+    .shrink {
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
     }
     .shrink:hover {
-      -webkit-transform:scale(.99);
-      -moz-transform:scale(.99);
-      -ms-transform:scale(.99);
-      -o-transform:scale(.99);
-      transform:scale(.99);
+      -webkit-transform: scale(.99);
+      -moz-transform: scale(.99);
+      -ms-transform: scale(.99);
+      -o-transform: scale(.99);
+      transform: scale(.99);
     }
   }
 }
