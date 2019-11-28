@@ -21,7 +21,7 @@
     "@topmonks/blendid": "git://github.com/topmonks/blendid.git",
     "@types/chart.js": "^2.9.2",
     "ava": "^2.4.0",
-    "bluebird": "^3.7.1",
+    "bluebird": "^3.7.2",
     "broken-link-checker-local": "^0.2.1",
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
