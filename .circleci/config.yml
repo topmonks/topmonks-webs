@@ -228,10 +228,10 @@ jobs:
       AWS_CLOUDFRONT_DISTRIBUTION_ID: E17DFTNXWI9SIA
       HOST: session-monk.topmonks.com
 
-#  test-session-monk-topmonks-com:
-#    <<: *test-site
-#    environment:
-#      HOST: session-monk.topmonks.com
+  test-session-monk-topmonks-com:
+    <<: *test-site
+    environment:
+      HOST: session-monk.topmonks.com
 
   deploy-studio-topmonks-com:
     <<: *s3-deploy
@@ -376,15 +376,14 @@ workflows:
           filters:
             branches:
               only: master
-#      - test-session-monk-topmonks-com:
-#          requires:
-#            - build
+      - test-session-monk-topmonks-com:
+          requires:
+            - build
       - deploy-session-monk-topmonks-com:
           context: org-global
           requires:
             - provision
-#            - test-session-monk-topmonks-com
-            - build
+            - test-session-monk-topmonks-com
           filters:
             branches:
               only: master
