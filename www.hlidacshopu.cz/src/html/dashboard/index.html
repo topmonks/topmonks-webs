@@ -1,14 +1,18 @@
-{% extends 'layouts/master.html' %}
-{% from 'macros/helpers.html' import sprite %}
-
-{% block title %}Přehled Black Friday na Hlídači shopů{% endblock %}
-
-{% block preload %}
-<link rel="modulepreload" href="https://unpkg.com/lit-html@1.1.1/lit-html.js?module" crossorigin="anonymous">
-<link rel="preload" href="https://api.hlidacshopu.cz/shop-numbers" as="fetch" crossorigin="anonymous">
-{% endblock %}
-
-{% block styles %}
+{% extends 'layouts/master.html' %} {% from 'macros/helpers.html' import sprite
+%} {% block title %}Přehled Black Friday na Hlídači shopů{% endblock %} {% block
+preload %}
+<link
+  rel="modulepreload"
+  href="https://unpkg.com/lit-html@1.1.1/lit-html.js?module"
+  crossorigin="anonymous"
+/>
+<link
+  rel="preload"
+  href="https://api.hlidacshopu.cz/shop-numbers"
+  as="fetch"
+  crossorigin="anonymous"
+/>
+{% endblock %} {% block styles %}
 <style>
   .shops-stats {
     border-spacing: 0 12px;
@@ -55,9 +59,7 @@
     border-bottom-right-radius: 6px;
   }
 </style>
-{% endblock %}
-
-{% block main %}
+{% endblock %} {% block main %}
 <section class="dashboard">
   <div class="mdc-layout-grid">
     <div class="layout-wrapper">
@@ -68,7 +70,7 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <table class="shops-stats">
             <colgroup>
-              <col width="150">
+              <col width="150" />
             </colgroup>
             <thead>
               <tr>
@@ -82,8 +84,10 @@
             <tbody id="table-root">
               <tr>
                 <td colspan="5">
-                  <div class=loading-container>
-                    <div class=loader aria-label="Načítám data…">Chvilku strpení, načítají se data&hellip;</div>
+                  <div class="loading-container">
+                    <div class="loader" aria-label="Načítám data…">
+                      Chvilku strpení, načítají se data&hellip;
+                    </div>
                   </div>
                 </td>
               </tr>
@@ -91,27 +95,48 @@
           </table>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <p class="explanation">Poznámka: <em>Reálná sleva</em> se počítá jako aktuální cena po slevě ku maximální ceně, za kterou se zboží prodávalo za posledních 90 dní.</p>
+          <p class="explanation">
+            Poznámka: <em>Reálná sleva</em> se počítá jako aktuální cena po
+            slevě ku maximální ceně, za kterou se zboží prodávalo za posledních
+            90 dní.
+          </p>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Otevřená data <small>beta</small></h2>
-          <p>Otevíráme naše data pro vaše analýzy. Najdete je postupně přibývat v
-            <a href="https://console.cloud.google.com/bigquery?p=hlidacshopu&d=hlidacshopu&t=allshops&page=table">Google BigQuery</a></p>
+          <p>
+            Otevíráme naše data pro vaše analýzy. Najdete je postupně přibývat v
+            <a
+              href="https://console.cloud.google.com/bigquery?p=hlidacshopu&d=hlidacshopu&t=allshops&page=table"
+              >Google BigQuery</a
+            >
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-{% endblock %}
-
-{% block scripts %}
+{% endblock %} {% block scripts %}
 <script type="module">
-  import { html, svg, render } from "https://unpkg.com/lit-html@1.1.1/lit-html.js?module";
+  import {
+    html,
+    svg,
+    render
+  } from "https://unpkg.com/lit-html@1.1.1/lit-html.js?module";
 
   const tableRoot = document.getElementById("table-root");
   const formatPercents = x => x && `${Math.round(x).toLocaleString("cs")} %`;
-  const timeout = ms => new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), ms));
-  const shopStats = ({ key, count_all, count_bf, declared_sale, real_sale, percent_bf }) => ({
+  const timeout = ms =>
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error("timeout")), ms)
+    );
+  const shopStats = ({
+    key,
+    count_all,
+    count_bf,
+    declared_sale,
+    real_sale,
+    percent_bf
+  }) => ({
     key,
     allProducts: parseInt(count_all),
     bfProducts: count_bf && parseInt(count_bf),
@@ -119,38 +144,143 @@
     avgRealDiscount: real_sale && parseFloat(real_sale)
   });
   const shops = new Map([
-    ["alza", { name: "Alza", logo: "alza_logo", url: "https://www.alza.cz/", viewBox: "0 0 60 19" }],
-    ["czc", { name: "CZC.CZ", logo: "czc.cz_logo", url: "https://www.czc.cz/", viewBox: "0 0 55 13" }],
-    ["datart", { name: "Datart", logo: "datart_logo", url: "https://www.datart.cz/", viewBox: "0 0 98 13" }],
-    ["itesco", { name: "iTesco", logo: "tesco_logo", url: "https://www.itesco.cz/", viewBox: "0 0 55 18" }],
-    ["kasa", { name: "kasa.cz", logo: "kasa_logo", url: "https://www.kasa.cz/", viewBox: "0 0 70 18" }],
-    ["kosik", { name: "Košík.cz", logo: "kosik_logo", url: "https://www.kosik.cz/", viewBox: "0 0 71 22" }],
-    ["lekarna", { name: "Lékárna.cz", logo: "lekarna_logo", url: "https://www.lekarna.cz/", viewBox: "0 0 79 20" }],
-    ["mall", { name: "Mall.cz", logo: "mall_logo", url: "https://www.mall.cz/", viewBox: "0 0 68 19" }],
-    ["mironet", { name: "Mironet", logo: "mironet_logo", url: "https://www.mironet.cz/", viewBox: "0 0 59 20" }],
-    ["mountfield", {
-      name: "Mountfield",
-      logo: "mountfield_logo",
-      url: "https://www.mountfield.cz/",
-      viewBox: "0 0 64 11"
-    }],
-    ["notino", { name: "Notino", logo: "notino_logo", url: "https://www.notino.cz/", viewBox: "0 0 68 13" }],
-    ["rohlik", { name: "Rohlík.cz", logo: "rohlik_logo", url: "https://www.rohlik.cz/", viewBox: "0 0 51 28" }],
-    ["tsbohemia", {
-      name: "TSBohemia",
-      logo: "tsbohemia_logo",
-      url: "https://www.tsbohemia.cz/",
-      viewBox: "0 0 115 15"
-    }]
+    [
+      "alza",
+      {
+        name: "Alza",
+        logo: "alza_logo",
+        url: "https://www.alza.cz/",
+        viewBox: "0 0 60 19",
+        sortKey: 1
+      }
+    ],
+    [
+      "czc",
+      {
+        name: "CZC.CZ",
+        logo: "czc.cz_logo",
+        url: "https://www.czc.cz/",
+        viewBox: "0 0 55 13",
+        sortKey: 3
+      }
+    ],
+    [
+      "datart",
+      {
+        name: "Datart",
+        logo: "datart_logo",
+        url: "https://www.datart.cz/",
+        viewBox: "0 0 98 13",
+        sortKey: 4
+      }
+    ],
+    [
+      "itesco",
+      {
+        name: "iTesco",
+        logo: "tesco_logo",
+        url: "https://www.itesco.cz/",
+        viewBox: "0 0 55 18",
+        sortKey: 10
+      }
+    ],
+    [
+      "kasa",
+      {
+        name: "kasa.cz",
+        logo: "kasa_logo",
+        url: "https://www.kasa.cz/",
+        viewBox: "0 0 70 18",
+        sortKey: 5
+      }
+    ],
+    [
+      "kosik",
+      {
+        name: "Košík.cz",
+        logo: "kosik_logo",
+        url: "https://www.kosik.cz/",
+        viewBox: "0 0 71 22",
+        sortKey: 11
+      }
+    ],
+    [
+      "lekarna",
+      {
+        name: "Lékárna.cz",
+        logo: "lekarna_logo",
+        url: "https://www.lekarna.cz/",
+        viewBox: "0 0 79 20",
+        sortKey: 9
+      }
+    ],
+    [
+      "mall",
+      {
+        name: "Mall.cz",
+        logo: "mall_logo",
+        url: "https://www.mall.cz/",
+        viewBox: "0 0 68 19",
+        sortKey: 2
+      }
+    ],
+    [
+      "mironet",
+      {
+        name: "Mironet",
+        logo: "mironet_logo",
+        url: "https://www.mironet.cz/",
+        viewBox: "0 0 59 20",
+        sortKey: 6
+      }
+    ],
+    [
+      "mountfield",
+      {
+        name: "Mountfield",
+        logo: "mountfield_logo",
+        url: "https://www.mountfield.cz/",
+        viewBox: "0 0 64 11",
+        sortKey: 8
+      }
+    ],
+    //["notino", { name: "Notino", logo: "notino_logo", url: "https://www.notino.cz/", viewBox: "0 0 68 13" }],
+    [
+      "rohlik",
+      {
+        name: "Rohlík.cz",
+        logo: "rohlik_logo",
+        url: "https://www.rohlik.cz/",
+        viewBox: "0 0 51 28",
+        sortKey: 12
+      }
+    ],
+    [
+      "tsbohemia",
+      {
+        name: "TSBohemia",
+        logo: "tsbohemia_logo",
+        url: "https://www.tsbohemia.cz/",
+        viewBox: "0 0 115 15",
+        sortKey: 7
+      }
+    ]
   ]);
 
   addEventListener("DOMContentLoaded", async e => {
     try {
-      const resp = await Promise.race([timeout(4000), fetch("https://api.hlidacshopu.cz/shop-numbers")]);
+      const resp = await Promise.race([
+        timeout(4000),
+        fetch("https://api.hlidacshopu.cz/shop-numbers")
+      ]);
       if (!resp.ok) throw new Error("API error");
       const shopsData = await resp.json();
-      const shopsStatsData = new Map(shopsData.map(shopStats).map(x => [x.key, x]));
-      const data = Array.from(shops.entries()).map(([key, x]) => Object.assign({}, x, shopsStatsData.get(key)));
+      const shopsStatsData = new Map(
+        shopsData.map(shopStats).map(x => [x.key, x])
+      );
+      const data = Array.from(shops.entries()).map(([key, x]) =>
+        Object.assign({}, x, shopsStatsData.get(key))
+      );
       render(tableTemplate(data), tableRoot);
     } catch (ex) {
       console.error(ex);
@@ -158,15 +288,24 @@
   });
 
   function tableTemplate(data) {
-    return data.map(shopTemplate);
+    return data.sort((a, b) => a.sortKey - b.sortKey).map(shopTemplate);
   }
 
-  function shopTemplate({ name, url, logo, viewBox, allProducts, bfProducts, avgClaimedDiscount, avgRealDiscount }) {
+  function shopTemplate({
+    name,
+    url,
+    logo,
+    viewBox,
+    allProducts,
+    bfProducts,
+    avgClaimedDiscount,
+    avgRealDiscount
+  }) {
     return html`
       <tr class="dashboard-row">
         <th scope="row">${logoTemplate({ name, url, logo, viewBox })}</th>
         <td>${allProducts.toLocaleString("cs")}</td>
-        <td>${bfProducts && bfProducts.toLocaleString("cs") || "-"}</td>
+        <td>${(bfProducts && bfProducts.toLocaleString("cs")) || "-"}</td>
         <td>${formatPercents(avgClaimedDiscount) || "-"}</td>
         <td>${formatPercents(avgRealDiscount) || "-"}</td>
       </tr>
@@ -180,7 +319,7 @@
         <use href="/assets/img/icons.svg#${logo}"/>
       </svg>
     `;
-    return html`<a href="${url}" class='sprite sprite--${logo}' title="${name}">${image}</a>`;
+    return html`<a href="${url}" class="sprite sprite--${logo}" title="${name}">${image}</a>`;
   }
 </script>
 {% endblock %}
