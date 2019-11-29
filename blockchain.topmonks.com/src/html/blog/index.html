@@ -59,13 +59,9 @@
   <link rel="stylesheet" href="/stylesheets/blog.css">
 
 </head>
-<style>
-  body {
-    background: var(--mdc-theme-secondary-background);
-  }
-</style>
+
 {% include 'shared/header.html' %}
-<body>
+<body class="page--blog">
 <section id="latest-article" class="">
   <div class="mdc-layout-grid layout-wrapper">
     <div class="mdc-layout-grid__inner">
@@ -118,7 +114,7 @@
               <span class="name">{{ article.author }}</span>
             </div>
             <div class="article-link">
-              <a href="{{ article.link }}">Show article</a>
+              <a href="{{ article.link }}">Listen to podcast</a>
             </div>
           </div>
         </div>

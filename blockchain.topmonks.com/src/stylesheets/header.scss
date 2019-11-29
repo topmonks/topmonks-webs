@@ -27,10 +27,9 @@
       color: var(--mdc-primary-light);
       text-decoration: none;
 
-      border-bottom: 1px solid transparent;
-      &:hover, &:active, &:visited {
-        font-weight: 600;
-        border-bottom: 3px solid var(--mdc-primary-light);
+      border-bottom: 3px solid transparent;
+      &:hover, &:focus {
+        border-bottom: 3px solid var(--mdc-theme-on-primary);
       }
     }
   }
@@ -199,4 +198,8 @@
 
 .tm-menu--horizontal .tm-menu__list li + li {
   margin-left: 4px;
+}
+
+.page--blog .link--blog{
+  border-bottom: 3px solid var(--mdc-primary-light);
 }
