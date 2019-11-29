@@ -20,6 +20,7 @@
 
   ul li {
     list-style: none;
+    display: inline-block;
 
     a {
       font-size: 16px;
@@ -29,7 +30,7 @@
 
       border-bottom: 3px solid transparent;
       &:hover, &:focus {
-        border-bottom: 3px solid var(--mdc-theme-on-primary);
+        border-bottom: 3px solid var(--mdc-theme-text-primary-on-dark);
       }
     }
   }
@@ -201,5 +202,6 @@
 }
 
 .page--blog .link--blog{
-  border-bottom: 3px solid var(--mdc-primary-light);
+  font-weight: 500;
+  border-bottom: 3px solid var(--mdc-theme-text-primary-on-dark);
 }
