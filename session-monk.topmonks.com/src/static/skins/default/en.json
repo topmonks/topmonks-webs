@@ -1,10 +1,10 @@
 {
-  "app_name": "Coffee Session",
-  "points": "Points",
+  "app_name": "Session Monk",
+  "points": "points",
   "dashboard_start_session": "Start session",
   "session_info_attr_label": "",
-  "session_rating_name": "Taste",
-  "session_rating_hint": "tap the coffee strength",
+  "session_rating_name": "Joy",
+  "session_rating_hint": "tap to specify your joy",
   "session_rating_option1": "low",
   "session_rating_option2": "medium",
   "session_rating_option3": "high"
