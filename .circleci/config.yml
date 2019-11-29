@@ -293,7 +293,7 @@ jobs:
           command: aws s3 sync "public/$HOST" "s3://$HOST/"
       - run:
           name: Update MIME types
-          command: aws s3 cp --exclude "*" --include "apple-app-site-association" --content-type="application/json; charset=utf-8" --metadata-directive="REPLACE" --recursive s3://www.hookamonk.com/ s3://www.hookamonk.com/
+          command: aws s3 cp --exclude "*" --include "apple-app-site-association" --content-type="application/json; charset=utf-8" --metadata-directive="REPLACE" --recursive s3://session-monk.topmonks.com/ s3://session-monk.topmonks.com/
       - run:
           name: Invalidate CDN distribution
           command: |
