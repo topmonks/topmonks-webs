@@ -198,7 +198,7 @@
 
 @media screen and (min-width: 840px) {
   .page--blog .link--blog {
-    font-weight: 500;
+    text-shadow: 0 0 .5px var(--mdc-theme-text-primary-on-dark), 0 0 .5px var(--mdc-theme-text-primary-on-dark);
     border-bottom: 3px solid var(--mdc-theme-text-primary-on-dark);
   }
 }
