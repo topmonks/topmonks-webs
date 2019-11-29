@@ -27,10 +27,13 @@
       font-weight: 400; //normal
       color: var(--mdc-primary-light);
       text-decoration: none;
-
+      transition: text-shadow .25s, border-bottom-color .25s;
       border-bottom: 3px solid transparent;
+
       &:hover, &:focus {
         border-bottom: 3px solid var(--mdc-theme-text-primary-on-dark);
+        text-shadow: 0 0 .5px var(--mdc-theme-text-primary-on-dark), 0 0 .5px var(--mdc-theme-text-primary-on-dark);
+
       }
     }
   }
@@ -72,6 +75,7 @@
   align-items: center;
 
   .tm-hamburger__container {
+    color: var(--mdc-theme-text-primary-on-dark);
     display: inline-block;
     cursor: pointer;
     padding: 8px;
@@ -82,7 +86,7 @@
 
   .tm-hamburger__container::after {
     content: "menu";
-    color: var(--mdc-primary-light);
+    color: var(--mdc-theme-text-primary-on-dark);
     text-transform: uppercase;
     font-size: 13px;
     position: absolute;
@@ -129,18 +133,12 @@
     .tm-hamburger__container::after {
       color: var(--mdc-primary-light);
     }
-    .tm-hamburger__bar {
-      background-color: var(--mdc-primary-light);
-    }
-    .tm-logo {
-      color: var(--mdc-primary-light);
-    }
     .tm-menu {
       transform: translate(-8px, -64px);
       z-index: -1;
     }
     .tm-menu__list a {
-      color: var(--mdc-primary-light);
+      color: var(--mdc-theme-text-primary-on-dark);
       text-align: left;
     }
     .tm-menu li:hover {
@@ -161,16 +159,14 @@
     transition: transform 0.3s;
     overflow: hidden;
     background-color: var(--tm-secondary);
-    color: var(--mdc-primary-light);
+    color: var(--mdc-theme-text-primary-on-dark);
     .tm-menu__list {
       background: var(--mdc-theme--primary-bg);
     }
     .tm-menu__list li {
-      margin: 0 24px;
+      display: inherit;
+      margin-right: 30%;
       border-bottom: 1px solid var(--mdc-theme-text-primary-on-dark);
-    }
-    .tm-menu__list li + li {
-      border-top: 1px solid rgba(45, 61, 144, 0.5);
     }
     .tm-menu__list a {
       display: block;
@@ -193,7 +189,6 @@
 }
 
 .tm-menu--horizontal .tm-menu__list a {
-  display: inline-block;
   padding: 4px 24px 14px;
 }
 
@@ -201,7 +196,9 @@
   margin-left: 4px;
 }
 
-.page--blog .link--blog{
-  font-weight: 500;
-  border-bottom: 3px solid var(--mdc-theme-text-primary-on-dark);
+@media screen and (min-width: 840px) {
+  .page--blog .link--blog {
+    font-weight: 500;
+    border-bottom: 3px solid var(--mdc-theme-text-primary-on-dark);
+  }
 }
