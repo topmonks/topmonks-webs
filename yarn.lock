@@ -547,10 +547,10 @@
     "@types/long" "*"
     "@types/node" "*"
 
-"@types/chart.js@^2.9.2":
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.9.2.tgz#0629c49d791df1347a163aa412d665218f7be667"
-  integrity sha512-jgSW2LSsrgLLzfxDhJfDLst4ifH3IhHqbE1qXrqigHyhDz1zGHL3PSvIxwcoQvCAcq8kMeVcTkpiODChAy/QaA==
+"@types/chart.js@^2.9.3":
+  version "2.9.3"
+  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.9.3.tgz#eb9154420eb63abcd6fb827e15a812c851ed0c18"
+  integrity sha512-R5F39GIQ54fZJ04pmgbLrx0/dOEhyS8LRQNdlAmZd5zWZiFJ0v9zNNSBJ9WOTBRrMjeV53s0qhnRRvhcs6dfyQ==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
