@@ -7,7 +7,7 @@
   "author": "TopMonks",
   "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.9.0",
+    "@fortawesome/fontawesome-free": "5.11.2",
     "@material/layout-grid": "^4.0.0",
     "@pulumi/aws": "^1.13.0",
     "@pulumi/pulumi": "^1.6.1",
