@@ -5,6 +5,7 @@
   --grey: #2e2828;
   --dark-grey: #455a64;
   --light-grey: #4f4f4f;
+  --secondary-light-grey: #E7EBEF;
   --sub-info-grey: #979797;
   --sub-title: #515151;
   --purple: #545fef;
@@ -221,6 +222,15 @@ img.responsive {
 
 .text--purple {
   color: var(--purple);
+  a {
+    text-decoration: none;
+  }
+}
+p.title--subtitle  {
+  text-decoration: none;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 // HEADER //

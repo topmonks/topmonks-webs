@@ -7,11 +7,13 @@
     max-width: 15em;
     margin: 1em auto 0;
   }
+
   p {
     max-width: 48em;
     margin: 1em auto;
     text-align: center;
   }
+
   label {
     font-weight: 600;
   }
@@ -143,6 +145,7 @@
     list-style-type: none;
     margin: 0.5em 0;
     padding: 0;
+
     > li {
       margin: 1em 0.5em 0;
     }
@@ -152,6 +155,7 @@
     height: 16px;
     filter: saturate(0);
     transition: 0.3s filter ease-in;
+
     &:hover {
       filter: saturate(1);
     }
@@ -166,17 +170,21 @@
   img {
     filter: saturate(0);
     max-width: 180px;
+
     &:hover {
       filter: saturate(1);
     }
   }
+
   .logos {
     svg {
       height: 40px;
     }
+
     li {
       margin: 1em 1em 0;
     }
+
     @media screen and (max-width: 479px) {
       ul {
         flex-direction: column;
@@ -198,6 +206,7 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .browser-support {
     display: block;
     text-align: center;
@@ -219,10 +228,12 @@
 
       width: 67px;
       height: 67px;
+
       img {
         width: 60%;
       }
     }
+
     .browser-support__icon--disabled {
       img {
         filter: saturate(0) opacity(0.7);
@@ -275,6 +286,7 @@
     font-size: 13px;
     line-height: 16px;
   }
+
   dd.number {
     font-size: 44px;
     font-weight: 700;
@@ -285,18 +297,19 @@
   }
 }
 
-.references {
+
   .references_link {
     font-size: 18px;
     color: var(--purple);
-    font-weight: bold;
+    font-weight: 400;
     margin: 0 auto;
-
-    a:hover {
-      font-weight: lighter;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
-}
 
 .news {
   background: rgba(84, 95, 239, 0.07);
@@ -306,10 +319,12 @@
   a {
     color: var(--purple);
   }
+
   time {
     font-weight: bold;
     line-height: 2;
   }
+
   del {
     text-decoration: none;
     position: relative;
@@ -326,14 +341,17 @@
       width: 100%;
     }
   }
+
   .box {
     text-align: center;
+
     &.box--purple {
       background: var(--light-purple);
       border-radius: 6px;
       padding: 16px;
     }
   }
+
   .sprite {
     display: block;
     padding-bottom: 0.5em;
@@ -342,15 +360,18 @@
       height: 32px;
     }
   }
+
   .actual-price {
     color: var(--red);
     font-weight: bold;
     font-size: 2em;
     line-height: 1.6;
   }
+
   .claimed-price {
     color: var(--grey);
   }
+
   .discount {
     background: #ffe607;
     border-radius: 50%;
@@ -367,6 +388,7 @@
     transform: scaleY(1);
     transition: transform 0.3s ease;
   }
+
   .result--hidden {
     transform: scaleY(0);
     display: none;
@@ -377,6 +399,7 @@
   display: flex;
   justify-content: center;
   position: relative;
+
   > span {
     background: #fff;
   }
