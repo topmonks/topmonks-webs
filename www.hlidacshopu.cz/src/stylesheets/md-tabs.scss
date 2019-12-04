@@ -42,6 +42,9 @@
   .tab {
     float: left;
     margin:0 14px -2px 0;
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
   .tab-switch {
     display: none;
