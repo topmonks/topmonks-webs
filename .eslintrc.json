@@ -11,12 +11,14 @@
     "sourceType": "module"
   },
   "plugins": [
-    "prettier"
+    "prettier",
+    "lit"
   ],
   "rules": {
     "prettier/prettier": "error"
   },
   "extends": [
-    "prettier"
+    "prettier",
+    "plugin:lit/recommended"
   ]
 }
