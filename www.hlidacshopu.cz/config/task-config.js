@@ -35,7 +35,7 @@ const config = createSharedTaskConfig(__dirname, {
   },
 
   html: {
-    dataFile: "../data/global.json",
+    collections: ["media", "mediaImages"],
     htmlmin: {
       collapseBooleanAttributes: true,
       decodeEntities: true,
@@ -62,27 +62,19 @@ const config = createSharedTaskConfig(__dirname, {
           (s, t) => s && s.replace("/upload/", `/upload/${t}/`)
         );
       }
-    },
-    dataFunction(_, cb) {
-      Promise.all([
-        jsonData("media"),
-        jsonData("mediaImages")
-      ]).then(([media, mediaImages]) => cb(null, { media, mediaImages }));
     }
   },
 
   browserSync: {
     server: {
-      // should match `dest` in
-      // path-config.json
-      baseDir: "./public/www.hlidacshopu.cz"
+      baseDir: pathConfig.dest
     }
   },
 
   additionalTasks: {
     initialize({ task, src, dest, series, watch }, PATH_CONFIG, TASK_CONFIG) {
-      const dataPath = projectPath(PATH_CONFIG.src, "data");
-      const mediaSrc = projectPath(PATH_CONFIG.src, "data/media/**/*.md");
+      const dataPath = projectPath(PATH_CONFIG.src, PATH_CONFIG.data.src);
+      const mediaSrc = projectPath(dataPath, "media/**/*.md");
       const generateMediaJson = () =>
         src(mediaSrc)
           .pipe(markdownToJSON(marked))

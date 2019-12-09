@@ -1,5 +1,6 @@
 const globImporter = require("node-sass-glob-importer");
 const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
+const pathConfig = require("./path-config.json");
 
 const config = createSharedTaskConfig(__dirname, {
   images: true,
@@ -20,7 +21,6 @@ const config = createSharedTaskConfig(__dirname, {
   },
 
   html: {
-    dataFile: "../data/global.json",
     htmlmin: {
       collapseBooleanAttributes: true,
       decodeEntities: true,
@@ -36,9 +36,7 @@ const config = createSharedTaskConfig(__dirname, {
 
   browserSync: {
     server: {
-      // should match `dest` in
-      // path-config.json
-      baseDir: "./public/%APP_DIR_NAME%"
+      baseDir: pathConfig.dest
     }
   },
 

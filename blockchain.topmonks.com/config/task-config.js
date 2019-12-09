@@ -7,13 +7,6 @@ const path = require("path");
 const pathConfig = require("./path-config.json");
 const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
 
-const dataFile = name => projectPath(pathConfig.src, `data/${name}.json`);
-const jsonData = n =>
-  fs
-    .readFile(dataFile(n), "utf8")
-    .then(f => JSON.parse(f))
-    .catch(() => {});
-
 module.exports = {
   images: true,
   javascripts: false,
@@ -28,13 +21,7 @@ module.exports = {
   },
 
   html: {
-    dataFile: "../data/global.json",
-    dataFunction(_, cb) {
-      Promise.all([
-        jsonData("articles"),
-        jsonData("podcasts")
-      ]).then(([articles, podcasts]) => cb(null, { articles, podcasts }));
-    },
+    collections: ["articles", "podcasts"],
     htmlmin: {
       collapseBooleanAttributes: true,
       decodeEntities: true,
@@ -73,9 +60,9 @@ module.exports = {
 
   additionalTasks: {
     initialize({ task, src, dest, series, watch }, PATH_CONFIG, TASK_CONFIG) {
-      const dataPath = projectPath(PATH_CONFIG.src, "data");
-      const articlesSrc = projectPath(PATH_CONFIG.src, "data/articles/**/*.md");
-      const podcastsSrc = projectPath(PATH_CONFIG.src, "data/podcasts/**/*.md");
+      const dataPath = projectPath(PATH_CONFIG.src, PATH_CONFIG.data.src);
+      const articlesSrc = projectPath(dataPath, "articles/**/*.md");
+      const podcastsSrc = projectPath(dataPath, "podcasts/**/*.md");
       const generateJson = (collName, collSrc, edit) => () =>
         src(collSrc)
           .pipe(markdownToJSON(marked))

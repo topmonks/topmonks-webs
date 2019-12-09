@@ -2,14 +2,15 @@
   "src": "./www.topmonks.com/src",
   "dest": "./public/www.topmonks.com",
 
-  "data": {
-    "team": "data/team",
-    "dest": "./data"
-  },
-
   "html": {
     "src": "html",
     "dest": "./"
+  },
+
+  "data": {
+    "src": "data",
+    "team": "data/team",
+    "dest": "./data"
   },
 
   "static": {
