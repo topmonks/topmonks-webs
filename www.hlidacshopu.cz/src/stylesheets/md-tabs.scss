@@ -2,6 +2,9 @@
   width: 100%;
   min-height: 44em;
   margin: 0 auto;
+  @media screen and (max-width: 839px) {
+    min-height: 32em;
+  }
 }
 
 .tabs {
@@ -11,6 +14,13 @@
   display: inline-flex;
   border-bottom: 1px solid var(--mdc-theme-secondary-light);
   padding-top: 4px;
+  @media (max-width: 419px) {
+    width: 280px;
+  }
+  @media (min-width: 420px) and (max-width: 839px) {
+    display: block;
+    margin: 2em auto;
+  }
 }
 
 .tabs::before,
@@ -30,11 +40,17 @@
   &:last-of-type {
     margin-right: 0;
   }
+
+  @media screen and (max-width: 839px) {
+    padding-bottom: 14px;
+    margin: 0 auto;
+  }
 }
+
 .tab-switch:checked + label + .tab-content {
   z-index: 2;
-  opacity: 1;
-  transition:all 0.45s;
+  visibility: visible;
+  transition: all 0.45s;
 }
 
 .tab-switch {
@@ -53,6 +69,14 @@
   top: 0;
   transition: all 0.45s;
   display: inline-flex;
+  @media (max-width: 419px) {
+    max-width: 280px;
+    color: var(--mdc-theme-text-secondary-on-light);
+  }
+  @media (min-width: 420px) and (max-width: 839px) {
+    max-width: 340px;
+    color: var(--mdc-theme-text-secondary-on-light);
+  }
 }
 
 .tab-label:hover {
@@ -67,28 +91,41 @@
   top: 4em;
   left: 0;
   padding: 1.618rem;
-  background: var(--mdc-theme-primary);
-  color: #2c3e50;
-  opacity: 0;
-  transition:all 0.45s;
+  visibility: none;
+  transition: 0.45s;
   margin: 0 auto;
+  @media screen and (max-width: 839px) {
+    height: 13rem;
+    position: absolute;
+    z-index: 1;
+    top: 13em;
+    left: 0;
+    img {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
 }
 
 .tab-switch:checked + .tab-label {
   font-size: 13px;
-  transition:all 0.45s;
+  transition: all 0.45s;
   color: var(--mdc-theme-secondary);
   background: var(--mdc-theme-primary);
   border-bottom: 3px solid var(--mdc-theme-secondary);
   z-index: 1;
   top: -0.0625rem;
   width: 320px;
+  @media screen and (max-width: 839px) {
+    text-shadow: 0 0 .5px var(--mdc-theme-secondary), 0 0 .5px var(--mdc-theme-secondary);
+    margin: 0 auto;
+  }
 }
 
 .tab-switch:checked + label + .tab-content {
   z-index: 2;
-  opacity: 1;
-  transition:  0.45s;
+  visibility: visible;
+  transition: all 0.45s;
 }
 
 
