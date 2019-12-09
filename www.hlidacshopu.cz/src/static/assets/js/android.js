@@ -7,7 +7,7 @@ export function installationGuide() {
       <p>
         Rozšíření Hlídač shopů funguje zatím pouze ve
         <a
-          href="https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=cs"
+          href="https://play.google.com/store/apps/details?id=org.mozilla.firefox&amp;hl=cs"
           >Firefoxu pro Android</a
         >.
       </p>

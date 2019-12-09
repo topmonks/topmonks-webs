@@ -3,6 +3,7 @@
  */
 
 const path = require("path");
+const merge = require("lodash.merge");
 
 /**
  *
@@ -11,12 +12,9 @@ const path = require("path");
  * @returns {Object} new config object
  */
 const withShared = function(dirname, config) {
-  return {
-    ...config,
+  return merge(config, {
     stylesheets: {
-      ...config.stylesheets,
       sass: {
-        ...config.stylesheets.sass,
         includePaths: [
           path.resolve(dirname, "../../shared/src"),
           path.resolve(dirname, "../../node_modules")
@@ -25,11 +23,9 @@ const withShared = function(dirname, config) {
     },
 
     html: {
-      ...config.html,
       excludeFolders: ["layouts", "shared", "macros"],
       src: "html",
       nunjucksRender: {
-        ...config.html.nunjucksRender,
         path: [
           path.resolve(dirname, "../src/html"),
           path.resolve(dirname, "../../shared/src") // <- add if you want to use shared html
@@ -39,12 +35,10 @@ const withShared = function(dirname, config) {
 
     // overwritten by incoming config
     production: {
-      rev: true,
-      ...config.production
+      rev: true
     },
 
     additionalTasks: {
-      ...config.additionalTasks,
       initialize(gulp, PATH_CONFIG, TASK_CONFIG) {
         if (config.additionalTasks && config.additionalTasks.initialize) {
           config.additionalTasks.initialize(gulp, PATH_CONFIG, TASK_CONFIG);
@@ -65,20 +59,10 @@ const withShared = function(dirname, config) {
         });
       },
       development: {
-        ...(config.additionalTasks && config.additionalTasks.development
-          ? config.additionalTasks.development
-          : {}),
-        postbuild: [
-          ...(config.additionalTasks &&
-          config.additionalTasks.development &&
-          config.additionalTasks.development.postbuild
-            ? config.additionalTasks.development.postbuild
-            : []),
-          "shared:watch"
-        ]
+        postbuild: ["shared:watch"]
       }
     }
-  };
+  });
 };
 
 module.exports = withShared;

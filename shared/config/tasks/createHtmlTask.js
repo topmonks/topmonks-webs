@@ -56,7 +56,7 @@ module.exports = (__GULP__, PATH_CONFIG, TASK_CONFIG) => () => {
       const dataPath = projectPath(
         PATH_CONFIG.src,
         PATH_CONFIG.html.src,
-        TASK_CONFIG.html.dataFile
+        TASK_CONFIG.html.dataFile || file
       );
       return JSON.parse(fs.readFileSync(dataPath, "utf8"));
     };
