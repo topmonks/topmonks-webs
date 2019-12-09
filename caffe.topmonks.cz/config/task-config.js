@@ -1,4 +1,3 @@
-const fs = require("fs").promises;
 const globImporter = require("node-sass-glob-importer");
 const pathConfig = require("./path-config.json");
 const marked = require("marked");

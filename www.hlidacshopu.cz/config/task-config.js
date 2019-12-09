@@ -1,4 +1,3 @@
-const fs = require("fs").promises;
 const globImporter = require("node-sass-glob-importer");
 const markdownToJSON = require("gulp-markdown-to-json");
 const marked = require("marked");
@@ -7,13 +6,6 @@ const path = require("path");
 const pathConfig = require("./path-config.json");
 const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
 const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
-
-const dataFile = name => projectPath(pathConfig.src, `data/${name}.json`);
-const jsonData = n =>
-  fs
-    .readFile(dataFile(n), "utf8")
-    .then(f => JSON.parse(f))
-    .catch(() => {});
 
 const config = createSharedTaskConfig(__dirname, {
   locales: ["cs", "cs-CZ"],

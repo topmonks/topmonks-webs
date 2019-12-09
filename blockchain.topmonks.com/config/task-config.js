@@ -1,4 +1,3 @@
-const fs = require("fs").promises;
 const globImporter = require("node-sass-glob-importer");
 const markdownToJSON = require("gulp-markdown-to-json");
 const marked = require("marked");
