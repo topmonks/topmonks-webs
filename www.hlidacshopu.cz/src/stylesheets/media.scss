@@ -3,7 +3,7 @@
     font-size: 22px;
     font-weight: bold;
     text-align: left;
-    border-bottom: 1px solid #DADADA;
+    border-bottom: 1px solid var(--mdc-theme-text-third-on-light);
   }
 
   article {
@@ -24,11 +24,11 @@
   a:link,
   a:visited {
     text-decoration: none;
-    color: #000;
+    color: var(--mdc-theme-text-primary-on-light);
   }
   a:hover {
     text-decoration: underline;
-    color: var(--dark-purple);
+    color: var(--mdc-theme-secondary-dark);
   }
 
   img { width: 250px; }
@@ -42,7 +42,7 @@
   &__date {
     font-size: 14px;
     line-height: 17px;
-    color: var(--purple);
+    color: var(--mdc-theme-secondary);
     margin: 12px 0;
     padding: 0;
   }
@@ -50,7 +50,7 @@
   &__description {
     font-size: 18px;
     line-height: 28px;
-    color: #626262;
+    color: var(--mdc-theme-text-third-on-light);
   }
 
   &__image {
