@@ -3,7 +3,6 @@
  */
 
 const path = require("path");
-const merge = require("lodash.merge");
 
 /**
  *
@@ -12,60 +11,72 @@ const merge = require("lodash.merge");
  * @returns {Object} new config object
  */
 const withShared = function(dirname, config) {
-  return Object.assign(
-    merge({}, config, {
-      stylesheets: {
-        sass: {
-          includePaths: [
-            path.resolve(dirname, "../../shared/src"),
-            path.resolve(dirname, "../../node_modules")
-          ]
-        }
-      },
-
-      html: {
-        excludeFolders: ["layouts", "shared", "macros"],
-        src: "html",
-        nunjucksRender: {
-          path: [
-            path.resolve(dirname, "../src/html"),
-            path.resolve(dirname, "../../shared/src") // <- add if you want to use shared html
-          ]
-        }
-      },
-
-      // overwritten by incoming config
-      production: {
-        rev: true
+  return {
+    ...config,
+    stylesheets: {
+      ...config.stylesheets,
+      sass: {
+        ...config.stylesheets.sass,
+        includePaths: [
+          path.resolve(dirname, "../../shared/src"),
+          path.resolve(dirname, "../../node_modules")
+        ]
       }
-    }),
-    {
-      additionalTasks: {
-        initialize(gulp, PATH_CONFIG, TASK_CONFIG) {
-          if (config.additionalTasks && config.additionalTasks.initialize) {
-            config.additionalTasks.initialize(gulp, PATH_CONFIG, TASK_CONFIG);
-          }
+    },
 
-          const { task, watch, series } = gulp;
+    html: {
+      ...config.html,
+      excludeFolders: ["layouts", "shared", "macros"],
+      src: "html",
+      nunjucksRender: {
+        ...config.html.nunjucksRender,
+        path: [
+          path.resolve(dirname, "../src/html"),
+          path.resolve(dirname, "../../shared/src") // <- add if you want to use shared html
+        ]
+      }
+    },
 
-          task("shared:watch", cb => {
-            watch(
-              path.resolve(dirname, "../../shared/src", "**/*.{css,scss}"),
-              series("stylesheets")
-            );
-            watch(
-              path.resolve(dirname, "../../shared/src", "**/*.{html,njk,json}"),
-              series("html")
-            );
-            cb();
-          });
-        },
-        development: {
-          postbuild: ["shared:watch"]
+    // overwritten by incoming config
+    production: {
+      rev: true,
+      ...config.production
+    },
+
+    additionalTasks: {
+      ...config.additionalTasks,
+      initialize(gulp, PATH_CONFIG, TASK_CONFIG) {
+        if (config.additionalTasks && config.additionalTasks.initialize) {
+          config.additionalTasks.initialize(gulp, PATH_CONFIG, TASK_CONFIG);
         }
+
+        const { task, watch, series } = gulp;
+
+        task("shared:watch", cb => {
+          watch(
+            path.resolve(dirname, "../../shared/src", "**/*.{css,scss}"),
+            series("stylesheets")
+          );
+          watch(
+            path.resolve(dirname, "../../shared/src", "**/*.{html,njk,json}"),
+            series("html")
+          );
+          cb();
+        });
+      },
+      development: {
+        ...((config.additionalTasks && config.additionalTasks.development) ||
+          {}),
+        postbuild: [
+          ...((config.additionalTasks &&
+            config.additionalTasks.development &&
+            config.additionalTasks.development.postbuild) ||
+            []),
+          "shared:watch"
+        ]
       }
     }
-  );
+  };
 };
 
 module.exports = withShared;
