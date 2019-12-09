@@ -9,7 +9,7 @@
   position: relative;
   background: var(--mdc-theme-primary);
   display: inline-flex;
-  border-bottom: 1px solid var(--mdc-theme-text-third-on-light);
+  border-bottom: 1px solid var(--mdc-theme-secondary-light);
   padding-top: 4px;
 }
 
@@ -34,7 +34,7 @@
 .tab-switch:checked + label + .tab-content {
   z-index: 2;
   opacity: 1;
-  transition: 0.45s;
+  transition:all 0.45s;
 }
 
 .tab-switch {
@@ -51,7 +51,7 @@
   padding-bottom: 8px;
   cursor: pointer;
   top: 0;
-  transition: 0.45s;
+  transition: all 0.45s;
   display: inline-flex;
 }
 
@@ -70,13 +70,13 @@
   background: var(--mdc-theme-primary);
   color: #2c3e50;
   opacity: 0;
-  transition: 0.45s;
+  transition:all 0.45s;
   margin: 0 auto;
 }
 
 .tab-switch:checked + .tab-label {
   font-size: 13px;
-  transition: 0.45s;
+  transition:all 0.45s;
   color: var(--mdc-theme-secondary);
   background: var(--mdc-theme-primary);
   border-bottom: 3px solid var(--mdc-theme-secondary);
@@ -88,7 +88,7 @@
 .tab-switch:checked + label + .tab-content {
   z-index: 2;
   opacity: 1;
-  transition: all 0.45s;
+  transition:  0.45s;
 }
 
 
