@@ -20,7 +20,7 @@ module.exports = {
   },
 
   html: {
-    dataFile: "../data/team.json",
+    collections: ["team"],
     htmlmin: {
       collapseBooleanAttributes: true,
       decodeEntities: true,
@@ -36,8 +36,6 @@ module.exports = {
 
   browserSync: {
     server: {
-      // should match `dest` in
-      // path-config.json
       baseDir: pathConfig.dest
     }
   },

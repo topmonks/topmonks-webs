@@ -21,7 +21,7 @@ const config = createSharedTaskConfig(__dirname, {
   },
 
   html: {
-    dataFile: "../data/team.json",
+    collections: ["team"],
     src: "html",
     excludeFolders: ["layouts", "shared", "macros"],
     htmlmin: {
@@ -39,8 +39,6 @@ const config = createSharedTaskConfig(__dirname, {
 
   browserSync: {
     server: {
-      // should match `dest` in
-      // path-config.json
       baseDir: pathConfig.dest
     }
   },

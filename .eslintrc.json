@@ -11,14 +11,18 @@
     "sourceType": "module"
   },
   "plugins": [
+    "ava",
+    "lit",
     "prettier",
-    "lit"
+    "promise"
   ],
   "rules": {
     "prettier/prettier": "error"
   },
   "extends": [
     "prettier",
-    "plugin:lit/recommended"
+    "plugin:ava/recommended",
+    "plugin:lit/recommended",
+    "plugin:promise/recommended"
   ]
 }

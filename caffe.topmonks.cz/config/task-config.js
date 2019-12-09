@@ -1,4 +1,3 @@
-const fs = require("fs").promises;
 const globImporter = require("node-sass-glob-importer");
 const pathConfig = require("./path-config.json");
 const marked = require("marked");
@@ -7,9 +6,6 @@ const markdownToJSON = require("gulp-markdown-to-json");
 const merge = require("gulp-merge-json");
 const path = require("path");
 const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
-
-const dataFile = name => projectPath(pathConfig.src, `data/${name}.json`);
-const jsonData = n => fs.readFile(dataFile(n), "utf8").then(f => JSON.parse(f));
 
 module.exports = {
   images: true,
@@ -25,6 +21,7 @@ module.exports = {
   },
 
   html: {
+    collections: ["events", "posters"],
     nunjucksRender: {
       manageEnv(env) {
         env.addFilter("split", (str, seperator) => str.split(seperator));
@@ -33,27 +30,19 @@ module.exports = {
           (s, t) => s && s.replace("/upload/", `/upload/${t}/`)
         );
       }
-    },
-    dataFunction(_, cb) {
-      Promise.all([
-        jsonData("events"),
-        jsonData("posters")
-      ]).then(([events, posters]) => cb(null, { events, posters }));
     }
   },
 
   browserSync: {
     server: {
-      // should match `dest` in
-      // path-config.json
       baseDir: pathConfig.dest
     }
   },
 
   additionalTasks: {
     initialize({ task, src, dest, series, watch }, PATH_CONFIG, TASK_CONFIG) {
-      const dataPath = projectPath(PATH_CONFIG.src, "data");
-      const eventsSrc = projectPath(PATH_CONFIG.src, "data/events/**/*.md");
+      const dataPath = projectPath(PATH_CONFIG.src, PATH_CONFIG.data.src);
+      const eventsSrc = projectPath(dataPath, "events/**/*.md");
       const generateEventsJson = () =>
         src(eventsSrc)
           .pipe(markdownToJSON(marked))
