@@ -165,3 +165,12 @@ main {
     line-height: 48px;
   }
 }
+
+/* Media Queries Dark Mode of the App */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--mdc-theme-text-primary-on-light);
+  }
+}
+
