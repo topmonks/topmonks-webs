@@ -80,6 +80,7 @@
       padding-bottom: 6px;
     }
   }
+
   .tab--info {
     padding-left: 4px;
   }
@@ -107,7 +108,9 @@
   visibility: hidden;
   transition: 0.45s;
   margin: 0 auto;
-  width: 100%;
+  @media screen and (min-width: 840px) {
+    width: 100%;
+  }
   @media (min-width: 425px) and (max-width: 839px) {
     position: absolute;
     z-index: 1;
