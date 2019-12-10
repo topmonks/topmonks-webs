@@ -9,9 +9,9 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.9.0",
     "@material/layout-grid": "^4.0.0",
-    "@pulumi/aws": "^1.13.0",
+    "@pulumi/aws": "^1.14.1",
     "@pulumi/pulumi": "^1.6.1",
-    "@types/node": "^12.12.14",
+    "@types/node": "^12.12.16",
     "bootstrap": "4.3.1",
     "jquery": "3.4.1",
     "jquery.easing": "^1.4.1",
@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@topmonks/blendid": "git://github.com/topmonks/blendid.git",
-    "@types/chart.js": "^2.9.3",
+    "@types/chart.js": "^2.9.4",
     "ava": "^2.4.0",
     "bluebird": "^3.7.2",
     "broken-link-checker-local": "^0.2.1",
@@ -43,7 +43,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
-    "stylelint": "^11.1.1",
+    "stylelint": "^12.0.0",
     "stylelint-config-prettier": "^7.0.0",
     "tap-xunit": "^2.4.1"
   },
