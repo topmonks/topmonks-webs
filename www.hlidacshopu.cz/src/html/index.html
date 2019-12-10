@@ -127,57 +127,62 @@
     </div>
   </section>
   <link rel="stylesheet" href="/assets/css/md-tabs.css">
-  <section class="illustration">
+  <section class="illustration2">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Jak Hlídač Shopů vypadá a jak číst graf?</h2>
-          <p class="title--subtitle">Hlídač Shopů si můžete <b class="text--purple"><a title="Link pro Istalaci Hlídače Shopů do Prohlížeče" href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk">nainstalovat přímo do svého prohlížeče</a></b> a
+          <p class="title--subtitle">Hlídač Shopů si můžete <b class="text--purple"><a
+                title="Link pro Istalaci Hlídače Shopů do Prohlížeče"
+                href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk">nainstalovat
+                přímo do svého prohlížeče</a></b> a
             hlídat tak největší e-shopy a jejich někdy prapodivné taktiky při
             tvoření&nbsp;slev.</p>
-          <div class="wrapper">
-            <div class="tabs">
-              <div class="tab">
-                <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
-                <label for="tab-1" class="tab-label">
-                  <p class="tab--number">1.</p>
-                  <p class="tab--info">Po instalaci v&nbsp;detailu produktu vašeho e-shopu se pod cenou zobrazí&nbsp;graf</p>
-                </label>
-                <div class="tab-content">
-                  <img alt="Step 1: Graf"
-                       src="https://res.cloudinary.com/topmonks/image/upload/v1575461537/www.hlidacshopu.cz/window01.png"
-                       width="800px">
-                </div>
-              </div>
-              <div class="tab">
-                <input type="radio" name="css-tabs" id="tab-2" class="tab-switch">
-                <label for="tab-2" class="tab-label">
-                  <p class="tab--number">2.</p>
-                  <p class="tab--info">Srovnání původní přeškrtnuté ceny a aktuální prodejní&nbsp;ceny</p>
-                </label>
-                <div class="tab-content">
-                  <img alt="Step 2: Graf - Přeškrtnuté a aktuální ceny"
-                       src="https://res.cloudinary.com/topmonks/image/upload/v1575461531/www.hlidacshopu.cz/window02.png"
-                       width="800px">
-                </div>
-              </div>
-              <div class="tab">
-                <input type="radio" name="css-tabs" id="tab-3" class="tab-switch">
-                <label for="tab-3" class="tab-label">
-                  <p class="tab--number">3.</p>
-                  <p class="tab--info">Po najetí na graf, můžete libovolně vidět v&nbsp;čase vývoj uváděné
-                  původní a prodejní&nbsp;ceny</p>
-                </label>
-                <div class="tab-content">
-                  <img alt="Step 3: Graf - Vývoj cen" src="https://res.cloudinary.com/topmonks/image/upload/v1575461788/www.hlidacshopu.cz/window03.png" width="800px">
-                </div>
-              </div>
-            </div>
+        </div>
+        <div class="tab-list mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <ol>
+            <li><a href="#tab-1">Po instalaci v&nbsp;detailu produktu vašeho e-shopu se pod cenou zobrazí&nbsp;graf</a></li>
+            <li><a href="#tab-2">Srovnání původní přeškrtnuté ceny a aktuální prodejní&nbsp;ceny</a></li>
+            <li><a href="#tab-3">Po najetí na graf, můžete libovolně vidět v&nbsp;čase vývoj uváděné
+                původní a prodejní&nbsp;ceny</a></li>
+          </ol>
+        </div>
+        <div class="tabs tabs--open-tab-1 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div class="tab" id="tab-1">
+            <img alt="Step 1: Graf"
+                 src="https://res.cloudinary.com/topmonks/image/upload/v1575461537/www.hlidacshopu.cz/window01.png"
+                 width="800px">
+          </div>
+          <div class="tab" id="tab-2">
+            <img alt="Step 2: Graf - Přeškrtnuté a aktuální ceny"
+                 src="https://res.cloudinary.com/topmonks/image/upload/v1575461531/www.hlidacshopu.cz/window02.png"
+                 width="800px">
+          </div>
+          <div class="tab" id="tab-3">
+            <img alt="Step 3: Graf - Vývoj cen"
+                 src="https://res.cloudinary.com/topmonks/image/upload/v1575461788/www.hlidacshopu.cz/window03.png"
+                 width="800px">
           </div>
         </div>
+        <script>
+          const tabList = document.querySelector(".tab-list");
+          const tabs = document.querySelector(".tabs");
+          let activeTab = "tab-1";
+          tabList.addEventListener("click", e => {
+            if (e.target.tagName === "A") {
+              e.preventDefault();
+              const targetTab = e.target.hash.substring(1);
+              tabs.classList.remove(`tabs--open-${activeTab}`);
+              tabs.classList.add(`tabs--open-${targetTab}`);
+              activeTab = targetTab;
+            }
+            console.dir(e.target);
+          })
+        </script>
       </div>
     </div>
   </section>
+
 
   <section class="guidance purple-gradient">
     <div class="mdc-layout-grid">
@@ -345,8 +350,10 @@
     <div class="mdc-layout-grid__inner layout-wrapper">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Nejzajímavější slevy</h2>
-        <p>Sledujte naše profily na <b class="text--purple"><a href="https://www.facebook.com/hlidacshopu/">Facebooku</a></b>
-          a na <b class="text--purple"><a href="https://twitter.com/hlidacshopucz">Twitteru</a></b>, kde zveřejňujeme jak zajímavé slevy,
+        <p>Sledujte naše profily na <b class="text--purple"><a
+              href="https://www.facebook.com/hlidacshopu/">Facebooku</a></b>
+          a na <b class="text--purple"><a href="https://twitter.com/hlidacshopucz">Twitteru</a></b>, kde zveřejňujeme
+          jak zajímavé slevy,
           tak chytáky, na které byste si měli dávat pozor.</p>
       </div>
     </div>
@@ -715,7 +722,8 @@
     }
   </script>
   <script type="module">
-    import {Workbox} from "https://storage.googleapis.com/workbox-cdn/releases/5.0.0-rc.1/workbox-window.prod.mjs";
+    import { Workbox } from "https://storage.googleapis.com/workbox-cdn/releases/5.0.0-rc.1/workbox-window.prod.mjs";
+
     const isProduction = () => ["localhost", "127"].indexOf(location.hostname) === -1;
     window.isUpdateAvailable = new Promise(async (resolve, reject) => {
       if ("serviceWorker" in navigator && isProduction()) {
@@ -729,8 +737,7 @@
           wb.addEventListener("controlling", e => resolve(e.isUpdate));
           wb.addEventListener("waiting", e => resolve(e.isUpdate));
           await wb.register();
-        }
-        catch (ex) {
+        } catch (ex) {
           reject(ex);
         }
       }
