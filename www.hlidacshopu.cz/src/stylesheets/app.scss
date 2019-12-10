@@ -1,8 +1,47 @@
 @import "theme";
 
+html {
+  height: 100%;
+  padding: 0;
+}
+
+body {
+  background: url("https://res.cloudinary.com/topmonks/image/upload/v1575977345/www.hlidacshopu.cz/app/light-mode_bgnd.jpg") center bottom no-repeat;
+  background-size: 100% 45%;
+  @media (min-width: 375px) {
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1575977345/www.hlidacshopu.cz/app/light-mode_bgnd.jpg") center bottom no-repeat;
+    background-size: 100% 60%;
+  }
+}
+
+main {
+  background: url("https://res.cloudinary.com/topmonks/image/upload/v1575977546/www.hlidacshopu.cz/app/curves_bgnd.svg") center bottom no-repeat;
+  background-size: 100%;
+}
+
+a svg {
+  width: 100px;
+  height: 78px;
+}
+
+.mdc-top-app-bar__title {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.mdc-top-app-bar--fixed-adjust {
+  @media (max-width: 374px) {
+    padding-top: 8em;
+  }
+  @media (min-width: 375px) {
+    padding-top: 11em;
+  }
+}
+
 .hs-form {
   --border-radius: 8px;
   text-align: center;
+
 
   .button,
   button {
@@ -32,6 +71,7 @@
   .hs-textfield {
     border: 1px solid var(--hs-theme-border);
     border-radius: var(--border-radius);
+    background: var(--mdc-theme-primary);
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -48,7 +88,7 @@
       -webkit-appearance: none;
       border: none;
       font-family: inherit;
-      font-size: 14px;
+      font-size: 10px;
       line-height: 54px;
       color: var(--mdc-theme-text-third-on-light);
       padding: 0 1em;
@@ -61,13 +101,16 @@
 
 .hs-result {
   text-align: center;
+
   a {
     color: var(--mdc-theme-secondary);
   }
+
   time {
     font-weight: bold;
     line-height: 2;
   }
+
   del {
     text-decoration: none;
     position: relative;
@@ -84,14 +127,17 @@
       width: 100%;
     }
   }
+
   .box {
     text-align: center;
+
     &.box--purple {
       background: var(--mdc-theme-secondary-light);
       border-radius: 6px;
       padding: 16px;
     }
   }
+
   .sprite {
     display: block;
     padding-bottom: 0.5em;
@@ -100,15 +146,18 @@
       height: 32px;
     }
   }
+
   .actual-price {
     color: var(--mdc-theme-third);
     font-weight: bold;
     font-size: 2em;
     line-height: 1.6;
   }
+
   .claimed-price {
     color: var(--mdc-theme-text-secondary-on-light);
   }
+
   .discount {
     background: #ffe607;
     border-radius: 50%;
