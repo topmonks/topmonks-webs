@@ -71,12 +71,12 @@
   align-items: flex-end;
 
   .tab--number {
-    font-size: 38px;
+    font-size: 34px;
     font-weight: 600;
     color: var(--mdc-theme-text-third-on-light);
     display: inline-table;
     margin: 0;
-    @media (max-width: 839px) {
+    @media screen and (max-width: 839px) {
       padding-bottom: 6px;
     }
   }
@@ -86,7 +86,7 @@
   }
 
   @media screen and (min-width: 840px) {
-    width: 325px;
+    width: 320px;
   }
   @media (max-width: 419px) {
     display: inline-flex;
@@ -108,7 +108,7 @@
   visibility: hidden;
   transition: 0.45s;
   margin: 0 auto;
-  @media screen and (min-width: 840px) {
+  @media screen and (min-width: 1440px) {
     width: 100%;
   }
   @media (min-width: 425px) and (max-width: 839px) {
@@ -145,7 +145,7 @@
   }
 
   @media screen and (min-width: 840px) {
-    width: 325px;
+    width: 320px;
   }
   @media screen and (max-width: 839px) {
     text-shadow: 0 0 .5px var(--mdc-theme-secondary), 0 0 .5px var(--mdc-theme-secondary);
