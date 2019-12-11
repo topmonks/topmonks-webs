@@ -51,7 +51,7 @@
     })(window, document, "script", "dataLayer", "GTM-58WNT3B");</script>
   <!-- End Google Tag Manager -->
 </head>
-<body>
+<body class="home-screen">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58WNT3B"
@@ -123,12 +123,14 @@
 </header>
 
 <main id="app-root" class="mdc-layout-grid mdc-top-app-bar--fixed-adjust">
-  <div class="mdc-layout-grid__inner">
+  <div class="mdc-layout-grid__inner layout-wrapper">
+    <div class="mdc-layout-grid__cell"></div>
     <div class="mdc-layout-grid__cell">
       <form class="hs-form">
+        <label for="url-field">Vložte adresu detailu vybraného produktu:</label>
         <div class="hs-textfield">
           <i class="hs-textfield__icon material-icons" tabindex="0" role="button">search</i>
-          <input type="url" name="url" id="url-field" required placeholder="Vložte odkaz vybraného produktu ...">
+          <input type="url" name="url" id="url-field" required placeholder="https://www.&hellip;">
         </div>
         <button type="submit">Ověřit vývoj ceny</button>
       </form>
@@ -192,6 +194,7 @@
     const sharedInfo = getSharedInfo(location);
     console.log("Received data:", sharedInfo);
     if (sharedInfo) {
+      document.body.classList.remove("home-screen");
       renderResultsModal(sharedInfo.targetURL);
     }
     console.groupEnd();
@@ -365,7 +368,7 @@
     `;
     const shopLogo = x => x && logoTemplate(x);
     return html`
-      <div id="hlidac-shopu-modal__found" class="hs-result mdc-layout-grid__inner">
+      <div id="hlidac-shopu-modal__found" class="hs-result mdc-layout-grid__inner layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>
             ${shopLogo(shops.get(shop))}

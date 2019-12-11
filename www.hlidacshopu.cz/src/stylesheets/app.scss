@@ -5,18 +5,30 @@ html {
   padding: 0;
 }
 
-body {
-  background: url("https://res.cloudinary.com/topmonks/image/upload/v1575977345/www.hlidacshopu.cz/app/light-mode_bgnd.jpg") center bottom no-repeat;
+label {
+  font-weight: bold;
+}
+
+.home-screen {
+  background: url("https://res.cloudinary.com/topmonks/image/upload/v1575977345/www.hlidacshopu.cz/app/light-mode_bgnd.jpg")
+    center bottom no-repeat;
   background-size: 100% 45%;
   @media (min-width: 375px) {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1575977345/www.hlidacshopu.cz/app/light-mode_bgnd.jpg") center bottom no-repeat;
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1575977345/www.hlidacshopu.cz/app/light-mode_bgnd.jpg")
+      center bottom no-repeat;
     background-size: 100% 60%;
   }
 }
 
-main {
-  background: url("https://res.cloudinary.com/topmonks/image/upload/v1575977546/www.hlidacshopu.cz/app/curves_bgnd.svg") center bottom no-repeat;
+.home-screen main {
+  background: url("https://res.cloudinary.com/topmonks/image/upload/v1575977546/www.hlidacshopu.cz/app/curves_bgnd.svg")
+    center bottom no-repeat;
   background-size: 100%;
+}
+
+.layout-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .mdc-top-app-bar__title {
@@ -25,18 +37,12 @@ main {
 }
 
 .mdc-top-app-bar--fixed-adjust {
-  @media (max-width: 374px) {
-    padding-top: 8em;
-  }
-  @media (min-width: 375px) {
-    padding-top: 11em;
-  }
+  padding-top: 6em;
 }
 
 .hs-form {
   --border-radius: 8px;
   text-align: center;
-
 
   .button,
   button {
@@ -85,7 +91,7 @@ main {
       font-family: inherit;
       font-size: 12px;
       line-height: 54px;
-      color: var(--mdc-theme-text-third-on-light);
+      color: var(--mdc-theme-text-on-light);
       padding: 0 1em;
       margin: 0;
       background: none;
@@ -96,6 +102,10 @@ main {
 
 .hs-result {
   text-align: center;
+
+  &.layout-wrapper {
+    max-width: 780px;
+  }
 
   a {
     color: var(--mdc-theme-secondary);
@@ -173,4 +183,3 @@ main {
     background-color: var(--mdc-theme-text-primary-on-light);
   }
 }
-
