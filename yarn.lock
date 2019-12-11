@@ -462,10 +462,10 @@
     read-package-tree "^5.2.1"
     resolve "^1.7.1"
 
-"@pulumi/pulumi@^1.0.0", "@pulumi/pulumi@^1.6.1":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-1.6.1.tgz#ba3f1026aa92452dee2dadc9388a3c0d41062501"
-  integrity sha512-KB8pz0awGaAmZz3iqtedNOq6hoCxsJtePV0jBAPnEK1T8lbrU+OsRVTHO+XTzvmCal7mgCZSkP2HnO2OtXE5hQ==
+"@pulumi/pulumi@^1.0.0", "@pulumi/pulumi@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-1.7.0.tgz#dc6d600c0074c312d863632d0c3a2d13646f1b72"
+  integrity sha512-CB1ucT5sWdcLBWJcIggaeT1ykVeLsHFhkIoBd4TEIy8nIMdyNJoSUJ6pNFbJiAPzf2ODyFTi3/ekaCfO9hok4A==
   dependencies:
     "@pulumi/query" "^0.3.0"
     deasync "^0.1.15"
