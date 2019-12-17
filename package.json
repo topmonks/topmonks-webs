@@ -11,7 +11,7 @@
     "@material/layout-grid": "^4.0.0",
     "@pulumi/aws": "^1.16.0",
     "@pulumi/pulumi": "^1.7.1",
-    "@types/node": "^12.12.18",
+    "@types/node": "^12.12.19",
     "bootstrap": "4.3.1",
     "jquery": "3.4.1",
     "jquery.easing": "^1.4.1",
