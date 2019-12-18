@@ -26,9 +26,9 @@
   <section class="tm-team" id="team">
     <div id="team--collapsed" class="tm-bgnd-wrapper mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
-        {{ macros.teamMember(members['jiri-fabian'], true) }}
-        {{ macros.teamMember(members['jirka-jansa'], true) }}
-        {{ macros.teamMember(members['ales-roubicek'], true) }}
+        {{ macros.teamMember(team.members['jiri-fabian'], true) }}
+        {{ macros.teamMember(team.members['jirka-jansa'], true) }}
+        {{ macros.teamMember(team.members['ales-roubicek'], true) }}
         <div
           class="box mdc-layout-grid__cell tm-team__member mdc-layout-grid__cell--span-3-desktop tm-team__member--hero">
           <img alt="[photo] Lumír Mrkva" loading="lazy"
@@ -42,17 +42,17 @@
           <div class="content"><strong>Lumír Mrkva</strong>
             <span>Team leader</span></div>
         </div>
-        {{ macros.teamMember(members['tomas-paulus'], true) }}
-        {{ macros.teamMember(members['jiri-penzes'], true) }}
-        {{ macros.teamMember(members['pavol-noha'], true) }}
-        {{ macros.teamMember(members['veronika-tomasova'], true) }}
+        {{ macros.teamMember(team.members['tomas-paulus'], true) }}
+        {{ macros.teamMember(team.members['jiri-penzes'], true) }}
+        {{ macros.teamMember(team.members['pavol-noha'], true) }}
+        {{ macros.teamMember(team.members['veronika-tomasova'], true) }}
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <div class="mdc-layout-grid tm-team__members">
             <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
                 <a href="#team" class="action-button show-more">Ukaž více</a>
               </div>
-              {% for id, member in members %}
+              {% for id, member in team.members %}
                 {% if not member.consultant %}
                   {{ macros.teamMember(member) }}
                 {% endif %}
