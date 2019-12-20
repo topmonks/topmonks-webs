@@ -86,7 +86,7 @@
     "test:broken-links:studio.topmonks.com": "blcl ./public/studio.topmonks.com -ro --exclude linkedin.com --exclude blog.topmonks.com",
     "start:blockchain.topmonks.com": "BLENDID_CONFIG_PATH=./blockchain.topmonks.com/config/ blendid",
     "build:blockchain.topmonks.com": "BLENDID_CONFIG_PATH=./blockchain.topmonks.com/config/ blendid -- build",
-    "test:broken-links:blockchain.topmonks.com": "blcl ./public/blockchain.topmonks.com -ro --exclude linkedin.com --exclude blog.topmonks.com --exclude www.alza.cz",
+    "test:broken-links:blockchain.topmonks.com": "blcl ./public/blockchain.topmonks.com -ro --exclude linkedin.com --exclude blog.topmonks.com --exclude www.alza.cz --exclude www.investicniweb.cz",
     "start:www.hookamonk.com": "BLENDID_CONFIG_PATH=./www.hookamonk.com/config/ blendid",
     "build:www.hookamonk.com": "BLENDID_CONFIG_PATH=./www.hookamonk.com/config/ blendid -- build",
     "test:broken-links:www.hookamonk.com": "blcl ./public/www.hookamonk.com -ro",
