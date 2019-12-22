@@ -16,7 +16,7 @@ commands:
     steps:
       - run:
           name: Deploy to S3
-          command: aws s3 sync << parameters.from >> s3://<< parameters.to >>
+          command: aws s3 sync << parameters.from >> << parameters.to >>
   invalidate_cloudfront:
     parameters:
       distribution_id:
