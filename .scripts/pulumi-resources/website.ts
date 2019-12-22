@@ -222,8 +222,8 @@ function getCertificate(domain: string) {
     region: aws.USEast1Region
   });
   const certificate = aws.acm.getCertificate(
-    { domain: `*.${parentDomain}` },
-    { provider: usEast1 }
+    { domain: `*.${parentDomain}`, mostRecent: true, statuses: ["ISSUED"] },
+    { provider: usEast1, async: true }
   );
   return pulumi.output(certificate);
 }
