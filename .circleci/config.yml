@@ -3,7 +3,7 @@ orbs:
   pulumi: pulumi/pulumi@1.0.0
 test-site: &test-site
   docker:
-    - image: circleci/node:10-browsers
+    - image: circleci/node:12-browsers
   working_directory: ~/topmonks-webs
   steps:
     - checkout
@@ -58,7 +58,7 @@ s3-deploy: &s3-deploy
 jobs:
   build:
     docker:
-      - image: circleci/node:10-browsers
+      - image: circleci/node:12-browsers
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -81,7 +81,7 @@ jobs:
           paths:
             - ~/.cache/yarn
           key: v5-dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn run build
+      - run: yarn build
       - run: |
           mkdir results
           yarn test
@@ -95,7 +95,7 @@ jobs:
 
   pre-provision:
     docker:
-      - image: "cibuilds/aws:latest"
+      - image: cibuilds/aws:latest
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -111,7 +111,7 @@ jobs:
 
   provision:
     docker:
-      - image: "circleci/node:10"
+      - image: circleci/node:12
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -145,7 +145,7 @@ jobs:
 
   preview-provision:
     docker:
-      - image: "circleci/node:10"
+      - image: circleci/node:12
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -175,7 +175,7 @@ jobs:
 
   post-provision:
     docker:
-      - image: "cibuilds/aws:latest"
+      - image: cibuilds/aws:latest
     working_directory: ~/topmonks-webs
     steps:
       - attach_workspace:
