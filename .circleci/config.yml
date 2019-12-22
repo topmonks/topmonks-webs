@@ -23,7 +23,7 @@ commands:
         type: string
       paths:
         type: string
-        default: *
+        default: "*"
     steps:
       - run:
           name: Invalidate CDN distribution
