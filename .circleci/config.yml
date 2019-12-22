@@ -29,7 +29,7 @@ commands:
           name: Invalidate CDN distribution
           command: |
             aws configure set preview.cloudfront true
-            aws cloudfront create-invalidation --distribution-id=<< parameters.distribution_id >> --paths=<< paramaters.paths >>
+            aws cloudfront create-invalidation --distribution-id=<< parameters.distribution_id >> --paths=<< parameters.paths >>
   deploy_website:
     parameters:
       site_name:
