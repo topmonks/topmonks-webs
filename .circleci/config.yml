@@ -347,6 +347,7 @@ jobs:
           command: aws s3 cp --exclude "*" --include "apple-app-site-association" --content-type="application/json; charset=utf-8" --metadata-directive="REPLACE" --recursive s3://session-monk.topmonks.com/ s3://session-monk.topmonks.com/
       - invalidate_cloudfront:
           distribution_id: E2EF8JLZURG0RI
+          paths: "/*"
 
   test-monkslab-cz:
     <<: *test-site
