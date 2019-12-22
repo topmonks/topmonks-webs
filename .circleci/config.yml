@@ -23,7 +23,6 @@ commands:
         type: string
       paths:
         type: string
-        default: "*"
     steps:
       - run:
           name: Invalidate CDN distribution
@@ -36,12 +35,16 @@ commands:
         type: string
       distribution_id:
         type: string
+      paths:
+        type: string
+        default: "/*"
     steps:
       - sync_s3:
           from: public/<< parameters.site_name >>
           to: s3://<< parameters.site_name >>
       - invalidate_cloudfront:
           distribution_id: << parameters.distribution_id >>
+          paths: << parameters.paths >>
 
 test-site: &test-site
   docker:
