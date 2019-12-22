@@ -1,6 +1,48 @@
 version: 2.1
 orbs:
   pulumi: pulumi/pulumi@1.0.0
+executors:
+  aws_cli:
+    docker:
+      - image: cibuilds/aws:latest
+    working_directory: ~/topmonks-webs
+commands:
+  sync_s3:
+    parameters:
+      from:
+        type: string
+      to:
+        type: string
+    steps:
+      - run:
+          name: Deploy to S3
+          command: aws s3 sync << parameters.from >> s3://<< parameters.to >>
+  invalidate_cloudfront:
+    parameters:
+      distribution_id:
+        type: string
+      paths:
+        type: string
+        default: *
+    steps:
+      - run:
+          name: Invalidate CDN distribution
+          command: |
+            aws configure set preview.cloudfront true
+            aws cloudfront create-invalidation --distribution-id=<< parameters.distribution_id >> --paths=<< paramaters.paths >>
+  deploy_website:
+    parameters:
+      site_name:
+        type: string
+      distribution_id:
+        type: string
+    steps:
+      - sync_s3:
+          from: public/<< parameters.site_name >>
+          to: s3://<< parameters.site_name >>
+      - invalidate_cloudfront:
+          distribution_id: << parameters.distribution_id >>
+
 test-site: &test-site
   docker:
     - image: circleci/node:12-browsers
@@ -37,23 +79,6 @@ test-site: &test-site
         path: ./results
     - store_test_results:
         path: ./results
-
-s3-deploy: &s3-deploy
-  docker:
-    - image: cibuilds/aws:latest
-  working_directory: ~/topmonks-webs
-  steps:
-    - checkout
-    - attach_workspace:
-        at: ~/topmonks-webs
-    - run:
-        name: Deploy to S3
-        command: aws s3 sync "public/$HOST" "s3://$HOST/"
-    - run:
-        name: Invalidate CDN distribution
-        command: |
-          aws configure set preview.cloudfront true
-          aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
 
 jobs:
   build:
@@ -94,17 +119,15 @@ jobs:
           paths: public
 
   pre-provision:
-    docker:
-      - image: cibuilds/aws:latest
-    working_directory: ~/topmonks-webs
+    executor: aws_cli
     steps:
       - checkout
       - run:
           name: Create Pulumi state folder
           command: mkdir -p .pulumi
-      - run:
-          name: Fetch Pulumi state from S3
-          command: aws s3 sync s3://topmonks-pulumi-state/ .pulumi/
+      - sync_s3:
+          from: s3://topmonks-pulumi-state/
+          to: .pulumi/
       - persist_to_workspace:
           root: .
           paths: .pulumi
@@ -174,15 +197,13 @@ jobs:
           stack: topmonks-webs
 
   post-provision:
-    docker:
-      - image: cibuilds/aws:latest
-    working_directory: ~/topmonks-webs
+    executor: aws_cli
     steps:
       - attach_workspace:
           at: ~/topmonks-webs
-      - run:
-          name: Push Pulumi state to S3
-          command: aws s3 sync .pulumi/ s3://topmonks-pulumi-state/
+      - sync_s3:
+          from: .pulumi/
+          to: s3://topmonks-pulumi-state/
 
   test-prodeti-topmonks-cz:
     <<: *test-site
@@ -190,10 +211,14 @@ jobs:
       HOST: prodeti.topmonks.cz
 
   deploy-prodeti-topmonks-cz:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E81ZRHS2RR6UN
-      HOST: prodeti.topmonks.cz
+    executor: aws_cli
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - deploy_website:
+          site_name: prodeti.topmonks.cz
+          distribution_id: E81ZRHS2RR6UN
 
   test-blockchain-topmonks-com:
     <<: *test-site
@@ -201,10 +226,14 @@ jobs:
       HOST: blockchain.topmonks.com
 
   deploy-blockchain-topmonks-com:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E1CJ2HYFKVH0CG
-      HOST: blockchain.topmonks.com
+    executor: aws_cli
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - deploy_website:
+          site_name: blockchain.topmonks.com
+          distribution_id: E1CJ2HYFKVH0CG
 
   test-studio-topmonks-com:
     <<: *test-site
@@ -212,10 +241,14 @@ jobs:
       HOST: studio.topmonks.com
 
   deploy-monkstage-topmonks-com:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E6S8YGG74H6RZ
-      HOST: monkstage.topmonks.com
+    executor: aws_cli
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - deploy_website:
+          site_name: monkstage.topmonks.com
+          distribution_id: E6S8YGG74H6RZ
 
   test-monkstage-topmonks-com:
     <<: *test-site
@@ -223,10 +256,14 @@ jobs:
       HOST: monkstage.topmonks.com
 
   deploy-session-monk-topmonks-com:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E17DFTNXWI9SIA
-      HOST: session-monk.topmonks.com
+    executor: aws_cli
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - deploy_website:
+          site_name: session-monk.topmonks.com
+          distribution_id: E17DFTNXWI9SIA
 
   test-session-monk-topmonks-com:
     <<: *test-site
@@ -234,10 +271,14 @@ jobs:
       HOST: session-monk.topmonks.com
 
   deploy-studio-topmonks-com:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E2CIFZELO3K1ME
-      HOST: studio.topmonks.com
+    executor: aws_cli
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - deploy_website:
+          site_name: studio.topmonks.com
+          distribution_id: E2CIFZELO3K1ME
 
   test-www-topmonks-com:
     <<: *test-site
@@ -245,10 +286,14 @@ jobs:
       HOST: www.topmonks.com
 
   deploy-www-topmonks-com:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E2FSHRGA7F0TNY
-      HOST: www.topmonks.com
+    executor: aws_cli
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - deploy_website:
+          site_name: www.topmonks.com
+          distribution_id: E2FSHRGA7F0TNY
 
   test-www-topmonks-cz:
     <<: *test-site
@@ -256,10 +301,14 @@ jobs:
       HOST: www.topmonks.cz
 
   deploy-www-topmonks-cz:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E2K0QM3AL8O9FE
-      HOST: www.topmonks.cz
+    executor: aws_cli
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - deploy_website:
+          site_name: www.topmonks.cz
+          distribution_id: E2K0QM3AL8O9FE
 
   test-caffe-topmonks-cz:
     <<: *test-site
@@ -267,10 +316,14 @@ jobs:
       HOST: caffe.topmonks.cz
 
   deploy-caffe-topmonks-cz:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: EQ3Z90HYRV83G
-      HOST: caffe.topmonks.cz
+    executor: aws_cli
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - deploy_website:
+          site_name: caffe.topmonks.cz
+          distribution_id: EQ3Z90HYRV83G
 
   test-www-hookamonk-com:
     <<: *test-site
@@ -278,27 +331,19 @@ jobs:
       HOST: www.hookamonk.com
 
   deploy-www-hookamonk-com:
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E2EF8JLZURG0RI
-      HOST: www.hookamonk.com
-    docker:
-      - image: cibuilds/aws:latest
-    working_directory: ~/topmonks-webs
+    executor: aws_cli
     steps:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
-      - run:
-          name: Deploy to S3
-          command: aws s3 sync "public/$HOST" "s3://$HOST/"
+      - sync_s3:
+          from: public/www.hookamonk.com
+          to: s3://www.hookamonk.com
       - run:
           name: Update MIME types
           command: aws s3 cp --exclude "*" --include "apple-app-site-association" --content-type="application/json; charset=utf-8" --metadata-directive="REPLACE" --recursive s3://session-monk.topmonks.com/ s3://session-monk.topmonks.com/
-      - run:
-          name: Invalidate CDN distribution
-          command: |
-            aws configure set preview.cloudfront true
-            aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+      - invalidate_cloudfront:
+          distribution_id: E2EF8JLZURG0RI
 
   test-monkslab-cz:
     <<: *test-site
@@ -306,10 +351,14 @@ jobs:
       HOST: monkslab.cz
 
   deploy-monkslab-cz:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E1P5V9ZE9J2UMI
-      HOST: monkslab.cz
+    executor: aws_cli
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - deploy_website:
+          site_name: monkslab.cz
+          distribution_id: E1P5V9ZE9J2UMI
 
   test-www-hlidacshopu-cz:
     <<: *test-site
@@ -317,10 +366,14 @@ jobs:
       HOST: www.hlidacshopu.cz
 
   deploy-www-hlidacshopu-cz:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E107VH184U5I4G
-      HOST: www.hlidacshopu.cz
+    executor: aws_cli
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - deploy_website:
+          site_name: www.hlidacshopu.cz
+          distribution_id: E107VH184U5I4G
 
 workflows:
   build_and_deploy:
