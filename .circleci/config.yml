@@ -12,7 +12,7 @@ test-site: &test-site
     - restore_cache:
         keys:
           - v5-dependencies-{{ checksum "yarn.lock" }}
-    - run: yarn install --link-duplicates --no-progress
+    - run: yarn install --frozen-lockfile --link-duplicates --no-progress
     - run:
         name: Install self-signed cert for localhost
         command: |
@@ -76,7 +76,7 @@ jobs:
           keys:
             - v5-dependencies-{{ checksum "yarn.lock" }}
 
-      - run: yarn install --link-duplicates --no-progress
+      - run: yarn install --frozen-lockfile --link-duplicates --no-progress
       - save_cache:
           paths:
             - ~/.cache/yarn
@@ -132,7 +132,7 @@ jobs:
             - v5-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install deps
-          command: yarn install --production --no-progress --link-duplicates
+          command: yarn install --frozen-lockfile --production --no-progress --link-duplicates
       - run:
           name: Install Pulumi plugins
           command: pulumi plugin install
@@ -166,7 +166,7 @@ jobs:
             - v5-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install deps
-          command: yarn install --production --no-progress --link-duplicates
+          command: yarn install --frozen-lockfile --production --no-progress --link-duplicates
       - run:
           name: Install Pulumi plugins
           command: pulumi plugin install
