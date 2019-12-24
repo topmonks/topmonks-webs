@@ -1,22 +1,15 @@
 version: 2.1
 orbs:
-  pulumi: pulumi/pulumi@1.0.0
+  pulumi: pulumi/pulumi@1.2.0
+  aws-s3: circleci/aws-s3@1.0.12
+
 executors:
   aws_cli:
     docker:
       - image: cibuilds/aws:latest
     working_directory: ~/topmonks-webs
+
 commands:
-  sync_s3:
-    parameters:
-      from:
-        type: string
-      to:
-        type: string
-    steps:
-      - run:
-          name: S3 Sync
-          command: aws s3 sync << parameters.from >> << parameters.to >>
   invalidate_cloudfront:
     parameters:
       distribution_id:
@@ -39,7 +32,7 @@ commands:
         type: string
         default: "/*"
     steps:
-      - sync_s3:
+      - aws-s3/sync:
           from: public/<< parameters.site_name >>
           to: s3://<< parameters.site_name >>
       - invalidate_cloudfront:
@@ -90,20 +83,11 @@ jobs:
     working_directory: ~/topmonks-webs
     steps:
       - checkout
-      - run:
-          name: "Install Pulumi CLI, if needed"
-          command: |
-            curl -L https://get.pulumi.com/ | bash -s
-            # Add to PATH
-            echo 'export PATH=/home/circleci/.pulumi/bin:$PATH' >> $BASH_ENV
-            source $BASH_ENV
-      - run:
-          name: "Log into Pulumi"
-          command: pulumi login file:///home/circleci/topmonks-webs
+      - pulumi/login:
+          cloud-url: s3://pulumi.tmcloud.io
       - restore_cache:
           keys:
             - v5-dependencies-{{ checksum "yarn.lock" }}
-
       - run: yarn install --frozen-lockfile --link-duplicates --no-progress
       - save_cache:
           paths:
@@ -121,20 +105,6 @@ jobs:
           root: .
           paths: public
 
-  pre-provision:
-    executor: aws_cli
-    steps:
-      - checkout
-      - run:
-          name: Create Pulumi state folder
-          command: mkdir -p .pulumi
-      - sync_s3:
-          from: s3://topmonks-pulumi-state/
-          to: .pulumi/
-      - persist_to_workspace:
-          root: .
-          paths: .pulumi
-
   provision:
     docker:
       - image: circleci/node:12
@@ -143,31 +113,17 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
-      - run:
-          name: "Install Pulumi CLI, if needed"
-          command: |
-            curl -L https://get.pulumi.com/ | bash -s
-            # Add to PATH
-            echo 'export PATH=/home/circleci/.pulumi/bin:$PATH' >> $BASH_ENV
-            source $BASH_ENV
-      - run:
-          name: "Log into Pulumi"
-          command: pulumi login file:///home/circleci/topmonks-webs
+      - pulumi/login:
+          cloud-url: s3://pulumi.tmcloud.io
       - restore_cache:
           keys:
             - v5-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install deps
           command: yarn install --frozen-lockfile --production --no-progress --link-duplicates
-      - run:
-          name: Install Pulumi plugins
-          command: pulumi plugin install
       - pulumi/update:
           stack: topmonks-webs
           skip-preview: true
-      - persist_to_workspace:
-          root: .
-          paths: .pulumi
 
   preview-provision:
     docker:
@@ -177,36 +133,16 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
-      - run:
-          name: "Install Pulumi CLI, if needed"
-          command: |
-            curl -L https://get.pulumi.com/ | bash -s
-            # Add to PATH
-            echo 'export PATH=/home/circleci/.pulumi/bin:$PATH' >> $BASH_ENV
-            source $BASH_ENV
-      - run:
-          name: "Log into Pulumi"
-          command: pulumi login file:///home/circleci/topmonks-webs
+      - pulumi/login:
+          cloud-url: s3://pulumi.tmcloud.io
       - restore_cache:
           keys:
             - v5-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install deps
           command: yarn install --frozen-lockfile --production --no-progress --link-duplicates
-      - run:
-          name: Install Pulumi plugins
-          command: pulumi plugin install
       - pulumi/preview:
           stack: topmonks-webs
-
-  post-provision:
-    executor: aws_cli
-    steps:
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - sync_s3:
-          from: .pulumi/
-          to: s3://topmonks-pulumi-state/
 
   test-prodeti-topmonks-cz:
     <<: *test-site
@@ -339,7 +275,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
-      - sync_s3:
+      - aws-s3/sync:
           from: public/www.hookamonk.com
           to: s3://www.hookamonk.com
       - run:
@@ -384,26 +320,16 @@ workflows:
     jobs:
       - build:
           context: org-global
-      - pre-provision:
-          context: org-global
       - preview-provision:
           context: org-global
           filters:
             branches:
               ignore: master
-          requires:
-            - pre-provision
       - provision:
           context: org-global
           filters:
             branches:
               only: master
-          requires:
-            - pre-provision
-      - post-provision:
-          context: org-global
-          requires:
-            - provision
       - test-www-topmonks-com:
           requires:
             - build
