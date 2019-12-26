@@ -237,11 +237,12 @@ jobs:
       HOST: www.topmonks.com
 
   deploy-www-topmonks-com:
-    executor: aws_cli
+    executor: aws-cli/default
     steps:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
+      - aws-cli/install
       - read_deployment_envs:
           site_name: www.topmonks.com
       - deploy_website:
