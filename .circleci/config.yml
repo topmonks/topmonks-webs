@@ -28,6 +28,7 @@ commands:
         type: string
       distribution_id:
         type: string
+        default: "${AWS_CLOUDFRONT_DISTRIBUTION_ID}"
       paths:
         type: string
         default: "/*"
@@ -38,6 +39,17 @@ commands:
       - invalidate_cloudfront:
           distribution_id: << parameters.distribution_id >>
           paths: << parameters.paths >>
+  read_deployment_envs:
+    parameters:
+      site_name:
+        type: string
+    steps:
+      - pulumi/login:
+          cloud-url: s3://pulumi.tmcloud.io
+      - run:
+          command: |
+            CLOUDFRONT_ID=$(pulumi stack output sites --stack topmonks-webs | jq -rM  '.["<< parameters.site_name >>"] | .cloudFrontId | @text')
+            echo "export AWS_CLOUDFRONT_DISTRIBUTION_ID=\"${CLOUDFRONT_ID}\"" >> $BASH_ENV
 
 test-site: &test-site
   docker:
@@ -230,9 +242,10 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
+      - read_deployment_envs:
+          site_name: www.topmonks.com
       - deploy_website:
           site_name: www.topmonks.com
-          distribution_id: E2FSHRGA7F0TNY
 
   test-www-topmonks-cz:
     <<: *test-site
