@@ -4,12 +4,6 @@ orbs:
   aws-s3: circleci/aws-s3@1.0.12
   aws-cli: circleci/aws-cli@0.1.19
 
-executors:
-  aws_cli:
-    docker:
-      - image: aws-cli/default
-    working_directory: ~/topmonks-webs
-
 commands:
   read_deployment_envs:
     parameters:
@@ -166,7 +160,8 @@ jobs:
       HOST: prodeti.topmonks.cz
 
   deploy-prodeti-topmonks-cz:
-    executor: aws_cli
+    executor: aws-cli/default
+    working_directory: ~/topmonks-webs
     steps:
       - checkout
       - attach_workspace:
@@ -180,7 +175,8 @@ jobs:
       HOST: blockchain.topmonks.com
 
   deploy-blockchain-topmonks-com:
-    executor: aws_cli
+    executor: aws-cli/default
+    working_directory: ~/topmonks-webs
     steps:
       - checkout
       - attach_workspace:
@@ -194,7 +190,8 @@ jobs:
       HOST: studio.topmonks.com
 
   deploy-monkstage-topmonks-com:
-    executor: aws_cli
+    executor: aws-cli/default
+    working_directory: ~/topmonks-webs
     steps:
       - checkout
       - attach_workspace:
@@ -208,7 +205,8 @@ jobs:
       HOST: monkstage.topmonks.com
 
   deploy-session-monk-topmonks-com:
-    executor: aws_cli
+    executor: aws-cli/default
+    working_directory: ~/topmonks-webs
     steps:
       - checkout
       - attach_workspace:
@@ -222,7 +220,8 @@ jobs:
       HOST: session-monk.topmonks.com
 
   deploy-studio-topmonks-com:
-    executor: aws_cli
+    executor: aws-cli/default
+    working_directory: ~/topmonks-webs
     steps:
       - checkout
       - attach_workspace:
@@ -251,7 +250,8 @@ jobs:
       HOST: www.topmonks.cz
 
   deploy-www-topmonks-cz:
-    executor: aws_cli
+    executor: aws-cli/default
+    working_directory: ~/topmonks-webs
     steps:
       - checkout
       - attach_workspace:
@@ -265,7 +265,8 @@ jobs:
       HOST: caffe.topmonks.cz
 
   deploy-caffe-topmonks-cz:
-    executor: aws_cli
+    executor: aws-cli/default
+    working_directory: ~/topmonks-webs
     steps:
       - checkout
       - attach_workspace:
@@ -279,11 +280,13 @@ jobs:
       HOST: www.hookamonk.com
 
   deploy-www-hookamonk-com:
-    executor: aws_cli
+    executor: aws-cli/default
+    working_directory: ~/topmonks-webs
     steps:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
+      - aws-cli/install
       - aws-s3/sync:
           from: public/www.hookamonk.com
           to: s3://www.hookamonk.com
@@ -300,7 +303,8 @@ jobs:
       HOST: monkslab.cz
 
   deploy-monkslab-cz:
-    executor: aws_cli
+    executor: aws-cli/default
+    working_directory: ~/topmonks-webs
     steps:
       - checkout
       - attach_workspace:
@@ -314,7 +318,8 @@ jobs:
       HOST: www.hlidacshopu.cz
 
   deploy-www-hlidacshopu-cz:
-    executor: aws_cli
+    executor: aws-cli/default
+    working_directory: ~/topmonks-webs
     steps:
       - checkout
       - attach_workspace:
