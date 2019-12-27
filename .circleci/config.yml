@@ -7,10 +7,21 @@ orbs:
 executors:
   aws_cli:
     docker:
-      - image: cibuilds/aws:latest
+      - image: aws-cli/default
     working_directory: ~/topmonks-webs
 
 commands:
+  read_deployment_envs:
+    parameters:
+      site_name:
+        type: string
+    steps:
+      - pulumi/login:
+          cloud-url: s3://pulumi.tmcloud.io
+      - run:
+          command: |
+            CLOUDFRONT_ID=$(pulumi stack output sites --stack topmonks-webs | jq -rM  '.["<< parameters.site_name >>"] | .cloudFrontId | @text')
+            echo "export AWS_CLOUDFRONT_DISTRIBUTION_ID=\"${CLOUDFRONT_ID}\"" >> $BASH_ENV
   invalidate_cloudfront:
     parameters:
       distribution_id:
@@ -34,23 +45,15 @@ commands:
         type: string
         default: "/*"
     steps:
+      - aws-cli/install
+      - read_deployment_envs:
+          site_name: << parameters.site_name >>
       - aws-s3/sync:
           from: public/<< parameters.site_name >>
           to: s3://<< parameters.site_name >>
       - invalidate_cloudfront:
           distribution_id: << parameters.distribution_id >>
           paths: << parameters.paths >>
-  read_deployment_envs:
-    parameters:
-      site_name:
-        type: string
-    steps:
-      - pulumi/login:
-          cloud-url: s3://pulumi.tmcloud.io
-      - run:
-          command: |
-            CLOUDFRONT_ID=$(pulumi stack output sites --stack topmonks-webs | jq -rM  '.["<< parameters.site_name >>"] | .cloudFrontId | @text')
-            echo "export AWS_CLOUDFRONT_DISTRIBUTION_ID=\"${CLOUDFRONT_ID}\"" >> $BASH_ENV
 
 test-site: &test-site
   docker:
@@ -170,7 +173,6 @@ jobs:
           at: ~/topmonks-webs
       - deploy_website:
           site_name: prodeti.topmonks.cz
-          distribution_id: E81ZRHS2RR6UN
 
   test-blockchain-topmonks-com:
     <<: *test-site
@@ -185,7 +187,6 @@ jobs:
           at: ~/topmonks-webs
       - deploy_website:
           site_name: blockchain.topmonks.com
-          distribution_id: E1CJ2HYFKVH0CG
 
   test-studio-topmonks-com:
     <<: *test-site
@@ -200,7 +201,6 @@ jobs:
           at: ~/topmonks-webs
       - deploy_website:
           site_name: monkstage.topmonks.com
-          distribution_id: E6S8YGG74H6RZ
 
   test-monkstage-topmonks-com:
     <<: *test-site
@@ -215,7 +215,6 @@ jobs:
           at: ~/topmonks-webs
       - deploy_website:
           site_name: session-monk.topmonks.com
-          distribution_id: E17DFTNXWI9SIA
 
   test-session-monk-topmonks-com:
     <<: *test-site
@@ -230,7 +229,6 @@ jobs:
           at: ~/topmonks-webs
       - deploy_website:
           site_name: studio.topmonks.com
-          distribution_id: E2CIFZELO3K1ME
 
   test-www-topmonks-com:
     <<: *test-site
@@ -244,9 +242,6 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
-      - aws-cli/install
-      - read_deployment_envs:
-          site_name: www.topmonks.com
       - deploy_website:
           site_name: www.topmonks.com
 
@@ -263,7 +258,6 @@ jobs:
           at: ~/topmonks-webs
       - deploy_website:
           site_name: www.topmonks.cz
-          distribution_id: E2K0QM3AL8O9FE
 
   test-caffe-topmonks-cz:
     <<: *test-site
@@ -278,7 +272,6 @@ jobs:
           at: ~/topmonks-webs
       - deploy_website:
           site_name: caffe.topmonks.cz
-          distribution_id: EQ3Z90HYRV83G
 
   test-www-hookamonk-com:
     <<: *test-site
@@ -314,7 +307,6 @@ jobs:
           at: ~/topmonks-webs
       - deploy_website:
           site_name: monkslab.cz
-          distribution_id: E1P5V9ZE9J2UMI
 
   test-www-hlidacshopu-cz:
     <<: *test-site
@@ -329,7 +321,6 @@ jobs:
           at: ~/topmonks-webs
       - deploy_website:
           site_name: www.hlidacshopu.cz
-          distribution_id: E107VH184U5I4G
 
 workflows:
   build_and_deploy:

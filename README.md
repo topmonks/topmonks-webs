@@ -124,7 +124,7 @@ yarn start:new-site.topmonks.com
 ```
 
 The command will generate initial files and package.json scripts for you.
-Don't forget to include your repo in `.circleci/config.yml` when ready to deploy.
+Don't forget to include your `new-site` in `.circleci/config.yml` when ready to deploy.
 
 ### Options
 
