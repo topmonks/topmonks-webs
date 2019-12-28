@@ -159,7 +159,7 @@ jobs:
             certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n lws-cert -i ./node_modules/lws/ssl/lws-cert.pem
       - run:
           name: Serve site content
-          command: yarn serve
+          command: yarn serve -d ./public/<< parameters.site_name >>
           background: true
       - run:
           name: Test site with Lighthouse
