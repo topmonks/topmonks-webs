@@ -49,43 +49,6 @@ commands:
           distribution_id: << parameters.distribution_id >>
           paths: << parameters.paths >>
 
-test-site: &test-site
-  docker:
-    - image: circleci/node:12-browsers
-  working_directory: ~/topmonks-webs
-  steps:
-    - checkout
-    - attach_workspace:
-        at: ~/topmonks-webs
-    - restore_cache:
-        keys:
-          - v5-dependencies-{{ checksum "yarn.lock" }}
-    - run: yarn install --frozen-lockfile --link-duplicates --no-progress
-    - run:
-        name: Install self-signed cert for localhost
-        command: |
-          sudo apt-get install libnss3-tools
-          mkdir -p $HOME/.pki/nssdb
-          certutil -d $HOME/.pki/nssdb -N --empty-password
-          certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n lws-cert -i ./node_modules/lws/ssl/lws-cert.pem
-    - run:
-        name: Serve site content
-        command: yarn serve
-        background: true
-    - run:
-        name: Test site with Lighthouse
-        command: |
-          mkdir results
-          yarn test:lighthouse
-          yarn test:ava
-    - run:
-        name: Check site for broken links
-        command: yarn test:broken-links:$HOST
-    - store_artifacts:
-        path: ./results
-    - store_test_results:
-        path: ./results
-
 jobs:
   build:
     docker:
@@ -113,7 +76,7 @@ jobs:
           path: ./results
       - persist_to_workspace:
           root: .
-          paths: public
+          paths: [public]
 
   provision:
     docker:
@@ -154,131 +117,6 @@ jobs:
       - pulumi/preview:
           stack: topmonks-webs
 
-  test-prodeti-topmonks-cz:
-    <<: *test-site
-    environment:
-      HOST: prodeti.topmonks.cz
-
-  deploy-prodeti-topmonks-cz:
-    executor: aws-cli/default
-    working_directory: ~/topmonks-webs
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - deploy_website:
-          site_name: prodeti.topmonks.cz
-
-  test-blockchain-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: blockchain.topmonks.com
-
-  deploy-blockchain-topmonks-com:
-    executor: aws-cli/default
-    working_directory: ~/topmonks-webs
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - deploy_website:
-          site_name: blockchain.topmonks.com
-
-  test-studio-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: studio.topmonks.com
-
-  deploy-monkstage-topmonks-com:
-    executor: aws-cli/default
-    working_directory: ~/topmonks-webs
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - deploy_website:
-          site_name: monkstage.topmonks.com
-
-  test-monkstage-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: monkstage.topmonks.com
-
-  deploy-session-monk-topmonks-com:
-    executor: aws-cli/default
-    working_directory: ~/topmonks-webs
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - deploy_website:
-          site_name: session-monk.topmonks.com
-
-  test-session-monk-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: session-monk.topmonks.com
-
-  deploy-studio-topmonks-com:
-    executor: aws-cli/default
-    working_directory: ~/topmonks-webs
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - deploy_website:
-          site_name: studio.topmonks.com
-
-  test-www-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: www.topmonks.com
-
-  deploy-www-topmonks-com:
-    executor: aws-cli/default
-    working_directory: ~/topmonks-webs
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - deploy_website:
-          site_name: www.topmonks.com
-
-  test-www-topmonks-cz:
-    <<: *test-site
-    environment:
-      HOST: www.topmonks.cz
-
-  deploy-www-topmonks-cz:
-    executor: aws-cli/default
-    working_directory: ~/topmonks-webs
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - deploy_website:
-          site_name: www.topmonks.cz
-
-  test-caffe-topmonks-cz:
-    <<: *test-site
-    environment:
-      HOST: caffe.topmonks.cz
-
-  deploy-caffe-topmonks-cz:
-    executor: aws-cli/default
-    working_directory: ~/topmonks-webs
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - deploy_website:
-          site_name: caffe.topmonks.cz
-
-  test-www-hookamonk-com:
-    <<: *test-site
-    environment:
-      HOST: www.hookamonk.com
-
   deploy-www-hookamonk-com:
     executor: aws-cli/default
     working_directory: ~/topmonks-webs
@@ -297,12 +135,50 @@ jobs:
           distribution_id: E2EF8JLZURG0RI
           paths: "/*"
 
-  test-monkslab-cz:
-    <<: *test-site
-    environment:
-      HOST: monkslab.cz
+  test_site:
+    parameters:
+      site_name:
+        type: string
+    docker:
+      - image: circleci/node:12-browsers
+    working_directory: ~/topmonks-webs
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - restore_cache:
+          keys:
+            - v5-dependencies-{{ checksum "yarn.lock" }}
+      - run: yarn install --frozen-lockfile --link-duplicates --no-progress
+      - run:
+          name: Install self-signed cert for localhost
+          command: |
+            sudo apt-get install libnss3-tools
+            mkdir -p $HOME/.pki/nssdb
+            certutil -d $HOME/.pki/nssdb -N --empty-password
+            certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n lws-cert -i ./node_modules/lws/ssl/lws-cert.pem
+      - run:
+          name: Serve site content
+          command: yarn serve
+          background: true
+      - run:
+          name: Test site with Lighthouse
+          command: |
+            mkdir results
+            yarn test:lighthouse
+            yarn test:ava
+      - run:
+          name: Check site for broken links
+          command: yarn test:broken-links:<< parameters.site_name >>
+      - store_artifacts:
+          path: ./results
+      - store_test_results:
+          path: ./results
 
-  deploy-monkslab-cz:
+  deploy_site:
+    parameters:
+      site_name:
+        type: string
     executor: aws-cli/default
     working_directory: ~/topmonks-webs
     steps:
@@ -310,22 +186,7 @@ jobs:
       - attach_workspace:
           at: ~/topmonks-webs
       - deploy_website:
-          site_name: monkslab.cz
-
-  test-www-hlidacshopu-cz:
-    <<: *test-site
-    environment:
-      HOST: www.hlidacshopu.cz
-
-  deploy-www-hlidacshopu-cz:
-    executor: aws-cli/default
-    working_directory: ~/topmonks-webs
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - deploy_website:
-          site_name: www.hlidacshopu.cz
+          site_name: << parameters.site_name >>
 
 workflows:
   build_and_deploy:
@@ -342,47 +203,13 @@ workflows:
           filters:
             branches:
               only: master
-      - test-www-topmonks-com:
+      - test_site:
+          name: test-www-topmonks-com
+          site_name: www.topmonks.com
           requires:
             - build
-      - test-blockchain-topmonks-com:
-          requires:
-            - build
-      - test-studio-topmonks-com:
-          requires:
-            - build
-      - test-monkstage-topmonks-com:
-          requires:
-            - build
-      - test-www-topmonks-cz:
-          requires:
-            - build
-      - test-caffe-topmonks-cz:
-          requires:
-            - build
-      - test-prodeti-topmonks-cz:
-          requires:
-            - build
-      - deploy-prodeti-topmonks-cz:
-          context: org-global
-          requires:
-            - provision
-            - test-prodeti-topmonks-cz
-          filters:
-            branches:
-              only: master
-      - test-session-monk-topmonks-com:
-          requires:
-            - build
-      - deploy-session-monk-topmonks-com:
-          context: org-global
-          requires:
-            - provision
-            - test-session-monk-topmonks-com
-          filters:
-            branches:
-              only: master
-      - deploy-www-topmonks-com:
+      - deploy_site:
+          site_name: www.topmonks.com
           context: org-global
           requires:
             - provision
@@ -390,15 +217,13 @@ workflows:
           filters:
             branches:
               only: master
-      - deploy-www-topmonks-cz:
-          context: org-global
+      - test_site:
+          name: test-blockchain-topmonks-com
+          site_name: blockchain.topmonks.com
           requires:
-            - provision
-            - test-www-topmonks-cz
-          filters:
-            branches:
-              only: master
-      - deploy-blockchain-topmonks-com:
+            - build
+      - deploy_site:
+          site_name: blockchain.topmonks.com
           context: org-global
           requires:
             - provision
@@ -406,15 +231,13 @@ workflows:
           filters:
             branches:
               only: master
-      - deploy-monkstage-topmonks-com:
-          context: org-global
+      - test_site:
+          name: test-studio-topmonks-com
+          site_name: studio.topmonks.com
           requires:
-            - provision
-            - test-monkstage-topmonks-com
-          filters:
-            branches:
-              only: master
-      - deploy-studio-topmonks-com:
+            - build
+      - deploy_site:
+          site_name: studio.topmonks.com
           context: org-global
           requires:
             - provision
@@ -422,7 +245,41 @@ workflows:
           filters:
             branches:
               only: master
-      - deploy-caffe-topmonks-cz:
+      - test_site:
+          name: test-monkstage-topmonks-com
+          site_name: monkstage.topmonks.com
+          requires:
+            - build
+      - deploy_site:
+          site_name: monkstage.topmonks.com
+          context: org-global
+          requires:
+            - provision
+            - test-monkstage-topmonks-com
+          filters:
+            branches:
+              only: master
+      - test_site:
+          name: test-www-topmonks-cz
+          site_name: www.topmonks.cz
+          requires:
+            - build
+      - deploy_site:
+          site_name: www.topmonks.cz
+          context: org-global
+          requires:
+            - provision
+            - test-www-topmonks-cz
+          filters:
+            branches:
+              only: master
+      - test_site:
+          name: test-caffe-topmonks-cz
+          site_name: caffe.topmonks.cz
+          requires:
+            - build
+      - deploy_site:
+          site_name: caffe.topmonks.cz
           context: org-global
           requires:
             - provision
@@ -430,10 +287,41 @@ workflows:
           filters:
             branches:
               only: master
-      - test-monkslab-cz:
+      - test_site:
+          name: test-prodeti-topmonks-cz
+          site_name: prodeti.topmonks.cz
           requires:
             - build
-      - deploy-monkslab-cz:
+      - deploy_site:
+          site_name: prodeti.topmonks.cz
+          context: org-global
+          requires:
+            - provision
+            - test-prodeti-topmonks-cz
+          filters:
+            branches:
+              only: master
+      - test_site:
+          name: test-session-monk-topmonks-com
+          site_name: session-monk.topmonks.com
+          requires:
+            - build
+      - deploy_site:
+          site_name: session-monk.topmonks.com
+          context: org-global
+          requires:
+            - provision
+            - test-session-monk-topmonks-com
+          filters:
+            branches:
+              only: master
+      - test_site:
+          name: test-monkslab-cz
+          site_name: monkslab.cz
+          requires:
+            - build
+      - deploy_site:
+          site_name: monkslab.cz
           context: org-global
           requires:
             - provision
@@ -449,10 +337,13 @@ workflows:
           filters:
             branches:
               only: master
-      - test-www-hlidacshopu-cz:
+      - test_site:
+          name: test-www-hlidacshopu-cz
+          site_name: www.hlidacshopu.cz
           requires:
             - build
-      - deploy-www-hlidacshopu-cz:
+      - deploy_site:
+          site_name: www.hlidacshopu.cz
           context: org-global
           requires:
             - provision
