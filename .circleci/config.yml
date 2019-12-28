@@ -39,6 +39,7 @@ commands:
         type: string
         default: "/*"
       after_s3_sync:
+        description: Steps that will be execute after S3 sync, but before Cloudfront distribution invalidation
         type: steps
         default: []
     steps:
@@ -165,6 +166,9 @@ jobs:
     parameters:
       site_name:
         type: string
+      after_s3_sync:
+        type: steps
+        default: []
     executor: aws-cli/default
     working_directory: ~/topmonks-webs
     steps:
@@ -173,6 +177,7 @@ jobs:
           at: ~/topmonks-webs
       - deploy_website:
           site_name: << parameters.site_name >>
+          after_s3_sync: << parameters.after_s3_sync >>
 
 workflows:
   build_and_deploy:
@@ -302,14 +307,14 @@ workflows:
       - deploy_site:
           name: deploy-session-monk-topmonks-com
           site_name: session-monk.topmonks.com
-          context: org-global
           after_s3_sync:
             - run:
-              name: Update MIME types
-              command: |
-                aws s3 cp --exclude "*" --include "apple-app-site-association" \
-                  --metadata-directive="REPLACE" --content-type="application/json; charset=utf-8" \
-                  --recursive s3://session-monk.topmonks.com/ s3://session-monk.topmonks.com/
+                name: Update MIME types
+                command: |
+                  aws s3 cp --exclude "*" --include "apple-app-site-association" \
+                    --metadata-directive="REPLACE" --content-type="application/json; charset=utf-8" \
+                    --recursive s3://session-monk.topmonks.com/ s3://session-monk.topmonks.com/
+          context: org-global
           requires:
             - provision
             - test-session-monk-topmonks-com
