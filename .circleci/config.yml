@@ -38,6 +38,9 @@ commands:
       paths:
         type: string
         default: "/*"
+      after_s3_sync:
+        type: steps
+        default: []
     steps:
       - aws-cli/install
       - read_deployment_envs:
@@ -45,6 +48,7 @@ commands:
       - aws-s3/sync:
           from: public/<< parameters.site_name >>
           to: s3://<< parameters.site_name >>
+      - steps: << parameters.after_s3_sync >>
       - invalidate_cloudfront:
           distribution_id: << parameters.distribution_id >>
           paths: << parameters.paths >>
@@ -116,24 +120,6 @@ jobs:
           command: yarn install --frozen-lockfile --production --no-progress --link-duplicates
       - pulumi/preview:
           stack: topmonks-webs
-
-  deploy-www-hookamonk-com:
-    executor: aws-cli/default
-    working_directory: ~/topmonks-webs
-    steps:
-      - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - aws-cli/install
-      - aws-s3/sync:
-          from: public/www.hookamonk.com
-          to: s3://www.hookamonk.com
-      - run:
-          name: Update MIME types
-          command: aws s3 cp --exclude "*" --include "apple-app-site-association" --content-type="application/json; charset=utf-8" --metadata-directive="REPLACE" --recursive s3://session-monk.topmonks.com/ s3://session-monk.topmonks.com/
-      - invalidate_cloudfront:
-          distribution_id: E2EF8JLZURG0RI
-          paths: "/*"
 
   test_site:
     parameters:
@@ -317,6 +303,13 @@ workflows:
           name: deploy-session-monk-topmonks-com
           site_name: session-monk.topmonks.com
           context: org-global
+          after_s3_sync:
+            - run:
+              name: Update MIME types
+              command: |
+                aws s3 cp --exclude "*" --include "apple-app-site-association" \
+                  --metadata-directive="REPLACE" --content-type="application/json; charset=utf-8" \
+                  --recursive s3://session-monk.topmonks.com/ s3://session-monk.topmonks.com/
           requires:
             - provision
             - test-session-monk-topmonks-com
@@ -338,7 +331,9 @@ workflows:
           filters:
             branches:
               only: master
-      - deploy-www-hookamonk-com:
+      - deploy_site:
+          name: deploy-www-hookamonk-com
+          site_name: www.hookamonk.com
           context: org-global
           requires:
             - provision
