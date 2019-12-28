@@ -209,6 +209,7 @@ workflows:
           requires:
             - build
       - deploy_site:
+          name: deploy-www-topmonks-com
           site_name: www.topmonks.com
           context: org-global
           requires:
@@ -223,6 +224,7 @@ workflows:
           requires:
             - build
       - deploy_site:
+          name: deploy-blockchain-topmonks-com
           site_name: blockchain.topmonks.com
           context: org-global
           requires:
@@ -237,6 +239,7 @@ workflows:
           requires:
             - build
       - deploy_site:
+          name: deploy-studio-topmonks-com
           site_name: studio.topmonks.com
           context: org-global
           requires:
@@ -251,6 +254,7 @@ workflows:
           requires:
             - build
       - deploy_site:
+          name: deploy-monkstage-topmonks-com
           site_name: monkstage.topmonks.com
           context: org-global
           requires:
@@ -265,6 +269,7 @@ workflows:
           requires:
             - build
       - deploy_site:
+          name: deploy-www-topmonks-cz
           site_name: www.topmonks.cz
           context: org-global
           requires:
@@ -279,6 +284,7 @@ workflows:
           requires:
             - build
       - deploy_site:
+          name: deploy-caffe-topmonks-cz
           site_name: caffe.topmonks.cz
           context: org-global
           requires:
@@ -293,6 +299,7 @@ workflows:
           requires:
             - build
       - deploy_site:
+          name: deploy-prodeti-topmonks-cz
           site_name: prodeti.topmonks.cz
           context: org-global
           requires:
@@ -307,6 +314,7 @@ workflows:
           requires:
             - build
       - deploy_site:
+          name: deploy-session-monk-topmonks-com
           site_name: session-monk.topmonks.com
           context: org-global
           requires:
@@ -321,6 +329,7 @@ workflows:
           requires:
             - build
       - deploy_site:
+          name: deploy-monkslab-cz
           site_name: monkslab.cz
           context: org-global
           requires:
@@ -343,6 +352,7 @@ workflows:
           requires:
             - build
       - deploy_site:
+          name: deploy-www-hlidacshopu-cz
           site_name: www.hlidacshopu.cz
           context: org-global
           requires:
