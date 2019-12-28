@@ -10,7 +10,8 @@
     "@material/layout-grid": "^4.0.0",
     "@pulumi/aws": "^1.17.0",
     "@pulumi/pulumi": "^1.8.1",
-    "@types/node": "^12.12.18"
+    "@types/node": "^12.12.18",
+    "lodash": "4.17.12"
   },
   "devDependencies": {
     "@topmonks/blendid": "git://github.com/topmonks/blendid.git",
