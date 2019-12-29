@@ -123,8 +123,8 @@ then simply run for development mode
 yarn start:new-site.topmonks.com
 ```
 
-The command will generate initial files and package.json scripts for you.
-Don't forget to include your `new-site` in `.circleci/config.yml` when ready to deploy.
+The command will generate initial files and package.json scripts, 
+Pulumi resources and build/deployment steps for you.
 
 ### Options
 
