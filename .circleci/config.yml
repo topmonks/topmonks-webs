@@ -1,87 +1,77 @@
 version: 2.1
 orbs:
-  pulumi: pulumi/pulumi@1.0.0
-test-site: &test-site
-  docker:
-    - image: circleci/node:10-browsers
-  working_directory: ~/topmonks-webs
-  steps:
-    - checkout
-    - attach_workspace:
-        at: ~/topmonks-webs
-    - restore_cache:
-        keys:
-          - v5-dependencies-{{ checksum "yarn.lock" }}
-    - run: yarn install --link-duplicates --no-progress
-    - run:
-        name: Install self-signed cert for localhost
-        command: |
-          sudo apt-get install libnss3-tools
-          mkdir -p $HOME/.pki/nssdb
-          certutil -d $HOME/.pki/nssdb -N --empty-password
-          certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n lws-cert -i ./node_modules/lws/ssl/lws-cert.pem
-    - run:
-        name: Serve site content
-        command: yarn serve
-        background: true
-    - run:
-        name: Test site with Lighthouse
-        command: |
-          mkdir results
-          yarn test:lighthouse
-          yarn test:ava
-    - run:
-        name: Check site for broken links
-        command: yarn test:broken-links:$HOST
-    - store_artifacts:
-        path: ./results
-    - store_test_results:
-        path: ./results
+  pulumi: pulumi/pulumi@1.2.0
+  aws-s3: circleci/aws-s3@1.0.12
+  aws-cli: circleci/aws-cli@0.1.19
 
-s3-deploy: &s3-deploy
-  docker:
-    - image: cibuilds/aws:latest
-  working_directory: ~/topmonks-webs
-  steps:
-    - checkout
-    - attach_workspace:
-        at: ~/topmonks-webs
-    - run:
-        name: Deploy to S3
-        command: aws s3 sync "public/$HOST" "s3://$HOST/"
-    - run:
-        name: Invalidate CDN distribution
-        command: |
-          aws configure set preview.cloudfront true
-          aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+commands:
+  read_deployment_envs:
+    parameters:
+      site_name:
+        type: string
+    steps:
+      - pulumi/login:
+          cloud-url: s3://pulumi.tmcloud.io
+      - run:
+          command: |
+            CLOUDFRONT_ID=$(pulumi stack output sites --stack topmonks-webs | jq -rM  '.["<< parameters.site_name >>"] | .cloudFrontId | @text')
+            echo "export AWS_CLOUDFRONT_DISTRIBUTION_ID=\"${CLOUDFRONT_ID}\"" >> $BASH_ENV
+  invalidate_cloudfront:
+    parameters:
+      distribution_id:
+        type: string
+      paths:
+        type: string
+    steps:
+      - run:
+          name: Invalidate Cloudfront distribution
+          command: |
+            aws configure set preview.cloudfront true
+            aws cloudfront create-invalidation --distribution-id=<< parameters.distribution_id >> --paths=<< parameters.paths >>
+  deploy_website:
+    parameters:
+      site_name:
+        type: string
+      distribution_id:
+        type: string
+        default: "${AWS_CLOUDFRONT_DISTRIBUTION_ID}"
+      paths:
+        type: string
+        default: "/*"
+      after_s3_sync:
+        description: Steps that will be execute after S3 sync, but before Cloudfront distribution invalidation
+        type: steps
+        default: []
+    steps:
+      - aws-cli/install
+      - read_deployment_envs:
+          site_name: << parameters.site_name >>
+      - aws-s3/sync:
+          from: public/<< parameters.site_name >>
+          to: s3://<< parameters.site_name >>
+      - steps: << parameters.after_s3_sync >>
+      - invalidate_cloudfront:
+          distribution_id: << parameters.distribution_id >>
+          paths: << parameters.paths >>
 
 jobs:
   build:
     docker:
-      - image: circleci/node:10-browsers
+      - image: circleci/node:12-browsers
     working_directory: ~/topmonks-webs
     steps:
       - checkout
-      - run:
-          name: "Install Pulumi CLI, if needed"
-          command: |
-            curl -L https://get.pulumi.com/ | bash -s
-            # Add to PATH
-            echo 'export PATH=/home/circleci/.pulumi/bin:$PATH' >> $BASH_ENV
-            source $BASH_ENV
-      - run:
-          name: "Log into Pulumi"
-          command: pulumi login file:///home/circleci/topmonks-webs
+      - pulumi/login:
+          cloud-url: s3://pulumi.tmcloud.io
       - restore_cache:
           keys:
             - v5-dependencies-{{ checksum "yarn.lock" }}
-
-      - run: yarn install --link-duplicates --no-progress
+      - run: yarn install --frozen-lockfile --link-duplicates --no-progress
       - save_cache:
           paths:
             - ~/.cache/yarn
           key: v5-dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn run build
+      - run: yarn build
       - run: |
           mkdir results
           yarn test
@@ -91,303 +81,127 @@ jobs:
           path: ./results
       - persist_to_workspace:
           root: .
-          paths: public
-
-  pre-provision:
-    docker:
-      - image: "cibuilds/aws:latest"
-    working_directory: ~/topmonks-webs
-    steps:
-      - checkout
-      - run:
-          name: Create Pulumi state folder
-          command: mkdir -p .pulumi
-      - run:
-          name: Fetch Pulumi state from S3
-          command: aws s3 sync s3://topmonks-pulumi-state/ .pulumi/
-      - persist_to_workspace:
-          root: .
-          paths: .pulumi
+          paths: [ public ]
 
   provision:
     docker:
-      - image: "circleci/node:10"
+      - image: circleci/node:12
     working_directory: ~/topmonks-webs
     steps:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
-      - run:
-          name: "Install Pulumi CLI, if needed"
-          command: |
-            curl -L https://get.pulumi.com/ | bash -s
-            # Add to PATH
-            echo 'export PATH=/home/circleci/.pulumi/bin:$PATH' >> $BASH_ENV
-            source $BASH_ENV
-      - run:
-          name: "Log into Pulumi"
-          command: pulumi login file:///home/circleci/topmonks-webs
+      - pulumi/login:
+          cloud-url: s3://pulumi.tmcloud.io
       - restore_cache:
           keys:
             - v5-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install deps
-          command: yarn install --production --no-progress --link-duplicates
-      - run:
-          name: Install Pulumi plugins
-          command: pulumi plugin install
+          command: yarn install --frozen-lockfile --production --no-progress --link-duplicates
       - pulumi/update:
           stack: topmonks-webs
           skip-preview: true
-      - persist_to_workspace:
-          root: .
-          paths: .pulumi
 
   preview-provision:
     docker:
-      - image: "circleci/node:10"
+      - image: circleci/node:12
     working_directory: ~/topmonks-webs
     steps:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
-      - run:
-          name: "Install Pulumi CLI, if needed"
-          command: |
-            curl -L https://get.pulumi.com/ | bash -s
-            # Add to PATH
-            echo 'export PATH=/home/circleci/.pulumi/bin:$PATH' >> $BASH_ENV
-            source $BASH_ENV
-      - run:
-          name: "Log into Pulumi"
-          command: pulumi login file:///home/circleci/topmonks-webs
+      - pulumi/login:
+          cloud-url: s3://pulumi.tmcloud.io
       - restore_cache:
           keys:
             - v5-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install deps
-          command: yarn install --production --no-progress --link-duplicates
-      - run:
-          name: Install Pulumi plugins
-          command: pulumi plugin install
+          command: yarn install --frozen-lockfile --production --no-progress --link-duplicates
       - pulumi/preview:
           stack: topmonks-webs
 
-  post-provision:
+  test_site:
+    parameters:
+      site_name:
+        type: string
     docker:
-      - image: "cibuilds/aws:latest"
-    working_directory: ~/topmonks-webs
-    steps:
-      - attach_workspace:
-          at: ~/topmonks-webs
-      - run:
-          name: Push Pulumi state to S3
-          command: aws s3 sync .pulumi/ s3://topmonks-pulumi-state/
-
-  test-prodeti-topmonks-cz:
-    <<: *test-site
-    environment:
-      HOST: prodeti.topmonks.cz
-
-  deploy-prodeti-topmonks-cz:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E81ZRHS2RR6UN
-      HOST: prodeti.topmonks.cz
-
-  test-blockchain-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: blockchain.topmonks.com
-
-  deploy-blockchain-topmonks-com:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E1CJ2HYFKVH0CG
-      HOST: blockchain.topmonks.com
-
-  test-studio-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: studio.topmonks.com
-
-  deploy-monkstage-topmonks-com:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E6S8YGG74H6RZ
-      HOST: monkstage.topmonks.com
-
-  test-monkstage-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: monkstage.topmonks.com
-
-  deploy-session-monk-topmonks-com:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E17DFTNXWI9SIA
-      HOST: session-monk.topmonks.com
-
-  test-session-monk-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: session-monk.topmonks.com
-
-  deploy-studio-topmonks-com:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E2CIFZELO3K1ME
-      HOST: studio.topmonks.com
-
-  test-www-topmonks-com:
-    <<: *test-site
-    environment:
-      HOST: www.topmonks.com
-
-  deploy-www-topmonks-com:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E2FSHRGA7F0TNY
-      HOST: www.topmonks.com
-
-  test-www-topmonks-cz:
-    <<: *test-site
-    environment:
-      HOST: www.topmonks.cz
-
-  deploy-www-topmonks-cz:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E2K0QM3AL8O9FE
-      HOST: www.topmonks.cz
-
-  test-caffe-topmonks-cz:
-    <<: *test-site
-    environment:
-      HOST: caffe.topmonks.cz
-
-  deploy-caffe-topmonks-cz:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: EQ3Z90HYRV83G
-      HOST: caffe.topmonks.cz
-
-  test-www-hookamonk-com:
-    <<: *test-site
-    environment:
-      HOST: www.hookamonk.com
-
-  deploy-www-hookamonk-com:
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E2EF8JLZURG0RI
-      HOST: www.hookamonk.com
-    docker:
-      - image: cibuilds/aws:latest
+      - image: circleci/node:12-browsers
     working_directory: ~/topmonks-webs
     steps:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
+      - restore_cache:
+          keys:
+            - v5-dependencies-{{ checksum "yarn.lock" }}
+      - run: yarn install --frozen-lockfile --link-duplicates --no-progress
       - run:
-          name: Deploy to S3
-          command: aws s3 sync "public/$HOST" "s3://$HOST/"
-      - run:
-          name: Update MIME types
-          command: aws s3 cp --exclude "*" --include "apple-app-site-association" --content-type="application/json; charset=utf-8" --metadata-directive="REPLACE" --recursive s3://session-monk.topmonks.com/ s3://session-monk.topmonks.com/
-      - run:
-          name: Invalidate CDN distribution
+          name: Install self-signed cert for localhost
           command: |
-            aws configure set preview.cloudfront true
-            aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+            sudo apt-get install libnss3-tools
+            mkdir -p $HOME/.pki/nssdb
+            certutil -d $HOME/.pki/nssdb -N --empty-password
+            certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n lws-cert -i ./node_modules/lws/ssl/lws-cert.pem
+      - run:
+          name: Serve site content
+          command: yarn serve -d ./public/<< parameters.site_name >>
+          background: true
+      - run:
+          name: Test site with Lighthouse
+          command: |
+            mkdir results
+            yarn test:lighthouse
+            yarn test:ava
+      - run:
+          name: Check site for broken links
+          command: yarn test:broken-links:<< parameters.site_name >>
+      - store_artifacts:
+          path: ./results
+      - store_test_results:
+          path: ./results
 
-  test-monkslab-cz:
-    <<: *test-site
-    environment:
-      HOST: monkslab.cz
-
-  deploy-monkslab-cz:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E1P5V9ZE9J2UMI
-      HOST: monkslab.cz
-
-  test-www-hlidacshopu-cz:
-    <<: *test-site
-    environment:
-      HOST: www.hlidacshopu.cz
-
-  deploy-www-hlidacshopu-cz:
-    <<: *s3-deploy
-    environment:
-      AWS_CLOUDFRONT_DISTRIBUTION_ID: E107VH184U5I4G
-      HOST: www.hlidacshopu.cz
+  deploy_site:
+    parameters:
+      site_name:
+        type: string
+      after_s3_sync:
+        type: steps
+        default: []
+    executor: aws-cli/default
+    working_directory: ~/topmonks-webs
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/topmonks-webs
+      - deploy_website:
+          site_name: << parameters.site_name >>
+          after_s3_sync: << parameters.after_s3_sync >>
 
 workflows:
   build_and_deploy:
     jobs:
       - build:
           context: org-global
-      - pre-provision:
-          context: org-global
       - preview-provision:
           context: org-global
           filters:
             branches:
               ignore: master
-          requires:
-            - pre-provision
       - provision:
           context: org-global
           filters:
             branches:
               only: master
-          requires:
-            - pre-provision
-      - post-provision:
-          context: org-global
-          requires:
-            - provision
-      - test-www-topmonks-com:
+      - test_site:
+          name: test-www-topmonks-com
+          site_name: www.topmonks.com
           requires:
             - build
-      - test-blockchain-topmonks-com:
-          requires:
-            - build
-      - test-studio-topmonks-com:
-          requires:
-            - build
-      - test-monkstage-topmonks-com:
-          requires:
-            - build
-      - test-www-topmonks-cz:
-          requires:
-            - build
-      - test-caffe-topmonks-cz:
-          requires:
-            - build
-      - test-prodeti-topmonks-cz:
-          requires:
-            - build
-      - deploy-prodeti-topmonks-cz:
-          context: org-global
-          requires:
-            - provision
-            - test-prodeti-topmonks-cz
-          filters:
-            branches:
-              only: master
-      - test-session-monk-topmonks-com:
-          requires:
-            - build
-      - deploy-session-monk-topmonks-com:
-          context: org-global
-          requires:
-            - provision
-            - test-session-monk-topmonks-com
-          filters:
-            branches:
-              only: master
-      - deploy-www-topmonks-com:
+      - deploy_site:
+          name: deploy-www-topmonks-com
+          site_name: www.topmonks.com
           context: org-global
           requires:
             - provision
@@ -395,15 +209,14 @@ workflows:
           filters:
             branches:
               only: master
-      - deploy-www-topmonks-cz:
-          context: org-global
+      - test_site:
+          name: test-blockchain-topmonks-com
+          site_name: blockchain.topmonks.com
           requires:
-            - provision
-            - test-www-topmonks-cz
-          filters:
-            branches:
-              only: master
-      - deploy-blockchain-topmonks-com:
+            - build
+      - deploy_site:
+          name: deploy-blockchain-topmonks-com
+          site_name: blockchain.topmonks.com
           context: org-global
           requires:
             - provision
@@ -411,15 +224,14 @@ workflows:
           filters:
             branches:
               only: master
-      - deploy-monkstage-topmonks-com:
-          context: org-global
+      - test_site:
+          name: test-studio-topmonks-com
+          site_name: studio.topmonks.com
           requires:
-            - provision
-            - test-monkstage-topmonks-com
-          filters:
-            branches:
-              only: master
-      - deploy-studio-topmonks-com:
+            - build
+      - deploy_site:
+          name: deploy-studio-topmonks-com
+          site_name: studio.topmonks.com
           context: org-global
           requires:
             - provision
@@ -427,7 +239,44 @@ workflows:
           filters:
             branches:
               only: master
-      - deploy-caffe-topmonks-cz:
+      - test_site:
+          name: test-monkstage-topmonks-com
+          site_name: monkstage.topmonks.com
+          requires:
+            - build
+      - deploy_site:
+          name: deploy-monkstage-topmonks-com
+          site_name: monkstage.topmonks.com
+          context: org-global
+          requires:
+            - provision
+            - test-monkstage-topmonks-com
+          filters:
+            branches:
+              only: master
+      - test_site:
+          name: test-www-topmonks-cz
+          site_name: www.topmonks.cz
+          requires:
+            - build
+      - deploy_site:
+          name: deploy-www-topmonks-cz
+          site_name: www.topmonks.cz
+          context: org-global
+          requires:
+            - provision
+            - test-www-topmonks-cz
+          filters:
+            branches:
+              only: master
+      - test_site:
+          name: test-caffe-topmonks-cz
+          site_name: caffe.topmonks.cz
+          requires:
+            - build
+      - deploy_site:
+          name: deploy-caffe-topmonks-cz
+          site_name: caffe.topmonks.cz
           context: org-global
           requires:
             - provision
@@ -435,10 +284,51 @@ workflows:
           filters:
             branches:
               only: master
-      - test-monkslab-cz:
+      - test_site:
+          name: test-prodeti-topmonks-cz
+          site_name: prodeti.topmonks.cz
           requires:
             - build
-      - deploy-monkslab-cz:
+      - deploy_site:
+          name: deploy-prodeti-topmonks-cz
+          site_name: prodeti.topmonks.cz
+          context: org-global
+          requires:
+            - provision
+            - test-prodeti-topmonks-cz
+          filters:
+            branches:
+              only: master
+      - test_site:
+          name: test-session-monk-topmonks-com
+          site_name: session-monk.topmonks.com
+          requires:
+            - build
+      - deploy_site:
+          name: deploy-session-monk-topmonks-com
+          site_name: session-monk.topmonks.com
+          after_s3_sync:
+            - run:
+                name: Update MIME types
+                command: |
+                  aws s3 cp --exclude "*" --include "apple-app-site-association" \
+                    --metadata-directive="REPLACE" --content-type="application/json; charset=utf-8" \
+                    --recursive s3://session-monk.topmonks.com/ s3://session-monk.topmonks.com/
+          context: org-global
+          requires:
+            - provision
+            - test-session-monk-topmonks-com
+          filters:
+            branches:
+              only: master
+      - test_site:
+          name: test-monkslab-cz
+          site_name: monkslab.cz
+          requires:
+            - build
+      - deploy_site:
+          name: deploy-monkslab-cz
+          site_name: monkslab.cz
           context: org-global
           requires:
             - provision
@@ -446,7 +336,9 @@ workflows:
           filters:
             branches:
               only: master
-      - deploy-www-hookamonk-com:
+      - deploy_site:
+          name: deploy-www-hookamonk-com
+          site_name: www.hookamonk.com
           context: org-global
           requires:
             - provision
@@ -454,10 +346,14 @@ workflows:
           filters:
             branches:
               only: master
-      - test-www-hlidacshopu-cz:
+      - test_site:
+          name: test-www-hlidacshopu-cz
+          site_name: www.hlidacshopu.cz
           requires:
             - build
-      - deploy-www-hlidacshopu-cz:
+      - deploy_site:
+          name: deploy-www-hlidacshopu-cz
+          site_name: www.hlidacshopu.cz
           context: org-global
           requires:
             - provision

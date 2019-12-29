@@ -2,16 +2,10 @@ const commander = require("commander");
 const chalk = require("chalk");
 const fs = require("fs");
 const path = require("path");
-const PATH = path.resolve(".scripts/create-site");
+const YAML = require("yaml");
+const { strOptions } = require("yaml/types");
 
-const Promise = require("bluebird");
-const writeFile = Promise.promisify(fs.writeFile);
-const readFile = Promise.promisify(fs.readFile);
-
-/**
- * CONSTS
- */
-
+const templateDir = path.resolve(".scripts/create-site");
 const VERSION = "0.0.1";
 
 /************************************************************************
@@ -141,13 +135,13 @@ if (typeof SITE_DIR_NAME === "undefined" || !SITE_DIR_NAME) {
  * @param {String} root
  * @returns {Promise}
  */
-function createDirectories(root) {
+function createDirectories(root, name) {
   if (!fs.existsSync(root)) {
-    Logger.log("Creating new directory:", SITE_DIR_NAME);
+    Logger.log("Creating new directory:", name);
     fs.mkdirSync(root);
 
     generatedDirectories.forEach(dirName => {
-      Logger.log("Creating new directory:", `${SITE_DIR_NAME}/${dirName}`);
+      Logger.log("Creating new directory:", `${name}/${dirName}`);
       fs.mkdirSync(`${root}/${dirName}`);
     });
 
@@ -160,17 +154,15 @@ function createDirectories(root) {
 /**
  * @return {Promise}
  */
-function generateFiles(root) {
+function generateFiles(root, name) {
   Logger.log();
 
   return Promise.all(
     generatedFiles.map(file =>
-      readFile(`${PATH}/${file}`, "utf8").then(data => {
-        Logger.log("Generating file:", `${SITE_DIR_NAME}/${file}`);
-
+      fs.promises.readFile(`${templateDir}/${file}`, "utf8").then(data => {
+        Logger.log("Generating file:", `${name}/${file}`);
         const result = replaceTemplateKey(data, replaceKeys);
-
-        return writeFile(`${root}/${file}`, result, "utf8");
+        return fs.promises.writeFile(`${root}/${file}`, result, "utf8");
       })
     )
   );
@@ -179,28 +171,30 @@ function generateFiles(root) {
 /**
  * @return {Promise}
  */
-function createPackageJsonScripts() {
+function createPackageJsonScripts(name) {
   const packageJsonPath = path.resolve("./package.json");
   Logger.log();
   Logger.log("Creating package.json scripts");
   Logger.log();
 
-  return readFile(packageJsonPath, "utf8").then(data => {
+  return fs.promises.readFile(packageJsonPath, "utf8").then(data => {
     const packageConfig = JSON.parse(data);
 
     packageConfig.scripts[
-      `start:${SITE_DIR_NAME}`
-    ] = `BLENDID_CONFIG_PATH=./${SITE_DIR_NAME}/config/ blendid`;
+      `start:${name}`
+    ] = `BLENDID_CONFIG_PATH=./${name}/config/ blendid`;
     packageConfig.scripts[
-      `build:${SITE_DIR_NAME}`
-    ] = `BLENDID_CONFIG_PATH=./${SITE_DIR_NAME}/config/ blendid -- build`;
+      `build:${name}`
+    ] = `BLENDID_CONFIG_PATH=./${name}/config/ blendid -- build`;
     packageConfig.scripts[
-      `test:broken-links:${SITE_DIR_NAME}`
-    ] = `blcl ./public/${SITE_DIR_NAME} -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude caffe.topmonks.cz --exclude blog.topmonks.com`;
+      `test:broken-links:${name}`
+    ] = `blcl ./public/${name} -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude blog.topmonks.com`;
 
-    const packageConfigStrigified = JSON.stringify(packageConfig, null, 2);
-
-    return writeFile(packageJsonPath, packageConfigStrigified, "utf8");
+    return fs.promises.writeFile(
+      packageJsonPath,
+      JSON.stringify(packageConfig, null, 2),
+      "utf8"
+    );
   });
 }
 
@@ -210,11 +204,48 @@ function addSiteToIaaC(name) {
   Logger.log(`Adding website ${name} to websites.json manifest`);
   Logger.log();
 
-  return readFile(filePath, "utf8").then(data => {
+  return fs.promises.readFile(filePath, "utf8").then(data => {
     const websites = JSON.parse(data);
     // add default website configuration
     websites[name] = {};
-    return writeFile(filePath, JSON.stringify(websites, null, 2), "utf8");
+    return fs.promises.writeFile(
+      filePath,
+      JSON.stringify(websites, null, 2),
+      "utf8"
+    );
+  });
+}
+
+function addSiteToCI(name) {
+  Logger.log();
+  Logger.log(`Adding website ${name} to .circleci/config.yml build script`);
+  Logger.log();
+  const siteName = name.replace(/\./g, "-");
+  const testJob = {
+    test_site: {
+      name: `test-${siteName}`,
+      site_name: siteName,
+      requires: ["build"]
+    }
+  };
+  const deployJob = {
+    deploy_site: {
+      name: `deploy-${siteName}`,
+      site_name: siteName,
+      context: "org-global",
+      requires: ["provision", `test-${siteName}`],
+      filters: {
+        branches: { only: "master" }
+      }
+    }
+  };
+  const filePath = path.resolve("./.circleci/config.yml");
+  return fs.promises.readFile(filePath, "utf-8").then(data => {
+    const yamlData = YAML.parseDocument(data);
+    yamlData.addIn(["workflows", "build_and_deploy", "jobs"], testJob);
+    yamlData.addIn(["workflows", "build_and_deploy", "jobs"], deployJob);
+    strOptions.fold.lineWidth = 0;
+    return fs.promises.writeFile(filePath, yamlData.toString(), "utf-8");
   });
 }
 
@@ -222,14 +253,15 @@ function create(name) {
   const root = path.resolve(name);
 
   createDirectories(root)
-    .then(() => generateFiles(root))
-    .then(() => createPackageJsonScripts())
+    .then(() => generateFiles(root, name))
+    .then(() => createPackageJsonScripts(name))
     .then(() => addSiteToIaaC(name))
+    .then(() => addSiteToCI(name))
     .then(() => {
       console.log("Successfully created");
       console.log(
         `Start your site with command: ${chalk.green(
-          `yarn start:${SITE_DIR_NAME}`
+          `yarn start:${name}`
         )}`
       );
       console.log();

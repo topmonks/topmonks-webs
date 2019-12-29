@@ -123,8 +123,8 @@ then simply run for development mode
 yarn start:new-site.topmonks.com
 ```
 
-The command will generate initial files and package.json scripts for you.
-Don't forget to include your repo in `.circleci/config.yml` when ready to deploy.
+The command will generate initial files and package.json scripts, 
+Pulumi resources and build/deployment steps for you.
 
 ### Options
 
@@ -220,23 +220,16 @@ by adding following section to website configuration:
 Any update to Pulumi stack in `master` branch will be deployed from Integration Server.
 It is **highly discouraged to update Pulumi state from local machine**.
 
-To fetch current Pulumi state (you need to have `awscli` installed with `topmonks` credentials profile):
+To use current Pulumi state (you need to have `awscli` installed with `topmonks` credentials profile):
 
 ```bash
-yarn pulumi:fetch
-```
-
-Use actual state of Pulumi stack:
-
-```bash
-pulumi login --local
-pulumi stack select topmonks-webs
+yarn pulumi:login
 ```
 
 Preview changes that will be provisioned in next build
 
 ```bash
-pulumi preview
+yarn pulumi:pre
 ```
 
 ## Figma design projects

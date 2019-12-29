@@ -55,17 +55,17 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Our Team</h2>
         </div>
-        {{ macros.teamMember(members['jiri-fabian'], true) }}
-        {{ macros.teamMember(members['ales-roubicek'], true) }}
-        {{ macros.teamMember(members['lea-petrasova'], true) }}
-        {{ macros.teamMember(members['ondrej-tupy'], true) }}
+        {{ macros.teamMember(team.members['jiri-fabian'], true) }}
+        {{ macros.teamMember(team.members['ales-roubicek'], true) }}
+        {{ macros.teamMember(team.members['lea-petrasova'], true) }}
+        {{ macros.teamMember(team.members['ondrej-tupy'], true) }}
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <div class="mdc-layout-grid tm-team__members">
             <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-align-center">
                 <a href="#team" class="action-button show-more">Show more</a>
               </div>
-              {% for id, member in members %}
+              {% for id, member in team.members %}
                 {% if not member.pickup %}
                   {{ macros.teamMember(member) }}
                 {% endif %}
