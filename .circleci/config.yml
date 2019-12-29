@@ -81,7 +81,7 @@ jobs:
           path: ./results
       - persist_to_workspace:
           root: .
-          paths: [public]
+          paths: [ public ]
 
   provision:
     docker:

@@ -11,11 +11,14 @@
     "@pulumi/aws": "^1.17.0",
     "@pulumi/pulumi": "^1.8.1",
     "@types/node": "^12.12.18",
-    "lodash": "4.17.12"
+    "js-yaml": "^3.13.1",
+    "lodash": "4.17.12",
+    "yaml": "^1.7.2"
   },
   "devDependencies": {
     "@topmonks/blendid": "git://github.com/topmonks/blendid.git",
     "@types/chart.js": "^2.9.5",
+    "@types/yaml": "^1.2.0",
     "ava": "^2.4.0",
     "bluebird": "^3.7.2",
     "broken-link-checker-local": "^0.2.1",
