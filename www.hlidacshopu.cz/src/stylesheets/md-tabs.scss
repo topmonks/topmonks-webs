@@ -6,7 +6,8 @@
 
 .tab-list {
   ol {
-    display: flex;
+    display: inline-flex;
+    list-style: none;
     width: 100%;
     padding: 0;
 
@@ -24,6 +25,9 @@
       a {
         color: var(--mdc-theme-text-third-on-light);
         text-decoration: none;
+      }
+      &:before {
+        counter-reset: inherit;
       }
     }
 
