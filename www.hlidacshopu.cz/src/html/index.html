@@ -1,5 +1,7 @@
-{% extends 'layouts/master.html' %} {% from 'macros/helpers.html' import sprite
-%} {% block title %}Hlídač shopů{% endblock %} {% block preload %}
+{% extends 'layouts/master.html' %}
+{% from 'macros/helpers.html' import sprite %}
+{% block title %}Hlídač shopů{% endblock %}
+{% block preload %}
 <link
   rel="prefetch"
   href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js"
@@ -24,12 +26,14 @@
   as="fetch"
   crossorigin="anonymous"
 />
-{% endblock %} {% block styles %}
+{% endblock %}
+{% block styles %}
 <link rel="stylesheet" href="/assets/css/index.css" />
 <meta name="apple-mobile-web-app-title" content="Hlídač shopů" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-{% endblock %} {% block main %}
+{% endblock %}
+{% block main %}
 <section class="main">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner layout-wrapper">
@@ -216,21 +220,21 @@
         <div class="tab" id="tab-1">
           <img
             alt="Step 1: Graf"
-            src="https://res.cloudinary.com/topmonks/image/upload/v1575461537/www.hlidacshopu.cz/window01.png"
+            src="https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,dpr_auto,f_auto/v1575461537/www.hlidacshopu.cz/window01.png"
             width="800px"
           />
         </div>
         <div class="tab" id="tab-2">
           <img
             alt="Step 2: Graf - Přeškrtnuté a aktuální ceny"
-            src="https://res.cloudinary.com/topmonks/image/upload/v1575461531/www.hlidacshopu.cz/window02.png"
+            src="https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,dpr_auto,f_auto/v1575461531/www.hlidacshopu.cz/window02.png"
             width="800px"
           />
         </div>
         <div class="tab" id="tab-3">
           <img
             alt="Step 3: Graf - Vývoj cen"
-            src="https://res.cloudinary.com/topmonks/image/upload/v1575461788/www.hlidacshopu.cz/window03.png"
+            src="https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,dpr_auto,f_auto/v1575461788/www.hlidacshopu.cz/window03.png"
             width="800px"
           />
         </div>
