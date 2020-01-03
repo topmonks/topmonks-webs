@@ -22,7 +22,8 @@ function createBucket(
     {
       bucket: domain,
       acl: "public-read",
-      website
+      website,
+      forceDestroy: true
     },
     { parent }
   );
