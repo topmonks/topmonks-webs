@@ -1,6 +1,8 @@
-{% extends 'layouts/master.html' %} {% from 'macros/helpers.html' import sprite
-%} {% block title %}Přehled Black Friday 2019 na Hlídači shopů{% endblock %} {% block
-preload %}
+{% extends 'layouts/master.html' %}
+{% from 'macros/helpers.html' import sprite %}
+{% block title %}Přehled Black Friday 2019 na Hlídači shopů{% endblock %}
+
+{% block preload %}
 <link
   rel="modulepreload"
   href="https://unpkg.com/lit-html@1.1.1/lit-html.js?module"
@@ -12,7 +14,9 @@ preload %}
   as="fetch"
   crossorigin="anonymous"
 />
-{% endblock %} {% block styles %}
+{% endblock %}
+
+{% block styles %}
 <style>
   .shops-stats {
     border-spacing: 0 12px;
@@ -59,7 +63,9 @@ preload %}
     border-bottom-right-radius: 6px;
   }
 </style>
-{% endblock %} {% block main %}
+{% endblock %}
+
+{% block main %}
 <section class="dashboard">
   <div class="mdc-layout-grid">
     <div class="layout-wrapper">
@@ -104,18 +110,23 @@ preload %}
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Otevřená data <small>beta</small></h2>
           <p>
-            Otevíráme naše data pro vaše analýzy. Najdete je postupně přibývat v
+            Otevíráme
             <a
               href="https://console.cloud.google.com/bigquery?p=hlidacshopu&d=hlidacshopu&t=allshops&page=table"
-              >Google BigQuery</a
-            >
+              >naše data pro vaše analýzy</a>. Přístup k datům je zdarma,
+            avšak potřebujete mít vytvořený účet na
+            <a href="https://cloud.google.com/free/">Google Cloud Platform</a>
+            se zadanými platebními údaji. BigQuery má dostatečně velkorysé volné
+            kredity na to, abyste nemuseli za analýzu našich dat platit.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-{% endblock %} {% block scripts %}
+{% endblock %}
+
+{% block scripts %}
 <script type="module">
   import {
     html,
