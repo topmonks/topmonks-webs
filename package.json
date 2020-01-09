@@ -10,7 +10,7 @@
     "@material/layout-grid": "^4.0.0",
     "@pulumi/aws": "^1.17.0",
     "@pulumi/pulumi": "^1.8.1",
-    "@types/node": "^12.12.18",
+    "@types/node": "^13.1.6",
     "js-yaml": "^3.13.1",
     "lodash": "4.17.13",
     "yaml": "^1.7.2"
