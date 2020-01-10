@@ -18,12 +18,12 @@
 
   "javascripts": {
     "src": "javascripts",
-    "dest": "javascripts"
+    "dest": "assets/js"
   },
 
   "stylesheets": {
     "src": "stylesheets",
-    "dest": "stylesheets"
+    "dest": "assets/css"
   },
 
   "images": {

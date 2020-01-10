@@ -33,8 +33,8 @@
   />
   {% include 'shared/analytics.html' %}
   <link rel="stylesheet" href="https://use.typekit.net/her1ktw.css">
-  <link rel="stylesheet" href="/stylesheets/typography.css"/>
-  <link rel="stylesheet" href="/stylesheets/main.css"/>
+  <link rel="stylesheet" href="/assets/css/typography.css"/>
+  <link rel="stylesheet" href="/assets/css/main.css"/>
 </head>
 {% include 'shared/header.html' %}
 
@@ -970,7 +970,7 @@
   </section>
 </div>
 
-<link rel="stylesheet" href="/stylesheets/modal.css"/>
+<link rel="stylesheet" href="/assets/css/modal.css"/>
 <div class="modal">
   <div class="modal-overlay modal-toggle"></div>
   <div class="modal-wrapper modal-transition">
@@ -1054,9 +1054,9 @@
     </div>
   </div>
 </div>
-<link rel="stylesheet" href="/stylesheets/footer.css"/>
-{% set extraNavLinks = { 'EU Grants' : 'eu-grants.pdf'} %} {% include
-  'common/footer.html' %}
+<link rel="stylesheet" href="/assets/css/footer.css"/>
+{% set extraNavLinks = { 'EU Grants' : 'eu-grants.pdf'} %}
+{% include 'common/footer.html' %}
 
 <script type="module">
   function toggleFieldState(elm) {
