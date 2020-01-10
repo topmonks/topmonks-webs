@@ -1,12 +1,11 @@
 @import "@material/layout-grid/mdc-layout-grid";
 
 :root {
-  --topmonks-caffe-orange: #F06B4F;
-  --topmonks-caffe-pink: #F64060;
+  --topmonks-caffe-orange: #f06b4f;
+  --topmonks-caffe-pink: #f64060;
   --topmonks-caffe-dark_blue: #233341;
 
   --tm-btn-transition: all 100ms ease-in-out;
-
 }
 
 /*
@@ -19,9 +18,9 @@ html {
 body {
   margin: 0 auto;
   max-width: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: normal;
+  font-family: Lato, lato, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   -webkit-font-kerning: normal;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
@@ -66,24 +65,16 @@ section {
   }
 }
 
-.wf-active body {
-  font-family: Lato, sans-serif;
-}
-
 .tm-logo {
-  font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
+  font-family: Futura, futura-pt, -apple-system, BlinkMacSystemFont, Roboto,
+    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
   @media (min-width: 2200px) {
     svg {
       width: 300px;
       height: 100px;
     }
   }
-}
-
-.wf-active .tm-logo {
-  font-family: futura-pt, sans-serif;
 }
 
 h1 {
@@ -117,12 +108,12 @@ p {
 }
 
 a {
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: normal;
   text-decoration: none;
 
   .btn_light {
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   .btn_dark {
@@ -141,7 +132,9 @@ a {
     font-size: 2.25em;
   }
 
-  h4, p, span {
+  h4,
+  p,
+  span {
     font-size: 1.75em;
   }
 }
@@ -151,7 +144,7 @@ a {
   border-radius: 100px;
   color: #fff;
   background-color: var(--topmonks-caffe-orange);
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .16);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
   width: fit-content;
 
   transition: var(--tm-btn-transition);
@@ -193,7 +186,7 @@ ul li {
   padding: 0;
 
   a {
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
 
@@ -230,7 +223,7 @@ ul#navigace {
 //* Section: Introduction*//
 
 #introduction {
-  color: #FFFFFF;
+  color: #ffffff;
   @media (max-width: 839px) {
     padding: 5em 1em 2em;
   }
@@ -238,23 +231,26 @@ ul#navigace {
     text-decoration: none;
     color: var(--topmonks-caffe-pink);
     &:hover {
-      color: #FFFFFF;
+      color: #ffffff;
     }
     svg {
       vertical-align: middle;
     }
   }
-
 }
 
 //* Section: Next event *//
 
 #next-event {
-  color: #FFFFFF;
+  color: #ffffff;
 
   .next-caffe_box {
     padding: 2em 5em 3em;
-    background: linear-gradient(to bottom right, #BA3CD9 0, var(--topmonks-caffe-orange) 58%);
+    background: linear-gradient(
+      to bottom right,
+      #ba3cd9 0,
+      var(--topmonks-caffe-orange) 58%
+    );
     h3 {
       margin-bottom: 6px;
     }
@@ -270,7 +266,7 @@ ul#navigace {
   }
 
   hr.line {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     height: 0.0625em; //1px
     border: none;
   }
@@ -281,9 +277,8 @@ ul#navigace {
     background-color: var(--topmonks-caffe-dark_blue);
 
     &:hover {
-      color: #FFFFFF;
+      color: #ffffff;
       background-color: transparent;
-
     }
   }
 
@@ -328,7 +323,7 @@ ul#navigace {
   }
 
   .speakers_box {
-    color: #FFFFFF;
+    color: #ffffff;
     background-color: var(--topmonks-caffe-orange);
     padding: 1em 2em 2em;
   }
@@ -364,7 +359,7 @@ ul#navigace {
 
 footer {
   background-color: var(--topmonks-caffe-dark_blue);
-  color: #FFFFFF;
+  color: #ffffff;
 
   a {
     text-decoration: none;
@@ -378,7 +373,6 @@ footer {
     display: block;
   }
 
-
   @media screen and (min-width: 840px) {
     padding: 0 12%;
     .footer_social-buttons {
@@ -386,7 +380,6 @@ footer {
     }
   }
 }
-
 
 ///* MD GRID DESKTOP BREAKPOINT*/
 //@media (min-width: 840px) {
@@ -416,7 +409,6 @@ footer {
 @media (max-width: 840px) {
   p {
     font-size: 1.111em; //20px
-
   }
 }
 

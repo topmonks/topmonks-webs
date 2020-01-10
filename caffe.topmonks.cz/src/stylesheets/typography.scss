@@ -15,9 +15,9 @@ body {
   padding: 0;
   margin: 0 auto;
   max-width: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: normal;
+  font-family: Lato, lato, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   -webkit-font-kerning: normal;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
@@ -35,18 +35,10 @@ body {
   color: #233341;
 }
 
-.wf-active body {
-  font-family: Lato, sans-serif;
-}
-
 .tm-logo {
-  font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-}
-
-.wf-active .tm-logo {
-  font-family: futura-pt, sans-serif;
+  font-family: Futura, futura-pt, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }
 
 @media (min-width: 840px) {
@@ -81,7 +73,7 @@ body {
 
 a {
   font-weight: normal;
-  color: #02A3C8;
+  color: #02a3c8;
   text-decoration: none;
 }
 
@@ -117,7 +109,7 @@ ul#navigace {
     padding: 4px 8px;
 
     &:hover {
-      border-bottom: 1px solid #02A3C8;
+      border-bottom: 1px solid #02a3c8;
     }
   }
 }

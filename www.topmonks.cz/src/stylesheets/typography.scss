@@ -14,22 +14,17 @@
   --tm-black-title: #3c3c3b;
   --tm-white: #fff;
 
-  --tm-hamburger-label: rgba(255,255,255,0.25);
+  --tm-hamburger-label: rgba(255, 255, 255, 0.25);
 }
-
-/*
-http://pxtoem.com/ - how to count px to em
-*/
 
 body {
   color: var(--tm-black);
   margin: 0;
   padding: 0;
-  font-size: 16px;
   letter-spacing: 0;
-  line-height: 1.444em; //22/26px
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 16px/1.5 Lato, lato, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
   font-variant-ligatures: common-ligatures contextual;
@@ -41,18 +36,10 @@ body {
   text-rendering: geometricPrecision;
 }
 
-.wf-active body {
-  font-family: Lato, sans-serif;
-}
-
 .tm-logo {
-  font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-}
-
-.wf-active .tm-logo {
-  font-family: futura-pt, sans-serif;
+  font-family: Futura, futura-pt, -apple-system, BlinkMacSystemFont, Roboto,
+    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 h1,
@@ -66,7 +53,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5em; //24px
+  font-size: 1.5em;
   line-height: 28px;
   text-align: center;
   color: var(--tm-black-title);
@@ -74,8 +61,8 @@ h3 {
 }
 
 h4 {
-  font-size: 1em; //16px
-  margin-bottom: 0.25em; //4px
+  font-size: 1em;
+  margin-bottom: 0.25em;
 }
 
 p {
@@ -114,25 +101,20 @@ ul.formatted {
   }
 }
 
-///* MD GRID DESKTOP BREAKPOINT*/
-//@media (min-width: 840px) {
-//}
-
-/* MD GRID TABLET AND ABOVE BREAKPOINT */
 @media (min-width: 480px) {
   body {
-    font-size: 1.125em; //18px
+    font-size: 1.125em;
   }
   h1,
   h2 {
-    font-size: 2.111em; //38px
-    line-height: 1.447em; //55px
+    font-size: 2.111em;
+    line-height: 1.447em;
   }
   h3 {
-    font-size: 1.333em; //24px
+    font-size: 1.333em;
   }
   h4 {
-    font-size: 20px; //20px
+    font-size: 20px;
   }
 }
 
