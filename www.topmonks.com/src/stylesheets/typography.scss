@@ -21,11 +21,10 @@ body {
   color: var(--tm-black);
   margin: 0;
   padding: 0;
-  font-size: 16px;
   letter-spacing: 0;
-  line-height: 1.444em; //22/26px
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 16px/1.44 Lato, lato, -apple-system, BlinkMacSystemFont, Roboto,
+    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
   font-variant-ligatures: common-ligatures contextual;
@@ -37,26 +36,17 @@ body {
   text-rendering: geometricPrecision;
 }
 
-.wf-active body {
-  font-family: Lato, sans-serif;
-}
-
 .tm-logo {
-  font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-  font-weight: 400;
-}
-
-.wf-futurapt-n6-active .tm-logo {
-  font-family: futura-pt, sans-serif;
+  font-family: Futura, futura-pt, -apple-system, BlinkMacSystemFont, Roboto,
+    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 600;
 }
 
 h1,
 h2 {
-  font-size: 1.75em; //28px
-  line-height: 1.214em; //34px
+  font-size: 1.75em;
+  line-height: 1.214em;
   text-transform: uppercase;
   text-align: center;
   color: var(--tm-black-title);
@@ -65,16 +55,16 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5em; //24px
-  line-height: 1.167em; //28px
+  font-size: 1.5em;
+  line-height: 1.167em;
   text-align: center;
   color: var(--tm-black-title);
   font-weight: 900;
 }
 
 h4 {
-  font-size: 1em; //16px
-  margin-bottom: 0.25em; //4px
+  font-size: 1em;
+  margin-bottom: 0.25em;
 }
 
 p {
@@ -113,25 +103,20 @@ ul.formatted {
   }
 }
 
-///* MD GRID DESKTOP BREAKPOINT*/
-//@media (min-width: 840px) {
-//}
-
-/* MD GRID TABLET AND ABOVE BREAKPOINT */
 @media (min-width: 480px) {
   body {
-    font-size: 1.125em; //18px
+    font-size: 1.125em;
   }
   h1,
   h2 {
-    font-size: 2.111em; //38px
-    line-height: 1.447em; //55px
+    font-size: 2.111em;
+    line-height: 1.447em;
   }
   h3 {
-    font-size: 1.333em; //24px
+    font-size: 1.333em;
   }
   h4 {
-    font-size: 20px; //20px
+    font-size: 20px;
   }
 }
 
@@ -153,4 +138,3 @@ strong abbr {
 .tm-text--margin-top {
   margin-top: 1em;
 }
-

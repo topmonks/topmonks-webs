@@ -1,16 +1,17 @@
 @import "@material/layout-grid/mdc-layout-grid";
 
 :root {
-  --tm-po-black: #484D57;
+  --tm-po-black: #484d57;
 }
 
 body {
   color: var(--tm-po-black);
   font-size: 16px;
   letter-spacing: 0;
-  line-height: 1.444em; //22/26px
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica,
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.444em;
+  font-family: Lato, lato, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
   font-variant-ligatures: common-ligatures contextual;
@@ -22,15 +23,6 @@ body {
   text-rendering: geometricPrecision;
 }
 
-.wf-active body {
-  font-family: Lato, sans-serif;
-}
-
-.wf-futurapt-n6-active .tm-logo {
-  font-family: futura-pt, sans-serif;
-  font-weight: 600;
-}
-
 .tm-layout-wrapper {
   max-width: 1008px;
   margin: 0 auto;
@@ -39,7 +31,9 @@ body {
   --mdc-layout-grid-margin-phone: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: bold;
 }
 
@@ -55,7 +49,10 @@ h3 {
   font-size: 24px;
 }
 
-h4, p, a, span {
+h4,
+p,
+a,
+span {
   font-size: 16px;
   font-weight: normal;
 }
@@ -70,7 +67,7 @@ img {
 }
 
 hr {
-  border: 0.5px solid #E5E5E5;
+  border: 0.5px solid #e5e5e5;
 }
 
 ul li {
@@ -78,7 +75,9 @@ ul li {
   margin: 0;
 }
 
-ul.polygon_yellow, ul.polygon_blue, ul.polygon_green {
+ul.polygon_yellow,
+ul.polygon_blue,
+ul.polygon_green {
   li {
     list-style: none;
     padding-bottom: 16px;
@@ -88,7 +87,7 @@ ul.polygon_yellow, ul.polygon_blue, ul.polygon_green {
     content: url("https://res.cloudinary.com/topmonks/image/upload/v1556628327/topmonks.com/profi-option/polygon_yellow.svg");
     display: inline-block;
     width: 32px;
-    color: #FED766;
+    color: #fed766;
     vertical-align: middle;
     font-weight: bold;
     margin-left: -32px;
@@ -113,9 +112,9 @@ ul.polygon_green li::before {
 
 // HEADER //
 .tm-logo {
-  font-family: Futura, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
+  font-family: Futura, futura-pt, -apple-system, BlinkMacSystemFont, Roboto,
+    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
   display: flex;
   align-items: center;
   font-size: 24px;
@@ -134,7 +133,7 @@ ul.polygon_green li::before {
     font-size: 24px;
     padding-top: 2px;
     justify-content: flex-end;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   .monk {
@@ -189,20 +188,17 @@ ul.polygon_green li::before {
   .tm-hamburger__container--open {
     .tm-hamburger__bar:first-of-type {
       transform: rotate(-45deg);
-      background-color: #FFFFFF;
-
+      background-color: #ffffff;
     }
 
     .tm-hamburger__bar:nth-of-type(2) {
       opacity: 0;
-      background-color: #FFFFFF;
-
+      background-color: #ffffff;
     }
 
     .tm-hamburger__bar:last-of-type {
       transform: rotate(45deg);
-      background-color: #FFFFFF;
-
+      background-color: #ffffff;
     }
   }
 }
@@ -212,7 +208,7 @@ ul.polygon_green li::before {
   z-index: 1000;
   transition: all 0.2s;
   top: 0;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   //background-color: #2d3d90;
   @media screen and (max-width: 839px) {
     position: fixed;
@@ -228,7 +224,7 @@ ul.polygon_green li::before {
       padding: 20px 0 0 16px;
     }
     svg {
-      padding-right:4px;
+      padding-right: 4px;
     }
   }
 }
@@ -237,7 +233,7 @@ ul.polygon_green li::before {
   @media screen and (max-width: 839px) {
     position: fixed;
     .tm-hamburger__container::after {
-      color: #FFFFFF;
+      color: #ffffff;
       vertical-align: center;
     }
     .tm-hamburger__bar {
@@ -293,7 +289,7 @@ ul.polygon_green li::before {
 }
 
 .tm-menu__list a {
-  color: #3C3C3B;
+  color: #3c3c3b;
   text-decoration: none;
   font-family: Lato;
 }
@@ -338,7 +334,7 @@ ul.polygon_green li::before {
       &::after {
         content: "case study";
         position: absolute;
-        background-color: #FED766;
+        background-color: #fed766;
         color: white;
         display: block;
         padding: 8px;
@@ -367,7 +363,6 @@ ul.polygon_green li::before {
     ul li {
       list-style: none;
       padding: 12px 0;
-
     }
 
     img {
@@ -384,7 +379,8 @@ ul.polygon_green li::before {
   }
 }
 
-.design, .scheme {
+.design,
+.scheme {
   img {
     width: 100%;
     height: auto;
@@ -411,18 +407,19 @@ ul.polygon_green li::before {
     margin-top: 0;
   }
 
-  h3, h4 {
+  h3,
+  h4 {
     text-align: center;
-    font-family: 'Muli', sans-serif;
+    font-family: "Muli", sans-serif;
     font-style: normal;
   }
 
   p {
     font-size: 14px;
     line-height: 21px;
-    color: #9197A3;
+    color: #9197a3;
     margin-bottom: 0;
-    font-family: 'Muli', sans-serif;
+    font-family: "Muli", sans-serif;
     font-style: normal;
   }
 
@@ -453,7 +450,8 @@ ul.polygon_green li::before {
   .stylization_font {
     max-width: 735px;
 
-    p, h2 {
+    p,
+    h2 {
       font-weight: 400;
       padding-bottom: 16px;
     }
@@ -506,7 +504,6 @@ ul.polygon_green li::before {
   }
 }
 
-
 // Section: Prototypes //
 .prototypes_design {
   margin: 0 -16px;
@@ -526,13 +523,15 @@ ul.polygon_green li::before {
       margin-top: 64px;
     }
     .box {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/v1556824260/topmonks.com/profi-option/quote.svg") top 16% left 2% no-repeat;
+      background: url("https://res.cloudinary.com/topmonks/image/upload/v1556824260/topmonks.com/profi-option/quote.svg")
+        top 16% left 2% no-repeat;
       padding: 28px;
     }
   }
   @media (max-width: 839px) {
     .box {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/v1556824260/topmonks.com/profi-option/quote.svg") top 10% left 3% no-repeat;
+      background: url("https://res.cloudinary.com/topmonks/image/upload/v1556824260/topmonks.com/profi-option/quote.svg")
+        top 10% left 3% no-repeat;
       padding: 28px 24px;
     }
     hr.mid-line {
@@ -545,7 +544,7 @@ ul.polygon_green li::before {
   }
 
   span {
-    color: #5C5FD4;
+    color: #5c5fd4;
   }
 
   hr {
@@ -553,10 +552,10 @@ ul.polygon_green li::before {
   }
 }
 
-
 // Section: Contact //
 .contact {
-  h2, p {
+  h2,
+  p {
     text-align: left;
   }
 
@@ -607,12 +606,14 @@ ul.polygon_green li::before {
 
 // FOOTER //
 footer {
-  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 18px;
   text-align: left;
   background-color: #212142;
-  h4, a, span {
-    color: #FFFFFF;
+  h4,
+  a,
+  span {
+    color: #ffffff;
     text-align: left;
     font-size: 18px;
     text-decoration: none;
@@ -644,7 +645,7 @@ footer {
   }
 
   .copy-and-media .tm-layout-wrapper {
-    border-top: 1px solid hsla(0, 0%, 100%, .5);
+    border-top: 1px solid hsla(0, 0%, 100%, 0.5);
     padding-top: 24px;
   }
 }
@@ -654,7 +655,8 @@ footer {
   body {
     line-height: 25px;
   }
-  .references, .contact {
+  .references,
+  .contact {
     .mdc-layout-grid .tm-layout-wrapper {
       padding-top: 0;
     }
