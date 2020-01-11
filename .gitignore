@@ -2,6 +2,8 @@
 .DS_Store
 .env
 .idea/
+/.pnp/
+/.pnp.js
 /package-lock.json
 /public/
 /results/
