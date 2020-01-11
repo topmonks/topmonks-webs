@@ -12,27 +12,11 @@ module.exports = {
   fonts: true,
   static: true,
   svgSprite: true,
-
-  stylesheets: {
-    sass: {
-      importer: importer()
-    }
-  },
+  stylesheets: true,
+  workboxBuild: false,
 
   html: {
     collections: ["articles", "podcasts"],
-    htmlmin: {
-      collapseBooleanAttributes: true,
-      decodeEntities: true,
-      minifyCSS: true,
-      minifyJS: true,
-      removeAttributeQuotes: true,
-      removeOptionalTags: true,
-      removeRedundantAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true
-    },
-
     nunjucksRender: {
       manageEnv(env) {
         env.addFilter("longDate", (str, locale) =>

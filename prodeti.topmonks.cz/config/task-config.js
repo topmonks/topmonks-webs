@@ -1,4 +1,3 @@
-const importer = require("node-sass-magic-importer");
 const pathConfig = require("./path-config.json");
 
 module.exports = {
@@ -7,12 +6,8 @@ module.exports = {
   fonts: true,
   static: true,
   svgSprite: true,
-
-  stylesheets: {
-    sass: {
-      importer: importer()
-    }
-  },
+  stylesheets: true,
+  workboxBuild: false,
 
   html: {
     dataFile: "../data/global.json"

@@ -1,4 +1,3 @@
-const importer = require("node-sass-magic-importer");
 const pathConfig = require("./path-config.json");
 const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
 const marked = require("marked");
@@ -13,28 +12,13 @@ const config = createSharedTaskConfig(__dirname, {
   fonts: true,
   static: true,
   svgSprite: true,
-
-  stylesheets: {
-    sass: {
-      importer: importer()
-    }
-  },
+  stylesheets: true,
+  workboxBuild: false,
 
   html: {
     collections: ["team"],
     src: "html",
-    excludeFolders: ["layouts", "shared", "macros"],
-    htmlmin: {
-      collapseBooleanAttributes: true,
-      decodeEntities: true,
-      minifyCSS: true,
-      minifyJS: true,
-      removeAttributeQuotes: true,
-      removeOptionalTags: true,
-      removeRedundantAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true
-    }
+    excludeFolders: ["layouts", "shared", "macros"]
   },
 
   browserSync: {

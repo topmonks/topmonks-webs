@@ -1,4 +1,3 @@
-const importer = require("node-sass-magic-importer");
 const pathConfig = require("./path-config.json");
 const marked = require("marked");
 const cloudinaryUpload = require("gulp-cloudinary-upload");
@@ -13,12 +12,8 @@ module.exports = {
   fonts: true,
   static: true,
   svgSprite: true,
-
-  stylesheets: {
-    sass: {
-      importer: importer()
-    }
-  },
+  stylesheets: true,
+  workboxBuild: false,
 
   html: {
     collections: ["events", "posters"],

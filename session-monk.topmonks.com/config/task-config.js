@@ -7,6 +7,7 @@ module.exports = {
   static: true,
   svgSprite: false,
   stylesheets: false,
+  workboxBuild: false,
 
   html: {
     dataFile: "../data/global.json"

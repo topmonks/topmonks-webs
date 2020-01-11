@@ -1,4 +1,3 @@
-const importer = require("node-sass-magic-importer");
 const pathConfig = require("./path-config.json");
 const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
 
@@ -8,12 +7,8 @@ const config = createSharedTaskConfig(__dirname, {
   fonts: false,
   static: true,
   svgSprite: false,
-
-  stylesheets: {
-    sass: {
-      importer: importer()
-    }
-  },
+  stylesheets: true,
+  workboxBuild: false,
 
   html: {
     dataFile: "../data/global.json"

@@ -1,4 +1,3 @@
-const importer = require("node-sass-magic-importer");
 const markdownToJSON = require("gulp-markdown-to-json");
 const marked = require("marked");
 const merge = require("gulp-merge-json");
@@ -13,6 +12,8 @@ const config = createSharedTaskConfig(__dirname, {
   javascripts: false,
   fonts: true,
   static: true,
+  stylesheets: true,
+  workboxBuild: false,
 
   svgSprite: {
     svgstore: {
@@ -20,25 +21,8 @@ const config = createSharedTaskConfig(__dirname, {
     }
   },
 
-  stylesheets: {
-    sass: {
-      importer: importer()
-    }
-  },
-
   html: {
     collections: ["media", "mediaImages"],
-    htmlmin: {
-      collapseBooleanAttributes: true,
-      decodeEntities: true,
-      minifyCSS: true,
-      minifyJS: true,
-      removeAttributeQuotes: true,
-      removeOptionalTags: true,
-      removeRedundantAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true
-    },
     nunjucksRender: {
       manageEnv(env) {
         env.addFilter("longDate", str =>
