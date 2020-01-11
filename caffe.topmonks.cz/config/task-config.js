@@ -1,4 +1,4 @@
-const globImporter = require("node-sass-glob-importer");
+const importer = require("node-sass-magic-importer");
 const pathConfig = require("./path-config.json");
 const marked = require("marked");
 const cloudinaryUpload = require("gulp-cloudinary-upload");
@@ -16,7 +16,7 @@ module.exports = {
 
   stylesheets: {
     sass: {
-      importer: globImporter()
+      importer: importer()
     }
   },
 

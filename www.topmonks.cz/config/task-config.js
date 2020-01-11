@@ -1,12 +1,13 @@
-const globImporter = require("node-sass-glob-importer");
+const importer = require("node-sass-magic-importer");
 const marked = require("marked");
 const markdownToJSON = require("gulp-markdown-to-json");
 const merge = require("gulp-merge-json");
 const path = require("path");
 const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
 const pathConfig = require("./path-config.json");
+const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
 
-module.exports = {
+const config = createSharedTaskConfig(__dirname, {
   images: true,
   javascripts: false,
   fonts: true,
@@ -15,7 +16,7 @@ module.exports = {
 
   stylesheets: {
     sass: {
-      importer: globImporter()
+      importer: importer()
     }
   },
 
@@ -75,4 +76,6 @@ module.exports = {
       prebuild: ["team-data"]
     }
   }
-};
+});
+
+module.exports = config;

@@ -1,4 +1,5 @@
-const globImporter = require("node-sass-glob-importer");
+const importer = require("node-sass-magic-importer");
+const pathConfig = require("./path-config.json");
 
 module.exports = {
   images: true,
@@ -9,7 +10,7 @@ module.exports = {
 
   stylesheets: {
     sass: {
-      importer: globImporter()
+      importer: importer()
     }
   },
 
@@ -19,9 +20,7 @@ module.exports = {
 
   browserSync: {
     server: {
-      // should match `dest` in
-      // path-config.json
-      baseDir: "./public/prodeti.topmonks.cz"
+      baseDir: pathConfig.dest
     }
   },
 

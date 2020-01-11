@@ -1,5 +1,6 @@
-const globImporter = require("node-sass-glob-importer");
+const importer = require("node-sass-magic-importer");
 const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
+const pathConfig = require("./path-config.json");
 
 const config = createSharedTaskConfig(__dirname, {
   images: true,
@@ -10,7 +11,7 @@ const config = createSharedTaskConfig(__dirname, {
 
   stylesheets: {
     sass: {
-      importer: globImporter()
+      importer: importer()
     }
   },
 
@@ -20,9 +21,7 @@ const config = createSharedTaskConfig(__dirname, {
 
   browserSync: {
     server: {
-      // should match `dest` in
-      // path-config.json
-      baseDir: "./public/monkstage.topmonks.com"
+      baseDir: pathConfig.dest
     }
   },
 
@@ -32,5 +31,3 @@ const config = createSharedTaskConfig(__dirname, {
 });
 
 module.exports = config;
-
-// module.exports = createSharedTaskConfig(__dirname, config); // <- Use if you want to enable access to shared assets

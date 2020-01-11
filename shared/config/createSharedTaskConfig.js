@@ -17,10 +17,7 @@ const withShared = function(dirname, config) {
       ...config.stylesheets,
       sass: {
         ...config.stylesheets.sass,
-        includePaths: [
-          path.resolve(dirname, "../../shared/src"),
-          path.resolve(dirname, "../../node_modules")
-        ]
+        includePaths: [path.resolve(dirname, "../../shared/src")]
       }
     },
 

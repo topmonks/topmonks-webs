@@ -1,4 +1,4 @@
-const globImporter = require("node-sass-glob-importer");
+const pathConfig = require("./path-config.json");
 
 module.exports = {
   images: false,
@@ -14,9 +14,7 @@ module.exports = {
 
   browserSync: {
     server: {
-      // should match `dest` in
-      // path-config.json
-      baseDir: "./public/session-monk.topmonks.com"
+      baseDir: pathConfig.dest
     }
   },
 

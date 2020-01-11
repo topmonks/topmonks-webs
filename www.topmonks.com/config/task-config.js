@@ -1,4 +1,4 @@
-const globImporter = require("node-sass-glob-importer");
+const importer = require("node-sass-magic-importer");
 const pathConfig = require("./path-config.json");
 const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
 const marked = require("marked");
@@ -16,7 +16,7 @@ const config = createSharedTaskConfig(__dirname, {
 
   stylesheets: {
     sass: {
-      importer: globImporter()
+      importer: importer()
     }
   },
 
