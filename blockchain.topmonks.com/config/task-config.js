@@ -1,4 +1,3 @@
-const importer = require("node-sass-magic-importer");
 const markdownToJSON = require("gulp-markdown-to-json");
 const marked = require("marked");
 const merge = require("gulp-merge-json");
