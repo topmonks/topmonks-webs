@@ -57,7 +57,7 @@ commands:
 jobs:
   build:
     docker:
-      - image: circleci/node:12-browsers
+      - image: circleci/node:13-browsers
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -85,7 +85,7 @@ jobs:
 
   provision:
     docker:
-      - image: circleci/node:12
+      - image: circleci/node:13
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -105,7 +105,7 @@ jobs:
 
   preview-provision:
     docker:
-      - image: circleci/node:12
+      - image: circleci/node:13
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -127,7 +127,7 @@ jobs:
       site_name:
         type: string
     docker:
-      - image: circleci/node:12-browsers
+      - image: circleci/node:13-browsers
     working_directory: ~/topmonks-webs
     steps:
       - checkout
