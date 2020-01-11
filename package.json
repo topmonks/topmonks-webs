@@ -117,5 +117,8 @@
   },
   "resolutions": {
     "fsevents": "npm:dummypkg-a@1.0.0"
+  },
+  "installConfig": {
+    "pnp": true
   }
 }
