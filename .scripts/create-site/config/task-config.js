@@ -7,12 +7,7 @@ const config = createSharedTaskConfig(__dirname, {
   fonts: true,
   static: true,
   svgSprite: true,
-
-  javascripts: {
-    entry: {
-      app: ["./index.js"]
-    }
-  },
+  javascripts: false,
 
   stylesheets: {
     sass: {
