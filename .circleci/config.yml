@@ -13,6 +13,7 @@ commands:
       - pulumi/login:
           cloud-url: s3://pulumi.tmcloud.io
       - run:
+          name: Read Cloudfront ID from Pulumi state for << parameters.site_name >>
           command: |
             CLOUDFRONT_ID=$(pulumi stack output sites --stack topmonks-webs | jq -rM  '.["<< parameters.site_name >>"] | .cloudFrontId | @text')
             echo "export AWS_CLOUDFRONT_DISTRIBUTION_ID=\"${CLOUDFRONT_ID}\"" >> $BASH_ENV
@@ -24,7 +25,7 @@ commands:
         type: string
     steps:
       - run:
-          name: Invalidate Cloudfront distribution
+          name: Invalidate Cloudfront distribution << parameters.distribution_id >>
           command: |
             aws configure set preview.cloudfront true
             aws cloudfront create-invalidation --distribution-id=<< parameters.distribution_id >> --paths=<< parameters.paths >>
@@ -43,7 +44,6 @@ commands:
         type: steps
         default: []
     steps:
-      - aws-cli/install
       - read_deployment_envs:
           site_name: << parameters.site_name >>
       - aws-s3/sync:
@@ -177,9 +177,17 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
+      - restore_cache:
+          key: v1-python-requirements
       - deploy_website:
           site_name: << parameters.site_name >>
           after_s3_sync: << parameters.after_s3_sync >>
+      - save_cache:
+          key: v1-python-requirements
+          paths:
+            - "/root/.cache/pip"
+            - "/usr/local/lib/python2.7/site-packages"
+            - "/usr/local/lib/site-python"
 
 workflows:
   build_and_deploy:
