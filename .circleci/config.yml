@@ -66,7 +66,7 @@ jobs:
       - restore_cache:
           keys:
             - v6-dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn install --frozen-lockfile  --link-duplicates --no-progress
+      - run: yarn install --frozen-lockfile  --link-duplicates --no-progress --verbose --no-default-rc
       - save_cache:
           paths:
             - ~/.cache/yarn
@@ -100,7 +100,7 @@ jobs:
             - v6-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install deps
-          command: yarn install --frozen-lockfile --link-duplicates --production --no-progress --disable-pnp
+          command: yarn install --frozen-lockfile --link-duplicates --production --no-progress --disable-pnp --no-default-rc
       - pulumi/update:
           stack: topmonks-webs
           skip-preview: true
@@ -120,7 +120,7 @@ jobs:
             - v6-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install deps
-          command: yarn install --frozen-lockfile --link-duplicates --production --no-progress --disable-pnp
+          command: yarn install --frozen-lockfile --link-duplicates --production --no-progress --disable-pnp --no-default-rc
       - pulumi/preview:
           stack: topmonks-webs
 
@@ -138,7 +138,7 @@ jobs:
       - restore_cache:
           keys:
             - v6-dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn install --frozen-lockfile --link-duplicates --no-progress
+      - run: yarn install --frozen-lockfile --link-duplicates --no-progress --no-default-rc
       - run:
           name: Install self-signed cert for localhost
           command: |
@@ -177,17 +177,9 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
-      - restore_cache:
-          key: v1-python-requirements
       - deploy_website:
           site_name: << parameters.site_name >>
           after_s3_sync: << parameters.after_s3_sync >>
-      - save_cache:
-          key: v1-python-requirements
-          paths:
-            - "/root/.cache/pip"
-            - "/usr/local/lib/python2.7/site-packages"
-            - "/usr/local/lib/site-python"
 
 workflows:
   build_and_deploy:
