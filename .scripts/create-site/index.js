@@ -186,9 +186,6 @@ function createPackageJsonScripts(name) {
     packageConfig.scripts[
       `build:${name}`
     ] = `BLENDID_CONFIG_PATH=./${name}/config/ blendid -- build`;
-    packageConfig.scripts[
-      `test:broken-links:${name}`
-    ] = `blcl ./public/${name} -ro --exclude linkedin.com --exclude maps.googleapis.com --exclude insight.topmonks.com/avatar/ --exclude blog.topmonks.com`;
 
     return fs.promises.writeFile(
       packageJsonPath,
@@ -260,9 +257,7 @@ function create(name) {
     .then(() => {
       console.log("Successfully created");
       console.log(
-        `Start your site with command: ${chalk.green(
-          `yarn start:${name}`
-        )}`
+        `Start your site with command: ${chalk.green(`yarn start:${name}`)}`
       );
       console.log();
       console.log();

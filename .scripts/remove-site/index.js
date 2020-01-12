@@ -90,7 +90,6 @@ function removePackageJsonScripts(name) {
 
     delete packageConfig.scripts[`start:${name}`];
     delete packageConfig.scripts[`build:${name}`];
-    delete packageConfig.scripts[`test:broken-links:${name}`];
 
     return fs.promises.writeFile(
       packageJsonPath,
