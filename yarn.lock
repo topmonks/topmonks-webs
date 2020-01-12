@@ -6912,7 +6912,7 @@ lws-static@^1.1.3:
   dependencies:
     koa-static "^5.0.0"
 
-lws@^2.0.3:
+lws@^2.0.3, lws@^2.0.8:
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/lws/-/lws-2.0.8.tgz#651f9bf9da9c0b9c210b7631f30e099325b788bd"
   integrity sha512-PqmyBurt/7WhId7a/u0bpWLaMASM4Md8gosnnIFXJFlu+oA2QpUHo9rdv9wezM9LzupryAugyU8silCq8CulyQ==
