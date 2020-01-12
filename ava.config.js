@@ -1,3 +1,6 @@
 export default {
-  tap: true
+  babel: false,
+  tap: true,
+  extensions: ["js", "mjs"],
+  require: ["esm"]
 };
