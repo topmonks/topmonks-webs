@@ -151,14 +151,11 @@ jobs:
           command: yarn serve -d ./public/<< parameters.site_name >>
           background: true
       - run:
-          name: Test site with Lighthouse
+          name: Test site << parameters.site_name >>
           command: |
             mkdir results
             yarn test:lighthouse
             yarn test:ava
-      - run:
-          name: Check site for broken links
-          command: yarn test:broken-links:<< parameters.site_name >>
       - store_artifacts:
           path: ./results
       - store_test_results:
