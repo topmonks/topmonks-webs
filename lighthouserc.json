@@ -1,19 +1,21 @@
 {
   "ci": {
     "collect": {
-      "url": "https://localhost:8000/"
+      "url": "https://localhost:8000/",
+      "settings": {
+        "skipAudits": [
+          "themed-omnibox",
+          "redirects-http",
+          "load-fast-enough-for-pwa",
+          "service-worker",
+          "splash-screen",
+          "webapp-install-banner",
+          "works-offline"
+        ]
+      }
     },
     "assert": {
-      "preset": "lighthouse:recommended",
-      "assertions": {
-        "themed-omnibox": "off",
-        "redirects-http": "off",
-        "load-fast-enough-for-pwa": "off",
-        "service-worker": "off",
-        "splash-screen": "off",
-        "webapp-install-banner": "off",
-        "works-offline": "off"
-      }
+      "preset": "lighthouse:recommended"
     },
     "upload": {
       "target": "lhci",
