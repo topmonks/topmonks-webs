@@ -1,0 +1,23 @@
+{
+  "ci": {
+    "collect": {
+      "url": "https://localhost:8000/"
+    },
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "themed-omnibox": "off",
+        "redirects-http": "off",
+        "load-fast-enough-for-pwa": "off",
+        "service-worker": "off",
+        "splash-screen": "off",
+        "webapp-install-banner": "off",
+        "works-offline": "off"
+      }
+    },
+    "upload": {
+      "target": "lhci",
+      "serverBaseUrl": "https://lighthouse.dev.tmcloud.io/"
+    }
+  }
+}

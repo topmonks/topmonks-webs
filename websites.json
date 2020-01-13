@@ -1,37 +1,41 @@
 {
-  "blockchain.topmonks.com": {},
+  "blockchain.topmonks.com": {
+    "lh-token": "99b5b214-60c4-498d-b500-44e53788e374"
+  },
   "prodeti.topmonks.com": {
-    "bucket": {
-      "website": {
-        "redirectAllRequestsTo": "https://prodeti.topmonks.cz/"
-      }
-    },
-    "cdn": {
-      "disabled": true
-    }
+    "lh-token": "f5d4c200-e606-493e-b448-ec10bb02817a"
   },
   "caffe.topmonks.com": {
-    "bucket": {
-      "website": {
-        "redirectAllRequestsTo": "https://caffe.topmonks.cz/"
-      }
-    },
-    "cdn": {
-      "disabled": true
-    }
+    "lh-token": "c37ae195-aa7a-4ad5-86aa-93214358c551"
   },
-  "studio.topmonks.com": {},
-  "www.topmonks.com": {},
-  "caffe.topmonks.cz": {},
-  "prodeti.topmonks.cz": {},
-  "www.topmonks.cz": {},
-  "www.hookamonk.com": {},
-  "monkstage.topmonks.com": {},
-  "monkslab.cz": {},
+  "studio.topmonks.com": {
+    "lh-token": "f5d0a15d-455f-49dc-a42a-45c5f40ddb83"
+  },
+  "www.topmonks.com": {
+    "lh-token": "c64bd10e-89b4-41c3-8acb-5a61b5684ae2"
+  },
+  "caffe.topmonks.cz": {
+    "lh-token": "5c870429-193a-43d1-b5c6-3c995f6d6999"
+  },
+  "prodeti.topmonks.cz": {
+    "lh-token": "97da709c-26dd-43fd-a6e1-c2023b3ae2ac"
+  },
+  "www.topmonks.cz": {
+    "lh-token": "cd27a7c8-7ba7-4f53-b1ab-cd0c027b6265"
+  },
+  "www.hookamonk.com": {
+    "lh-token": "dcd4411a-32d5-4480-9b5d-46a0e9006b05"
+  },
+  "monkstage.topmonks.com": {
+    "lh-token": "cfd04480-a427-49ea-88d1-014ae2134f79"
+  },
+  "monkslab.cz": {
+    "lh-token": "ffff43c8-a577-443d-9888-e41237285325"
+  },
   "www.hlidacshopu.cz": {
-    "dns": {
-      "disabled": true
-    }
+    "lh-token": "9089c607-8e3b-455c-8832-d18dc99a9825"
   },
-  "session-monk.topmonks.com": {}
+  "session-monk.topmonks.com": {
+    "lh-token": "ba3ae15d-2084-45de-a7b8-2e898e69a6d8"
+  }
 }

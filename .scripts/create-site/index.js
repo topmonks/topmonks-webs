@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const YAML = require("yaml");
 const { strOptions } = require("yaml/types");
+const ApiClient = require("@lhci/utils/src/api-client.js");
 
 const templateDir = path.resolve(".scripts/create-site");
 const VERSION = "0.0.1";
@@ -171,46 +172,61 @@ function generateFiles(root, name) {
 /**
  * @return {Promise}
  */
-function createPackageJsonScripts(name) {
+async function createPackageJsonScripts(name) {
   const packageJsonPath = path.resolve("./package.json");
   Logger.log();
   Logger.log("Creating package.json scripts");
   Logger.log();
 
-  return fs.promises.readFile(packageJsonPath, "utf8").then(data => {
-    const packageConfig = JSON.parse(data);
+  const data = await fs.promises.readFile(packageJsonPath, "utf8");
+  const packageConfig = JSON.parse(data);
 
-    packageConfig.scripts[
-      `start:${name}`
-    ] = `BLENDID_CONFIG_PATH=./${name}/config/ blendid`;
-    packageConfig.scripts[
-      `build:${name}`
-    ] = `BLENDID_CONFIG_PATH=./${name}/config/ blendid -- build`;
+  packageConfig.scripts[
+    `start:${name}`
+  ] = `BLENDID_CONFIG_PATH=./${name}/config/ blendid`;
+  packageConfig.scripts[
+    `build:${name}`
+  ] = `BLENDID_CONFIG_PATH=./${name}/config/ blendid -- build`;
 
-    return fs.promises.writeFile(
-      packageJsonPath,
-      JSON.stringify(packageConfig, null, 2),
-      "utf8"
-    );
-  });
+  return fs.promises.writeFile(
+    packageJsonPath,
+    JSON.stringify(packageConfig, null, 2),
+    "utf8"
+  );
 }
 
-function addSiteToIaaC(name) {
+async function generateLighthouseToken(name) {
+  const config = path.resolve("./lighthouserc.json");
+  const file = await fs.promises.readFile(config, "utf8");
+  const { ci } = JSON.parse(file);
+  const api = new ApiClient({ rootURL: ci.upload.serverBaseUrl });
+  const project = await api.createProject({
+    name,
+    externalUrl: "https://github.com/topmonks/topmonks-webs",
+    slug: ""
+  });
+  return project.token;
+}
+
+async function addSiteToIaaC(name) {
   const filePath = path.resolve("./websites.json");
   Logger.log();
   Logger.log(`Adding website ${name} to websites.json manifest`);
   Logger.log();
 
-  return fs.promises.readFile(filePath, "utf8").then(data => {
-    const websites = JSON.parse(data);
-    // add default website configuration
+  const data = await fs.promises.readFile(filePath, "utf8");
+  const websites = JSON.parse(data);
+  // add default website configuration
+  if (process.env["CI"]) {
     websites[name] = {};
-    return fs.promises.writeFile(
-      filePath,
-      JSON.stringify(websites, null, 2),
-      "utf8"
-    );
-  });
+  } else {
+    websites[name] = { "lh-token": await generateLighthouseToken(name) };
+  }
+  return fs.promises.writeFile(
+    filePath,
+    JSON.stringify(websites, null, 2),
+    "utf8"
+  );
 }
 
 function addSiteToCI(name) {

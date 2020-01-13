@@ -156,6 +156,7 @@ jobs:
             mkdir results
             yarn test:lighthouse
             yarn test:ava
+            yarn lhci autorun --token $(cat websites.json | jq -rM '.["<< parameters.site_name >>"] | .["lh-token"] | @text')
       - store_artifacts:
           path: ./results
       - store_test_results:
