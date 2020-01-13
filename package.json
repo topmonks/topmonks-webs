@@ -59,7 +59,7 @@
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
     "stylelint": "^13.0.0",
-    "stylelint-config-prettier": "^8.0.0",
+    "stylelint-config-prettier": "^8.0.1",
     "tap-xunit": "^2.4.1"
   },
   "scripts": {
