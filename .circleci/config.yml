@@ -153,10 +153,9 @@ jobs:
       - run:
           name: Test site << parameters.site_name >>
           command: |
-            mkdir results
-            yarn test:lighthouse
             yarn test:ava
-            yarn lhci autorun --upload.token $(cat websites.json | jq -rM '.["<< parameters.site_name >>"] | .["lh-token"] | @text')
+            LHCI_TOKEN=$(cat websites.json | jq -rM '.["<< parameters.site_name >>"] | .["lh-token"] | @text')
+            yarn lhci autorun --upload.token ${LHCI_TOKEN}
       - store_artifacts:
           path: ./results
       - store_test_results:
