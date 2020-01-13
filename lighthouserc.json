@@ -15,7 +15,22 @@
       }
     },
     "assert": {
-      "preset": "lighthouse:recommended"
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "canonical": "off",
+        "offline-start-url": "off",
+        "installable-manifest": "off",
+        "service-worker": "off",
+        "splash-screen": "off",
+        "themed-omnibox": "off",
+        "works-offline": "off",
+        "load-fast-enough-for-pwa": "off",
+        "redirects-http": "off",
+        "render-blocking-resources": "off",
+        "uses-long-cache-ttl": "off",
+        "meta-description": "off",
+        "errors-in-console": "off"
+      }
     },
     "upload": {
       "target": "lhci",
