@@ -4,12 +4,8 @@
 .idea/
 /.pnp/
 /.pnp.js
+/.lighthouseci/
 /package-lock.json
 /public/
 /results/
 node_modules/
-www.topmonks.cz/src/data/team.json
-
-www.hlidacshopu.cz/src/data/media.json
-blockchain.topmonks.com/src/data/podcasts.json
-blockchain.topmonks.com/src/data/articles.json
