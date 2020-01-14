@@ -238,6 +238,7 @@ function addSiteToCI(name) {
     test_site: {
       name: `test-${siteName}`,
       site_name: siteName,
+      context: "org-global",
       requires: ["build"]
     }
   };

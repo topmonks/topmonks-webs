@@ -197,6 +197,7 @@ workflows:
       - test_site:
           name: test-www-topmonks-com
           site_name: www.topmonks.com
+          context: org-global
           requires:
             - build
       - deploy_site:
@@ -212,6 +213,7 @@ workflows:
       - test_site:
           name: test-blockchain-topmonks-com
           site_name: blockchain.topmonks.com
+          context: org-global
           requires:
             - build
       - deploy_site:
@@ -227,6 +229,7 @@ workflows:
       - test_site:
           name: test-studio-topmonks-com
           site_name: studio.topmonks.com
+          context: org-global
           requires:
             - build
       - deploy_site:
@@ -242,6 +245,7 @@ workflows:
       - test_site:
           name: test-monkstage-topmonks-com
           site_name: monkstage.topmonks.com
+          context: org-global
           requires:
             - build
       - deploy_site:
@@ -257,6 +261,7 @@ workflows:
       - test_site:
           name: test-www-topmonks-cz
           site_name: www.topmonks.cz
+          context: org-global
           requires:
             - build
       - deploy_site:
@@ -272,6 +277,7 @@ workflows:
       - test_site:
           name: test-caffe-topmonks-cz
           site_name: caffe.topmonks.cz
+          context: org-global
           requires:
             - build
       - deploy_site:
@@ -287,6 +293,7 @@ workflows:
       - test_site:
           name: test-prodeti-topmonks-cz
           site_name: prodeti.topmonks.cz
+          context: org-global
           requires:
             - build
       - deploy_site:
@@ -302,6 +309,7 @@ workflows:
       - test_site:
           name: test-session-monk-topmonks-com
           site_name: session-monk.topmonks.com
+          context: org-global
           requires:
             - build
       - deploy_site:
@@ -324,6 +332,7 @@ workflows:
       - test_site:
           name: test-monkslab-cz
           site_name: monkslab.cz
+          context: org-global
           requires:
             - build
       - deploy_site:
@@ -349,6 +358,7 @@ workflows:
       - test_site:
           name: test-www-hlidacshopu-cz
           site_name: www.hlidacshopu.cz
+          context: org-global
           requires:
             - build
       - deploy_site:
