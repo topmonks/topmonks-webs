@@ -153,6 +153,7 @@ jobs:
       - run:
           name: Test site << parameters.site_name >>
           command: |
+            mkdir -p ./results
             yarn test:ava
             LHCI_TOKEN=$(cat websites.json | jq -rM '.["<< parameters.site_name >>"] | .["lh-token"] | @text')
             yarn lhci autorun --upload.token ${LHCI_TOKEN}
