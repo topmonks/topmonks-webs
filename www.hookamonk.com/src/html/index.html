@@ -94,7 +94,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div data-w-id="357e77f9-9a04-ba0a-a6b7-48d0dce08554" class="exclusivity">
       <h3 class="subheading">Do you wish to have a sensational experience of smoking? Everything starts with a personal invitation from us.</h3>
       <p class="package-heading">Request an invitation by leaving your email address and wait for a response.</p>
-      <div class="form-block w-form">
+      <div class="form-block">
         <form id="wf-form-HookaMonk" name="wf-form-HookaMonk" data-name="HookaMonk" class="form"><input type="email" class="text-field w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your e-mail" id="email" required=""><input type="submit" value="I wish to get on your whitelist" data-wait="Please wait..." class="submit-button w-button"></form>
         <div class="success-message w-form-done">
           <div class="text-block">Thank you! Your e-mail has been received! We will get in touch soon.</div>
@@ -115,5 +115,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!--  Google Tag Manager (noscript)  -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBP9CD2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!--  End Google Tag Manager (noscript)  -->
+
+  <script type="module">
+    const contactForm = document.getElementById("wf-form-HookaMonk");
+    const contactFormEmailField = contactForm.querySelector(".w-input");
+    const successMessage = document.querySelector(".w-form-done");
+    const failMessage = document.querySelector(".w-form-fail");
+
+    contactForm.addEventListener("submit", async function(e) {
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      const data = {email: contactFormEmailField.value};
+
+      try {
+        await fetch(
+        "https://du056n8079.execute-api.eu-central-1.amazonaws.com/production/hookamonk-mailing-list-subscribe",
+        {
+          method: "POST",
+          body: JSON.stringify(data)
+        });
+        successMessage.style.display="block";
+        contactForm.reset();
+      } catch(err) {
+        failMessage.style.display="block";
+      }
+    });
+
+    successMessage.addEventListener("click", function(e) {
+      e.preventDefault();
+      successMessage.style.display="none";
+    });
+  </script>
 </body>
 </html>
