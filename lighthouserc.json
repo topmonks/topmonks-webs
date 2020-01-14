@@ -1,6 +1,7 @@
 {
   "ci": {
     "collect": {
+      "numberOfRuns": 1,
       "url": "https://localhost:8000/",
       "settings": {
         "skipAudits": [
