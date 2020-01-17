@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width">
+  <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width,Save-Data">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
   <title>{% block title %}{{ language[page].title }}{% endblock %}</title>
@@ -11,11 +11,16 @@
   <link rel="preconnect" href="https://res.cloudinary.com">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://use.typekit.net">
+  <link rel="preconnect" href="https://p.typekit.net">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://www.google-analytics.com">
   <link rel="preconnect" href="https://static.hotjar.com">
-  {% block preconnect %} {% endblock %}
-  <link rel="preload" as="style" href="https://use.typekit.net/her1ktw.css">
+  {% block preconnect %}{% endblock %}
+  <link rel="preload" as="font" crossorigin type="font/woff2" href="https://use.typekit.net/af/c4c302/000000000000000000012192/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3">
+  <link rel="preload" as="font" crossorigin type="font/woff2" href="https://use.typekit.net/af/50d55e/000000000000000000015235/27/l?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=n9&v=3">
+  <link rel="preload" as="font" crossorigin type="font/woff2" href="https://use.typekit.net/af/bdde80/00000000000000000001522d/27/l?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=i4&v=3">
+  <link rel="preload" as="font" crossorigin type="font/woff2" href="https://use.typekit.net/af/220823/000000000000000000015231/27/l?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=n7&v=3">
+  <link rel="preload" as="font" crossorigin type="font/woff2" href="https://use.typekit.net/af/180254/00000000000000000001522c/27/l?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=n4&v=3">
   <link rel="preload" as="script" href="https://www.googletagmanager.com/gtm.js?id=GTM-WW7T986">
   {% block preload %}{% endblock %}
 
@@ -24,7 +29,38 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" href="https://use.typekit.net/her1ktw.css">
+  <style>
+    @import url("https://p.typekit.net/p.css?s=1&k=her1ktw&ht=tk&f=15586.15700.15701.15705.15708&a=7119793&app=typekit&e=css");
+    @font-face {
+      font-family:"futura-pt";
+      src:url("https://use.typekit.net/af/c4c302/000000000000000000012192/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/c4c302/000000000000000000012192/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/c4c302/000000000000000000012192/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+      font-display:swap;font-style:normal;font-weight:600;
+    }
+
+    @font-face {
+      font-family:"lato";
+      src:url("https://use.typekit.net/af/50d55e/000000000000000000015235/27/l?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=n9&v=3") format("woff2"),url("https://use.typekit.net/af/50d55e/000000000000000000015235/27/d?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=n9&v=3") format("woff"),url("https://use.typekit.net/af/50d55e/000000000000000000015235/27/a?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=n9&v=3") format("opentype");
+      font-display:swap;font-style:normal;font-weight:900;
+    }
+
+    @font-face {
+      font-family:"lato";
+      src:url("https://use.typekit.net/af/bdde80/00000000000000000001522d/27/l?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/bdde80/00000000000000000001522d/27/d?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/bdde80/00000000000000000001522d/27/a?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=i4&v=3") format("opentype");
+      font-display:swap;font-style:italic;font-weight:400;
+    }
+
+    @font-face {
+      font-family:"lato";
+      src:url("https://use.typekit.net/af/220823/000000000000000000015231/27/l?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/220823/000000000000000000015231/27/d?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/220823/000000000000000000015231/27/a?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=n7&v=3") format("opentype");
+      font-display:swap;font-style:normal;font-weight:700;
+    }
+
+    @font-face {
+      font-family:"lato";
+      src:url("https://use.typekit.net/af/180254/00000000000000000001522c/27/l?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/180254/00000000000000000001522c/27/d?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/180254/00000000000000000001522c/27/a?primer=c1dc6aaaeb08b96bfd12c2815a4029c5914ffa8710f31ed55abeb350dac39c99&fvd=n4&v=3") format("opentype");
+      font-display:swap;font-style:normal;font-weight:400;
+    }
+  </style>
   <link rel="stylesheet" href="/assets/css/typography.css">
   <link rel="stylesheet" href="/assets/css/main.css">
 
