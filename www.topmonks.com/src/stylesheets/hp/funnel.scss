@@ -8,8 +8,7 @@
         no-repeat;
       padding-top: 110px;
       background-size: 100% auto;
-      margin-left: -24px;
-      margin-right: -24px;
+      margin: 0 calc(var(--mdc-layout-grid-gutter-phone) * -1);
     }
   }
   @media screen and (min-width: 840px) {
@@ -68,7 +67,7 @@
       width: calc(100% - 56px);
       height: 4px;
       background-color: var(--tm-secondary);
-      left: 70px;
+      left: 72px;
       top: 35px;
     }
     @media screen and (min-width: 480px) {
