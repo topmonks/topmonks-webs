@@ -37,14 +37,16 @@
   }
 
   .box {
-    padding-top: 2em; //32px
+    padding-top: 2em;
     z-index: 15;
     position: relative;
     display: grid;
 
-    & > svg {
+    .box__icon {
       margin: 0 auto;
-      height: 140px;
+      svg {
+        height: 140px;
+      }
     }
 
     h3 {
