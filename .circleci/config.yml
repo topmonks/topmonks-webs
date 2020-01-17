@@ -159,6 +159,8 @@ jobs:
             yarn lhci autorun --upload.token="${LHCI_TOKEN}"
       - store_artifacts:
           path: ./results
+      - store_artifacts:
+          path: ./.lighthouseci
       - store_test_results:
           path: ./results
 
