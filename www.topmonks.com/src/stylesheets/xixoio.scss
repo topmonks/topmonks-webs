@@ -5,9 +5,8 @@
   --mdc-layout-grid-gutter-desktop: 1.25em; //20px
   --mdc-layout-grid-column-width-desktop: 3.75em; //60px
 
-  --tm-xixo-purple: #BB6BD9;
-  --tm-xixo-darkpurple: #B651E0;
-
+  --tm-xixo-purple: #bb6bd9;
+  --tm-xixo-darkpurple: #b651e0;
 }
 
 .tm-layout-wrapper {
@@ -20,15 +19,17 @@
 }
 
 body {
-  font-family: Avenir, Avenir light -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background: linear-gradient(to bottom right, #6551E0 0, #6B359D 78%) no-repeat;
+  font-family: Avenir, "Avenir Light", Nunito, -apple-system, BlinkMacSystemFont,
+    Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  background: linear-gradient(to bottom right, #6551e0 0, #6b359d 78%) no-repeat;
   background-size: 100% 55%;
-  line-height: 2.25em; //36px
+  line-height: 2.25em;
   font-weight: lighter;
   margin: 0;
   @media (max-width: 768px) {
-    background: linear-gradient(to bottom right, #6551E0 0, #6B359D 78%) no-repeat;
+    background: linear-gradient(to bottom right, #6551e0 0, #6b359d 78%)
+      no-repeat;
     background-size: 100% 60%;
   }
 }
@@ -57,7 +58,7 @@ body {
   }
 
   @media (max-width: 479px) {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     li {
       border-bottom: 1px solid var(--tm-xixo-purple);
     }
@@ -67,12 +68,15 @@ body {
   display: flex;
   align-items: center;
   font-size: 28px;
-  font-weight: 700;
   line-height: 32px;
   letter-spacing: -1px;
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
+  font-family: Futura, futura-pt, -apple-system, BlinkMacSystemFont, Roboto,
+    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 600;
   @media screen and (max-width: 479px) {
     font-size: 24px;
     padding-top: 2px;
@@ -247,7 +251,6 @@ body {
   }
 }
 
-
 .tm-menu--horizontal .tm-menu__list {
   display: flex;
   align-items: flex-start;
@@ -267,7 +270,7 @@ body {
 // Typography //
 
 h1 {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 2.25em; //36px
   font-weight: lighter;
   letter-spacing: 2px;
@@ -282,7 +285,8 @@ h2 {
   text-align: center;
 }
 
-h3, p {
+h3,
+p {
   font-size: 1.25em; //20px
   line-height: 2.1em; //33px;
   @media (max-width: 768px) {
@@ -304,7 +308,7 @@ hr.purple {
 
 a.btn {
   font-size: 2.5em; //40px
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 a.btn_purple {
@@ -327,11 +331,11 @@ a.dead-button {
 
 .dead-button_oval {
   border-radius: 100px;
-  background-color: #9371C1;
+  background-color: #9371c1;
   padding: 14px 58px;
   margin: 1em auto;
-  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, .16);
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .16);
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
 }
 
 a.dead-button_cube {
@@ -342,12 +346,11 @@ a.dead-button_cube {
 }
 
 .dead-button_cube {
-  background: #9371C1;
+  background: #9371c1;
   padding: 2em 5.5em 0; //32px 88px 0
   margin: 0 auto;
   background: url("/assets/img/case-studies/xixoio/Union.png") center no-repeat;
 }
-
 
 .dead-button_transparent {
   background-color: transparent;
@@ -362,11 +365,11 @@ p.text-italic {
 
 //
 
-
 // Section: Introduction //
 .intro {
   height: 46.875em; //750px
-  background: url("/assets/img/case-studies/xixoio/abstract.svg") center no-repeat;
+  background: url("/assets/img/case-studies/xixoio/abstract.svg") center
+    no-repeat;
   text-align: center;
   padding-top: 6em;
 
@@ -382,7 +385,6 @@ p.text-italic {
 
 // Section: About - Description //
 .about {
-
   // background: url("/assets/img/case-studies/xixoio/box-top-triangle.svg") center top -10% no-repeat;
   //  position: relative;
   // z-index: 2;
@@ -390,7 +392,7 @@ p.text-italic {
     padding: 2.75em 2.625em; //44px 42px;
     max-width: 68.75em; //1,100px
     margin: 0 auto;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     position: relative;
     z-index: 1;
 
@@ -412,21 +414,21 @@ p.text-italic {
       text-decoration: underline;
     }
   }
-
 }
 
 // Section: TM - Blockchain Team //
 .team {
   max-width: 68.75em; //1 100px
   margin: 0 auto;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 // Section: Proposal //
 .proposal {
-  color: #FFFFFF;
+  color: #ffffff;
   @media screen and (min-width: 1040px) {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1554044394/topmonks.com/XIXOIO/waves.jp2") center no-repeat;
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1554044394/topmonks.com/XIXOIO/waves.jp2")
+      center no-repeat;
     background-size: 100% 100%;
     .crypto-api svg {
       margin-top: 2em;
@@ -436,7 +438,8 @@ p.text-italic {
     }
   }
   @media (max-width: 1039px) {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1554044394/topmonks.com/XIXOIO/waves.jp2") center no-repeat;
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1554044394/topmonks.com/XIXOIO/waves.jp2")
+      center no-repeat;
     background-size: auto;
   }
 
@@ -454,8 +457,9 @@ p.text-italic {
 }
 
 // Section: Implementation //
-.implementation, .testing {
-  background-color: #FFFFFF;
+.implementation,
+.testing {
+  background-color: #ffffff;
 }
 
 .implementation {
@@ -494,8 +498,8 @@ p.text-italic {
 
 // Section: Timeline //
 .timeline {
-  color: #FFFFFF;
-  background: linear-gradient(to bottom right, #6551E0 0, #6B359D 78%);
+  color: #ffffff;
+  background: linear-gradient(to bottom right, #6551e0 0, #6b359d 78%);
 
   h3 {
     font-weight: lighter;
@@ -525,13 +529,14 @@ p.text-italic {
   p.work_shadow-box {
     font-size: 14px;
     line-height: 23px;
-    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1);
     width: max-content;
     padding: 4px 12px;
   }
 
   @media screen and (min-width: 701px) {
-    background: url("/assets/img/case-studies/xixoio/String/line.svg") center no-repeat;
+    background: url("/assets/img/case-studies/xixoio/String/line.svg") center
+      no-repeat;
     .mdc-layout-grid {
       padding-bottom: 0;
     }
@@ -552,46 +557,57 @@ p.text-italic {
       }
     }
     .string_1 {
-      background: url("/assets/img/case-studies/xixoio/String/01.API.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/01.API.svg")
+        center no-repeat;
     }
 
     .string_2 {
-      background: url("/assets/img/case-studies/xixoio/String/02.Infrastructure.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/02.Infrastructure.svg")
+        center no-repeat;
     }
 
     .string_3 {
-      background: url("/assets/img/case-studies/xixoio/String/03.Crypto.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/03.Crypto.svg")
+        center no-repeat;
     }
 
     .string_4 {
-      background: url("/assets/img/case-studies/xixoio/String/04.Development.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/04.Development.svg")
+        center no-repeat;
     }
 
     .string_5 {
-      background: url("/assets/img/case-studies/xixoio/String/05.Contracts.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/05.Contracts.svg")
+        center no-repeat;
     }
 
     .string_6 {
-      background: url("/assets/img/case-studies/xixoio/String/06.Testing.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/06.Testing.svg")
+        center no-repeat;
     }
 
     .string_7 {
-      background: url("/assets/img/case-studies/xixoio/String/07.Audit.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/07.Audit.svg")
+        center no-repeat;
     }
 
     .string_8 {
-      background: url("/assets/img/case-studies/xixoio/String/08.Finalizations.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/08.Finalizations.svg")
+        center no-repeat;
     }
 
     .string_9 {
-      background: url("/assets/img/case-studies/xixoio/String/09.Training.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/09.Training.svg")
+        center no-repeat;
     }
 
     .string_10 {
-      background: url("/assets/img/case-studies/xixoio/String/10.Audit.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/10.Audit.svg")
+        center no-repeat;
     }
     .last-diamond {
-      background: url("/assets/img/case-studies/xixoio/String/Release.svg") center no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/Release.svg")
+        center no-repeat;
 
       p.contracts_title {
         padding-top: 1em;
@@ -607,54 +623,67 @@ p.text-italic {
     }
   }
   @media (max-width: 700px) {
-    background: url("/assets/img/case-studies/xixoio/String/line.svg") left no-repeat;
+    background: url("/assets/img/case-studies/xixoio/String/line.svg") left
+      no-repeat;
     background-size: 1% 90%;
     background-position-x: 13%;
     margin-top: 0;
-    p, p.work_shadow-box {
+    p,
+    p.work_shadow-box {
       margin-left: 4em;
     }
     .string_1 {
-      background: url("/assets/img/case-studies/xixoio/String/01.API.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/01.API.svg") left
+        no-repeat;
     }
 
     .string_2 {
-      background: url("/assets/img/case-studies/xixoio/String/02.Infrastructure.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/02.Infrastructure.svg")
+        left no-repeat;
     }
 
     .string_3 {
-      background: url("/assets/img/case-studies/xixoio/String/03.Crypto.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/03.Crypto.svg")
+        left no-repeat;
     }
 
     .string_4 {
-      background: url("/assets/img/case-studies/xixoio/String/04.Development.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/04.Development.svg")
+        left no-repeat;
     }
 
     .string_5 {
-      background: url("/assets/img/case-studies/xixoio/String/05.Contracts.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/05.Contracts.svg")
+        left no-repeat;
     }
 
     .string_6 {
-      background: url("/assets/img/case-studies/xixoio/String/06.Testing.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/06.Testing.svg")
+        left no-repeat;
     }
 
     .string_7 {
-      background: url("/assets/img/case-studies/xixoio/String/07.Audit.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/07.Audit.svg")
+        left no-repeat;
     }
 
     .string_8 {
-      background: url("/assets/img/case-studies/xixoio/String/08.Finalizations.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/08.Finalizations.svg")
+        left no-repeat;
     }
 
     .string_9 {
-      background: url("/assets/img/case-studies/xixoio/String/09.Training.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/09.Training.svg")
+        left no-repeat;
     }
 
     .string_10 {
-      background: url("/assets/img/case-studies/xixoio/String/10.Audit.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/10.Audit.svg")
+        left no-repeat;
     }
 
-    .last-diamond, .string_1 {
+    .last-diamond,
+    .string_1 {
       text-align: left;
       background-size: 20% 80%;
       margin-bottom: 1em;
@@ -670,38 +699,65 @@ p.text-italic {
       }
     }
     .last-diamond {
-      background: url("/assets/img/case-studies/xixoio/String/Release.svg") left no-repeat;
+      background: url("/assets/img/case-studies/xixoio/String/Release.svg") left
+        no-repeat;
       background-size: 20% 100%;
       background-position-x: 0.6%;
     }
-    .string_2, .string_3, .string_4, .string_5, .string_6, .string_7, .string_8, .string_9, .string_10 {
+    .string_2,
+    .string_3,
+    .string_4,
+    .string_5,
+    .string_6,
+    .string_7,
+    .string_8,
+    .string_9,
+    .string_10 {
       background-size: 11.5% 60%;
       margin: 0 0 0.5em 0.5em;
 
-      p, p.work_shadow-box {
+      p,
+      p.work_shadow-box {
         font-size: 18px;
       }
     }
   }
   @media (min-width: 400px) and (max-width: 490px) {
-    background: url("/assets/img/case-studies/xixoio/String/line.svg") left no-repeat;
+    background: url("/assets/img/case-studies/xixoio/String/line.svg") left
+      no-repeat;
     background-size: 1% 90%;
     background-position-x: 13%;
-    .string_2, .string_3, .string_4, .string_5, .string_6, .string_7, .string_8, .string_9, .string_10 {
+    .string_2,
+    .string_3,
+    .string_4,
+    .string_5,
+    .string_6,
+    .string_7,
+    .string_8,
+    .string_9,
+    .string_10 {
       margin: 0 0 0.5em 0.7em;
     }
   }
   @media (max-width: 399px) {
-    background: url("/assets/img/case-studies/xixoio/String/line.svg") left no-repeat;
+    background: url("/assets/img/case-studies/xixoio/String/line.svg") left
+      no-repeat;
     background-size: 1% 90%;
     background-position-x: 13.5%;
-    .string_2, .string_3, .string_4, .string_5, .string_6, .string_7, .string_8, .string_9, .string_10 {
+    .string_2,
+    .string_3,
+    .string_4,
+    .string_5,
+    .string_6,
+    .string_7,
+    .string_8,
+    .string_9,
+    .string_10 {
       background-size: 10% 60%;
       margin: 0 0 0.5em 0.5em;
     }
   }
 }
-
 
 // Section: Closure//
 

@@ -65,7 +65,7 @@
       position: absolute;
       display: block;
       content: "";
-      width: 90%;
+      width: calc(100% - 56px);
       height: 4px;
       background-color: var(--tm-secondary);
       left: 70px;

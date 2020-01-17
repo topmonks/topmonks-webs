@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
   <title>{% block title %}{{ language[page].title }}{% endblock %}</title>
-
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://res.cloudinary.com">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -15,9 +14,9 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://www.google-analytics.com">
   <link rel="preconnect" href="https://static.hotjar.com">
-  {% block preconnect %}{% endblock %}
-  <link rel="preload" as="style" href="https://use.typekit.net/her1ktw.css" crossorigin="anonymous">
-  <link rel="preload" as="script" href="https://www.googletagmanager.com/gtm.js?id=GTM-WW7T986" crossorigin="use-credentials">
+  {% block preconnect %} {% endblock %}
+  <link rel="preload" as="style" href="https://use.typekit.net/her1ktw.css">
+  <link rel="preload" as="script" href="https://www.googletagmanager.com/gtm.js?id=GTM-WW7T986">
   {% block preload %}{% endblock %}
 
   <!--[if lt IE 9]>
@@ -29,13 +28,14 @@
   <link rel="stylesheet" href="/assets/css/typography.css">
   <link rel="stylesheet" href="/assets/css/main.css">
 
+
   {% block head %}{% endblock %}
-  {% include "shared/app-icons.html" %}
-  {% include 'shared/analytics.html' %}
+  {% include "shared/app-icons.njk" %}
+  {% include 'shared/analytics.njk' %}
 </head>
 <body id="page-{{page}}">
 
-{% include 'shared/header.html' %}
+{% include 'shared/header.njk' %}
 
 <main>
   {% block content %}{% endblock %}
@@ -44,8 +44,7 @@
 <link rel="stylesheet" href="/assets/css/footer.css">
 {% include 'common/footer.html' %}
 
-{% block javascript %}
-{% endblock %}
+{% block javascript %}{% endblock %}
 
 </body>
 </html>

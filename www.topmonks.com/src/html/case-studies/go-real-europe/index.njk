@@ -1,6 +1,6 @@
-{% extends 'layouts/topmonks.html' %}
+{% extends 'layouts/topmonks.njk' %}
 {% set page = '_case-studies__go-real-europe' %}
-{% block title %} GoRealEurope - Case Studies - TopMonks{% endblock %}
+{% block title %}TopMonks Case Study - GoRealEurope{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="/assets/css/case-studies-common.css">
 <style>
@@ -397,5 +397,5 @@
 
 {% set caseStudiesData = { title : 'Other Case Studies', activeCase : 'go-real-europe' } %}
 
-{% include 'components/case-studies/index.html' %}
+{% include 'components/case-studies/index.njk' %}
 {% endblock %}

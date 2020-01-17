@@ -1,10 +1,10 @@
-{% extends 'layouts/topmonks.html' %}
+{% extends 'layouts/topmonks.njk' %}
 {% block title %} Case Studies - TopMonks{% endblock %}
 
 {% block content %}
 
 {% set caseStudiesData = { title : 'Case Studies', subTitle : 'We have learned something from every collaboration with our clients.'} %}
 
-{% include 'components/case-studies/index.html' %}
+{% include 'components/case-studies/index.njk' %}
 
 {% endblock %}
