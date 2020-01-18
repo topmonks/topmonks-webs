@@ -1,91 +1,93 @@
-{%- import 'macros/helpers.njk' as macros -%}
-{{ macros.css('case-studies') }}
+{%- from 'macros/helpers.njk' import css, sprite -%}
+{{ css('case-studies') }}
 {% set gridSpan = 6 if caseStudiesData.activeCase else 4 %}
 
 <section class="tm-case-studies">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div class="tm-case-studies__title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2>{{caseStudiesData.title}}</h2>
+        <h2>{{ caseStudiesData.title }}</h2>
         {% if caseStudiesData.subTitle %}
-        <p class="sub-text">{{caseStudiesData.subTitle}}</p>
+          <p class="sub-text">{{ caseStudiesData.subTitle }}</p>
         {% endif %}
       </div>
       {% if caseStudiesData.activeCase != 'go-real-europe' %}
-      <div
-        class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{gridSpan}}-desktop">
-        <a href="/case-studies/go-real-europe/">
-          <div class="tm-case-studies__logo tm-case-studies__logo--gorealeurope">
-            <div class="tm-bgnd-wrapper">{{macros.sprite('img_logo_gorealeurope')}}</div>
-          </div>
-          <h3>Go Real Europe</h3></a>
-        <p>GRE is a fast-growing travel startup specializing in crafting personalized itineraries for any type of
-          traveler wanting to touch down and explore the gems of Europe.</p>
-      </div>
+        <div
+          class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{ gridSpan }}-desktop">
+          <a href="/case-studies/go-real-europe/">
+            <div class="tm-case-studies__logo tm-case-studies__logo--gorealeurope">
+              <div class="tm-bgnd-wrapper">{{ sprite('img_logo_gorealeurope') }}</div>
+            </div>
+            <h3>Go Real Europe</h3></a>
+          <p>GRE is a fast-growing travel startup specializing in crafting personalized itineraries for any type of
+            traveler wanting to touch down and explore the gems of Europe.</p>
+        </div>
       {% endif %}
       {% if caseStudiesData.activeCase != 'pricefx' %}
-      <div
-        class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{gridSpan}}-desktop">
-        <a href="/case-studies/price-fx/">
-          <div class="tm-case-studies__logo tm-case-studies__logo--pricefx">
-            <div class="tm-bgnd-wrapper">{{macros.sprite('img_logo_pricefx')}}</div>
-          </div>
-          <h3>Pricefx</h3></a>
-        <p>Providing consulting professionals to support servicing a rapidly expanding portfolio of customers, and also
-          helping to improve UX of the current website.</p>
-      </div>
+        <div
+          class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{ gridSpan }}-desktop">
+          <a href="/case-studies/price-fx/">
+            <div class="tm-case-studies__logo tm-case-studies__logo--pricefx">
+              <div class="tm-bgnd-wrapper">{{ sprite('img_logo_pricefx') }}</div>
+            </div>
+            <h3>Pricefx</h3></a>
+          <p>Providing consulting professionals to support servicing a rapidly expanding portfolio of customers, and
+            also
+            helping to improve UX of the current website.</p>
+        </div>
       {% endif %}
       {% if caseStudiesData.activeCase != 'cs' %}
-      <div
-        class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{gridSpan}}-desktop">
-        <a href="/case-studies/ceska-sporitelna-web-api/">
-          <div class="tm-case-studies__logo tm-case-studies__logo--ceska-sporitelna">
-            <div class="tm-bgnd-wrapper">{{macros.sprite('img_logo_cs')}}</div>
-          </div>
-          <h3>Česká Spořitelna WebAPI</h3></a>
-        <p>Custom-made integration platform to be used internally by the bank, but also externally in the form of public
-          API.</p>
-      </div>
+        <div
+          class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{ gridSpan }}-desktop">
+          <a href="/case-studies/ceska-sporitelna-web-api/">
+            <div class="tm-case-studies__logo tm-case-studies__logo--ceska-sporitelna">
+              <div class="tm-bgnd-wrapper">{{ sprite('img_logo_cs') }}</div>
+            </div>
+            <h3>Česká Spořitelna WebAPI</h3></a>
+          <p>Custom-made integration platform to be used internally by the bank, but also externally in the form of
+            public
+            API.</p>
+        </div>
       {% endif %}
 
       {% if caseStudiesData.activeCase != 'adler' %}
-      <div
-        class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{gridSpan}}-desktop">
-        <a href="/case-studies/adler/">
-          <div class="tm-case-studies__logo tm-case-studies__logo--adler">
-            <div class="tm-bgnd-wrapper">{{macros.sprite('img_logo_adler')}}</div>
-          </div>
-          <h3>Adler</h3></a>
-        <p>In close cooperation with the client, we created software that is not only nice but also user-friendly.
-          Besides, it saves employees' time through the automation of several workflows.</p>
-      </div>
+        <div
+          class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{ gridSpan }}-desktop">
+          <a href="/case-studies/adler/">
+            <div class="tm-case-studies__logo tm-case-studies__logo--adler">
+              <div class="tm-bgnd-wrapper">{{ sprite('img_logo_adler') }}</div>
+            </div>
+            <h3>Adler</h3></a>
+          <p>In close cooperation with the client, we created software that is not only nice but also user-friendly.
+            Besides, it saves employees' time through the automation of several workflows.</p>
+        </div>
       {% endif %}
 
       {% if caseStudiesData.activeCase != 'profi-option' %}
-      <div
-        class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{gridSpan}}-desktop">
-        <a href="/case-studies/profi-option/">
-          <div class="tm-case-studies__logo tm-case-studies__logo--profi-option">
-            <div class="tm-bgnd-wrapper">{{macros.sprite('img_logo_profi-option')}}</div>
-          </div>
-          <h3>Profi Option</h3></a>
-        <p>Our team was asked to review the 24Cryptex trading app which had problems
-          with usability, overall look and feel of their platform.</p>
-      </div>
+        <div
+          class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{ gridSpan }}-desktop">
+          <a href="/case-studies/profi-option/">
+            <div class="tm-case-studies__logo tm-case-studies__logo--profi-option">
+              <div class="tm-bgnd-wrapper">{{ sprite('img_logo_profi-option') }}</div>
+            </div>
+            <h3>Profi Option</h3></a>
+          <p>Our team was asked to review the 24Cryptex trading app which had problems
+            with usability, overall look and feel of their platform.</p>
+        </div>
       {% endif %}
 
       {% if caseStudiesData.activeCase != 'xixoio' %}
-      <div
-        class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{gridSpan}}-desktop">
-        <a href="/case-studies/xixoio/">
-          <div class="tm-case-studies__logo tm-case-studies__logo--xixoio">
-            <div class="tm-bgnd-wrapper">{{macros.sprite('img_logo_xixoio')}}</div>
-          </div>
-          <h3>XIXOIO</h3></a>
-        <p>The TopMonks Blockchain team was approached at the time where their own IPCO
-          was in the preparation. In just 3&nbsp;days we have managed to draft the complete
-          token issuance architecture.</p>
-      </div>
+        <div
+          class="tm-case-studies__clients mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-{{ gridSpan }}-desktop">
+          <a href="/case-studies/xixoio/">
+            <div class="tm-case-studies__logo tm-case-studies__logo--xixoio">
+              <div class="tm-bgnd-wrapper">{{ sprite('img_logo_xixoio') }}</div>
+            </div>
+            <h3>XIXOIO</h3></a>
+          <p>The TopMonks Blockchain team was approached at the time where their own IPCO
+            was in the preparation. In just 3&nbsp;days we have managed to draft the complete
+            token issuance architecture.</p>
+        </div>
       {% endif %}
     </div>
   </div>

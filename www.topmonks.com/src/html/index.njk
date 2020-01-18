@@ -1,6 +1,5 @@
 {% extends 'layouts/topmonks.njk' %}
-{% from 'macros/helpers.njk' import sprite %}
-{% from 'macros/helpers.njk' import avatar %}
+{% from 'macros/helpers.njk' import avatar, css, sprite %}
 
 {% set page = 'topmonks-index' %}
 {% set language = en %}
@@ -64,12 +63,12 @@ TopMonks - Software development partner for your business
     }
   }
 </style>
-<link rel="stylesheet" href="/assets/css/hp/header.css">
+{{ css("header") }}
 {% endblock %}
 
 {% block content %}
 <script>document.querySelector(".tm-app-bar").classList.add("tm-app-bar--sticky")</script>
-<link rel="stylesheet" href="/assets/css/hp/jumbotron.css">
+{{ css("hp/jumbotron") }}
 <section class="main-info jumbotron">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
@@ -87,7 +86,7 @@ TopMonks - Software development partner for your business
   </div>
 </section>
 
-<link rel="stylesheet" href="/assets/css/hp/cooperation.css">
+{{ css("hp/cooperation") }}
 <section class="cooperation">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
@@ -102,7 +101,7 @@ TopMonks - Software development partner for your business
   </div>
 </section>
 
-<link rel="stylesheet" href="/assets/css/hp/how-we-work.css">
+{{ css("hp/how-we-work") }}
 <section id="how-we-work" class="how-we-work">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
@@ -137,7 +136,7 @@ TopMonks - Software development partner for your business
   </div>
 </section>
 
-<link rel="stylesheet" href="/assets/css/hp/funnel.css">
+{{ css("hp/funnel") }}
 <section class="product">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
@@ -180,7 +179,7 @@ TopMonks - Software development partner for your business
 {% set caseStudiesData = { title : 'Case Studies', subTitle : 'We have learned something from every collaboration with our clients.'} %}
 {% include 'components/case-studies/index.njk' %}
 
-<link rel="stylesheet" href="/assets/css/hp/testimonials.css">
+{{ css("hp/testimonials") }}
 <section class="testimonials">
   <div class="tm-bgnd-wrapper">
     <div class="mdc-layout-grid">
