@@ -7,11 +7,11 @@
 
 This is TopMonks websites monorepo for effective development of all our static websites.
 
-This project uses [Blendid](https://github.com/vigetlabs/blendid) stack.
+This project uses our fork of [Blendid](https://github.com/topmonks/blendid) stack.
 
 Please, format every source code with [EditorConfig](https://editorconfig.org/) and [Prettier](https://github.com/prettier/prettier). We have [ESLint](https://eslint.org/) and [Stylelint](https://stylelint.io/)
 preconfigured with prettier presets. Checks run on [Build Server](https://circleci.com/gh/topmonks/topmonks-webs) via `yarn test` command.
-In development, check that your work conforms to [Lighthouse](https://developers.google.com/web/tools/lighthouse/) rules. We aim at least for 75% conformity.
+In development, check that your work conforms to [Lighthouse](https://developers.google.com/web/tools/lighthouse/) rules. We aim at least for 75% conformity. You can find results in time on our [Lighthouse CI server](https://lighthouse.dev.tmcloud.io/app/projects).
 
 **Be responsible, keep our quality bar high.**
 
@@ -38,7 +38,7 @@ brew install git
 # Install Node.js Version Manager
 brew install nvm
 # Instal Node.js
-nvm install 10
+nvm install node
 # Install Yarn package manager
 brew install yarn
 # Install Pulumi
@@ -77,7 +77,7 @@ pbpaste > .env
 yarn start:caffe.topmonks.cz upload-posters
 ```
 
-In production this is generated automatically. In development it not - for sane build times and to keep upload quotas.
+In production this is generated automatically. In development it is not - for sane build times and to keep upload quotas.
 
 ### Sites available
 
@@ -89,7 +89,6 @@ The following sites can be build and ran using the `yarn start:[SITE]` command.
 - `caffe.topmonks.cz`
 - `blockchain.topmonks.com`
 - `studio.topmonks.com`
-- `www.xduediligence.com`
 - `www.hookahmonk.com`
 - `session-monk.topmonks.com`
 
@@ -106,7 +105,7 @@ yarn run build
 Then you can run `www.topmonks.com` site in production configuration with:
 
 ```
-yarn run http-server public/www.topmonks.com -p 3000
+yarn serve -d public/www.topmonks.com
 ```
 
 ## Create new site
@@ -147,8 +146,7 @@ If you want to remove an existing site, e.g. `existing-site.topmonks.com`, you f
 yarn remove-site existing-site.topmonks.com
 ```
 
-The command will delete the directory for you.
-Don't forget to remove your site from `.circleci/config.yml`.
+The command will delete the directory with `package.json` scripts and CircleCI steps for you.
 
 ### Options
 
@@ -202,6 +200,14 @@ website configuration:
 
 Route53 entry will the ALIAS to S3 bucket directly.
 
+### DNS
+
+You can disable automatic DNS record creation:
+
+```json
+{ "dns": { "disabled": true } }
+```
+
 ### S3 Website
 
 You can change default settings (`index.html` and `404.html`) of S3 Bucket Website configuration
@@ -234,13 +240,13 @@ yarn pulumi:pre
 
 ## Figma design projects
 
-[TopMonks.com](https://www.figma.com/file/DbvniEPJdbB5OLUonqkgYWT6/TopMonks-web?node-id=11%3A437)
-
-[Programování pro deti](https://www.figma.com/file/BHVwvDKK14KDMJujg3KCAWcr/Programovani-pro-deti-desktop-mobile?node-id=0%3A1)
-
-[Startup Studio](https://www.figma.com/file/VidXK3GhxvqaBD0M1qV8AiTw/Startup-studio-desktop-mobile?node-id=0%3A1)
-
-[Blockchain web](https://www.figma.com/file/POCJGJXlqCiapGxT4yUeBd/blockchain-web-topmonks?node-id=0%3A1)
+* [TopMonks.com](https://www.figma.com/file/DbvniEPJdbB5OLUonqkgYWT6/TopMonks-web?node-id=11%3A437)
+* [Programování pro deti](https://www.figma.com/file/BHVwvDKK14KDMJujg3KCAWcr/Programovani-pro-deti-desktop-mobile?node-id=0%3A1)
+* [Startup Studio](https://www.figma.com/file/VidXK3GhxvqaBD0M1qV8AiTw/Startup-studio-desktop-mobile?node-id=0%3A1)
+* [Blockchain web](https://www.figma.com/file/POCJGJXlqCiapGxT4yUeBd/blockchain-web-topmonks?node-id=0%3A1)
+* [TopMonks Caffè](https://www.figma.com/file/ZEmVn3299f6zECw0Bw98WIR6/Caff%C3%A9-TopMonks)
+* [Hlídač shopů](https://www.figma.com/file/hKLyCOXXN6LtS0NtVAbJzk/Hlidacshopu.cz)
+* [Hookamonk](https://www.figma.com/file/GWHnW8hVDbMjGglu2s0noG/Hookamonk-web)
 
 ## Issues
 
