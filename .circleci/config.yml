@@ -156,7 +156,9 @@ jobs:
             mkdir -p ./results
             yarn test:ava
             LHCI_TOKEN=$(cat websites.json | jq -rM '.["<< parameters.site_name >>"] | .["lh-token"] | @text')
-            yarn lhci autorun --upload.token="${LHCI_TOKEN}" --upload.extraHeaders.Authorization="Basic ${LHCI_BASIC_AUTH}"
+            yarn lhci autorun --upload.token="${LHCI_TOKEN}" \
+              --upload.extraHeaders.Authorization="Basic ${LHCI_BASIC_AUTH}" \
+              --upload.urlReplacementPatterns="s/^/\/<< parameters.site_name >>/"
       - store_artifacts:
           path: ./results
       - store_artifacts:
