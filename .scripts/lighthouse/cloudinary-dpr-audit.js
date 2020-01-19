@@ -22,7 +22,7 @@ class CloudinaryDprAudit extends Audit {
       x => x.src.indexOf("https://res.cloudinary.com") === 0
     );
     const noDpr = cloudinaryImages.filter(
-      x => x.src.indexOf("drp_") === -1
+      x => x.src.indexOf("dpr_") === -1
     );
     const passed = noDpr.length === 0;
 
