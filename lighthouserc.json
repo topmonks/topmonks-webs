@@ -4,6 +4,7 @@
       "numberOfRuns": 1,
       "url": "https://localhost:8000/",
       "settings": {
+        "configPath": ".scripts/lighthouse/config.js",
         "skipAudits": [
           "themed-omnibox",
           "redirects-http",
