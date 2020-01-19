@@ -183,10 +183,10 @@ async function createPackageJsonScripts(name) {
 
   packageConfig.scripts[
     `start:${name}`
-  ] = `BLENDID_CONFIG_PATH=./${name}/config/ blendid`;
+  ] = `BLENDID_CONFIG_PATH=./${name}/config/ dotenv blendid`;
   packageConfig.scripts[
     `build:${name}`
-  ] = `BLENDID_CONFIG_PATH=./${name}/config/ blendid -- build`;
+  ] = `BLENDID_CONFIG_PATH=./${name}/config/ dotenv blendid -- build`;
 
   return fs.promises.writeFile(
     packageJsonPath,
