@@ -88,9 +88,10 @@
   <div class="tm-layout-wrapper mdc-layout-grid">
     <div class="mdc-layout-grid__inner">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
-        <img class="tm-img--fullwidth" src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_510/v1549630586/monkstage.topmonks.com/img_about_01.png"
-             srcset="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_510/v1549630586/monkstage.topmonks.com/img_about_01.png 1x,
-                      https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_2,w_510/v1549630586/monkstage.topmonks.com/img_about_01.png 2x"
+        <img class="tm-img--fullwidth"
+             src="{{ 'monkstage.topmonks.com/img_about_01.png' | cloudinaryUrl(width=510) }}"
+             srcset="{{ 'monkstage.topmonks.com/img_about_01.png' | cloudinaryUrl(width=510) }},
+                      {{ 'monkstage.topmonks.com/img_about_01.png' | cloudinaryUrl(width=510) }}"
              alt="foto z #monkstage" />
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-7-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone tm-section">
@@ -133,9 +134,10 @@
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
-          <img class="tm-img--fullwidth" src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_510/v1549630586/monkstage.topmonks.com/img_about_02.png"
-               srcset="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_510/v1549630586/monkstage.topmonks.com/img_about_02.png 1x,
-                      https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_2,w_510/v1549630586/monkstage.topmonks.com/img_about_02.png 2x"
+          <img class="tm-img--fullwidth"
+               src="{{ 'monkstage.topmonks.com/img_about_02.png' | cloudinaryUrl(width=510) }}"
+               srcset="{{ 'monkstage.topmonks.com/img_about_02.png' | cloudinaryUrl(width=510) }},
+                      {{ 'monkstage.topmonks.com/img_about_02.png' | cloudinaryUrl(width=510) }}"
                alt="foto z #monkstage" />
         </div>
       </div>
@@ -150,7 +152,7 @@
         <h2>Předchozí #monkstage</h2>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
-        <img src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto/v1549630586/monkstage.topmonks.com/img_about_03.png" class="tm-img--fullwidth" alt="foto z #monkstage">
+        <img src="{{ 'monkstage.topmonks.com/img_about_03.png' | cloudinaryUrl(width=200) }}" class="tm-img--fullwidth" alt="foto z #monkstage">
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
         <h3>Startup edition / 24.10.2018</h3>
@@ -169,9 +171,10 @@
 </section>
 
 <section class="tm-img--fullwidth-wrapper">
-  <img class="tm-img--fullwidth tm-img--gallery" src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_1915/monkstage.topmonks.com/img_gallery.png"
-       srcset="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_1915/monkstage.topmonks.com/img_gallery.png 1x,
-                      https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_2,w_1915/monkstage.topmonks.com/img_gallery.png 2x"
+  <img class="tm-img--fullwidth tm-img--gallery"
+       src=" {{ 'monkstage.topmonks.com/img_gallery.png' | cloudinaryUrl(width=1915) }}"
+       srcset="{{ 'monkstage.topmonks.com/img_gallery.png' | cloudinaryUrl(width=1815) }},
+               {{ 'monkstage.topmonks.com/img_gallery.png' | cloudinaryUrl(width=1915) }}"
        alt="fotogalerie z minulé Monk Stage" />
 </section>
 
