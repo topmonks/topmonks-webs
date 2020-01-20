@@ -244,7 +244,7 @@ a {
 
 
   .box--fintech {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1573890326/blockchain.topmonks.com/image.png") right center no-repeat, var(--mdc-theme--primary-bg);
+    background: cloudinaryUrl("blockchain.topmonks.com/image.png") right center no-repeat, var(--mdc-theme--primary-bg);
     background-size: 60%;
     box-shadow: 10px 10px 40px rgba(126, 80, 211, 0.2);
     @media (max-width: 739px) {
@@ -253,7 +253,7 @@ a {
   }
 
   .box--crypto {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1573890907/blockchain.topmonks.com/optionterminal.png") right bottom no-repeat, #368AF6;
+    background: cloudinaryUrl("blockchain.topmonks.com/optionterminal.png") right bottom no-repeat, #368AF6;
     background-size: 50%;
     box-shadow: 10px 10px 40px rgba(54, 138, 246, 0.2);
     @media (max-width: 739px) {
@@ -262,7 +262,7 @@ a {
   }
 
   .box--audit {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1573891118/blockchain.topmonks.com/DEBNK_Image.png") right center no-repeat, #131313;
+    background: cloudinaryUrl("blockchain.topmonks.com/DEBNK_Image.png") right center no-repeat, #131313;
     background-size: 40%;
     box-shadow: 10px 10px 40px rgba(19, 19, 19, 0.2);
     @media (max-width: 739px) {
@@ -271,7 +271,7 @@ a {
   }
 
   .box--incubator {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1573891244/blockchain.topmonks.com/Iphone_Image.png") right bottom no-repeat, #353363;
+    background: cloudinaryUrl("blockchain.topmonks.com/Iphone_Image.png") right bottom no-repeat, #353363;
     background-size: 35%;
     box-shadow: 10px 10px 40px rgba(53, 51, 99, 0.2);
     @media (max-width: 739px) {
@@ -280,7 +280,7 @@ a {
   }
 
   .box--defi {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1573891363/blockchain.topmonks.com/image-optionterminal.png") right bottom no-repeat, #395FF6;
+    background: cloudinaryUrl("blockchain.topmonks.com/image-optionterminal.png") right bottom no-repeat, #395FF6;
     background-size: 50%;
     box-shadow: 10px 10px 40px rgba(57, 95, 246, 0.2);
     @media (max-width: 739px) {
