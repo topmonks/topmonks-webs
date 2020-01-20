@@ -1,166 +1,161 @@
 {% extends 'layouts/topmonks.njk' %}
 {% block title %}Meet TopMonks{% endblock %}
 {% block head %}
-<link rel="stylesheet" href="/assets/css/meet-us.css">
+  <link rel="stylesheet" href="/assets/css/meet-us.css">
 {% endblock %}
 
 {% block content %}
 
-<section class="meet-us">
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div class="tm-page-header page_sub-title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2>You Can Meet Us Here</h2>
-        <p>We love meeting new interesting people. Come and meet us at some of our many
-          events.</p>
+  <section class="meet-us">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        <div class="tm-page-header page_sub-title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>You Can Meet Us Here</h2>
+          <p>We love meeting new interesting people. Come and meet us at some of our many
+            events.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="tm-events mdc-layout-grid">
-  <div class="mdc-layout-grid__inner">
-    <div class="tm-meetup box mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-wrapper">
-      <div class="mdc-layout-grid__inner">
-        <div
-          class="tm-meetup__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <img class="tm-meetup__img" alt="TopMonks Caffè"
-               src="https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,q_100/v1560325094/topmonks.com/Meet-us/tm-caffe-new.jpg"
-               srcset="https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_1/v1560325094/topmonks.com/Meet-us/tm-caffe-new.jpg 1x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_1.5/v1560325094/topmonks.com/Meet-us/tm-caffe-new.jpg 1.5x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_2/v1560325094/topmonks.com/Meet-us/tm-caffe-new.jpg 2x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_3/v1560325094/topmonks.com/Meet-us/tm-caffe-new.jpg 3x">
-        </div>
-        <div
-          class="tm-meetup__cell tm-events_text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <h3>TopMonks Caffè</h3>
-          <p>Every first Thursday of the month we hold regular meetup about everything we
-            are interested in. Balanced mix of technical and soft themes delivered by our
-            speakers and special guests.</p>
+  </section>
+  <section class="tm-events mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div class="tm-meetup box mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-wrapper">
+        <div class="mdc-layout-grid__inner">
+          <div
+            class="tm-meetup__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+            <img class="tm-meetup__img" alt="TopMonks Caffè"
+                 src="{{ "topmonks.com/Meet-us/tm-caffe-new.jpg" | cloudinaryUrl(crop="scale",height=273,width=428,quality=100) }}"
+                 srcset="{{ "topmonks.com/Meet-us/tm-caffe-new.jpg" | cloudinaryUrl(crop="scale",height=273,width=428) }} 1x,
+                         {{ "topmonks.com/Meet-us/tm-caffe-new.jpg" | cloudinaryUrl(crop="scale",height=273,width=428,dpr=1.5) }} 1.5x,
+                         {{ "topmonks.com/Meet-us/tm-caffe-new.jpg" | cloudinaryUrl(crop="scale",height=273,width=428,dpr=2) }} 2x">
+          </div>
+          <div
+            class="tm-meetup__cell tm-events_text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+            <h3>TopMonks Caffè</h3>
+            <p>Every first Thursday of the month we hold regular meetup about everything we
+              are interested in. Balanced mix of technical and soft themes delivered by our
+              speakers and special guests.</p>
 
-          <div class="links"><a href="https://caffe.topmonks.cz/" hreflang="cs">CHECK OUT LATEST CAFFE</a>
+            <div class="links"><a href="https://caffe.topmonks.cz/" hreflang="cs">CHECK OUT LATEST CAFFE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tm-meetup box mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-wrapper">
+        <div class="mdc-layout-grid__inner">
+          <div
+            class="tm-meetup__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+            <img class="tm-meetup__img" alt="Photo of TopMonks breakfast"
+                 src="{{ "topmonks.com/Meet-us/tm-breakfast-1.jpg" | cloudinaryUrl(crop="scale",height=273,width=428) }}"
+                 srcset="{{ "topmonks.com/Meet-us/tm-breakfast-1.jpg" | cloudinaryUrl(crop="scale",height=273,width=428) }} 1x,
+                         {{ "topmonks.com/Meet-us/tm-breakfast-1.jpg" | cloudinaryUrl(crop="scale",height=273,width=428,dpr=1.5) }} 1.5x,
+                         {{ "topmonks.com/Meet-us/tm-breakfast-1.jpg" | cloudinaryUrl(crop="scale",height=273,width=428,dpr=2) }} 2x">
+          </div>
+          <div
+            class="tm-meetup__cell tm-events_text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+            <h3>TopMonks breakfast</h3>
+            <p>Every Thursday we have breakfast together. This is not only an opportunity to
+              meet almost all the monks, but we also welcome the interesting people
+              outer&nbsp;space.</p>
+
+            <div class="links"><a href="mailto:happy@top&shy;monks.com">FEEL FREE TO COME ANYTIME</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tm-meetup box mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-wrapper">
+        <div class="mdc-layout-grid__inner">
+          <div
+            class="tm-meetup__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+            <img class="tm-meetup__img" alt="Photo from Startup Stage"
+                 src="{{ "topmonks.com/Meet-us/startup.png" | cloudinaryUrl(crop="scale",height=273,width=428) }}"
+                 srcset="{{ "topmonks.com/Meet-us/startup.png" | cloudinaryUrl(crop="scale",height=273,width=428) }} 1x,
+                         {{ "topmonks.com/Meet-us/startup.png" | cloudinaryUrl(crop="scale",height=273,width=428,dpr=1.5) }} 1.5x,
+                         {{ "topmonks.com/Meet-us/startup.png" | cloudinaryUrl(crop="scale",height=273,width=428,dpr=2) }} 2x">
+          </div>
+          <div
+            class="tm-meetup__cell tm-events_text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+            <h3>Startup Stage</h3>
+            <p>Three times a year we invite three interesting guests from the startup world
+              to share their experiences with us. Come and ask them whatever you want. This is
+              what is #startupstage about&nbsp;&mdash; no bullshit enjoyable&nbsp;night.</p>
+
+            <div class="links"><a href="https://youtu.be/3bRkKJ0Xzmo">FEEL THE VIBE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tm-meetup box mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-wrapper">
+        <div class="mdc-layout-grid__inner">
+          <div
+            class="tm-meetup__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+            <img class="tm-meetup__img" alt="Photo from CZ Podcast"
+                 src="{{ "topmonks.com/Meet-us/podcast.png" | cloudinaryUrl(crop="scale",height=273,width=428) }}"
+                 srcset="{{ "topmonks.com/Meet-us/podcast.png" | cloudinaryUrl(crop="scale",height=273,width=428) }} 1x,
+                         {{ "topmonks.com/Meet-us/podcast.png" | cloudinaryUrl(crop="scale",height=273,width=428,dpr=1.5) }} 1.5x,
+                         {{ "topmonks.com/Meet-us/podcast.png" | cloudinaryUrl(crop="scale",height=273,width=428,dpr=2) }} 2x">
+          </div>
+          <div
+            class="tm-meetup__cell tm-events_text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+            <h3>CZPodcast</h3>
+            <p>The most popular tech-podcast in Czech republic! Duo Filemon and Dagi +
+              interesting guest = fun and knowledge guaranteed!</p>
+
+            <div class="links"><a href="https://soundcloud.com/czpodcast-1">LISTEN TO THE PODCAST</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="tm-meetup box mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-wrapper">
-      <div class="mdc-layout-grid__inner">
-        <div
-          class="tm-meetup__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <img class="tm-meetup__img" alt="Photo of TopMonks breakfast"
-               src="https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,q_100/v1560325744/topmonks.com/Meet-us/tm-breakfast-1.jpg"
-               srcset="https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_1/v1560325744/topmonks.com/Meet-us/tm-breakfast-1.jpg 1x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_1.5/v1560325744/topmonks.com/Meet-us/tm-breakfast-1.jpg 1.5x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_2/v1560325744/topmonks.com/Meet-us/tm-breakfast-1.jpg 2x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_3/v1560325744/topmonks.com/Meet-us/tm-breakfast-1.jpg 3x">
+  </section>
+  <section class="other-events">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        <div class="page_sub-title main_page-title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Other events</h2>
+          <p>We hold conferences on the future of work and the blockchain. We are members
+            of many other dev events that we not only participate but also where we often
+            lecture.</p>
         </div>
         <div
-          class="tm-meetup__cell tm-events_text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <h3>TopMonks breakfast</h3>
-          <p>Every Thursday we have breakfast together. This is not only an opportunity to
-            meet almost all the monks, but we also welcome the interesting people
-            outer&nbsp;space.</p>
-
-          <div class="links"><a href="mailto:happy@top&shy;monks.com">FEEL FREE TO COME ANYTIME</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tm-meetup box mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-wrapper">
-      <div class="mdc-layout-grid__inner">
-        <div
-          class="tm-meetup__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <img class="tm-meetup__img" alt="Photo from Startup Stage"
-               src="https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto/v1544798429/topmonks.com/Meet-us/startup.png"
-               srcset="https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto/v1544798429/topmonks.com/Meet-us/startup.png 1x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_1.5/v1544798429/topmonks.com/Meet-us/startup.png 1.5x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_2/v1544798429/topmonks.com/Meet-us/startup.png 2x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_3/v1544798429/topmonks.com/Meet-us/startup.png 3x">
-        </div>
-        <div
-          class="tm-meetup__cell tm-events_text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <h3>Startup Stage</h3>
-          <p>Three times a year we invite three interesting guests from the startup world
-            to share their experiences with us. Come and ask them whatever you want. This is
-            what is #startupstage about&nbsp;&mdash; no bullshit enjoyable&nbsp;night.</p>
-
-       <div class="links"><a href="https://youtu.be/3bRkKJ0Xzmo">FEEL THE VIBE</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tm-meetup box mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-layout-wrapper">
-      <div class="mdc-layout-grid__inner">
-        <div
-          class="tm-meetup__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <img class="tm-meetup__img" alt="Photo from CZ Podcast"
-               src="https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto/v1544798611/topmonks.com/Meet-us/podcast.png"
-               srcset="https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto/v1544798611/topmonks.com/Meet-us/podcast.png 1x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_1.5/v1544798611/topmonks.com/Meet-us/podcast.png 1.5x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_2/v1544798611/topmonks.com/Meet-us/podcast.png 2x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_3/v1544798611/topmonks.com/Meet-us/podcast.png 3x">
-        </div>
-        <div
-          class="tm-meetup__cell tm-events_text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <h3>CZPodcast</h3>
-          <p>The most popular tech-podcast in Czech republic! Duo Filemon and Dagi +
-            interesting guest = fun and knowledge guaranteed!</p>
-
-          <div class="links"><a href="https://soundcloud.com/czpodcast-1">LISTEN TO THE PODCAST</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="other-events">
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div class="page_sub-title main_page-title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2>Other events</h2>
-        <p>We hold conferences on the future of work and the blockchain. We are members
-          of many other dev events that we not only participate but also where we often
-          lecture.</p>
-      </div>
-      <div
-        class="other-events_logos mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-desktop">
-        <a class="img-link" href="http://block-stars.com/"><img class="tm-meetup__img" alt="Blockstars logo"
-                                                                src="https://res.cloudinary.com/topmonks/image/upload/f_auto/v1544789647/loga/logo_blockstars.png"
-                                                                style="width: 219px"></a>
-        <a class="img-link" href="http://www.wisephora.com/"><img class="tm-meetup__img" alt="Wisephora logo"
-                                                                  src="https://res.cloudinary.com/topmonks/image/upload/f_auto/v1544789648/loga/logo_wisephora.png"
+          class="other-events_logos mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-desktop">
+          <a class="img-link" href="http://block-stars.com/"><img class="tm-meetup__img" alt="Blockstars logo"
+                                                                  src="{{ "loga/logo_blockstars.png" | cloudinaryUrl }}"
                                                                   style="width: 219px"></a>
-        <a class="img-link" href="https://coderetreat.cz/"><img class="tm-meetup__img" alt="Code Retreat CZ logo"
-                                                                src="https://res.cloudinary.com/topmonks/image/upload/f_auto/v1544789647/loga/logo_crcz.png"
-                                                                style="width: 219px"></a>
-        <a class="img-link" href="https://www.meetup.com/Lambda-Meetup-Group/"><img class="tm-meetup__img"
-                                                                                    alt="Prague Lambda logo"
-                                                                                    src="https://res.cloudinary.com/topmonks/image/upload/f_auto/v1544789647/loga/logo_praguelambda.png"
-                                                                                    style="width: 219px"></a>
-      </div>
-      <div
-        class="other-events_logos mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-desktop">
-        <a class="img-link" href="http://CodingDojo.cz"><img class="tm-meetup__img" alt="Coding Dojo logo"
-                                         src="https://res.cloudinary.com/topmonks/image/upload/v1544789647/loga/logo_codingdojo.png"
-                                         style="width: 219px"></a>
-
-        <a class="img-link" href="http://www.asociaceux.cz/"><img class="tm-meetup__img" alt="Asociace UX logo"
-                                                                  src="https://res.cloudinary.com/topmonks/image/upload/v1544789647/loga/logo_uxa.png"
+          <a class="img-link" href="http://www.wisephora.com/"><img class="tm-meetup__img" alt="Wisephora logo"
+                                                                    src="{{ "loga/logo_wisephora.png" | cloudinaryUrl }}"
+                                                                    style="width: 219px"></a>
+          <a class="img-link" href="https://coderetreat.cz/"><img class="tm-meetup__img" alt="Code Retreat CZ logo"
+                                                                  src="{{ "loga/logo_crcz.png" | cloudinaryUrl }}"
                                                                   style="width: 219px"></a>
-        <a class="img-link" href="http://devminutes.cz/"><img class="tm-meetup__img" alt="Dev Minutes logo"
-                                         src="https://res.cloudinary.com/topmonks/image/upload/v1544789647/loga/logo_devminutes.png"
-                                         style="width: 219px"></a>
+          <a class="img-link" href="https://www.meetup.com/Lambda-Meetup-Group/"><img class="tm-meetup__img"
+                                                                                      alt="Prague Lambda logo"
+                                                                                      src="{{ "loga/logo_praguelambda.png" | cloudinaryUrl }}"
+                                                                                      style="width: 219px"></a>
+        </div>
+        <div
+          class="other-events_logos mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-desktop">
+          <a class="img-link" href="http://CodingDojo.cz"><img class="tm-meetup__img" alt="Coding Dojo logo"
+                                                               src="{{ "loga/logo_codingdojo.png" | cloudinaryUrl }}"
+                                                               style="width: 219px"></a>
+
+          <a class="img-link" href="http://www.asociaceux.cz/"><img class="tm-meetup__img" alt="Asociace UX logo"
+                                                                    src="{{ "loga/logo_uxa.png" | cloudinaryUrl }}"
+                                                                    style="width: 219px"></a>
+          <a class="img-link" href="http://devminutes.cz/"><img class="tm-meetup__img" alt="Dev Minutes logo"
+                                                                src="{{ "loga/logo_devminutes.png" | cloudinaryUrl }}"
+                                                                style="width: 219px"></a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="gallery_img">
+  </section>
+  <section class="gallery_img">
     <div class="mdc-layout-grid__inner">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <img class="tm-meetup__img" alt="Blockstars logo"
-             src="https://res.cloudinary.com/topmonks/image/upload/c_scale,h_300,w_550/v1544796894/topmonks.com/Meet-us/img_meet7.png">
+             src="{{ "topmonks.com/Meet-us/img_meet7.png" | cloudinaryUrl(crop="scale",height=300,width=550) }}">
       </div>
     </div>
-</section>
-
+  </section>
 
 {% endblock %}

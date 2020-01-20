@@ -59,9 +59,10 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 tm-img-wrapper">
           <img title="Pricefx in-app screenshot"
                alt="[photo] Pricefx in-app screenshot"
-               src="https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,f_auto,dpr_auto/v1534518123/topmonks.com/pricefx_hero.png"
-               srcset="https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,f_auto,dpr_auto/v1534518123/topmonks.com/pricefx_hero.png 1x,
-                      https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,f_auto,dpr_2/v1534518123/topmonks.com/pricefx_hero.png 2x"/>
+               src="{{ "topmonks.com/pricefx_hero.png" | cloudinaryUrl(width=1008) }}"
+               srcset="{{ "topmonks.com/pricefx_hero.png" | cloudinaryUrl(width=1008) }} 1x,
+                       {{ "topmonks.com/pricefx_hero.png" | cloudinaryUrl(width=1008,dpr=1.5) }} 1.5x,
+                       {{ "topmonks.com/pricefx_hero.png" | cloudinaryUrl(width=1008,dpr=2) }} 2x"/>
         </div>
       </div>
     </div>
