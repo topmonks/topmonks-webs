@@ -18,12 +18,8 @@ module.exports = {
   html: {
     collections: ["events", "posters"],
     nunjucksRender: {
-      manageEnv(env) {
-        env.addFilter("split", (str, seperator) => str.split(seperator));
-        env.addFilter(
-          "transformation",
-          (s, t) => s && s.replace("/upload/", `/upload/${t}/`)
-        );
+      filters: {
+        transformation: (s, t) => s && s.replace("/upload/", `/upload/${t}/`)
       }
     }
   },
