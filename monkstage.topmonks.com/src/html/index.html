@@ -90,8 +90,8 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
         <img class="tm-img--fullwidth"
              src="{{ 'monkstage.topmonks.com/img_about_01.png' | cloudinaryUrl(width=510) }}"
-             srcset="{{ 'monkstage.topmonks.com/img_about_01.png' | cloudinaryUrl(width=510) }},
-                      {{ 'monkstage.topmonks.com/img_about_01.png' | cloudinaryUrl(width=510) }}"
+             srcset="{{ 'monkstage.topmonks.com/img_about_01.png' | cloudinaryUrl(width=510) }} 1x,
+                      {{ 'monkstage.topmonks.com/img_about_01.png' | cloudinaryUrl(width=510, dpr=2) }} 2x"
              alt="foto z #monkstage" />
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-7-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone tm-section">
@@ -136,8 +136,8 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
           <img class="tm-img--fullwidth"
                src="{{ 'monkstage.topmonks.com/img_about_02.png' | cloudinaryUrl(width=510) }}"
-               srcset="{{ 'monkstage.topmonks.com/img_about_02.png' | cloudinaryUrl(width=510) }},
-                      {{ 'monkstage.topmonks.com/img_about_02.png' | cloudinaryUrl(width=510) }}"
+               srcset="{{ 'monkstage.topmonks.com/img_about_02.png' | cloudinaryUrl(width=510) }} 1x,
+                      {{ 'monkstage.topmonks.com/img_about_02.png' | cloudinaryUrl(width=510, dpr=2) }} 2x"
                alt="foto z #monkstage" />
         </div>
       </div>
@@ -173,8 +173,8 @@
 <section class="tm-img--fullwidth-wrapper">
   <img class="tm-img--fullwidth tm-img--gallery"
        src=" {{ 'monkstage.topmonks.com/img_gallery.png' | cloudinaryUrl(width=1915) }}"
-       srcset="{{ 'monkstage.topmonks.com/img_gallery.png' | cloudinaryUrl(width=1815) }},
-               {{ 'monkstage.topmonks.com/img_gallery.png' | cloudinaryUrl(width=1915) }}"
+       srcset="{{ 'monkstage.topmonks.com/img_gallery.png' | cloudinaryUrl(width=1815) }} 1x,
+               {{ 'monkstage.topmonks.com/img_gallery.png' | cloudinaryUrl(width=1915,dpr=2) }} 2x"
        alt="fotogalerie z minulé Monk Stage" />
 </section>
 
