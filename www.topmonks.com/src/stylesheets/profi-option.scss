@@ -84,7 +84,7 @@ ul.polygon_green {
   }
 
   li::before {
-    content: url("https://res.cloudinary.com/topmonks/image/upload/v1556628327/topmonks.com/profi-option/polygon_yellow.svg");
+    content: cloudinaryUrl("topmonks.com/profi-option/polygon_yellow.svg");
     display: inline-block;
     width: 32px;
     color: #fed766;
@@ -95,11 +95,11 @@ ul.polygon_green {
 }
 
 ul.polygon_blue li::before {
-  content: url("https://res.cloudinary.com/topmonks/image/upload/v1556628327/topmonks.com/profi-option/polygon_blue.svg");
+  content: cloudinaryUrl("topmonks.com/profi-option/polygon_blue.svg");
 }
 
 ul.polygon_green li::before {
-  content: url("https://res.cloudinary.com/topmonks/image/upload/v1556628327/topmonks.com/profi-option/polygon_green.svg");
+  content: cloudinaryUrl("topmonks.com/profi-option/polygon_green.svg");
 }
 
 .title_box {
@@ -110,7 +110,6 @@ ul.polygon_green li::before {
   text-align: center;
 }
 
-// HEADER //
 .tm-logo {
   font-family: Futura, futura-pt, -apple-system, BlinkMacSystemFont, Roboto,
     "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
@@ -209,7 +208,6 @@ ul.polygon_green li::before {
   transition: all 0.2s;
   top: 0;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-  //background-color: #2d3d90;
   @media screen and (max-width: 839px) {
     position: fixed;
     background-color: #1a1d57;
@@ -264,7 +262,6 @@ ul.polygon_green li::before {
     height: 100vh;
     padding-top: 46px;
     transform: translate(calc(-100vw - 12px), -64px);
-    transform: translate(calc(-140vw - 12px), -64px);
     position: fixed;
     z-index: 3;
     transition: transform 0.3s;
@@ -291,7 +288,7 @@ ul.polygon_green li::before {
 .tm-menu__list a {
   color: #3c3c3b;
   text-decoration: none;
-  font-family: Lato;
+  font-family: Lato, sans-serif;
 }
 
 .tm-menu--horizontal .tm-menu__list {
@@ -316,7 +313,6 @@ ul.polygon_green li::before {
   margin-top: 16px;
 }
 
-// Section: Introduction //
 .intro {
   img {
     width: 100%;
@@ -354,7 +350,6 @@ ul.polygon_green li::before {
   }
 }
 
-// Section: Our Process //
 .process {
   .process_list {
     margin: 0 auto;
@@ -370,8 +365,6 @@ ul.polygon_green li::before {
     }
   }
 }
-
-// Section: Original Design Platform //
 
 .design {
   .our-design {
@@ -393,14 +386,11 @@ ul.polygon_green li::before {
   }
 }
 
-// Section: Visual and Testing //
 .analysis {
   .title_box {
     margin: 0 auto;
   }
 }
-
-// Section: Visual and Testing //
 
 .stylization {
   h2 {
@@ -504,7 +494,6 @@ ul.polygon_green li::before {
   }
 }
 
-// Section: Prototypes //
 .prototypes_design {
   margin: 0 -16px;
   @media screen and (min-width: 1024px) {
@@ -516,22 +505,21 @@ ul.polygon_green li::before {
   }
 }
 
-// Section: References //
 .references {
   @media screen and (min-width: 840px) {
     hr.mid-line {
       margin-top: 64px;
     }
     .box {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/v1556824260/topmonks.com/profi-option/quote.svg")
-        top 16% left 2% no-repeat;
+      background: cloudinaryUrl("topmonks.com/profi-option/quote.svg") top 16%
+        left 2% no-repeat;
       padding: 28px;
     }
   }
   @media (max-width: 839px) {
     .box {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/v1556824260/topmonks.com/profi-option/quote.svg")
-        top 10% left 3% no-repeat;
+      background: cloudinaryUrl("topmonks.com/profi-option/quote.svg") top 10%
+        left 3% no-repeat;
       padding: 28px 24px;
     }
     hr.mid-line {
@@ -552,7 +540,6 @@ ul.polygon_green li::before {
   }
 }
 
-// Section: Contact //
 .contact {
   h2,
   p {
@@ -604,7 +591,6 @@ ul.polygon_green li::before {
   }
 }
 
-// FOOTER //
 footer {
   font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -627,7 +613,7 @@ footer {
     background-color: #fff;
     border-radius: 52px;
     display: inline-block;
-    padding: 5px 8px 0px;
+    padding: 5px 8px 0;
 
     svg {
       background-color: #ffffff;
@@ -650,7 +636,6 @@ footer {
   }
 }
 
-// Tablets and Phones Devices //
 @media screen and (min-width: 840px) {
   body {
     line-height: 25px;

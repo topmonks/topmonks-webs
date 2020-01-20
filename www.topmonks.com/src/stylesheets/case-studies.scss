@@ -1,4 +1,3 @@
-/* CASE STUDIES SECTION START */
 .tm-case-studies {
   h3 {
     font-weight: 700;
@@ -55,9 +54,8 @@
     fill: currentColor;
   }
 
-  //svg logo colors
   .sprite--img_logo_pricefx {
-    --color-2: #CFCFCF;
+    --color-2: #cfcfcf;
   }
 }
 
@@ -76,51 +74,84 @@
 }
 
 .tm-case-studies__logo--gorealeurope .tm-bgnd-wrapper {
-  background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1541168133/topmonks.com/bgnd_cs_gorealeurope.png");
+  background-image: cloudinaryUrl(
+    "topmonks.com/bgnd_cs_gorealeurope.png",
+    $width: 322
+  );
 }
 
 .tm-case-studies__logo--pricefx .tm-bgnd-wrapper {
-  background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_pricefx.jpg");
+  background-image: cloudinaryUrl(
+    "topmonks.com/bgnd_cs_pricefx.jpg",
+    $width: 322
+  );
 }
 
 .tm-case-studies__logo--ceska-sporitelna .tm-bgnd-wrapper {
-  background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_cs.jpg");
+  background-image: cloudinaryUrl("topmonks.com/bgnd_cs_cs.jpg", $width: 322);
 }
 
 .tm-case-studies__logo--adler .tm-bgnd-wrapper {
-  background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_adler.jpg");
+  background-image: cloudinaryUrl(
+    "topmonks.com/bgnd_cs_adler.jpg",
+    $width: 322
+  );
 }
 
 .tm-case-studies__logo--profi-option .tm-bgnd-wrapper {
-  background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1569328524/topmonks.com/bgnd_profi-option.png");
+  background-image: cloudinaryUrl(
+    "topmonks.com/bgnd_profi-option.png",
+    $width: 322
+  );
 }
 
 .tm-case-studies__logo--xixoio .tm-bgnd-wrapper {
-  background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_auto,q_auto,f_auto/v1569328525/topmonks.com/bgnd_xixoio.png");
+  background-image: cloudinaryUrl("topmonks.com/bgnd_xixoio.png", $width: 322);
 }
 
 @media screen and (min-device-pixel-ratio: 2),
-screen and (min-resolution: 192dpi),
-screen and (min-resolution: 2dppx) {
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
   .tm-case-studies__logo--gorealeurope .tm-bgnd-wrapper {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1541168133/topmonks.com/bgnd_cs_gorealeurope.png");
+    background-image: cloudinaryUrl(
+      "topmonks.com/bgnd_cs_gorealeurope.png",
+      $width: 322,
+      $dpr: 2
+    );
   }
   .tm-case-studies__logo--pricefx .tm-bgnd-wrapper {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_pricefx.jpg");
+    background-image: cloudinaryUrl(
+      "topmonks.com/bgnd_cs_pricefx.jpg",
+      $width: 322,
+      $dpr: 2
+    );
   }
   .tm-case-studies__logo--ceska-sporitelna .tm-bgnd-wrapper {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_cs.jpg");
+    background-image: cloudinaryUrl(
+      "topmonks.com/bgnd_cs_cs.jpg",
+      $width: 322,
+      $dpr: 2
+    );
   }
   .tm-case-studies__logo--adler .tm-bgnd-wrapper {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1532593856/topmonks.com/bgnd_cs_adler.jpg");
+    background-image: cloudinaryUrl(
+      "topmonks.com/bgnd_cs_adler.jpg",
+      $width: 322,
+      $dpr: 2
+    );
   }
   .tm-case-studies__logo--profi-option .tm-bgnd-wrapper {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1569328524/topmonks.com/bgnd_profi-option.png");
+    background-image: cloudinaryUrl(
+      "topmonks.com/bgnd_profi-option.png",
+      $width: 322,
+      $dpr: 2
+    );
   }
-
   .tm-case-studies__logo--xixoio .tm-bgnd-wrapper {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/w_322,dpr_2,q_auto,f_auto/v1569328525/topmonks.com/bgnd_xixoio.png");
+    background-image: cloudinaryUrl(
+      "topmonks.com/bgnd_xixoio.png",
+      $width: 322,
+      $dpr: 2
+    );
   }
 }
-
-/* CASE STUDIES SECTION END */

@@ -1,34 +1,47 @@
 main {
   @media (min-width: 1301px) and (max-width: 1800px) {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,w_440/v1551973762/topmonks.com/jobs/img_side.png") 0 240px no-repeat;
+    background: cloudinaryUrl("topmonks.com/jobs/img_side.png", $width: 440) 0
+      240px no-repeat;
     background-size: 440px 571px;
   }
   @media (min-width: 1301px) and (max-width: 1800px) and (min-resolution: 1.5dppx) {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,w_440,dpr_1.5/v1551973762/topmonks.com/jobs/img_side.png");
+    background-image: cloudinaryUrl(
+      "topmonks.com/jobs/img_side.png",
+      $width: 440,
+      $dpr: 1.5
+    );
   }
   @media (min-width: 1301px) and (max-width: 1800px) and (min-resolution: 2dppx) {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,w_440,dpr_2/v1551973762/topmonks.com/jobs/img_side.png");
-  }
-  @media (min-width: 1301px) and (max-width: 1800px) and (min-resolution: 3dppx) {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,w_440,dpr_3/v1551973762/topmonks.com/jobs/img_side.png");
+    background-image: cloudinaryUrl(
+      "topmonks.com/jobs/img_side.png",
+      $width: 440,
+      $dpr: 2
+    );
   }
   @media (min-width: 1024px) and (max-width: 1300px) {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,w_336/v1551973762/topmonks.com/jobs/img_side.png") 0 280px no-repeat;
+    background: cloudinaryUrl("topmonks.com/jobs/img_side.png", $width: 336) 0
+      280px no-repeat;
     background-size: 336px 467px;
   }
   @media (min-width: 1024px) and (max-width: 1300px) and (min-resolution: 1.5dppx) {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_336,dpr_1.5/v1551973762/topmonks.com/jobs/img_side.png");
+    background-image: cloudinaryUrl(
+      "topmonks.com/jobs/img_side.png",
+      $width: 336,
+      $dpr: 1.5
+    );
   }
   @media (min-width: 1024px) and (max-width: 1300px) and (min-resolution: 2dppx) {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_336,dpr_2/v1551973762/topmonks.com/jobs/img_side.png");
-  }
-  @media (min-width: 1024px) and (max-width: 1300px) and (min-resolution: 3dppx) {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,w_336,dpr_3/v1551973762/topmonks.com/jobs/img_side.png");
+    background-image: cloudinaryUrl(
+      "topmonks.com/jobs/img_side.png",
+      $width: 336,
+      $dpr: 2
+    );
   }
   background-position-x: 0;
 }
 
-p, a {
+p,
+a {
   line-height: 26px;
 }
 
@@ -38,18 +51,18 @@ p, a {
   }
 
   p {
-    color: #9B9B9B;
+    color: #9b9b9b;
     line-height: 35px;
   }
 }
 
 .page_sub-title_left {
-  h2, p {
+  h2,
+  p {
     text-align: left;
   }
 }
 
-//* Section: Main - Jobs*//
 #jobs-main {
   line-height: 26px;
 
@@ -72,7 +85,7 @@ p, a {
 
     span.location {
       float: right;
-      color: #9B9B9B;
+      color: #9b9b9b;
     }
   }
 
@@ -85,7 +98,6 @@ p, a {
     }
   }
 
-
   .box {
     @media screen and (min-width: 840px) {
       padding: 18px 40px 38px;
@@ -94,13 +106,7 @@ p, a {
       min-height: 300px;
     }
   }
-
 }
-
-
-//
-
-//* Section: TopMonks Values *//
 
 .tm-values {
   .button {
@@ -119,11 +125,11 @@ p, a {
   }
 
   .value-orange {
-    color: #FE664B;
+    color: #fe664b;
   }
 
   .value-purple {
-    color: #5C5FD4;
+    color: #5c5fd4;
   }
 
   @media (max-width: 480px) {
@@ -132,10 +138,6 @@ p, a {
     }
   }
 }
-
-//
-
-//* Lines - hr *//
 
 .line-between {
   hr {
@@ -152,9 +154,9 @@ p, a {
   border: none;
 
   hr {
-    background-color: #F3F3F3;
+    background-color: #f3f3f3;
     @media (max-width: 840px) {
-      background-color: #F3F3F3;
+      background-color: #f3f3f3;
     }
   }
 }
@@ -163,16 +165,13 @@ p, a {
   border: none;
 
   hr {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     @media (max-width: 840px) {
-      background-color: #F3F3F3;
+      background-color: #f3f3f3;
     }
   }
 }
 
-//
-
-//* Section: TopMonks Projects *//
 .tm-projects {
   svg {
     padding: 8px 0;
@@ -188,19 +187,14 @@ p, a {
   }
 }
 
-//
-
-//* Section: Gallery *//
 #gallery {
   display: none;
 }
 
-//
-
-//* Section: TopMonks Jobs Info *//
-
 .tm-jobs-info {
-  h2, h3, p {
+  h2,
+  h3,
+  p {
     text-align: left;
   }
 
@@ -237,8 +231,6 @@ p, a {
   }
 }
 
-//
-
 .middle-text {
   align-self: center;
   @media screen and (min-width: 840px) {
@@ -249,11 +241,10 @@ p, a {
   }
 }
 
-//* Other Media Screens *//
-
 @media screen and (min-width: 1030px) {
   body {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto/v1548594687/topmonks.com/rounded_bgnd.png") center 46.5% no-repeat;
+    background: cloudinaryUrl("topmonks.com/rounded_bgnd.png") center 46.5%
+      no-repeat;
     background-size: 100%;
   }
   #gallery {
@@ -268,7 +259,6 @@ p, a {
     }
   }
 }
-
 
 @media (max-width: 840px) {
   .mdc-layout-grid {
@@ -285,5 +275,3 @@ p, a {
     margin: 8px auto;
   }
 }
-
-//
