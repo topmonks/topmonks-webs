@@ -158,7 +158,7 @@ jobs:
             LHCI_TOKEN=$(cat websites.json | jq -rM '.["<< parameters.site_name >>"] | .["lh-token"] | @text')
             yarn lhci autorun --upload.token="${LHCI_TOKEN}" \
               --upload.extraHeaders.Authorization="Basic ${LHCI_BASIC_AUTH}" \
-              --upload.urlReplacementPatterns="s/^/:<< parameters.site_name >>/"
+              --upload.urlReplacementPatterns="s/^/: << parameters.site_name >>/"
       - store_artifacts:
           path: ./results
       - store_artifacts:
