@@ -92,7 +92,7 @@ ul {
 .main_info {
   padding-top: 80px;
   padding-bottom: 120%;
-  background: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_510/v1536071311/prodeti.topmonks.cz/bgnd_boy.png")
+  background: cloudinaryUrl("prodeti.topmonks.cz/bgnd_boy.png", $width: 510)
     no-repeat center bottom;
   background-size: 90% auto;
   @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -101,7 +101,7 @@ ul {
     screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: url("https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_2,w_510/v1536071311/prodeti.topmonks.cz/bgnd_boy.png");
+    background-image: cloudinaryUrl("prodeti.topmonks.cz/bgnd_boy.png", $width: 510);
   }
 }
 
