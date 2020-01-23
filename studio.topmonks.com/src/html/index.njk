@@ -31,12 +31,12 @@
     property="og:image"
     content="https://studio.topmonks.com/og-image.png"
   />
-  {% include 'shared/analytics.html' %}
-  <link rel="stylesheet" href="https://use.typekit.net/her1ktw.css">
+  {% include 'shared/analytics.njk' %}
+  {% include "common/lato.njk" %}
   <link rel="stylesheet" href="/assets/css/typography.css"/>
   <link rel="stylesheet" href="/assets/css/main.css"/>
 </head>
-{% include 'shared/header.html' %}
+{% include 'shared/header.njk' %}
 
 <body>
 <div class="tm-content-wrapper">
@@ -1056,7 +1056,7 @@
 </div>
 <link rel="stylesheet" href="/assets/css/footer.css"/>
 {% set extraNavLinks = { 'EU Grants' : 'eu-grants.pdf'} %}
-{% include 'common/footer.html' %}
+{% include 'shared/footer.njk' %}
 
 <script type="module">
   function toggleFieldState(elm) {

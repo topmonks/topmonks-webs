@@ -4,18 +4,15 @@
   <meta charset="utf-8">
   <title>{% block title %}{{ language[page].title }}{% endblock %}</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width">
+  <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width,Save-Data">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
-
-  <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="//res.cloudinary.com">
-  <link rel="preconnect" href="//cdnjs.cloudflare.com">
-  <link rel="preconnect" href="//use.typekit.net">
-  <link rel="preconnect" href="//cdn.jsdelivr.net">
-  <link rel="preconnect" href="//www.google-analytics.com">
+  <link rel="preconnect" href="//www.google-analytics.com" crossorigin>
+  <link rel="preconnect" href="//www.google.com" crossorigin>
+  <link rel="preconnect" href="//www.google.cz" crossorigin>
+  <link rel="preconnect" href="//stats.g.doubleclick.net" crossorigin>
   <link rel="preconnect" href="//static.hotjar.com">
-  <link rel="preload" as="style" href="https://use.typekit.net/her1ktw.css">
   <link rel="preload" as="script" href="https://www.googletagmanager.com/gtm.js?id=GTM-WW7T986">
 
   <!--[if lt IE 9]>
@@ -23,23 +20,23 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" href="https://use.typekit.net/her1ktw.css">
+  {% include "common/futura-lato.njk" %}
   <link rel="stylesheet" href="/assets/css/typography.css">
   <link rel="stylesheet" href="/assets/css/main.css">
 
   {% block head %}{% endblock %}
-  {% include "shared/app-icons.html" %}
-  {% include 'shared/analytics.html' %}
+  {% include "shared/app-icons.njk" %}
+  {% include 'shared/analytics.njk' %}
 </head>
 <body id="page-{{page}}">
 
-{% include 'shared/header.html' %}
+{% include 'shared/header.njk' %}
 
 <main>
   {% block content %}{% endblock %}
 </main>
 
-{% include 'shared/footer.html' %}
+{% include 'shared/footer.njk' %}
 
 {% block javascript %}
 {% endblock %}

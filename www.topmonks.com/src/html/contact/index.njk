@@ -1,5 +1,6 @@
 {% extends 'layouts/topmonks.njk' %}
 {% from 'macros/helpers.njk' import avatar %}
+{% from 'common/helpers.njk' import map %}
 {% set page = 'topmonks-contact' %}
 {% block title %}TopMonks Contacts{% endblock %}
 
@@ -225,15 +226,6 @@
       </div>
     </section>
 
-    {% macro map(alt, src) %}
-      <img alt="{{ alt }}"
-           src="{{ src | cloudinaryUrl(crop="scale",width=366) }}"
-           srcset="{{ src | cloudinaryUrl(crop="scale",width=366) }} 1x,
-               {{ src | cloudinaryUrl(crop="scale",width=366,dpr=1.5) }} 1.5x,
-               {{ src | cloudinaryUrl(crop="scale",width=366,dpr=2) }} 2x"
-           width="100%">
-    {% endmacro %}
-
     <section id="offices" class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -243,7 +235,7 @@
              itemtype="https://schema.org/Organization"
              id="prague">
           <a href="https://goo.gl/maps/SBK1BRsmgu22" class="map" title="Show Prague Office on map">
-            {{ map(alt="[mapa] Praha Spořilov", src="v1544699864/topmonks.com/Contact/map_prague.png") }}
+            {{ map(alt="[mapa] Praha Spořilov", src="topmonks.com/Contact/map_prague.png") }}
           </a>
           <div class="content">
             <h3 itemprop="name">Prague</h3>

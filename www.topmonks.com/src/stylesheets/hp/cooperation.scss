@@ -23,7 +23,7 @@
       display: inline-block;
       width: 145px;
     }
-    .-img_logo_adler {
+    .sprite--img_logo_adler {
       width: 100px;
     }
   }
@@ -32,11 +32,11 @@
     text-align: center;
   }
   //svg logo colors
-  .-img_logo_pricefx {
+  .sprite--img_logo_pricefx {
     --color-1: #31b4e7;
     --color-2: #414142;
   }
-  .-img_logo_erste-group {
+  .sprite--img_logo_erste-group {
     --color-1: #eb2227;
     --color-2: #0a4a7b;
   }

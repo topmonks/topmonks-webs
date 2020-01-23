@@ -6,9 +6,8 @@
   padding: 0;
 }
 
-
 .page-bgnd {
-  background: url("https://res.cloudinary.com/topmonks/image/upload/v1565755279/TM%20Subpages/subbages_shadow-bgnd.png") center no-repeat;
+  background: cloudinaryUrl("TM%20Subpages/subbages_shadow-bgnd.png") center no-repeat;
   background-size: 100%;
 }
 

@@ -1,11 +1,11 @@
 main {
   @media (min-width: 1301px) and (max-width: 1800px) {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1551973762/topmonks.com/jobs/img_side.png") center 6.5% no-repeat;
+    background: cloudinaryUrl("topmonks.com/jobs/img_side.png") center 6.5% no-repeat;
     background-size: 440px 571px;
     background-position-x: 0;
   }
   @media (min-width: 1024px) and (max-width: 1300px) {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1551973762/topmonks.com/jobs/img_side.png") center 6.5% no-repeat;
+    background: cloudinaryUrl("topmonks.com/jobs/img_side.png") center 6.5% no-repeat;
     background-size: 336px 467px;
     background-position-x: 0;
   }

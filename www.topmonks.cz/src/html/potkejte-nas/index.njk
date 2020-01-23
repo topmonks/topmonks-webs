@@ -1,4 +1,4 @@
-{% extends 'layouts/topmonks.html' %}
+{% extends 'layouts/topmonks.njk' %}
 {% block title %}Kde nás najdete - TopMonks{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="/assets/css/meet-us.css">
@@ -23,12 +23,11 @@
       <div class="mdc-layout-grid__inner">
         <div
           class="tm-meetup__cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <img class="tm-meetup__img" alt="TopMonks Caffè"
-               src="https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,q_100/v1560325094/topmonks.com/Meet-us/tm-caffe-new.jpg"
-               srcset="https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_1/v1560325094/topmonks.com/Meet-us/tm-caffe-new.jpg 1x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_1.5/v1560325094/topmonks.com/Meet-us/tm-caffe-new.jpg 1.5x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_2/v1560325094/topmonks.com/Meet-us/tm-caffe-new.jpg 2x,
-                       https://res.cloudinary.com/topmonks/image/upload/c_scale,h_273,w_428,f_auto,dpr_3/v1560325094/topmonks.com/Meet-us/tm-caffe-new.jpg 3x">
+          <img class="tm-meetup__img" alt="TopMonks Caffè" loading="lazy"
+               src="{{ "topmonks.com/Meet-us/tm-caffe-new.jpg" | cloudinaryUrl(crop=scale,height=273,width=428,quality=100) }} "
+               srcset="{{ "topmonks.com/Meet-us/tm-caffe-new.jpg" | cloudinaryUrl(crop=scale,height=273,width=428) }} 1x,
+                       {{ "topmonks.com/Meet-us/tm-caffe-new.jpg" | cloudinaryUrl(crop=scale,height=273,width=428,dpr=1.5) }} 1.5x,
+                       {{ "topmonks.com/Meet-us/tm-caffe-new.jpg" | cloudinaryUrl(crop=scale,height=273,width=428,dpr=2) }} 2x">
         </div>
         <div
           class="tm-meetup__cell tm-events_text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">

@@ -1,0 +1,8 @@
+{% macro map(alt, src) %}
+  <img alt="{{ alt }}"
+       src="{{ src | cloudinaryUrl(crop="scale",width=366) }}"
+       srcset="{{ src | cloudinaryUrl(crop="scale",width=366) }} 1x,
+                   {{ src | cloudinaryUrl(crop="scale",width=366,dpr=1.5) }} 1.5x,
+                   {{ src | cloudinaryUrl(crop="scale",width=366,dpr=2) }} 2x"
+       width="100%">
+{% endmacro %}

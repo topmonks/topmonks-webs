@@ -1,4 +1,4 @@
-{% extends 'layouts/topmonks.html' %}
+{% extends 'layouts/topmonks.njk' %}
 {% set page = 'topmonks-it-retail' %}
 {% block title %}IT Retail - TopMonks{% endblock %}
 
@@ -18,7 +18,7 @@
 <style>
   @media not all, screen and (min-resolution: 192dpi) and (min-width: 480px), screen and (min-resolution: 2dppx) and (min-width: 480px) {
     body {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto/v1566356228/TM%20Subpages/it-retail_bgnd.png") no-repeat right calc(30% - 430px) top;
+      background: url("{{ "TM%20Subpages/it-retail_bgnd.png" | cloudinaryUrl(width=919,dpr=2) }}") no-repeat right calc(30% - 430px) top;
       background-size: 919px auto;
       overflow-x: hidden;
     }
@@ -26,14 +26,14 @@
 
   @media screen and (min-width: 480px) {
     body {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto/v1566356228/TM%20Subpages/it-retail_bgnd.png") no-repeat right calc(30% - 330px) top -10px;
+      background: url("{{ "TM%20Subpages/it-retail_bgnd.png" | cloudinaryUrl(width=730) }}") no-repeat right calc(30% - 330px) top -10px;
       background-size: 730px auto;
       overflow-x: hidden;
     }
   }
   @media (min-width: 1800px) {
     body {
-      background: url("https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto/v1566356228/TM%20Subpages/it-retail_bgnd.png") no-repeat right calc(30% - 430px) top -10px;
+      background: url("{{ "TM%20Subpages/it-retail_bgnd.png" | cloudinaryUrl(width=989) }}") no-repeat right calc(30% - 430px) top -10px;
       background-size: 989px auto;
       overflow-x: hidden;
     }

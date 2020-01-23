@@ -1,4 +1,5 @@
-{% extends 'layouts/topmonks.html' %}
+{% extends 'layouts/topmonks.njk' %}
+{% from 'common/helpers.njk' import map %}
 {% set page = 'topmonks-kontakt' %}
 {% block title %}Kontakt - TopMonks{% endblock %}
 
@@ -45,7 +46,7 @@
   }
 
   body {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1543140261/topmonks.com/bngd_site.png") center 30% no-repeat;
+    background: url({{ "topmonks.com/bngd_site.png" | cloudinaryUrl }}) center 30% no-repeat;
     background-size: 100%;
   }
 
@@ -199,9 +200,7 @@
            itemtype="https://schema.org/Organization"
            id="prague">
         <a href="https://goo.gl/maps/SBK1BRsmgu22" class="map" title="Show Prague Office on map">
-          <img alt="[mapa] Praha Spořilov"
-               src="https://res.cloudinary.com/topmonks/image/upload/v1544699864/topmonks.com/Contact/map_prague.png"
-               width="100%">
+          {{ map(alt="[mapa] Praha Spořilov", src="topmonks.com/Contact/map_prague.png") }}
         </a>
         <div class="content">
           <h3 itemprop="name">Praha</h3>
@@ -225,9 +224,7 @@
            itemtype="https://schema.org/Organization"
            id="ostrava">
         <a href="https://goo.gl/maps/SkoWqfoKgg12" class="map" title="Show Ostrava Office on map">
-          <img alt="[mapa] Ostrava"
-               src="https://res.cloudinary.com/topmonks/image/upload/v1544690834/topmonks.com/Contact/map_ostrava.png"
-               width="100%">
+          {{ map(alt="[mapa] Praha Spořilov", src="topmonks.com/Contact/map_ostrava.png") }}
         </a>
         <div class="content">
           <h3 itemprop="name">Ostrava</h3>
@@ -251,9 +248,7 @@
            itemtype="https://schema.org/Organization"
            id="San Francisco">
         <a href="https://goo.gl/maps/YAJRUb1rDox" class="map" title="Show San Francisco Office on map">
-          <img alt="[mapa] San Francisco"
-               src="https://res.cloudinary.com/topmonks/image/upload/v1544690861/topmonks.com/Contact/map_sanfrancisco.png"
-               width="100%">
+          {{ map(alt="[mapa] Praha Spořilov", src="topmonks.com/Contact/map_sanfrancisco.png") }}
         </a>
         <div class="content">
           <h3 itemprop="name">San Francisco</h3>
@@ -267,10 +262,10 @@
               <span itemprop="addressCountry">United States</span>
             </div>
             <a href="https://goo.gl/maps/UXjifMwu2h42" class="button" data-marker="san-francisco">ukázat na mapě</a>
-            <!--  <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-                <meta itemprop="latitude" content="37.336482">
-                <meta itemprop="longitude" content="-121.8905285">
-              </div>-->
+            <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+              <meta itemprop="latitude" content="37.7810763">
+              <meta itemprop="longitude" content="-122.4101207">
+            </div>
           </div>
         </div>
       </div>

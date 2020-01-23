@@ -1,4 +1,4 @@
-{% extends 'layouts/topmonks.html' %}
+{% extends 'layouts/topmonks.njk' %}
 {% set page = 'topmonks-bezpecnostni-audit' %}
 {% block title %}Bezpečnostní audit - TopMonks{% endblock %}
 
@@ -345,7 +345,9 @@
             <img alt="[photo] Ondrej Tupý"
               loading="lazy"
               src="https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_auto,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy"
-              srcset="https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_1,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy, https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_1.5,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy 1.5x, https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_2,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy 2x, https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_3,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy 3x"
+              srcset="https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_1,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy 1x,
+                      https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_1.5,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy 1.5x,
+                       https://res.cloudinary.com/topmonks/image/fetch/w_112,dpr_2,f_auto/https://insight.topmonks.com/avatar/ondrej-tupy 2x"
               onerror="this.onerror=null; this.src='/assets/img/monk_logo-c877778634.png'"
               width="112" height="112">
           </div>

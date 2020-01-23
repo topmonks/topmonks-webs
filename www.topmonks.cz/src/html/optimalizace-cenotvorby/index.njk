@@ -1,4 +1,4 @@
-{% extends 'layouts/topmonks.html' %}
+{% extends 'layouts/topmonks.njk' %}
 {% set page = 'topmonks-optimalizace-cenotvorby' %}
 {% block title %}Konzultace Inteligentní Cenotvorby - TopMonks{% endblock %}
 
@@ -94,7 +94,10 @@
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <img
-          src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto/v1565471053/TM%20Subpages/consultation_desktop-img.png"
+          src="{{ "TM%20Subpages/consultation_desktop-img.png" | cloudinaryUrl }}"
+          srcset="{{ "TM%20Subpages/consultation_desktop-img.png" | cloudinaryUrl }} 1x,
+                  {{ "TM%20Subpages/consultation_desktop-img.png" | cloudinaryUrl(dpr=1.5) }} 1.5x,
+                  {{ "TM%20Subpages/consultation_desktop-img.png" | cloudinaryUrl(dpr=2) }} 2x"
           alt="Obrázek pro cenotvorbu pro naše zákazníky">
       </div>
       <div class="button mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
