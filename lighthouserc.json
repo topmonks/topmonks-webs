@@ -32,7 +32,9 @@
         "uses-long-cache-ttl": "off",
         "meta-description": "off",
         "errors-in-console": "off",
-        "offscreen-images": "off"
+        "offscreen-images": "off",
+        "color-contrast": "off",
+        "duplicate-id": "off"
       }
     },
     "upload": {
