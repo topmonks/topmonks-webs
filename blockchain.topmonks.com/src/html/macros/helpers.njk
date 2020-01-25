@@ -1,0 +1,30 @@
+{% macro blogImg(alt, src) %}
+  <picture>
+    <source media="screen and (max-width: 479px)"
+            srcset="{{ src | cloudinaryUrl(width=368,height=184) }} 1x,
+                        {{ src | cloudinaryUrl(width=368,height=184,dpr=1.5) }} 1.5x,
+                        {{ src | cloudinaryUrl(width=368,height=184,dpr=2) }} 2x">
+    <source media="screen and (min-width: 480px) and (max-width: 839px)"
+            srcset="{{ src | cloudinaryUrl(width=360,height=180) }} 1x,
+                        {{ src | cloudinaryUrl(width=360,height=180,dpr=1.5) }} 1.5x,
+                        {{ src | cloudinaryUrl(width=360,height=180,dpr=2) }} 2x">
+    <source media="screen and (min-width: 840px)"
+            srcset="{{ src | cloudinaryUrl(width=284,height=142) }} 1x,
+                        {{ src | cloudinaryUrl(width=284,height=142,dpr=1.5) }} 1.5x,
+                        {{ src | cloudinaryUrl(width=284,height=142,dpr=2) }} 2x">
+    <img alt="{{ alt }}" loading="lazy"
+         width="284" height="142"
+         class="responsive"
+         src="{{ src | cloudinaryUrl(width=284,height=142,dpr="auto") }}">
+  </picture>
+{% endmacro %}
+
+{% macro avatar(alt, src, size) %}
+  <img class="person__photo" loading="lazy"
+       src="{{ src | cloudinaryUrl(width=size,height=size,dpr="auto") }}"
+       srcset="{{ src | cloudinaryUrl(width=size,height=size) }} 1x,
+               {{ src | cloudinaryUrl(width=size,height=size,dpr=1.5) }} 1.5x,
+               {{ src | cloudinaryUrl(width=size,height=size,dpr=2) }} 2x"
+       alt="{{ alt }}" width="{{ size }}"
+       height="{{ size }}">
+{% endmacro %}

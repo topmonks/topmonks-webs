@@ -1,6 +1,6 @@
-{% set articlesList = articles[2019] | list %}
-{% set latestArticle = articlesList | last %}
-
+{%- from "macros/helpers.njk" import avatar -%}
+{%- set articlesList = articles[2019] | list -%}
+{%- set latestArticle = articlesList | last -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -133,8 +133,7 @@
 </section>
 
 {% macro mediaImage(path) %}
-  <img alt="Picture of the Article" loading="lazy" src="/images/articles-img/{{ article.picture }}" width="100%"
-       height="100%">
+  <img alt="Picture of the Article" class="responsive" loading="lazy" src="/images/articles-img/{{ article.picture }}">
 {% endmacro %}
 
 {% macro mediaArticle(article, images) %}
@@ -143,13 +142,12 @@
     <article class="">
       <a href="{{ article.link }}" class="">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <img alt="{{ article.title }}" loading="lazy" width="100%" src="/images/articles-img/{{ article.picture }}">
+          <img alt="{{ article.title }}" loading="lazy" class="responsive" src="/images/articles-img/{{ article.picture }}">
           <div class="blog__box-body">
             <time datetime="{{ article.published }}" class="media__date">{{ article.published | longDate("en") }}</time>
             <h3>{{ article.title }}</h3>
             <div class="personal__id">
-              <img class="person__photo" loading="lazy" src="{{ article.authorImage }}" alt="{{ article.author }}"
-                   width="32" height="32">
+              {{ avatar("photo of " + article.author, article.authorImage, 32) }}
               <span class="name">{{ article.author }}</span>
             </div>
             <div class="article-link">

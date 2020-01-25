@@ -10,6 +10,9 @@ footer {
     li {
       list-style: none;
       padding-left: 0;
+      @media screen and (max-width: 839px) {
+        line-height: 37px;
+      }
       a {
         color: var(--mdc-theme-text-primary-on-dark);
       }

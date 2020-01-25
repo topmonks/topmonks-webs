@@ -83,6 +83,11 @@ a {
   text-decoration: none;
 }
 
+img.responsive {
+  width: 100%;
+  height: auto;
+}
+
 .button {
   background: var(--mdc-theme--primary-bg);
   box-shadow: 10px 10px 40px rgba(126, 80, 211, 0.2);

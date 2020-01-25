@@ -1,6 +1,6 @@
+{%- from "macros/helpers.njk" import avatar, blogImg -%}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Blockchain by TopMonks</title>
@@ -8,6 +8,7 @@
   <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width,Save-Data">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <link rel="preconnect" href="//fonts.googleapis.com">
+  <link rel="preconnect" href="//www.googletagmanager.com">
   <link rel="preconnect" href="//www.google-analytics.com" crossorigin>
   <link rel="preconnect" href="//www.google.com" crossorigin>
   <link rel="preconnect" href="//static.hotjar.com">
@@ -223,7 +224,8 @@
           <div class="display-none mdc-layout-grid__cell">
           </div>
           <div class="button mdc-layout-grid__cell">
-            <a title="Get in touch with us today Button" class="btn" href="mailto:blockchain&#64;topmonks.com">Get in touch with us today</a>
+            <a title="Get in touch with us today Button" class="btn" href="mailto:blockchain&#64;topmonks.com">Get in
+              touch with us today</a>
           </div>
           <div class="display-none mdc-layout-grid__cell">
           </div>
@@ -236,7 +238,8 @@
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <h2>It’s&nbsp;not what you say,<br>it’s&nbsp;what you do.</h2>
           </div>
-          <a href="https://www.topmonks.com/case-studies/xixoio/" class="shrink our-work_box box--fintech mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <a href="https://www.topmonks.com/case-studies/xixoio/"
+             class="shrink our-work_box box--fintech mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <h3>Fintech platform<br> with multiple modules.</h3>
             <p>We found our cooperation with TopMonks partner very productive. Professional
               approach expressed in initiative, creativity, deep knowledge of subject field
@@ -244,7 +247,8 @@
               time and without complications.</p>
             <span class="representative">Nataliya Rozhok / Chief Information Officer</span>
           </a>
-          <a href="https://www.topmonks.com/case-studies/profi-option/" class="shrink our-work_box box--crypto mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <a href="https://www.topmonks.com/case-studies/profi-option/"
+             class="shrink our-work_box box--crypto mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <h3>Crypto assets trading<br> platform based on binary options</h3>
             <p>Tomáš Paulus really knows what he's&nbsp;doing. Based on his research, he
               adapted the platform into a usable form with a professional design. We certainly
@@ -276,11 +280,10 @@
               yourself or sell them on an exchange.</p>
             <span class="representative">Josef Tětek / Blockchain Studio</span>
           </div>
-
-
         </div>
       </div>
     </section>
+
     <section class="blog">
       <div class="mdc-layout-grid layout-wrapper">
         <div class="mdc-layout-grid__inner">
@@ -289,42 +292,34 @@
           </div>
 
           <article class="blog__box mdc-layout-grid__cell">
-              <a title="Read article MakerDAO"
-                href="https://btctip.cz/makerdao-vyhody-nevyhody-a-budoucnost-projektu/">
-                <img width="100%" alt="MakerDAO" loading="lazy"
-                     src="{{ "blockchain.topmonks.com/article-img01.png" | cloudinaryUrl(width=480) }}">
-              </a>
-              <div class="blog__box-body">
-                <span class="published-date">NOVEMBER 14TH 2019</span>
-                <h3>MakerDAO&nbsp;&ndash; výhody, nevýhody a budoucnost projektu</h3>
-                <div class="personal__id">
-                  <img class="person__photo" loading="lazy"
-                       src="{{ "avatar/josef-tetek.jpg" | cloudinaryUrl(width=32) }}"
-                       alt="[photo] Josef Tětek" width="32"
-                       height="32">
-                  <span class="name">Josef Tětek</span>
-                </div>
-                <div class="article-link">
-                  <a href="https://btctip.cz/makerdao-vyhody-nevyhody-a-budoucnost-projektu/">Show
-                    article</a>
-                </div>
+            <a title="Read article MakerDAO"
+               href="https://btctip.cz/makerdao-vyhody-nevyhody-a-budoucnost-projektu/">
+              {{ blogImg("MakerDAO", "blockchain.topmonks.com/article-img01.png") }}
+            </a>
+            <div class="blog__box-body">
+              <span class="published-date">NOVEMBER 14TH 2019</span>
+              <h3>MakerDAO&nbsp;&ndash; výhody, nevýhody a budoucnost projektu</h3>
+              <div class="personal__id">
+                {{ avatar("photo of Josef Tětek", "avatar/josef-tetek.jpg", 32) }}
+                <span class="name">Josef Tětek</span>
               </div>
+              <div class="article-link">
+                <a href="https://btctip.cz/makerdao-vyhody-nevyhody-a-budoucnost-projektu/">Show
+                  article</a>
+              </div>
+            </div>
           </article>
 
           <article class="blog__box mdc-layout-grid__cell">
             <a title="Read article AI is a Distraction"
-              href="https://hackernoon.com/ai-is-a-distraction-interview-with-harry-halpin-ceo-of-nym-e1433x3v">
-              <img width="100%" alt="AI is a Distraction" loading="lazy"
-                   src="{{ "blockchain.topmonks.com/article-img02.png" | cloudinaryUrl(width=480) }}">
+               href="https://hackernoon.com/ai-is-a-distraction-interview-with-harry-halpin-ceo-of-nym-e1433x3v">
+              {{ blogImg("AI is a Distraction", "blockchain.topmonks.com/article-img02.png") }}
             </a>
             <div class="blog__box-body">
               <span class="published-date">NOVEMBER 11TH 2019</span>
               <h3>"AI is a Distraction" — Interview with Harry Halpin; CEO of NYM</h3>
               <div class="personal__id">
-                <img class="person__photo" loading="lazy"
-                     src="{{ "avatar/josef-tetek.jpg" | cloudinaryUrl(width=32) }}"
-                     alt="[photo] Josef Tětek" width="32"
-                     height="32">
+                {{ avatar("photo of Josef Tětek", "avatar/josef-tetek.jpg", 32) }}
                 <span class="name">Josef Tětek</span>
               </div>
               <div class="article-link">
@@ -336,18 +331,14 @@
 
           <article class="blog__box mdc-layout-grid__cell">
             <a title="Read article MakerDAO a DAI"
-              href="https://btctip.cz/makerdao-a-dai-urok-jako-zly-sluha-i-spatny-pan/">
-              <img width="100%" alt="MakerDAO a DAI" loading="lazy"
-                   src="{{ "blockchain.topmonks.com/article-img03.png" | cloudinaryUrl(width=480) }}">
+               href="https://btctip.cz/makerdao-a-dai-urok-jako-zly-sluha-i-spatny-pan/">
+              {{ blogImg("MakerDAO a DAI", "blockchain.topmonks.com/article-img03.png") }}
             </a>
             <div class="blog__box-body">
               <span class="published-date">NOVEMBER 7TH 2019</span>
               <h3>MakerDAO a DAI – úrok jako zlý sluha i špatný pán</h3>
               <div class="personal__id">
-                <img class="person__photo" loading="lazy"
-                     src="{{ "avatar/josef-tetek.jpg" | cloudinaryUrl(width=32) }}"
-                     alt="[photo] Josef Tětek" width="32"
-                     height="32">
+                {{ avatar("photo of Josef Tětek", "avatar/josef-tetek.jpg", 32) }}
                 <span class="name">Josef Tětek</span>
               </div>
               <div class="article-link">
@@ -375,9 +366,7 @@
           </div>
 
           <div class="team-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop">
-            <img class="person__photo" loading="lazy"
-                 src="{{ "avatar/lea-petrasova.jpg" | cloudinaryUrl(width=92) }}"
-                 alt="[photo] Lea Petrášová" width="92" height="92">
+            {{ avatar("photo of Lea Petrášová", "avatar/lea-petrasova.jpg", 92) }}
             <h3>Lea Petrášová</h3>
             <p>Blockchain & Crypto&nbsp;Projects</p>
             <a href="https://www.linkedin.com/in/leapetras/"
@@ -401,9 +390,7 @@
           </div>
 
           <div class="team-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop">
-            <img class="person__photo" loading="lazy"
-                 src="{{ "avatar/mrkva-lumir.jpg" | cloudinaryUrl(width=92) }}"
-                 alt="[photo] Lumír Mrkva" width="92" height="92">
+            {{ avatar("photo of Lumír Mrkva", "avatar/mrkva-lumir.jpg", 92) }}
             <h3>Lumír Mrkva</h3>
             <p>Tech Lead</p>
             <a href="https://github.com/lumir-mrkva" title="Lumír Mrkva on GitHub">
@@ -428,9 +415,7 @@
             </a>
           </div>
           <div class="team-member mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop">
-            <img class="person__photo" loading="lazy"
-                 src="{{ "avatar/josef-tetek.jpg" | cloudinaryUrl(width=92) }}"
-                 alt="[photo] Josef Tětek" width="92" height="92">
+            {{ avatar("photo of Josef Tětek", "avatar/josef-tetek.jpg", 92) }}
             <h3>Josef Tětek</h3>
             <p>Crypto Analyst</p>
 
