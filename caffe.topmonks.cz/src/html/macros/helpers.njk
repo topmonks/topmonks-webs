@@ -1,0 +1,46 @@
+
+{% macro poster(eventData, posters) -%}
+  {% set imageUrl = posters[eventData.picture]["public_id"] %}
+  <picture>
+    <source media="screen and (max-width: 479px)"
+            srcset="{{ imageUrl | cloudinaryUrl(dpr=1,width=400) }} 1x,
+               {{ imageUrl | cloudinaryUrl(dpr=1.5,width=400) }} 1.5x,
+               {{ imageUrl | cloudinaryUrl(dpr=2,width=400) }} 2x">
+    <source media="screen and (min-width: 480px) and (max-width: 839px)"
+            srcset="{{ imageUrl | cloudinaryUrl(dpr=1,width=344) }} 1x,
+               {{ imageUrl | cloudinaryUrl(dpr=1.5,width=344) }} 1.5x,
+               {{ imageUrl | cloudinaryUrl(dpr=2,width=344) }} 2x">
+    <source media="screen and (min-width: 840px)"
+            srcset="{{ imageUrl | cloudinaryUrl(dpr=1,width=440) }} 1x,
+               {{ imageUrl | cloudinaryUrl(dpr=1.5,width=440) }} 1.5x,
+               {{ imageUrl | cloudinaryUrl(dpr=2,width=440) }} 2x">
+    <img alt="TopMonks Caffè - {{ eventData.title }}"
+         loading="lazy" width="440" height="620" class="responsive"
+         src="{{ imageUrl | cloudinaryUrl(dpr=auto,width=440) }}">
+  </picture>
+{%- endmacro %}
+
+{% macro eventInfo(eventData, posters) %}
+  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 history">
+    <a href="{{ eventData.link }}">{{ poster(eventData, posters) }}</a>
+    <h4>{{ eventData.shortTitle }}</h4>
+    <p>
+      <time>{{ eventData.date }}</time>
+    </p>
+    <div class="lecturer">
+      {% for lecturer in eventData.lecturers | split(",") %}
+        {{ lecturer }}<br/>
+      {% endfor %}
+    </div>
+    {% if eventData.presentationLink %}
+      <div class="link">
+        <a href="{{ eventData.presentationLink }}">Prezentace</a>
+      </div>
+    {% endif %}
+    {% if eventData.videoLink %}
+      <div class="link">
+        <a href="{{ eventData.videoLink }}">Video záznam</a>
+      </div>
+    {% endif %}
+  </div>
+{% endmacro %}

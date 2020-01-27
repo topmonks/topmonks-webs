@@ -5,8 +5,9 @@ const markdownToJSON = require("gulp-markdown-to-json");
 const merge = require("gulp-merge-json");
 const path = require("path");
 const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
+const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
 
-module.exports = {
+module.exports = createSharedTaskConfig(__dirname, {
   images: true,
   javascripts: false,
   fonts: true,
@@ -90,4 +91,4 @@ module.exports = {
   production: {
     rev: true
   }
-};
+});

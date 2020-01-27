@@ -62,6 +62,11 @@ section {
   }
 }
 
+img.responsive {
+  width: 100%;
+  height: auto;
+}
+
 .tm-logo {
   font-family: Futura, futura-pt, -apple-system, BlinkMacSystemFont, Roboto,
     "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
@@ -194,12 +199,15 @@ ul {
 ul li {
   list-style: none;
   margin: 0;
-  display: inline-block;
   padding: 4px 14px;
   font-size: 16px;
   @media (min-width: 2200px) {
     font-size: 24px;
   }
+}
+
+#navigation li {
+  display: inline-block;
 }
 
 ul#navigace {
