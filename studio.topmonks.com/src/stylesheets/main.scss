@@ -18,8 +18,8 @@
 
 body {
   background: #ecf6ff
-    cloudinaryUrl("startup%20studio/html_bg.jpg", $width: 1920)
-    top center no-repeat;
+    cloudinaryUrl("startup%20studio/html_bg.jpg", $width: 1920) top center
+    no-repeat;
   background-size: contain;
 }
 
@@ -157,8 +157,7 @@ button {
 
 /*Pitch us*/
 .pitch-us {
-  background: clouindaryUrl("startup%20studio/pitch-bg.jpg")
-    top no-repeat;
+  background: clouindaryUrl("startup%20studio/pitch-bg.jpg") top no-repeat;
   .white-box {
     --mdc-layout-grid-gutter-desktop: 0;
     --mdc-layout-grid-gutter-tablet: 0;
@@ -196,9 +195,7 @@ button {
 
 /*IDEA*/
 .idea {
-  background: #fff
-    cloudinaryUrl("startup%20studio/idea-bg.jpg")
-    no-repeat top;
+  background: #fff cloudinaryUrl("startup%20studio/idea-bg.jpg") no-repeat top;
   min-height: 220px;
   margin-top: -2em;
   padding-bottom: 1em;
@@ -257,8 +254,7 @@ button {
   }
   .data_triangle {
     margin: 0 auto;
-    background: cloudinaryUrl("startup%20studio/triangle.jpg")
-      center no-repeat;
+    background: cloudinaryUrl("startup%20studio/triangle.jpg") center no-repeat;
     background-size: 100%;
     width: 100%;
     height: 240px;
@@ -303,6 +299,7 @@ button {
 
   .team__photo {
     width: 100%;
+    height: auto;
   }
 
   @media screen and (min-width: 841px) {
@@ -511,7 +508,10 @@ blockquote {
     screen and (max-width: 479px) and (min-device-pixel-ratio: 2),
     screen and (max-width: 479px) and (min-resolution: 192dpi),
     screen and (max-width: 479px) and (min-resolution: 2dppx) {
-    background-image: cloudinaryUrl("topmonks.com/bgnd_header_mobile.png", $width: 352);
+    background-image: cloudinaryUrl(
+      "topmonks.com/bgnd_header_mobile.png",
+      $width: 352
+    );
   }
   @media screen and (min-width: 480px) {
     background: cloudinaryUrl("topmonks.com/bgnd_header.png", $width: 1017)
@@ -522,7 +522,10 @@ blockquote {
   @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2),
     screen and (min-width: 480px) and (min-resolution: 192dpi),
     screen and (min-width: 480px) and (min-resolution: 2dppx) {
-    background-image: cloudinaryUrl("topmonks.com/bgnd_header.png", $width: 1017);
+    background-image: cloudinaryUrl(
+      "topmonks.com/bgnd_header.png",
+      $width: 1017
+    );
   }
   @media screen and (min-width: 480px) and (max-width: 839px) {
     background-position: right calc(50% - 460px) top -1px;
@@ -719,8 +722,8 @@ blockquote {
 
 @media (max-width: 480px) {
   body {
-    background: cloudinaryUrl("startup%20studio/mobile_bg.jpg", $width: 480)
-      top center no-repeat;
+    background: cloudinaryUrl("startup%20studio/mobile_bg.jpg", $width: 480) top
+      center no-repeat;
     background-size: 100%;
   }
   .tm-logo {
