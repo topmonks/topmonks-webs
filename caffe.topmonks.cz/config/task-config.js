@@ -17,12 +17,7 @@ module.exports = createSharedTaskConfig(__dirname, {
   workboxBuild: false,
 
   html: {
-    collections: ["events", "posters"],
-    nunjucksRender: {
-      filters: {
-        transformation: (s, t) => s && s.replace("/upload/", `/upload/${t}/`)
-      }
-    }
+    collections: ["events", "posters"]
   },
 
   browserSync: {
@@ -73,10 +68,14 @@ module.exports = createSharedTaskConfig(__dirname, {
           )
           .pipe(
             cloudinaryUpload.manifest({
-              path: projectPath(PATH_CONFIG.src, "data/posters.json")
+              path: projectPath(
+                PATH_CONFIG.src,
+                PATH_CONFIG.data.src,
+                "posters.json"
+              )
             })
           )
-          .pipe(dest(projectPath(PATH_CONFIG.src, "data")))
+          .pipe(dest(projectPath(PATH_CONFIG.src, PATH_CONFIG.data.src)))
       );
     },
     development: {
