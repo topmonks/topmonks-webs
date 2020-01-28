@@ -34,7 +34,8 @@
         "errors-in-console": "off",
         "offscreen-images": "off",
         "color-contrast": "off",
-        "duplicate-id": "off"
+        "duplicate-id": "off",
+        "dom-size": "off"
       }
     },
     "upload": {
