@@ -1,4 +1,4 @@
-{% extends 'layouts/master.html' %}
+{% extends 'layouts/master.njk' %}
 {% block title %}Hlídač shopů v médiích{% endblock %}
 
 {% block styles %}
@@ -6,14 +6,12 @@
 {% endblock %}
 
 {% macro mediaImage(path) %}
-  <img
-    src="https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_auto/v1575271019/www.hlidacshopu.cz/media/{{ path }}"
-    srcset="
-      https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_1/v1575271019/www.hlidacshopu.cz/media/{{ path }} 1x,
-      https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_1.5/v1575271019/www.hlidacshopu.cz/media/{{ path }} 1.5x,
-      https://res.cloudinary.com/topmonks/image/upload/w_250,h_142,f_auto,q_auto,dpr_2/v1575271019/www.hlidacshopu.cz/media/{{ path }} 2x
-    "
-    alt="" width="250" height="142" role="presentation">
+  {% set publicId = "www.hlidacshopu.cz/media/" + path %}
+  <img alt="" width="250" height="142" role="presentation"
+       src="{{ publicId | cloudinaryUrl(width=250,height=142,dpr="auto") }}"
+       srcset="{{ publicId | cloudinaryUrl(width=250,height=142) }} 1x,
+               {{ publicId | cloudinaryUrl(width=250,height=142,dpr=1.5) }} 1.5x,
+               {{ publicId | cloudinaryUrl(width=250,height=142,dpr=2) }} 2x">
 {% endmacro %}
 
 {% macro mediaArticle(article, images) %}

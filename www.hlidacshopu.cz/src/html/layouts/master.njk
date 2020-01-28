@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="cs">
-{% from '../macros/helpers.html' import sprite %}
+{% from '../macros/helpers.njk' import sprite %}
 <head>
   <meta charset="UTF-8">
   <title>{% block title %}Hlídač shopů{% endblock %}</title>
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://res.cloudinary.com" rel="preconnect">
-  <link href="https://www.googletagmanager.com" rel="preconnect">
-  <link href="https://stats.g.doubleclick.net" rel="preconnect">
-  <link href="https://www.google-analytics.com" rel="preconnect">
-  <link href="https://in.hotjar.com" rel="preconnect">
-  <link href="https://script.hotjar.com" rel="preconnect">
-  <link href="https://static.hotjar.com" rel="preconnect">
-  <link href="https://vars.hotjar.com" rel="preconnect">
-  <link href="https://www.google.com" rel="preconnect">
-  <link href="https://www.google.cz" rel="preconnect">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://res.cloudinary.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://stats.g.doubleclick.net" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <link rel="preconnect" href="https://www.google.com" crossorigin>
+  <link rel="preconnect" href="https://www.google.cz" crossorigin>
   {% block preload %}{% endblock %}
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width">
@@ -28,10 +24,8 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.hlidacshopu.cz/">
   <meta name="twitter:image" property="og:image" content="https://www.hlidacshopu.cz/og-image.png">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin-ext&amp;display=swap"
-        rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i&amp;display=swap&amp;subset=latin-ext"
+    href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,400i,600,700,700i&amp;subset=latin-ext&amp;display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/main.css">
   {% block styles %}{% endblock %}

@@ -1,0 +1,1060 @@
+{% extends 'layouts/master.njk' %}
+{% from 'macros/helpers.njk' import sprite %}
+{% block title %}Hlídač shopů{% endblock %}
+{% block preload %}
+  <link
+    rel="prefetch"
+    href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js"
+    as="script"
+    crossorigin="anonymous"
+  />
+  <link rel="prefetch" href="/assets/js/extension.js" as="script"/>
+  <link
+    rel="modulepreload"
+    href="https://unpkg.com/lit-html@1.1.1/lit-html.js?module"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="https://api.hlidacshopu.cz/shop-numbers"
+    as="fetch"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="preload"
+    href="https://api.hlidacshopu.cz/reviews-stats"
+    as="fetch"
+    crossorigin="anonymous"
+  />
+{% endblock %}
+{% block styles %}
+  <link rel="stylesheet" href="/assets/css/index.css"/>
+  <meta name="apple-mobile-web-app-title" content="Hlídač shopů"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+{% endblock %}
+{% block main %}
+  <section class="main">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <form id="compare-form" action="/">
+            <div>
+              <h1>Ujistěte se, že nakupujete opravdu se slevou</h1>
+
+              <p>Není sleva jako sleva. Někdy obchody těsně před vlnou slev uměle
+                navyšují původní ceny, aby konečná sleva působila výhodně. Hlídač
+                Shopů vám zobrazí původní cenu produktu a její vývoj v&nbsp;čase,
+                takže díky němu snadno poznáte, jestli nakupujete se slevou
+                nebo&nbsp;ne.</p>
+
+              <p><label for="url">Zadejte adresu stránky s detailem produktu:</label></p>
+
+              <div class="form-combo">
+                <div class="url-input">
+                  <i class="url-input__icon">
+                    <svg
+                      width="29"
+                      height="29"
+                      viewBox="0 0 29 29"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>Hledat</title>
+                      <path
+                        d="M24.7144 22.1558L20.6248 18.067C20.4403 17.8824 20.1901 17.7799 19.9275 17.7799H19.2589C20.391 16.3322 21.0637 14.5113 21.0637 12.5304C21.0637 7.81818 17.2449 4 12.5319 4C7.81883 4 4 7.81818 4 12.5304C4 17.2427 7.81883 21.0608 12.5319 21.0608C14.5131 21.0608 16.3343 20.3882 17.7823 19.2563V19.9248C17.7823 20.1873 17.8848 20.4375 18.0694 20.622L22.1589 24.7109C22.5445 25.0964 23.168 25.0964 23.5495 24.7109L24.7103 23.5502C25.0959 23.1647 25.0959 22.5414 24.7144 22.1558ZM12.5319 17.7799C9.63186 17.7799 7.28149 15.434 7.28149 12.5304C7.28149 9.6309 9.62776 7.28093 12.5319 7.28093C15.4319 7.28093 17.7823 9.62679 17.7823 12.5304C17.7823 15.4299 15.436 17.7799 12.5319 17.7799Z"
+                        fill="#CFD4DE"
+                      />
+                    </svg>
+                  </i>
+                  <input
+                    required
+                    type="url"
+                    name="url"
+                    placeholder="https://www.&hellip;"
+                    id="url"
+                    title="Zadejte adresu stránky s detailem produktu."
+                  />
+                </div>
+                <button type="submit">Ověřit vývoj ceny</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2 class="sub-title">AKTUÁLNĚ MONITORUJEME TYTO ESHOPY</h2>
+          <div
+            id="e-shopy"
+            class="logos mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="promo">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <a href="https://medium.com/@jakubbalada/black-friday-2019-s-hl%C3%ADda%C4%8Dem-shop%C5%AF-9a3ddd352a8c"
+             title="Přečtě si výsledky Analýzy Black Friday 2019">
+            <picture>
+              <source media="screen and (max-width: 479px)"
+                      srcset="{{ "www.hlidacshopu.cz/mobil-banner.png" | cloudinaryUrl(width=480) }} 1x,
+                              {{ "www.hlidacshopu.cz/mobil-banner.png" | cloudinaryUrl(width=480,dpr=1.5) }} 1.5x,
+                              {{ "www.hlidacshopu.cz/mobil-banner.png" | cloudinaryUrl(width=480,dpr=2) }} 2x"/>
+              <source media="screen and (min-width: 480px) and (max-width: 839px)"
+                      srcset="{{ "www.hlidacshopu.cz/desktop-banner.png" | cloudinaryUrl(width=840) }} 1x,
+                              {{ "www.hlidacshopu.cz/desktop-banner.png" | cloudinaryUrl(width=840,dpr=1.5) }} 1.5x,
+                              {{ "www.hlidacshopu.cz/desktop-banner.png" | cloudinaryUrl(width=840,dpr=2) }} 2x"/>
+              <source media="screen and (min-width: 840px)"
+                      srcset="{{ "www.hlidacshopu.cz/desktop-banner.png" | cloudinaryUrl(width=1008) }} 1x,
+                              {{ "www.hlidacshopu.cz/desktop-banner.png" | cloudinaryUrl(width=1008,dpr=1.5) }} 1.5x,
+                              {{ "www.hlidacshopu.cz/desktop-banner.png" | cloudinaryUrl(width=1008,dpr=2) }} 2x"/>
+              <img alt="Analýza Black Friday 2019" class="responsive"
+                   src="{{ "www.hlidacshopu.cz/mobil-banner.png" | cloudinaryUrl(width=480,dpr="auto") }} "/>
+            </picture>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="attendant">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12">
+          <h2 class="sub-title">HLÍDAČE SHOPŮ VÁM PŘINÁŠÍ</h2>
+          <div class="logos">
+            <ul>
+              <li>
+                <a href="https://apify.com/">
+                  {{ sprite("apify_logo", "Apify", "0 0 157 42") }}
+                </a>
+              </li>
+              <li>
+                <a href="https://www.keboola.com/">
+                  {{ sprite("keboola_logo", "Keboola", "0 0 161 41") }}
+                </a>
+              </li>
+              <li>
+                <a href="https://www.topmonks.cz/">
+                  {{ sprite("topmonks_logo", "TopMonks", "0 0 632 144") }}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <link rel="stylesheet" href="/assets/css/md-tabs.css"/>
+  <section class="illustration2">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Jak Hlídač Shopů vypadá a jak číst graf?</h2>
+          <p class="title--subtitle">
+            Hlídač Shopů si můžete
+            <b class="text--purple"
+            ><a
+                title="Link pro Istalaci Hlídače Shopů do Prohlížeče"
+                href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk"
+              >nainstalovat přímo do svého prohlížeče</a
+              ></b
+            >
+            a hlídat tak největší e-shopy a jejich někdy prapodivné taktiky při
+            tvoření&nbsp;slev.
+          </p>
+        </div>
+        <div
+          class="tab-list mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
+        >
+          <ol>
+            <li>
+              <a href="#tab-1"
+              >Po instalaci v&nbsp;detailu produktu vašeho e-shopu se pod cenou
+                zobrazí&nbsp;graf</a
+              >
+            </li>
+            <li>
+              <a href="#tab-2"
+              >Srovnání původní přeškrtnuté ceny a aktuální
+                prodejní&nbsp;ceny</a
+              >
+            </li>
+            <li>
+              <a href="#tab-3"
+              >Po najetí na graf, můžete libovolně vidět v&nbsp;čase vývoj
+                uváděné původní a prodejní&nbsp;ceny</a
+              >
+            </li>
+          </ol>
+        </div>
+        <div
+          class="tabs tabs--open-tab-1 mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
+        >
+          <div class="tab" id="tab-1">
+            <img
+              alt="Step 1: Graf"
+              src="https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,dpr_auto,f_auto/v1575461537/www.hlidacshopu.cz/window01.png"
+              width="800px"
+            />
+          </div>
+          <div class="tab" id="tab-2">
+            <img
+              alt="Step 2: Graf - Přeškrtnuté a aktuální ceny"
+              src="https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,dpr_auto,f_auto/v1575461531/www.hlidacshopu.cz/window02.png"
+              width="800px"
+            />
+          </div>
+          <div class="tab" id="tab-3">
+            <img
+              alt="Step 3: Graf - Vývoj cen"
+              src="https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,dpr_auto,f_auto/v1575461788/www.hlidacshopu.cz/window03.png"
+              width="800px"
+            />
+          </div>
+        </div>
+        <script>
+          const tabList = document.querySelector(".tab-list");
+          const tabs = document.querySelector(".tabs");
+          let activeTab = "tab-1";
+          tabList.addEventListener("click", e => {
+            if (e.target.tagName === "A") {
+              e.preventDefault();
+              const targetTab = e.target.hash.substring(1);
+              tabs.classList.remove(`tabs--open-${activeTab}`);
+              tabs.classList.add(`tabs--open-${targetTab}`);
+              activeTab = targetTab;
+            }
+            console.dir(e.target);
+          });
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <section class="guidance purple-gradient">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Jak a proč nainstalovat rozšíření Hlídač Shopů?</h2>
+        </div>
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 browser-list"
+        >
+          <div class="browser-support">
+            <a
+              data-browser="chrome"
+              href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk"
+            >
+              <div class="browser-support__icon">
+                <img
+                  loading="lazy"
+                  src="/assets/img/chrome.svg"
+                  alt="Ikona prohlížeče Google Chrome"
+                />
+              </div>
+            </a>
+            <p class="sub-info--grey">
+              Podporujeme <br/>prohlížeč Google&nbsp;Chrome
+            </p>
+          </div>
+          <div class="browser-support">
+            <a
+              data-browser="firefox"
+              href="https://addons.mozilla.org/en-US/firefox/addon/hl%C3%ADda%C4%8D-shop%C5%AF/"
+            >
+              <div class="browser-support__icon">
+                <img
+                  loading="lazy"
+                  src="/assets/img/firefox.svg"
+                  alt="Ikona prohlížeče Firefox"
+                />
+              </div>
+            </a>
+            <p class="sub-info--grey">Podporujeme <br/>prohlížeč Firefox</p>
+          </div>
+          <div class="browser-support">
+            <a
+              data-browser="safari"
+              href="https://apps.apple.com/us/app/hl%C3%ADda%C4%8D-shop%C5%AF/id1488295734"
+            >
+              <div class="browser-support__icon">
+                <img
+                  loading="lazy"
+                  src="/assets/img/safari.svg"
+                  alt="Ikona prohlížeče Safari"
+                />
+              </div>
+            </a>
+            <p class="sub-info--grey">Podporujeme <br/>prohlížeč Safari</p>
+          </div>
+          <div class="browser-support">
+            <a
+              data-browser="brave"
+              href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk"
+            >
+              <div class="browser-support__icon">
+                <img
+                  loading="lazy"
+                  src="/assets/img/brave.svg"
+                  alt="Ikona prohlížeče Brave"
+                />
+              </div>
+            </a>
+            <p class="sub-info--grey">Podporujeme <br/>prohlížeč Brave</p>
+          </div>
+          <div class="browser-support">
+            <a
+              data-browser="edge-beta"
+              href="https://chrome.google.com/webstore/detail/hl%C3%ADda%C4%8D-shop%C5%AF/plmlonggbfebcjelncogcnclagkmkikk"
+            >
+              <div class="browser-support__icon">
+                <img
+                  loading="lazy"
+                  src="/assets/img/edge-beta.svg"
+                  alt="Ikona prohlížeče Microsoft Edge Beta"
+                />
+              </div>
+            </a>
+            <p class="sub-info--grey">
+              Podporujeme <br/>prohlížeč Microsoft&nbsp;Edge Beta
+            </p>
+          </div>
+          <div class="browser-support">
+            <div class="browser-support__icon browser-support__icon--disabled">
+              <img
+                loading="lazy"
+                src="/assets/img/opera.svg"
+                alt="Ikona prohlížeče Opera"
+              />
+            </div>
+            <p class="sub-info--grey">Brzy podpora pro <br/>prohlížeč Opera</p>
+          </div>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <h3>Instalace Hlídače Shopů do prohlížeče</h3>
+          <p>
+            Aktuálně si můžete Hlídače Shopů nainstalovat do desktopového Chromu,
+            Firefoxu, Safari, Brave a Edge Beta. Pokud ani jeden z nich
+            nepoužíváte, vydržte. Usilovně makáme na Hlídači Shopů pro mobilní
+            telefony.
+          </p>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <h3>
+            Proč byste si měli rozšíření Hlídače Shopů instalovat a jak to vlastně
+            vypadá?
+          </h3>
+          <p>
+            Rozšíření v&nbsp;prohlížeči vám umožňuje kontrolovat ceny rovnou na
+            stránkách e-shopů. Nemusíte se pracně vracet na tento web
+            s&nbsp;odkazem každého produktu, který chcete překontrolovat.
+          </p>
+        </div>
+
+        <div class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div id="extension-install-guide" class="mdc-layout-grid__inner"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="numbers">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Naše čísla</h2>
+        </div>
+        <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+          <dt class="text--grey">Nainstalovaných rozšíření</dt>
+          <dd id="installs-count" class="number">4 500+</dd>
+        </dl>
+        <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+          <dt class="text--grey">Počet e-shopů</dt>
+          <dd id="e-shops-count" class="number">13</dd>
+        </dl>
+        <dl class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet">
+          <dt class="text--grey">Počet produktů</dt>
+          <dd id="products-count" class="number">1 000 000+</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <link rel="stylesheet" href="/assets/css/reviews.css"/>
+  <section class="references">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner layout-wrapper">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Co o&nbsp;nás říkají uživatelé</h2>
+        </div>
+        <div class="review mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <div class="review__header">
+            <img
+              class="avatar"
+              alt=""
+              src="/assets/img/avatar/marek-sukup.jpg"
+              loading="lazy"
+            />
+            <span class="review__author">Marek Sukup</span><br/>
+            <time class="review__date text--light-grey" datetime="2018-12-10"
+            >10. 12. 2018
+            </time
+            >
+            <br/>
+            <i class="review__rating" data-rating="5" title="Hodnocení: 5">
+              <b class="review__rating-value" style="width: 126px"></b>
+            </i>
+          </div>
+          <div class="review__content">
+            <p>
+              Skvělý doplněk a výborný nápad něco takového vytvořit. Človek si tak
+              udelá představu o&nbsp;tom, jak funguji slevy a z&nbsp;jake ceny se
+              slevuje…
+            </p>
+          </div>
+        </div>
+
+        <div class="review mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <div class="review__header">
+            <img
+              class="avatar"
+              alt=""
+              src="/assets/img/avatar/tana-lalova.jpg"
+              loading="lazy"
+            />
+            <span class="review__author">Táňa Lálová</span><br/>
+            <span class="review__date text--light-grey">Mluvčí Mall.cz</span
+            ><br/>
+            <i class="review__rating review__rating--no-rating"></i>
+          </div>
+          <div class="review__content">
+            <p>
+              Aktivity, jako je například Apify vítáme, protože pomáhají
+              zákazníkům s&nbsp;orientací na trhu. Naším cílem je být
+              transparentní a umožnit lidem rychle a snadno ověřit
+              uvedenou&nbsp;cenu.
+            </p>
+          </div>
+        </div>
+
+        <div class="review mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <div class="review__header">
+            <img
+              class="avatar"
+              alt=""
+              src="/assets/img/avatar/jan-verner.jpg"
+              loading="lazy"
+            />
+            <span class="review__author">Jan Verner</span><br/>
+            <time class="review__date text--light-grey" datetime="2018-12-14"
+            >14. 12. 2018
+            </time
+            >
+            <br/>
+            <i class="review__rating" data-rating="5" title="Hodnocení: 5">
+              <b class="review__rating-value" style="width: 126px"></b>
+            </i>
+          </div>
+          <div class="review__content">
+            <p>
+              Poprvé, kdy píšu recenzi na nějaký plugin chromu. A to proto, jak je
+              úžasný. Miluje ho každý, komu ho v okolí ukazuji. Super práce,
+              samozřejmě by bylo super, kdyby to hlídalo více e-shopů, klidně
+              napsat API tak, aby mohli lidé pomáhat.
+            </p>
+          </div>
+        </div>
+        <div
+          class="references_link mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
+        >
+          <a href="/recenze/">Další hodnocení</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="news mdc-layout-grid">
+    <div class="mdc-layout-grid__inner layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Nejzajímavější slevy</h2>
+        <p>
+          Sledujte naše profily na
+          <b class="text--purple"
+          ><a href="https://www.facebook.com/hlidacshopu/">Facebooku</a></b
+          >
+          a na
+          <b class="text--purple"
+          ><a href="https://twitter.com/hlidacshopucz">Twitteru</a></b
+          >, kde zveřejňujeme jak zajímavé slevy, tak chytáky, na které byste si
+          měli dávat pozor.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="hlidac-shopu-modal" class="modal modal--hidden">
+    <div class="modal__inner mdc-layout-grid">
+      <div class="modal__close" title="Zavřít - Esc">
+        <a href="/">&times;</a>
+      </div>
+      <div id="hlidac-shopu-modal__placeholder"></div>
+    </div>
+  </div>
+{% endblock %} {% block scripts %}
+  <script type="module" crossorigin="anonymous">
+    import {
+      html,
+      svg,
+      render
+    } from "https://unpkg.com/lit-html@1.1.1/lit-html.js?module";
+
+    const form = document.getElementById("compare-form");
+    const eShops = document.getElementById("e-shopy");
+    const eShopsCount = document.getElementById("e-shops-count");
+    const productsCount = document.getElementById("products-count");
+    const installsCount = document.getElementById("installs-count");
+    const modal = document.getElementById("hlidac-shopu-modal");
+    const modalRenderRoot = document.getElementById(
+      "hlidac-shopu-modal__placeholder"
+    );
+    const installationGuide = document.getElementById("extension-install-guide");
+    const chart = () => document.getElementById("hlidac-shopu-chart");
+    const apiUrl = detailUri =>
+      `https://api.hlidacshopu.cz/shop?url=${encodeURIComponent(
+        detailUri
+      )}&metadata=1`;
+    const meta = ({ itemImage, itemName, real_sale, ...rest }) => ({
+      name: itemName,
+      imageUrl: itemImage === "null" ? null : itemImage,
+      realDiscount: real_sale === "null" ? null : parseFloat(real_sale) / 100,
+      ...rest
+    });
+    const shopStats =
+      ({
+         key,
+         count_all,
+         count_bf,
+         declared_sale,
+         real_sale,
+         percent_bf
+       }) => ({
+        key,
+        allProducts: parseInt(count_all),
+        bfProducts: (count_bf && parseInt(count_bf)) || "-",
+        avgClaimedDiscount: (declared_sale && parseFloat(declared_sale)) || "-",
+        avgRealDiscount: (real_sale && parseFloat(real_sale)) || "-"
+      });
+    const formatMoney = x =>
+      x
+        .toLocaleString("cs", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        })
+        .replace(/,00/g, ",-");
+    const formatPercents = x => `${Math.round(100 * x).toLocaleString("cs")} %`;
+    const haveToCloseModal = t =>
+      t === modal ||
+      t.classList.contains("modal__close") ||
+      t.parentElement.classList.contains("modal__close");
+    const timeout = ms =>
+      new Promise((_, reject) =>
+        setTimeout(() => reject(new Error("timeout")), ms)
+      );
+    const shops = new Map([
+      [
+        "alza",
+        {
+          name: "Alza",
+          logo: "alza_logo",
+          url: "https://www.alza.cz/",
+          viewBox: "0 0 60 19"
+        }
+      ],
+      [
+        "czc",
+        {
+          name: "CZC.CZ",
+          logo: "czc.cz_logo",
+          url: "https://www.czc.cz/",
+          viewBox: "0 0 55 13"
+        }
+      ],
+      [
+        "datart",
+        {
+          name: "Datart",
+          logo: "datart_logo",
+          url: "https://www.datart.cz/",
+          viewBox: "0 0 98 13"
+        }
+      ],
+      [
+        "itesco",
+        {
+          name: "iTesco",
+          logo: "tesco_logo",
+          url: "https://www.itesco.cz/",
+          viewBox: "0 0 55 18"
+        }
+      ],
+      [
+        "kasa",
+        {
+          name: "kasa.cz",
+          logo: "kasa_logo",
+          url: "https://www.kasa.cz/",
+          viewBox: "0 0 70 18"
+        }
+      ],
+      [
+        "kosik",
+        {
+          name: "Košík.cz",
+          logo: "kosik_logo",
+          url: "https://www.kosik.cz/",
+          viewBox: "0 0 71 22"
+        }
+      ],
+      [
+        "lekarna",
+        {
+          name: "Lékárna.cz",
+          logo: "lekarna_logo",
+          url: "https://www.lekarna.cz/",
+          viewBox: "0 0 79 20"
+        }
+      ],
+      [
+        "mall",
+        {
+          name: "Mall.cz",
+          logo: "mall_logo",
+          url: "https://www.mall.cz/",
+          viewBox: "0 0 68 19"
+        }
+      ],
+      [
+        "mironet",
+        {
+          name: "Mironet",
+          logo: "mironet_logo",
+          url: "https://www.mironet.cz/",
+          viewBox: "0 0 59 20"
+        }
+      ],
+      [
+        "mountfield",
+        {
+          name: "Mountfield",
+          logo: "mountfield_logo",
+          url: "https://www.mountfield.cz/",
+          viewBox: "0 0 64 11"
+        }
+      ],
+      //  ["notino", { name: "Notino", logo: "notino_logo", url: "https://www.notino.cz/", viewBox: "0 0 68 13" }],
+      [
+        "rohlik",
+        {
+          name: "Rohlík.cz",
+          logo: "rohlik_logo",
+          url: "https://www.rohlik.cz/",
+          viewBox: "0 0 51 28"
+        }
+      ],
+      [
+        "tsbohemia",
+        {
+          name: "TSBohemia",
+          logo: "tsbohemia_logo",
+          url: "https://www.tsbohemia.cz/",
+          viewBox: "0 0 115 15"
+        }
+      ]
+    ]);
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const detailUri = e.target["url"].value;
+      history.pushState(
+        { showModal: true, detailUri },
+        null,
+        `?url=${encodeURIComponent(detailUri)}`
+      );
+      renderResultsModal(detailUri);
+    });
+
+    modal.addEventListener("click", e => {
+      const target = e.target;
+      if (haveToCloseModal(target)) {
+        e.preventDefault();
+        history.pushState({ showModal: false }, null, "/");
+        hideResultsModal();
+        clearAndFocusInput();
+      }
+    });
+
+    addEventListener("keydown", e => {
+      if (e.key === "Escape" && history.state && history.state.showModal) {
+        history.pushState({ showModal: false }, null, "/");
+        hideResultsModal();
+        clearAndFocusInput();
+      }
+    });
+
+    addEventListener("DOMContentLoaded", e => {
+      const searchParams = new URLSearchParams(location.search);
+      if (searchParams.has("url")) {
+        const detailUri = searchParams.get("url");
+        history.replaceState({ showModal: true, detailUri }, null);
+        renderResultsModal(detailUri);
+      }
+      render(eShopList(Array.from(shops.values())), eShops);
+      const installationGuideUrl = getInstallationGuideUrl(searchParams);
+      if (installationGuideUrl) {
+        import(installationGuideUrl).then(x =>
+          render(x.installationGuide(), installationGuide)
+        );
+      }
+      eShopsCount.innerText = shops.size.toLocaleString("cs");
+      fetchDownloadStats().then(
+        ({ downloads: x }) => (installsCount.innerText = x.toLocaleString("cs"))
+      );
+      fetchShopsStats()
+        .then(xs => xs.reduce((acc, x) => acc + x.allProducts, 0))
+        .then(x => (productsCount.innerText = x.toLocaleString("cs")));
+    });
+
+    addEventListener("popstate", e => {
+      if (!history.state) {
+        hideResultsModal();
+        return;
+      }
+      const { showModal, detailUri } = history.state;
+      if (showModal) {
+        renderResultsModal(detailUri);
+      } else {
+        hideResultsModal();
+      }
+    });
+
+    function clearAndFocusInput() {
+      form["url"].value = "";
+      form["url"].focus();
+    }
+
+    function showResultsModal() {
+      modal.classList.remove("modal--hidden");
+      document.body.classList.add("no-scroll");
+    }
+
+    function hideResultsModal() {
+      modal.classList.add("modal--hidden");
+      document.body.classList.remove("no-scroll");
+    }
+
+    async function fetchDataSet(detailUri) {
+      const resp = await Promise.race([timeout(4000), fetch(apiUrl(detailUri))]);
+      if (!resp.ok) throw new Error("API error");
+      const { data, metadata } = await resp.json();
+      return {
+        meta: meta(metadata),
+        data: createDataset(data)
+      };
+    }
+
+    async function fetchShopsStats() {
+      const resp = await Promise.race([
+        timeout(4000),
+        fetch("https://api.hlidacshopu.cz/shop-numbers")
+      ]);
+      if (!resp.ok) throw new Error("API error");
+      const shopsData = await resp.json();
+      return shopsData
+        .map(shopStats)
+        .map(x => Object.assign({}, x, shops.get(x.key)));
+    }
+
+    async function fetchDownloadStats() {
+      const resp = await Promise.race([
+        timeout(4000),
+        fetch("https://api.hlidacshopu.cz/reviews-stats")
+      ]);
+      if (!resp.ok) throw new Error("API error");
+      const {
+        stats: { google, firefox }
+      } = await resp.json();
+      return {
+        downloads: parseInt(google.downloads) + parseInt(firefox.downloads)
+      };
+    }
+
+    async function renderResultsModal(detailUrl) {
+      render(loaderTemplate(), modalRenderRoot);
+      showResultsModal();
+      try {
+        const [{ plot }, chartData] = await Promise.all([
+          import(
+            "https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js"
+            ).then(() => import("/assets/js/extension.js")),
+          fetchDataSet(detailUrl)
+        ]);
+        render(
+          resultTemplate(templateData(detailUrl, chartData)),
+          modalRenderRoot
+        );
+        plot(chart(), chartData);
+      } catch (ex) {
+        console.error(ex);
+        render(notFoundTemplate(), modalRenderRoot);
+      }
+    }
+
+    function getInstallationGuideUrl(searchParams) {
+      const browsers = ["firefox", "android", "chrome", "safari"];
+      // forcing UA via get parameters has precedence
+      let browser = browsers.filter(x => searchParams.has(x)).pop();
+      if (!browser) {
+        const ua = navigator.userAgent.toLowerCase();
+        browser = browsers.filter(x => ua.indexOf(x) > 0).shift();
+      }
+      return browser && `/assets/js/${browser}.js`;
+    }
+
+    const parseTime = s => {
+      const d = new Date(s);
+      d.setHours(0, 0, 0, 0);
+      return d;
+    };
+
+    function* daysBetween(start, end) {
+      const startDay = parseTime(start);
+      const endDay = parseTime(end);
+      for (const d = startDay; d <= endDay; d.setDate(d.getDate() + 1)) {
+        yield new Date(d.getTime());
+      }
+    }
+
+    function createDataset(data) {
+      if (typeof data === "string") {
+        data = JSON.parse(data);
+      }
+      const dataMap = new Map(data.map(x => [parseTime(x.d).getTime(), x]));
+      let lastDay = data[0];
+      const days = Array.from(
+        daysBetween(parseTime(data[0].d), parseTime(data[data.length - 1].d))
+      );
+      const originalPrice = new Array(days.length);
+      const currentPrice = new Array(days.length);
+      for (let i = 0, l = days.length; i < l; i++) {
+        const day = days[i];
+        const item = dataMap.get(day.getTime()) || lastDay;
+        lastDay = item;
+        originalPrice[i] = { x: day, y: item.o === "" ? null : parseInt(item.o) };
+        currentPrice[i] = { x: day, y: item.c === "" ? null : parseInt(item.c) };
+      }
+      return {
+        originalPrice,
+        currentPrice
+      };
+    }
+
+    function naiveDiscount(currentPrice, actualPrice) {
+      const origPrice = currentPrice
+        .map(x => x.y)
+        .filter(y => y)
+        .shift();
+      return (origPrice - actualPrice) / origPrice;
+    }
+
+    function templateData(
+      detailUrl,
+      {
+        meta: { shop, name, imageUrl, realDiscount },
+        data: { currentPrice, originalPrice }
+      }
+    ) {
+      const lastDeclaredPrice = originalPrice
+        .map(x => x.y)
+        .filter(y => y)
+        .pop();
+      const { y: actualPrice, x: date } = currentPrice.filter(({ y }) => y).pop();
+      const discount = !realDiscount
+        ? naiveDiscount(currentPrice, actualPrice)
+        : realDiscount;
+      return {
+        detailUrl,
+        name,
+        shop,
+        imageUrl,
+        discount,
+        actualPrice,
+        date,
+        lastDeclaredPrice
+      };
+    }
+
+    function notFoundTemplate() {
+      return html`
+      <div
+        id="hlidac-shopu-modal__not-found"
+        class="result mdc-layout-grid__inner"
+      >
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Nenalezeno</h2>
+        </div>
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple"
+        >
+          <p>
+            Je nám líto, ale hledaný produkt nebo e-shop nemáme v naší databázi.
+          </p>
+        </div>
+      </div>
+    `;
+    }
+
+    function loaderTemplate() {
+      return html`
+      <div
+        id="hlidac-shopu-modal__loader"
+        class="result mdc-layout-grid__inner"
+      >
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Ověřuji&hellip;</h2>
+        </div>
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple"
+        >
+          <div class="loading-container">
+            <div class="loader" aria-label="Načítám data…">
+              Váš požadavek se zpracovává&hellip;
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    }
+
+    function resultTemplate(
+      {
+        detailUrl,
+        name,
+        shop,
+        lastDeclaredPrice,
+        actualPrice,
+        discount,
+        date
+      }
+    ) {
+      const declaredOriginalPrice = x =>
+        x &&
+        html`
+        <div class="claimed-price">
+          Uváděná původní cena <del id="original-price">${formatMoney(x)}</del>
+        </div>
+      `;
+      const realDiscount = x =>
+        x !== null &&
+        !isNaN(x) &&
+        html`
+        <div>
+          <abbr
+            title="Reálná sleva se počítá jako aktuální cena po slevě ku maximální ceně, za kterou se zboží prodávalo za posledních 90 dní."
+            >Reálná sleva*</abbr
+          >
+          <b class="discount"
+            ><span id="real-discount">${formatPercents(x)}</span></b
+          >
+        </div>
+      `;
+      const crawlDate = x =>
+        x &&
+        html`
+        <time id="latest-date" datetime="${x.toISOString()}">
+          ${x.toLocaleString("cs", {
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        })}
+        </time>
+      `;
+      const shopLogo = x => x && logoTemplate(x);
+      return html`
+      <div id="hlidac-shopu-modal__found" class="result mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>
+            ${shopLogo(shops.get(shop))}<a href="${detailUrl}" id="product-name"
+              >${name || "Vámi vybraný produkt"}</a
+            >
+          </h2>
+        </div>
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple"
+        >
+          ${crawlDate(date)} ${declaredOriginalPrice(lastDeclaredPrice)}
+          <div class="actual-price">
+            Prodejní cena
+            <span id="current-price">${formatMoney(actualPrice)}</span>
+          </div>
+          ${realDiscount(discount) || ""}
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <canvas id="hlidac-shopu-chart" width="100%"></canvas>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div style="display:flex;justify-content: flex-end">
+            <div
+              style="width:12px;height:12px;background-color:#5c62cd;border-radius:2px;margin-right:5px;margin-top:2px;"
+            ></div>
+            <span>Uváděná původní cena</span>
+            <div
+              style="width:12px;height:12px;background-color:#ff8787;border-radius:2px;margin: 2px 5px 0 8px;"
+            ></div>
+            <span>Prodejní cena</span>
+          </div>
+        </div>
+      </div>
+    `;
+    }
+
+    function logoTemplate({ logo, name, url, viewBox }) {
+      const image = svg`
+        <svg viewBox="${viewBox}">
+          <title>${name}</title>
+          <use href="/assets/img/icons.svg#${logo}"/>
+        </svg>`;
+      return html`<a href="${url}" class="sprite sprite--${logo}" title="${name}">${image}</a>`;
+    }
+
+    function eShopList(shops) {
+      return html`
+        <ul>${shops.map(x => html`
+          <li>${logoTemplate(x)}</li>`)}
+        </ul>`;
+    }
+  </script>
+  <script type="module">
+    import { Workbox } from "https://storage.googleapis.com/workbox-cdn/releases/5.0.0-rc.1/workbox-window.prod.mjs";
+
+    const isProduction = () => ["localhost", "127"].indexOf(location.hostname) === -1;
+    window.isUpdateAvailable = new Promise(async (resolve, reject) => {
+      if ("serviceWorker" in navigator && isProduction()) {
+        try {
+          const wb = new Workbox("/sw.js");
+          wb.addEventListener("installed", e => {
+            console.log("ServiceWorker registration successful with scope: ", e.sw.scope);
+            resolve(e.isUpdate);
+          });
+          wb.addEventListener("activated", e => resolve(e.isUpdate));
+          wb.addEventListener("controlling", e => resolve(e.isUpdate));
+          wb.addEventListener("waiting", e => resolve(e.isUpdate));
+          await wb.register();
+        } catch (ex) {
+          reject(ex);
+        }
+      }
+    });
+  </script>
+{% endblock %}
