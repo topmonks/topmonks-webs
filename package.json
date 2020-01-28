@@ -108,7 +108,8 @@
   "resolutions": {
     "bluebird": "npm:bluebird@3.7.2",
     "fsevents": "npm:dummypkg-a@1.0.0",
-    "lodash": "npm:lodash@4.17.15"
+    "lodash": "npm:lodash@4.17.15",
+    "html-minifier": "https://github.com/rarous/html-minifier-terser.git#4b9949c288c9a57ea47ff1bfeac781e9b8b5ea99"
   },
   "installConfig": {
     "pnp": true
