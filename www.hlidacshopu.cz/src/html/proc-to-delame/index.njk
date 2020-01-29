@@ -45,11 +45,22 @@
             „původní cenu“ (ta přeškrtnutá, ze které se vypočítává sleva).
             Tato praktika není ojedinělá, viz text&nbsp;níže.</p>
 
-          <img alt="Znázorňující Graf 1" class="responsive"
-               src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572515748/www.hlidacshopu.cz/graf-01.png"
-               srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_1008/v1572515748/www.hlidacshopu.cz/graf-01.png 1x,
-                     https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_1008/v1572515748/www.hlidacshopu.cz/graf-01.png 1.5x,
-                     https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_1008/v1572515748/www.hlidacshopu.cz/graf-01.png 2x">
+          <picture>
+            <source media="screen and (max-width: 479px)"
+                    srcset="{{ "www.hlidacshopu.cz/graf-01.png" | cloudinaryUrl(width=440) }} 1x,
+                            {{ "www.hlidacshopu.cz/graf-01.png" | cloudinaryUrl(width=440,dpr=1.5) }} 1.5x,
+                            {{ "www.hlidacshopu.cz/graf-01.png" | cloudinaryUrl(width=440,dpr=2) }} 2x">
+            <source media="screen and (min-width: 480px) and (max-width: 839px)"
+                    srcset="{{ "www.hlidacshopu.cz/graf-01.png" | cloudinaryUrl(width=800) }} 1x,
+                            {{ "www.hlidacshopu.cz/graf-01.png" | cloudinaryUrl(width=800,dpr=1.5) }} 1.5x,
+                            {{ "www.hlidacshopu.cz/graf-01.png" | cloudinaryUrl(width=800,dpr=2) }} 2x">
+            <source media="screen and (min-width: 840px)"
+                    srcset="{{ "www.hlidacshopu.cz/graf-01.png" | cloudinaryUrl(width=1008) }} 1x,
+                            {{ "www.hlidacshopu.cz/graf-01.png" | cloudinaryUrl(width=1008,dpr=1.5) }} 1.5x,
+                            {{ "www.hlidacshopu.cz/graf-01.png" | cloudinaryUrl(width=1008,dpr=2) }} 2x">
+            <img alt="Znázorňující Graf 1" class="responsive" width="1008" height="450"
+                 src="{{ "www.hlidacshopu.cz/graf-01.png" | cloudinaryUrl(width=1008,dpr="auto") }}">
+          </picture>
 
           <h2>Proč si myslíme, že se jedná o&nbsp;klamání spotřebitele?</h2>
           <hr>
@@ -130,20 +141,44 @@
             měsícem stála pouze o&nbsp;stovku víc, přesněji 2,749&nbsp;Kč a zlevněná byla
             z&nbsp;2,799&nbsp;Kč. Kouzlo je v&nbsp;tom, že Mall.cz 19.11. (začátek Black Friday
             akce) najednou navýšil původní cenu z&nbsp;2,799&nbsp;Kč na 4,899&nbsp;Kč.</p>
-          <img alt="Znázorňující Graf 2" class="responsive"
-               src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572515749/www.hlidacshopu.cz/graf-02.png"
-               srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_1008/v1572515749/www.hlidacshopu.cz/graf-02.png 1x,
-                     https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_1008/v1572515749/www.hlidacshopu.cz/graf-02.png 1.5x,
-                     https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_1008/v1572515749/www.hlidacshopu.cz/graf-02.png 2x">
+
+          <picture>
+            <source media="screen and (max-width: 479px)"
+                    srcset="{{ "www.hlidacshopu.cz/graf-02.png" | cloudinaryUrl(width=440) }} 1x,
+                            {{ "www.hlidacshopu.cz/graf-02.png" | cloudinaryUrl(width=440,dpr=1.5) }} 1.5x,
+                            {{ "www.hlidacshopu.cz/graf-02.png" | cloudinaryUrl(width=440,dpr=2) }} 2x">
+            <source media="screen and (min-width: 480px) and (max-width: 839px)"
+                    srcset="{{ "www.hlidacshopu.cz/graf-02.png" | cloudinaryUrl(width=800) }} 1x,
+                            {{ "www.hlidacshopu.cz/graf-02.png" | cloudinaryUrl(width=800,dpr=1.5) }} 1.5x,
+                            {{ "www.hlidacshopu.cz/graf-02.png" | cloudinaryUrl(width=800,dpr=2) }} 2x">
+            <source media="screen and (min-width: 840px)"
+                    srcset="{{ "www.hlidacshopu.cz/graf-02.png" | cloudinaryUrl(width=1008) }} 1x,
+                            {{ "www.hlidacshopu.cz/graf-02.png" | cloudinaryUrl(width=1008,dpr=1.5) }} 1.5x,
+                            {{ "www.hlidacshopu.cz/graf-02.png" | cloudinaryUrl(width=1008,dpr=2) }} 2x">
+            <img alt="Znázorňující Graf 2" class="responsive" width="1008" height="450"
+                 src="{{ "www.hlidacshopu.cz/graf-02.png" | cloudinaryUrl(width=1008,dpr="auto") }}">
+          </picture>
           <p>U&nbsp;Alza.cz jsme našli obdobný případ. Koloběžka Urbanstar Uscooter byla
             sice zlevněna na 6,290&nbsp;Kč, nicméně původní cena navýšená 17.11.&nbsp;ze
             7,500&nbsp;Kč na 9,999&nbsp;Kč. Tedy místo reálných 16&nbsp;% byla zázrakem vykouzlena
             sleva 37&nbsp;%.</p>
-          <img alt="Znázorňující Graf 3" class="responsive"
-               src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572515747/www.hlidacshopu.cz/graf-03.png"
-               srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_1008/v1572515747/www.hlidacshopu.cz/graf-03.png 1x,
-                     https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_1008/v1572515747/www.hlidacshopu.cz/graf-03.png 1.5x,
-                     https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_1008/v1572515747/www.hlidacshopu.cz/graf-03.png 2x">
+
+          <picture>
+            <source media="screen and (max-width: 479px)"
+                    srcset="{{ "www.hlidacshopu.cz/graf-03.png" | cloudinaryUrl(width=440) }} 1x,
+                            {{ "www.hlidacshopu.cz/graf-03.png" | cloudinaryUrl(width=440,dpr=1.5) }} 1.5x,
+                            {{ "www.hlidacshopu.cz/graf-03.png" | cloudinaryUrl(width=440,dpr=2) }} 2x">
+            <source media="screen and (min-width: 480px) and (max-width: 839px)"
+                    srcset="{{ "www.hlidacshopu.cz/graf-03.png" | cloudinaryUrl(width=800) }} 1x,
+                            {{ "www.hlidacshopu.cz/graf-03.png" | cloudinaryUrl(width=800,dpr=1.5) }} 1.5x,
+                            {{ "www.hlidacshopu.cz/graf-03.png" | cloudinaryUrl(width=800,dpr=2) }} 2x">
+            <source media="screen and (min-width: 840px)"
+                    srcset="{{ "www.hlidacshopu.cz/graf-03.png" | cloudinaryUrl(width=1008) }} 1x,
+                            {{ "www.hlidacshopu.cz/graf-03.png" | cloudinaryUrl(width=1008,dpr=1.5) }} 1.5x,
+                            {{ "www.hlidacshopu.cz/graf-03.png" | cloudinaryUrl(width=1008,dpr=2) }} 2x">
+            <img alt="Znázorňující Graf 3" class="responsive" width="1008" height="450"
+                 src="{{ "www.hlidacshopu.cz/graf-03.png" | cloudinaryUrl(width=1008,dpr="auto") }}">
+          </picture>
           <p>Na CZC.cz jsme dokonce našli produkty inzerované v&nbsp;Black Friday sekci,
             u&nbsp;kterých se navýšila nejenom původní cena, ale dokonce i&nbsp;cena samotná,
             ta po slevě. (viz příklad na začátku této stránky).<br>
@@ -170,11 +205,22 @@
             společný projekt, na kterém aktuálně spolupracuje
             <a href="https://www.apify.com/">Apify</a>, <a href="https://www.topmonks.cz/">TopMonks</a> a
             <a href="https://www.keboola.com/">Keboola</a>.</p>
-          <img alt="Hlídač Shopů - Ukázka" class="responsive"
-               src="https://res.cloudinary.com/topmonks/image/upload/dpr_auto,q_auto,f_auto,w_auto/v1572499143/www.hlidacshopu.cz/porovnani-cen.png"
-               srcset="https://res.cloudinary.com/topmonks/image/upload/dpr_1,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 1x,
-                     https://res.cloudinary.com/topmonks/image/upload/dpr_1.5,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 1.5x,
-                     https://res.cloudinary.com/topmonks/image/upload/dpr_2,q_auto,f_auto,w_1008/v1572499143/www.hlidacshopu.cz/porovnani-cen.png 2x">
+          <picture>
+            <source media="screen and (max-width: 479px)"
+                    srcset="{{ "www.hlidacshopu.cz/porovnani-cen.png" | cloudinaryUrl(width=440) }} 1x,
+                            {{ "www.hlidacshopu.cz/porovnani-cen.png" | cloudinaryUrl(width=440,dpr=1.5) }} 1.5x,
+                            {{ "www.hlidacshopu.cz/porovnani-cen.png" | cloudinaryUrl(width=440,dpr=2) }} 2x">
+            <source media="screen and (min-width: 480px) and (max-width: 839px)"
+                    srcset="{{ "www.hlidacshopu.cz/porovnani-cen.png" | cloudinaryUrl(width=800) }} 1x,
+                            {{ "www.hlidacshopu.cz/porovnani-cen.png" | cloudinaryUrl(width=800,dpr=1.5) }} 1.5x,
+                            {{ "www.hlidacshopu.cz/porovnani-cen.png" | cloudinaryUrl(width=800,dpr=2) }} 2x">
+            <source media="screen and (min-width: 840px)"
+                    srcset="{{ "www.hlidacshopu.cz/porovnani-cen.png" | cloudinaryUrl(width=1008) }} 1x,
+                            {{ "www.hlidacshopu.cz/porovnani-cen.png" | cloudinaryUrl(width=1008,dpr=1.5) }} 1.5x,
+                            {{ "www.hlidacshopu.cz/porovnani-cen.png" | cloudinaryUrl(width=1008,dpr=2) }} 2x">
+            <img alt="Hlídač Shopů - Ukázka" class="responsive" width="1008" height="770"
+                 src="{{ "www.hlidacshopu.cz/porovnani-cen.png" | cloudinaryUrl(width=1008,dpr="auto") }}">
+          </picture>
         </div>
       </div>
     </div>

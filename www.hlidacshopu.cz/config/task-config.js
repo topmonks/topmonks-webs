@@ -24,19 +24,15 @@ const config = createSharedTaskConfig(__dirname, {
   html: {
     collections: ["media", "mediaImages"],
     nunjucksRender: {
-      manageEnv(env) {
-        env.addFilter("longDate", str =>
+      filters: {
+        longDate: str =>
           new Intl.DateTimeFormat("cs", {
             year: "numeric",
             month: "long",
             day: "numeric"
-          }).format(new Date(str))
-        );
-        env.addFilter("split", (str, seperator) => str.split(seperator));
-        env.addFilter(
-          "transformation",
-          (s, t) => s && s.replace("/upload/", `/upload/${t}/`)
-        );
+          }).format(new Date(str)),
+        split: (str, seperator) => str.split(seperator),
+        transformation: (s, t) => s && s.replace("/upload/", `/upload/${t}/`)
       }
     }
   },
