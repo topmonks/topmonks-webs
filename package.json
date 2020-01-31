@@ -9,7 +9,7 @@
   "dependencies": {
     "@lhci/utils": "^0.3.7",
     "@material/layout-grid": "^4.0.0",
-    "@pulumi/aws": "^1.18.0",
+    "@pulumi/aws": "^1.19.0",
     "@pulumi/pulumi": "^1.9.1",
     "@types/node": "^13.5.0",
     "lodash": "4.17.15",
