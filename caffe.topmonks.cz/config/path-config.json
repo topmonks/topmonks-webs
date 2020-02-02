@@ -31,6 +31,11 @@
     "dest": "images"
   },
 
+  "cloudinary": {
+    "src": "cloudinary",
+    "dest": "caffe.topmonks.cz"
+  },
+
   "fonts": {
     "src": "fonts",
     "dest": "fonts"

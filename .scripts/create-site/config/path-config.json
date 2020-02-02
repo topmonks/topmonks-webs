@@ -11,6 +11,11 @@
     "src": "data"
   },
 
+  "cloudinary": {
+    "src": "cloudinary",
+    "dest": "%APP_DIR_NAME%"
+  },
+
   "static": {
     "src": "static",
     "dest": "./"
