@@ -7,6 +7,7 @@ const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
 
 module.exports = {
   images: true,
+  cloudinary: false,
   javascripts: false,
   fonts: true,
   static: true,

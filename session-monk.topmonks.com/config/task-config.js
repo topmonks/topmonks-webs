@@ -2,6 +2,7 @@ const pathConfig = require("./path-config.json");
 
 module.exports = {
   images: false,
+  cloudinary: false,
   javascripts: false,
   fonts: false,
   static: true,
