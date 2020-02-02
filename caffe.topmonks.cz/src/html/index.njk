@@ -271,42 +271,37 @@
           <hr class="line">
         </div>
 
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-          <div class="mdc-layout-grid__inner">
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-              <h3>Téma</h3>
-              <span>{{ upcomingEvent.shortTitle }}</span>
-              {% if upcomingEvent.lecturers %}
-              {% endif %}
-            </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-desktop">
+          <h3>Téma</h3>
+          <span>{{ upcomingEvent.shortTitle }}</span>
+          {% if upcomingEvent.lecturers %}
+          {% endif %}
+        </div>
 
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-              <h3>Kdy?</h3>
-              <span>{{ upcomingEvent.date }}</span>
-            </div>
-
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-              <h3>Přednášející</h3>
-              <span>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-desktop">
+          <h3>Přednášející</h3>
+          <span>
                 {% for lecturer in upcomingEvent.lecturers | split(",") %}
                   {{ lecturer }}<br/>
                 {% endfor %}</span>
-            </div>
-
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-              <h3>Kde?</h3>
-              <span>{{ upcomingEvent.address | safe }}</span>
-            </div>
-
-          </div>
         </div>
-        <div class="mdc-layout-grid__cell">
-          <div class="poster">
-          </div>
+
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-desktop">
+          <h3>Kdy?</h3>
+          <span>{{ upcomingEvent.date }}</span>
         </div>
+
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-desktop">
+          <h3>Kde?</h3>
+          <span>{{ upcomingEvent.address | safe }}</span>
+        </div>
+        <!-- Plakát, který se připravuje na akci. Zmraženo na dobu neurčitou - plakáty se nedělají včas, nemá cenu tedy pro ně tady držet místo
+                <div class="mdc-layout-grid__cell">
+                  <div class="poster">
+                  </div></div>-->
 
         <div
-          class="btn btn_dark mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop">
+          class="btn btn_dark mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-12-desktop">
           <a href="{{ upcomingEvent.link }}" class="button">Přihlásit se na akci</a>
         </div>
       </div>
