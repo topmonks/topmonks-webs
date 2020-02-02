@@ -60,24 +60,23 @@ Install dependencies
 yarn install
 ```
 
-Every website has it's [Blendid](https://github.com/vigetlabs/blendid) configuration.
+Every website has it's own [Blendid](https://github.com/topmonks/blendid) configuration.
 Start `www.topmonks.com` development with following command:
 
 ```
 yarn start:www.topmonks.com
 ```
 
-TopMonks Caffè site has ability to automatically upload posters to Cloudinary.
-For local development you'll need to generate local posters data file. 
-Go to [Cloudinary console](https://cloudinary.com/console) (credentials are in TopMonks 1pwd)
-and copy the `Environment variable` with credentials. One time run those commands:
+### Cloudinary
+
+Sites have ability to automatically upload images to Cloudinary and generate Cloudinary URLs.
+Cloudinary needs to be properly configured.
+Go to [Cloudinary console](https://cloudinary.com/console) (credentials are in TopMonks 1password vault)
+and copy the `Environment variable` with credentials. One time run this command:
 
 ```
 pbpaste > .env
-yarn start:caffe.topmonks.cz upload-posters
 ```
-
-In production this is generated automatically. In development it is not - for sane build times and to keep upload quotas.
 
 ### Sites available
 

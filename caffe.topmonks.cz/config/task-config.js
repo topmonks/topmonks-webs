@@ -1,6 +1,5 @@
 const pathConfig = require("./path-config.json");
 const marked = require("marked");
-const cloudinaryUpload = require("gulp-cloudinary-upload");
 const markdownToJSON = require("gulp-markdown-to-json");
 const merge = require("gulp-merge-json");
 const path = require("path");
@@ -15,6 +14,9 @@ module.exports = createSharedTaskConfig(__dirname, {
   svgSprite: true,
   stylesheets: true,
   workboxBuild: false,
+  cloudinary: {
+    manifest: "posters.json"
+  },
 
   html: {
     collections: ["events", "posters"]
@@ -47,43 +49,13 @@ module.exports = createSharedTaskConfig(__dirname, {
         watch(path.resolve(dataPath, "events.json"), series("html"));
         cb();
       });
-
-      task("upload-posters", () =>
-        src(
-          projectPath(
-            PATH_CONFIG.src,
-            PATH_CONFIG.static.src,
-            "images/posters-small/*.*"
-          )
-        )
-          .pipe(
-            cloudinaryUpload({
-              params: {
-                folder: "caffe.topmonks.cz/posters",
-                use_filename: true,
-                unique_filename: false,
-                overwrite: false
-              }
-            })
-          )
-          .pipe(
-            cloudinaryUpload.manifest({
-              path: projectPath(
-                PATH_CONFIG.src,
-                PATH_CONFIG.data.src,
-                "posters.json"
-              )
-            })
-          )
-          .pipe(dest(projectPath(PATH_CONFIG.src, PATH_CONFIG.data.src)))
-      );
     },
     development: {
       prebuild: ["events-data"],
       postbuild: ["events:watch"]
     },
     production: {
-      prebuild: ["events-data", "upload-posters"]
+      prebuild: ["events-data"]
     }
   },
 
