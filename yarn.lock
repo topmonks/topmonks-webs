@@ -354,7 +354,8 @@
 
 "@topmonks/blendid@git://github.com/topmonks/blendid.git":
   version "5.0.0"
-  resolved "git://github.com/topmonks/blendid.git#904cc2f58851915f31a3c49c8e2c8c01743ec4e0"
+  uid f0cafa6b1d28594f494ab10312d9ee7ee11117fc
+  resolved "git://github.com/topmonks/blendid.git#f0cafa6b1d28594f494ab10312d9ee7ee11117fc"
   dependencies:
     ansi-colors "4.1.1"
     autoprefixer "9.7.4"
