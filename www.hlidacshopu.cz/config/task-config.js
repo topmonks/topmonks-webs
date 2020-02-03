@@ -9,7 +9,7 @@ const createSharedTaskConfig = require("../../shared/config/createSharedTaskConf
 const config = createSharedTaskConfig(__dirname, {
   locales: ["cs", "cs-CZ"],
   images: true,
-  cloudinary: false,
+  cloudinary: true,
   javascripts: false,
   fonts: true,
   static: true,
@@ -23,7 +23,7 @@ const config = createSharedTaskConfig(__dirname, {
   },
 
   html: {
-    collections: ["media", "mediaImages"],
+    collections: ["media", "images"],
     nunjucksRender: {
       filters: {
         longDate: str =>
@@ -31,9 +31,7 @@ const config = createSharedTaskConfig(__dirname, {
             year: "numeric",
             month: "long",
             day: "numeric"
-          }).format(new Date(str)),
-        split: (str, seperator) => str.split(seperator),
-        transformation: (s, t) => s && s.replace("/upload/", `/upload/${t}/`)
+          }).format(new Date(str))
       }
     }
   },

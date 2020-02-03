@@ -2,30 +2,11 @@
 {% from 'macros/helpers.njk' import sprite %}
 {% block title %}Hlídač shopů{% endblock %}
 {% block preload %}
-  <link
-    rel="prefetch"
-    href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js"
-    as="script"
-    crossorigin="anonymous"
-  />
-  <link rel="prefetch" href="/assets/js/extension.js" as="script"/>
-  <link
-    rel="modulepreload"
-    href="https://unpkg.com/lit-html@1.1.1/lit-html.js?module"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    href="https://api.hlidacshopu.cz/shop-numbers"
-    as="fetch"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="preload"
-    href="https://api.hlidacshopu.cz/reviews-stats"
-    as="fetch"
-    crossorigin="anonymous"
-  />
+  <link rel="prefetch" as="script" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.bundle.min.js" crossorigin/>
+  <link rel="prefetch" as="script" href="/assets/js/extension.js"/>
+  <link rel="modulepreload" href="https://unpkg.com/lit-html@1.1.1/lit-html.js?module" crossorigin/>
+  <link rel="preload" as="fetch" href="https://api.hlidacshopu.cz/shop-numbers" crossorigin/>
+  <link rel="preload" as="fetch" href="https://api.hlidacshopu.cz/reviews-stats" crossorigin/>
 {% endblock %}
 {% block styles %}
   <link rel="stylesheet" href="/assets/css/index.css"/>
@@ -98,20 +79,22 @@
           <a href="https://medium.com/@jakubbalada/black-friday-2019-s-hl%C3%ADda%C4%8Dem-shop%C5%AF-9a3ddd352a8c"
              title="Přečtě si výsledky Analýzy Black Friday 2019">
             <picture>
+              {% set mobileBanner = images["mobile-banner.png"]["public_id"] %}
+              {% set desktopBanner = images["desktop-banner.png"]["public_id"] %}
               <source media="screen and (max-width: 479px)"
-                      srcset="{{ "www.hlidacshopu.cz/mobil-banner.png" | cloudinaryUrl(width=480) }} 1x,
-                              {{ "www.hlidacshopu.cz/mobil-banner.png" | cloudinaryUrl(width=480,dpr=1.5) }} 1.5x,
-                              {{ "www.hlidacshopu.cz/mobil-banner.png" | cloudinaryUrl(width=480,dpr=2) }} 2x"/>
+                      srcset="{{ mobileBanner | cloudinaryUrl(width=480) }} 1x,
+                              {{ mobileBanner | cloudinaryUrl(width=480,dpr=1.5) }} 1.5x,
+                              {{ mobileBanner | cloudinaryUrl(width=480,dpr=2) }} 2x"/>
               <source media="screen and (min-width: 480px) and (max-width: 839px)"
-                      srcset="{{ "www.hlidacshopu.cz/desktop-banner.png" | cloudinaryUrl(width=840) }} 1x,
-                              {{ "www.hlidacshopu.cz/desktop-banner.png" | cloudinaryUrl(width=840,dpr=1.5) }} 1.5x,
-                              {{ "www.hlidacshopu.cz/desktop-banner.png" | cloudinaryUrl(width=840,dpr=2) }} 2x"/>
+                      srcset="{{ desktopBanner | cloudinaryUrl(width=840) }} 1x,
+                              {{ desktopBanner | cloudinaryUrl(width=840,dpr=1.5) }} 1.5x,
+                              {{ desktopBanner | cloudinaryUrl(width=840,dpr=2) }} 2x"/>
               <source media="screen and (min-width: 840px)"
-                      srcset="{{ "www.hlidacshopu.cz/desktop-banner.png" | cloudinaryUrl(width=1008) }} 1x,
-                              {{ "www.hlidacshopu.cz/desktop-banner.png" | cloudinaryUrl(width=1008,dpr=1.5) }} 1.5x,
-                              {{ "www.hlidacshopu.cz/desktop-banner.png" | cloudinaryUrl(width=1008,dpr=2) }} 2x"/>
+                      srcset="{{ desktopBanner | cloudinaryUrl(width=1008) }} 1x,
+                              {{ desktopBanner | cloudinaryUrl(width=1008,dpr=1.5) }} 1.5x,
+                              {{ desktopBanner | cloudinaryUrl(width=1008,dpr=2) }} 2x"/>
               <img alt="Analýza Black Friday 2019" class="responsive"
-                   src="{{ "www.hlidacshopu.cz/mobil-banner.png" | cloudinaryUrl(width=480,dpr="auto") }} "/>
+                   src="{{ mobileBanner | cloudinaryUrl(width=480,dpr="auto") }} "/>
             </picture>
           </a>
         </div>
@@ -193,24 +176,24 @@
           class="tabs tabs--open-tab-1 mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
         >
           <div class="tab" id="tab-1">
-            <img
-              alt="Step 1: Graf"
-              src="https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,dpr_auto,f_auto/v1575461537/www.hlidacshopu.cz/window01.png"
-              width="800px"
+            {% set chart01 = images["window01.png"]["public_id"] %}
+            <img alt="" class="responsive" loading="lazy"
+              src="{{ chart01 | cloudinaryUrl(width=1008,dpr="auto") }}"
+              width="800" height="574"
             />
           </div>
           <div class="tab" id="tab-2">
-            <img
-              alt="Step 2: Graf - Přeškrtnuté a aktuální ceny"
-              src="https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,dpr_auto,f_auto/v1575461531/www.hlidacshopu.cz/window02.png"
-              width="800px"
+            {% set chart02 = images["window02.png"]["public_id"] %}
+            <img alt="" class="responsive" loading="lazy"
+              src="{{ chart02 | cloudinaryUrl(width=1008,dpr="auto") }}"
+              width="800" height="574"
             />
           </div>
           <div class="tab" id="tab-3">
-            <img
-              alt="Step 3: Graf - Vývoj cen"
-              src="https://res.cloudinary.com/topmonks/image/upload/w_1008,q_auto,dpr_auto,f_auto/v1575461788/www.hlidacshopu.cz/window03.png"
-              width="800px"
+            {% set chart03 = images["window03.png"]["public_id"] %}
+            <img alt="" class="responsive" loading="lazy"
+              src="{{ chart03 | cloudinaryUrl(width=1008,dpr="auto") }}"
+              width="800" height="574"
             />
           </div>
         </div>
@@ -226,7 +209,6 @@
               tabs.classList.add(`tabs--open-${targetTab}`);
               activeTab = targetTab;
             }
-            console.dir(e.target);
           });
         </script>
       </div>
@@ -382,6 +364,17 @@
     </div>
   </section>
 
+  {% macro avatar(name) %}
+    {% set publicId = images["avatar/" + name + ".jpg"]["public_id"] %}
+    <img class="avatar" alt="" width="70" height="70"
+         src="{{ publicId | cloudinaryUrl(width=70,height=70,dpr="auto") }}"
+         srcset="{{ publicId | cloudinaryUrl(width=70,height=70,dpr=1) }} 1x,
+                 {{ publicId | cloudinaryUrl(width=70,height=70,dpr=1.5) }} 1.5x,
+                 {{ publicId | cloudinaryUrl(width=70,height=70,dpr=2) }} 2x"
+         loading="lazy" role="presentation"
+    />
+  {% endmacro %}
+
   <link rel="stylesheet" href="/assets/css/reviews.css"/>
   <section class="references">
     <div class="mdc-layout-grid">
@@ -391,12 +384,7 @@
         </div>
         <div class="review mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
           <div class="review__header">
-            <img
-              class="avatar"
-              alt=""
-              src="/assets/img/avatar/marek-sukup.jpg"
-              loading="lazy"
-            />
+            {{ avatar("marek-sukup") }}
             <span class="review__author">Marek Sukup</span><br/>
             <time class="review__date text--light-grey" datetime="2018-12-10"
             >10. 12. 2018
@@ -418,12 +406,7 @@
 
         <div class="review mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
           <div class="review__header">
-            <img
-              class="avatar"
-              alt=""
-              src="/assets/img/avatar/tana-lalova.jpg"
-              loading="lazy"
-            />
+            {{ avatar("tana-lalova") }}
             <span class="review__author">Táňa Lálová</span><br/>
             <span class="review__date text--light-grey">Mluvčí Mall.cz</span
             ><br/>
@@ -441,12 +424,7 @@
 
         <div class="review mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
           <div class="review__header">
-            <img
-              class="avatar"
-              alt=""
-              src="/assets/img/avatar/jan-verner.jpg"
-              loading="lazy"
-            />
+            {{ avatar("jan-verner") }}
             <span class="review__author">Jan Verner</span><br/>
             <time class="review__date text--light-grey" datetime="2018-12-14"
             >14. 12. 2018
@@ -1036,7 +1014,7 @@
     }
   </script>
   <script type="module">
-    import { Workbox } from "https://storage.googleapis.com/workbox-cdn/releases/5.0.0-rc.1/workbox-window.prod.mjs";
+    import { Workbox } from "https://storage.googleapis.com/workbox-cdn/releases/5.0.0-rc.2/workbox-window.prod.mjs";
 
     const isProduction = () => ["localhost", "127"].indexOf(location.hostname) === -1;
     window.isUpdateAvailable = new Promise(async (resolve, reject) => {

@@ -6,15 +6,15 @@
 {% endblock %}
 
 {% macro mediaImage(path) %}
-  {% set publicId = "www.hlidacshopu.cz/media/" + path %}
+  {% set publicId = images["media/" + path]["public_id"] %}
   <img alt="" width="250" height="142" role="presentation"
        src="{{ publicId | cloudinaryUrl(width=250,height=142,dpr="auto") }}"
-       srcset="{{ publicId | cloudinaryUrl(width=250,height=142) }} 1x,
+       srcset="{{ publicId | cloudinaryUrl(width=250,height=142,dpr=1) }} 1x,
                {{ publicId | cloudinaryUrl(width=250,height=142,dpr=1.5) }} 1.5x,
                {{ publicId | cloudinaryUrl(width=250,height=142,dpr=2) }} 2x">
 {% endmacro %}
 
-{% macro mediaArticle(article, images) %}
+{% macro mediaArticle(article) %}
   <article class="media-article-item">
     <div class="media__image">
       <a href="{{ article.url }}">
@@ -39,7 +39,7 @@
           <h2 class="media-heading">{{ year }}</h2>
           <div class="media-article-list">
             {% for article in media[year] | sort(true, false, "published") %}
-              {{ mediaArticle(article, mediaImages) }}
+              {{ mediaArticle(article) }}
             {% endfor %}
           </div>
         {% endfor %}

@@ -11,6 +11,11 @@
     "src": "data"
   },
 
+  "cloudinary": {
+    "src": "cloudinary",
+    "dest": "www.hlidacshopu.cz"
+  },
+
   "static": {
     "src": "static",
     "dest": "./"
