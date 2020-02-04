@@ -406,10 +406,12 @@
     "@types/long" "*"
     "@types/node" "*"
 
-"@types/chart.js@^2.9.10":
-  version "2.9.10"
-  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.9.10.tgz#8d629b2a72d7ba56ca0b50a0c35aedbc253e14fb"
-  integrity sha512-JM3EblRdGWF9/0NxIgOU7eCG17MlaaPzBKP+/XUlRedChhJzco+PFB0gqBpRY6dXzS2J13B76iIG54dpe9gKMg==
+"@types/chart.js@^2.9.12":
+  version "2.9.12"
+  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.9.12.tgz#3990a44faa06722625524a6d039b9bf15b650910"
+  integrity sha512-oTgYDLBKA9sLYfI1hkquxvVcJ9smDTjXMhsw6M66mA+Li1fZkCvpi0WGfaubW2VWBh32ydWcMublRotJ7QkTZw==
+  dependencies:
+    moment "^2.10.2"
 
 "@types/clean-css@*":
   version "4.2.1"
@@ -6964,6 +6966,11 @@ modify-filename@^1.0.0, modify-filename@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/modify-filename/-/modify-filename-1.1.0.tgz#9a2dec83806fbb2d975f22beec859ca26b393aa1"
   integrity sha1-mi3sg4Bvuy2XXyK+7IWcoms5OqE=
+
+moment@^2.10.2:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
 morgan@^1.6.1:
   version "1.9.1"
