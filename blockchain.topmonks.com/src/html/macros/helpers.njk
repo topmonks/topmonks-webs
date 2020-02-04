@@ -19,7 +19,7 @@
   </picture>
 {% endmacro %}
 
-{% macro avatar(alt, src, size) %}
+{% macro avatar(alt, src, size=32) %}
   <img class="person__photo" loading="lazy"
        src="{{ src | cloudinaryUrl(width=size,height=size,dpr="auto") }}"
        srcset="{{ src | cloudinaryUrl(width=size,height=size) }} 1x,

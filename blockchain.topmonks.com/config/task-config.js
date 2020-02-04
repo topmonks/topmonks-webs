@@ -7,7 +7,7 @@ const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
 
 module.exports = {
   images: true,
-  cloudinary: false,
+  cloudinary: true,
   javascripts: false,
   fonts: true,
   static: true,
@@ -16,7 +16,7 @@ module.exports = {
   workboxBuild: false,
 
   html: {
-    collections: ["articles", "podcasts"],
+    collections: ["articles", "podcasts", "images"],
     nunjucksRender: {
       manageEnv(env) {
         env.addFilter("longDate", (str, locale) =>

@@ -7,6 +7,11 @@
     "dest": "./"
   },
 
+  "cloudinary": {
+    "src": "cloudinary",
+    "dest": "blockchain.topmonks.com"
+  },
+
   "data": {
     "src": "data"
   },

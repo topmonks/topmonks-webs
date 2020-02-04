@@ -1,4 +1,4 @@
-{%- from "macros/helpers.njk" import avatar -%}
+{%- from "macros/helpers.njk" import avatar, blogImg -%}
 {%- set articlesList = articles[2019] | list -%}
 {%- set latestArticle = articlesList | last -%}
 <!DOCTYPE html>
@@ -59,11 +59,30 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Latest post</h2>
       </div>
+      {% macro latestMediaImage(path) %}
+        {% set publicId = images[path]["public_id"] %}
+        <picture>
+          <source media="screen and (max-width: 479px)"
+                  srcset="{{ publicId | cloudinaryUrl(width=343,height=172,dpr=1)}} 1x,
+                    {{ publicId | cloudinaryUrl(width=343,height=172,dpr=1.5)}} 1.5x,
+                    {{ publicId | cloudinaryUrl(width=343,height=172,dpr=2)}} 2x">
+          <source media="screen and (min-width: 480px) and (max-width: 839px)"
+                  srcset="{{ publicId | cloudinaryUrl(width=360,height=180,dpr=1)}} 1x,
+                    {{ publicId | cloudinaryUrl(width=360,height=180,dpr=1.5)}} 1.5x,
+                    {{ publicId | cloudinaryUrl(width=360,height=180,dpr=2)}} 2x">
+          <source media="screen and (min-width: 840px)"
+                  srcset="{{ publicId | cloudinaryUrl(width=290,height=290,crop="fill",dpr=1)}} 1x,
+                    {{ publicId | cloudinaryUrl(width=290,height=290,crop="fill",dpr=1.5)}} 1.5x,
+                    {{ publicId | cloudinaryUrl(width=290,height=290,crop="fill",dpr=2)}} 2x">
+          <img alt="" loading="lazy" class="responsive"
+               width="290" height="290"
+               src="{{ publicId | cloudinaryUrl(width=290,height=290,crop="fill",dpr="auto")}}">
+        </picture>
+      {% endmacro %}
       <div class="blog__box mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <article class="mdc-layout-grid__inner">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-            <img alt="{{ article.title }}" src="/images/articles-img/{{ latestArticle.picture }}" width="100%"
-                 height="100%">
+            {{ latestMediaImage(latestArticle.picture) }}
           </div>
           <div class="blog__box-body mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
             <time datetime="{{ latestArticle.published }}"
@@ -72,8 +91,7 @@
             <p>{{ latestArticle.body | safe }}</p>
             <div
               class="personal__id">
-              <img alt="{{ latestArticle.author }}" class="person__photo" src="{{ latestArticle.authorImage }}"
-                   width="32" height="32">
+              {{ avatar(latestArticle.author, latestArticle.authorImage) }}
               <span class="name">{{ latestArticle.author }}</span>
             </div>
             <div
@@ -88,8 +106,8 @@
 </section>
 
 {% macro mediaImage(path) %}
-  <img alt="Picture of the Article" loading="lazy" src="/images/poscasts-img/{{ podcast.picture }}" width="100%"
-       height="100%">
+  {% set publicId = images[path]["public_id"] %}
+  {{ blogImg("", publicId) }}
 {% endmacro %}
 
 {% macro mediaArticle(article, images) %}
@@ -98,13 +116,12 @@
     <article class="">
       <a href="{{ article.link }}" class="">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <img alt="{{ article.title }}" loading="lazy" width="100%" src="/images/podcasts-img/{{ article.picture }}">
+          {{ mediaImage(article.picture) }}
           <div class="blog__box-body">
             <time datetime="{{ article.published }}" class="media__date">{{ article.published | longDate("en") }}</time>
             <h3>{{ article.title }}</h3>
             <div class="personal__id">
-              <img class="person__photo" loading="lazy" src="{{ article.authorImage }}" alt="{{ article.author }}"
-                   width="32" height="32">
+              {{ avatar(article.author, article.authorImage) }}
               <span class="name">{{ article.author }}</span>
             </div>
             <div class="article-link">
@@ -131,34 +148,6 @@
     </div>
   </div>
 </section>
-
-{% macro mediaImage(path) %}
-  <img alt="Picture of the Article" class="responsive" loading="lazy" src="/images/articles-img/{{ article.picture }}">
-{% endmacro %}
-
-{% macro mediaArticle(article, images) %}
-
-  <div class="blog__box mdc-layout-grid__cell">
-    <article class="">
-      <a href="{{ article.link }}" class="">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <img alt="{{ article.title }}" loading="lazy" class="responsive" src="/images/articles-img/{{ article.picture }}">
-          <div class="blog__box-body">
-            <time datetime="{{ article.published }}" class="media__date">{{ article.published | longDate("en") }}</time>
-            <h3>{{ article.title }}</h3>
-            <div class="personal__id">
-              {{ avatar("photo of " + article.author, article.authorImage, 32) }}
-              <span class="name">{{ article.author }}</span>
-            </div>
-            <div class="article-link">
-              <a href="{{ article.link }}">Show article</a>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-  </div>
-{% endmacro %}
 
 <section id="articles" class="articles">
   <div class="mdc-layout-grid layout-wrapper">
