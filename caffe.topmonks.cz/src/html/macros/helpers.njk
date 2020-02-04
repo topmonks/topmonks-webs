@@ -4,19 +4,19 @@
   <picture>
     <source media="screen and (max-width: 479px)"
             srcset="{{ imageUrl | cloudinaryUrl(dpr=1,width=400) }} 1x,
-               {{ imageUrl | cloudinaryUrl(dpr=1.5,width=400) }} 1.5x,
-               {{ imageUrl | cloudinaryUrl(dpr=2,width=400) }} 2x">
+                    {{ imageUrl | cloudinaryUrl(dpr=1.5,width=400) }} 1.5x,
+                    {{ imageUrl | cloudinaryUrl(dpr=2,width=400) }} 2x">
     <source media="screen and (min-width: 480px) and (max-width: 839px)"
             srcset="{{ imageUrl | cloudinaryUrl(dpr=1,width=344) }} 1x,
-               {{ imageUrl | cloudinaryUrl(dpr=1.5,width=344) }} 1.5x,
-               {{ imageUrl | cloudinaryUrl(dpr=2,width=344) }} 2x">
+                    {{ imageUrl | cloudinaryUrl(dpr=1.5,width=344) }} 1.5x,
+                    {{ imageUrl | cloudinaryUrl(dpr=2,width=344) }} 2x">
     <source media="screen and (min-width: 840px)"
             srcset="{{ imageUrl | cloudinaryUrl(dpr=1,width=440) }} 1x,
-               {{ imageUrl | cloudinaryUrl(dpr=1.5,width=440) }} 1.5x,
-               {{ imageUrl | cloudinaryUrl(dpr=2,width=440) }} 2x">
+                    {{ imageUrl | cloudinaryUrl(dpr=1.5,width=440) }} 1.5x,
+                    {{ imageUrl | cloudinaryUrl(dpr=2,width=440) }} 2x">
     <img alt="TopMonks Caffè - {{ eventData.title }}"
          loading="lazy" width="440" height="620" class="responsive"
-         src="{{ imageUrl | cloudinaryUrl(dpr=auto,width=440) }}">
+         src="{{ imageUrl | cloudinaryUrl(dpr="auto",width=440) }}">
   </picture>
 {%- endmacro %}
 
