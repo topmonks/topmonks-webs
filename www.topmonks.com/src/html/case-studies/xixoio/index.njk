@@ -70,40 +70,40 @@
     </div>
   </div>
   <script>var appBar = document.querySelector(".tm-app-bar");
-  var hamburger = document.querySelector(".tm-hamburger__container");
-  var menu = document.querySelector(".tm-menu");
-  var links = menu.getElementsByTagName("a");
-  for (var i = 0, len = links.length; i < len; i++) {
-    links[i].onclick = toggleMenu(hamburger);
-  }
-  hamburger.addEventListener("click", toggleMenu());
-
-  function toggleMenu() {
-    return function() {
-      hamburger.classList.toggle("tm-hamburger__container--open");
-      appBar.classList.toggle("tm-app-bar--open");
-    };
-  }
-
-  var ticking = false;
-
-  window.addEventListener("resize", function() {
-    if (!ticking) {
-      window.requestAnimationFrame(function() {
-        if (window.matchMedia("(min-width: 841px)").matches) {
-          menu.classList.add("tm-menu--horizontal");
-        } else {
-          menu.classList.remove("tm-menu--horizontal");
-        }
-        ticking = false;
-      });
-      ticking = true;
+    var hamburger = document.querySelector(".tm-hamburger__container");
+    var menu = document.querySelector(".tm-menu");
+    var links = menu.getElementsByTagName("a");
+    for (var i = 0, len = links.length; i < len; i++) {
+      links[i].onclick = toggleMenu(hamburger);
     }
-  });
+    hamburger.addEventListener("click", toggleMenu());
 
-  if (window.matchMedia("(min-width: 841px)").matches) {
-    menu.classList.toggle("tm-menu--horizontal");
-  }</script>
+    function toggleMenu() {
+      return function() {
+        hamburger.classList.toggle("tm-hamburger__container--open");
+        appBar.classList.toggle("tm-app-bar--open");
+      };
+    }
+
+    var ticking = false;
+
+    window.addEventListener("resize", function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          if (window.matchMedia("(min-width: 841px)").matches) {
+            menu.classList.add("tm-menu--horizontal");
+          } else {
+            menu.classList.remove("tm-menu--horizontal");
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    if (window.matchMedia("(min-width: 841px)").matches) {
+      menu.classList.toggle("tm-menu--horizontal");
+    }</script>
 </header>
 
 <section class="intro">
@@ -126,20 +126,20 @@
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div class="description description_box mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <p>XIXOIO's&nbsp;various product line consists of 11&nbsp;solutions, ranging from
+        <p>XIXOIO’s&nbsp;rich product line consists of 11&nbsp;solutions, ranging from
           remittance services for fiat and cash transactions, AML compliance CloudWare
-          gateway, to banking solutions, legal services, stock exchange and banking
-          cryptocurrency association think-tank.</p>
+          gateway, through banking solutions, legal services, stock exchange and banking,
+          to cryptocurrency association think-tanks.</p>
         <hr class="purple">
-        <p>Their main goal is to develop a fully compliant end-to-end solution for
+        <p>Their main goal is to develop a fully compliant end-to-end solution for the
           tokenization of companies and security token investments. It aims to integrate
-          all services will be the IPCO&nbsp;&ndash; Initial Public Coin Offering platform www.ipco.io</a>.
-        </p>
+          all services for the IPCO (Initial Public Coin Offering) platform, <a
+            href="http://www.ipco.io">www.ipco.io</a>.</p>
 
-        <p>The IPCO platform is solving all the legal, regulatory and compliance issues,
-          up to the point when the funds are raised, investors shares are written into
-          business registers and tokens are deployed on the secondary markets&nbsp;&ndash; STO
-          exchanges&nbsp;&ndash; for accredited investors.</p>
+        <p>The IPCO platform handles legal, regulatory and compliance issues up to the
+          point where the funds are raised, investors’ shares are entered into business
+          registers and tokens are deployed onto secondary markets, i.e. STO exchanges for
+          accredited investors.</p>
       </div>
     </div>
   </div>
@@ -149,13 +149,12 @@
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <p><b>The TopMonks Blockchain team </b>was approached at the time where their own IPCO
-          was in the preparation. In just 3&nbsp;days we have managed to draft the complete
-          token issuance architecture.</p>
+        <p>Our TopMonks Blockchain team was approached at the same time Xixoio’s&nbsp;IPCO
+          was being prepared. It only took us three days to draft the complete token
+          issuance architecture.</p>
 
-        <p>Rapidly prepared innovative solution tailored for the customer's&nbsp;needs on
-          one hand and on the other, that the client is capable of quick decision taking
-          has established a trust between both parties.</p>
+        <p>The result? A&nbsp;rapidly-prepared, innovative solution fully tailored to the
+          customer’s&nbsp;sa&shy;tisfaction.</p>
       </div>
     </div>
   </div>
@@ -1019,12 +1018,13 @@
 
 
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <p class="text-italic">Backend is handling the token pool and sale contract. All is protected by a
-          multisig solution with optional hardware ledger protection.</p>
+        <p class="text-italic">Backend handles the token pool as well as the sale contract. Everything is
+          protected by a multisignature solution with optional hardware ledger
+          protection.</p>
         <a class="dead-button dead-button_cube">SALE CONTRACT</a><br>
         <a class="dead-button dead-button_transparent">TOKEN POOL</a>
-        <p class="text-italic">Token pool is a decentralized solution for temporary holding of tokens for
-          users without prior knowledge of crypto.</p>
+        <p class="text-italic">A&nbsp;token pool is a decentralized solution for temporary token holding for
+          users without any prior crypto knowledge.</p>
       </div>
     </div>
   </div>
@@ -1035,7 +1035,7 @@
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Implementation</h2>
-        <p>Main requirements for our output were:</p>
+        <p>The main requirements for our output were:</p>
       </div>
       <div class="implementation_box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
         <a>1</a>
@@ -1373,9 +1373,9 @@
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div class="text-center mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <p>On the 3rd of December we deploy the contracts to Mainnet. That's&nbsp;the last
-          missing thing. Everything else is&nbsp;done.</p>
-        <p><b>A&nbsp;rocket is waiting to launch.</b></p>
+        <p>On December 3, we deployed the contracts to Mainnet. That was the very last
+          missing thing to do. Everything else was complete. The rocket is ready to
+          launch.</p>
       </div>
     </div>
   </div>
