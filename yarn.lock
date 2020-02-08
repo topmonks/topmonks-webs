@@ -6514,10 +6514,10 @@ lws-request-monitor@^1.0.4:
   dependencies:
     byte-size "^5.0.1"
 
-lws-rewrite@^2.0.10, lws-rewrite@^2.0.8:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/lws-rewrite/-/lws-rewrite-2.0.10.tgz#758aee03e1f338b9ee47e70adcc5a48027cb8b86"
-  integrity sha512-vVKAxbszsEp/DZ+KKhnjPvTJ5fLhiIXwjbxwzpGZdea4uqV1CbmGweCrBkK8q+5JE+UaeqAO0TgFjYsYQp3yJg==
+lws-rewrite@^2.0.8, lws-rewrite@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/lws-rewrite/-/lws-rewrite-2.1.0.tgz#cf8578ecc9b4f3436dd6e11c03c36b31d97caf6f"
+  integrity sha512-oQVV44YYYbvsu1Uw476Ww+DUgIEzSgQOyzB+Q8zElrrCX1OrfzpBzgSbeO3aXYtVEMK7bI5aujHgHJ4lBhvSDQ==
   dependencies:
     array-back "^4.0.0"
     http-proxy-agent "^2.1.0"
