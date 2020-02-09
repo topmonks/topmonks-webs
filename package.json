@@ -47,7 +47,7 @@
     "lws-index": "^1.0.5",
     "lws-json": "^1.0.1",
     "lws-log": "^1.0.3",
-    "lws-mime": "^1.0.1",
+    "lws-mime": "^2.0.0",
     "lws-range": "^2.0.1",
     "lws-request-monitor": "^1.0.4",
     "lws-rewrite": "^2.1.0",

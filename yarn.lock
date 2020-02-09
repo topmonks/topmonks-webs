@@ -6500,6 +6500,11 @@ lws-mime@^1.0.1:
   resolved "https://registry.yarnpkg.com/lws-mime/-/lws-mime-1.0.1.tgz#69d84d6c4b974d0be68ccb67b0f4ef420a83502e"
   integrity sha512-+4lRjaJmexwmScZAb50A0J4F8vhSyTBOsva8xFgX9yC/AMR7t56asZpgAAw7WUI8rlSbpJQCfh0nkuAhEWgMEA==
 
+lws-mime@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/lws-mime/-/lws-mime-2.0.0.tgz#59bf7ab0b7f68118bfc6b6ada806cfcd203af8d9"
+  integrity sha512-mfrAgRQ5+hkQ7LJ6EAgwnUeymNeYxwLXZY3UQ6C2hSTr7BqMSzm9k5O0C8wWP2dzdhChzITYKwzWbUnAYVBwtA==
+
 lws-range@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/lws-range/-/lws-range-2.0.1.tgz#b528774a8f6e9a1af08306cd19e79ea65a23ffaa"
