@@ -42,7 +42,7 @@
     "lws-blacklist": "^2.0.2",
     "lws-body-parser": "^1.0.2",
     "lws-compress": "^1.0.2",
-    "lws-conditional-get": "^1.0.1",
+    "lws-conditional-get": "^2.0.0",
     "lws-cors": "^2.0.1",
     "lws-index": "^1.0.5",
     "lws-json": "^1.0.1",
