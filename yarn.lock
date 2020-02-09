@@ -6480,6 +6480,13 @@ lws-index@^1.0.5:
   dependencies:
     serve-index-75lb "^2.0.1"
 
+lws-index@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/lws-index/-/lws-index-2.0.0.tgz#a35592f3b36a6e691d7f5ceb449971f4912d3dc1"
+  integrity sha512-qfkeQmKYnd13LmQubzI5LtFV2N8PJQG4QvgSoefoiB3dWre9k2T4C7ajjOTKO8mgSzYpUEREduNcQcLyt62n0g==
+  dependencies:
+    serve-index-75lb "^2.0.1"
+
 lws-json@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/lws-json/-/lws-json-1.0.1.tgz#3abed1f04d6d446da470fa79dbc568911e18fcf9"
