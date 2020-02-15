@@ -4535,10 +4535,10 @@ gulp-match@^1.1.0:
   dependencies:
     minimatch "^3.0.3"
 
-gulp-merge-json@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/gulp-merge-json/-/gulp-merge-json-2.0.0.tgz#b71db0d427f72bb0f5cae8435174777aeacabf3b"
-  integrity sha512-01wzyGSIxCBN74hhS/7dHnrnWCAlI+GpzHIxMkKF1Fwt4djngIIwEBYrHquMcDTMIQk50eWHTaF9GzLABOrIrA==
+gulp-merge-json@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gulp-merge-json/-/gulp-merge-json-2.1.0.tgz#58ba64373dc3ef6e141e7ba4cab8c9ad56a0fe48"
+  integrity sha512-l+7A5YR9nRC4clyX/8rCupWx4oLY0yA//lvPXqdfTlRFECYcADG0ZdGxTiV/vh4UwkXmLInLX+BS9fQpguKLSQ==
   dependencies:
     json5 "^2.1.1"
     lodash.mergewith "^4.6.1"
