@@ -1,8 +1,9 @@
+---
 id: ladislav-snajberk
 name: Ladislav
-surname: Snajberk
+surname: Šnajberk
 job_title: Developer
 twitter: snajberk
-github:
+github: ladasnajberk
 linkedin: in/snajberk
-quote:
+---
