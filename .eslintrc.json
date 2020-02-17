@@ -3,10 +3,13 @@
     "browser": true,
     "es6": true
   },
+  "parser": "babel-eslint",
   "parserOptions": {
+    "allowImportExportEverywhere": true,
     "ecmaVersion": 2018,
     "ecmaFeatures": {
-      "spread": true
+      "spread": true,
+      "modules": false
     },
     "sourceType": "module"
   },
