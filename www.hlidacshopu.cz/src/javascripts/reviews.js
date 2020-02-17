@@ -37,7 +37,7 @@ function reviewTemplate({ name, date, text, imageUrl, rating }) {
   const style = text.length > 260 ? "grid-row: span 2;" : "";
   const oneStarWidth = 25.2;
   const ratingStyle = `font-size:${oneStarWidth}px;line-height:16px`;
-  const starsStyle = `width:${rating}rem`;
+  const starsStyle = `width:${rating}em`;
   return html`
     <div
       class="review mdc-layout-grid__cell mdc-layout-grid__cell--span-4"
