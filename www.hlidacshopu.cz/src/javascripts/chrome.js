@@ -1,4 +1,4 @@
-import { html } from "https://unpkg.com/lit-html@1.1.1/lit-html.js?module";
+import { html } from "lit-html/lit-html";
 
 export function installationGuide() {
   return html`

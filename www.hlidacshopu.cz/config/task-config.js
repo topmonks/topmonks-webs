@@ -2,6 +2,8 @@ const markdownToJSON = require("gulp-markdown-to-json");
 const marked = require("marked");
 const merge = require("gulp-merge-json");
 const path = require("path");
+const alias = require("@rollup/plugin-alias");
+const resolve = require("rollup-plugin-pnp-resolve");
 const pathConfig = require("./path-config.json");
 const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
 const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
@@ -10,11 +12,37 @@ const config = createSharedTaskConfig(__dirname, {
   locales: ["cs", "cs-CZ"],
   images: true,
   cloudinary: true,
-  javascripts: false,
   fonts: true,
   static: true,
   stylesheets: true,
   workboxBuild: false,
+
+  javascripts: {
+    replacePlugins: true,
+    plugins: [
+      alias({
+        entries: [{ find: "tslib", replacement: "tslib/tslib.es6.js" }]
+      }),
+      resolve({ browser: true })
+    ],
+    modules: {
+      app: "app.js",
+      index: "index.js",
+      dashboard: "dashboard.js",
+      reviews: "reviews.js",
+      extension: "extension.js",
+      android: "android.js",
+      chrome: "chrome.js",
+      firefox: "firefox.js",
+      safari: "safari.js"
+    },
+    external: [
+      "https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.bundle.min.js"
+    ],
+    terser: {
+      warnings: "verbose"
+    }
+  },
 
   svgSprite: {
     svgstore: {
@@ -61,7 +89,7 @@ const config = createSharedTaskConfig(__dirname, {
       task("media-data", generateMediaJson);
       task("media:watch", cb => {
         watch(mediaSrc, generateMediaJson);
-        watch(path.resolve(dataPath, "media.json"), series("html"));
+        watch("media.json", { cwd: dataPath }, series("html"));
         cb();
       });
     },
