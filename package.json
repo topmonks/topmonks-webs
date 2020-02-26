@@ -24,7 +24,7 @@
     "@types/chart.js": "^2.9.14",
     "@types/yaml": "^1.2.0",
     "ava": "^3.4.0",
-    "babel-eslint": "^10.0.3",
+    "babel-eslint": "^10.1.0",
     "chalk": "^3.0.0",
     "commander": "^4.1.1",
     "dotenv-cli": "^3.1.0",
