@@ -69,14 +69,23 @@ function createBucketPolicy(
  * @param parent {pulumi.ComponentResource} parent component
  * @param domain {string} website domain name
  * @param contentBucket {aws.s3.Bucket}
+ * @param isSPA {boolean}
  * @returns {aws.cloudfront.Distribution}
  */
 function createCloudFront(
   parent: pulumi.ComponentResource,
   domain: string,
-  contentBucket: aws.s3.Bucket
-): aws.cloudfront.Distribution {
+  contentBucket: aws.s3.Bucket,
+  isSPA: boolean | undefined
+) {
   const acmCertificate = getCertificate(domain);
+  const customErrorResponses = [];
+  if (isSPA)
+    customErrorResponses.push({
+      errorCode: 404,
+      responseCode: 202,
+      responsePagePath: "/index.html"
+    });
   return new aws.cloudfront.Distribution(
     `${domain}/cdn-distribution`,
     {
@@ -96,6 +105,7 @@ function createCloudFront(
           }
         }
       ],
+      customErrorResponses,
       defaultRootObject: "index.html",
       defaultCacheBehavior: {
         targetOriginId: contentBucket.arn,
@@ -220,6 +230,7 @@ function getHostedZone(domain: string) {
 function getCertificate(domain: string) {
   const parentDomain = getParentDomain(domain);
   const usEast1 = new aws.Provider(`${domain}/provider/us-east-1`, {
+    profile: aws.config.profile,
     region: aws.USEast1Region
   });
   const certificate = aws.acm.getCertificate(
@@ -249,8 +260,7 @@ function getDomainAndSubdomain(domain: string) {
     return { subdomain: "", parentDomain: `${domain}.` };
   }
 
-  const subdomain = parts[0];
-  parts.shift();
+  const subdomain = parts.shift();
   return {
     subdomain,
     parentDomain: `${parts.join(".")}.`
@@ -261,7 +271,7 @@ function getDomainAndSubdomain(domain: string) {
  * WebSite component resource represents logical unit of static web site
  * hosted in AWS S3 and distributed via CloudFront CDN with Route53 DNS Record.
  */
-export class WebSite extends pulumi.ComponentResource {
+export class Website extends pulumi.ComponentResource {
   contentBucket: aws.s3.Bucket;
   contentBucketPolicy: aws.s3.BucketPolicy;
   cdn?: aws.cloudfront.Distribution;
@@ -289,7 +299,7 @@ export class WebSite extends pulumi.ComponentResource {
    */
   constructor(
     domain: string,
-    settings: any,
+    settings: WebsiteSettings,
     opts?: pulumi.ComponentResourceOptions
   ) {
     super("topmonks-webs:WebSite", domain, settings, opts);
@@ -306,10 +316,10 @@ export class WebSite extends pulumi.ComponentResource {
    */
   static create(
     domain: string,
-    settings: any,
+    settings: WebsiteSettings,
     opts?: pulumi.ComponentResourceOptions
   ) {
-    const website = new WebSite(domain, settings, opts);
+    const website = new Website(domain, settings, opts);
     const contentBucket = createBucket(website, domain, settings.bucket || {});
     website.contentBucket = contentBucket;
     website.contentBucketPolicy = createBucketPolicy(
@@ -319,7 +329,7 @@ export class WebSite extends pulumi.ComponentResource {
     );
     let cdn: aws.cloudfront.Distribution | null = null;
     if (!(settings.cdn && settings.cdn.disabled)) {
-      cdn = createCloudFront(website, domain, contentBucket);
+      cdn = createCloudFront(website, domain, contentBucket, settings.isSPA);
       website.cdn = cdn;
     }
     if (!(settings.dns && settings.dns.disabled)) {
@@ -341,4 +351,41 @@ export class WebSite extends pulumi.ComponentResource {
     website.registerOutputs(outputs);
     return website;
   }
+
+  static createRedirect(
+    domain: string,
+    settings: RedirectWebsiteSettings,
+    opts?: pulumi.ComponentResourceOptions
+  ): Website {
+    const bucketSettings = {
+      website: {
+        redirectAllRequestsTo: settings.target
+      }
+    };
+    const website = new Website(domain, { bucket: bucketSettings }, opts);
+    const bucket = (website.contentBucket = createBucket(
+      website,
+      domain,
+      bucketSettings
+    ));
+    website.contentBucketPolicy = createBucketPolicy(website, domain, bucket);
+    website.cdn = createCloudFront(website, domain, bucket, false);
+    return website;
+  }
+}
+
+interface WebsiteSettings {
+  isSPA?: boolean;
+  bucket?: aws.s3.BucketArgs;
+  cdn?: DisableSetting;
+  dns?: DisableSetting;
+  "lh-token"?: string;
+}
+
+interface DisableSetting {
+  disabled: boolean;
+}
+
+interface RedirectWebsiteSettings {
+  target: string;
 }

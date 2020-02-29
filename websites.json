@@ -2,28 +2,6 @@
   "blockchain.topmonks.com": {
     "lh-token": "99b5b214-60c4-498d-b500-44e53788e374"
   },
-  "prodeti.topmonks.com": {
-    "bucket": {
-      "website": {
-        "redirectAllRequestsTo": "https://prodeti.topmonks.cz/"
-      }
-    },
-    "cdn": {
-      "disabled": true
-    },
-    "lh-token": "f5d4c200-e606-493e-b448-ec10bb02817a"
-  },
-  "caffe.topmonks.com": {
-    "bucket": {
-      "website": {
-        "redirectAllRequestsTo": "https://caffe.topmonks.cz/"
-      }
-    },
-    "cdn": {
-      "disabled": true
-    },
-    "lh-token": "c37ae195-aa7a-4ad5-86aa-93214358c551"
-  },
   "studio.topmonks.com": {
     "lh-token": "f5d0a15d-455f-49dc-a42a-45c5f40ddb83"
   },
