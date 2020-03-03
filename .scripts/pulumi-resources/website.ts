@@ -369,7 +369,13 @@ export class Website extends pulumi.ComponentResource {
       bucketSettings
     ));
     website.contentBucketPolicy = createBucketPolicy(website, domain, bucket);
-    website.cdn = createCloudFront(website, domain, bucket, false);
+    const cdn = website.cdn = createCloudFront(website, domain, bucket, false);
+    website.dnsRecord = createAliasRecord(
+      website,
+      domain,
+      cdn,
+      bucket.bucketDomainName
+    );
     return website;
   }
 }
