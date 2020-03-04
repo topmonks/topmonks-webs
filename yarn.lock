@@ -4922,7 +4922,7 @@ http-link-header@^0.8.0:
   resolved "https://registry.yarnpkg.com/http-link-header/-/http-link-header-0.8.0.tgz#a22b41a0c9b1e2d8fac1bf1b697c6bd532d5f5e4"
   integrity sha1-oitBoMmx4tj6wb8baXxr1TLV9eQ=
 
-http-proxy-agent@^4.0.0:
+http-proxy-agent@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/http-proxy-agent/-/http-proxy-agent-4.0.1.tgz#8a8c8ef7f5932ccf953c296ca8291b95aa74aa3a"
   integrity sha512-k0zdNgqWTGA6aeIRVpvfVob4fL52dTfaehylg0Y4UvSySvOq/Y+BOyPrgpUrA7HylqvU8vIZGsRuXmspskV0Tg==
@@ -6680,13 +6680,13 @@ lws-request-monitor@^2.0.0:
   dependencies:
     byte-size "^6.2.0"
 
-lws-rewrite@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lws-rewrite/-/lws-rewrite-3.0.0.tgz#6831dcc75b1a1f20dfbe8fb491509519e8dd0c01"
-  integrity sha512-EEFw3pUQTbJ9YVSFVx3xRLHQqcAXiNGWbidWX1dY0YW+3ydW8VC5yE7Oo/6+Bcwqrp33g+L1WDvH/8FQ8/i+Wg==
+lws-rewrite@^3.0.0, lws-rewrite@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/lws-rewrite/-/lws-rewrite-3.0.1.tgz#6687b77594f239bf1265a1a766c8a9bb4a136731"
+  integrity sha512-F1zL6sj5O57io/acNO+3rfj/C0+g9eiwCTc28mBiprYChBUVAn/SZLS8stIoFFOfpPubVGUdU7gbhVeSaNyg+w==
   dependencies:
     array-back "^4.0.1"
-    http-proxy-agent "^4.0.0"
+    http-proxy-agent "^4.0.1"
     https-proxy-agent "^5.0.0"
     koa-rewrite-75lb "^3.0.1"
     koa-route "^3.2.0"
