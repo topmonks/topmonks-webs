@@ -477,8 +477,8 @@
 
 "@topmonks/blendid@git://github.com/topmonks/blendid.git":
   version "5.0.0"
-  uid dfb9e24fda8740053571b40463d4372a1f63b304
-  resolved "git://github.com/topmonks/blendid.git#dfb9e24fda8740053571b40463d4372a1f63b304"
+  uid "08be353fa0503480c6efcd5d72e309614d8e2d4d"
+  resolved "git://github.com/topmonks/blendid.git#08be353fa0503480c6efcd5d72e309614d8e2d4d"
   dependencies:
     "@rollup/plugin-alias" "^3.0.1"
     "@rollup/plugin-node-resolve" "^7.1.1"
@@ -521,7 +521,7 @@
     postcss-node-sass "^2.1.8"
     postcss-scss "^2.0.0"
     pretty-hrtime "1.0.3"
-    rollup "^1.31.1"
+    rollup "^1.32.0"
     rollup-plugin-minify-html-literals "^1.2.3"
     rollup-plugin-terser "^5.2.0"
     terser "^4.6.4"
@@ -9405,10 +9405,10 @@ rollup-pluginutils@^2.8.2:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^1.31.1:
-  version "1.31.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.31.1.tgz#4170d6f87148d46e5fbe29b493f8f3ea3453c96f"
-  integrity sha512-2JREN1YdrS/kpPzEd33ZjtuNbOuBC3ePfuZBdKEybvqcEcszW1ckyVqzcEiEe0nE8sqHK+pbJg+PsAgRJ8+1dg==
+rollup@^1.32.0:
+  version "1.32.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.32.0.tgz#c65ce134850aca1ce595fcac07d1dc5d53bf227c"
+  integrity sha512-ab2tF5pdDqm2zuI8j02ceyrJSScl9V2C24FgWQ1v1kTFTu1UrG5H0hpP++mDZlEFyZX4k0chtGEHU2i+pAzBgA==
   dependencies:
     "@types/estree" "*"
     "@types/node" "*"
