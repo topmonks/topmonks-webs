@@ -21,7 +21,7 @@
     "@lhci/cli": "^0.3.9",
     "@rollup/plugin-alias": "^3.0.1",
     "@topmonks/blendid": "git://github.com/topmonks/blendid.git",
-    "@types/chart.js": "^2.9.14",
+    "@types/chart.js": "^2.9.15",
     "@types/yaml": "^1.2.0",
     "ava": "^3.5.0",
     "babel-eslint": "^10.1.0",
