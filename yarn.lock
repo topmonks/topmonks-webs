@@ -477,8 +477,8 @@
 
 "@topmonks/blendid@git://github.com/topmonks/blendid.git":
   version "5.0.0"
-  uid "08be353fa0503480c6efcd5d72e309614d8e2d4d"
-  resolved "git://github.com/topmonks/blendid.git#08be353fa0503480c6efcd5d72e309614d8e2d4d"
+  uid "5ed858f10e926f5dd93d9b9b8d607c396f35ff0d"
+  resolved "git://github.com/topmonks/blendid.git#5ed858f10e926f5dd93d9b9b8d607c396f35ff0d"
   dependencies:
     "@rollup/plugin-alias" "^3.0.1"
     "@rollup/plugin-node-resolve" "^7.1.1"
@@ -521,10 +521,10 @@
     postcss-node-sass "^2.1.8"
     postcss-scss "^2.0.0"
     pretty-hrtime "1.0.3"
-    rollup "^1.32.0"
+    rollup "^1.32.1"
     rollup-plugin-minify-html-literals "^1.2.3"
-    rollup-plugin-terser "^5.2.0"
-    terser "^4.6.4"
+    rollup-plugin-terser "^5.3.0"
+    terser "^4.6.6"
     workbox-build "4.3.1"
 
 "@types/bytebuffer@^5.0.40":
@@ -9382,10 +9382,10 @@ rollup-plugin-pnp-resolve@^2.0.0:
   resolved "https://registry.yarnpkg.com/rollup-plugin-pnp-resolve/-/rollup-plugin-pnp-resolve-2.0.0.tgz#139808d45d6b2210cb140a59a50d1dbc8f1d4ba4"
   integrity sha512-/FsgWZvYZHwee8DdNF7lo/5gkD1jhMNF6sqEXs6edYGIeSlCZPu9jOhfF85TtpfilsZq3jDB7KA9b8D9nJw4NA==
 
-rollup-plugin-terser@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-terser/-/rollup-plugin-terser-5.2.0.tgz#ba758adf769347b7f1eaf9ef35978d2e207dccc7"
-  integrity sha512-jQI+nYhtDBc9HFRBz8iGttQg7li9klmzR62RG2W2nN6hJ/FI2K2ItYQ7kJ7/zn+vs+BP1AEccmVRjRN989I+Nw==
+rollup-plugin-terser@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-terser/-/rollup-plugin-terser-5.3.0.tgz#9c0dd33d5771df9630cd027d6a2559187f65885e"
+  integrity sha512-XGMJihTIO3eIBsVGq7jiNYOdDMb3pVxuzY0uhOE/FM4x/u9nQgr3+McsjzqBn3QfHIpNSZmFnpoKAwHBEcsT7g==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     jest-worker "^24.9.0"
@@ -9400,10 +9400,10 @@ rollup-pluginutils@^2.8.2:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^1.32.0:
-  version "1.32.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.32.0.tgz#c65ce134850aca1ce595fcac07d1dc5d53bf227c"
-  integrity sha512-ab2tF5pdDqm2zuI8j02ceyrJSScl9V2C24FgWQ1v1kTFTu1UrG5H0hpP++mDZlEFyZX4k0chtGEHU2i+pAzBgA==
+rollup@^1.32.1:
+  version "1.32.1"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.32.1.tgz#4480e52d9d9e2ae4b46ba0d9ddeaf3163940f9c4"
+  integrity sha512-/2HA0Ec70TvQnXdzynFffkjA6XN+1e2pEv/uKS5Ulca40g2L7KuOE3riasHoNVHOsFD5KKZgDsMk1CP3Tw9s+A==
   dependencies:
     "@types/estree" "*"
     "@types/node" "*"
@@ -10516,10 +10516,10 @@ ternary-stream@^3.0.0:
     merge-stream "^2.0.0"
     through2 "^3.0.1"
 
-terser@^4.3.9, terser@^4.6.2, terser@^4.6.4:
-  version "4.6.4"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-4.6.4.tgz#40a0b37afbe5b57e494536815efa68326840fc00"
-  integrity sha512-5fqgBPLgVHZ/fVvqRhhUp9YUiGXhFJ9ZkrZWD9vQtFBR4QIGTnbsb+/kKqSqfgp3WnBwGWAFnedGTtmX1YTn0w==
+terser@^4.3.9, terser@^4.6.2, terser@^4.6.6:
+  version "4.6.6"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-4.6.6.tgz#da2382e6cafbdf86205e82fb9a115bd664d54863"
+  integrity sha512-4lYPyeNmstjIIESr/ysHg2vUPRGf2tzF9z2yYwnowXVuVzLEamPN1Gfrz7f8I9uEPuHcbFlW4PLIAsJoxXyJ1g==
   dependencies:
     commander "^2.20.0"
     source-map "~0.6.1"
