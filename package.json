@@ -9,7 +9,7 @@
   "dependencies": {
     "@lhci/utils": "^0.3.7",
     "@material/layout-grid": "^4.0.0",
-    "@material/top-app-bar": "^4.0.0",
+    "@material/top-app-bar": "^5.1.0",
     "@pulumi/aws": "^1.27.0",
     "@pulumi/pulumi": "^1.13.0",
     "@types/node": "^13.9.2",
