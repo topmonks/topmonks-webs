@@ -208,13 +208,23 @@
     yargs "^12.0.5"
     yargs-parser "^11.1.1"
 
-"@lhci/utils@0.3.9", "@lhci/utils@^0.3.7":
+"@lhci/utils@0.3.9":
   version "0.3.9"
   resolved "https://registry.yarnpkg.com/@lhci/utils/-/utils-0.3.9.tgz#e495f2edc33b32d3ae55a9908047f515526fe19d"
   integrity sha512-qXHi54VgKu/MA9InSyer0cGdNjccdi70nunBp51CMBvw2jHNcL0pBatYmmPzOO4weuWPj1HzHUEGWlFmFXKsbQ==
   dependencies:
     isomorphic-fetch "^2.2.1"
     js-yaml "^3.13.1"
+    tree-kill "^1.2.1"
+
+"@lhci/utils@^0.3.12":
+  version "0.3.12"
+  resolved "https://registry.yarnpkg.com/@lhci/utils/-/utils-0.3.12.tgz#f5b1047108f9d862904f16c882b6d6cc4d71b648"
+  integrity sha512-e6Qo6pX2eLU8Cg0HA0WQNHCFZmzsLLFe5S7w4BMZnOFlzptLB8+aPOJqBEpmGqLhufLjXJY+ubc9mLvpLLM4NA==
+  dependencies:
+    isomorphic-fetch "^2.2.1"
+    js-yaml "^3.13.1"
+    lighthouse "5.5.0"
     tree-kill "^1.2.1"
 
 "@material/animation@^4.0.0":
