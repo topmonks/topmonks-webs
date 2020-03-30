@@ -535,10 +535,10 @@
     "@types/long" "*"
     "@types/node" "*"
 
-"@types/chart.js@^2.9.15":
-  version "2.9.15"
-  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.9.15.tgz#a6dba99e25258dbc0799000f11e57ed1f93ea5d9"
-  integrity sha512-PRxv/KYzmeVXDgp9nHJBoIQh9iJEyBm/OocnSrIEU9VZSNW5lcbXVkYjkb4V78VGGJESf57tk7KxK1LBAccOAQ==
+"@types/chart.js@^2.9.17":
+  version "2.9.17"
+  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.9.17.tgz#c10c607fad33808a72f4fd7f886a9b1ea651aecd"
+  integrity sha512-1/LUNfbwX8RizyrigvEXhDSWPxgEjBCoVceu4DNsf8S0Eq1Wb16yB7uh0o+j4a6g+xkzcYebWCuzK1MGrz29FA==
   dependencies:
     moment "^2.10.2"
 
