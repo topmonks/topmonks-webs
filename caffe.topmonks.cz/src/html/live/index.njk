@@ -2,7 +2,7 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
-  <title>TopMonks Caffè</title>
+  <title>TopMonks Caffè Live</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width,Save-Data">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -12,14 +12,19 @@
   <link rel="preconnect" href="//www.google.cz" crossorigin>
   <link rel="preconnect" href="//stats.g.doubleclick.net" crossorigin>
   <link rel="preconnect" href="//static.hotjar.com" crossorigin>
+  <link rel="preconnect" href="//embed.restream.io">
   <link rel="preload" href="https://www.googletagmanager.com/gtm.js?id=GTM-T4KMQ2F" as="script">
-  <meta name="theme-color" content="#F06B4F">
+  <meta name="theme-color" content="#233341">
   <meta name="description"
-        content="Teach or die, learn or die. Každý první čtvrtek v měsíci se setkáváme, přednášíme a diskutujeme o tématech, která nás baví.">
-  <link rel="canonical" href="https://caffe.topmonks.cz/">
+        content="Teach or die, learn or die. Sledujte TopMonks Caffè živě.">
+  <meta name="twitter:description" property="og:description"
+        content="Teach or die, learn or die. Sledujte TopMonks Caffè živě.">
+  <link rel="canonical" href="https://caffe.topmonks.cz/live/">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@topmonks">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://caffe.topmonks.cz/">
+  <meta name="twitter:image" property="og:image" content="https://files.slack.com/files-pri/T03R38ACE-F010FTMNACR/banner-socialni-site-caffe.png">
 
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -142,8 +147,8 @@
         class="caffe_menu mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-10-desktop">
         <nav id="navigation" class="tm-menu tm-menu--horizontal">
           <ul class="tm-menu__list">
-            <li><a href="#next-event">Nadcházející caffè</a></li>
-            <li><a href="#seance">Předchozí seance</a></li>
+            <li><a href="/#next-event">Nadcházející caffè</a></li>
+            <li><a href="/#seance">Předchozí seance</a></li>
             <li><a href="#speakers">Staňte se řečníky</a></li>
             <li><a href="https://www.topmonks.cz/">TopMonks.cz</a></li>
           </ul>
@@ -196,8 +201,8 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h1>TopMonks Caffè</h1>
           <p>Přednášky a diskuze každý první čtvrtek v&nbsp;měsíci se zajímavými
-            lidmi a o&nbsp;tématech, která nás&nbsp;baví.
-            <br> Přihlaš se přes stránky <a class="link" href="http://meetu.ps/c/2GNS0/cSTNb/d">
+            lidmi o&nbsp;tématech, která nás&nbsp;baví.
+            <br>Sledujte další události na <a class="link" href="http://meetu.ps/c/2GNS0/cSTNb/d">
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                    y="0px"
@@ -283,8 +288,6 @@
 	C2021.73,912.255,2038.056,872.29,2041.107,825.755z"/>
           </svg>
             </a>
-            a dostávej upozornění na zajímavé
-            Caffé přednášky.
           </p>
         </div>
       </div>
@@ -293,10 +296,17 @@
   <section id="next-event" class="next-caffe">
     <div class="mdc-layout-grid next-caffe_box">
       <div class="mdc-layout-grid__inner">
-<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="--aspect-ratio: 16/9;">
-  <iframe class="restream-widget" src="https://embed.restream.io/player/index.html?token=09179ee482b3ba52d51058c57d7d07cb" width="960" height="576" frameborder="0" allowfullscreen></iframe>
-  <p>Powered by <a href="https://restream.io">Restream.io</a></p>
-</div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>Živé vysílání</h2>
+          <div style="--aspect-ratio: 16/9;">
+            <iframe class="restream-widget"
+                    src="https://embed.restream.io/player/index.html?token=09179ee482b3ba52d51058c57d7d07cb" width="960"
+                    height="576" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <p>Máte dotaz na řečníky?
+            <a href="https://app.sli.do/event/ossrhhtg" style="text-decoration: underline">Zeptejte se přes Slido</a>.</p>
+            Pokud máte aplikaci Slido již nainstalovanou, použijte Event code: #<strong>16498</strong>.
+        </div>
       </div>
     </div>
   </section>
@@ -327,7 +337,7 @@
             <br> Napište nám, rádi se s&nbsp;Vámi domluvíme.</p>
         </div>
         <div class="btn btn_dark mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <a class="mail button" href="mailto:info@topmonks.com?subject=TopMonks+Caffe">caffe&#64;topmonks.com</a>
+          <a class="mail button" href="mailto:info&#64;topmonks.com?subject=TopMonks+Caffè">info&#64;topmonks.com</a>
         </div>
       </div>
     </div>
@@ -341,37 +351,37 @@
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
-          <h4>What we do?</h4>
+          <h4>Co děláme?</h4>
           <nav>
             <ul>
-              <li><a href="https://www.topmonks.com/">Software development</a></li>
+              <li><a href="https://www.topmonks.cz/">Software development</a></li>
               <li><a href="https://studio.topmonks.com/">Startup Studio</a></li>
               <li><a href="https://blockchain.topmonks.com/">Blockchain Development</a></li>
-              <li><a href="https://prodeti.topmonks.cz/">Programming for Kids</a></li>
+              <li><a href="https://prodeti.topmonks.cz/">Programování pro děti</a></li>
+              <li><a href="https://www.hlidacshopu.cz/">Hlídač shopů</a></li>
             </ul>
           </nav>
         </div>
-        <div class="menu mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
-          <h4>Looking for something?</h4>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+          <h4>Hledáte něco?</h4>
           <nav>
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="https://www.topmonks.com/about-us/">About TopMonks</a></li>
-              <li><a href="https://www.topmonks.com/meet-us/">Meet Us</a></li>
+              <li><a href="https://www.topmonks.cz/">TopMonks</a></li>
+              <li><a href="https://www.topmonks.cz/tym/">Tým</a></li>
+              <li><a href="https://www.topmonks.cz/potkejte-nas/">Potkejte nás</a></li>
               <li><a href="https://blog.topmonks.com/">Blog</a></li>
-              <li><a href="https://www.topmonks.com/jobs/">Jobs</a></li>
-              <li><a href="https://www.topmonks.com/contact/">Contacts</a></li>
+              <li><a href="https://www.topmonks.cz/volna-mista/">Volná místa</a></li>
+              <li><a href="https://www.topmonks.cz/kontakt/">Kontakt</a></li>
             </ul>
           </nav>
         </div>
         <div
           class="about mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop">
-          <h4>About us</h4>
-          <p class="tm-text--margin-top">We are your software development partners, experienced with both startup and
-            corporate environment.</p>
+          <h4>O nás</h4>
+          <p class="tm-text--margin-top">Jsme vývojáři softwaru pro váš byznys se zkušenostmi jak se startupy, tak s korporátním prostředím.</p>
           <div itemprop="subOrganization" itemscope="" itemtype="https://schema.org/Organization"><span
               itemprop="legalName">TopMonks s.r.o.</span>
-            <div><a href="mailto:info@topmonks.com" itemprop="email">info@topmonks.com</a></div>
+            <div><a href="mailto:info&#64;topmonks.com" itemprop="email">info@topmonks.com</a></div>
           </div>
         </div>
       </div>
