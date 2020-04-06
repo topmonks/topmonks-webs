@@ -41,6 +41,12 @@
       background-size: contain;
     }
 
+    @media screen and (max-width: 480px) {
+      body {
+        background-size: auto;
+      }
+    }
+
     .restream-widget {
       width: 100%;
       height: auto;
@@ -305,7 +311,7 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>Živé vysílání</h2>
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4" style="display: flex;flex-flow: column;">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-8-tablet" style="display: flex;flex-flow: column;align-items: center;">
           <a href="https://www.youtube.com/channel/UCYRTpQr7XJ4dCyo8vCRqp9Q/live">
             <svg
               xmlns="http://www.w3.org/2000/svg"
