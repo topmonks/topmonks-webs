@@ -1,5 +1,12 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as topmonks from "./.scripts/pulumi-resources/website";
+import { registerAutoTags } from "./.scripts/pulumi-resources/autotag";
+
+// Automatically inject tags.
+registerAutoTags({
+  "user:Project": pulumi.getProject(),
+  "user:Stack": pulumi.getStack()
+});
 
 const websites = require("./websites.json");
 export const sites: any = {};
