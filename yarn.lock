@@ -191,30 +191,33 @@
   dependencies:
     vary "^1.1.2"
 
-"@lhci/cli@^0.3.9":
-  version "0.3.9"
-  resolved "https://registry.yarnpkg.com/@lhci/cli/-/cli-0.3.9.tgz#5c7054b1633ae16ab6f7fb3700e77d0d941ac2e6"
-  integrity sha512-dMsdFvnW4JZK57FV71mu5SScvpDNrDj7wWcZODEujE2N9RPB/ScwOg+LRoMQkkH5pssJ4ynE2X2nPA4BzmF4gg==
+"@lhci/cli@^0.3.13":
+  version "0.3.13"
+  resolved "https://registry.yarnpkg.com/@lhci/cli/-/cli-0.3.13.tgz#d4b1d4c8b84fc7cec53f8807fe0c2326b036241a"
+  integrity sha512-frrNuWarYP9rjfxAXUpwQQ5LuAcIlZGoVjfYAxEk5Ib0UK8d0KOdfZUAujXMOlhf0X4XErOQRGAkZhntZiIbRA==
   dependencies:
-    "@lhci/utils" "0.3.9"
+    "@lhci/utils" "0.3.13"
     chrome-launcher "^0.12.0"
     compression "^1.7.4"
     express "^4.17.1"
     inquirer "^6.3.1"
+    isomorphic-fetch "^2.2.1"
     lighthouse "5.5.0"
+    lighthouse-logger "1.2.0"
     open "^6.4.0"
     tmp "^0.1.0"
     update-notifier "^3.0.1"
     yargs "^12.0.5"
     yargs-parser "^11.1.1"
 
-"@lhci/utils@0.3.9", "@lhci/utils@^0.3.7":
-  version "0.3.9"
-  resolved "https://registry.yarnpkg.com/@lhci/utils/-/utils-0.3.9.tgz#e495f2edc33b32d3ae55a9908047f515526fe19d"
-  integrity sha512-qXHi54VgKu/MA9InSyer0cGdNjccdi70nunBp51CMBvw2jHNcL0pBatYmmPzOO4weuWPj1HzHUEGWlFmFXKsbQ==
+"@lhci/utils@0.3.13", "@lhci/utils@^0.3.7":
+  version "0.3.13"
+  resolved "https://registry.yarnpkg.com/@lhci/utils/-/utils-0.3.13.tgz#18ef6e0c52d671f8507eef663c81172e27eee63f"
+  integrity sha512-LbvgSCBDVIhu9hMVCJbiVxjTi6dDQwvt3MNGB52NNTTriUvMblI3qQYUfBO/N278RNpq76p/bTv8ryZfXrPDdg==
   dependencies:
     isomorphic-fetch "^2.2.1"
     js-yaml "^3.13.1"
+    lighthouse "5.5.0"
     tree-kill "^1.2.1"
 
 "@material/animation@^4.0.0":
@@ -6173,7 +6176,7 @@ liftoff@^3.1.0:
     rechoir "^0.6.2"
     resolve "^1.1.7"
 
-lighthouse-logger@^1.0.0, lighthouse-logger@^1.2.0:
+lighthouse-logger@1.2.0, lighthouse-logger@^1.0.0, lighthouse-logger@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/lighthouse-logger/-/lighthouse-logger-1.2.0.tgz#b76d56935e9c137e86a04741f6bb9b2776e886ca"
   integrity sha512-wzUvdIeJZhRsG6gpZfmSCfysaxNEr43i+QT+Hie94wvHDKFLi4n7C2GqZ4sTC+PH5b5iktmXJvU87rWvhP3lHw==
