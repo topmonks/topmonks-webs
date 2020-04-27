@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  pulumi: pulumi/pulumi@1.2.0
+  pulumi: pulumi/pulumi@2.0.0
   aws-s3: circleci/aws-s3@1.0.12
   aws-cli: circleci/aws-cli@0.1.19
 
