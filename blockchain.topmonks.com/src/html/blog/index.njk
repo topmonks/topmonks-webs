@@ -1,5 +1,5 @@
 {%- from "macros/helpers.njk" import avatar, blogImg -%}
-{%- set articlesList = articles[2019] | list -%}
+{%- set articlesList = articles[2019 2020] | list -%}
 {%- set latestArticle = articlesList | last -%}
 <!DOCTYPE html>
 <html lang="en">
@@ -140,7 +140,7 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Podcasts, Lightning talks &amp; Videos</h2>
       </div>
-      {% for year in range(2019, 2016, -1) %}
+      {% for year in range(2020, 2016, -1) %}
         {% for article in podcasts[year] | sort(true, false, "published") %}
           {{ mediaArticle(article, podcastImages) }}
         {% endfor %}
@@ -155,7 +155,7 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Articles and Interviews</h2>
       </div>
-      {% for year in range(2019, 2016, -1) %}
+      {% for year in range(2020, 2016, -1) %}
         {% for article in articles[year] | sort(true, false, "published") %}
           {{ mediaArticle(article, articleImages) }}
         {% endfor %}
