@@ -5,7 +5,8 @@ body {
 
 #latest-article {
   img {
-    object-fit: cover
+    object-fit: cover;
+    height: 100%;
   }
 
   .blog__box-body {
