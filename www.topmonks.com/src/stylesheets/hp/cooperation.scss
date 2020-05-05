@@ -10,6 +10,7 @@
       justify-content: space-evenly;
       flex-flow: wrap;
     }
+
     a {
       display: block;
       padding: 0 16px;
@@ -19,12 +20,47 @@
         display: inline-flex;
       }
     }
+
     .sprite {
       display: inline-block;
-      width: 145px;
+      width: 110px;
+      @media (max-width: 480px) {
+        width: 90px;
+      }
     }
+
+    .sprite-box {
+      a {
+        display: inline-grid;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      p {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #979797;
+        margin-top: -44px;
+        text-align: left;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .sprite-box--adler {
+      align-self: center;
+      text-align: center;
+    }
+
     .sprite--img_logo_adler {
-      width: 100px;
+      width: 84px;
+      @media (max-width: 480px) {
+        width: 68px;
+      }
     }
   }
 
@@ -36,6 +72,7 @@
     --color-1: #31b4e7;
     --color-2: #414142;
   }
+
   .sprite--img_logo_erste-group {
     --color-1: #eb2227;
     --color-2: #0a4a7b;
