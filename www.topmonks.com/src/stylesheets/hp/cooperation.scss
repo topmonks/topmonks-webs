@@ -21,7 +21,7 @@
       }
     }
 
-    .sprite {
+    .sprite svg {
       display: inline-block;
       width: 110px;
       @media (max-width: 480px) {
@@ -29,37 +29,29 @@
       }
     }
 
-    .sprite-box {
-      a {
-        display: inline-grid;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-
-      p {
-        font-weight: normal;
+    .sprite--img_logo_apify, .sprite--img_logo_pricefx{
+      &:after {
+        content: "Partners";
         font-size: 12px;
         line-height: 14px;
         color: #979797;
-        margin-top: -44px;
-        text-align: left;
-
+        display: flex;
+        margin-top: -34px;
         &:hover {
           text-decoration: none;
         }
       }
     }
 
-    .sprite-box--adler {
-      align-self: center;
-      text-align: center;
-    }
-
     .sprite--img_logo_adler {
-      width: 84px;
-      @media (max-width: 480px) {
-        width: 68px;
+      align-self: center;
+      margin: 10px;
+
+      svg {
+        width: 84px;
+        @media (max-width: 480px) {
+          width: 68px;
+        }
       }
     }
   }
