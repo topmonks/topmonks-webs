@@ -1,3 +1,4 @@
+{% from '../macros/helpers.njk' import spriteTarget %}
 <!doctype html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# business: http://ogp.me/ns/business#">
 <head>
@@ -39,7 +40,9 @@
 </main>
 
 <link rel="stylesheet" href="/assets/css/footer.css">
-{% include 'common/footer.html' %}
+{--% include 'common/footer.html' %--}
+
+{{ spriteTarget() }}
 
 {% block javascript %}{% endblock %}
 

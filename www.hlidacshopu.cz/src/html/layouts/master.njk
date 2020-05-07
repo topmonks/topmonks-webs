@@ -1,3 +1,4 @@
+{% from '../macros/helpers.njk' import spriteTarget %}
 <!DOCTYPE html>
 <html lang="cs">
 {% from '../macros/helpers.njk' import sprite %}
@@ -337,6 +338,7 @@
     </div>
   </div>
 </footer>
+{{ spriteTarget() }}
 {% block scripts %}{% endblock %}
 </body>
 </html>
