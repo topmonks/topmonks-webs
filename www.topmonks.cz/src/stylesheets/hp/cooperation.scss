@@ -4,14 +4,8 @@
   .cooperation__logos {
     margin: 0;
     padding: 0;
-    @media (min-width: 480px) {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-flow: wrap;
-    }
 
-    .cooperation__logos--inner {
+    .mdc-layout-grid {
       @media (min-width: 480px) and (max-width: 839px) {
         margin: 0 auto;
       }
@@ -27,7 +21,7 @@
       }
     }
 
-    .sprite {
+    .sprite svg {
       display: inline-block;
       width: 110px;
       @media (max-width: 480px) {
@@ -35,36 +29,35 @@
       }
     }
 
-    .sprite-box {
-      a {
-        display: inline-grid;
-
-        &:hover {
-          text-decoration: none;
-        }
-      }
-
-      p {
-        font-weight: normal;
+    .-img_logo_apify, .-img_logo_pricefx {
+      &:after {
+        content: "Partneři";
         font-size: 12px;
         line-height: 14px;
         color: #979797;
-        margin-top: -44px;
-        text-align: left;
+        display: flex;
+        margin-top: -34px;
+      }
+    }
 
-        &:hover {
-          text-decoration: none;
+    .-img_logo_adler {
+      align-self: center;
+      text-align: center;
+      margin: 10px;
+
+      svg {
+        width: 84px;
+        @media (max-width: 480px) {
+          width: 68px;
         }
       }
     }
 
-    .sprite-box--adler {
-      align-self: center;
-      text-align: center;
-    }
-
-    .-img_logo_adler {
-      width: 84px;
+    @media (min-width: 480px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-flow: wrap;
     }
   }
 
