@@ -37,8 +37,8 @@
         color: #979797;
         display: flex;
         margin-top: -34px;
-        &:hover {
-          text-decoration: none;
+        @media (max-width: 839px) {
+          margin-top: -24px;
         }
       }
     }
