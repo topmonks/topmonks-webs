@@ -138,6 +138,13 @@
   dependencies:
     arrify "^1.0.1"
 
+"@grpc/grpc-js@^0.6.15":
+  version "0.6.18"
+  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-0.6.18.tgz#ba3b3dfef869533161d192a385412a4abd0db127"
+  integrity sha512-uAzv/tM8qpbf1vpx1xPMfcUMzbfdqJtdCYAqY/LsLeQQlnTb4vApylojr+wlCyr7bZeg3AFfHvtihnNOQQt/nA==
+  dependencies:
+    semver "^6.2.0"
+
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-1.0.2.tgz#1e6fe5d8027b1f285dc0d31762f566bccd73d5a9"
@@ -416,7 +423,7 @@
     read-package-tree "^5.2.1"
     resolve "^1.7.1"
 
-"@pulumi/pulumi@^1.0.0", "@pulumi/pulumi@^1.13.0":
+"@pulumi/pulumi@^1.0.0":
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-1.13.0.tgz#b998516eb5fe6f9ecd551bfc4e12b5fef88b0c59"
   integrity sha512-aaS8ApJe0sC4Xnq8Tj035dw+XkTt21jcm8icG8ipFLcvY9CS9m+ep6VGVX5O78fV1u0TX8Eaz/ITFn6VmCsO6w==
@@ -425,6 +432,25 @@
     deasync "^0.1.15"
     google-protobuf "^3.5.0"
     grpc "1.24.2"
+    minimist "^1.2.0"
+    normalize-package-data "^2.4.0"
+    protobufjs "^6.8.6"
+    read-package-tree "^5.3.1"
+    require-from-string "^2.0.1"
+    semver "^6.1.0"
+    source-map-support "^0.4.16"
+    ts-node "^7.0.1"
+    typescript "~3.7.3"
+    upath "^1.1.0"
+
+"@pulumi/pulumi@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-2.1.0.tgz#f309ca8f95c55564ac25894b68769c7291a6080e"
+  integrity sha512-0ZW19bugxqTFHWBSVpybNpIUugzCsyOq5xaFM6Z2PJn+G8HPKLebHPIaFCfsARxzOERG6xFN1a9lc++x13/2fw==
+  dependencies:
+    "@grpc/grpc-js" "^0.6.15"
+    "@pulumi/query" "^0.3.0"
+    google-protobuf "^3.5.0"
     minimist "^1.2.0"
     normalize-package-data "^2.4.0"
     protobufjs "^6.8.6"
@@ -10141,15 +10167,7 @@ source-map-support@^0.4.16:
   dependencies:
     source-map "^0.5.6"
 
-source-map-support@^0.5.16, source-map-support@^0.5.6:
-  version "0.5.16"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.16.tgz#0ae069e7fe3ba7538c64c98515e35339eac5a042"
-  integrity sha512-efyLRJDr68D9hBBNIPWFjhpFzURh+KJykQwvMyW5UiZzYwoF6l4YMMDIJJEyFWxWCqfyxLzz6tSfUFR+kXXsVQ==
-  dependencies:
-    buffer-from "^1.0.0"
-    source-map "^0.6.0"
-
-source-map-support@~0.5.12:
+source-map-support@^0.5.16, source-map-support@^0.5.6, source-map-support@~0.5.12:
   version "0.5.19"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.19.tgz#a98b62f86dcaf4f67399648c085291ab9e8fed61"
   integrity sha512-Wonm7zOCIJzBGQdB+thsPar0kYuCIzYvxZwlBa87yi/Mdjv7Tip2cyVbLj5o0cFPN4EVkuTwb3GDDyUx2DGnGw==
