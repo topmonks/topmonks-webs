@@ -22,7 +22,7 @@
 
 {% macro speakerImage(speakerId, name, size, imgVersion) -%}
 {% set imgVersion = imgVersion | default('') %}
-<img class="tm-speaker__img" width="{{size}}" height="{{size}}"
+<img class="tm-speaker__img" width="{{size}}" height="{{size}}" loading="lazy"
      src="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_{{size}},h_{{size}}/{{imgVersion}}monkstage.topmonks.com/img_speaker_{{speakerId}}.png"
      srcset="https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_auto,w_{{size}},h_{{size}}/{{imgVersion}}monkstage.topmonks.com/img_speaker_{{speakerId}}.png 1x,
                     https://res.cloudinary.com/topmonks/image/upload/f_auto,q_auto,dpr_2,w_{{size}},h_{{size}}/{{imgVersion}}monkstage.topmonks.com/img_speaker_{{speakerId}}.png 2x"
