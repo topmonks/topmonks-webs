@@ -7,7 +7,7 @@ const config = createSharedTaskConfig(__dirname, {
   javascripts: false,
   fonts: true,
   static: true,
-  svgSprite: true,
+  svgSprite: false,
   stylesheets: true,
   workboxBuild: false,
 

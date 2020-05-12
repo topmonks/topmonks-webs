@@ -6,11 +6,11 @@
   --mdc-layout-grid-margin-desktop: 24px;
   --mdc-layout-grid-gutter-desktop: 20px;
   --mdc-layout-grid-column-width-desktop: 60px;
-  --ml-black-title: #1D1D1D;
+  --ml-black-title: #1d1d1d;
   --ml-black-text: #565656;
-  --ml-grey: #F5F6F7;
-  --ml-purple: #5C5FD4;
-  --ml-dark-purple: #4A4CAA;
+  --ml-grey: #f5f6f7;
+  --ml-purple: #5c5fd4;
+  --ml-dark-purple: #4a4caa;
 }
 
 .layout-width {
@@ -23,7 +23,7 @@ html {
 
 body {
   color: var(--ml-black-title);
-  background: #FBFAFC;
+  background: #fbfafc;
   margin: 0;
   font-family: Neueeinstellung, sans-serif;
   -webkit-font-kerning: normal;
@@ -31,8 +31,8 @@ body {
   font-variant-numeric: lining-nums slashed-zero;
   -webkit-font-variant-ligatures: common-ligatures contextual;
   font-variant-ligatures: common-ligatures contextual;
-  -webkit-font-feature-settings: "kern","liga","clig","calt","lnum","zero";
-  font-feature-settings: "kern","liga","clig","calt","lnum","zero";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -103,28 +103,28 @@ a {
 hr {
   height: 1px;
   border: none;
-  background: #D5D5D5;
+  background: #d5d5d5;
   margin: 2em 0;
 }
 
 .btn {
   font-size: 18px;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 24px;
   text-decoration: none;
   background-color: var(--ml-purple);
 
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 
   &:hover {
-    color: #FFFFFF;
+    color: #ffffff;
     background: var(--ml-dark-purple);
   }
 }
 
 .box {
   padding: 18px 34px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 4px 20px 40px rgba(0, 0, 0, 0.1);
 
   p {
@@ -139,18 +139,18 @@ hr {
 // ALERT BOX
 .alert {
   padding: 20px;
-  background-color: #FF6B6B;
+  background-color: #ff6b6b;
   color: white;
   text-align: center;
   margin-top: 1em;
 }
 
 .alert--success {
-  background-color: #23CE6B;
+  background-color: #23ce6b;
 }
 
 .alert--error {
-  background-color: #FF6B6B;
+  background-color: #ff6b6b;
 }
 
 .alert--hidden {
@@ -176,7 +176,7 @@ hr {
 
 //HEADER *Hamburger below
 header {
-  background: #FFFFFF;
+  background: #ffffff;
 
   nav {
     float: right;
@@ -195,7 +195,8 @@ header {
 
       border-bottom: 1px solid transparent;
 
-      &:hover, &.active {
+      &:hover,
+      &.active {
         color: var(--ml-purple);
         border-bottom: 1px solid var(--ml-dark-purple);
       }
@@ -207,11 +208,11 @@ header {
 .hp-intro {
   min-height: 440px;
   position: relative;
-h1 {
-  font-size: 32px;
-}
+  h1 {
+    font-size: 32px;
+  }
   .email-input {
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 4px 20px 40px rgba(0, 0, 0, 0.1);
 
     input {
@@ -223,7 +224,7 @@ h1 {
     button {
       font-family: inherit;
       font-size: 16px;
-      color: #FFFFFF;
+      color: #ffffff;
       background: var(--ml-purple);
       border: none;
       width: 144px;
@@ -260,7 +261,8 @@ h1 {
 
   @media screen and (min-width: 1440px) {
     min-height: 800px;
-    background: url("/images/img_monks-lab.png") no-repeat right calc(25% - 180px) top;
+    background: url("/images/img_monks-lab.png") no-repeat right
+      calc(25% - 180px) top;
     background-size: 728px 800px;
     overflow-x: hidden;
     .intro_paragraph {
@@ -268,13 +270,13 @@ h1 {
     }
   }
   @media (min-width: 1024px) and (max-width: 1439px) {
-    background: url("/images/img_monks-lab.png") no-repeat right calc(25% - 160px) top;
+    background: url("/images/img_monks-lab.png") no-repeat right
+      calc(25% - 160px) top;
     background-size: 568px auto;
     overflow-x: hidden;
     min-height: 610px;
   }
 }
-
 
 //SECTION: MEMBERSHIP
 .membership {
@@ -301,7 +303,8 @@ h1 {
 //FOOTER
 
 footer {
-  p, a {
+  p,
+  a {
     font-size: 16px;
     color: var(--ml-black-title);
   }
@@ -404,8 +407,11 @@ footer {
 }
 
 .app-bar--sticky {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: var(--tm-basic-shadow);
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
 
   .hamburger .hamburger__bar {
     background-color: var(--ml-black-title);
@@ -416,7 +422,6 @@ footer {
   }
 
   @media screen and (min-width: 840px) {
-    height: 78px;
     .layout-wrapper {
       padding: 23px 0 0 16px;
     }
@@ -473,7 +478,7 @@ footer {
       border-top: 1px solid rgba(255, 255, 255, 0.25);
     }
     .menu__list a {
-      color: #FFFFFF;
+      color: #ffffff;
       display: block;
       padding: 12px;
       margin: 4px;
