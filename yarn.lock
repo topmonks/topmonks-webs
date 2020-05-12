@@ -500,7 +500,7 @@
 
 "@topmonks/blendid@git://github.com/topmonks/blendid.git":
   version "5.0.0"
-  resolved "git://github.com/topmonks/blendid.git#7d541dfcba8633ce52cacae487e8d76d14f16743"
+  resolved "git://github.com/topmonks/blendid.git#800adc3c039372a6a8d911f10c1ab77a0f6717d8"
   dependencies:
     "@rollup/plugin-alias" "^3.1.0"
     "@rollup/plugin-node-resolve" "^7.1.3"
