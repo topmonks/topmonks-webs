@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
 :root {
   --tm-primary_text: #3C3C3B;
   --tm-secondary_text: #6A7B8C;
@@ -10,7 +10,6 @@ body {
   line-height: 1.688;
   margin: 0;
   padding: 0;
-  font-display: optional;
   font-family: 'Varela Round', sans-serif;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
