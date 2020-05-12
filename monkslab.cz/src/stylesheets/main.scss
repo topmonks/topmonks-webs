@@ -22,10 +22,21 @@ html {
 }
 
 body {
-  font-family: Neueeinstellung, sans-serif;
   color: var(--ml-black-title);
   background: #FBFAFC;
   margin: 0;
+  font-family: Neueeinstellung, sans-serif;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  font-variant-numeric: lining-nums slashed-zero;
+  -webkit-font-variant-ligatures: common-ligatures contextual;
+  font-variant-ligatures: common-ligatures contextual;
+  -webkit-font-feature-settings: "kern","liga","clig","calt","lnum","zero";
+  font-feature-settings: "kern","liga","clig","calt","lnum","zero";
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
 }
 
 //TYPOGRAPHY
