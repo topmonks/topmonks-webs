@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@lhci/cli": "^0.3.14",
-    "@rollup/plugin-alias": "^3.0.1",
+    "@rollup/plugin-alias": "^3.1.0",
     "@topmonks/blendid": "git://github.com/topmonks/blendid.git",
     "@types/chart.js": "^2.9.15",
     "@types/yaml": "^1.2.0",
