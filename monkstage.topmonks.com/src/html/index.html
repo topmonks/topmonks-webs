@@ -125,6 +125,7 @@ endblock %} {% block head %}
       >
         <img
           class="tm-img--fullwidth"
+          loading="lazy"
           src="{{ 'monkstage.topmonks.com/img_about_01.png' | cloudinaryUrl(width=510) }}"
           srcset="{{ 'monkstage.topmonks.com/img_about_01.png' | cloudinaryUrl(width=510) }} 1x,
                       {{ 'monkstage.topmonks.com/img_about_01.png' | cloudinaryUrl(width=510, dpr=2) }} 2x"
@@ -217,6 +218,7 @@ endblock %} {% block head %}
         >
           <img
             class="tm-img--fullwidth"
+            loading="lazy"
             src="{{ 'monkstage.topmonks.com/img_about_02.png' | cloudinaryUrl(width=510) }}"
             srcset="{{ 'monkstage.topmonks.com/img_about_02.png' | cloudinaryUrl(width=510) }} 1x,
                       {{ 'monkstage.topmonks.com/img_about_02.png' | cloudinaryUrl(width=510, dpr=2) }} 2x"
@@ -240,6 +242,7 @@ endblock %} {% block head %}
         class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone"
       >
         <img
+          loading="lazy"
           src="{{ 'monkstage.topmonks.com/img_about_03.png' | cloudinaryUrl(width=200) }}"
           class="tm-img--fullwidth"
           alt="foto z #monkstage"
@@ -301,6 +304,7 @@ endblock %} {% block head %}
       srcset="{{ 'monkstage.topmonks.com/img_gallery.png' | cloudinaryUrl(width=1920) }} 1x,
                {{ 'monkstage.topmonks.com/img_gallery.png' | cloudinaryUrl(width=1920,dpr=2) }} 2x"/>
     <img
+      loading="lazy"
       class="tm-img--fullwidth tm-img--gallery"
       src="{{ 'monkstage.topmonks.com/img_gallery.png' | cloudinaryUrl(width=1915) }}"
       alt="fotogalerie z minulé Monk Stage"
