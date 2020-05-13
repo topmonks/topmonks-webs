@@ -126,7 +126,7 @@
   {{ blogImg("", publicId) }}
 {% endmacro %}
 
-{% macro mediaArticle(article, images) %}
+{% macro mediaArticle(article, images, isArticle) %}
 
   <div class="blog__box mdc-layout-grid__cell">
     <article class="">
@@ -141,7 +141,7 @@
               <span class="name">{{ article.author }}</span>
             </div>
             <div class="article-link">
-              <a href="{{ article.link }}">Listen to podcast</a>
+              <a href="{{ article.link }}">{{"Show article" if isArticle else "Listen to podcast"}}</a>
             </div>
           </div>
         </div>
@@ -173,7 +173,7 @@
       </div>
       {% for year in range(2020, 2016, -1) %}
         {% for article in articles[year] | sort(true, false, "published") %}
-          {{ mediaArticle(article, articleImages) }}
+          {{ mediaArticle(article, articleImages, isArticle = true) }}
         {% endfor %}
       {% endfor %}
     </div>
