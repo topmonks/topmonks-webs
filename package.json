@@ -41,7 +41,7 @@
     "lighthouse": "^5.6.0",
     "lighthouse-logger": "^1.2.0",
     "local-web-server": "^4.0.0",
-    "lws": "=3.0.0",
+    "lws": "=3.1.0",
     "lws-basic-auth": "^2.0.0",
     "lws-blacklist": "^3.0.0",
     "lws-body-parser": "^2.0.0",

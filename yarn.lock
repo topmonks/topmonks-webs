@@ -6814,27 +6814,7 @@ lws-static@^2.0.0:
   dependencies:
     koa-static "^5.0.0"
 
-lws@=3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lws/-/lws-3.0.0.tgz#b73720201b549c303e171b22e0e0f0e3d126ef00"
-  integrity sha512-R59IRnPG6U4kCipzgK7IHw90FJ1ZARLd8ZeUoUJleHACFSvin/FpPII3neW8dlhhAAMKUvYd/xWJzq8tknH4qw==
-  dependencies:
-    ansi-escape-sequences "^5.1.2"
-    array-back "^4.0.1"
-    byte-size "^6.2.0"
-    command-line-args "^5.1.1"
-    command-line-usage "^6.1.0"
-    create-mixin "^3.0.0"
-    koa "^2.11.0"
-    load-module "^3.0.0"
-    lodash.assignwith "^4.2.0"
-    node-version-matches "^2.0.1"
-    open "^7.0.2"
-    reduce-flatten "^3.0.0"
-    typical "^6.0.0"
-    walk-back "^4.0.0"
-
-lws@^3.1.0:
+lws@=3.1.0, lws@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/lws/-/lws-3.1.0.tgz#e1e06c2f7229f0c2cc6b399801ef0239dd4906ae"
   integrity sha512-I8rTgZxz8OJL0hjdlDxs6WpcVG7WSyalVHPQXXK+WPNVjm3KhkT5gV0Qmsgm2FRLbRUp15tso80xmDxMsyt7zA==
@@ -7769,7 +7749,7 @@ open@^6.4.0:
   dependencies:
     is-wsl "^1.1.0"
 
-open@^7.0.2, open@^7.0.4:
+open@^7.0.4:
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/open/-/open-7.0.4.tgz#c28a9d315e5c98340bf979fdcb2e58664aa10d83"
   integrity sha512-brSA+/yq+b08Hsr4c8fsEW2CRzk1BmfN3SAK/5VCHQ9bdoZJ4qa/+AfR0xHjlbbZUyPkUHs1b8x1RqdyZdkVqQ==
