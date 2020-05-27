@@ -36,7 +36,9 @@
         "offscreen-images": "off",
         "color-contrast": "off",
         "duplicate-id": "off",
-        "dom-size": "off"
+        "dom-size": "off",
+        "maskable-icon": "off",
+        "unused-javascript": "off"
       }
     },
     "upload": {
