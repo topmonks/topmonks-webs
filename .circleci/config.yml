@@ -148,7 +148,7 @@ jobs:
             echo "------- CERT URL -------"
             yarn -s node --print "require.resolve('lws/ssl/lws-cert.pem')"
             echo "------- CERT URL -------"
-            certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n lws-cert -i $(yarn -s node --print "require.resolve('lws/ssl/lws-cert.pem')")
+            certutil -d sql:$HOME/.pki/nssdb -A -t TC -n lws-cert -i $(yarn -s node --print "require.resolve('lws/ssl/lws-cert.pem')")
             certutil -d sql:$HOME/.pki/nssdb -L
       - run:
           name: Serve site content
