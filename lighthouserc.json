@@ -1,7 +1,7 @@
 {
   "ci": {
     "collect": {
-      "chrome-flags": "--ignore-certificate-errors",
+      "chrome-flags": ["--ignore-certificate-errors"],
       "numberOfRuns": 1,
       "url": "https://127.0.0.1:8000/",
       "settings": {
