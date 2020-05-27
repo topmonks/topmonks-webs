@@ -145,6 +145,9 @@ jobs:
             sudo apt-get install libnss3-tools
             mkdir -p $HOME/.pki/nssdb
             certutil -d $HOME/.pki/nssdb -N --empty-password
+            echo "------- CERT URL -------"
+            yarn -s node --print "require.resolve('lws/ssl/lws-cert.pem')"
+            echo "------- CERT URL -------"
             certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n lws-cert -i $(yarn -s node --print "require.resolve('lws/ssl/lws-cert.pem')")
             certutil -d sql:$HOME/.pki/nssdb -L
       - run:
