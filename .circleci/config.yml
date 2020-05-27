@@ -146,6 +146,7 @@ jobs:
             mkdir -p $HOME/.pki/nssdb
             certutil -d $HOME/.pki/nssdb -N --empty-password
             certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n lws-cert -i $(yarn -s node --print "require.resolve('lws/ssl/lws-cert.pem')")
+            certutil -d sql:$HOME/.pki/nssdb -L
       - run:
           name: Serve site content
           command: yarn serve -d ./public/<< parameters.site_name >>

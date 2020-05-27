@@ -70,7 +70,7 @@
     "create-site": "node ./.scripts/create-site",
     "remove-site": "node ./.scripts/remove-site",
     "build": "run-s build:*",
-    "serve": "ws --hostname localhost --http2 --compress",
+    "serve": "ws --http2 --compress",
     "lint:es": "eslint ./",
     "lint:scss": "stylelint-config-prettier-check",
     "lint": "run-p lint:*",
