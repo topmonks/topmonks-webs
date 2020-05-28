@@ -84,7 +84,11 @@
             <picture>
               {% set mobileBanner = images["mobile-banner.png"]["public_id"] %}
               {% set desktopBanner = images["desktop-banner.png"]["public_id"] %}
-              <source media="screen and (max-width: 479px)"
+              <source media="screen and (max-width: 360px)"
+                      srcset="{{ mobileBanner | cloudinaryUrl(width=328) }} 1x,
+                              {{ mobileBanner | cloudinaryUrl(width=328,dpr=1.5) }} 1.5x,
+                              {{ mobileBanner | cloudinaryUrl(width=328,dpr=2) }} 2x"/>
+              <source media="screen and (min-width: 361px) and (max-width: 479px)"
                       srcset="{{ mobileBanner | cloudinaryUrl(width=480) }} 1x,
                               {{ mobileBanner | cloudinaryUrl(width=480,dpr=1.5) }} 1.5x,
                               {{ mobileBanner | cloudinaryUrl(width=480,dpr=2) }} 2x"/>
@@ -180,24 +184,88 @@
         >
           <div class="tab" id="tab-1">
             {% set chart01 = images["window01.png"]["public_id"] %}
-            <img alt="" class="responsive" loading="lazy"
-                 src="{{ chart01 | cloudinaryUrl(width=1008,dpr="auto") }}"
-                 width="800" height="574"
-            />
+            <picture>
+              <source
+                media="screen and (max-width: 360px)"
+                srcset="{{ chart01 | cloudinaryUrl(width=328,dpr=1) }} 1x,
+                        {{ chart01 | cloudinaryUrl(width=328,dpr=1.5) }} 1.5x,
+                        {{ chart01 | cloudinaryUrl(width=328,dpr=2) }} 2x">
+              <source
+                media="screen and (min-width: 361px) and (max-width: 479px)"
+                srcset="{{ chart01 | cloudinaryUrl(width=448,dpr=1) }} 1x,
+                        {{ chart01 | cloudinaryUrl(width=448,dpr=1.5) }} 1.5x,
+                        {{ chart01 | cloudinaryUrl(width=448,dpr=2) }} 2x">
+              <source
+                media="screen and (min-width: 480px) and (max-width: 839px)"
+                srcset="{{ chart01 | cloudinaryUrl(width=792,dpr=1) }} 1x,
+                        {{ chart01 | cloudinaryUrl(width=792,dpr=1.5) }} 1.5x,
+                        {{ chart01 | cloudinaryUrl(width=792,dpr=2) }} 2x">
+              <source
+                media="screen and (min-width: 840px)"
+                srcset="{{ chart01 | cloudinaryUrl(width=1008,dpr=1) }} 1x,
+                        {{ chart01 | cloudinaryUrl(width=1008,dpr=1.5) }} 1.5x,
+                        {{ chart01 | cloudinaryUrl(width=1008,dpr=2) }} 2x">
+              <img alt="" class="responsive" loading="lazy"
+                   src="{{ chart01 | cloudinaryUrl(width=1008,dpr="auto") }}"
+                   width="800" height="574"
+              />
+            </picture>
           </div>
           <div class="tab" id="tab-2">
             {% set chart02 = images["window02.png"]["public_id"] %}
-            <img alt="" class="responsive" loading="lazy"
-                 src="{{ chart02 | cloudinaryUrl(width=1008,dpr="auto") }}"
-                 width="800" height="574"
-            />
+            <picture>
+              <source
+                media="screen and (max-width: 360px)"
+                srcset="{{ chart02 | cloudinaryUrl(width=328,dpr=1) }} 1x,
+                        {{ chart02 | cloudinaryUrl(width=328,dpr=1.5) }} 1.5x,
+                        {{ chart02 | cloudinaryUrl(width=328,dpr=2) }} 2x">
+              <source
+                media="screen and (min-width: 361px) and (max-width: 479px)"
+                srcset="{{ chart02 | cloudinaryUrl(width=448,dpr=1) }} 1x,
+                        {{ chart02 | cloudinaryUrl(width=448,dpr=1.5) }} 1.5x,
+                        {{ chart02 | cloudinaryUrl(width=448,dpr=2) }} 2x">
+              <source
+                media="screen and (min-width: 480px) and (max-width: 839px)"
+                srcset="{{ chart02 | cloudinaryUrl(width=792,dpr=1) }} 1x,
+                        {{ chart02 | cloudinaryUrl(width=792,dpr=1.5) }} 1.5x,
+                        {{ chart02 | cloudinaryUrl(width=792,dpr=2) }} 2x">
+              <source
+                media="screen and (min-width: 840px)"
+                srcset="{{ chart02 | cloudinaryUrl(width=1008,dpr=1) }} 1x,
+                        {{ chart02 | cloudinaryUrl(width=1008,dpr=1.5) }} 1.5x,
+                        {{ chart02 | cloudinaryUrl(width=1008,dpr=2) }} 2x">
+              <img alt="" class="responsive" loading="lazy"
+                   src="{{ chart02 | cloudinaryUrl(width=1008,dpr="auto") }}"
+                   width="800" height="574" />
+            </picture>
           </div>
           <div class="tab" id="tab-3">
             {% set chart03 = images["window03.png"]["public_id"] %}
-            <img alt="" class="responsive" loading="lazy"
-                 src="{{ chart03 | cloudinaryUrl(width=1008,dpr="auto") }}"
-                 width="800" height="574"
-            />
+            <picture>
+              <source
+                media="screen and (max-width: 360px)"
+                srcset="{{ chart03 | cloudinaryUrl(width=328,dpr=1) }} 1x,
+                        {{ chart03 | cloudinaryUrl(width=328,dpr=1.5) }} 1.5x,
+                        {{ chart03 | cloudinaryUrl(width=328,dpr=2) }} 2x">
+              <source
+                media="screen and (min-width: 361px) and (max-width: 480px)"
+                srcset="{{ chart03 | cloudinaryUrl(width=448,dpr=1) }} 1x,
+                        {{ chart03 | cloudinaryUrl(width=448,dpr=1.5) }} 1.5x,
+                        {{ chart03 | cloudinaryUrl(width=448,dpr=2) }} 2x">
+              <source
+                media="screen and (min-width: 481px) and (max-width: 840px)"
+                srcset="{{ chart03 | cloudinaryUrl(width=792,dpr=1) }} 1x,
+                        {{ chart03 | cloudinaryUrl(width=792,dpr=1.5) }} 1.5x,
+                        {{ chart03 | cloudinaryUrl(width=792,dpr=2) }} 2x">
+              <source
+                media="screen and (min-width: 841px)"
+                srcset="{{ chart03 | cloudinaryUrl(width=1008,dpr=1) }} 1x,
+                        {{ chart03 | cloudinaryUrl(width=1008,dpr=1.5) }} 1.5x,
+                        {{ chart03 | cloudinaryUrl(width=1008,dpr=2) }} 2x">
+              <img alt="" class="responsive" loading="lazy"
+                   src="{{ chart03 | cloudinaryUrl(width=792,dpr="auto") }}"
+                   width="800" height="574"/>
+            </picture>
           </div>
         </div>
         <script>
