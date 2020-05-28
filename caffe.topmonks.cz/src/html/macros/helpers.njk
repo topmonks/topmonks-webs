@@ -23,7 +23,7 @@
 {% macro eventInfo(eventData, posters) %}
   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 history">
     <a href="{{ eventData.link }}">{{ poster(eventData, posters) }}</a>
-    <h4>{{ eventData.shortTitle }}</h4>
+    <h3>{{ eventData.shortTitle }}</h3>
     <p>
       <time>{{ eventData.date }}</time>
     </p>
