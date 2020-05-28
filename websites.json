@@ -27,6 +27,9 @@
     "lh-token": "2abde14f-06dd-4f7a-8203-2ddc1575a40a"
   },
   "www.hlidacshopu.cz": {
+    "dns": {
+      "disabled": true
+    },
     "lh-token": "b99d731f-aa95-4105-b71b-7ac29c93e81e"
   },
   "session-monk.topmonks.com": {
