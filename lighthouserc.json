@@ -38,7 +38,9 @@
         "duplicate-id": "off",
         "dom-size": "off",
         "maskable-icon": "off",
-        "unused-javascript": "off"
+        "unused-javascript": "off",
+        "uses-rel-preconnect": "off",
+        "largest-contentful-paint": "off"
       }
     },
     "upload": {
