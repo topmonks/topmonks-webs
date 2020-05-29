@@ -1,6 +1,7 @@
 const pathConfig = require("./path-config.json");
+const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
 
-module.exports = {
+module.exports = createSharedTaskConfig(__dirname, {
   images: false,
   cloudinary: false,
   javascripts: false,
@@ -23,4 +24,4 @@ module.exports = {
   production: {
     rev: false
   }
-};
+});
