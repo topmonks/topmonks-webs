@@ -251,22 +251,6 @@ workflows:
             branches:
               only: master
       - test_site:
-          name: test-monkstage-topmonks-com
-          site_name: monkstage.topmonks.com
-          context: org-global
-          requires:
-            - build
-      - deploy_site:
-          name: deploy-monkstage-topmonks-com
-          site_name: monkstage.topmonks.com
-          context: org-global
-          requires:
-            - provision
-            - test-monkstage-topmonks-com
-          filters:
-            branches:
-              only: master
-      - test_site:
           name: test-www-topmonks-cz
           site_name: www.topmonks.cz
           context: org-global
