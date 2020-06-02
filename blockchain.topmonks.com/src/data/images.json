@@ -610,5 +610,26 @@
     "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1588505744/blockchain.topmonks.com/articles/2020-01-16.png",
     "existing": false,
     "original_filename": "2020-01-16"
+  },
+  "articles/2020-05-31.jpg": {
+    "asset_id": "a1f27a0dc19c84c416b73039b1dfd0da",
+    "public_id": "blockchain.topmonks.com/articles/2020-05-31",
+    "version": 1591117459,
+    "version_id": "e7641e67ad211e9269c187894aad4e7d",
+    "signature": "a0eedadc5da9b73b9566eaee2137d196934c7463",
+    "width": 1488,
+    "height": 806,
+    "format": "png",
+    "resource_type": "image",
+    "created_at": "2020-06-02T17:04:19Z",
+    "tags": [],
+    "bytes": 687115,
+    "type": "upload",
+    "etag": "8e7628bff4bed7ddf9d42b36f4d01de5",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1591117459/blockchain.topmonks.com/articles/2020-05-31.png",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1591117459/blockchain.topmonks.com/articles/2020-05-31.png",
+    "existing": false,
+    "original_filename": "2020-05-31"
   }
 }
