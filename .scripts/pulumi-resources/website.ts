@@ -1,5 +1,6 @@
 import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
+import * as inputs from "@pulumi/aws/types/input";
 
 /**
  * Creates S3 bucket with static website hosting enabled
@@ -76,14 +77,16 @@ function createCloudFront(
   parent: pulumi.ComponentResource,
   domain: string,
   contentBucket: aws.s3.Bucket,
-  isSPA: boolean | undefined
+  isPwa: boolean | undefined
 ) {
   const acmCertificate = getCertificate(domain);
-  const customErrorResponses = [];
-  if (isSPA)
+  const customErrorResponses: pulumi.Input<
+    inputs.cloudfront.DistributionCustomErrorResponse
+  >[] = [];
+  if (isPwa)
     customErrorResponses.push({
       errorCode: 404,
-      responseCode: 202,
+      responseCode: 200,
       responsePagePath: "/index.html"
     });
   return new aws.cloudfront.Distribution(
@@ -186,32 +189,44 @@ function createCloudFront(
  * @param domain {string} website domain name
  * @param cdn {aws.cloudfront.Distribution} optional CDN distribution. If defined, ALIAS record will be created.
  * @param cname {pulumi.Output<string>} aliased domain name
- * @returns {aws.route53.Record}
+ * @returns {aws.route53.Record[]}
  */
-function createAliasRecord(
-  parent: pulumi.ComponentResource,
+function createAliasRecords(
+  parent: Website,
   domain: string,
-  cdn: aws.cloudfront.Distribution | null,
   cname: pulumi.Output<string>
-): aws.route53.Record {
+): aws.route53.Record[] {
   const hostedZone = getHostedZone(domain);
-  const args: aws.route53.RecordArgs = {
+  const cdn = parent.cdn;
+  if (!cdn) {
+    const args: aws.route53.RecordArgs = {
+      name: domain,
+      zoneId: hostedZone.apply((x) => x.zoneId),
+      ttl: 300,
+      type: "CNAME",
+      records: [cname],
+    };
+    return [
+      new aws.route53.Record(`${domain}/dns-record`, args, { parent })
+    ]
+  }
+
+  const args = (type: string) => ({
     name: domain,
     zoneId: hostedZone.apply(x => x.zoneId),
-    ttl: cdn ? undefined : 300,
-    type: cdn ? "A" : "CNAME",
-    records: cdn ? undefined : [cname],
-    aliases: cdn
-      ? [
-          {
-            evaluateTargetHealth: true,
-            name: cdn.domainName,
-            zoneId: cdn.hostedZoneId
-          }
-        ]
-      : undefined
-  };
-  return new aws.route53.Record(`${domain}/dns-record`, args, { parent });
+    type,
+    aliases: [
+      {
+        evaluateTargetHealth: true,
+        name: cdn.domainName,
+        zoneId: cdn.hostedZoneId,
+      },
+    ],
+  });
+  return [
+    new aws.route53.Record(`${domain}/dns-record`, args("A"), { parent }),
+    new aws.route53.Record(`${domain}/dns-record-ipv6`, args("AAAA"), { parent })
+  ];
 }
 
 function getHostedZone(domain: string) {
@@ -223,13 +238,66 @@ function getHostedZone(domain: string) {
 }
 
 /**
+ * Creates Widlcard certificate for top domain.
+ * This creates certificate for root domain with wildcard for all subdomains.
+ * You will need to have just one instance per all your stacks.
+ * @param domain {string} website domain name
+ * @returns {pulumi.Output<pulumi.Unwrap<aws.acm.GetCertificateResult>>}
+ */
+export function createCertificate(domain: string) {
+  const parentDomain = getParentDomain(domain);
+  const usEast1 = new aws.Provider(`${domain}/provider/us-east-1`, {
+    profile: aws.config.profile,
+    region: aws.USEast1Region,
+  });
+
+  const certificate = new aws.acm.Certificate(
+    `${parentDomain}-certificate`,
+    {
+      domainName: `*.${parentDomain}`,
+      subjectAlternativeNames: [parentDomain],
+      validationMethod: "DNS",
+    },
+    { provider: usEast1 }
+  );
+  const hostedZoneId = aws.route53
+    .getZone({ name: parentDomain }, { async: true })
+    .then((zone) => zone.zoneId);
+
+  /**
+   *  Create a DNS record to prove that we _own_ the domain we're requesting a certificate for.
+   *  See https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html for more info.
+   */
+  const certificateValidationDomain = new aws.route53.Record(
+    `${parentDomain}-validationRecord`,
+    {
+      name: certificate.domainValidationOptions[0].resourceRecordName,
+      zoneId: hostedZoneId,
+      type: certificate.domainValidationOptions[0].resourceRecordType,
+      records: [certificate.domainValidationOptions[0].resourceRecordValue],
+      ttl: 600,
+    }
+  );
+
+  const certificateValidation = new aws.acm.CertificateValidation(
+    `${parentDomain}-certificateValidation`,
+    {
+      certificateArn: certificate.arn,
+      validationRecordFqdns: [certificateValidationDomain.fqdn],
+    },
+    { provider: usEast1 }
+  );
+  return certificateValidation.certificateArn;
+}
+
+/**
  * Gets Widlcard certificate for top domain
  * @param domain {string} website domain name
  * @returns {pulumi.Output<pulumi.Unwrap<aws.acm.GetCertificateResult>>}
  */
 function getCertificate(domain: string) {
   const parentDomain = getParentDomain(domain);
-  const usEast1 = new aws.Provider(`${domain}/provider/us-east-1`, {
+  const usEast1 = new aws.Provider(`${domain}/get-provider/us-east-1`, {
     profile: aws.config.profile,
     region: aws.USEast1Region
   });
@@ -260,7 +328,8 @@ function getDomainAndSubdomain(domain: string) {
     return { subdomain: "", parentDomain: `${domain}.` };
   }
 
-  const subdomain = parts.shift();
+  const subdomain = parts[0];
+  parts.shift();
   return {
     subdomain,
     parentDomain: `${parts.join(".")}.`
@@ -275,7 +344,7 @@ export class Website extends pulumi.ComponentResource {
   contentBucket: aws.s3.Bucket;
   contentBucketPolicy: aws.s3.BucketPolicy;
   cdn?: aws.cloudfront.Distribution;
-  dnsRecord: aws.route53.Record;
+  dnsRecords: aws.route53.Record[];
   public domain: pulumi.Output<string>;
   public url: pulumi.Output<string>;
 
@@ -327,16 +396,13 @@ export class Website extends pulumi.ComponentResource {
       domain,
       contentBucket
     );
-    let cdn: aws.cloudfront.Distribution | null = null;
-    if (!(settings.cdn && settings.cdn.disabled)) {
-      cdn = createCloudFront(website, domain, contentBucket, settings.isSPA);
-      website.cdn = cdn;
+    if (!(settings.cdn?.disabled)) {
+      website.cdn = createCloudFront(website, domain, contentBucket, settings.isPwa);
     }
-    if (!(settings.dns && settings.dns.disabled)) {
-      website.dnsRecord = createAliasRecord(
+    if (!(settings.dns?.disabled)) {
+      website.dnsRecords = createAliasRecords(
         website,
         domain,
-        cdn,
         contentBucket.bucketDomainName
       );
     }
@@ -369,11 +435,10 @@ export class Website extends pulumi.ComponentResource {
       bucketSettings
     ));
     website.contentBucketPolicy = createBucketPolicy(website, domain, bucket);
-    const cdn = website.cdn = createCloudFront(website, domain, bucket, false);
-    website.dnsRecord = createAliasRecord(
+    website.cdn = createCloudFront(website, domain, bucket, false);
+    website.dnsRecords = createAliasRecords(
       website,
       domain,
-      cdn,
       bucket.bucketDomainName
     );
     return website;
@@ -381,17 +446,17 @@ export class Website extends pulumi.ComponentResource {
 }
 
 interface WebsiteSettings {
-  isSPA?: boolean;
+  isPwa?: boolean;
   bucket?: aws.s3.BucketArgs;
   cdn?: DisableSetting;
   dns?: DisableSetting;
   "lh-token"?: string;
 }
 
-interface DisableSetting {
-  disabled: boolean;
-}
-
 interface RedirectWebsiteSettings {
   target: string;
+}
+
+interface DisableSetting {
+  disabled: boolean;
 }
