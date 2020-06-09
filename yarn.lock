@@ -331,10 +331,10 @@
     "@material/theme" "^4.0.0"
     tslib "^1.9.3"
 
-"@material/layout-grid@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@material/layout-grid/-/layout-grid-4.0.0.tgz#dd425336710687c3a70cb309b741040fb328c92c"
-  integrity sha512-ljhdyEzmQGTGTxR7nVgnrsSImbMEmWM/q1/1XvnQcOJTPCqS/3ziXWCVADjgdDvE/WKJkg2nmm8bFg2qnPnWgw==
+"@material/layout-grid@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@material/layout-grid/-/layout-grid-6.0.0.tgz#5b5cd403c9717dbcb747258d8a1976087acd65df"
+  integrity sha512-T+sB8Ss9gZQ101T2uQBtWmeuuQtEb2w4pncGYL+dX6+VDDQ8UZGaBEOcwPW0FqroRhX/CEXzF/mSVpZAyQfP0A==
 
 "@material/ripple@^4.0.0":
   version "4.0.0"
