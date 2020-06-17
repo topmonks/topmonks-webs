@@ -8,7 +8,7 @@
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
-  color: #3324ae;
+  color: #FFFFFF;
   @media screen and (max-width: 479px) {
     font-size: 24px;
     padding-top: 2px;
@@ -18,21 +18,6 @@
     padding-top: 2px;
     justify-content: flex-end;
     color: #fff;
-  }
-  @media screen and (min-width: 840px) {
-    padding-top: 0.5em;
-    padding-left: 1.5em;
-    &::before {
-      content: "";
-      display: block;
-      top: 0;
-      left: var(--mdc-layout-grid-gutter-desktop);
-      width: 200px;
-      height: 100px;
-      position: absolute;
-      background: url("/images/logoBG.svg") no-repeat;
-      z-index: -1;
-    }
   }
   .monk {
     fill: currentColor;
@@ -105,9 +90,6 @@
   }
   @media screen and (min-width: 840px) {
     height: 72px;
-    .tm-layout-wrapper {
-      padding: 0 0 16px;
-    }
   }
 }
 
@@ -169,9 +151,6 @@
   }
   @media screen and (min-width: 840px) {
     .tm-menu__list {
-      li {
-        padding-top: 1.5em;
-      }
       a:hover {
         border-color: #fff;
       }
