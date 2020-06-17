@@ -1,8 +1,9 @@
 const pathConfig = require("./path-config.json");
+const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
 
-module.exports = {
+module.exports = createSharedTaskConfig(__dirname, {
   images: true,
-  cloudinary: false,
+  cloudinary: true,
   javascripts: false,
   fonts: true,
   static: true,
@@ -11,7 +12,7 @@ module.exports = {
   workboxBuild: false,
 
   html: {
-    dataFile: "../data/global.json"
+    collections: ["images"]
   },
 
   browserSync: {
@@ -23,4 +24,4 @@ module.exports = {
   production: {
     rev: true
   }
-};
+})

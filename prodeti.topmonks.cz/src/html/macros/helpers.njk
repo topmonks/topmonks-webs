@@ -1,0 +1,21 @@
+{% macro image(image, images, width, height, alt, style) -%}
+  {% set imageUrl = images[image]["public_id"] %}
+  <picture>
+    <source media="screen and (max-width: 479px)"
+            srcset="{{ imageUrl | cloudinaryUrl(dpr=1,width=width) }} 1x,
+                    {{ imageUrl | cloudinaryUrl(dpr=1.5,width=width) }} 1.5x,
+                    {{ imageUrl | cloudinaryUrl(dpr=2,width=width) }} 2x">
+    <source media="screen and (min-width: 480px) and (max-width: 839px)"
+            srcset="{{ imageUrl | cloudinaryUrl(dpr=1,width=width) }} 1x,
+                    {{ imageUrl | cloudinaryUrl(dpr=1.5,width=width) }} 1.5x,
+                    {{ imageUrl | cloudinaryUrl(dpr=2,width=width) }} 2x">
+    <source media="screen and (min-width: 840px)"
+            srcset="{{ imageUrl | cloudinaryUrl(dpr=1,width=width) }} 1x,
+                    {{ imageUrl | cloudinaryUrl(dpr=1.5,width=width) }} 1.5x,
+                    {{ imageUrl | cloudinaryUrl(dpr=2,width=width) }} 2x">
+    <img alt="{{ alt }}"
+         loading="lazy" width="{{ width }}" height="{{ height }}" class="responsive"
+         style="{{ style }}"
+         src="{{ imageUrl | cloudinaryUrl(dpr="auto",width=width) }}">
+  </picture>
+{%- endmacro %}

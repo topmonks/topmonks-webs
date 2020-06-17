@@ -1,39 +1,39 @@
 {
   "src": "./prodeti.topmonks.cz/src",
   "dest": "./public/prodeti.topmonks.cz",
-
   "html": {
     "src": "html",
     "dest": "./"
   },
-
   "static": {
     "src": "static",
     "dest": "./"
   },
-
   "javascripts": {
     "src": "javascripts",
     "dest": "javascripts"
   },
-
   "stylesheets": {
     "src": "stylesheets",
-    "dest": "stylesheets"
+    "dest": "assets/css"
   },
-
   "images": {
     "src": "images",
-    "dest": "images"
+    "dest": "assets/img"
   },
-
   "fonts": {
     "src": "fonts",
     "dest": "fonts"
   },
-
   "icons": {
     "src": "icons",
     "dest": "images"
+  },
+  "cloudinary": {
+    "src": "cloudinary",
+    "dest": "prodeti.topmonks.cz"
+  },
+  "data": {
+    "src": "html/data"
   }
 }

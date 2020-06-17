@@ -23,7 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
-  background: url("/images/BG.svg") no-repeat;
+  background: url("/assets/img/BG.svg") no-repeat;
   background-position-x: 50%;
 }
 
@@ -86,13 +86,13 @@ ul {
   margin: 0 auto;
 }
 .tm-bgnd-wrapper {
-  background: url("/images/BG.svg") no-repeat left 50% bottom 60px;
+  background: url("/assets/img/BG.svg") no-repeat left 50% bottom 60px;
   background-size: auto 100%;
 }
 .main_info {
   padding-top: 80px;
   padding-bottom: 120%;
-  background: cloudinaryUrl("prodeti.topmonks.cz/bgnd_boy.png", $width: 510)
+  background: cloudinaryUrl("prodeti.topmonks.cz/boy.png", $width: 510)
     no-repeat center bottom;
   background-size: 90% auto;
   @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -101,7 +101,7 @@ ul {
     screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: cloudinaryUrl("prodeti.topmonks.cz/bgnd_boy.png", $width: 510);
+    background-image: cloudinaryUrl("prodeti.topmonks.cz/boy.png", $width: 510, $dpr: 2);
   }
 }
 
@@ -139,7 +139,7 @@ ul {
   }
 
   li {
-    line-height: 25px;
+    line-height: 30px;
     text-decoration: none;
     text-align: left;
     font-weight: normal;
@@ -171,10 +171,10 @@ ul {
     display: block;
     width: 24px;
     height: 24px;
-    background: url("/images/odrazky.svg") no-repeat;
+    background: url("/assets/img/odrazky.svg") no-repeat;
     position: absolute;
     left: -36px;
-    top: 3px;
+    top: 5px;
   }
 }
 
@@ -196,20 +196,20 @@ ul {
   }
 
   .basic-info_box_age {
-    background: url("/images/age_box.svg") no-repeat;
+    background: url("/assets/img/age_box.svg") no-repeat;
     width: 330px;
     height: 230px;
     margin: 0 auto;
   }
   .basic-info_box_calendar {
-    background: url("/images/calendar_box.svg") no-repeat;
+    background: url("/assets/img/calendar_box.svg") no-repeat;
     width: 330px;
     height: 230px;
     margin: 0 auto;
   }
 
   .basic-info_box_capacity {
-    background: url("/images/capacity_box.svg") no-repeat;
+    background: url("/assets/img/capacity_box.svg") no-repeat;
     width: 330px;
     height: 230px;
     margin: 0 auto;
@@ -222,7 +222,7 @@ ul {
   font-size: 24px;
   font-weight: bold;
   text-align: left;
-  margin-bottom: 0;
+  margin-bottom: 8px;
 }
 
 .courses h4 {
@@ -241,21 +241,21 @@ ul {
 }
 
 .fill_1 {
-  background: url("/images/fill_1.svg") no-repeat;
+  background: url("/assets/img/fill_1.svg") no-repeat;
   width: 160px;
   height: 160px;
   margin: 0 auto;
 }
 
 .fill_2 {
-  background: url("/images/fill_2.svg") no-repeat;
+  background: url("/assets/img/fill_2.svg") no-repeat;
   width: 160px;
   height: 160px;
   margin: 0 auto;
 }
 
 .fill_3 {
-  background: url("/images/fill_3.svg") no-repeat;
+  background: url("/assets/img/fill_3.svg") no-repeat;
   width: 160px;
   height: 160px;
   margin: 0 auto;
@@ -265,7 +265,7 @@ ul {
 #ukazka::after {
   content: "";
   display: block;
-  background: url("/images/form-grainy_bg.png") no-repeat;
+  background: cloudinaryUrl("prodeti.topmonks.cz/form-grainy_bg.png") no-repeat;
   background-size: 100%;
   background-position-y: 400px;
 }
@@ -278,7 +278,10 @@ ul {
 .price {
   text-align: center;
   margin: 0 auto;
-  background: url(/images/price_bg.png) top repeat-y;
+  background: cloudinaryUrl("prodeti.topmonks.cz/price_bg.png", $width: 1440) top repeat-y;
+  @media screen and (device-pixel-ratio: 2) {
+    background-image: cloudinaryUrl("prodeti.topmonks.cz/price_bg.png", $width: 1440, $dpr: 2);
+  }
   background-size: 100%;
   h3 {
     font-size: 30px;
@@ -355,7 +358,7 @@ ul {
 /* Keep In Touch*/
 .form {
   padding-bottom: 3em;
-  background: url(/images/price_bg.png) top repeat-y;
+  background: url(/assets/img/price_bg.png) top repeat-y;
   background-size: 100%;
   min-height: 300px;
 
@@ -381,6 +384,7 @@ ul {
     font-weight: bold;
     font-size: 18px;
     color: white;
+    border: none;
     border-radius: 30px;
     box-shadow: 6px 6px 10px #bbdbff;
     padding: 15px 50px;
@@ -408,7 +412,7 @@ ul {
 .teachers {
   min-height: 400px;
   margin-bottom: 4em;
-  background: url("/images/price_curve.png") top no-repeat;
+  background: url("/assets/img/price_curve.png") top no-repeat;
   background-size: 100%;
   padding-top: 1em;
   text-align: center;
@@ -453,7 +457,7 @@ ul {
   margin: 0 auto;
   position: relative;
   text-align: center;
-  background: url("/images/price_curve.png") top no-repeat;
+  background: cloudinaryUrl("prodeti.topmonks.cz/price_curve.png") top no-repeat;
   background-size: 100%;
   padding: 3em 0;
 }
@@ -592,6 +596,7 @@ footer {
 }
 
 .contact a {
+  line-height: 32px;
   @media screen {
     color: #fff;
   }
@@ -630,6 +635,7 @@ footer {
 
 .contact .contact_details p {
   margin: 0;
+  line-height: 32px;
 }
 
 .contact .mail {
