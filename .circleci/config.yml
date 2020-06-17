@@ -196,12 +196,12 @@ workflows:
           context: org-global
           filters:
             branches:
-              ignore: master
+              ignore: trunk
       - provision:
           context: org-global
           filters:
             branches:
-              only: master
+              only: trunk
       - test_site:
           name: test-www-topmonks-com
           site_name: www.topmonks.com
@@ -217,7 +217,7 @@ workflows:
             - test-www-topmonks-com
           filters:
             branches:
-              only: master
+              only: trunk
       - test_site:
           name: test-blockchain-topmonks-com
           site_name: blockchain.topmonks.com
@@ -233,7 +233,7 @@ workflows:
             - test-blockchain-topmonks-com
           filters:
             branches:
-              only: master
+              only: trunk
       - test_site:
           name: test-studio-topmonks-com
           site_name: studio.topmonks.com
@@ -249,7 +249,7 @@ workflows:
             - test-studio-topmonks-com
           filters:
             branches:
-              only: master
+              only: trunk
       - test_site:
           name: test-www-topmonks-cz
           site_name: www.topmonks.cz
@@ -265,7 +265,7 @@ workflows:
             - test-www-topmonks-cz
           filters:
             branches:
-              only: master
+              only: trunk
       - test_site:
           name: test-caffe-topmonks-cz
           site_name: caffe.topmonks.cz
@@ -281,7 +281,7 @@ workflows:
             - test-caffe-topmonks-cz
           filters:
             branches:
-              only: master
+              only: trunk
       - test_site:
           name: test-prodeti-topmonks-cz
           site_name: prodeti.topmonks.cz
@@ -297,7 +297,7 @@ workflows:
             - test-prodeti-topmonks-cz
           filters:
             branches:
-              only: master
+              only: trunk
       - test_site:
           name: test-session-monk-topmonks-com
           site_name: session-monk.topmonks.com
@@ -320,7 +320,7 @@ workflows:
             - test-session-monk-topmonks-com
           filters:
             branches:
-              only: master
+              only: trunk
       - test_site:
           name: test-monkslab-cz
           site_name: monkslab.cz
@@ -336,7 +336,7 @@ workflows:
             - test-monkslab-cz
           filters:
             branches:
-              only: master
+              only: trunk
       - deploy_site:
           name: deploy-www-hookamonk-com
           site_name: www.hookamonk.com
@@ -346,7 +346,7 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only: trunk
       - test_site:
           name: test-www-hlidacshopu-cz
           site_name: www.hlidacshopu.cz
@@ -362,4 +362,4 @@ workflows:
             - test-www-hlidacshopu-cz
           filters:
             branches:
-              only: master
+              only: trunk
