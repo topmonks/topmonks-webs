@@ -49,7 +49,7 @@ const generatedFiles = [
   "config/task-config.js",
   "config/path-config.json",
   "src/data/global.json",
-  "src/html/index.njk",
+  "src/html/index.html",
   "src/javascripts/index.js",
   "src/stylesheets/main.scss"
 ];
