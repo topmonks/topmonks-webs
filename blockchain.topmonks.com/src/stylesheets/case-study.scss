@@ -1,0 +1,81 @@
+h3 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.button {
+  margin: 1.5em auto 2.5em;
+  padding: 14px 48px;
+  @media (max-width: 640px) {
+    width: 100%;
+    padding: 14px 8px;
+  }
+}
+
+.skills_box {
+  background-color: var(--mdc-theme-text-primary-on-dark);
+  padding: 24px 24px 12px;
+}
+
+@media screen and (min-width: 1024px) {
+  .layout-wrapper--short {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.main_info, .about, .our-work {
+  background: #F4F8FB;
+}
+
+.main_info {
+  h2 {
+    margin-bottom: 0;
+    @media (max-width: 1023px) {
+      margin: 3em 0 0.5em;
+    }
+  }
+
+  p.main_sub-info {
+    color: var(--mdc-theme-text-primary-on-light);
+    text-align: left;
+    margin-top: 0;
+    max-width: initial;
+    min-height: auto;
+  }
+
+  img {
+    box-shadow: 0px 2px 23px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.our-work {
+  padding: 0;
+}
+
+.review {
+  margin: 1em 0 4.5em;
+
+  span {
+    margin: 16px 0;
+  }
+
+  hr {
+    background: #F4F8FB;
+    width: 100%;
+    height: 1px;
+    border: none;
+    margin-bottom: 0.8em;
+  }
+
+  .skills_box {
+    box-shadow: 0px 2px 23px rgba(0, 0, 0, 0.1);
+    padding: 12px 24px 26px;
+  }
+
+}

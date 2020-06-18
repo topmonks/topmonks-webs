@@ -631,5 +631,26 @@
     "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1591117459/blockchain.topmonks.com/articles/2020-05-31.png",
     "existing": false,
     "original_filename": "2020-05-31"
+  },
+  "RSKswap-screenshot.jpg": {
+    "asset_id": "22bc3c84a32f449b2cb1bb02e372b3ef",
+    "public_id": "blockchain.topmonks.com/RSKswap-screenshot",
+    "version": 1592484022,
+    "version_id": "584273b488e6211b9718c042c514bd84",
+    "signature": "5b09da2ec71bf018357dc40355bff25c8c5f4571",
+    "width": 3760,
+    "height": 1880,
+    "format": "jpg",
+    "resource_type": "image",
+    "created_at": "2020-06-18T12:40:22Z",
+    "tags": [],
+    "bytes": 494172,
+    "type": "upload",
+    "etag": "994991dfe6d518e138e3a777f31bb53e",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1592484022/blockchain.topmonks.com/RSKswap-screenshot.jpg",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1592484022/blockchain.topmonks.com/RSKswap-screenshot.jpg",
+    "existing": false,
+    "original_filename": "RSKswap-screenshot"
   }
 }
