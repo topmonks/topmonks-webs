@@ -24,4 +24,4 @@ module.exports = createSharedTaskConfig(__dirname, {
   production: {
     rev: true
   }
-})
+});
