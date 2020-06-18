@@ -15,7 +15,7 @@ function createBucket(
   settings: aws.s3.BucketArgs
 ) {
   const website = settings.website || {
-    indexDocument: "index.njk",
+    indexDocument: "index.html",
     errorDocument: "404.html"
   };
   return new aws.s3.Bucket(
@@ -87,7 +87,7 @@ function createCloudFront(
     customErrorResponses.push({
       errorCode: 404,
       responseCode: 200,
-      responsePagePath: "/index.njk"
+      responsePagePath: "/index.html"
     });
   return new aws.cloudfront.Distribution(
     `${domain}/cdn-distribution`,
@@ -109,7 +109,7 @@ function createCloudFront(
         }
       ],
       customErrorResponses,
-      defaultRootObject: "index.njk",
+      defaultRootObject: "index.html",
       defaultCacheBehavior: {
         targetOriginId: contentBucket.arn,
         viewerProtocolPolicy: "redirect-to-https",
