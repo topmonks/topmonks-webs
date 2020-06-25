@@ -27,7 +27,7 @@
     "babel-eslint": "^10.1.0",
     "chalk": "^4.0.0",
     "commander": "^5.1.0",
-    "dotenv-cli": "^3.1.0",
+    "dotenv-cli": "^3.2.0",
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-ava": "^10.3.0",
