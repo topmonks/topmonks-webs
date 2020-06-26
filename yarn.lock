@@ -476,10 +476,10 @@
     read-package-tree "^5.2.1"
     resolve "^1.7.1"
 
-"@pulumi/pulumi@^2.0.0", "@pulumi/pulumi@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-2.3.0.tgz#26f65acbb975128bd9cef618107e9233ced0632e"
-  integrity sha512-rcrMDW8y+c9qfZugN2Hko8/jK/5PXwv6yRgxkdyWzC5BjK8aCBZFyhRqVzI4BqyiHurTp8W+iMdojAmnzjyXOQ==
+"@pulumi/pulumi@^2.0.0", "@pulumi/pulumi@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-2.5.0.tgz#a25307e04c8631adde9b91246cd8d5cc7375bf5a"
+  integrity sha512-936vZEqLIHzg6NY7X7CFgMzYaX+iTr9UjakSxxlZd0TiDtWdbOAhJkE/e4GnUQhtZ+nAc/nnzVCJkmQytvXK9A==
   dependencies:
     "@grpc/grpc-js" "^0.6.15"
     "@pulumi/query" "^0.3.0"
