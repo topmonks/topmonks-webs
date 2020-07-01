@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "com.topmonks.sessionmonk",
+               "sha256_cert_fingerprints": ["89:1F:90:1D:EF:F0:2E:EE:2C:3D:97:8F:51:E2:B6:E5:77:44:3F:FD:C1:DD:A7:5B:F9:B9:E8:A4:15:D4:E4:88"] }
+}]
