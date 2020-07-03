@@ -63,7 +63,7 @@
     "rimraf": "^3.0.2",
     "rollup-plugin-pnp-resolve": "^2.0.0",
     "stylelint": "^13.6.1",
-    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-prettier": "^8.0.2",
     "tap-xunit": "^2.4.1"
   },
   "scripts": {
