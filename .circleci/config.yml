@@ -69,14 +69,14 @@ jobs:
           cloud-url: s3://pulumi.tmcloud.io
       - restore_cache:
           keys:
-            - v6-dependencies-{{ checksum "yarn.lock" }}
+            - v7-dependencies-{{ checksum "yarn.lock" }}
       - run: yarn install --pure-lockfile  --link-duplicates --no-progress --no-default-rc
       - save_cache:
           paths:
             - ~/.cache/yarn
             - ./.pnp
             - ./.pnp.js
-          key: v6-dependencies-{{ checksum "yarn.lock" }}
+          key: v7-dependencies-{{ checksum "yarn.lock" }}
       - run: yarn build
       - run: |
           mkdir results
@@ -100,7 +100,7 @@ jobs:
           cloud-url: s3://pulumi.tmcloud.io
       - restore_cache:
           keys:
-            - v6-dependencies-{{ checksum "yarn.lock" }}
+            - v7-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install deps
           command: yarn install --pure-lockfile --link-duplicates --production --no-progress --disable-pnp --no-default-rc
@@ -119,7 +119,7 @@ jobs:
           cloud-url: s3://pulumi.tmcloud.io
       - restore_cache:
           keys:
-            - v6-dependencies-{{ checksum "yarn.lock" }}
+            - v7-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install deps
           command: yarn install --pure-lockfile --link-duplicates --production --no-progress --disable-pnp --no-default-rc
@@ -139,7 +139,7 @@ jobs:
           at: ~/topmonks-webs
       - restore_cache:
           keys:
-            - v6-dependencies-{{ checksum "yarn.lock" }}
+            - v7-dependencies-{{ checksum "yarn.lock" }}
       - run: yarn install --pure-lockfile --link-duplicates --no-progress --no-default-rc
       - run:
           name: Install self-signed cert for localhost
