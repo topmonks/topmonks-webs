@@ -4,6 +4,11 @@ orbs:
   aws-s3: circleci/aws-s3@1.0.12
   aws-cli: circleci/aws-cli@0.1.19
 
+executors:
+  nodejs:
+    docker:
+      - image: cimg/node:14.5
+
 commands:
   read_deployment_envs:
     parameters:
@@ -56,8 +61,7 @@ commands:
 
 jobs:
   build:
-    docker:
-      - image: circleci/node:13-browsers
+    executor: nodejs
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -86,8 +90,7 @@ jobs:
           paths: [ public ]
 
   provision:
-    docker:
-      - image: circleci/node:13
+    executor: nodejs
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -106,8 +109,7 @@ jobs:
           skip-preview: true
 
   preview-provision:
-    docker:
-      - image: circleci/node:13
+    executor: nodejs
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -129,7 +131,7 @@ jobs:
       site_name:
         type: string
     docker:
-      - image: circleci/node:13-browsers
+      - image: circleci/node:14-browsers
     working_directory: ~/topmonks-webs
     steps:
       - checkout
