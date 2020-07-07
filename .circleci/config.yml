@@ -388,4 +388,3 @@ workflows:
           filters:
             branches:
               only: trunk
-      - merge_pr
