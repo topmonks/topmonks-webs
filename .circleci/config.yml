@@ -187,6 +187,18 @@ jobs:
           site_name: << parameters.site_name >>
           after_s3_sync: << parameters.after_s3_sync >>
 
+  merge_pr:
+    docker:
+      image: cimg/base:2020.01
+    working_directory: ~/topmonks-webs
+    steps:
+      - checkout
+      - run:
+          name: Install Github CLI
+          command: |
+            wget --quiet https://github.com/cli/cli/releases/download/v0.10.1/gh_0.10.1_linux_amd64.deb
+            sudo apt install ./gh_0.10.1_linux_amd64.deb
+
 workflows:
   build_and_deploy:
     jobs:
@@ -363,3 +375,4 @@ workflows:
           filters:
             branches:
               only: trunk
+      - merge_pr
