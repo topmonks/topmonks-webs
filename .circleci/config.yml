@@ -200,20 +200,11 @@ jobs:
             sudo apt install ./gh_0.10.1_linux_amd64.deb
       - run:
           name: Merge PR
-          command: gh pr merge $(CI_PULL_REQUEST) -d -m
+          command: gh pr merge $CI_PULL_REQUEST -d -m
 
 workflows:
   build_and_deploy:
     jobs:
-      - merge_pr:
-          context: org-github
-          requires:
-            - preview-provision
-            - test-www-topmonks-com
-            - test-www-hlidacshopu-cz
-          filters:
-            branches:
-              only: /dependabot\/.*/
       - build:
           context: org-global
       - preview-provision:
@@ -226,6 +217,16 @@ workflows:
           filters:
             branches:
               only: trunk
+      - merge_pr:
+          context: org-github
+          requires:
+            - preview-provision
+            - test-www-topmonks-com
+            - test-www-hlidacshopu-cz
+          filters:
+            branches:
+              ignore: trunk
+              only: /dependabot\/.*/
       - test_site:
           name: test-www-topmonks-com
           site_name: www.topmonks.com
