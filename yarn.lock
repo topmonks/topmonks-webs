@@ -6337,10 +6337,10 @@ lighthouse@6.0.0:
     yargs "3.32.0"
     yargs-parser "^18.1.3"
 
-lighthouse@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-6.1.0.tgz#1c238049821e62eddd34c7371ab9c3222e2dfdef"
-  integrity sha512-j/tPSbxSkQRSwyIAjYUNIdarieR1cw8qDYIASsmtIcegCnMrhn5FM7hggcOTFlenDCEIOfv7JlQYV6UVfE4wZg==
+lighthouse@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-6.1.1.tgz#a029fbe80e3413d7e201412086f07bdd414a7541"
+  integrity sha512-H/ulIcKGMCmgGlK8dDngo72ehBg8WBr2eGW47MN+SAneYoUQmQO41vGo8f7UG9l2oCyabBETEJO4R7yew3XF8g==
   dependencies:
     axe-core "3.5.5"
     chrome-launcher "^0.13.3"
