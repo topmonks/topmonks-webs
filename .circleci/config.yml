@@ -1,8 +1,11 @@
 version: 2.1
 orbs:
+  browser-tools: circleci/browser-tools@1.0.1
+  aws-s3: circleci/aws-s3@1.0.15
+  aws-cli: circleci/aws-cli@1.2.1
+  aws-cloudfront: topmonks/aws-cloudfront@1.0.0
+  github: topmonks/github@1.0.0
   pulumi: pulumi/pulumi@2.0.0
-  aws-s3: circleci/aws-s3@1.0.12
-  aws-cli: circleci/aws-cli@0.1.19
 
 executors:
   nodejs:
@@ -55,7 +58,7 @@ commands:
           from: public/<< parameters.site_name >>
           to: s3://<< parameters.site_name >>
       - steps: << parameters.after_s3_sync >>
-      - invalidate_cloudfront:
+      - aws-cloudfront/invalidate:
           distribution_id: << parameters.distribution_id >>
           paths: << parameters.paths >>
 
@@ -130,10 +133,11 @@ jobs:
     parameters:
       site_name:
         type: string
-    docker:
-      - image: circleci/node:14-browsers
+    executor: nodejs
     working_directory: ~/topmonks-webs
     steps:
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
@@ -192,14 +196,9 @@ jobs:
     working_directory: ~/topmonks-webs
     steps:
       - checkout
-      - run:
-          name: Install Github CLI
-          command: |
-            wget --quiet https://github.com/cli/cli/releases/download/v0.10.1/gh_0.10.1_linux_amd64.deb
-            sudo apt install ./gh_0.10.1_linux_amd64.deb
-      - run:
-          name: Merge PR
-          command: gh pr merge $CI_PULL_REQUEST -d -m
+      - github/install
+      - github/merge_pr:
+          merge: true
 
 workflows:
   build_and_deploy:
