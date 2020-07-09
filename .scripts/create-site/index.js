@@ -237,7 +237,7 @@ function addSiteToCI(name) {
   const testJob = {
     test_site: {
       name: `test-${siteName}`,
-      site_name: siteName,
+      site_name: name,
       context: "org-global",
       requires: ["build"]
     }
@@ -245,11 +245,11 @@ function addSiteToCI(name) {
   const deployJob = {
     deploy_site: {
       name: `deploy-${siteName}`,
-      site_name: siteName,
+      site_name: name,
       context: "org-global",
       requires: ["provision", `test-${siteName}`],
       filters: {
-        branches: { only: "master" }
+        branches: { only: "trunk" }
       }
     }
   };
