@@ -8,14 +8,19 @@
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="vizualizer">
+  <meta name="apple-mobile-web-app-title" content="visualizer">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
-  <title>vizualizer</title>
+  <title>visualizer</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    html, body {
+      backgroud-color: #000;
+    }
+  </style>
 </head>
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
@@ -28,7 +33,7 @@
       });
     }
   </script>
-  <script src="microphone.js" type="application/javascript"></script>
-  <script src="main.dart.js" type="application/javascript"></script>
+  <script src="assets/js/microphone.js"></script>
+  <script src="assets/js/main.dart.js"></script>
 </body>
 </html>

@@ -5,9 +5,9 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "index.html": "c6034cec42bfaee987d53d4d982abac1",
 "/": "c6034cec42bfaee987d53d4d982abac1",
-"main.dart.js": "692618b90414dfdb3bbaeccdb5003794",
+"assets/js/main.dart.js": "692618b90414dfdb3bbaeccdb5003794",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"microphone.js": "eefe5df5868c903c274234bb2660efd5",
+"assets/js/microphone.js": "eefe5df5868c903c274234bb2660efd5",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "c491ee8fd73804470e27f79a55575d7c",
@@ -22,7 +22,7 @@ const RESOURCES = {
 // start.
 const CORE = [
   "/",
-"main.dart.js",
+"assets/js/main.dart.js",
 "index.html",
 "assets/LICENSE",
 "assets/AssetManifest.json",
