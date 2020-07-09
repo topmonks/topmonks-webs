@@ -1,9 +1,9 @@
 version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.0.1
-  aws-s3: circleci/aws-s3@1.0.15
   aws-cli: circleci/aws-cli@1.2.1
   aws-cloudfront: topmonks/aws-cloudfront@1.0.0
+  aws-s3: circleci/aws-s3@1.0.15
   github: topmonks/github@1.0.1
   pulumi: pulumi/pulumi@2.0.0
 
@@ -25,18 +25,6 @@ commands:
           command: |
             CLOUDFRONT_ID=$(pulumi stack output sites --stack topmonks-webs | jq -rM  '.["<< parameters.site_name >>"] | .cloudFrontId | @text')
             echo "export AWS_CLOUDFRONT_DISTRIBUTION_ID=\"${CLOUDFRONT_ID}\"" >> $BASH_ENV
-  invalidate_cloudfront:
-    parameters:
-      distribution_id:
-        type: string
-      paths:
-        type: string
-    steps:
-      - run:
-          name: Invalidate Cloudfront distribution << parameters.distribution_id >>
-          command: |
-            aws configure set preview.cloudfront true
-            aws cloudfront create-invalidation --distribution-id=<< parameters.distribution_id >> --paths=<< parameters.paths >>
   deploy_website:
     parameters:
       site_name:
@@ -198,7 +186,7 @@ jobs:
       - checkout
       - github/install
       - github/merge_pr:
-          merge: true
+          rebase: true
 
 workflows:
   build_and_deploy:
@@ -223,7 +211,6 @@ workflows:
             - test-www-hlidacshopu-cz
           filters:
             branches:
-              ignore: trunk
               only: /dependabot\/.*/
       - test_site:
           name: test-www-topmonks-com
