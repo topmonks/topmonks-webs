@@ -1,3 +1,4 @@
+require("dotenv").config();
 const commander = require("commander");
 const chalk = require("chalk");
 const fs = require("fs");
@@ -37,8 +38,8 @@ const IS_VERBOSE = !!program.verbose;
 const generatedDirectories = [
   "config",
   "src",
-  "src/data",
   "src/html",
+  "src/html/data",
   "src/images",
   "src/javascripts",
   "src/static",
@@ -48,7 +49,7 @@ const generatedDirectories = [
 const generatedFiles = [
   "config/task-config.js",
   "config/path-config.json",
-  "src/data/global.json",
+  "src/html/data/global.json",
   "src/html/index.html",
   "src/javascripts/index.js",
   "src/stylesheets/main.scss"
@@ -199,7 +200,10 @@ async function generateLighthouseToken(name) {
   const config = path.resolve("./lighthouserc.json");
   const file = await fs.promises.readFile(config, "utf8");
   const { ci } = JSON.parse(file);
-  const api = new ApiClient({ rootURL: ci.upload.serverBaseUrl });
+  const buffer = Buffer.from(process.env["LHCI_BASIC_AUTH"], "base64");
+  const [username, password] = buffer.toString("ascii").split(":");
+  const basicAuth = { username, password };
+  const api = new ApiClient({ rootURL: ci.upload.serverBaseUrl, basicAuth });
   const project = await api.createProject({
     name,
     externalUrl: "https://github.com/topmonks/topmonks-webs",

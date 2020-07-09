@@ -109,6 +109,11 @@ yarn serve -d public/www.topmonks.com
 
 ## Create new site
 
+**Before first creation** of site, you will need to setup LHCI authentication, 
+because create script will generate LHCI token for you. Open 1Password 
+and search for `Lighthouse CI sever DEV`. Copy `LHCI_BASIC_AUTH=...` token
+and paste it to `.env` file, e.g. `pbpaste > .env`.
+
 If you want to create a new site, e.g. `new-site.topmonks.com`, simply run
 
 ```
