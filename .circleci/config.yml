@@ -386,3 +386,13 @@ workflows:
           filters:
             branches:
               only: trunk
+      - deploy_site:
+          name: deploy-room-monks-cloud
+          site_name: room-monks-cloud
+          context: org-global
+          requires:
+            - provision
+            - build
+          filters:
+            branches:
+              only: trunk
