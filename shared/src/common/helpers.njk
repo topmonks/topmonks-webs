@@ -10,6 +10,9 @@
 {% macro googleMap(alt, lat, long, class="responsive", width=320, height=270, markerColor="0xFE664B", poiVisibility="off") %}
   <img alt="{{ alt }}"
        src="https://maps.googleapis.com/maps/api/staticmap?size={{ width }}x{{ height }}&amp;style=feature:poi|visibility:{{ poiVisibility }}&amp;markers=color:{{ markerColor }}|{{ lat }},{{ long }}&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc"
+       srcset="https://maps.googleapis.com/maps/api/staticmap?size={{ width }}x{{ height }}&amp;style=feature:poi|visibility:{{ poiVisibility }}&amp;markers=color:{{ markerColor }}|{{ lat }},{{ long }}&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc 1x,
+               https://maps.googleapis.com/maps/api/staticmap?size={{ width }}x{{ height }}&amp;scale=1.5&amp;style=feature:poi|visibility:{{ poiVisibility }}&amp;markers=color:{{ markerColor }}|{{ lat }},{{ long }}&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc 1.5x,
+               https://maps.googleapis.com/maps/api/staticmap?size={{ width }}x{{ height }}&amp;scale=2&amp;style=feature:poi|visibility:{{ poiVisibility }}&amp;markers=color:{{ markerColor }}|{{ lat }},{{ long }}&amp;key=AIzaSyCgsyl63h69YaF4_jdOcbGi1i4LefEFxRc 2x"
        width="{{ width }}"
        height="{{ height }}"
        class="{{ class }}">
