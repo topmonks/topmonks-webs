@@ -1,6 +1,6 @@
 {% extends 'layouts/topmonks.njk' %}
 {% from 'macros/helpers.njk' import avatar %}
-{% from 'common/helpers.njk' import map %}
+{% from 'common/helpers.njk' import googleMap %}
 {% set page = 'topmonks-contact' %}
 {% block title %}TopMonks Contacts{% endblock %}
 
@@ -235,7 +235,7 @@
              itemtype="https://schema.org/Organization"
              id="prague">
           <a href="https://goo.gl/maps/SBK1BRsmgu22" class="map" title="Show Prague Office on map">
-            {{ map(alt="[mapa] Praha Spořilov", src="topmonks.com/Contact/map_prague.png") }}
+            {{ googleMap(alt="[mapa] Praha Spořilov", lat=50.045386, long=14.491246) }}
           </a>
           <div class="content">
             <h3 itemprop="name">Prague</h3>
@@ -259,22 +259,22 @@
              itemtype="https://schema.org/Organization"
              id="ostrava">
           <a href="https://goo.gl/maps/jF7BXs5QX7ek82Wc9" class="map" title="Show Ostrava Office on map">
-            {{ map(alt="[mapa] Ostrava", src="v1544690834/topmonks.com/Contact/map_ostrava.png") }}
+            {{ googleMap(alt="[mapa] Ostrava", lat=49.8458747, long=18.2806027) }}
           </a>
           <div class="content">
             <h3 itemprop="name">Ostrava</h3>
             <span itemprop="legalName"><b>TopMonks s.r.o.</b></span>
             <div itemprop="location" itemscope itemtype="https://schema.org/Place">
               <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                <span itemprop="streetAddress"><b>Nádražní 108</b></span><br>
+                <span itemprop="streetAddress"><b>Nádražní 921/108</b></span><br>
                 <span itemprop="postalCode">702 00</span>
                 <span itemprop="addressLocality">Ostrava</span><br>
                 <span itemprop="addressCountry">Czech Republic</span>
               </div>
               <a href="https://goo.gl/maps/jF7BXs5QX7ek82Wc9" class="button" data-marker="ostrava">show on map</a>
               <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-                <meta itemprop="latitude" content="49.8458349">
-                <meta itemprop="longitude" content="18.2785075">
+                <meta itemprop="latitude" content="49.8458747">
+                <meta itemprop="longitude" content="18.2806027">
               </div>
             </div>
           </div>
@@ -283,23 +283,23 @@
              itemtype="https://schema.org/Organization"
              id="san-francisco">
           <a href="https://goo.gl/maps/vXg6iCGmYsGpYyd48" class="map" title="Show San Francisco Office on map">
-            {{ map(alt="[mapa] San Francisco", src="v1544690861/topmonks.com/Contact/map_sanfrancisco.png") }}
+            {{ googleMap(alt="[mapa] San Francisco", lat=37.3378495, long=-121.8924583) }}
           </a>
           <div class="content">
             <h3 itemprop="name">San Francisco</h3>
             <span itemprop="legalName"><b>TopMonks INC</b></span>
             <div itemprop="location" itemscope itemtype="https://schema.org/Place">
               <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                <span itemprop="streetAddress"><b>105 N 1st St</b></span><br>
+                <span itemprop="streetAddress"><b>105 N 1st Street</b></span><br>
                 <span itemprop="addressLocality">San Jose</span>,
                 <span itemprop="addressRegion">CA</span>
                 <span itemprop="postalCode">95113</span><br>
-                <span itemprop="addressCountry">United States</span>
+                <span itemprop="addressCountry">United States of America</span>
               </div>
               <a href="https://goo.gl/maps/vXg6iCGmYsGpYyd48" class="button" data-marker="san-francisco">show on map</a>
               <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-                <meta itemprop="latitude" content="37.3459995">
-                <meta itemprop="longitude" content="-121.9070292">
+                <meta itemprop="latitude" content="37.3378495">
+                <meta itemprop="longitude" content="-121.8924583">
               </div>
             </div>
           </div>
@@ -349,4 +349,65 @@
     </section>
   </div>
 
+{% endblock %}
+
+{% block scripts %}
+<script type="module">
+  // https://www.ietf.org/rfc/rfc5870.txt
+  // https://developer.android.com/guide/components/intents-common.html#Maps
+  const toGeoUri = ({ geo, name, placeName }) => `geo:${geo.lat},${geo.lng}?q=${geo.lat},${geo.lng}(${name} ${placeName})&z=6`;
+  const isGeoUriCapable = useragent => /Android/i.exec(useragent)
+    || /Sailfish/i.exec(useragent)
+    || /Midori/i.exec(useragent)
+    || false;
+
+  // https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj635237.aspx
+  const toBingMapsUri = ({ geo, name, placeName }) => `bingmaps:?collection=point.${geo.lat}_${geo.lng}_${name} ${placeName}`;
+  const isBingMapsUriCapable = ua => /Windows\sNT\s10.0/i.exec(ua)
+    || /Windows\sNT\s6.[2-9]/i.exec(ua)
+    || /Windows\sPhone\s8/i.exec(ua)
+    || /Windows\sPhone\s1/i.exec(ua)
+    || false;
+
+  // https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html
+  const toAppleMapsUri = ({ address, geo }) => `http://maps.apple.com/?sll=${geo.lat},${geo.lng}&z=6&q=${address.street}, ${address.locality}, ${address.country}`;
+  const isAppleMapsUriCapable = ua => /iOS/i.exec(ua) || /iPad/i.exec(ua) || false;
+
+  const getLocationUri = (location, ua) => {
+    if (isBingMapsUriCapable(ua))
+      return toBingMapsUri(location);
+    if (isGeoUriCapable(ua))
+      return toGeoUri(location);
+    if (isAppleMapsUriCapable(ua))
+      return toAppleMapsUri(location);
+    return null;
+  };
+
+  function parseLocations() {
+    const locations = Array.from(document.querySelectorAll('.address[itemprop=subOrganization]'));
+    return new Map(locations.map((el) => {
+      return [el.querySelector('.button').dataset['marker'], {
+        name: el.querySelector('[itemprop=legalName]').innerText,
+        placeName: el.querySelector('[itemprop=name]').innerText,
+        address: {
+          street: el.querySelector('[itemprop=streetAddress]').innerText,
+          locality: el.querySelector('[itemprop=addressLocality]').innerText,
+          country: el.querySelector('[itemprop=addressCountry]').innerText
+        },
+        geo: {
+          lat: el.querySelector('[itemprop=latitude]').getAttribute("content"),
+          lng: el.querySelector('[itemprop=longitude]').getAttribute("content")
+        }
+      }];
+    }));
+  }
+
+  const locations = parseLocations();
+  const userAgent = navigator.userAgent;
+  for (let [id, loc] of locations) {
+    const btn = document.querySelector(`.button[data-marker=${id}]`);
+    const locationUri = getLocationUri(loc, userAgent);
+    if (locationUri) btn.setAttribute("href", encodeURI(locationUri));
+  }
+</script>
 {% endblock %}

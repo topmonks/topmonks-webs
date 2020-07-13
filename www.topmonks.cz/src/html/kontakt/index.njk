@@ -1,5 +1,5 @@
 {% extends 'layouts/topmonks.njk' %}
-{% from 'common/helpers.njk' import map %}
+{% from 'common/helpers.njk' import googleMap %}
 {% set page = 'topmonks-kontakt' %}
 {% block title %}Kontakt - TopMonks{% endblock %}
 
@@ -200,7 +200,7 @@
            itemtype="https://schema.org/Organization"
            id="prague">
         <a href="https://goo.gl/maps/SBK1BRsmgu22" class="map" title="Zobrazit Pražskou kancelář na mapě">
-          {{ map(alt="[mapa] Praha Spořilov", src="topmonks.com/Contact/map_prague.png") }}
+          {{ googleMap(alt="[mapa] Praha Spořilov", lat=50.045386, long=14.491246) }}
         </a>
         <div class="content">
           <h3 itemprop="name">Praha</h3>
@@ -224,7 +224,7 @@
            itemtype="https://schema.org/Organization"
            id="ostrava">
         <a href="https://goo.gl/maps/jF7BXs5QX7ek82Wc9" class="map" title="Zobrazit Ostravskou kancelář na mapě">
-          {{ map(alt="[mapa] Praha Spořilov", src="topmonks.com/Contact/map_ostrava.png") }}
+          {{ googleMap(alt="[mapa] Ostrava", lat=49.8458747, long=18.2806027) }}
         </a>
         <div class="content">
           <h3 itemprop="name">Ostrava</h3>
@@ -238,8 +238,8 @@
             </div>
             <a href="https://goo.gl/maps/jF7BXs5QX7ek82Wc9" class="button" data-marker="ostrava">ukázat na mapě</a>
             <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-              <meta itemprop="latitude" content="49.8458349">
-              <meta itemprop="longitude" content="18.2785075">
+              <meta itemprop="latitude" content="49.8458747">
+              <meta itemprop="longitude" content="18.2806027">
             </div>
           </div>
         </div>
@@ -248,7 +248,7 @@
            itemtype="https://schema.org/Organization"
            id="san-francisco">
         <a href="https://goo.gl/maps/vXg6iCGmYsGpYyd48" class="map" title="Zobrazit amaerickou kancelář na mapě">
-          {{ map(alt="[mapa] San Francisco", src="v1544690861/topmonks.com/Contact/map_sanfrancisco.png") }}
+          {{ googleMap(alt="[mapa] San Francisco", lat=37.3378495, long=-121.8924583) }}
         </a>
         <div class="content">
           <h3 itemprop="name">San Francisco</h3>
@@ -263,8 +263,8 @@
             </div>
             <a href="https://goo.gl/maps/vXg6iCGmYsGpYyd48" class="button" data-marker="san-francisco">show on map</a>
             <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-              <meta itemprop="latitude" content="37.3459995">
-              <meta itemprop="longitude" content="-121.9070292">
+              <meta itemprop="latitude" content="37.3378495">
+              <meta itemprop="longitude" content="-121.8924583">
             </div>
           </div>
         </div>
