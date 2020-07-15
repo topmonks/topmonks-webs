@@ -1,3 +1,5 @@
+{% from "common/helpers.njk" import googleMap %}
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -175,9 +177,9 @@
         class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Jak sa k&nbsp;nám dostanete?</h2>
         <p>Naše dílna je schovaná uprostřed sídliště na pražském Spořilově v prostorách firmy TopMonks. Dostaneš se k nám autobusem na zastávku Hlavní, Choceradská nebo Nad pahorkem. Pro aktivnější jedince je i možnost dorazit pěšky ze zastávky metra Roztyly. Uber k nám na rozdíl od navigace od Google maps trefí vždycky. Dorazíš-li ze směru od parkoviště, je třeba ještě obejít budovu. </p>
-        <iframe title="Monkslab location via Google Maps"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.188242491491!2d14.489150315245652!3d50.045304879421586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b93b46cc7ec9b%3A0x39c7c65b1184183b!2sTopMonks!5e0!3m2!1scs!2scz!4v1566838990273!5m2!1scs!2scz"
-          width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="yes"></iframe>
+        <a href="https://goo.gl/maps/SBK1BRsmgu22">
+          {{ googleMap ("Pozice Monkslab na Mapě", lat = 50.045386, long = 14.491246, width = 640, height = 400, class ="") }}
+        </a>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
         <h3>Fakturační údaje</h3><span
