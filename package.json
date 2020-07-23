@@ -11,7 +11,7 @@
     "@material/layout-grid": "^4.0.0",
     "@material/top-app-bar": "^4.0.0",
     "@pulumi/aws": "^2.13.1",
-    "@pulumi/pulumi": "^2.6.1",
+    "@pulumi/pulumi": "^2.7.1",
     "@types/node": "^14.0.24",
     "lit-html": "^1.2.1",
     "lodash": "4.17.19",
