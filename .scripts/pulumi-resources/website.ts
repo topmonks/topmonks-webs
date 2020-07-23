@@ -170,7 +170,7 @@ function createCloudFront(
       viewerCertificate: {
         acmCertificateArn: acmCertificate.apply(x => x.arn),
         sslSupportMethod: "sni-only",
-        minimumProtocolVersion: "TLSv1.2_2018"
+        minimumProtocolVersion: "TLSv1.2_2019"
       },
       isIpv6Enabled: true
     },
