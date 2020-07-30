@@ -6398,10 +6398,10 @@ load-module@^3.0.0:
   dependencies:
     array-back "^4.0.1"
 
-local-web-server@^4.0.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/local-web-server/-/local-web-server-4.2.0.tgz#e00e5f2a31382a6ea3d4f57eb8c412026e351012"
-  integrity sha512-dcIIMXiNWoC4yxKqDBUKudhxs1gDAf5lf41eHpL+T14/0rWgw/CUipf85V+F4G48qtRGd3BrmnX2RnTxw+pzIw==
+local-web-server@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/local-web-server/-/local-web-server-4.2.1.tgz#61e6d3357fee37cb90e34302578e7159f771db3d"
+  integrity sha512-v71LZool2w7uYA+tDP5HhfjzUxz5SFfcrPPB/zC98yFFawt7A6fcmAr2MR4Q9AHk/A8oyd/wrhEJBJLndwHxNQ==
   dependencies:
     lws "^3.1.0"
     lws-basic-auth "^2.0.0"
@@ -6416,7 +6416,7 @@ local-web-server@^4.0.0:
     lws-mime "^2.0.0"
     lws-range "^3.0.0"
     lws-request-monitor "^2.0.0"
-    lws-rewrite "^3.1.0"
+    lws-rewrite "^3.1.1"
     lws-spa "^3.0.0"
     lws-static "^2.0.0"
     node-version-matches "^2.0.1"
@@ -6753,10 +6753,10 @@ lws-request-monitor@^2.0.0:
   dependencies:
     byte-size "^6.2.0"
 
-lws-rewrite@^3.0.1, lws-rewrite@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/lws-rewrite/-/lws-rewrite-3.1.0.tgz#149cf9de4543d575e206929471997d6af84f6be0"
-  integrity sha512-z4zpzX6jkzxZaRLjyoXjY8SMc14QYr4d+rMctZwN7x5iRVMkEHja2IsWRb+4o14MdrQ+T+/02TSQU38TG7T91A==
+lws-rewrite@^3.0.1, lws-rewrite@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/lws-rewrite/-/lws-rewrite-3.1.1.tgz#a65ff3ea8ff6b4c0865129132bdee4346e68b566"
+  integrity sha512-cOeaPXIlLUVLxS6BZ52QzZVzI8JjCzlWD4RWizB5Hd+0YGO0SPa3Vgk7CIghtAOsSdjtXg/wSOap2H1h+tw8BQ==
   dependencies:
     array-back "^4.0.1"
     http-proxy-agent "^4.0.1"
