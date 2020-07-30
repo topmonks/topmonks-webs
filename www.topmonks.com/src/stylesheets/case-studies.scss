@@ -76,37 +76,55 @@
 .tm-case-studies__logo--gorealeurope .tm-bgnd-wrapper {
   background-image: cloudinaryUrl(
     "topmonks.com/bgnd_cs_gorealeurope.png",
-    $width: 322
+    (
+      "width": 322
+    )
   );
 }
 
 .tm-case-studies__logo--pricefx .tm-bgnd-wrapper {
   background-image: cloudinaryUrl(
     "topmonks.com/bgnd_cs_pricefx.jpg",
-    $width: 322
+    (
+      "width": 322
+    )
   );
 }
 
 .tm-case-studies__logo--ceska-sporitelna .tm-bgnd-wrapper {
-  background-image: cloudinaryUrl("topmonks.com/bgnd_cs_cs.jpg", $width: 322);
+  background-image: cloudinaryUrl(
+    "topmonks.com/bgnd_cs_cs.jpg",
+    (
+      "width": 322
+    )
+  );
 }
 
 .tm-case-studies__logo--adler .tm-bgnd-wrapper {
   background-image: cloudinaryUrl(
     "topmonks.com/bgnd_cs_adler.jpg",
-    $width: 322
+    (
+      "width": 322
+    )
   );
 }
 
 .tm-case-studies__logo--profi-option .tm-bgnd-wrapper {
   background-image: cloudinaryUrl(
     "topmonks.com/bgnd_profi-option.png",
-    $width: 322
+    (
+      "width": 322
+    )
   );
 }
 
 .tm-case-studies__logo--xixoio .tm-bgnd-wrapper {
-  background-image: cloudinaryUrl("topmonks.com/bgnd_xixoio.png", $width: 322);
+  background-image: cloudinaryUrl(
+    "topmonks.com/bgnd_xixoio.png",
+    (
+      "width": 322
+    )
+  );
 }
 
 @media screen and (min-device-pixel-ratio: 2),
@@ -115,43 +133,55 @@
   .tm-case-studies__logo--gorealeurope .tm-bgnd-wrapper {
     background-image: cloudinaryUrl(
       "topmonks.com/bgnd_cs_gorealeurope.png",
-      $width: 322,
-      $dpr: 2
+      (
+        "width": 322,
+        "dpr": 2
+      )
     );
   }
   .tm-case-studies__logo--pricefx .tm-bgnd-wrapper {
     background-image: cloudinaryUrl(
       "topmonks.com/bgnd_cs_pricefx.jpg",
-      $width: 322,
-      $dpr: 2
+      (
+        "width": 322,
+        "dpr": 2
+      )
     );
   }
   .tm-case-studies__logo--ceska-sporitelna .tm-bgnd-wrapper {
     background-image: cloudinaryUrl(
       "topmonks.com/bgnd_cs_cs.jpg",
-      $width: 322,
-      $dpr: 2
+      (
+        "width": 322,
+        "dpr": 2
+      )
     );
   }
   .tm-case-studies__logo--adler .tm-bgnd-wrapper {
     background-image: cloudinaryUrl(
       "topmonks.com/bgnd_cs_adler.jpg",
-      $width: 322,
-      $dpr: 2
+      (
+        "width": 322,
+        "dpr": 2
+      )
     );
   }
   .tm-case-studies__logo--profi-option .tm-bgnd-wrapper {
     background-image: cloudinaryUrl(
       "topmonks.com/bgnd_profi-option.png",
-      $width: 322,
-      $dpr: 2
+      (
+        "width": 322,
+        "dpr": 2
+      )
     );
   }
   .tm-case-studies__logo--xixoio .tm-bgnd-wrapper {
     background-image: cloudinaryUrl(
       "topmonks.com/bgnd_xixoio.png",
-      $width: 322,
-      $dpr: 2
+      (
+        "width": 322,
+        "dpr": 2
+      )
     );
   }
 }

@@ -18,8 +18,13 @@
 
 body {
   background: #ecf6ff
-    cloudinaryUrl("startup%20studio/html_bg.jpg", $width: 1920) top center
-    no-repeat;
+    cloudinaryUrl(
+      "startup%20studio/html_bg.jpg",
+      (
+        "width": 1920
+      )
+    )
+    top center no-repeat;
   background-size: contain;
 }
 
@@ -497,7 +502,7 @@ blockquote {
 #page-topmonks-index {
   @media screen and (max-width: 479px) {
     background: #fff
-      cloudinaryUrl("topmonks.com/bgnd_header_mobile.png", $width: 352)
+      cloudinaryUrl("topmonks.com/bgnd_header_mobile.png", ('width': 352))
       no-repeat right calc(50% - 145px) top -1px;
     background-size: 352px auto;
     overflow-x: hidden;
@@ -510,11 +515,11 @@ blockquote {
     screen and (max-width: 479px) and (min-resolution: 2dppx) {
     background-image: cloudinaryUrl(
       "topmonks.com/bgnd_header_mobile.png",
-      $width: 352
+      ('width': 352)
     );
   }
   @media screen and (min-width: 480px) {
-    background: cloudinaryUrl("topmonks.com/bgnd_header.png", $width: 1017)
+    background: cloudinaryUrl("topmonks.com/bgnd_header.png", ('width': 1017))
       no-repeat right calc(50% - 390px) top -1px;
     background-size: 1017px auto;
     overflow-x: hidden;
@@ -524,7 +529,7 @@ blockquote {
     screen and (min-width: 480px) and (min-resolution: 2dppx) {
     background-image: cloudinaryUrl(
       "topmonks.com/bgnd_header.png",
-      $width: 1017
+      ('width': 1017)
     );
   }
   @media screen and (min-width: 480px) and (max-width: 839px) {
@@ -722,7 +727,7 @@ blockquote {
 
 @media (max-width: 480px) {
   body {
-    background: cloudinaryUrl("startup%20studio/mobile_bg.jpg", $width: 480) top
+    background: cloudinaryUrl("startup%20studio/mobile_bg.jpg", ('width': 480)) top
       center no-repeat;
     background-size: 100%;
   }

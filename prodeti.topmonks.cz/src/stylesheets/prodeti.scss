@@ -92,7 +92,7 @@ ul {
 .main_info {
   padding-top: 80px;
   padding-bottom: 120%;
-  background: cloudinaryUrl("prodeti.topmonks.cz/boy.png", $width: 510)
+  background: cloudinaryUrl("prodeti.topmonks.cz/boy.png", ('width': 510))
     no-repeat center bottom;
   background-size: 90% auto;
   @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -101,7 +101,7 @@ ul {
     screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: cloudinaryUrl("prodeti.topmonks.cz/boy.png", $width: 510, $dpr: 2);
+    background-image: cloudinaryUrl("prodeti.topmonks.cz/boy.png", ('width': 510, 'dpr': 2));
   }
 }
 
@@ -278,9 +278,9 @@ ul {
 .price {
   text-align: center;
   margin: 0 auto;
-  background: cloudinaryUrl("prodeti.topmonks.cz/price_bg.png", $width: 1440) top repeat-y;
+  background: cloudinaryUrl("prodeti.topmonks.cz/price_bg.png", ('width': 1440)) top repeat-y;
   @media screen and (device-pixel-ratio: 2) {
-    background-image: cloudinaryUrl("prodeti.topmonks.cz/price_bg.png", $width: 1440, $dpr: 2);
+    background-image: cloudinaryUrl("prodeti.topmonks.cz/price_bg.png", ('width': 1440, 'dpr': 2));
   }
   background-size: 100%;
   h3 {

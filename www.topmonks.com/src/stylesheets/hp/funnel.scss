@@ -12,7 +12,12 @@
     }
   }
   @media screen and (min-width: 840px) {
-    background: cloudinaryUrl("topmonks.com/bgnd_funnel.png", $width: 903)
+    background: cloudinaryUrl(
+        "topmonks.com/bgnd_funnel.png",
+        (
+          "width": 903
+        )
+      )
       no-repeat left calc(50% - 500px) top 230px;
     background-size: 903px auto;
   }
@@ -21,8 +26,10 @@
     screen and (min-width: 840px) and (min-resolution: 2dppx) {
     background-image: cloudinaryUrl(
       "topmonks.com/bgnd_funnel.png",
-      $width: 903,
-      $dpr: 2
+      (
+        "width": 903,
+        "dpr": 2
+      )
     );
   }
 

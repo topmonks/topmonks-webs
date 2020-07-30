@@ -114,7 +114,8 @@
     "bluebird": "npm:bluebird@3.7.2",
     "fsevents": "npm:dummypkg-a@1.0.0",
     "lodash": "npm:lodash@4.17.15",
-    "html-minifier": "npm:html-minifier-terser@5.0.3"
+    "html-minifier": "npm:html-minifier-terser@5.0.3",
+    "source-map-resolve": "npm:source-map-resolve@0.6.0"
   },
   "installConfig": {
     "pnp": true

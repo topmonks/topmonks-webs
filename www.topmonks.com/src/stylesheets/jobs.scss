@@ -1,40 +1,58 @@
 main {
   @media (min-width: 1301px) and (max-width: 1800px) {
-    background: cloudinaryUrl("topmonks.com/jobs/img_side.png", $width: 440) 0
-      240px no-repeat;
+    background: cloudinaryUrl(
+        "topmonks.com/jobs/img_side.png",
+        (
+          "width": 440
+        )
+      )
+      0 240px no-repeat;
     background-size: 440px 571px;
   }
   @media (min-width: 1301px) and (max-width: 1800px) and (min-resolution: 1.5dppx) {
     background-image: cloudinaryUrl(
       "topmonks.com/jobs/img_side.png",
-      $width: 440,
-      $dpr: 1.5
+      (
+        "width": 440,
+        "dpr": 1.5
+      )
     );
   }
   @media (min-width: 1301px) and (max-width: 1800px) and (min-resolution: 2dppx) {
     background-image: cloudinaryUrl(
       "topmonks.com/jobs/img_side.png",
-      $width: 440,
-      $dpr: 2
+      (
+        "width": 440,
+        "dpr": 2
+      )
     );
   }
   @media (min-width: 1024px) and (max-width: 1300px) {
-    background: cloudinaryUrl("topmonks.com/jobs/img_side.png", $width: 336) 0
-      280px no-repeat;
+    background: cloudinaryUrl(
+        "topmonks.com/jobs/img_side.png",
+        (
+          "width": 336
+        )
+      )
+      0 280px no-repeat;
     background-size: 336px 467px;
   }
   @media (min-width: 1024px) and (max-width: 1300px) and (min-resolution: 1.5dppx) {
     background-image: cloudinaryUrl(
       "topmonks.com/jobs/img_side.png",
-      $width: 336,
-      $dpr: 1.5
+      (
+        "width": 336,
+        "dpr": 1.5
+      )
     );
   }
   @media (min-width: 1024px) and (max-width: 1300px) and (min-resolution: 2dppx) {
     background-image: cloudinaryUrl(
       "topmonks.com/jobs/img_side.png",
-      $width: 336,
-      $dpr: 2
+      (
+        "width": 336,
+        "dpr": 2
+      )
     );
   }
   background-position-x: 0;
