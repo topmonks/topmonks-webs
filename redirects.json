@@ -10,5 +10,8 @@
   },
   "prodeti.topmonks.com": {
     "target": "https://prodeti.topmonks.cz"
+  },
+  "ingridapp.io": {
+    "target": "https://www.ingridapp.io"
   }
 }

@@ -1,0 +1,92 @@
+section.contact {
+  position: relative;
+  background-color: $gray-lighter;
+  padding-bottom: 4em;
+
+  h2 {
+    font-size: 50px;
+  }
+
+  .form-control {
+    font-size: 0.9em;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+
+    h2 {
+      font-size: 50px;
+      max-width: 450px;
+      margin-top: 0;
+      margin-bottom: 25px;
+      color: white;
+    }
+
+    @media (min-width: 768px) {
+      h2 {
+        font-size: 80px;
+      }
+    }
+  }
+
+  .c-column2 {
+    background-color: $theme-secondary;
+    height: 80px;
+  }
+
+  .c-column1 {
+    background-color: #EEEEEE;
+    height: 80px;
+  }
+
+  .form-label {
+    font-size: 1rem;
+  }
+
+  .form-o {
+    color: $theme-secondary;
+  }
+
+  .form-button {
+    background-color: $theme-secondary;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    padding: 14px;
+  }
+
+  .contact-form {
+    margin: 32px;
+  }
+
+  .contact-side {
+    font-size: 14px;
+    border-left: solid 1px #EEEEEE;
+    padding-left: 50px;
+
+    a {
+      font-size: 24px;
+    }
+
+    @media (max-width: 768px) {
+      padding-top: 50px;
+    }
+  }
+
+
+}
+
+.c-border {
+  border-bottom: 1px solid #999999;
+  padding-bottom: 16px;
+}
+
+.c-contact-block {
+  background-color: white;
+  border-radius: 10px;
+
+  p {
+    font-size: 0.9em;
+  }
+}

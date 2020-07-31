@@ -1,0 +1,132 @@
+section.pricing {
+    position: relative;
+    background-position: center;
+    @include background-cover;
+    .cta-content {
+        position: relative;
+        z-index: 1;
+        h2 {
+            font-size: 50px;
+            max-width: 450px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: white;
+        }
+        @media (min-width: 768px) {
+            h2 {
+                font-size: 80px;
+            }
+        }
+    }
+
+    .t-preheader td {
+        border: none;
+        color: $theme-primary;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        width: 25%;
+    }
+
+    .t-header td {
+        background-color: #EFEFEF;
+        border: solid 1px white;
+        color: $theme-primary;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        height: 44px;
+        font-size: 20px;
+    }
+
+    .t-header .td-invert {
+        background-color: $theme-primary;
+        color: white;
+    }
+
+    .t-prices .td-invert {
+        background-color: $theme-primary;
+        color: white;
+
+        .p-number {
+            color: white;
+        }
+
+        p {
+            color: white;
+        }
+    }
+
+    .t-c td {
+        border: solid 1px #eeeeee;
+        text-align: center;
+        font-size: 14px;
+        height: 44px;
+
+        p {
+            font-size: 14px;
+            color: #333333;
+            margin: 0px;
+        }
+
+        p.p-desc {
+            color: #999999;
+        }
+    }
+
+    .t-prices td {
+        background-color: #EFEFEF;
+        text-align: center;
+        font-size: 14px;
+        height: 44px;
+        border: solid 1px white;
+    }
+
+    .p-number {
+        font-size: 48px;
+        color: $theme-primary;
+    }
+
+    .p-number p {
+        font-size: 12px;
+        color: #333333;
+    }
+
+    .p-button {
+        height: 66px;
+        width: 80%;
+        background-color: white;
+        text-align: center;
+        display: inline-block;
+        color: $theme-primary;
+        border-radius: 4px;
+        padding-top: 10px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .p-button-text {
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    .p-button:hover {
+        background-color: $theme-secondary;
+        color: white;
+    }
+}
+
+    @media (max-width: 767px) {
+
+        .desktop-table {
+            display: none;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        .mobile-table {
+            display: none;
+        }
+    }

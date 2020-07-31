@@ -1,0 +1,85 @@
+// Styling for the masthead
+header.masthead {
+  position: relative;
+
+  h4 {
+    color: #c9bad8;
+  }
+
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+
+  color: white;
+  background-color: #6b4590;
+
+  .header-content {
+    max-width: 500px;
+    margin-bottom: 100px;
+
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .device-container {
+    margin-right: auto;
+    margin-left: auto;
+
+    .screen img {
+      border-radius: 3px;
+    }
+
+    img {
+      width: 600px;
+    }
+
+    @media (max-width: 767px) {
+      img {
+        width: 450px;
+      }
+    }
+    @media (max-width: 479px) {
+      img {
+        width: 300px;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    height: 775px;
+    min-height: 775px;
+    padding-top: 0;
+    padding-bottom: 0;
+    .header-content {
+      margin-bottom: 0;
+
+      text-align: left;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+.logos {
+  background-color: #fff;
+  margin: 2em 0;
+
+  img {
+    filter: opacity(0.5);
+  }
+
+  .logos--style {
+    text-align: center;
+    align-self: center;
+    margin-bottom: 16px;
+  }
+}
+
+.clients {
+  padding: 0px;
+}

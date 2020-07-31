@@ -1,0 +1,23 @@
+.promo {
+  padding: 4em 0;
+
+  .row {
+    align-items: center;
+  }
+
+  h2 {
+    margin: 1em 0;
+  }
+
+  img {
+    @media screen and (min-width: 1024px) {
+      width: 640px;
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      width: 560px;
+    }
+    @media (max-width: 767px) {
+      width: 200px;
+    }
+  }
+}

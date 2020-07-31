@@ -383,3 +383,19 @@ workflows:
           filters:
             branches:
               only: trunk
+      - test_site:
+          name: test-www-ingridapp-io
+          site_name: www.ingridapp.io
+          context: org-global
+          requires:
+            - build
+      - deploy_site:
+          name: deploy-www-ingridapp-io
+          site_name: www.ingridapp.io
+          context: org-global
+          requires:
+            - provision
+            - test-www-ingridapp-io
+          filters:
+            branches:
+              only: trunk

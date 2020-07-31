@@ -32,5 +32,8 @@
   "session-monk.topmonks.com": {
     "lh-token": "a2c6aba5-ab1f-4483-bd81-727b871d1b79"
   },
-  "room.monks.cloud": {}
+  "room.monks.cloud": {},
+  "www.ingridapp.io": {
+    "lh-token": "c1c2996f-87f1-434c-b225-2e50f0134b01"
+  }
 }

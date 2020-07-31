@@ -1,0 +1,54 @@
+.data {
+  background-color: #fff;
+  padding: 4em 0 8em;
+
+  .data--line {
+    height: 4px;
+    background-color: $theme-primary;
+    margin-left: 45%;
+    margin-right: 45%;
+  }
+
+  .data--subtitle {
+    color: #999;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .data--statistics {
+    color: $theme-primary;
+    width: 80%;
+    margin: 0 auto;
+    padding: 44px 14px;
+    border-radius: 10px;
+
+    p {
+      color: #333;
+    }
+
+    .data--statistics-num {
+      align-self: center;
+    }
+
+    @media (max-width: 1023px) {
+      padding: 34px 14px;
+      p {
+        font-size: 14px;
+      }
+      span {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      padding: 44px 24px;
+      p {
+        font-size: 16px;
+      }
+      span {
+        font-size: 44px;
+        font-weight: 800;
+      }
+    }
+  }
+}

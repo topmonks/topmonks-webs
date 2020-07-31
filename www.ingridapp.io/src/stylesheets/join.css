@@ -1,0 +1,77 @@
+body {
+  background-color: #5f3b82;
+  color: #ffffff;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  padding: 2em;
+}
+
+@media screen and (min-width: 480px) {
+  .content-wrapper {
+    max-width: 1024px;
+    padding: 8em 4em 0;
+  }
+}
+
+.instructions {
+  font-size: 1.4em;
+  padding-top: 2em;
+}
+
+.i-item {
+  margin-left: 1em;
+}
+
+.img-phone {
+  max-width: 432px;
+  max-height: 80%;
+  position: absolute;
+  bottom: 0;
+}
+
+.instructions li {
+  margin-bottom: 1em;
+}
+
+.btn-download-android {
+  margin-top: 4em;
+  width: 320px;
+  height: 64px;
+  background-image: url("/assets/img/btn-googleplay.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.btn-download-ios {
+  margin-top: 2em;
+  width: 320px;
+  height: 64px;
+  background-image: url("/assets/img/btn-appstore.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 767px) {
+  .content-right {
+    display: none;
+  }
+  .img-phone {
+    display: none;
+  }
+  .btn-download {
+    visibility: visible;
+  }
+}
+
+.pure-g {
+  font-family: "Lato", sans-serif;
+}
+.pure-g [class*="pure-u"] {
+  font-family: "Lato", sans-serif;
+}
+
+.what-you-get {
+  background-color: white;
+}

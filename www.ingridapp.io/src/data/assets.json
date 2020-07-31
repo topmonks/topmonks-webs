@@ -1,0 +1,25 @@
+{
+  "output": [
+    {
+      "code": "var $;($=jQuery)('a.js-scroll-trigger[href*=\"#\"]:not([href=\"#\"])').click((function(){if(location.pathname.replace(/^\\//,\"\")==this.pathname.replace(/^\\//,\"\")&&location.hostname==this.hostname){var target=$(this.hash);if((target=target.length?target:$(\"[name=\"+this.hash.slice(1)+\"]\")).length)return $(\"html, body\").animate({scrollTop:target.offset().top-48},1e3,\"easeInOutExpo\"),!1}})),$(\".js-scroll-trigger\").click((function(){$(\".navbar-collapse\").collapse(\"hide\")})),$(\"body\").scrollspy({target:\"#mainNav\",offset:54}),$(window).scroll((function(){$(\"#mainNav\").offset().top>100?$(\"#mainNav\").addClass(\"navbar-shrink\"):$(\"#mainNav\").removeClass(\"navbar-shrink\")}));\n",
+      "dynamicImports": [],
+      "exports": [],
+      "facadeModuleId": "/Users/rarous/Projects/topmonks/topmonks-webs/www.ingridapp.io/src/javascripts/new-age.js",
+      "fileName": "new-age.js",
+      "imports": [],
+      "isDynamicEntry": false,
+      "isEntry": true,
+      "map": null,
+      "modules": {
+        "/Users/rarous/Projects/topmonks/topmonks-webs/www.ingridapp.io/src/javascripts/new-age.js": {
+          "originalLength": 1240,
+          "removedExports": [],
+          "renderedExports": [],
+          "renderedLength": 1200
+        }
+      },
+      "name": "new-age",
+      "type": "chunk"
+    }
+  ]
+}

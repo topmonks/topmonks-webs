@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <title>{% block title %}{{ title }}{% endblock %}</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  {% block head %}{% endblock %}
+  <meta name="author" content="TopMonks s.r.o." />
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png" />
+  <!-- Bootstrap core CSS -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom fonts for this template -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"
+  />
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200&amp;family=Lato&amp;family=Muli&amp;display=swap" rel="stylesheet">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-5MKJNC7");
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Custom styles for this template -->
+  <link href="/assets/css/new-age.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="/#page-top">
+      <div class="navbar-logo"></div>
+    </a>
+    <button
+      class="navbar-toggler navbar-toggler-right"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      Menu
+      <i class="fa fa-bars" style="margin-left: 5px;"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/#references"
+          >References</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+<footer>
+  <div class="container">
+    <p>&copy; 2020 <a href="https://www.topmonks.com">TopMonks s.r.o.</a>
+      &amp; <a href="http://www.byzkids.com/">Byzkids s.r.o.</a></p>
+    <ul class="list-inline">
+      <li class="list-inline-item">
+        <a href="mailto:support@ingridapp.io">support@ingridapp.io</a>
+      </li>
+      <li class="list-inline-item">
+        <a href="/pp/">Privacy</a>
+      </li>
+      <li class="list-inline-item">
+        <a href="/tos/">Terms</a>
+      </li>
+      <li class="list-inline-item">
+        <a
+          href="https://ingridapp.freshdesk.com/support/solutions/36000026592"
+        >FAQ</a
+        >
+      </li>
+    </ul>
+  </div>
+</footer>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>

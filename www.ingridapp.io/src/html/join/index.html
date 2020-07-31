@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Join Ingrid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+  <link rel="stylesheet" href="/assets/css/join.css">
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png" />
+</head>
+<body>
+
+    <div class=content-wrapper>
+        <div class="pure-g">
+            <div class="pure-u-1"><img alt="Ingrid" src="/assets/img/ingrid-logo-white.svg"></div>
+            <div class="pure-u-sm-1-1 pure-u-md-1-2">
+                <div class="content-left">
+                    <ul class="instructions">
+                        <li style="list-style-image: url('/assets/img/1.svg')">
+                            <div class="pure-u-11-12 i-item">Download the <span style="font-weight: 900">Ingrid</span> app to your phone</div>
+                        </li>
+                        <li style="list-style-image: url('/assets/img/2.svg')">
+                            <div class="pure-u-11-12 i-item">Insert your <span style="font-weight: 900">e-mail adress</span> and <span style="font-weight: 900">4 digits code</span> you received to the e-mail inbox.</div>
+                        </li>
+                    </ul>
+                        <a href="https://play.google.com/store/apps/details?id=com.topmonks.ingrid">
+                            <div class="btn-download-android"></div>
+                        </a>
+                        <a href="https://itunes.apple.com/cz/app/ingrid/id1309118181?l=cs&amp;mt=8">
+                            <div class="btn-download-ios"></div>
+                        </a>
+                </div>
+            </div>
+
+            <div class="pure-hidden-sm pure-u-md-1-2">
+                <div class="content-right">
+                    <img alt="" class="img-phone" src="/assets/img/phone-mail.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      const { userAgent } = navigator;
+      if (userAgent.match(/iOS/) || userAgent.match(/Android/)) {
+        window.location = 'ingrid://ingrid/login/magic/' + location.hash.split('#')[1];
+      }
+    </script>
+</body>
+</html>

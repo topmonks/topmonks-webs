@@ -108,7 +108,9 @@
     "start:session-monk.topmonks.com": "BLENDID_CONFIG_PATH=./session-monk.topmonks.com/config/ dotenv blendid",
     "build:session-monk.topmonks.com": "BLENDID_CONFIG_PATH=./session-monk.topmonks.com/config/ dotenv blendid -- build",
     "start:room.monks.cloud": "BLENDID_CONFIG_PATH=./room.monks.cloud/config/ dotenv blendid",
-    "build:room.monks.cloud": "BLENDID_CONFIG_PATH=./room.monks.cloud/config/ dotenv blendid -- build"
+    "build:room.monks.cloud": "BLENDID_CONFIG_PATH=./room.monks.cloud/config/ dotenv blendid -- build",
+    "start:www.ingridapp.io": "BLENDID_CONFIG_PATH=./www.ingridapp.io/config/ dotenv blendid",
+    "build:www.ingridapp.io": "BLENDID_CONFIG_PATH=./www.ingridapp.io/config/ dotenv blendid -- build"
   },
   "resolutions": {
     "bluebird": "npm:bluebird@3.7.2",
