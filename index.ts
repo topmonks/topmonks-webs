@@ -8,6 +8,8 @@ registerAutoTags({
   "user:Stack": pulumi.getStack()
 });
 
+topmonks.createCertificate("www.ingridapp.io");
+
 const websites = require("./websites.json");
 export const sites: any = {};
 for (const domain in websites) {
