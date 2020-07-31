@@ -4,7 +4,7 @@
 {% set title = "Ingrid - Idea Management Solution" %}
 
 {% block head %}
-  <meta name="description" content="The only innovation tool you will ever need." />
+  <meta name="description" content="The only innovation tool you will ever need."/>
   <meta
     name="keywords"
     content="innovation, innovation tool, innovation app, innovation process, inovace, aplikace, inovační aplikace, inovační nástroj"
@@ -12,350 +12,341 @@
 {% endblock %}
 
 {% block content %}
-    <header class="masthead">
-      <div class="container h-100">
-        <div class="row h-100">
-          <div class="col-lg-5 my-auto">
-            <div class="header-content mx-auto">
-              <h1>Innovation in your pocket</h1>
-              <p class="mb-5">The only innovation tool you will ever need.</p>
-              <a
-                href="#contact"
-                class="btn btn-outline btn-xl js-scroll-trigger"
-                >Try free demo</a
-              >
-            </div>
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-5 my-auto">
+          <div class="header-content mx-auto">
+            <h1>Innovation in your pocket</h1>
+            <p class="mb-5">The only innovation tool you will ever need.</p>
+            <a
+              href="#contact"
+              class="btn btn-outline btn-xl js-scroll-trigger"
+            >Try free demo</a
+            >
           </div>
-          <div class="col-lg-7 my-auto">
-            <div class="device-container text-center">
-              {{ image("header-mobile-preview.png", images, alt="Application screenshot", width=600, phoneWidth=440) }}
-            </div>
+        </div>
+        <div class="col-lg-7 my-auto">
+          <div class="device-container text-center">
+            {{ image("header-mobile-preview.png", images, alt="Application screenshot", width=600, phoneWidth=440) }}
           </div>
         </div>
       </div>
-    </header>
-    <section class="clients">
-      <div class="logos">
-        <div class="container">
-          <div class="row">
-            <div class="logos--style col-lg-2 col-md-4 col-sm-6">
-              <img src="/assets/img/logo-shell.svg" alt="shell" height="50px" />
-            </div>
-            <div class="logos--style col-lg-2 col-md-4 col-sm-6">
-              <img src="/assets/img/logo-csob.svg" alt="csob" height="50px" />
-            </div>
-            <div class="logos--style col-lg-2 col-md-4 col-sm-6">
-              <img
-                src="/assets/img/logo-cs.svg"
-                alt="ceska sporitelna"
-                height="50px"
-              />
-            </div>
-            <div class="logos--style col-lg-2 col-md-4 col-sm-6">
-              <img src="/assets/img/logo-kb.svg" alt="kb" height="50px" />
-            </div>
-            <div class="logos--style col-lg-2 col-md-4 col-sm-6">
-              <img src="/assets/img/logo-o2.svg" alt="O2" height="50px" />
-            </div>
-            <div class="logos--style col-lg-2 col-md-4 col-sm-6">
-              <img src="/assets/img/logo-tm.svg" alt="topmonks" height="50px" />
-            </div>
+    </div>
+  </header>
+  <section class="clients">
+    <div class="logos">
+      <div class="container">
+        <div class="row">
+          <div class="logos--style col-lg-2 col-md-4 col-sm-6">
+            <img src="/assets/img/logo-shell.svg" alt="shell" height="50px"/>
+          </div>
+          <div class="logos--style col-lg-2 col-md-4 col-sm-6">
+            <img src="/assets/img/logo-csob.svg" alt="csob" height="50px"/>
+          </div>
+          <div class="logos--style col-lg-2 col-md-4 col-sm-6">
+            <img
+              src="/assets/img/logo-cs.svg"
+              alt="ceska sporitelna"
+              height="50px"
+            />
+          </div>
+          <div class="logos--style col-lg-2 col-md-4 col-sm-6">
+            <img src="/assets/img/logo-kb.svg" alt="kb" height="50px"/>
+          </div>
+          <div class="logos--style col-lg-2 col-md-4 col-sm-6">
+            <img src="/assets/img/logo-o2.svg" alt="O2" height="50px"/>
+          </div>
+          <div class="logos--style col-lg-2 col-md-4 col-sm-6">
+            <img src="/assets/img/logo-tm.svg" alt="topmonks" height="50px"/>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="promo">
+  <section class="promo">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h2 class="text-center title-font">
+            See how Ingrid works in Shell CEE
+          </h2>
+          <a
+            title="Shell CEE Promo Video - Ingrid"
+            href="https://youtu.be/E7le2NMR40U"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {{ image("video-screen.jpg", images, alt="Shell CEE Demo Video - Ingrid", width=640, height=480, phoneWidth=440) }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="data">
+    <div class="col text-center">
+      <h2 class="text-center title-font">Ingrid statistics</h2>
+      <p class="data--subtitle">by 30/1/2020</p>
+      <div class="data--line"></div>
+    </div>
+    <div class="row data--statistics">
+      <div
+        class="data--statistics-num col-sm-12 col-md-6 col-lg-3 text-center"
+      >
+        <span class="count">12 000</span>
+        <p>users</p>
+      </div>
+      <div
+        class="data--statistics-num col-sm-12 col-md-6 col-lg-3 text-center"
+      >
+        <span class="count">62 %</span>
+        <p>active users</p>
+      </div>
+      <div
+        class="data--statistics-num col-sm-12 col-md-6 col-lg-3 text-center"
+      >
+        <span class="count">10 000</span>
+        <p>ideas gathered</p>
+      </div>
+      <div
+        class="data--statistics-num col-sm-12 col-md-6 col-lg-3 text-center"
+      >
+        <span class="count count--dollars">3.7M €</span>
+        <p>impact of implemented ideas</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about what-you-get" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <h2 class="title-font text-center">Why should you use Ingrid?</h2>
+          <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger"
+          >Try free demo</a
+          >
+        </div>
+
+        <div class="col-md-6 about_box">
+          <h3>Easy implementation</h3>
+          <ul>
+            <li><b>No installation</b> needed</li>
+            <li>
+              <b>Free 2 weeks pilot</b> supported by Byzkids consultants
+            </li>
+            <li><b>1 click start</b> of innovation process</li>
+          </ul>
+
+          <h3>User friendly</h3>
+          <ul>
+            <li><b>Android/Apple app</b> for users</li>
+            <li><b>Web based admin</b> for Innovation manager</li>
+            <li>Predefined the most attractive innovation campaigns</li>
+          </ul>
+
+          <h3>Result oriented</h3>
+          <ul>
+            <li>
+              <b>Quantification of impact</b> of all ideas in innovation
+              pipeline
+            </li>
+            <li>
+              <b>Gamification</b> principles motivating users to add
+              and&nbsp;vote
+            </li>
+            <li><b>Result oriented</b> admin cockpit</li>
+            <li><b>Regular feedback</b> process from users</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="references">
+    <div class="testimonials-content">
+      <div class="container">
+        <div class="row">
+          <div class="col mb-5">
+            <h2 class="section-heading text-center">Case Studies</h2>
+          </div>
+        </div>
+        <!-- SHELL CASE STUDY -->
+        <div class="row mb-5">
+          <div class="t-logo">
+            <img
+              src="/assets/img/shell-logo.svg"
+              alt="shell logo"
+              width="70"
+              height="70"
+            />
+            <h4 class="t-company">Shell in 7 European countries</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 t-left">
+            <div class="t-gsr">
+              <h4>Goal</h4>
+              <p>
+                Shell wanted to have an internal digital tool which would
+                connect teams across different countries within their
+                organisation. The main goal was to engage staff to collect
+                innovations, which will improve customer experience and
+                increase sales at their stations.
+              </p>
+              <h4>Solution</h4>
+              <p>
+                Ingrid enabled to gather Shell employees into national teams
+                and connect them in one app, topics are closely linked to
+                strategic goals of Shell innovative process. The best
+                innovations and employees get innovative prizes every month.
+              </p>
+              <h4>Results</h4>
+              <p>
+                <b>2 000+</b> users<br/>
+                <b>75%</b> active users<br/>
+                <b>7</b> CEE countries<br/>
+                <b>10 000</b> innovation ideas since 2018<br/>
+                <b>5</b> implemented big ideas in first 2 years
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 t-right">
+            <div class="row">
+              <div class="col t-right-header">
+                <h4>Recommendation</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="t-person">
+                  {{ image("pavel.png", images, alt="Pavel Los", width=60, height=60, class="") }}
+                  <p class="tname">
+                    <b>Pavel Los</b><br/><span class="t-desc"
+                    >Chairman, Shell Czech Republic and Slovakia</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="t-content">
+                  <p>
+                    “The Ingrid app became an important part of the innovation
+                    process in 7 Central and Eastern Europe countries where
+                    Shell operates. <br/><br/>Anyone in the organization at
+                    all levels has a simple tool at their hands to submit an
+                    innovation idea, which is then evaluated by others using
+                    the app.<br/><br/>Because of the simplicity, Ingrid
+                    enhances employee engagement and generates new ideas
+                    ranked by attractivity.”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SHELL CASE STUDY ENDS -->
+      </div>
+    </div>
+  </section>
+
+  <section class="screenshots" id="screenshots">
+    <div class="screenshots-content">
       <div class="container">
         <div class="row">
           <div class="col text-center">
-            <h2 class="text-center title-font">
-              See how Ingrid works in Shell CEE
+            <h2 class="section-heading text-center">
+              How does Ingrid App work?
             </h2>
-            <a
-              title="Shell CEE Promo Video - Ingrid"
-              href="https://youtu.be/E7le2NMR40U"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              {{ image("video-screen.jpg", images, alt="Shell CEE Demo Video - Ingrid", width=640, height=480, phoneWidth=440) }}
-              <img
-                alt=""
-                src="/assets/img/"
-            /></a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="data">
-      <div class="col text-center">
-        <h2 class="text-center title-font">Ingrid statistics</h2>
-        <p class="data--subtitle">by 30/1/2020</p>
-        <div class="data--line"></div>
-      </div>
-      <div class="row data--statistics">
-        <div
-          class="data--statistics-num col-sm-12 col-md-6 col-lg-3 text-center"
-        >
-          <span class="count">12 000</span>
-          <p>users</p>
-        </div>
-        <div
-          class="data--statistics-num col-sm-12 col-md-6 col-lg-3 text-center"
-        >
-          <span class="count">62 %</span>
-          <p>active users</p>
-        </div>
-        <div
-          class="data--statistics-num col-sm-12 col-md-6 col-lg-3 text-center"
-        >
-          <span class="count">10 000</span>
-          <p>ideas gathered</p>
-        </div>
-        <div
-          class="data--statistics-num col-sm-12 col-md-6 col-lg-3 text-center"
-        >
-          <span class="count count--dollars">3.7M €</span>
-          <p>impact of implemented ideas</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="about what-you-get" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 text-center">
-            <h2 class="title-font text-center">Why should you use Ingrid?</h2>
-            <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger"
-              >Try free demo</a
-            >
-          </div>
-
-          <div class="col-md-6 about_box">
-            <h3>Easy implementation</h3>
-            <ul>
-              <li><b>No installation</b> needed</li>
-              <li>
-                <b>Free 2 weeks pilot</b> supported by Byzkids consultants
-              </li>
-              <li><b>1 click start</b> of innovation process</li>
-            </ul>
-
-            <h3>User friendly</h3>
-            <ul>
-              <li><b>Android/Apple app</b> for users</li>
-              <li><b>Web based admin</b> for Innovation manager</li>
-              <li>Predefined the most attractive innovation campaigns</li>
-            </ul>
-
-            <h3>Result oriented</h3>
-            <ul>
-              <li>
-                <b>Quantification of impact</b> of all ideas in innovation
-                pipeline
-              </li>
-              <li>
-                <b>Gamification</b> principles motivating users to add
-                and&nbsp;vote
-              </li>
-              <li><b>Result oriented</b> admin cockpit</li>
-              <li><b>Regular feedback</b> process from users</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonials" id="references">
-      <div class="testimonials-content">
-        <div class="container">
-          <div class="row">
-            <div class="col mb-5">
-              <h2 class="section-heading text-center">Case Studies</h2>
-            </div>
-          </div>
-          <!-- SHELL CASE STUDY -->
-          <div class="row mb-5">
-            <div class="t-logo">
-              <img
-                src="/assets/img/shell-logo.svg"
-                alt="shell logo"
-                width="70"
-                height="70"
-              />
-              <h4 class="t-company">Shell in 7 European countries</h4>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 t-left">
-              <div class="t-gsr">
-                <h4>Goal</h4>
-                <p>
-                  Shell wanted to have an internal digital tool which would
-                  connect teams across different countries within their
-                  organisation. The main goal was to engage staff to collect
-                  innovations, which will improve customer experience and
-                  increase sales at their stations.
-                </p>
-                <h4>Solution</h4>
-                <p>
-                  Ingrid enabled to gather Shell employees into national teams
-                  and connect them in one app, topics are closely linked to
-                  strategic goals of Shell innovative process. The best
-                  innovations and employees get innovative prizes every month.
-                </p>
-                <h4>Results</h4>
-                <p>
-                  <b>2 000+</b> users<br />
-                  <b>75%</b> active users<br />
-                  <b>7</b> CEE countries<br />
-                  <b>10 000</b> innovation ideas since 2018<br />
-                  <b>5</b> implemented big ideas in first 2 years
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 t-right">
-              <div class="row">
-                <div class="col t-right-header">
-                  <h4>Recommendation</h4>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="t-person">
-                    {{ image("pavel.png", images, alt="Pavel Los", width=60, height=60, class="") }}
-                    <p class="tname">
-                      <b>Pavel Los</b><br /><span class="t-desc"
-                        >Chairman, Shell Czech Republic and Slovakia</span
-                      >
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-9">
-                  <div class="t-content">
-                    <p>
-                      “The Ingrid app became an important part of the innovation
-                      process in 7 Central and Eastern Europe countries where
-                      Shell operates. <br /><br />Anyone in the organization at
-                      all levels has a simple tool at their hands to submit an
-                      innovation idea, which is then evaluated by others using
-                      the app.<br /><br />Because of the simplicity, Ingrid
-                      enhances employee engagement and generates new ideas
-                      ranked by attractivity.”
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- SHELL CASE STUDY ENDS -->
-        </div>
-      </div>
-    </section>
-
-    <section class="screenshots" id="screenshots">
-      <div class="screenshots-content">
-        <div class="container">
-          <div class="row">
-            <div class="col text-center">
-              <h2 class="section-heading text-center">
-                How does Ingrid App work?
-              </h2>
-            </div>
-          </div>
-          <table class="d-none d-md-block">
-            <tr>
-              <td><div class="bubble">1.</div></td>
-              <td><div class="bubble">2.</div></td>
-              <td><div class="bubble">3.</div></td>
-              <td><div class="bubble">4.</div></td>
-            </tr>
-            <tr>
-              <td>
-                Define topic and let employees upload and prioritize ideas,
-                choose winner.
-              </td>
-              <td>Add idea value and enable final voting for management.</td>
-              <td>
-                Share innovation winners, track innovation progress and
-                innovation pipeline value.
-              </td>
-              <td>
-                Let everybody know about innovation launch. Gather regular user
-                feedback.
-              </td>
-            </tr>
-          </table>
-
-          <div class="d-md-none table-mobile">
-            <div class="bubble">1.</div>
-            <p>
-              Define topic and let employees upload and prioritize ideas, choose
-              winner.
-            </p>
-            <div class="bubble">2.</div>
-            <p>Add idea value and enable management for final voting.</p>
-            <div class="bubble">3.</div>
-            <p>
-              Share innovation winners, track innovation progress and innovation
-              pipeline value.
-            </p>
-            <div class="bubble">4.</div>
-            <p>
+        <table class="d-none d-md-block">
+          <tr>
+            <td>
+              <div class="bubble">1.</div>
+            </td>
+            <td>
+              <div class="bubble">2.</div>
+            </td>
+            <td>
+              <div class="bubble">3.</div>
+            </td>
+            <td>
+              <div class="bubble">4.</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Define topic and let employees upload and prioritize ideas,
+              choose winner.
+            </td>
+            <td>Add idea value and enable final voting for management.</td>
+            <td>
+              Share innovation winners, track innovation progress and
+              innovation pipeline value.
+            </td>
+            <td>
               Let everybody know about innovation launch. Gather regular user
               feedback.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+            </td>
+          </tr>
+        </table>
 
-    <section class="contact" id="contact">
-      <div class="contact-content">
-        <div class="col mb-5">
-          <h2 class="section-heading text-center mb-5">
-            Try Ingrid demo for free
-          </h2>
-        </div>
-        <div class="text-center">
-          <div
-            class="pipedriveWebForms"
-            data-pd-webforms="https://pipedrivewebforms.com/form/b05cf4cf8a40f8b67519c8672986fd064543199"
-          >
-            <script src="https://cdn.pipedriveassets.com/web-form-assets/webforms.min.js"></script>
-          </div>
+        <div class="d-md-none table-mobile">
+          <div class="bubble">1.</div>
+          <p>
+            Define topic and let employees upload and prioritize ideas, choose
+            winner.
+          </p>
+          <div class="bubble">2.</div>
+          <p>Add idea value and enable management for final voting.</p>
+          <div class="bubble">3.</div>
+          <p>
+            Share innovation winners, track innovation progress and innovation
+            pipeline value.
+          </p>
+          <div class="bubble">4.</div>
+          <p>
+            Let everybody know about innovation launch. Gather regular user
+            feedback.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-content">
+      <div class="col mb-5">
+        <h2 class="section-heading text-center mb-5">
+          Try Ingrid demo for free
+        </h2>
+      </div>
+      <div class="text-center">
+        <div
+          class="pipedriveWebForms"
+          data-pd-webforms="https://pipedrivewebforms.com/form/b05cf4cf8a40f8b67519c8672986fd064543199"
+        >
+          <script src="https://cdn.pipedriveassets.com/web-form-assets/webforms.min.js" defer></script>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock %}
 
 {% block scripts %}
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5MKJNC7"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-5MKJNC7"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden"
+    ></iframe>
+  </noscript>
 
-    <!-- Bootstrap core JavaScript -->
-    <!--[if !IE]> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <![endif]-->
-    <!--[if IE]>
-      <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <![endif]-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="/assets/js/new-age.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" defer></script>
 
 {% endblock %}
