@@ -1,12 +1,8 @@
 // Styling for the navbar
 #mainNav {
     .navbar-logo {
-        width: 120px;
-        height: 50px;
-        background-image: url('/assets/img/ingrid-logo.svg');
-        background-size: 150px;
-        background-repeat: no-repeat;
-        background-position: 0px -18px;
+        --logo-color: #5f3b82;
+      transform: scale(1.8);
     }
     border-color: fade-out($gray-darker, .95);
     background-color: white;
@@ -58,12 +54,7 @@
             }
         }
         .navbar-logo {
-            width: 120px;
-            height: 50px;
-            background-image: url('/assets/img/ingrid-logo-w.svg');
-            background-size: 150px;
-            background-repeat: no-repeat;
-            background-position: 0px -18px;
+            --logo-color: #fff;
         }
         .navbar-nav > li > a,
         .navbar-nav > li > a:focus {
@@ -82,12 +73,7 @@
                     color: $theme-primary;
                 }
                 .navbar-logo {
-                    width: 120px;
-                    height: 50px;
-                    background-image: url('/assets/img/ingrid-logo.svg');
-                    background-size: 150px;
-                    background-repeat: no-repeat;
-                    background-position: 0px -18px;
+                    --logo-color: #5f3b82;
                 }
             }
             .navbar-nav > li > a,
