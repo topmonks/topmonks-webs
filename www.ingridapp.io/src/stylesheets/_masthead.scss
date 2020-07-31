@@ -33,17 +33,9 @@ header.masthead {
     }
 
     img {
-      width: 600px;
-    }
-
-    @media (max-width: 767px) {
-      img {
-        width: 450px;
-      }
-    }
-    @media (max-width: 479px) {
-      img {
-        width: 300px;
+      max-width: 600px;
+      @media (max-width: 767px) {
+        max-width: 450px;
       }
     }
   }
