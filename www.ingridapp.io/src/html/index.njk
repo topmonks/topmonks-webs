@@ -1,5 +1,5 @@
 {% extends "layouts/ingrid.njk" %}
-{%- from "macros/helpers.njk" import image -%}
+{%- from "macros/helpers.njk" import image, sprite, spriteTarget -%}
 
 {% set title = "Ingrid - Idea Management Solution" %}
 
@@ -39,30 +39,27 @@
       <div class="container">
         <div class="row">
           <div class="logos--style col-lg-2 col-md-4 col-sm-6">
-            <img src="/assets/img/logo-shell.svg" alt="shell" height="50px"/>
+            {{ sprite("logo-shell", alt="Shell", viewBox="0 0 100 50", class="client-logo") }}
           </div>
           <div class="logos--style col-lg-2 col-md-4 col-sm-6">
-            <img src="/assets/img/logo-csob.svg" alt="csob" height="50px"/>
+            {{ sprite("logo-csob", alt="ČSOB", viewBox="0 0 100 50", class="client-logo") }}
           </div>
           <div class="logos--style col-lg-2 col-md-4 col-sm-6">
-            <img
-              src="/assets/img/logo-cs.svg"
-              alt="ceska sporitelna"
-              height="50px"
-            />
+            {{ sprite("logo-cs", alt="Česká Spořitelna", viewBox="0 0 100 50", class="client-logo") }}
           </div>
           <div class="logos--style col-lg-2 col-md-4 col-sm-6">
-            <img src="/assets/img/logo-kb.svg" alt="kb" height="50px"/>
+            {{ sprite("logo-kb", alt="Komerční Banka", viewBox="0 0 100 50", class="client-logo") }}
           </div>
           <div class="logos--style col-lg-2 col-md-4 col-sm-6">
-            <img src="/assets/img/logo-o2.svg" alt="O2" height="50px"/>
+            {{ sprite("logo-o2", alt="O2", viewBox="0 0 100 50", class="client-logo") }}
           </div>
           <div class="logos--style col-lg-2 col-md-4 col-sm-6">
-            <img src="/assets/img/logo-tm.svg" alt="topmonks" height="50px"/>
+            {{ sprite("logo-tm", alt="TopMonks", viewBox="0 0 100 50", class="client-logo") }}
           </div>
         </div>
       </div>
     </div>
+    {{ spriteTarget() }}
   </section>
 
   <section class="promo">
