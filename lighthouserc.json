@@ -40,7 +40,8 @@
         "maskable-icon": "off",
         "unused-javascript": "off",
         "uses-rel-preconnect": "off",
-        "largest-contentful-paint": "off"
+        "largest-contentful-paint": "off",
+        "frame-title": "off"
       }
     },
     "upload": {
