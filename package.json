@@ -8,7 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "@lhci/utils": "^0.4.4",
-    "@material/layout-grid": "^4.0.0",
+    "@material/layout-grid": "^7.0.0",
     "@material/top-app-bar": "^7.0.0",
     "@pulumi/aws": "^2.13.1",
     "@pulumi/pulumi": "^2.7.1",
