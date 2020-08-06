@@ -1,6 +1,7 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as topmonks from "./.scripts/pulumi-resources/website";
 import { registerAutoTags } from "./.scripts/pulumi-resources/autotag";
+import * as arx from "./arx.monks.cloud/infra";
 
 // Automatically inject tags.
 registerAutoTags({
@@ -32,3 +33,8 @@ for (const domain in redirects) {
     cloudFrontId: website.cloudFrontId
   };
 }
+
+export const arxDocumentsBucketUri = arx.documentsBucketUri;
+export const arxDocumentsBucketEndpoint = arx.documentsBucketEndpoint;
+export const arxDocumentsTable = arx.documentsTable;
+export const arxDocumentsApi = arx.documentsApi;
