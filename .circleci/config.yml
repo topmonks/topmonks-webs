@@ -399,3 +399,19 @@ workflows:
           filters:
             branches:
               only: trunk
+      - test_site:
+          name: test-arx-monks-cloud
+          site_name: arx.monks.cloud
+          context: org-global
+          requires:
+            - build
+      - deploy_site:
+          name: deploy-arx-monks-cloud
+          site_name: arx.monks.cloud
+          context: org-global
+          requires:
+            - provision
+            - test-arx-monks-cloud
+          filters:
+            branches:
+              only: trunk
