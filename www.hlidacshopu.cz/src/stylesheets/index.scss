@@ -163,6 +163,7 @@
 }
 
 .attendant {
+  content-visibility: auto;
   .sub-title {
     text-align: center;
   }
@@ -201,6 +202,7 @@
 }
 
 .guidance {
+  content-visibility: auto;
   .browser-list {
     display: flex;
     justify-content: center;
@@ -282,6 +284,7 @@
 }
 
 .numbers {
+  content-visibility: auto;
   dt {
     font-size: 13px;
     line-height: 16px;
@@ -297,21 +300,25 @@
   }
 }
 
+.references {
+  content-visibility: auto;
+}
 
-  .references_link {
-    font-size: 18px;
-    color: var(--mdc-theme-secondary);
-    font-weight: 400;
-    margin: 0 auto;
-    a {
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
+.references_link {
+  font-size: 18px;
+  color: var(--mdc-theme-secondary);
+  font-weight: 400;
+  margin: 0 auto;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
   }
+}
 
 .news {
+  content-visibility: auto;
   background: rgba(84, 95, 239, 0.07);
 }
 
