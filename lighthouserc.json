@@ -1,20 +1,10 @@
 {
   "ci": {
     "collect": {
-      "chrome-flags": ["--ignore-certificate-errors"],
       "numberOfRuns": 1,
       "url": "https://127.0.0.1:8000/",
       "settings": {
-        "configPath": ".scripts/lighthouse/config.js",
-        "skipAudits": [
-          "themed-omnibox",
-          "redirects-http",
-          "load-fast-enough-for-pwa",
-          "service-worker",
-          "splash-screen",
-          "webapp-install-banner",
-          "works-offline"
-        ]
+        "configPath": ".scripts/lighthouse/config.js"
       }
     },
     "assert": {
@@ -22,18 +12,7 @@
       "assertions": {
         "canonical": "off",
         "redirects-http": "off",
-        "render-blocking-resources": "warn",
-        "uses-long-cache-ttl": "warn",
-        "meta-description": "warn",
-        "errors-in-console": "warn",
-        "offscreen-images": "warn",
-        "color-contrast": "warn",
-        "duplicate-id": "warn",
-        "dom-size": "warn",
-        "unused-javascript": "warn",
-        "uses-rel-preconnect": "warn",
-        "largest-contentful-paint": "warn",
-        "frame-title": "warn"
+        "render-blocking-resources": "warn"
       }
     },
     "upload": {
