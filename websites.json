@@ -35,7 +35,18 @@
   },
   "room.monks.cloud": {},
   "www.ingridapp.io": {
-    "lhci": { "upload": { "token": "c1c2996f-87f1-434c-b225-2e50f0134b01" } }
+    "lhci": {
+      "assert": {
+        "assertions": {
+          "font-display": "warn",
+          "heading-order": "warn",
+          "unminified-css": "warn",
+          "unused-css-rules": "warn",
+          "uses-passive-event-listeners": "warn"
+        }
+      },
+      "upload": { "token": "c1c2996f-87f1-434c-b225-2e50f0134b01" }
+    }
   },
   "arx.monks.cloud": {
     "lhci": { "upload": { "token": "56219155-a075-4e2a-abd9-53e91c1d574f" } }
