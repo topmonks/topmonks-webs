@@ -152,9 +152,7 @@ jobs:
             yarn test:ava
             cat websites.json | jq -rM '.["<< parameters.site_name >>"] | .["lhci"] as $ci | {$ci}' > patch.json
             jq --slurp 'reduce .[] as $item ({}; . * $item)' lighthouserc.json patch.json > .lighthouserc.json
-            cat .lighthouserc.json
-            yarn lhci autorun --collect.staticDistDir="public/<< parameters.site_name >>" \
-              --upload.extraHeaders.Authorization="Basic ${LHCI_BASIC_AUTH}" \
+            yarn lhci autorun --upload.extraHeaders.Authorization="Basic ${LHCI_BASIC_AUTH}" \
               --upload.urlReplacementPatterns="s/^/: << parameters.site_name >>/"
       - store_artifacts:
           path: ./results
