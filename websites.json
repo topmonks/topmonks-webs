@@ -6,13 +6,27 @@
     "lhci": { "upload": { "token": "88b179e8-4066-4364-8ada-79e443656c71" } }
   },
   "www.topmonks.com": {
-    "lhci": { "upload": { "token": "7e020fdc-625f-403a-9d05-ab66dfe219cf" } }
+    "lhci": {
+      "assert": { "assertions": { "offscreen-images": "warn" } },
+      "upload": { "token": "7e020fdc-625f-403a-9d05-ab66dfe219cf" }
+    }
   },
   "caffe.topmonks.cz": {
-    "lhci": { "upload": { "token": "bd46a906-4ce2-4335-bd2c-022bc048034b" } }
+    "lhci": {
+      "assert": { "assertions": { "offscreen-images": "warn" } },
+      "upload": { "token": "bd46a906-4ce2-4335-bd2c-022bc048034b" }
+    }
   },
   "prodeti.topmonks.cz": {
-    "lhci": { "upload": { "token": "7d580a37-e5e3-41c1-9e47-3605ffc330c4" } }
+    "lhci": {
+      "assert": {
+        "assertions": {
+          "errors-in-console": "warn",
+          "offscreen-images": "warn"
+        }
+      },
+      "upload": { "token": "7d580a37-e5e3-41c1-9e47-3605ffc330c4" }
+    }
   },
   "www.topmonks.cz": {
     "lhci": { "upload": { "token": "b1c12639-5629-4983-b2cf-787cc683741b" } }
@@ -21,14 +35,20 @@
     "lhci": { "upload": { "token": "2bff9c0f-9628-4790-859c-4baff8c119ca" } }
   },
   "monkslab.cz": {
-    "lhci": { "upload": { "token": "2abde14f-06dd-4f7a-8203-2ddc1575a40a" } }
+    "lhci": {
+      "assert": { "assertions": { "errors-in-console": "warn" } },
+      "upload": { "token": "2abde14f-06dd-4f7a-8203-2ddc1575a40a" }
+    }
   },
   "www.hlidacshopu.cz": {
     "lhci": { "upload": { "token": "b99d731f-aa95-4105-b71b-7ac29c93e81e" } },
     "dns": { "disabled": true }
   },
   "session-monk.topmonks.com": {
-    "lhci": { "upload": { "token": "a2c6aba5-ab1f-4483-bd81-727b871d1b79" } }
+    "lhci": {
+      "assert": { "assertions": { "meta-description": "warn" } },
+      "upload": { "token": "a2c6aba5-ab1f-4483-bd81-727b871d1b79" }
+    }
   },
   "room.monks.cloud": {},
   "www.ingridapp.io": {
@@ -47,6 +67,14 @@
     }
   },
   "arx.monks.cloud": {
-    "lhci": { "upload": { "token": "56219155-a075-4e2a-abd9-53e91c1d574f" } }
+    "lhci": {
+      "assert": {
+        "assertions": {
+          "errors-in-console": "warn",
+          "meta-description": "warn"
+        }
+      },
+      "upload": { "token": "56219155-a075-4e2a-abd9-53e91c1d574f" }
+    }
   }
 }

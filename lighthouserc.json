@@ -11,8 +11,11 @@
       "preset": "lighthouse:no-pwa",
       "assertions": {
         "canonical": "off",
+        "color-contrast": "warn",
         "redirects-http": "off",
-        "render-blocking-resources": "warn"
+        "render-blocking-resources": "warn",
+        "uses-rel-preconnect": "warn",
+        "unused-javascript": "warn"
       }
     },
     "upload": {
