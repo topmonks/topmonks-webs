@@ -3,7 +3,10 @@
     "lhci": { "upload": { "token": "818a91e6-f322-4c1b-a8f3-687d066dc799" } }
   },
   "studio.topmonks.com": {
-    "lhci": { "upload": { "token": "88b179e8-4066-4364-8ada-79e443656c71" } }
+    "lhci": {
+      "assert": { "assertions": { "offscreen-images": "warn" } },
+      "upload": { "token": "88b179e8-4066-4364-8ada-79e443656c71" }
+    }
   },
   "www.topmonks.com": {
     "lhci": {
