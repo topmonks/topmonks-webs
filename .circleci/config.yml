@@ -150,8 +150,9 @@ jobs:
           command: |
             mkdir -p ./results
             yarn test:ava
-            LHCI_TOKEN=$(cat websites.json | jq -rM '.["<< parameters.site_name >>"] | .["lh-token"] | @text')
-            yarn lhci autorun --upload.token="${LHCI_TOKEN}" \
+            cat websites.json | jq -rM '.["<< parameters.site_name >>"] | .["lhci"] as $ci | {$ci}' > patch.json
+            jq --slurp 'reduce .[] as $item ({}; . * $item)' lighthouserc.json patch.json > lighthouserc.json
+            yarn lhci autorun \
               --upload.extraHeaders.Authorization="Basic ${LHCI_BASIC_AUTH}" \
               --upload.urlReplacementPatterns="s/^/: << parameters.site_name >>/"
       - store_artifacts:

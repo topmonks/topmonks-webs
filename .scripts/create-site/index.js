@@ -224,7 +224,13 @@ async function addSiteToIaaC(name) {
   if (process.env["CI"]) {
     websites[name] = {};
   } else {
-    websites[name] = { "lh-token": await generateLighthouseToken(name) };
+    websites[name] = {
+      lhci: {
+        upload: {
+          token: await generateLighthouseToken(name)
+        }
+      }
+    };
   }
   return fs.promises.writeFile(
     filePath,

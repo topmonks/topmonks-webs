@@ -1,42 +1,40 @@
 {
   "blockchain.topmonks.com": {
-    "lh-token": "818a91e6-f322-4c1b-a8f3-687d066dc799"
+    "lhci": { "upload": { "token": "818a91e6-f322-4c1b-a8f3-687d066dc799" } }
   },
   "studio.topmonks.com": {
-    "lh-token": "88b179e8-4066-4364-8ada-79e443656c71"
+    "lhci": { "upload": { "token": "88b179e8-4066-4364-8ada-79e443656c71" } }
   },
   "www.topmonks.com": {
-    "lh-token": "7e020fdc-625f-403a-9d05-ab66dfe219cf"
+    "lhci": { "upload": { "token": "7e020fdc-625f-403a-9d05-ab66dfe219cf" } }
   },
   "caffe.topmonks.cz": {
-    "lh-token": "bd46a906-4ce2-4335-bd2c-022bc048034b"
+    "lhci": { "upload": { "token": "bd46a906-4ce2-4335-bd2c-022bc048034b" } }
   },
   "prodeti.topmonks.cz": {
-    "lh-token": "7d580a37-e5e3-41c1-9e47-3605ffc330c4"
+    "lhci": { "upload": { "token": "7d580a37-e5e3-41c1-9e47-3605ffc330c4" } }
   },
   "www.topmonks.cz": {
-    "lh-token": "b1c12639-5629-4983-b2cf-787cc683741b"
+    "lhci": { "upload": { "token": "b1c12639-5629-4983-b2cf-787cc683741b" } }
   },
   "www.hookamonk.com": {
-    "lh-token": "2bff9c0f-9628-4790-859c-4baff8c119ca"
+    "lhci": { "upload": { "token": "2bff9c0f-9628-4790-859c-4baff8c119ca" } }
   },
   "monkslab.cz": {
-    "lh-token": "2abde14f-06dd-4f7a-8203-2ddc1575a40a"
+    "lhci": { "upload": { "token": "2abde14f-06dd-4f7a-8203-2ddc1575a40a" } }
   },
   "www.hlidacshopu.cz": {
-    "dns": {
-      "disabled": true
-    },
-    "lh-token": "b99d731f-aa95-4105-b71b-7ac29c93e81e"
+    "lhci": { "upload": { "token": "b99d731f-aa95-4105-b71b-7ac29c93e81e" } },
+    "dns": { "disabled": true }
   },
   "session-monk.topmonks.com": {
-    "lh-token": "a2c6aba5-ab1f-4483-bd81-727b871d1b79"
+    "lhci": { "upload": { "token": "a2c6aba5-ab1f-4483-bd81-727b871d1b79" } }
   },
   "room.monks.cloud": {},
   "www.ingridapp.io": {
-    "lh-token": "c1c2996f-87f1-434c-b225-2e50f0134b01"
+    "lhci": { "upload": { "token": "c1c2996f-87f1-434c-b225-2e50f0134b01" } }
   },
   "arx.monks.cloud": {
-    "lh-token": "56219155-a075-4e2a-abd9-53e91c1d574f"
+    "lhci": { "upload": { "token": "56219155-a075-4e2a-abd9-53e91c1d574f" } }
   }
 }
