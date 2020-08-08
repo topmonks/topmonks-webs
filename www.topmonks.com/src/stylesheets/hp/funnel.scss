@@ -1,4 +1,5 @@
 .product {
+  content-visibility: auto;
   @media (max-width: 479px) {
     background: url("/assets/img/bgnd_funnel_product_mobile.svg") bottom center
       no-repeat;

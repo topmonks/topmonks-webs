@@ -1,29 +1,54 @@
 .testimonials {
+  content-visibility: auto;
   text-align: center;
   background-color: #f3f3f3;
 
   @media screen and (min-width: 840px) and (max-width: 1920px) {
-    background: #fff cloudinaryUrl("topmonks.com/bgnd_grey.png", ('width': 1920))
+    background: #fff
+      cloudinaryUrl(
+        "topmonks.com/bgnd_grey.png",
+        (
+          "width": 1920
+        )
+      )
       center top no-repeat;
   }
   @media screen and (min-width: 840px) and (max-width: 1920px) and (min-resolution: 1.5dppx) {
     background-image: cloudinaryUrl(
       "topmonks.com/bgnd_grey.png",
-      ('dpr': 1.5,
-      'width': 1920)
+      (
+        "dpr": 1.5,
+        "width": 1920
+      )
     );
   }
   @media screen and (min-width: 840px) and (max-width: 1920px) and (min-resolution: 2dppx) {
-    background-image: cloudinaryUrl("topmonks.com/bgnd_grey.png", ('dpr': 2, 'width': 1920));
+    background-image: cloudinaryUrl(
+      "topmonks.com/bgnd_grey.png",
+      (
+        "dpr": 2,
+        "width": 1920
+      )
+    );
   }
   @media screen and (min-width: 1920px) {
     background-image: cloudinaryUrl("topmonks.com/bgnd_grey.png");
   }
   @media screen and (min-width: 1920px) and (min-resolution: 1.5dppx) {
-    background-image: cloudinaryUrl("topmonks.com/bgnd_grey.png", ('dpr': 1.5));
+    background-image: cloudinaryUrl(
+      "topmonks.com/bgnd_grey.png",
+      (
+        "dpr": 1.5
+      )
+    );
   }
   @media screen and (min-width: 1920px) and (min-resolution: 2dppx) {
-    background-image: cloudinaryUrl("topmonks.com/bgnd_grey.png", ('dpr': 2));
+    background-image: cloudinaryUrl(
+      "topmonks.com/bgnd_grey.png",
+      (
+        "dpr": 2
+      )
+    );
   }
   background-size: 100% auto;
 
