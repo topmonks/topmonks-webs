@@ -29,6 +29,7 @@ const config = createSharedTaskConfig(__dirname, {
       app: "app.js",
       index: "index.js",
       dashboard: "dashboard.js",
+      priceterier: "priceterier.js",
       reviews: "reviews.js",
       extension: "extension.js",
       android: "android.js",

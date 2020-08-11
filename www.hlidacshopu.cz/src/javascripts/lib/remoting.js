@@ -169,6 +169,27 @@ export async function fetchDashboardData() {
   );
 }
 
+export async function fetchPriceterierData() {
+  const resp = await Promise.race([
+    timeout(4000),
+    fetch("http://localhost:3000/priceterier/sampleData1.html") //TODO
+  ]);
+  if (!resp.ok) throw new Error("API error");
+  const shopsData = await resp.json();
+  return shopsData;
+  /*
+  console.log("shopsData");//TODO remove
+  console.log(shopsData);
+  const shopsStatsData = new Map(shopsData.map(shopStats).map(x => [x.key, x]));
+  console.log("shopsStatsData");//TODO remove
+  console.log(shopsStatsData);
+  return Array.from(shops.entries()).map(([key, x]) =>
+    Object.assign({}, x, shopsStatsData.get(key))
+  );
+
+   */
+}
+
 const review = ({ avatar, date, name, text, rating, type, sourceUrl }) => ({
   imageUrl: avatar.replace("s40", "s70"),
   date: new Date(Date.parse(date)),
