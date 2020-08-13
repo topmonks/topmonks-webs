@@ -1,6 +1,8 @@
 import { html, svg, render } from "lit-html/lit-html";
 import { formatPercents } from "./lib/format";
-import { fetchPriceterierData } from "./lib/remoting";
+import { formatMoney } from "./lib/format";
+import {fetchPriceterierData, fetchShopsStats} from "./lib/remoting";
+import { shops } from "./lib/shops.js";
 
 const tableRoot = document.getElementById("table-root");
 
@@ -33,17 +35,18 @@ function shopTemplate({
 }) {
   return html`
     <tr class="dashboard-row">
-      <td>${order}</td>
-      <td>${realSalePerc}</td>
-      <td>${finalPrice}</td>
-      <td>${realSaleAbs}</td>
-      <td>${itemName}</td>
+      <th>${order}</th>
+      <td>${formatPercents(realSalePerc/100)}</td>
+      <td>${formatMoney(finalPrice)}</td>
+      <td>${formatMoney(realSaleAbs)}</td>
+      <td>${productLinkTemplate(shops.get(shop), itemName, itemUrl)}</td>
+
       <td><img src="${itemImage}" width="50" height="50"></td>
-      <td><a hrer="${shop}">${shop}</a></td>
+      <td>${logoTemplate(shops.get(shop))}</td>
+
     </tr>
   `;
 }
-
 
 function logoTemplate({ logo, name, url, viewBox }) {
   const image = svg`
@@ -53,6 +56,13 @@ function logoTemplate({ logo, name, url, viewBox }) {
       </svg>
     `;
   return html`
-    <a href="${url}" class="sprite sprite--${logo}" title="${name}">${image}</a>
+    <a href="${url}" class="sprite sprite--${logo}" title="${name}" target="_blank">${image}</a>
+  `;
+}
+
+function productLinkTemplate({ logo, name, url, viewBox }, itemName, itemUrl) {
+  const productUrl = url + "/" + itemUrl
+  return html`
+    <a href="${productUrl}" target="_blank">${itemName}</a>
   `;
 }
