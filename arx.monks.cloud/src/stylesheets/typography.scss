@@ -1,0 +1,49 @@
+:root {
+
+}
+
+body {
+  font-family: Proxima Nova;
+  margin: 0;
+}
+
+h1 {
+
+}
+
+h2 {
+  font-size: 44px;
+  font-weight: normal;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 44px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 32px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  background-color: var(--mdc-theme--fourth);
+  max-width: 152px;
+  text-align: center;
+  padding: 14px;
+  a {
+    color: var(--mdc-theme--primary);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

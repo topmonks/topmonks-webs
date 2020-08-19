@@ -1,7 +1,101 @@
 @import "@material/layout-grid/mdc-layout-grid";
 @import "common/colors";
+
 :root {
   --mdc-layout-grid-margin-desktop: 24px;
   --mdc-layout-grid-gutter-desktop: 20px;
   --mdc-layout-grid-column-width-desktop: 60px;
+}
+
+.layout-arx {
+  max-width: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
+  background-size: 70% auto;
+  z-index: 0;
+}
+
+
+.intro {
+  z-index: 10;
+
+  p {
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 46px;
+    max-width: 475px;
+  }
+
+  .white-box {
+    z-index: 10;
+    width: 660px;
+    padding: 44px;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.03);
+  }
+}
+
+.about-us {
+  margin-top: 6em;
+
+  h2:after {
+    content: "";
+    width: 40%;
+    height: 4px;
+    background-color: var(--mdc-theme--fourth);
+    display: block;
+    margin: 30px 0;
+  }
+
+  p {
+    max-width: 430px;
+  }
+
+  .about-us--side-text {
+    margin-top: 12em;
+  }
+}
+
+.facts-box {
+  display: inline-flex;
+  text-align: center;
+
+  p {
+    font-size: 18px;
+    line-height: 22px;
+    color: #6A6A6A;
+  }
+
+  .white-box {
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.07);
+  }
+}
+
+.believes {
+  h3 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+.team {
+  .team--bg-1 {
+    height: 600px;
+    width: 100%;
+    align-self: center;
+    background: url("/assets/img/team-bg01.jpg") no-repeat;
+    background-size: 100%;
+  }
+  .team--bg-2 {
+    height: 600px;
+    width: 100%;
+    margin-top: 4em;
+    background: url("/assets/img/team-bg02.jpg") no-repeat;
+    background-size: 100%;
+  }
 }

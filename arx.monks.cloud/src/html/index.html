@@ -1,20 +1,293 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
-  <title>TopMonks</title>
+  <title>ARX</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <link rel="stylesheet" href="/stylesheets/main.css">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/typography.css">
+  <link rel="stylesheet" href="/assets/css/colors.css">
+  <link rel="stylesheet" href="/assets/css/header.css">
+
+  <!-- MATERIAL DESIGN COMPONENTS -->
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
 </head>
 
 <body>
-  <div style="display: flex; justify-content: center; align-items: center;flex-direction: column;height: 90vh;">
-    <h1>TopMonks</h1>
-    <h2>Created with simple generator</h2>
+<header class="app-bar">
+  <div class="mdc-layout-grid layout-arx">
+    <div class="mdc-layout-grid__inner">
+      <div
+        class="hamburger mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--span-2-tablet">
+        <div class="hamburger__container">
+          <div class="hamburger__bar"></div>
+          <div class="hamburger__bar"></div>
+          <div class="hamburger__bar"></div>
+        </div>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone">
+      </div>
+      <div
+        class="topmonks-icon mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-2-tablet">
+        <a class="logo" href="/" title="Go to homepage">
+          <svg class="monk" width="158" height="35" viewBox="0 0 158 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <title>TopMonks Startup Studio</title>
+            <path
+              d="M15.7851 4.65283C16.1351 4.65283 16.4101 4.92948 16.4101 5.28158C16.4101 5.63367 16.1351 5.91032 15.7851 5.91032C15.4351 5.91032 15.1602 5.63367 15.1602 5.28158C15.1602 4.92948 15.4351 4.65283 15.7851 4.65283Z"/>
+            <path
+              d="M15.9604 2.89233C16.3104 2.89233 16.5854 3.16898 16.5854 3.52108C16.5854 3.87318 16.3104 4.14982 15.9604 4.14982C15.6104 4.14982 15.3354 3.87318 15.3354 3.52108C15.3354 3.16898 15.6104 2.89233 15.9604 2.89233Z"/>
+            <path
+              d="M19.1351 11.0911C17.9851 11.5941 16.8602 11.5941 15.7853 11.0911C15.7603 12.8013 19.1351 12.8013 19.1351 11.0911Z"/>
+            <path
+              d="M13.4606 11.0911C12.3607 11.5941 11.2358 11.5941 10.1108 11.0911C10.1108 12.8013 13.4606 12.8013 13.4606 11.0911Z"/>
+            <path
+              d="M20.9849 33.248C17.6851 33.248 16.9102 32.0157 14.6353 32.0157H14.5853C12.2855 32.0157 11.5106 33.248 8.2108 33.248C2.41122 33.2229 0.0363946 27.1618 2.88619 24.5965C4.33608 23.4396 6.18595 24.1187 7.28587 25.8289C8.38579 27.5139 10.0607 30.2804 13.6104 30.1295C12.6855 29.7522 11.9605 29.375 11.3856 28.9977C14.7353 27.8157 17.0852 26.357 18.76 24.9486C18.985 25.5271 19.335 26.0804 19.66 26.5079C19.01 27.4384 18.2351 27.866 16.2102 28.7965C19.01 28.5702 20.035 27.6396 21.6848 25.8037C23.0347 24.2947 24.8096 23.4396 26.2595 24.5965C29.1593 27.1618 26.7845 33.1977 20.9849 33.248ZM6.38594 17.6049C7.63585 16.4731 9.06074 16.121 9.31073 16.0707C10.3606 17.5546 12.0105 19.0384 14.5853 19.0384C17.2102 19.0384 18.835 17.5546 19.885 16.0707C20.01 16.0959 20.4849 16.1965 21.0849 16.4731C18.86 22.7606 12.4355 24.7726 10.2107 25.3259C10.5606 24.5462 10.7856 23.6911 10.5606 23.0875C10.3357 22.4588 9.76069 21.9558 9.13574 21.6037C9.13574 21.2516 9.13574 20.2204 9.46071 19.4911C8.78576 20.2204 8.46079 20.8743 8.3358 21.2516C8.01082 21.1761 7.71084 21.1258 7.46086 21.151C6.73591 21.2264 5.71099 22.0061 5.26102 22.3833C5.13603 22.3582 5.03603 22.333 4.91104 22.3079C5.08603 20.4719 5.561 18.7115 6.38594 17.6049ZM8.11081 12.1977C7.03589 11.8204 6.48593 10.236 7.86083 9.12938C8.2858 9.40603 8.66077 9.93417 8.66077 9.93417C7.86083 5.8599 10.1857 1.60959 14.5853 1.60959C18.985 1.60959 21.3099 5.83476 20.5099 9.93417C20.5099 9.93417 20.8849 9.43118 21.3099 9.12938C22.6848 10.236 22.1348 11.8204 21.0599 12.1977C20.7849 11.9462 20.6099 11.8204 20.3849 11.5186C20.06 13.9833 18.3351 17.63 14.5603 17.6552C10.7856 17.6552 9.03574 13.9833 8.73577 11.5186C8.53578 11.8204 8.38579 11.9713 8.11081 12.1977ZM8.76077 25.7786C8.51078 25.3007 8.2358 24.7977 7.83583 24.2696C7.51086 23.8169 6.96089 23.2887 6.26095 22.8863C6.56092 22.5845 7.08589 22.1318 7.66084 22.1067C8.3358 22.0815 9.38572 22.7606 9.6107 23.5402C9.83569 24.345 9.11074 25.351 8.76077 25.7786ZM22.9347 22.8863C22.2598 23.2887 21.7098 23.8169 21.3599 24.2696C20.9599 24.7977 20.6599 25.0995 20.3099 25.6025C19.96 25.175 19.335 24.345 19.56 23.5402C19.785 22.7606 20.8349 22.0815 21.5098 22.1067C22.1098 22.1318 22.6348 22.5845 22.9347 22.8863ZM22.8098 17.6049C23.6347 18.6863 24.1097 20.4719 24.3096 22.3582C24.1847 22.3833 24.0847 22.4085 23.9597 22.4336C23.5347 22.0815 22.6598 21.4276 21.9598 21.2264C22.4098 20.4216 22.5598 19.8935 22.5598 19.8935C22.3098 20.3462 22.0348 20.7737 21.7598 21.1761C20.7849 21.0504 19.11 21.8803 18.6601 23.0624C18.5101 23.4648 18.5351 23.9175 18.6351 24.3702C15.2603 26.9857 11.4106 28.0672 10.5606 28.2684C10.0357 27.7905 9.6607 27.3378 9.36072 26.8348C18.985 24.4456 21.2849 18.3594 21.7098 16.7749C22.0848 17.0264 22.4598 17.3031 22.8098 17.6049ZM14.6353 33.7259C16.4352 33.7259 16.1852 34.1283 19.31 34.7822C27.9594 36.3918 31.0592 27.4887 28.0594 23.9929C27.4094 23.2384 26.7345 22.7606 26.0845 22.5342C26.0345 22.1067 25.5346 18.5857 24.1847 16.8755C22.4098 15.1402 20.8599 14.6875 20.7599 14.6623C21.0349 14.1342 21.2849 13.6563 21.4099 13.3797C22.5598 13.4048 24.7596 10.4623 22.0098 8.27429C22.0098 1.60959 16.4352 0.0251498 14.5603 0C12.7605 0 7.13588 1.58444 7.13588 8.27429C4.38608 10.4372 6.58592 13.4048 7.76084 13.3797C7.88583 13.6563 8.16081 14.109 8.41079 14.6623C8.3108 14.6875 6.76091 15.1402 4.98604 16.8755C3.63613 18.5857 3.13617 22.1067 3.08617 22.5342C2.43622 22.7606 1.76127 23.2384 1.11132 23.9929C-1.88847 27.5139 1.23631 36.4169 9.86069 34.8073C12.9855 34.1534 12.7105 33.751 14.5353 33.751H14.6353V33.7259Z"/>
+            <path
+              d="M13.2353 2.89233C13.5853 2.89233 13.8603 3.16898 13.8603 3.52108C13.8603 3.87318 13.5853 4.14982 13.2353 4.14982C12.8853 4.14982 12.6104 3.87318 12.6104 3.52108C12.6104 3.16898 12.8853 2.89233 13.2353 2.89233Z"/>
+            <path
+              d="M13.5854 6.48853C13.9354 6.48853 14.2104 6.76517 14.2104 7.11727C14.2104 7.46937 13.9354 7.74602 13.5854 7.74602C13.2354 7.74602 12.9604 7.46937 12.9604 7.11727C12.9354 6.76517 13.2354 6.48853 13.5854 6.48853Z"/>
+            <path
+              d="M15.6103 6.48853C15.9603 6.48853 16.2353 6.76517 16.2353 7.11727C16.2353 7.46937 15.9603 7.74602 15.6103 7.74602C15.2603 7.74602 14.9854 7.46937 14.9854 7.11727C14.9854 6.76517 15.2853 6.48853 15.6103 6.48853Z"/>
+            <path
+              d="M13.4106 4.65283C13.7606 4.65283 14.0356 4.92948 14.0356 5.28158C14.0356 5.63367 13.7606 5.91032 13.4106 5.91032C13.0606 5.91032 12.7856 5.63367 12.7856 5.28158C12.7856 4.92948 13.0606 4.65283 13.4106 4.65283Z"/>
+            <path d="M44.1333 6.79043V19.1138H40.5335V6.79043H37.1338V3.82275H47.508V6.79043H44.1333Z"/>
+            <path
+              d="M52.4325 8.02282C51.7575 8.67671 51.0576 9.78331 51.0576 11.4935C51.0576 12.9019 51.5325 14.0085 52.4824 14.939C53.4824 15.8696 54.6073 16.1965 55.8322 16.1965C57.4321 16.1965 58.532 15.6181 59.282 14.8887C59.8819 14.3103 60.6319 13.2288 60.6319 11.4683C60.6319 9.8839 59.9819 8.70186 59.282 8.02282C58.507 7.29347 57.2821 6.71503 55.8572 6.71503C54.4823 6.71503 53.2824 7.21802 52.4325 8.02282ZM61.9068 5.68389C63.3817 7.09228 64.3316 9.10426 64.3316 11.4683C64.3316 13.5055 63.5816 15.5929 61.9068 17.2025C60.4569 18.5857 58.507 19.4408 55.8822 19.4408C52.9574 19.4408 50.9826 18.2839 49.8076 17.2025C48.3077 15.8193 47.3828 13.757 47.3828 11.5186C47.3828 9.30546 48.3827 7.09228 49.7826 5.70904C50.8326 4.67789 52.7824 3.4707 55.8822 3.4707C58.307 3.4707 60.3319 4.20005 61.9068 5.68389Z"/>
+            <path
+              d="M69.7061 10.8647H70.981C71.481 10.8647 72.3309 10.8396 72.9309 10.2863C73.2558 9.95931 73.5058 9.43116 73.5058 8.77727C73.5058 8.12337 73.2808 7.59523 72.9309 7.29343C72.3809 6.79043 71.631 6.71498 70.931 6.71498H69.7061V10.8647ZM71.606 3.82275C72.9559 3.82275 74.4558 3.9988 75.7057 5.08024C77.0306 6.23714 77.2305 7.74612 77.2305 8.80242C77.2305 10.739 76.4806 11.8204 75.9056 12.3988C74.6557 13.6312 73.0309 13.7569 71.9309 13.7569H69.7311V19.139H66.1313V3.82275H71.606Z"/>
+            <path
+              d="M77.231 19.1138L79.7308 3.82275H82.7056L86.5803 12.9773L90.48 3.82275H93.4548L95.9546 19.1138H92.3549L91.13 9.98446L87.2302 19.1138H85.9553L82.0556 9.98446L80.8307 19.1138H77.231Z"/>
+            <path
+              d="M101.779 8.02282C101.104 8.67671 100.404 9.78331 100.404 11.4935C100.404 12.9019 100.879 14.0085 101.829 14.939C102.829 15.8696 103.954 16.1965 105.179 16.1965C106.779 16.1965 107.879 15.6181 108.629 14.8887C109.229 14.3103 109.979 13.2288 109.979 11.4683C109.979 9.8839 109.329 8.70186 108.629 8.02282C107.854 7.29347 106.629 6.71503 105.204 6.71503C103.829 6.71503 102.629 7.21802 101.779 8.02282ZM111.229 5.68389C112.703 7.09228 113.653 9.10426 113.653 11.4683C113.653 13.5055 112.903 15.5929 111.229 17.2025C109.779 18.5857 107.829 19.4408 105.204 19.4408C102.279 19.4408 100.304 18.2839 99.1294 17.2025C97.6295 15.8193 96.7046 13.757 96.7046 11.5186C96.7046 9.30546 97.7045 7.09228 99.1044 5.70904C100.154 4.67789 102.104 3.4707 105.204 3.4707C107.629 3.4707 109.679 4.20005 111.229 5.68389Z"/>
+            <path
+              d="M115.453 19.1138V3.82275H118.603L127.052 13.6815V3.82275H130.652V19.1138H127.527L119.053 9.20481V19.1138H115.453Z"/>
+            <path
+              d="M136.877 10.1857L142.201 3.82275H146.601L140.301 11.0659L147.076 19.1138H142.451L136.877 12.3234V19.1138H133.277V3.82275H136.877V10.1857Z"/>
+            <path
+              d="M155.8 7.54497C154.625 6.51383 153.625 6.43838 153.175 6.43838C152.675 6.43838 152.075 6.51383 151.65 6.96653C151.425 7.19287 151.25 7.54497 151.25 7.92222C151.25 8.29947 151.375 8.57611 151.6 8.77731C151.975 9.12941 152.5 9.25516 153.55 9.65756L154.725 10.0851C155.4 10.3366 156.25 10.6887 156.85 11.2671C157.75 12.1222 158 13.2288 158 14.1091C158 15.6935 157.45 17.0767 156.625 17.9067C155.25 19.3402 153.225 19.466 152.2 19.466C151.075 19.466 150.1 19.3151 149.126 18.8121C148.326 18.4097 147.426 17.7055 146.826 17.127L148.701 14.6121C149.101 15.0145 149.725 15.5426 150.15 15.7941C150.75 16.1714 151.4 16.3474 152.125 16.3474C152.6 16.3474 153.25 16.2468 153.75 15.8193C154.05 15.5678 154.3 15.1654 154.3 14.5869C154.3 14.0839 154.1 13.757 153.75 13.4803C153.325 13.1282 152.375 12.8013 151.925 12.6252L150.65 12.1977C149.925 11.9462 149.076 11.6192 148.476 10.9905C147.651 10.1354 147.551 9.05396 147.551 8.32462C147.551 6.96653 147.976 5.80964 148.901 4.87909C150 3.7725 151.3 3.4707 152.75 3.4707C153.825 3.4707 155.55 3.64675 157.375 4.97969L155.8 7.54497Z"/>
+            <path
+              d="M41.2085 25.7785C41.1085 25.6025 40.9586 25.3761 40.7836 25.2504C40.6586 25.1498 40.3836 24.9989 39.9836 24.9989C39.2837 24.9989 38.7837 25.4264 38.7837 26.0803C38.7837 26.357 38.8587 26.5079 39.0587 26.6839C39.2587 26.8851 39.5337 27.0109 39.8086 27.1115L40.4836 27.4133C40.9086 27.5893 41.2835 27.7654 41.5835 28.0672C41.9335 28.4192 42.0835 28.8216 42.0835 29.3246C42.0835 30.6073 41.1085 31.4624 39.8336 31.4624C39.3587 31.4624 38.7837 31.3618 38.2837 30.9091C37.9338 30.5821 37.7338 30.1043 37.6338 29.6767L38.4087 29.4755C38.4587 29.8528 38.6337 30.1546 38.8337 30.3558C39.1337 30.6576 39.4837 30.733 39.8586 30.733C40.8336 30.733 41.2835 30.054 41.2835 29.3498C41.2835 29.048 41.1835 28.7713 40.9336 28.545C40.7336 28.3689 40.4586 28.2432 40.0836 28.0672L39.4587 27.7654C39.1837 27.6396 38.8337 27.4887 38.5087 27.1869C38.2087 26.8851 38.0088 26.5833 38.0088 26.0552C38.0088 24.9737 38.8587 24.2695 39.9836 24.2695C40.4086 24.2695 40.7586 24.345 41.1085 24.5713C41.3835 24.7474 41.6335 25.0492 41.8085 25.351L41.2085 25.7785Z"/>
+            <path d="M44.8333 25.1498V31.3618H44.0584V25.1498H42.3335V24.4204H46.5582V25.1498H44.8333Z"/>
+            <path
+              d="M50.7327 28.6708L49.5328 25.8791L48.3329 28.6708H50.7327ZM51.0577 29.4001H48.0579L47.2079 31.3618H46.333L49.5828 24.0684L52.7575 31.3618H51.8826L51.0577 29.4001Z"/>
+            <path
+              d="M54.5323 27.6396H55.0322C56.0072 27.6396 56.5821 27.1869 56.5821 26.3569C56.5821 25.9797 56.4571 25.5773 56.0322 25.3258C55.7072 25.1498 55.3572 25.1246 55.0072 25.1246H54.5323V27.6396ZM54.8822 24.4204C55.3572 24.4204 56.0822 24.4456 56.6071 24.7977C57.0321 25.0743 57.3821 25.6025 57.3821 26.3318C57.3821 27.3881 56.6821 28.1677 55.6072 28.2432L57.857 31.3618H56.9071L54.7573 28.3186H54.5323V31.3618H53.7573V24.4204H54.8822Z"/>
+            <path d="M60.8069 25.1498V31.3618H60.032V25.1498H58.3071V24.4204H62.5318V25.1498H60.8069Z"/>
+            <path
+              d="M64.3816 28.6707C64.3816 29.2492 64.3816 29.9031 64.9315 30.3558C65.2065 30.6073 65.7065 30.7582 66.1065 30.7582C66.5064 30.7582 66.9814 30.6073 67.2814 30.3558C67.8313 29.8779 67.8313 29.2492 67.8313 28.6707V24.4204H68.6063V28.8971C68.6063 29.4755 68.5313 30.054 68.1563 30.557C67.7313 31.1354 66.9814 31.4875 66.0815 31.4875C65.1815 31.4875 64.4316 31.1354 64.0066 30.557C63.6316 30.0288 63.5566 29.4755 63.5566 28.8971V24.4204H64.3316V28.6707H64.3816Z"/>
+            <path
+              d="M71.2311 27.6144H71.881C72.806 27.6144 73.3809 27.1617 73.3809 26.3569C73.3809 25.2504 72.331 25.1498 71.8311 25.1498H71.2561V27.6144H71.2311ZM71.7311 24.4204C72.431 24.4204 73.031 24.4959 73.5059 24.8983C74.0309 25.3258 74.1559 25.9546 74.1559 26.3821C74.1559 27.3629 73.5309 28.3186 71.906 28.3186H71.2061V31.3366H70.4312V24.3953H71.7311V24.4204Z"/>
+            <path
+              d="M80.9058 25.7785C80.8058 25.6025 80.6558 25.3761 80.4808 25.2504C80.3558 25.1498 80.0809 24.9989 79.6809 24.9989C78.9809 24.9989 78.481 25.4264 78.481 26.0803C78.481 26.357 78.556 26.5079 78.7559 26.6839C78.9559 26.8851 79.2309 27.0109 79.5059 27.1115L80.1808 27.4133C80.6058 27.5893 80.9808 27.7654 81.2808 28.0672C81.6307 28.4192 81.7807 28.8216 81.7807 29.3246C81.7807 30.6073 80.8058 31.4624 79.5309 31.4624C79.0559 31.4624 78.481 31.3618 77.981 30.9091C77.631 30.5821 77.431 30.1043 77.3311 29.6767L78.106 29.4755C78.156 29.8528 78.331 30.1546 78.531 30.3558C78.8309 30.6576 79.1809 30.733 79.5559 30.733C80.5308 30.733 80.9808 30.054 80.9808 29.3498C80.9808 29.048 80.8808 28.7713 80.6308 28.545C80.4308 28.3689 80.1558 28.2432 79.7809 28.0672L79.1559 27.7654C78.8809 27.6396 78.531 27.4887 78.206 27.1869C77.906 26.8851 77.706 26.5833 77.706 26.0552C77.706 24.9737 78.556 24.2695 79.6809 24.2695C80.1059 24.2695 80.4558 24.345 80.8058 24.5713C81.0808 24.7474 81.3308 25.0492 81.5057 25.351L80.9058 25.7785Z"/>
+            <path d="M84.5301 25.1498V31.3618H83.7551V25.1498H82.0303V24.4204H86.255V25.1498H84.5301Z"/>
+            <path
+              d="M88.1052 28.6707C88.1052 29.2492 88.1052 29.9031 88.6552 30.3558C88.9302 30.6073 89.4301 30.7582 89.8301 30.7582C90.2301 30.7582 90.705 30.6073 91.005 30.3558C91.555 29.8779 91.555 29.2492 91.555 28.6707V24.4204H92.3299V28.8971C92.3299 29.4755 92.2549 30.054 91.8799 30.557C91.455 31.1354 90.705 31.4875 89.8051 31.4875C88.9052 31.4875 88.1552 31.1354 87.7302 30.557C87.3553 30.0288 87.2803 29.4755 87.2803 28.8971V24.4204H88.0552V28.6707H88.1052Z"/>
+            <path
+              d="M94.9546 30.6324H95.6546C96.2045 30.6324 97.0045 30.5821 97.6794 30.0037C98.2044 29.5761 98.6294 28.8719 98.6294 27.8911C98.6294 26.2312 97.4295 25.1498 95.6546 25.1498H94.9546V30.6324ZM94.1797 24.4204H95.6296C96.3295 24.4204 97.3545 24.4959 98.2294 25.2252C98.8793 25.7534 99.4293 26.6336 99.4293 27.8911C99.4293 29.3498 98.7044 30.1294 98.1794 30.557C97.5294 31.1103 96.8545 31.3618 95.6046 31.3618H94.1797V24.4204Z"/>
+            <path d="M101.654 24.4204H100.879V31.3618H101.654V24.4204Z"/>
+            <path
+              d="M103.904 27.8911C103.904 29.4755 105.179 30.7582 106.779 30.7582C108.379 30.7582 109.654 29.4755 109.654 27.8911C109.654 26.3067 108.379 25.024 106.779 25.024C105.179 25.024 103.904 26.3067 103.904 27.8911ZM103.104 27.8911C103.104 25.8288 104.754 24.2947 106.779 24.2947C108.804 24.2947 110.453 25.8037 110.453 27.8911C110.453 29.9534 108.829 31.4875 106.779 31.4875C104.729 31.4875 103.104 29.9534 103.104 27.8911Z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-tablet">
+      </div>
+    </div>
+    <div class="mdc-layout-grid__inner navigation-bar">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop">
+        <nav class="menu navigation-left">
+          <ul class="menu__list">
+            <li class=""><a href="#pitch-us">Pitch to us</a></li>
+            <li class=""><a href="#portfolio">Portfolio</a></li>
+            <li class=""><a href="#network">Network</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop"></div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop">
+        <nav class="menu navigation-right">
+          <ul class="menu__list">
+            <li class=""><a href="https://www.topmonks.com/about-us/#team">Team</a></li>
+            <li class=""><a href="https://blog.topmonks.com/">Blog</a></li>
+            <li class=""><a href="https://www.topmonks.com/about-us/">About us</a></li>
+            <li class=""><a href="https://www.topmonks.com/contact/">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </div>
+  <script>
+    var appBar = document.querySelector(".app-bar");
+    var hamburger = document.querySelector(".hamburger__container");
+    var menu = Array.from(document.querySelectorAll(".menu"));
+    var links = Array.from(document.querySelectorAll(".menu a"));
+    hamburger.addEventListener("click", toggleMenu());
+    links.forEach(l => l.addEventListener("click", toggleMenu()));
+
+    function toggleMenu() {
+      return () => {
+        if (window.matchMedia("(max-width: 840px)").matches) {
+          hamburger.classList.toggle("hamburger__container--open");
+          appBar.classList.toggle("app-bar--open");
+        }
+      };
+    }
+
+    var lastPosition = 0;
+    var ticking = false;
+    document.addEventListener("scroll", function () {
+      lastPosition = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          if (lastPosition > 0) {
+            appBar.classList.add("app-bar--sticky");
+          } else {
+            appBar.classList.remove("app-bar--sticky");
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          if (window.matchMedia("(min-width: 841px)").matches) {
+            menu.forEach(m => m.classList.add("menu--horizontal"));
+          } else {
+            menu.forEach(m => m.classList.remove("menu--horizontal"));
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    if (window.matchMedia("(min-width: 841px)").matches) {
+      menu.forEach(m => m.classList.toggle("menu--horizontal"));
+    }
+  </script>
+</header>
+
+<section class="intro">
+  <div class="mdc-layout-grid layout-arx">
+    <div class="mdc-layout-grid__inner">
+      <div class="white-box box-shadow mdc-layout-grid__cell">
+        <p>We are proud of our<br>20-year track record of building great companies in
+          successful partnerships with business owners and managers.</p>
+        <div class="button">
+          <a class="button--info" href="">MORE INFO</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+</div>
+<section class="about-us">
+  <div class="mdc-layout-grid layout-arx">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <h2>Mission statement</h2>
+        <p>Our core objective is to form successful partnerships with owners, managers
+          and other stakeholders to realise the full potential of our portfolio companies
+          while achieving superior returns for the firm‘s&nbsp;investors and partner
+          entrepreneurs.</p>
+      </div>
+      <div
+        class="about-us--side-text mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <h2>Background history</h2>
+        <p>With more than € 300&nbsp;million raised in four funds, ARX has become a
+          leading private equity firm in its segment operating in the Central European
+          region. We’re proud of our 20-year track-record investing in and supporting
+          the growth of mid-sized companies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="">
+  <div class="mdc-layout-grid layout-arx">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Facts and figures</h2>
+      </div>
+      <div class="facts-box mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <div class="white-box">
+          <h3>$4.2B</h3>
+          <p>committed capital under management</p>
+        </div>
+        <div class="white-box">
+          <h3>$25M – 1B</h3>
+          <p>committed capital under management</p>
+        </div>
+        <div class="white-box">
+          <h3>$330M</h3>
+          <p>committed capital under management</p>
+        </div>
+        <div class="white-box">
+          <h3>$4B</h3>
+          <p>committed capital under management</p>
+        </div>
+        <div class="white-box">
+          <h3>100+</h3>
+          <p>committed capital under management</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="believes">
+  <div class="mdc-layout-grid layout-arx">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <h2>What we believe in</h2>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <h3>Partnership</h3>
+        <p>At ARX we believe in the power of successful partnerships. Our primary goal
+          is to partner with owners and managers in releasing growth potential and
+          developing businesses.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="mdc-layout-grid layout-arx">
+    <div class="mdc-layout-grid__inner">
+      <div class="team--bg-1 mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <h2>Meet our team</h2>
+        <div class="button">
+          <a class="button--info" href="">MORE INFO</a>
+        </div>
+      </div>
+      <div class="team--bg-2 mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="believes">
+  <div class="mdc-layout-grid layout-arx">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Recent news</h2>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+      </div>
+    </div>
+  </div>
+</section>
 </body>
 
 </html>
