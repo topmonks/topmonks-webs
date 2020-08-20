@@ -15,16 +15,18 @@ html {
   scroll-behavior: smooth;
 }
 
-html {
+body {
   background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
   background-size: 70% auto;
-  z-index: 0;
+}
+
+.white-box {
+  background: var(--mdc-theme--primary);
 }
 
 
 .intro {
-  z-index: 10;
-
+  margin-top: 3em;
   p {
     font-size: 40px;
     font-weight: normal;
@@ -40,7 +42,7 @@ html {
   }
 }
 
-.about-us {
+.about {
   margin-top: 6em;
 
   h2:after {
@@ -56,23 +58,35 @@ html {
     max-width: 430px;
   }
 
-  .about-us--side-text {
+  .about--side-text {
     margin-top: 12em;
+    background: url("/assets/img/about-bg02.jpg") no-repeat;
+    background-size: cover;
   }
 }
 
-.facts-box {
-  display: inline-flex;
-  text-align: center;
-
-  p {
-    font-size: 18px;
-    line-height: 22px;
-    color: #6A6A6A;
+.facts {
+  min-height: 500px;
+  margin: 3em 0;
+  background: url("/assets/img/facts-bg.jpg") no-repeat;
+  background-size: 50% auto;
+  h2 {
+    color: var(--mdc-theme--primary);
+    padding-top: 0.5em;
   }
 
-  .white-box {
-    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.07);
+  .facts-box {
+    display: inline-flex;
+    text-align: center;
+
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      color: var(--mdc-theme--secondary-light);
+    }
+    .white-box {
+      box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.07);
+    }
   }
 }
 
