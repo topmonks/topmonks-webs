@@ -19,31 +19,34 @@ addEventListener("DOMContentLoaded", async e => {
 
 function tableTemplate(data) {
   //return data.sort((a, b) => a.sortKey - b.sortKey).map(shopTemplate);
+  console.log(data.map(shopTemplate));
   return data.map(shopTemplate);
 }
 
 function shopTemplate({
-                        order,
-                        realSalePerc,
-                        finalPrice,
-                        realSaleAbs,
+                        historyItems30Days,
+                        date,
+                        shop,
+                        itemId,
                         itemName,
-                        itemImage,
                         itemUrl,
-                        fromDate,
-                        shop
+                        minPrice30Days,
+                        currentPrice,
+                        max_price,
+                        sale_abs,
+                        sale_perc
+
 }) {
   return html`
     <tr class="dashboard-row">
-      <th>${order}</th>
-      <td>${formatPercents(realSalePerc/100)}</td>
-      <td>${formatMoney(finalPrice)}</td>
-      <td>${formatMoney(realSaleAbs)}</td>
+      <th>.</th>
+      <td>${formatPercents(sale_perc/100)}</td>
+      <td>${formatMoney(Math.round(minPrice30Days))}</td>
+      <td>${formatMoney(Math.round(sale_abs))}</td>
+      <td>${formatMoney(Math.round(currentPrice))}</td>
+      <td>${(date)}</td>
       <td>${productLinkTemplate(shops.get(shop), itemName, itemUrl)}</td>
-
-      <td><img src="${itemImage}" width="50" height="50"></td>
       <td>${logoTemplate(shops.get(shop))}</td>
-
     </tr>
   `;
 }
@@ -61,7 +64,7 @@ function logoTemplate({ logo, name, url, viewBox }) {
 }
 
 function productLinkTemplate({ logo, name, url, viewBox }, itemName, itemUrl) {
-  const productUrl = url + "/" + itemUrl
+  const productUrl = itemUrl;
   return html`
     <a href="${productUrl}" target="_blank">${itemName}</a>
   `;
