@@ -7,6 +7,8 @@ services:
       DB_SERVER: dev-postgres.cwd4mvussnuk.eu-central-1.rds.amazonaws.com:5432
       DB_PASSWORD_FILE: /run/secrets/postgres-password
       DB_USER: monkadmin
+    logging:
+      driver: json
     networks:
       - proxy
     secrets:
@@ -27,6 +29,9 @@ services:
       placement:
         constraints:
           - node.role == worker
+        restart_policy:
+          condition: on-failure
+          max_attempts: 3
 secrets:
   postgres-password:
     external: true
