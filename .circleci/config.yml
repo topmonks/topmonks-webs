@@ -224,6 +224,7 @@ workflows:
             branches:
               only: trunk
       - deploy_lhci:
+          name: deploy-lighthouse-ci
           context: org-swarmpit-dev
           requires:
             - publish-lhci
@@ -245,6 +246,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-www-topmonks-com
           site_name: www.topmonks.com
@@ -261,6 +263,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-blockchain-topmonks-com
           site_name: blockchain.topmonks.com
@@ -277,6 +280,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-studio-topmonks-com
           site_name: studio.topmonks.com
@@ -293,6 +297,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-www-topmonks-cz
           site_name: www.topmonks.cz
@@ -309,6 +314,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-caffe-topmonks-cz
           site_name: caffe.topmonks.cz
@@ -325,6 +331,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-prodeti-topmonks-cz
           site_name: prodeti.topmonks.cz
@@ -341,6 +348,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-session-monk-topmonks-com
           site_name: session-monk.topmonks.com
@@ -364,6 +372,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-monkslab-cz
           site_name: monkslab.cz
@@ -390,6 +399,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-www-hlidacshopu-cz
           site_name: www.hlidacshopu.cz
@@ -416,6 +426,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-www-ingridapp-io
           site_name: www.ingridapp.io
@@ -432,6 +443,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-arx-monks-cloud
           site_name: arx.monks.cloud
