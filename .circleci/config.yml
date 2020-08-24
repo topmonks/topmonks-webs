@@ -195,7 +195,7 @@ jobs:
       docker/docker
     steps:
       - checkout
-      - swarmpit/deploy:
+      - swarmpit/deploy_stack:
           stack_name: lighthouse-ci
           compose_file_path: lhci.dev.tmcloud.io/docker-compose.yml
 
