@@ -1,9 +1,8 @@
-const {
-  DB_USER: user,
-  DB_PASSWORD: password,
-  DB_SERVER: dbserver,
-  DB_NAME: dbname
-} = process.env;
+const { DB_USER, DB_PASSWORD, DB_SERVER, DB_NAME } = process.env;
+
+let user = encodeURIComponent(DB_USER);
+let password = encodeURIComponent(DB_PASSWORD);
+let sqlConnectionUrl = `postgres://${user}:${password}@${DB_SERVER}/${DB_NAME}`;
 
 module.exports = {
   ci: {
@@ -12,7 +11,7 @@ module.exports = {
       storage: {
         storageMethod: "sql",
         sqlDialect: "postgres",
-        sqlConnectionUrl: `postgres://${user}:${password}@${dbserver}/${dbname}`
+        sqlConnectionUrl
       }
     }
   }
