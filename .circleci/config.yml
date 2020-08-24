@@ -194,12 +194,7 @@ jobs:
     executor:
       docker/docker
     steps:
-      - setup_remote_docker
       - checkout
-      - docker/publish:
-          path: lhci.dev.tmcloud.io
-          image: topmonks/lhci-server
-          tag: latest
       - swarmpit/deploy:
           stack_name: lighthouse-ci
           compose_file_path: lhci.dev.tmcloud.io/docker-compose.yml
@@ -219,8 +214,19 @@ workflows:
           filters:
             branches:
               only: trunk
+      - docker/publish:
+          name: publish-lhci
+          context: org-global
+          path: lhci.dev.tmcloud.io
+          image: topmonks/lhci-server
+          tag: latest
+            filters:
+              branches:
+                only: trunk
       - deploy_lhci:
           context: org-swarmpit-dev
+          requires:
+            - publish-lhci
           filters:
             branches:
               only: trunk
