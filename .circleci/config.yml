@@ -7,7 +7,7 @@ orbs:
   docker: circleci/docker@1.4.0
   github: topmonks/github@1.0.1
   pulumi: pulumi/pulumi@2.0.0
-  swarmpit: topmonks/swarmpit@1.0.4
+  swarmpit: topmonks/swarmpit@1.1.0
 
 executors:
   nodejs:
