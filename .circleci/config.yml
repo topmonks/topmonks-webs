@@ -216,7 +216,7 @@ workflows:
               only: trunk
       - docker/publish:
           name: publish-lhci
-          context: org-global
+          context: org-docker
           path: lhci.dev.tmcloud.io
           image: topmonks/lhci-server
           tag: latest
