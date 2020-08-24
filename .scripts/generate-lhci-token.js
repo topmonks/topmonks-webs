@@ -25,8 +25,10 @@ async function addLhciTokens() {
 
   for (const name in websites) {
     console.log("generating token for:", name);
-    if (websites[name]["lh-token"]) continue;
-    websites[name] = { "lh-token": await generateLighthouseToken(name) };
+    if (websites[name].lhci?.upload?.token) continue;
+    websites[name] = Object.assign({}, websites[name], {
+      lhci: { upload: { token: await generateLighthouseToken(name) } }
+    });
   }
   return fs.promises.writeFile(
     filePath,
