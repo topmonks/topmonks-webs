@@ -217,6 +217,7 @@ workflows:
       - docker/publish:
           name: publish-lhci
           context: org-docker
+          docker-context: lhci.dev.tmcloud.io
           path: lhci.dev.tmcloud.io
           image: topmonks/lhci-server
           tag: latest
