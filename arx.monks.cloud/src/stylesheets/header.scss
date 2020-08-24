@@ -2,20 +2,18 @@ header,
 footer {
   a {
     text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
 
 header {
-  z-index: 10;
+  z-index: 1000;
   --mdc-layout-grid-margin-desktop: 0 24px;
   --mdc-layout-grid-margin-tablet: 0;
   --mdc-layout-grid-margin-phone: 0;
 
   li a {
+    font-size: 18px;
+    font-weight: normal;
     text-transform: uppercase;
     color: var(--mdc-theme--primary);
     &:link,
@@ -24,7 +22,11 @@ header {
     }
 
     &:hover {
-      color: var(--mdc-theme--third);
+     text-decoration: underline;
+    }
+
+    @media (max-width: 1080px) {
+      font-size: 16px;
     }
   }
 
@@ -33,12 +35,7 @@ header {
     top: 0;
     width: 100vw;
     z-index: 1000;
-    background-color: var(--mdc-theme--third);
-  }
-
-  .logo {
-    align-self: center;
-    padding-top: 20px;
+    background-color: var(--mdc-theme--primary);
   }
 }
 
@@ -62,27 +59,13 @@ header {
     list-style: none;
     display: -ms-inline-flexbox;
     display: inline-flex;
-
-    &:hover {
-      color: var(--mdc-theme-secondary);
-    }
   }
 }
-
-section.purple-gradient {
-  background: var(--mdc-theme-secondary-background);
-  padding-bottom: 2em;
-}
-
-nav {
-  text-transform: uppercase;
-}
-
 
 // HAMBURGER //
 
 .app-bar {
-  height: 110px;
+  padding: 14px 0;
   overflow: hidden;
 
   &.app-bar--sticky {
@@ -90,8 +73,14 @@ nav {
     top: 0;
     z-index: 1000;
     width: 100vw;
-    background-color: var(--mdc-theme--third);
+    background-color: var(--mdc-theme--primary);
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.07);
+    a {
+      color: var(--mdc-theme--third);
+    }
+    @media screen and (max-width: 913px) {
+      height: 58px;
+    }
   }
   &.app-bar--open {
     overflow: visible;
@@ -101,6 +90,7 @@ nav {
   }
 
   @media screen and (max-width: 913px) {
+    height: 58px;
     padding-top: 8px;
 
     .app-bar_menu {
@@ -114,11 +104,14 @@ nav {
       transform: scaleY(1) translateY(-4px);
       visibility: visible;
     }
-    .arx-logo {
-      order: 1;
+    .logo {
       display: flex;
       align-items: baseline;
       transform: translate(16px, 8px);
+      svg {
+        width: 44px;
+        height: 44px;
+      }
     }
     .hamburger {
       order: 2;
@@ -144,7 +137,7 @@ nav {
   }
 
   .hamburger__bar {
-    background-color: var(--mdc-theme-secondary);
+    background-color: var(--mdc-theme--primary);
     width: 20px;
     height: 2px;
     border-radius: 10px;
@@ -178,23 +171,23 @@ nav {
 
 .app-bar--sticky {
   .hamburger .hamburger__bar {
-    background: var(--mdc-theme-secondary);
+    background: var(--mdc-theme--primary);
   }
 
   .hamburger .hamburger__container::after {
-    color: var(--mdc-theme-secondary);
+    color: var(--mdc-theme--primary);
   }
 }
 
 .app-bar.app-bar--open {
-  color: var(--mdc-theme-secondary);
+  color: var(--mdc-theme--primary);
 
   .hamburger__container::after {
-    color: var(--mdc-theme-secondary);
+    color: var(--mdc-theme--primary);
   }
 
   .hamburger__bar {
-    background-color: var(--mdc-theme-secondary);
+    background-color: var(--mdc-theme--primary);
   }
 }
 
@@ -202,7 +195,8 @@ nav {
   @media screen and (max-width: 913px) {
     width: 100vw;
     overflow: hidden;
-    background-color: #fff;
+    z-index: 1000;
+    background-color: var(--mdc-theme--primary);
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.07);
     ul.menu__list {
       display: grid;
@@ -214,10 +208,10 @@ nav {
       margin: 0 24px;
     }
     .menu__list li + li {
-      border-top: 1px solid #eaeef2;
+      border-top: 1px solid var(--mdc-theme--third);
     }
     .menu__list a {
-      color: var(--mdc-theme-secondary);
+      color: var(--mdc-theme--third);
       display: block;
       padding: 12px;
       margin: 4px;
@@ -282,10 +276,10 @@ nav {
     }
 
     &:hover {
-      border-color: var(--mdc-theme-secondary-dark);
+      border-color: var(--mdc-theme--primary);
 
       a {
-        color: var(--mdc-theme-secondary-dark) !important;
+        color: var(--mdc-theme--primary) !important;
       }
     }
   }

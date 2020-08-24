@@ -7,22 +7,26 @@ body {
   margin: 0;
 }
 
-h1 {
+h1, h2, h3 {
+  text-transform: uppercase;
+}
 
+h1 {
+  font-size: 64px;
+  font-weight: normal;
+  line-height: 32px;
 }
 
 h2 {
   font-size: 44px;
   font-weight: normal;
   line-height: 42px;
-  text-transform: uppercase;
 }
 
 h3 {
   font-size: 36px;
   font-weight: normal;
   line-height: 44px;
-  text-transform: uppercase;
 }
 
 p {
@@ -33,6 +37,16 @@ p {
 
 a {
   text-decoration: none;
+}
+
+span.date {
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--mdc-theme--secondary-light);
+}
+
+.text-center {
+  text-align: center;
 }
 
 .button {
