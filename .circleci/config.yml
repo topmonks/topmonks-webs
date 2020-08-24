@@ -1,11 +1,13 @@
 version: 2.1
 orbs:
-  browser-tools: circleci/browser-tools@1.0.1
   aws-cli: circleci/aws-cli@1.2.1
   aws-cloudfront: topmonks/aws-cloudfront@1.0.0
   aws-s3: circleci/aws-s3@1.0.15
+  browser-tools: circleci/browser-tools@1.0.1
+  docker: circleci/docker@1.4.0
   github: topmonks/github@1.0.1
   pulumi: pulumi/pulumi@2.0.0
+  swarmpit: topmonks/swarmpit@1.0.4
 
 executors:
   nodejs:
@@ -188,6 +190,20 @@ jobs:
       - github/merge_pr:
           rebase: true
 
+  deploy_lhci:
+    executor:
+      docker/docker
+    steps:
+      - setup_remote_docker
+      - checkout
+      - docker/publish:
+          path: lhci.dev.tmcloud.io
+          image: topmonks/lhci-server
+          tag: latest
+      - swarmpit/deploy:
+          stack_name: lighthouse-ci
+          compose_file_path: lhci.dev.tmcloud.io/docker-compose.yml
+
 workflows:
   build_and_deploy:
     jobs:
@@ -200,6 +216,11 @@ workflows:
               ignore: trunk
       - provision:
           context: org-global
+          filters:
+            branches:
+              only: trunk
+      - deploy_lhci:
+          context: org-swarmpit-dev
           filters:
             branches:
               only: trunk
