@@ -220,9 +220,9 @@ workflows:
           path: lhci.dev.tmcloud.io
           image: topmonks/lhci-server
           tag: latest
-            filters:
-              branches:
-                only: trunk
+          filters:
+            branches:
+              only: trunk
       - deploy_lhci:
           context: org-swarmpit-dev
           requires:
