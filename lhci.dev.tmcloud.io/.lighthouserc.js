@@ -8,6 +8,7 @@ const {
 module.exports = {
   ci: {
     server: {
+      port: "9001",
       storage: {
         storageMethod: "sql",
         sqlDialect: "postgres",

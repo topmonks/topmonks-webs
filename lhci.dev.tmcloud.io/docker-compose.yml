@@ -7,14 +7,10 @@ services:
       DB_SERVER: dev-postgres.cwd4mvussnuk.eu-central-1.rds.amazonaws.com:5432
       DB_PASSWORD_FILE: /run/secrets/postgres-password
       DB_USER: monkadmin
-    logging:
-      driver: json
     networks:
       - proxy
     secrets:
       - postgres-password
-    volumes:
-      - lhci-data:/data
     deploy:
       replicas: 1
       labels:
@@ -38,6 +34,3 @@ secrets:
 networks:
   proxy:
     external: true
-volumes:
-  lhci-data:
-    driver: cloudstor:aws
