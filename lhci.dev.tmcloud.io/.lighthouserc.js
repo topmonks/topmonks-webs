@@ -4,8 +4,6 @@ let user = encodeURIComponent(DB_USER);
 let password = encodeURIComponent(DB_PASSWORD);
 let sqlConnectionUrl = `postgres://${user}:${password}@${DB_SERVER}/${DB_NAME}`;
 
-console.log("Connection URL:", sqlConnectionUrl);
-
 module.exports = {
   ci: {
     server: {

@@ -14,14 +14,16 @@ services:
     deploy:
       replicas: 1
       labels:
-        traefik.frontend.headers.STSSeconds: '315360000'
+        traefik.enable: 'true'
+        traefik.docker.network: proxy
+        traefik.frontend.auth.basic.removeHeader: 'true'
+        traefik.frontend.auth.basic.users: 'admin:$apr1$Fm.nQhpt$gpSg3OvssXIdD6FLVyDzb1'
         traefik.frontend.headers.forceSTSHeader: 'true'
         traefik.frontend.headers.STSIncludeSubdomains: 'true'
         traefik.frontend.headers.STSPreload: 'true'
-        traefik.docker.network: proxy
-        traefik.enable: 'true'
-        traefik.port: '9001'
+        traefik.frontend.headers.STSSeconds: '315360000'
         traefik.frontend.rule: Host:lhci.dev.tmcloud.io
+        traefik.port: '9001'
       placement:
         constraints:
           - node.role == worker
