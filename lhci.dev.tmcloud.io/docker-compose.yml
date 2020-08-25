@@ -28,6 +28,20 @@ services:
       restart_policy:
         condition: on-failure
         max_attempts: 3
+  lhci-db-init:
+    image: postgres:10-alpine
+    command: psql -h dev-postgres.cwd4mvussnuk.eu-central-1.rds.amazonaws.com -U monkadmin -c 'create database lhci;'
+    environment:
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres-password
+    secrets:
+      - postgres-password
+    logging:
+      driver: json-file
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == worker
 secrets:
   postgres-password:
     external: true
