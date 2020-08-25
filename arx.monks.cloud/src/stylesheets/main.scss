@@ -17,17 +17,61 @@ html {
 
 body {
   background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
-  background-size: 70% auto;
+  background-size: 70% 744px;
+  object-fit: cover;
+}
+
+.box {
+  background: var(--mdc-theme--primary);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.07);
+
+  .box--logo {
+    text-align: center;
+    align-self: center;
+    padding-top: 28px;
+
+    svg {
+      width: 60%;
+      height: 80px;
+    }
+  }
+  .box--text {
+    padding: 0 28px 14px;
+
+    h3 {
+      margin: 8px 0;
+    }
+
+    p {
+      opacity: .43;
+      margin-top: 0;
+    }
+  }
+
+  hr {
+    border: 1px solid #DBDBDB;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(.98);
+    transition: all .3s ease-out;
+  }
 }
 
 .white-box {
   background: var(--mdc-theme--primary);
 }
+
 .yellow-box {
   background: var(--mdc-theme--fourth);
 }
 
-.underline--light:after  {
+.dark-box {
+  color: var(--mdc-theme--primary);
+  background: var(--mdc-theme--third);
+}
+
+.underline--light:after {
   content: "";
   width: 40%;
   height: 4px;
@@ -45,10 +89,20 @@ body {
   margin: 30px 0;
 }
 
+.border-bg {
+  display: block;
+  width: 93px;
+  height: 93px;
+  border: 10px solid var(--mdc-theme--third);
+  box-sizing: border-box;
+  margin-top: 1em;
+}
 
-  /* INTRO */
+
+/* INTRO */
 .intro {
   margin-top: 3em;
+  min-height: 700px;
 
   p {
     font-size: 40px;
@@ -60,6 +114,7 @@ body {
   .intro-box {
     z-index: 10;
     width: 660px;
+    min-height: 510px;
     padding: 44px;
     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.03);
   }
@@ -67,10 +122,8 @@ body {
 
 /* ABOUT */
 .about {
-  margin-top: 6em;
-
   p {
-    max-width: 430px;
+    max-width: 76%;
   }
 
   .about--bg {
@@ -84,12 +137,12 @@ body {
 .investments {
   margin: 3em 0;
 
-  h2 {
+  h3 {
     color: var(--mdc-theme--primary);
     padding-top: 0.5em;
   }
 
-  .box {
+  .investments--box {
     display: inline-flex;
     text-align: center;
 
@@ -115,12 +168,7 @@ body {
 }
 
 /* OUR BELIEVES */
-.believes {
-  h3 {
-    font-size: 26px;
-    line-height: 32px;
-  }
-}
+
 
 /* TEAM */
 .team {
@@ -142,6 +190,7 @@ body {
 
 .news {
   background-color: var(--mdc-theme--secondary-bg);
+
   .article-title {
     height: 120px;
     white-space: nowrap;
@@ -149,10 +198,11 @@ body {
     text-overflow: ellipsis;
   }
 
-  h3 {
+  h4 {
     font-size: 22px;
     font-weight: bold;
     line-height: 27px;
+    text-transform: initial;
   }
 
   p {
@@ -170,6 +220,7 @@ body {
 
 footer {
   padding: 3em 0 5em;
+
   ul {
     list-style: none;
     padding: 0;
@@ -187,9 +238,11 @@ footer {
       }
     }
   }
+
   .sro {
     display: inline-flex;
     align-self: center;
+
     p {
       font-size: 16px;
       line-height: 19px;
@@ -198,6 +251,7 @@ footer {
       margin: 8px 0 0 16px;
     }
   }
+
   p.legal-notice {
     font-size: 12px;
     line-height: 14px;

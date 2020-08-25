@@ -7,32 +7,41 @@ body {
   margin: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
+  font-weight: normal;
   text-transform: uppercase;
 }
 
-h1 {
-  font-size: 64px;
-  font-weight: normal;
-  line-height: 32px;
-}
-
 h2 {
-  font-size: 44px;
-  font-weight: normal;
+  font-size: 64px;
   line-height: 42px;
 }
 
 h3 {
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 44px;
+  font-size: 44px;
+  line-height: 42px;
+}
+
+h4 {
+  font-size: 26px;
+  line-height: 32px;
 }
 
 p {
   font-size: 20px;
   font-weight: normal;
   line-height: 32px;
+}
+
+.sub-title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  text-transform: initial;
+}
+
+.text-opacity {
+  opacity: 0.67;
 }
 
 a {
@@ -44,6 +53,7 @@ span.date {
   line-height: 22px;
   color: var(--mdc-theme--secondary-light);
 }
+
 
 .text-center {
   text-align: center;

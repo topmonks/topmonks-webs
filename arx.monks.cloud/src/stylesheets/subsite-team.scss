@@ -1,0 +1,30 @@
+.team {
+  h2 {
+    color: var(--mdc-theme--third);
+  }
+  span {
+    color: var(--mdc-theme--primary);
+  }
+  img {
+    position: relative;
+    object-fit: cover;
+  }
+  .member {
+    position: relative;
+  }
+  .member-description {
+    position: absolute;
+    top: 25.5em;
+    left: 3em;
+  }
+  .member-name {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 32px;
+  }
+  .member-post {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 32px;
+  }
+}
