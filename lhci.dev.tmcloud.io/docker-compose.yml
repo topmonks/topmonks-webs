@@ -17,7 +17,7 @@ services:
         traefik.enable: 'true'
         traefik.docker.network: proxy
         traefik.frontend.auth.basic.removeHeader: 'true'
-        traefik.frontend.auth.basic.users: "admin:$apr1$Fm.nQhpt$gpSg3OvssXIdD6FLVyDzb1"
+        traefik.frontend.auth.basic.users: "admin:$$apr1$$Fm.nQhpt$$gpSg3OvssXIdD6FLVyDzb1"
         traefik.frontend.headers.forceSTSHeader: 'true'
         traefik.frontend.headers.STSIncludeSubdomains: 'true'
         traefik.frontend.headers.STSPreload: 'true'
