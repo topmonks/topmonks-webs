@@ -27,7 +27,7 @@
     "ava": "^3.12.1",
     "babel-eslint": "^10.1.0",
     "chalk": "^4.0.0",
-    "commander": "^6.0.0",
+    "commander": "^6.1.0",
     "dotenv": "^8.2.0",
     "dotenv-cli": "^3.2.0",
     "eslint": "^7.7.0",
