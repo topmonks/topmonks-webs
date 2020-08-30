@@ -62,6 +62,7 @@
     "marked": "^1.1.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
+    "puppeteer": "^5.2.1",
     "rimraf": "^3.0.2",
     "rollup-plugin-pnp-resolve": "^2.0.0",
     "stylelint": "^13.6.1",
@@ -117,7 +118,6 @@
   },
   "resolutions": {
     "bluebird": "npm:bluebird@3.7.2",
-    "fsevents": "npm:dummypkg-a@1.0.0",
     "lodash": "npm:lodash@4.17.19",
     "html-minifier": "npm:html-minifier-terser@5.0.3",
     "source-map-resolve": "npm:source-map-resolve@0.6.0"
