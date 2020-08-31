@@ -36,14 +36,17 @@ const config = createSharedTaskConfig(__dirname, {
       {
         collection: "news",
         template: "shared/news-entry.njk",
-        route: x => `news/${x.date.replace("T00:00:00.000Z", "")}/`
+        route: x => `news/${x.date.replace("T00:00:00.000Z", "")}/index.html`
       }
     ],
     redirects: [
       {
         collection: "news",
         route: x => [
-          x.originalUrl.replace("https://www.arxequity.com/", ""),
+          `${x.originalUrl.replace(
+            "https://www.arxequity.com/",
+            ""
+          )}index.html`,
           `news/${x.date.replace("T00:00:00.000Z", "")}/`
         ]
       }

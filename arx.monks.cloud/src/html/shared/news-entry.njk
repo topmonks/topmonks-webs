@@ -1,9 +1,10 @@
 {% extends "layouts/arx.njk" %}
+{% set title = item.title + " - News - ARX Equity partners" %}
 
 {% block main %}
   <article>
-    <h3>{{ article.title }}</h3>
-    <p><time datetime="{{ article.date }}">{{ article.date }}</time></p>
-    <p>{{ article.body }}</p>
+    <h3>{{ item.title }}</h3>
+    <p><time datetime="{{ item.date }}">{{ item.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time></p>
+    {{ item.body | safe }}
   </article>
 {% endblock %}
