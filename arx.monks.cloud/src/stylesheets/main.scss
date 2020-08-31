@@ -109,13 +109,12 @@ html {
     font-size: 40px;
     font-weight: normal;
     line-height: 46px;
-    max-width: 475px;
+    max-width: 500px;
   }
 
   .intro-box {
     z-index: 10;
     width: 660px;
-    min-height: 510px;
     padding: 44px;
     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.03);
   }
@@ -194,9 +193,6 @@ html {
 
   .article-title {
     height: 120px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   h4 {

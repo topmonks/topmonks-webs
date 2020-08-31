@@ -1,11 +1,55 @@
 {% extends "layouts/arx.njk" %}
 
+{% block head %}
+  <link rel="stylesheet" href="/assets/css/news.css">
+{% endblock %}
+
+{% block links %}
+  <style>
+    /* TODO: Move this to separate sass file and use cloudinaryUrl helper */
+    body {
+      background: #fff url("/assets/img/news-bg.jpg") top right no-repeat;
+      background-size: 70% 446px;
+    }
+  </style>
+{% endblock %}
+
 {% block main %}
+  <section class="intro">
+    <div class="mdc-layout-grid layout-arx">
+      <div class="mdc-layout-grid__inner">
+        <div class="intro-box white-box mdc-layout-grid__cell">
+          <p>News</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="mdc-layout-grid layout-arx">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h3>News About ARX</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
   {% for article in news | reverse %}
-    <article>
-      <h3><a href="/news/{{ article.date | replace("T00:00:00.000Z", "") }}/">{{ article.title }}</a></h3>
-      <p><time datetime="{{ article.date }}">{{ article.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time></p>
-      {{ article.perex | safe }}
-    </article>
+    <section class="news">
+      <div class="mdc-layout-grid layout-arx">
+        <div class="mdc-layout-grid__inner">
+          <article
+            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+            <h3><a href="/news/{{ article.date | replace("T00:00:00.000Z", "") }}/">{{ article.title }}</a></h3>
+            <p>
+              <time
+                datetime="{{ article.date }}">{{ article.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time>
+            </p>
+            {{ article.perex | safe }}
+          </article>
+        </div>
+      </div>
+    </section>
   {% endfor %}
 {% endblock %}

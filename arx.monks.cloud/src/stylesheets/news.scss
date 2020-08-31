@@ -1,0 +1,21 @@
+.news {
+  article {
+    h3, a {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 29px;
+      color: var(--mdc-theme--secondary);
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 32px;
+      color: var(--mdc-theme--secondary);
+      opacity: 0.43;
+    }
+  }
+  .intro {
+    margin-top: 3em;
+    min-height: auto;
+  }
+}
