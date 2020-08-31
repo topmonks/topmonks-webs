@@ -1233,7 +1233,7 @@
 
 "@topmonks/blendid@git://github.com/topmonks/blendid.git":
   version "6.0.0"
-  resolved "git://github.com/topmonks/blendid.git#189f4951975cb7de88835e27b24f347519db4ffc"
+  resolved "git://github.com/topmonks/blendid.git#dfd84f363e97da6b2608ebae85ddbf2465c99fc2"
   dependencies:
     "@rollup/plugin-alias" "^3.1.0"
     "@rollup/plugin-node-resolve" "^7.1.3"
