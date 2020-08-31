@@ -1,5 +1,7 @@
 @import "@material/layout-grid/mdc-layout-grid";
 @import "common/colors";
+@import "colors";
+@import "typography";
 
 :root {
   --mdc-layout-grid-margin-desktop: 24px;
@@ -15,15 +17,14 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
-  background-size: 70% 744px;
-  object-fit: cover;
+.responsive {
+  width: 100%;
+  height: auto;
 }
 
 .box {
   background: var(--mdc-theme--primary);
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.07);
 
   .box--logo {
     text-align: center;

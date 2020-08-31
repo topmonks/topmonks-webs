@@ -1,0 +1,9 @@
+{% extends "layouts/arx.njk" %}
+
+{% block main %}
+  <article>
+    <h3>{{ article.title }}</h3>
+    <p><time datetime="{{ article.date }}">{{ article.date }}</time></p>
+    <p>{{ article.body }}</p>
+  </article>
+{% endblock %}

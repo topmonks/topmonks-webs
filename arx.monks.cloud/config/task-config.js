@@ -20,48 +20,38 @@ const config = createSharedTaskConfig(__dirname, {
   stylesheets: true,
   workboxBuild: false,
 
+  generate: {
+    json: [
+      {
+        collection: "news",
+        mergeOptions: {
+          startObj: [],
+          concatArrays: true,
+          mergeArrays: false,
+          edit: x => [{ perex: x.body.split("\n").shift(), ...x }]
+        }
+      }
+    ],
+    html: [
+      {
+        collection: "news",
+        template: "shared/news-entry.njk",
+        route: x => `news/${x.date.replace("T00:00:00.000Z", "")}/`
+      }
+    ],
+    redirects: [
+      {
+        collection: "news",
+        route: x => [
+          x.originalUrl.replace("https://www.arxequity.com/", ""),
+          `news/${x.date.replace("T00:00:00.000Z", "")}/`
+        ]
+      }
+    ]
+  },
+
   html: {
     collections: ["images", "investments", "news", "team"]
-  },
-
-  news: {
-    extensions: ["md"]
-  },
-
-  additionalTasks: {
-    initialize({ task, src, dest, series, watch }, PATH_CONFIG, TASK_CONFIG) {
-      const dataPath = projectPath(PATH_CONFIG.src, PATH_CONFIG.data.src);
-      const newsSrc = projectPath(dataPath, "news/**/*.md");
-      const generateNewsJson = () =>
-        pipeline([
-          src(newsSrc),
-          markdownToJSON(marked),
-          merge({
-            fileName: "news.json",
-            startObj: [],
-            concatArrays: true,
-            mergeArrays: false,
-            edit: x => [{ perex: x.body.split("\n").shift(), ...x }]
-          }),
-          dest(dataPath)
-        ]);
-
-      task("news-data", generateNewsJson);
-      task("news:watch", done => {
-        watch(newsSrc, generateNewsJson);
-        watch(path.resolve(dataPath, "news.json"), series("html"));
-        done();
-      });
-    },
-    generateJson: ["news"],
-    generateHtml: ["news"],
-    development: {
-      prebuild: ["news-data"],
-      postbuild: ["news:watch"]
-    },
-    production: {
-      prebuild: ["news-data"]
-    }
   },
 
   browserSync: {
@@ -69,10 +59,8 @@ const config = createSharedTaskConfig(__dirname, {
       baseDir: pathConfig.dest
     }
   },
-
   production: {
     rev: true
   }
 });
-
 module.exports = config;

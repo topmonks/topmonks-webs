@@ -1,0 +1,11 @@
+{% extends "layouts/arx.njk" %}
+
+{% block main %}
+  {% for article in news | reverse %}
+    <article>
+      <h3><a href="/news/{{ article.date | replace("T00:00:00.000Z", "") }}/">{{ article.title }}</a></h3>
+      <p><time datetime="{{ article.date }}">{{ article.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time></p>
+      {{ article.perex | safe }}
+    </article>
+  {% endfor %}
+{% endblock %}
