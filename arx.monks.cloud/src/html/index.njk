@@ -133,33 +133,21 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h3>Recent news</h3>
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          {{ image("news/news01.jpg", images, alt="Recent News", width="660", tabletWidth="420", phoneWidth="380") }}
-          <span class="date">2020/05/15</span>
-          <div class="article-title">
-            <h4>ARX Equity Partners nominated for the Central and Eastern Europe Deal of the
-              Year Award and the Nagrody PSIK Private Equity Deal of the Year&nbsp;Award</h4>
-          </div>
-          <p>ARX Equity Partners has been selected as a finalist for the second
-            consecutive year for the Real Deals Central and Eastern Europe Deal of the Year
-            Award for portfolio company Anwis. Last year, ARX Equity Partners won the
-            Central and Eastern Europe Deal of the Year Award for&nbsp;VUES.</p>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          {{ image("news/news02.jpg", images, alt="Recent News", width="660", tabletWidth="420", phoneWidth="380") }}
-          <span class="date">2020/03/26</span>
-          <div class="article-title">
-            <h4>ARX Equity Partners Exits DC Bled
-              for 3.6x</h4>
-          </div>
-          <p>ARX Equity Partners (“ARX”), a private equity firm with a 20-year track
-            record supporting the growth and development of mid-sized companies in Central
-            Europe, has today completed the sale of its investment in Slovenian healthcare
-            services provider, Diagnosticni Center Bled doo (“DCB”).</p>
-        </div>
+        {%- for article in news | reverse -%}
+          {%- if loop.index <= 2 -%}
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+              {{ image(article.image, images, alt="", width="660", tabletWidth="420", phoneWidth="380") }}
+              <time class="date" datetime="{{ article.date }}">{{ article.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time>
+              <div class="article-title">
+                <h4><a href="/news/{{ article.date | replace("T00:00:00.000Z", "") }}/">{{ article.title }}</a></h4>
+              </div>
+              {{ article.perex | safe }}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <div class="button text-center">
-            <a class="button--info" href="">VIEW ALL</a>
+            <a class="button--info" href="/news/">VIEW ALL</a>
           </div>
         </div>
       </div>
