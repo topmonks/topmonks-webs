@@ -1,16 +1,17 @@
 .news_page {
   article {
-    color: var(--mdc-theme--secondary);
     h3, a {
       font-size: 24px;
       font-weight: bold;
       line-height: 29px;
+      color: var(--mdc-theme--secondary);
     }
 
     time {
       font-size: 18px;
       font-weight: normal;
       line-height: 32px;
+      color: var(--mdc-theme--secondary);
     }
 
     p {
@@ -19,6 +20,7 @@
       opacity: 0.43;
     }
   }
+
   .intro {
     margin-top: 3em;
     min-height: auto;
