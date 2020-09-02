@@ -42,12 +42,10 @@ const config = createSharedTaskConfig(__dirname, {
     redirects: [
       {
         collection: "news",
+        host: "https://www.arxequity.com",
         route: x => [
-          `${x.originalUrl.replace(
-            "https://www.arxequity.com/",
-            ""
-          )}index.html`,
-          `news/${x.date.replace("T00:00:00.000Z", "")}/`
+          x.originalUrl.replace("https://www.arxequity.com/", ""),
+          `/news/${x.date.replace("T00:00:00.000Z", "")}/`
         ]
       }
     ]
