@@ -1,3 +1,13 @@
+.intro-box:before {
+  content: "";
+  width: 40%;
+  height: 4px;
+  background-color: var(--mdc-theme--fourth);
+  display: block;
+  margin: 30px 0;
+}
+
+
 .managers {
   background: url("/assets/img/managers-bg.jpg") 100% no-repeat;
   background-size: 100% 100%;
@@ -21,4 +31,3 @@
     }
   }
 }
-
