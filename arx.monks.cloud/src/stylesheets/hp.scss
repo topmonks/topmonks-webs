@@ -1,0 +1,120 @@
+/* Devices */
+@media screen and (min-width: 1440px) {
+  body {
+    background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
+    background-size: 65% 744px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
+    background-size: 75% 744px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .intro {
+    background: url("/assets/img/header-bg.jpg") bottom center no-repeat;
+    background-size: 100% 75%;
+  }
+}
+
+/* ABOUT */
+.about {
+  p {
+    max-width: 76%;
+  }
+
+  .about--bg {
+    margin-top: 12em;
+    background: url("/assets/img/about-bg02.jpg") no-repeat;
+    background-size: cover;
+  }
+}
+
+/* FACTS AND FIGURES */
+.investments {
+  margin: 3em 0;
+
+  h3 {
+    color: var(--mdc-theme--primary);
+    padding-top: 0.5em;
+  }
+
+  .investments--box {
+    display: inline-flex;
+    text-align: center;
+
+    h4 {
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      color: var(--mdc-theme--secondary-light);
+    }
+
+    .white-box {
+      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.07);
+      @media (min-width: 740px) and (max-width: 1023px) {
+        margin-right: 10px;
+        &:nth-child(5) {
+          margin-right: 0;
+        }
+      }
+      @media (min-width: 1024px) {
+        margin-right: 14px;
+        padding: 8px 14px;
+        &:nth-child(5) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    @media (max-width: 1023px) {
+      p {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    @media (max-width: 739px) {
+      display: table-column;
+      .white-box {
+        padding: 1em;
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+
+  .investments--bg {
+    background: url("/assets/img/facts-bg.jpg") no-repeat;
+    background-size: 100% auto;
+  }
+}
+
+/* OUR BELIEVES */
+
+
+/* TEAM */
+.team {
+  color: var(--mdc-theme--primary);
+
+  .team--bg-1 {
+    align-self: center;
+    background: url("/assets/img/team-bg01.jpg") no-repeat;
+  }
+
+  .team--bg-2 {
+    margin-top: 4em;
+    background: url("/assets/img/team-bg02.jpg") no-repeat;
+    background-size: 100%;
+  }
+}
+
+/* NEWS */
+/* Described in main.scss */
+
+
