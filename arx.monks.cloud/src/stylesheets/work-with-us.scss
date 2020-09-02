@@ -1,6 +1,24 @@
 .managers {
   background: url("/assets/img/managers-bg.jpg") 100% no-repeat;
+  background-size: 100% 100%;
+  padding: 2em 0;
   .mdc-layout-grid__cell {
     width: 50%;
   }
 }
+
+.intermediaries {
+  .layout-arx {
+    padding: 0;
+  }
+  .intermediaries_main-text {
+    color: var(--mdc-theme--primary);
+    background: url("/assets/img/intermediaries-bg.jpg") 100% no-repeat;
+    background-size: 100% 887px;
+    padding: 5em 2em 5em 0;
+    .sub-title {
+      opacity: 0.77;
+    }
+  }
+}
+
