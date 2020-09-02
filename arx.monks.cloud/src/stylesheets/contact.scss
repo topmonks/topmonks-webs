@@ -1,0 +1,20 @@
+h2 {
+  font-size: 38px;
+  font-weight: normal;
+  line-height: 45px;
+}
+
+span, a {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 32px;
+  color: var(--mdc-theme--secondary);
+}
+
+.intro p {
+  color: var(--mdc-theme--primary);
+}
+
+.contact--map:hover {
+  cursor: pointer;
+}
