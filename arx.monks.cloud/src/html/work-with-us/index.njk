@@ -8,22 +8,22 @@
   /* TODO: Move this to separate sass file and use cloudinaryUrl helper */
   body {
     background: #fff url("/assets/img/case-study-bg.jpg") top right no-repeat;
-    background-size: 70% 755px;
+    background-size: 60% 755px;
   }
+  @media (max-width: 1024px) {
+    body {
+      background: #fff url("/assets/img/case-study-bg.jpg") top right no-repeat;
+      background-size: 70% auto;
+    }
+  }
+
   .intro {
     min-height: 700px;
   }
   .intro-box {
     padding: 9em 4em;
   }
-  .intro-box:before {
-    content: "";
-    width: 40%;
-    height: 4px;
-    background-color: var(--mdc-theme--fourth);
-    display: block;
-    margin: 30px 0;
-  }
+
 </style>
 {% endblock %}
 
