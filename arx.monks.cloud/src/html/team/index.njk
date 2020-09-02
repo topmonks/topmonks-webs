@@ -1,16 +1,20 @@
 {% extends "layouts/arx.njk" %}
 {% from "common/helpers.njk" import image %}
 
-{% block head %}
-  <link rel="stylesheet" href="/assets/css/team.css">
-{% endblock %}
-
 {% block links %}
+  <link rel="stylesheet" href="/assets/css/team.css">
+
   <style>
     /* TODO: Move this to separate sass file and use cloudinaryUrl helper */
     body {
-      background: #fff url("/assets/img/team-bg.jpg") top right no-repeat;
-      background-size: 70% auto;
+      background: #fff url("/assets/img/team-bg.jpg")top right no-repeat;
+      background-size: 70% 755px;
+    }
+    .intro {
+      min-height: 700px;
+    }
+    .intro-box {
+      padding: 6em 4em;
     }
   </style>
 {% endblock %}

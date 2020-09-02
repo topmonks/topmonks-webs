@@ -17,6 +17,17 @@
     top: 25.5em;
     left: 3em;
   }
+  .member-description:before {
+    content: "";
+    display: block;
+    border: 6px solid rgba(255, 255, 255, 0.23);
+    box-sizing: border-box;
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    top: 1em;
+    left: -1em;
+  }
   .member-name {
     font-size: 28px;
     font-weight: bold;
