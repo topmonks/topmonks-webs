@@ -11,6 +11,9 @@
       background: #fff url("/assets/img/news-bg.jpg") top right no-repeat;
       background-size: 70% 446px;
     }
+    .intro {
+      min-height: 440px;
+    }
   </style>
 {% endblock %}
 
@@ -29,14 +32,14 @@
     <div class="mdc-layout-grid layout-arx">
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h3>News About ARX</h3>
+          <h2>News About ARX</h2>
         </div>
       </div>
     </div>
   </section>
 
   {% for article in news | reverse %}
-    <section class="news">
+    <section class="news_page">
       <div class="mdc-layout-grid layout-arx">
         <div class="mdc-layout-grid__inner">
           <article
