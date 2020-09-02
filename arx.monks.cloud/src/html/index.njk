@@ -6,8 +6,15 @@
     /* TODO: Move this to separate sass file and use cloudinaryUrl helper */
     body {
       background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
-      background-size: 70% 744px;
+      background-size: 60% 744px;
     }
+    @media (max-width: 1024px) {
+      body {
+        background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
+        background-size: 70% auto;
+      }
+    }
+    
     .intro {
       min-height: 700px;
     }
