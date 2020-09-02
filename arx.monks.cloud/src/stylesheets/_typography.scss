@@ -64,6 +64,21 @@ p {
   line-height: 32px;
 }
 
+@media (max-width: 739px) {
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
 .sub-title {
   font-size: 24px;
   font-weight: bold;
@@ -84,7 +99,6 @@ span.date {
   line-height: 22px;
   color: var(--mdc-theme--secondary-light);
 }
-
 
 .text-center {
   text-align: center;

@@ -36,6 +36,7 @@ html {
       height: 80px;
     }
   }
+
   .box--text {
     padding: 0 28px 14px;
 
@@ -52,6 +53,7 @@ html {
   hr {
     border: 1px solid #DBDBDB;
   }
+
   &:hover {
     cursor: pointer;
     transform: scale(.98);
@@ -62,6 +64,7 @@ html {
 .left-padding_box {
   padding: 2em 3em 4em 6em;
 }
+
 .right-padding_box {
   padding: 2em 6em 4em 3em;
 }
@@ -86,6 +89,9 @@ html {
   background-color: var(--mdc-theme--fourth);
   display: block;
   margin: 30px 0;
+  @media (max-width: 739px) {
+    margin: 14px 0;
+  }
 }
 
 .underline--dark:after {
@@ -95,6 +101,9 @@ html {
   background-color: var(--mdc-theme--third);
   display: block;
   margin: 30px 0;
+  @media (max-width: 739px) {
+    margin: 14px 0;
+  }
 }
 
 .border-bg {
@@ -104,90 +113,69 @@ html {
   border: 10px solid var(--mdc-theme--third);
   box-sizing: border-box;
   margin-top: 1em;
+  @media (max-width: 839px) {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--mdc-theme--third);
+  }
 }
-
 
 /* INTRO */
 .intro {
   margin-top: 3em;
-  p {
-    font-size: 40px;
-    font-weight: normal;
-    line-height: 46px;
-    max-width: 500px;
-  }
+  padding-bottom: 8em;
+
   .intro-box {
     z-index: 10;
-    width: 660px;
-    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.03);
-  }
-}
-
-/* ABOUT */
-.about {
-  p {
-    max-width: 76%;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.03);
   }
 
-  .about--bg {
-    margin-top: 12em;
-    background: url("/assets/img/about-bg02.jpg") no-repeat;
-    background-size: cover;
+  @media (max-width: 839px) {
+    span {
+      font-weight: bold;
+    }
+
+    .intro-box {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1em 1.5em;
+    }
+
+    .button {
+      width: 100%;
+      position: absolute;
+      bottom: -5em;
+      left: 0;
+    }
   }
-}
 
-/* FACTS AND FIGURES */
-.investments {
-  margin: 3em 0;
-
-  h3 {
-    color: var(--mdc-theme--primary);
-    padding-top: 0.5em;
+  @media (min-width: 740px) {
+    .intro-box {
+      width: 660px;
+    }
   }
 
-  .investments--box {
-    display: inline-flex;
-    text-align: center;
-
+  @media (min-width: 540px) {
     p {
-      font-size: 18px;
-      line-height: 22px;
-      color: var(--mdc-theme--secondary-light);
+      font-size: 40px;
+      font-weight: normal;
+      line-height: 46px;
+      max-width: 500px;
     }
-
-    .white-box {
-      box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.07);
-    }
-
-    .white-box:nth-child(5) {
-      margin-right: 18px;
+    .intro-box {
+      padding: 4em;
     }
   }
 
-  .investments--bg {
-    background: url("/assets/img/facts-bg.jpg") no-repeat;
-    background-size: 100% auto;
+  @media (max-width: 539px) {
+    p {
+      font-size: 24px;
+      line-height: 37px;
+    }
   }
 }
 
-/* OUR BELIEVES */
-
-
-/* TEAM */
-.team {
-  color: var(--mdc-theme--primary);
-
-  .team--bg-1 {
-    align-self: center;
-    background: url("/assets/img/team-bg01.jpg") no-repeat;
-  }
-
-  .team--bg-2 {
-    margin-top: 4em;
-    background: url("/assets/img/team-bg02.jpg") no-repeat;
-    background-size: 100%;
-  }
-}
 
 /* NEWS */
 
@@ -203,6 +191,7 @@ html {
     font-weight: bold;
     line-height: 27px;
     text-transform: initial;
+
     a {
       color: var(--mdc-theme--secondary);
     }
@@ -226,6 +215,7 @@ footer {
 
   ul {
     list-style: none;
+
     li {
       line-height: 32px;
 
