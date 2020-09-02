@@ -1,20 +1,19 @@
 {% extends "layouts/arx.njk" %}
 
-{% block head %}
-  <link rel="stylesheet" href="/assets/css/news.css">
-{% endblock %}
-
 {% block links %}
+  <link rel="stylesheet" href="/assets/css/investment.css">
+
   <style>
     /* TODO: Move this to separate sass file and use cloudinaryUrl helper */
     body {
       background: #fff url("/assets/img/investments-bg.jpg") top right no-repeat;
       background-size: 70% 755px;
     }
-
+    .intro {
+      min-height: 700px;
+    }
     .intro-box {
-      min-height: 510px;
-      align-self: center;
+      padding: 12em 4em;
     }
   </style>
 {% endblock %}
@@ -39,6 +38,9 @@
   <section class="case-studies">
     <div class="mdc-layout-grid layout-arx">
       <div class="mdc-layout-grid__inner">
+        <div class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h3>Current Investments</h3>
+        </div>
         <div class="box mdc-layout-grid__cell">
           <div class="mdc-layout-grid__inner">
             <div class="box--logo mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -58,6 +60,9 @@
             <div class="box--text mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
               <h3 class="sub-title">TES Vsetin</h3>
               <p>Manufacturer of electrical machines and related components.</p>
+              <p class="filter"><b>Country: </b><span>Czech Republic</span></p>
+              <p class="filter"><b>Transaction: </b><span>MBO</span></p>
+              <p class="filter"><b>Investment year: </b><span>2019</span></p>
             </div>
           </div>
         </div>
