@@ -90,7 +90,7 @@ header {
   }
 
   @media screen and (max-width: 913px) {
-    height: 58px;
+    height: 75px;
     padding-top: 8px;
 
     .app-bar_menu {
@@ -123,6 +123,7 @@ header {
 }
 
 .hamburger {
+  margin-top: 1em;
   @media screen and (min-width: 914px) {
     display: none;
   }
@@ -137,7 +138,7 @@ header {
   }
 
   .hamburger__bar {
-    background-color: var(--mdc-theme--primary);
+    background-color: var(--mdc-theme--third);
     width: 20px;
     height: 2px;
     border-radius: 10px;
@@ -152,6 +153,9 @@ header {
     &:last-of-type {
       transform: translateY(6px);
     }
+  }
+  .hamburger__bar-middle {
+    width: 14px;
   }
 
   .hamburger__container--open {
@@ -171,11 +175,11 @@ header {
 
 .app-bar--sticky {
   .hamburger .hamburger__bar {
-    background: var(--mdc-theme--primary);
+    background: var(--mdc-theme--third);
   }
 
   .hamburger .hamburger__container::after {
-    color: var(--mdc-theme--primary);
+    color: var(--mdc-theme--third);
   }
 }
 
@@ -183,11 +187,11 @@ header {
   color: var(--mdc-theme--primary);
 
   .hamburger__container::after {
-    color: var(--mdc-theme--primary);
+    color: var(--mdc-theme--third);
   }
 
   .hamburger__bar {
-    background-color: var(--mdc-theme--primary);
+    background-color: var(--mdc-theme--third);
   }
 }
 

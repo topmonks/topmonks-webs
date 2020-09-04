@@ -1,3 +1,30 @@
+/* Background for Small Devices */
+@media screen and (min-width: 1440px) {
+  body {
+    background: #fff url("/assets/img/case-study-bg.jpg") top right no-repeat;
+    background-size: 65% 580px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    background: #fff url("/assets/img/case-study-bg.jpg") top right no-repeat;
+    background-size: 75% 580px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .intro {
+    background: #fff url("/assets/img/case-study-bg.jpg") bottom center no-repeat;
+    background-size: 100% 75%;
+  }
+}
+
+/* Intro */
+.intro-box {
+  padding: 9em 4em;
+}
+
 .intro-box:before {
   content: "";
   width: 40%;
@@ -8,26 +35,55 @@
 }
 
 
+/* Section: Managers */
 .managers {
-  background: url("/assets/img/managers-bg.jpg") 100% no-repeat;
-  background-size: 100% 100%;
   padding: 2em 0;
-  .mdc-layout-grid__cell {
-    width: 50%;
+  @media screen and (min-width: 1024px) {
+    background: url("/assets/img/managers-bg.jpg") 100% no-repeat;
+    background-size: 100% 100%;
+    .mdc-layout-grid__cell {
+      width: 50%;
+    }
+  }
+  @media (max-width: 1023px) {
+    color: var(--mdc-theme--primary);
+    background-color: var(--mdc-theme--third);
   }
 }
 
+
+/* Section: Intermediaries */
 .intermediaries {
   .layout-arx {
     padding: 0;
   }
+
   .intermediaries_main-text {
-    color: var(--mdc-theme--primary);
-    background: url("/assets/img/intermediaries-bg.jpg") 100% no-repeat;
-    background-size: 100% 887px;
-    padding: 5em 2em 5em 0;
-    .sub-title {
-      opacity: 0.77;
+    align-self: center;
+    @media screen and (min-width: 1024px) {
+      color: var(--mdc-theme--primary);
+      background: url("/assets/img/intermediaries-bg.jpg") 100% no-repeat;
+      background-size: 100% 887px;
+      padding: 5em 2em 5em 0;
+      .sub-title {
+        opacity: 0.77;
+      }
+    }
+    @media (max-width: 1023px) {
+      color: var(--mdc-theme--primary);
+      background-color: var(--mdc-theme--third);
+      padding: 0 1em;
+      .sub-title {
+        font-size: 20px;
+      }
+    }
+    @media (max-width: 739px) {
+      border-top: 2px solid var(--mdc-theme--fourth);
+    }
+  }
+  @media (max-width: 1023px) {
+    .intermediaries_side-text {
+      padding: 0 1em;
     }
   }
 }

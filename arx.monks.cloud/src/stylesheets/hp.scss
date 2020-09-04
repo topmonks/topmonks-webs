@@ -1,4 +1,4 @@
-/* Devices */
+/* Background for Small Devices */
 @media screen and (min-width: 1440px) {
   body {
     background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
@@ -22,14 +22,17 @@
 
 /* ABOUT */
 .about {
-  p {
-    max-width: 76%;
-  }
-
   .about--bg {
-    margin-top: 12em;
     background: url("/assets/img/about-bg02.jpg") no-repeat;
     background-size: cover;
+  }
+  @media (min-width: 540px) {
+    p {
+      max-width: 76%;
+    }
+    .about--bg {
+      margin-top: 12em;
+    }
   }
 }
 
@@ -57,7 +60,7 @@
     }
 
     .white-box {
-      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.07);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
       @media (min-width: 740px) and (max-width: 1023px) {
         margin-right: 10px;
         &:nth-child(5) {

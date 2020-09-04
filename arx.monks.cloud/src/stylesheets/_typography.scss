@@ -16,21 +16,27 @@
 @import url("https://p.typekit.net/p.css?s=1&k=sxe0okz&ht=tk&f=139.175.25136&a=3695725&app=typekit&e=css");
 
 @font-face {
-  font-family:"proxima-nova";
-  src:url("https://use.typekit.net/af/949f99/00000000000000003b9b3068/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/949f99/00000000000000003b9b3068/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/949f99/00000000000000003b9b3068/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
-  font-display:swap;font-style:normal;font-weight:700;
+  font-family: "proxima-nova";
+  src: url("https://use.typekit.net/af/949f99/00000000000000003b9b3068/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/949f99/00000000000000003b9b3068/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/949f99/00000000000000003b9b3068/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
 }
 
 @font-face {
-  font-family:"proxima-nova";
-  src:url("https://use.typekit.net/af/705e94/00000000000000003b9b3062/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/705e94/00000000000000003b9b3062/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/705e94/00000000000000003b9b3062/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-  font-display:swap;font-style:normal;font-weight:400;
+  font-family: "proxima-nova";
+  src: url("https://use.typekit.net/af/705e94/00000000000000003b9b3062/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/705e94/00000000000000003b9b3062/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/705e94/00000000000000003b9b3062/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
-  font-family:"proxima-nova";
-  src:url("https://use.typekit.net/af/6e816b/00000000000000003b9b3064/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/6e816b/00000000000000003b9b3064/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/6e816b/00000000000000003b9b3064/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
-  font-display:swap;font-style:normal;font-weight:500;
+  font-family: "proxima-nova";
+  src: url("https://use.typekit.net/af/6e816b/00000000000000003b9b3064/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/6e816b/00000000000000003b9b3064/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/6e816b/00000000000000003b9b3064/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
 }
 
 body {
@@ -42,29 +48,39 @@ h1, h2, h3, h4 {
   font-weight: normal;
   text-transform: uppercase;
 }
-
-h2 {
-  font-size: 64px;
-  line-height: 42px;
-}
-
-h3 {
-  font-size: 44px;
-  line-height: 42px;
-}
-
-h4 {
-  font-size: 26px;
+.sub-title {
+  font-weight: bold;
   line-height: 32px;
+  text-transform: initial;
 }
 
-p {
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 32px;
+@media screen and (min-width: 1023px) {
+  h2 {
+    font-size: 64px;
+    line-height: 42px;
+  }
+
+  h3 {
+    font-size: 44px;
+    line-height: 42px;
+  }
+
+  h4 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 32px;
+  }
+  .sub-title {
+    font-size: 24px;
+  }
 }
 
-@media (max-width: 739px) {
+@media (max-width: 1023px) {
   h2 {
     font-size: 32px;
   }
@@ -77,13 +93,9 @@ p {
   p {
     font-size: 18px;
   }
-}
-
-.sub-title {
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 32px;
-  text-transform: initial;
+  .sub-title {
+    font-size: 20px;
+  }
 }
 
 .text-opacity {
@@ -109,9 +121,11 @@ span.date {
   max-width: 152px;
   text-align: center;
   padding: 14px;
+
   a {
     color: var(--mdc-theme--primary);
   }
+
   &:hover {
     cursor: pointer;
   }

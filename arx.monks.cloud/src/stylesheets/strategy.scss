@@ -1,3 +1,37 @@
+/* Background for Small Devices */
+@media screen and (min-width: 1440px) {
+  body {
+    background: #fff url("/assets/img/strategy-bg.jpg") top right no-repeat;
+    background-size: 65% 755px;
+  }
+  .intro {
+    min-height: 700px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    background: #fff url("/assets/img/strategy-bg.jpg") top right no-repeat;
+    background-size: 75% 755px;
+  }
+  .intro {
+    min-height: 700px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .intro {
+    background: #fff url("/assets/img/strategy-bg.jpg") bottom center no-repeat;
+    background-size: 100% 75%;
+    padding-bottom: 6em;
+  }
+}
+
+
+.intro-box {
+  padding: 4em;
+}
+
 .transaction {
   h3, p {
     color: var(--mdc-theme--third);

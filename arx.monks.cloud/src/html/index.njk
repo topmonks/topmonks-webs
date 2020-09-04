@@ -9,7 +9,8 @@
   <section class="intro">
     <div class="mdc-layout-grid layout-arx">
       <div class="mdc-layout-grid__inner">
-        <div class="intro-box white-box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
+        <div
+          class="intro-box white-box mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
           <p><span>We are proud of our<br>20-year track record</span> of building great companies in
             successful partnerships with business owners and managers.</p>
           <div class="button">
@@ -129,9 +130,11 @@
         </div>
         {%- for article in news | reverse -%}
           {%- if loop.index <= 2 -%}
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+            <div
+              class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
               {{ image(article.image, images, alt="", width="660", tabletWidth="420", phoneWidth="380") }}
-              <time class="date" datetime="{{ article.date }}">{{ article.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time>
+              <time class="date"
+                    datetime="{{ article.date }}">{{ article.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time>
               <div class="article-title">
                 <h4><a href="/news/{{ article.date | replace("T00:00:00.000Z", "") }}/">{{ article.title }}</a></h4>
               </div>
