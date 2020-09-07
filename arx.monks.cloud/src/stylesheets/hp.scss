@@ -22,19 +22,36 @@
 
 /* ABOUT */
 .about {
-  .about--bg {
-    background: url("/assets/img/about-bg02.jpg") no-repeat;
-    background-size: cover;
-  }
   @media (min-width: 540px) {
-    p {
-      max-width: 76%;
+    .jahudka, .boruvka {
+      box-sizing: border-box;
+      max-width: calc(var(--arx-layout-max-width) / 2);
+      padding: 6em;
     }
+    .column--2 {
+      margin-top: 6em;
+    }
+  }
+  @media screen and (min-width: 740px) {
+    display: flex;
     .about--bg {
-      margin-top: 12em;
+      background: url("/assets/img/about-bg02.jpg") no-repeat;
+      background-size: cover;
+      filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.07));
     }
+  }
+  @media (max-width: 739px) {
+    padding: 1em;
   }
 }
+
+@media screen and (min-width: 740px) {
+  .column--1 {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 
 /* FACTS AND FIGURES */
 .investments {
@@ -45,8 +62,23 @@
     padding-top: 0.5em;
   }
 
-  .investments--box {
+  .investments--bg {
+    background: url("/assets/img/facts-bg.jpg") no-repeat;
+    background-size: cover;
+    max-width: 50vw;
+    padding: 6em 6em 20em;
+  }
+
+  .broskev {
+    display: flex;
+    max-width: calc(var(--arx-layout-max-width) / 2);
+  }
+
+  .column--2 {
     display: inline-flex;
+  }
+
+  .investments--box {
     text-align: center;
 
     h4 {
@@ -68,7 +100,7 @@
         }
       }
       @media (min-width: 1024px) {
-        margin-right: 14px;
+        margin-right: 24px;
         padding: 8px 14px;
         &:nth-child(5) {
           margin-right: 0;
@@ -90,30 +122,53 @@
         margin-bottom: 1.5em;
       }
     }
-  }
-
-  .investments--bg {
-    background: url("/assets/img/facts-bg.jpg") no-repeat;
-    background-size: 100% auto;
+    @media (min-width: 740px) {
+      margin: -18em 0 16em;
+      .box_row {
+        display: inline-flex;
+        max-width: var(--arx-layout-max-width);
+      }
+    }
   }
 }
 
 /* OUR BELIEVES */
-
+/**/
 
 /* TEAM */
 .team {
   color: var(--mdc-theme--primary);
 
-  .team--bg-1 {
+  .column--1 {
+    background-color: var(--mdc-theme--third);
+    justify-content: center;
     align-self: center;
-    background: url("/assets/img/team-bg01.jpg") no-repeat;
   }
 
-  .team--bg-2 {
-    margin-top: 4em;
-    background: url("/assets/img/team-bg02.jpg") no-repeat;
-    background-size: 100%;
+  .column--2 {
+    background-image: url("/assets/img/hp_team-bg.jpg");
+    background-size: cover;
+  }
+
+  .jahudka {
+    align-self: center;
+  }
+
+  @media (min-width: 540px) {
+    .column--1, .column--2 {
+      max-width: 50vw;
+      height: 600px;
+    }
+
+    .jahudka, .boruvka {
+      box-sizing: border-box;
+      max-width: calc(var(--arx-layout-max-width) / 2);
+      padding: 6em;
+    }
+  }
+
+  @media screen and (min-width: 740px) {
+    display: flex;
   }
 }
 
