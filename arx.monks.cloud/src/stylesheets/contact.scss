@@ -5,7 +5,7 @@
     background-size: 65% 600px;
   }
   .intro {
-    min-height: 700px;
+    min-height: 500px;
   }
 }
 
@@ -26,17 +26,7 @@
   }
 }
 
-
-.intro {
-  min-height: 700px;
-}
-
-.intro-box {
-  padding: 2em 4em;
-}
-
-
-
+/* Typography */
 h2 {
   font-size: 38px;
   font-weight: normal;
@@ -50,10 +40,15 @@ span, a {
   color: var(--mdc-theme--secondary);
 }
 
-.intro p {
-  color: var(--mdc-theme--primary);
+/* Section: Intro */
+.intro__box {
+  padding: 2em 4em;
+  p {
+    color: var(--mdc-theme--primary);
+  }
 }
 
+/* Map */
 .contact--map:hover {
   cursor: pointer;
 }
