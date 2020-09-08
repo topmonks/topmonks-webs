@@ -27,7 +27,6 @@
   }
 }
 
-
 .intro-box {
   padding: 4em;
 }
@@ -36,8 +35,27 @@
   h3, p {
     color: var(--mdc-theme--third);
   }
+
   .dark-box h3, .dark-box p {
     color: var(--mdc-theme--primary);
   }
 }
 
+.transaction-boxes {
+  @media (min-width: 540px) {
+    .column--1, .column--2 {
+      max-width: 50vw;
+      display: inline-flex;
+    }
+    .jahudka, .boruvka {
+      box-sizing: border-box;
+      max-width: calc(var(--arx-layout-max-width) / 2);
+      padding: 6em;
+    }
+    .ovocna-zmrzlina {
+      padding: 3em 6em;
+      background: var(--mdc-theme--primary);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.07);
+    }
+  }
+}
