@@ -2,14 +2,14 @@
 @media screen and (min-width: 1440px) {
   body {
     background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
-    background-size: 65% 744px;
+    background-size: 60% 744px;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   body {
     background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
-    background-size: 75% 744px;
+    background-size: 70% 744px;
   }
 }
 
@@ -20,7 +20,7 @@
   }
 }
 
-/* ABOUT */
+/* Section: About */
 .about {
   @media (min-width: 540px) {
     .jahudka, .boruvka {
@@ -34,7 +34,7 @@
   }
   @media screen and (min-width: 740px) {
     display: flex;
-    .about--bg {
+    .about__bg {
       background: url("/assets/img/about-bg02.jpg") no-repeat;
       background-size: cover;
       filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.07));
@@ -53,7 +53,7 @@
 }
 
 
-/* FACTS AND FIGURES */
+/* Section: Facts and Figures */
 .investments {
   margin: 3em 0;
 
@@ -62,7 +62,7 @@
     padding-top: 0.5em;
   }
 
-  .investments--bg {
+  .investments__bg {
     background: url("/assets/img/facts-bg.jpg") no-repeat;
     background-size: cover;
     @media screen and (min-width: 540px) {
@@ -87,7 +87,7 @@
     display: inline-flex;
   }
 
-  .investments--box {
+  .investments__box {
     text-align: center;
 
     h4 {
@@ -104,7 +104,7 @@
       padding: 0 1em;
     }
 
-    .white-box {
+    .box--white {
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
       @media screen and (min-width: 1024px) {
         margin-right: 24px;
@@ -145,10 +145,10 @@
   }
 }
 
-/* OUR BELIEVES */
+/* Section: Our Believes */
 /**/
 
-/* TEAM */
+/* Section: Team */
 .team {
   color: var(--mdc-theme--primary);
 
@@ -167,25 +167,12 @@
     align-self: center;
   }
 
-  @media (min-width: 540px) {
-    .column-1, .column-2 {
-      max-width: 50vw;
-      height: 600px;
-    }
-
-    .jahudka, .boruvka {
-      box-sizing: border-box;
-      max-width: calc(var(--arx-layout-max-width) / 2);
-      padding: 6em;
-    }
-  }
-
   @media screen and (min-width: 740px) {
     display: flex;
   }
 }
 
-/* NEWS */
-/* Described in main.scss */
+/* Section: News */
+/**/
 
 

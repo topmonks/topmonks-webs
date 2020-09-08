@@ -35,53 +35,12 @@
   h3, p {
     color: var(--mdc-theme--third);
   }
+}
 
-  .box--dark h3, .box--dark p {
+.box--dark {
+  h3, p {
     color: var(--mdc-theme--primary);
   }
 }
 
-@media (min-width: 1440px) {
-  .jahudka, .boruvka {
-    padding: 6em;
-  }
-  .box--colored {
-    min-height: 600px;
-  }
-}
 
-@media (min-width: 540px) and (max-width: 1439px) {
-  .jahudka, .boruvka {
-    padding: 3em;
-  }
-}
-@media (max-width: 539px) {
-  .jahudka, .boruvka {
-    padding: 1em;
-  }
-}
-
-@media (min-width: 540px) {
-  .column-1, .column-2 {
-    max-width: 50vw;
-    display: inline-flex;
-  }
-  .column-1 {
-    justify-content: flex-end;
-  }
-  .jahudka, .boruvka {
-    box-sizing: border-box;
-    max-width: calc(var(--arx-layout-max-width) / 2);
-  }
-  .jahudka {
-    justify-content: flex-end;
-  }
-  .ovocna-zmrzlina {
-    background: var(--mdc-theme--primary);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.07);
-  }
-  .row-1, .row-2, .row-3 {
-    display: flex;
-    flex-grow: 1;
-  }
-}
