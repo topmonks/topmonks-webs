@@ -29,85 +29,16 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>Team</h2>
       </div>
+      {% for member in team %}
       <div class="member mdc-layout-grid__cell">
-        <img alt="Team Member - Brian Wardrop" src="/assets/img/team-member.jpg" width="100%" height="auto">
+        <!-- TODO: use cloudinary to generate responsive images -->
+        <img alt="Photo of {{ member.name }}" src="{{ member.image }}" class="responsive">
         <div class="member-description">
-          <span class="member-name">Brian Wardrop</span><br>
-          <span class="member-post text-opacity">Managing Partner</span>
+          <span class="member-name">{{ member.name }}</span><br>
+          <span class="member-post text-opacity">{{ member.title }}</span>
         </div>
       </div>
-      <div class="member mdc-layout-grid__cell">
-        <img alt="Team Member - Brian Wardrop" src="/assets/img/team-member.jpg" width="100%" height="auto">
-        <div class="member-description">
-          <span class="member-name">Michal Aron</span><br>
-          <span class="member-post text-opacity">Partner</span>
-        </div>
-      </div>
-      <div class="member mdc-layout-grid__cell">
-        <img alt="Team Member - Brian Wardrop" src="/assets/img/team-member.jpg" width="100%" height="auto">
-       <div class="member-description">
-        <span class="member-name">Tomáš Lánský</span><br>
-        <span class="member-post text-opacity">Partner</span>
-       </div>
-      </div>
-      <div class="member mdc-layout-grid__cell">
-        <img alt="Team Member - Brian Wardrop" src="/assets/img/team-member.jpg" width="100%" height="auto">
-       <div class="member-description">
-        <span class="member-name">Béla Lendvai-Lintner</span><br>
-        <span class="member-post text-opacity">Partner</span>
-       </div>
-      </div>
-      <div class="member mdc-layout-grid__cell">
-        <img alt="Team Member - Brian Wardrop" src="/assets/img/team-member.jpg" width="100%" height="auto">
-       <div class="member-description">
-        <span class="member-name">Radil Stefovski</span><br>
-        <span class="member-post text-opacity">Investment Director</span>
-       </div>
-      </div>
-      <div class="member mdc-layout-grid__cell">
-        <img alt="Team Member - Brian Wardrop" src="/assets/img/team-member.jpg" width="100%" height="auto">
-        <div class="member-description">
-          <span class="member-name">Ivana Tesařová</span><br>
-          <span class="member-post text-opacity">Investment Manager</span>
-        </div>
-      </div>
-
-      <div class="member mdc-layout-grid__cell">
-        <img alt="Team Member - Brian Wardrop" src="/assets/img/team-member.jpg" width="100%" height="auto">
-        <div class="member-description">
-          <span class="member-name">David Swaim</span><br>
-          <span class="member-post text-opacity">Analyst</span>
-        </div>
-      </div>
-      <div class="member mdc-layout-grid__cell">
-        <img alt="Team Member - Brian Wardrop" src="/assets/img/team-member.jpg" width="100%" height="auto">
-        <div class="member-description">
-          <span class="member-name">Martin Medo</span><br>
-          <span class="member-post text-opacity">Analyst</span>
-        </div>
-      </div>
-      <div class="member mdc-layout-grid__cell">
-        <img alt="Team Member - Brian Wardrop" src="/assets/img/team-member.jpg" width="100%" height="auto">
-        <div class="member-description">
-          <span class="member-name">Jaroslav Horák</span><br>
-          <span class="member-post text-opacity">Investment Committee Chairman</span>
-        </div>
-      </div>
-      <div class="member mdc-layout-grid__cell">
-        <img alt="Team Member - Brian Wardrop" src="/assets/img/team-member.jpg" width="100%" height="auto">
-        <div class="member-description">
-          <span class="member-name">Jacek Korpała</span><br>
-          <span class="member-post text-opacity">Co-Managing Partner</span><br>
-          <span class="member-post text-opacity">Fund II&III</span>
-        </div>
-      </div>
-      <div class="member mdc-layout-grid__cell">
-        <img alt="Team Member - Brian Wardrop" src="/assets/img/team-member.jpg" width="100%" height="auto">
-        <div class="member-description">
-          <span class="member-name">Monika Hubena</span><br>
-          <span class="member-post text-opacity">Office Manager</span>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
