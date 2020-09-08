@@ -28,7 +28,18 @@ html {
   background: var(--mdc-theme--primary);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.07);
 
-  .box--logo {
+  &--stretch {
+    display: flex;
+    flex-direction: column;
+    .box__inner {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .box__logo {
     text-align: center;
     align-self: center;
     padding-top: 28px;
@@ -39,7 +50,8 @@ html {
     }
   }
 
-  .box--text {
+  .box__text,
+  .box__info {
     padding: 0 28px 14px;
 
     h3 {
@@ -62,6 +74,7 @@ html {
     transition: all .3s ease-out;
   }
 }
+
 @media (min-width: 1440px) {
   .left-padding_box {
     padding: 2em 3em 4em 6em;
