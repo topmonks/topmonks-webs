@@ -28,7 +28,7 @@
       max-width: calc(var(--arx-layout-max-width) / 2);
       padding: 6em;
     }
-    .column--2 {
+    .column-2 {
       margin-top: 6em;
     }
   }
@@ -46,7 +46,7 @@
 }
 
 @media screen and (min-width: 740px) {
-  .column--1 {
+  .column-1 {
     display: flex;
     justify-content: flex-end;
   }
@@ -83,7 +83,7 @@
     max-width: calc(var(--arx-layout-max-width) / 2);
   }
 
-  .column--2 {
+  .column-2 {
     display: inline-flex;
   }
 
@@ -152,13 +152,13 @@
 .team {
   color: var(--mdc-theme--primary);
 
-  .column--1 {
+  .column-1 {
     background-color: var(--mdc-theme--third);
     justify-content: center;
     align-self: center;
   }
 
-  .column--2 {
+  .column-2 {
     background-image: url("/assets/img/hp_team-bg.jpg");
     background-size: cover;
   }
@@ -168,7 +168,7 @@
   }
 
   @media (min-width: 540px) {
-    .column--1, .column--2 {
+    .column-1, .column-2 {
       max-width: 50vw;
       height: 600px;
     }

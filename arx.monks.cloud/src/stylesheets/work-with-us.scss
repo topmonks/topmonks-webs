@@ -21,11 +21,11 @@
 }
 
 /* Intro */
-.intro-box {
+.intro__box {
   padding: 9em 4em;
 }
 
-.intro-box:before {
+.intro__box:before {
   content: "";
   width: 40%;
   height: 4px;
@@ -58,7 +58,7 @@
     padding: 0;
   }
 
-  .intermediaries_main-text {
+  .intermediaries__main-text {
     align-self: center;
     @media screen and (min-width: 1024px) {
       color: var(--mdc-theme--primary);
