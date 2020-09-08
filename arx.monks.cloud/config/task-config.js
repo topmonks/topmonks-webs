@@ -27,7 +27,6 @@ const config = createSharedTaskConfig(__dirname, {
         mergeOptions: {
           startObj: [],
           concatArrays: true,
-          mergeArrays: false,
           edit: x => [{ perex: x.body.split("\n").shift(), ...x }]
         }
       },
@@ -35,8 +34,14 @@ const config = createSharedTaskConfig(__dirname, {
         collection: "investments",
         mergeOptions: {
           startObj: [],
-          concatArrays: true,
-          mergeArrays: false
+          concatArrays: true
+        }
+      },
+      {
+        collection: "team",
+        mergeOptions: {
+          startObj: [],
+          concatArrays: true
         }
       }
     ],
