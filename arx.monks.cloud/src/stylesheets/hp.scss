@@ -65,8 +65,17 @@
   .investments--bg {
     background: url("/assets/img/facts-bg.jpg") no-repeat;
     background-size: cover;
-    max-width: 50vw;
-    padding: 6em 6em 20em;
+    @media screen and (min-width: 540px) {
+      max-width: 50vw;
+      padding: 6em 6em 20em;
+    }
+    @media (max-width: 539px) {
+      max-width: 100vw;
+      padding: 2em;
+    }
+    @media (min-width: 740px) and (max-width: 839px) {
+      padding: 6em 6em 14em;
+    }
   }
 
   .broskev {
@@ -91,20 +100,27 @@
       color: var(--mdc-theme--secondary-light);
     }
 
+    .box_row {
+      padding: 0 1em;
+    }
+
     .white-box {
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-      @media (min-width: 740px) and (max-width: 1023px) {
-        margin-right: 10px;
+      @media screen and (min-width: 1024px) {
+        margin-right: 24px;
         &:nth-child(5) {
           margin-right: 0;
         }
       }
-      @media (min-width: 1024px) {
-        margin-right: 24px;
-        padding: 8px 14px;
+      @media (min-width: 740px) and (max-width: 1023px) {
+        margin: 0.5em 0 1.5em;
         &:nth-child(5) {
           margin-right: 0;
         }
+      }
+      @media (max-width: 739px) {
+        padding: 1em;
+        margin-bottom: 1.5em;
       }
     }
 
@@ -115,19 +131,16 @@
       }
     }
 
-    @media (max-width: 739px) {
-      display: table-column;
-      .white-box {
-        padding: 1em;
-        margin-bottom: 1.5em;
-      }
-    }
     @media (min-width: 740px) {
       margin: -18em 0 16em;
       .box_row {
         display: inline-flex;
         max-width: var(--arx-layout-max-width);
       }
+    }
+
+    @media (min-width: 740px) and (max-width: 839px) {
+      margin: -12em 0 14em;
     }
   }
 }
