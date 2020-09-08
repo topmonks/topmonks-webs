@@ -1,8 +1,11 @@
 {% extends "layouts/arx.njk" %}
+{% from "common/helpers.njk" import image %}
+
 {% set title = item.title + " - News - ARX Equity partners" %}
 
 {% block main %}
   <article>
+    {{ image(item.image, images, alt="", width=1627, height=660, tabletWidth=840, phoneWidth=480) }}
     <h3>{{ item.title }}</h3>
     <p><time datetime="{{ item.date }}">{{ item.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time></p>
     {{ item.body | safe }}

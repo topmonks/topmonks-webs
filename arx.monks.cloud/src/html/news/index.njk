@@ -1,4 +1,5 @@
 {% extends "layouts/arx.njk" %}
+{% from "common/helpers.njk" import image %}
 
 {% block links %}
   <link rel="stylesheet" href="/assets/css/news.css">
@@ -24,13 +25,14 @@
       </div>
     </div>
   </section>
+  <section class="news_page">
+    <div class="mdc-layout-grid layout-arx">
+      <div class="mdc-layout-grid__inner">
 
-  {% for article in news | reverse %}
-    <section class="news_page">
-      <div class="mdc-layout-grid layout-arx">
-        <div class="mdc-layout-grid__inner">
+        {% for article in news | reverse %}
           <article
-            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+            {{ image(article.image, images, alt="", width=660, height=270, tabletWidth=380, phoneWidth=440) }}
             <h3><a href="/news/{{ article.date | replace("T00:00:00.000Z", "") }}/">{{ article.title }}</a></h3>
             <p>
               <time
@@ -38,10 +40,10 @@
             </p>
             {{ article.perex | safe }}
           </article>
-        </div>
+        {% endfor %}
       </div>
-    </section>
-  {% endfor %}
+    </div>
+  </section>
 
 
   <section>
