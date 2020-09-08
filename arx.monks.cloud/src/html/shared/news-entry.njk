@@ -2,12 +2,56 @@
 {% from "common/helpers.njk" import image %}
 
 {% set title = item.title + " - News - ARX Equity partners" %}
+{% set bodyClass = "no-transparent-nav" %}
+{% block links %}
+  <link rel="stylesheet" href="/assets/css/news-detail.css">
+{% endblock %}
 
 {% block main %}
-  <article>
-    {{ image(item.image, images, alt="", width=1627, height=660, tabletWidth=840, phoneWidth=480) }}
-    <h3>{{ item.title }}</h3>
-    <p><time datetime="{{ item.date }}">{{ item.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time></p>
-    {{ item.body | safe }}
-  </article>
+  <section class="new-detail">
+    <div class="mdc-layout-grid layout-arx">
+      <div class="mdc-layout-grid__inner">
+        <article class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          {{ image(item.image, images, alt="", width=1627, height=660, tabletWidth=840, phoneWidth=480) }}
+          <div class="article__body">
+            <h3>{{ item.title }}</h3>
+            <p>
+              <time
+                datetime="{{ item.date }}">{{ item.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time>
+            </p>
+            {{ item.body | safe }}
+          </div>
+        </article>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div class="button button--dark text-center">
+            <a class="button__info" href="/news/">MORE NEWS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="news">
+    <div class="mdc-layout-grid layout-arx">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div class="mdc-layout-grid__inner">
+            {%- for article in news | reverse -%}
+              {%- if loop.index <= 2 -%}
+                <div
+                  class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+                  {{ image(article.image, images, alt="", width="660", tabletWidth="420", phoneWidth="380") }}
+                  <time class="date"
+                        datetime="{{ article.date }}">{{ article.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time>
+                  <div class="article-title">
+                    <h4><a href="/news/{{ article.date | replace("T00:00:00.000Z", "") }}/">{{ article.title }}</a></h4>
+                  </div>
+                  {{ article.perex | safe }}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock %}

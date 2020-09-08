@@ -1162,5 +1162,26 @@
     "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1598872735/arx.monks.cloud/news/2020-05-15.jpg",
     "existing": true,
     "original_filename": "2020-05-15"
+  },
+  "news/2015-01-16.png": {
+    "asset_id": "e9ab09aabe0c9a1207bb7179b45b66f9",
+    "public_id": "arx.monks.cloud/news/2015-01-16",
+    "version": 1599586791,
+    "version_id": "04b27b8f126e523988fe661c16187b7d",
+    "signature": "3ea07e673f9da43f3bd133c1160fb68f1c454b55",
+    "width": 1660,
+    "height": 680,
+    "format": "png",
+    "resource_type": "image",
+    "created_at": "2020-09-08T17:39:51Z",
+    "tags": [],
+    "bytes": 1588887,
+    "type": "upload",
+    "etag": "aab3f5676019f8504c7f04797f2a85fc",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1599586791/arx.monks.cloud/news/2015-01-16.png",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1599586791/arx.monks.cloud/news/2015-01-16.png",
+    "existing": false,
+    "original_filename": "2015-01-16"
   }
 }
