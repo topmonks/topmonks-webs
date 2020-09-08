@@ -28,6 +28,7 @@ html {
   background: var(--mdc-theme--primary);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.07);
 
+<<<<<<< Updated upstream
   &--stretch {
     display: flex;
     flex-direction: column;
@@ -39,6 +40,8 @@ html {
     }
   }
 
+=======
+>>>>>>> Stashed changes
   .box__logo {
     text-align: center;
     align-self: center;
@@ -50,8 +53,12 @@ html {
     }
   }
 
+<<<<<<< Updated upstream
   .box__text,
   .box__info {
+=======
+  .box__text {
+>>>>>>> Stashed changes
     padding: 0 28px 14px;
 
     h3 {
@@ -122,7 +129,7 @@ html {
   }
 }
 
-.border-bg {
+.square-icon {
   display: block;
   width: 93px;
   height: 93px;
@@ -136,7 +143,7 @@ html {
   }
 }
 
-.column--1, .column--2 {
+.column-1, .column-2 {
   flex-grow: 1;
   box-sizing: border-box;
 }
@@ -145,7 +152,7 @@ html {
 .intro {
   padding-bottom: 8em;
 
-  .intro-box {
+  .intro__box {
     z-index: 10;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.03);
   }
@@ -159,7 +166,7 @@ html {
       font-weight: bold;
     }
 
-    .intro-box {
+    .intro__box {
       position: relative;
       width: 100%;
       margin: 0 auto;
@@ -175,7 +182,7 @@ html {
   }
 
   @media (min-width: 740px) {
-    .intro-box {
+    .intro__box {
       width: 660px;
     }
   }
@@ -187,7 +194,7 @@ html {
       line-height: 46px;
       max-width: 500px;
     }
-    .intro-box {
+    .intro__box {
       padding: 4em;
     }
   }
