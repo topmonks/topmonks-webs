@@ -2,14 +2,14 @@
 @media screen and (min-width: 1440px) {
   body {
     background: #fff url("/assets/img/team-bg.jpg") top right no-repeat;
-    background-size: 65% 700px;
+    background-size: 60% 700px;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   body {
     background: #fff url("/assets/img/team-bg.jpg") top right no-repeat;
-    background-size: 75% 700px;
+    background-size: 70% 700px;
   }
 }
 
@@ -34,14 +34,22 @@
   img {
     position: relative;
     object-fit: cover;
+    @media (min-width: 840px) {
+      height: 600px;
+      width: 100%;
+    }
   }
   .member {
     position: relative;
   }
   .member-description {
     position: absolute;
-    top: 25.5em;
-    left: 3em;
+    bottom: 3.5em;
+    left: 2.5em;
+    @media (max-width: 839px) {
+      bottom: 2.5em;
+      left: 2.5em;
+    }
   }
   .member-description:before {
     content: "";

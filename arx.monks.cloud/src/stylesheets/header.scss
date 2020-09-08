@@ -64,6 +64,13 @@ header {
 
 // HAMBURGER //
 
+.no-transparent-nav .app-bar {
+  background-color: var(--mdc-theme--primary);
+  a {
+    color: var(--mdc-theme--third);
+  }
+}
+
 .app-bar {
   padding: 14px 0;
   overflow: hidden;

@@ -48,6 +48,7 @@ h1, h2, h3, h4 {
   font-weight: normal;
   text-transform: uppercase;
 }
+
 .sub-title {
   font-weight: bold;
   line-height: 32px;
@@ -129,4 +130,8 @@ span.date {
   &:hover {
     cursor: pointer;
   }
+}
+
+.button--dark {
+  background-color: var(--mdc-theme--third-dark);
 }

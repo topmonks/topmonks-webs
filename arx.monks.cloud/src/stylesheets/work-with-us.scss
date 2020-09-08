@@ -2,14 +2,14 @@
 @media screen and (min-width: 1440px) {
   body {
     background: #fff url("/assets/img/case-study-bg.jpg") top right no-repeat;
-    background-size: 65% 580px;
+    background-size: 60% 580px;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   body {
     background: #fff url("/assets/img/case-study-bg.jpg") top right no-repeat;
-    background-size: 75% 580px;
+    background-size: 70% 580px;
   }
 }
 
@@ -17,14 +17,13 @@
   .intro {
     background: #fff url("/assets/img/case-study-bg.jpg") bottom center no-repeat;
     background-size: 100% 75%;
+    min-height: 300px;
+    margin-bottom: 3em;
   }
 }
 
-/* Intro */
-.intro__box {
-  padding: 9em 4em;
-}
 
+/* Section: Intro */
 .intro__box:before {
   content: "";
   width: 40%;
@@ -54,25 +53,27 @@
 
 /* Section: Intermediaries */
 .intermediaries {
-  .layout-arx {
-    padding: 0;
-  }
+  .column-1 {
+    color: var(--mdc-theme--primary);
 
-  .intermediaries__main-text {
-    align-self: center;
-    @media screen and (min-width: 1024px) {
-      color: var(--mdc-theme--primary);
-      background: url("/assets/img/intermediaries-bg.jpg") 100% no-repeat;
-      background-size: 100% 887px;
-      padding: 5em 2em 5em 0;
+    .jahudka {
+      align-self: center;
+    }
+
+    @media screen and (min-width: 1440px) {
+      background: #fff url("/assets/img/intermediaries-bg.jpg") no-repeat;
+      background-size: cover;
       .sub-title {
         opacity: 0.77;
       }
     }
-    @media (max-width: 1023px) {
-      color: var(--mdc-theme--primary);
+    @media (min-width: 840px) and (max-width: 1439px) {
+      h2 {
+        font-size: 50px;
+      }
+    }
+    @media (max-width: 1439px) {
       background-color: var(--mdc-theme--third);
-      padding: 0 1em;
       .sub-title {
         font-size: 20px;
       }
@@ -81,9 +82,8 @@
       border-top: 2px solid var(--mdc-theme--fourth);
     }
   }
-  @media (max-width: 1023px) {
-    .intermediaries_side-text {
-      padding: 0 1em;
-    }
+
+  @media screen and (min-width: 740px) {
+    display: flex;
   }
 }
