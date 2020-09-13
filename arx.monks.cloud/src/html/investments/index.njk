@@ -30,7 +30,7 @@
     const investmentCard = (item) => html`
       <article class="box box--stretch mdc-layout-grid__cell">
         <div class="box__logo">
-          <img alt="" src="${item.image}" width="200">
+          <img alt="" src="${item.image}" width="200" loading="lazy">
         </div>
         <div class="box__inner box__inner--stretch">
           <div class="box__text">
@@ -49,7 +49,7 @@
       </article>
     `;
 
-    const {Current: currentInvestments, Realized: realizedInvestments} = {{ investments | groupby("status") | dump(2) | safe }};
+    const {Current: currentInvestments, Realized: realizedInvestments} = {{ investments | groupby("status") | dump | safe }};
     const sortBy = (prop, arr) => arr.sort((a, b) => (a[prop] > b[prop]) ? 1 : -1);
     const sortDescBy = (prop, arr) => arr.sort((a, b) => (a[prop] > b[prop]) ? -1 : 1);
 
@@ -67,6 +67,28 @@
   {%- set current = byStatus["Current"] | sort(true, true, "year") -%}
   {%- set realized = byStatus["Realized"] | sort(true, true, "year") -%}
 
+  {% macro investment(item) %}
+    <article class="box box--stretch mdc-layout-grid__cell">
+      <div class="box__logo">
+        <img alt="" src="{{ item.image }}" width="200" loading="lazy">
+      </div>
+      <div class="box__inner box__inner--stretch">
+        <div class="box__text">
+          <h3 class="sub-title">{{ item.title }}</h3>
+          {{ item.body | safe }}
+        </div>
+        <dl class="box__info">
+          <dt>Country</dt>
+          <dd>{{ item.country }}</dd>
+          <dt>Transaction</dt>
+          <dd>{{ item.transaction }}</dd>
+          <dt>Investment year</dt>
+          <dd>{{ item.year }}</dd>
+        </dl>
+      </div>
+    </article>
+  {% endmacro %}
+
   <section class="case-studies">
     <div class="mdc-layout-grid layout-arx">
       <div class="mdc-layout-grid__inner">
@@ -76,25 +98,7 @@
       </div>
       <div class="mdc-layout-grid__inner" id="current-investments">
         {%- for item in current -%}
-          <article class="box box--stretch mdc-layout-grid__cell">
-            <div class="box__logo">
-              <img alt="" src="{{ item.image }}" width="200">
-            </div>
-            <div class="box__inner box__inner--stretch">
-              <div class="box__text">
-                <h3 class="sub-title">{{ item.title }}</h3>
-                {{ item.body | safe }}
-              </div>
-              <dl class="box__info">
-                <dt>Country</dt>
-                <dd>{{ item.country }}</dd>
-                <dt>Transaction</dt>
-                <dd>{{ item.transaction }}</dd>
-                <dt>Investment year</dt>
-                <dd>{{ item.year }}</dd>
-              </dl>
-            </div>
-          </article>
+          {{ investment(item) }}
         {%- endfor -%}
       </div>
       <div class="mdc-layout-grid__inner">
@@ -104,25 +108,7 @@
       </div>
       <div class="mdc-layout-grid__inner" id="realized-investments">
         {%- for item in realized -%}
-          <article class="box box--stretch mdc-layout-grid__cell">
-            <div class="box__logo">
-              <img alt="" src="{{ item.image }}" width="200">
-            </div>
-            <div class="box__inner box__inner--stretch">
-              <div class="box__text">
-                <h3 class="sub-title">{{ item.title }}</h3>
-                {{ item.body | safe }}
-              </div>
-              <dl class="box__info">
-                <dt>Country</dt>
-                <dd>{{ item.country }}</dd>
-                <dt>Transaction</dt>
-                <dd>{{ item.transaction }}</dd>
-                <dt>Investment year</dt>
-                <dd>{{ item.year }}</dd>
-              </dl>
-            </div>
-          </article>
+          {{ investment(item) }}
         {%- endfor -%}
 
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
