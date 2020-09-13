@@ -110,6 +110,7 @@ header {
     &.app-bar--open .app-bar_menu {
       transform: scaleY(1) translateY(-4px);
       visibility: visible;
+      z-index: 1000;
     }
     .logo {
       display: flex;
@@ -206,7 +207,6 @@ header {
   @media screen and (max-width: 913px) {
     width: 100vw;
     overflow: hidden;
-    z-index: 1000;
     background-color: var(--mdc-theme--primary);
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.07);
     ul.menu__list {
