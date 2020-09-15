@@ -9,11 +9,12 @@
   <section class="intro">
     <div class="mdc-layout-grid layout-arx">
       <div class="mdc-layout-grid__inner">
-        <div class="intro__box box--white mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
+        <div
+          class="intro__box box--white mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
           <p><span>We are proud of our<br>20-year track record</span> of building great companies in
             successful partnerships with business owners and managers.</p>
           <div class="button">
-            <a class="button__info" href="">MORE INFO</a>
+            <a class="button__info" href="/investments/">OUR PORTFOLIO</a>
           </div>
         </div>
       </div>
@@ -84,7 +85,7 @@
   <section class="believes">
     <div class="mdc-layout-grid layout-arx">
       <div class="mdc-layout-grid__inner">
-        <div class="text-center mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-7-desktop">
+        <div class="text-center mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
           <svg width="144" height="133" viewBox="0 0 144 133" fill="none" xmlns="http://www.w3.org/2000/svg">
             <title>[Icon] Our Believes</title>
             <path
@@ -93,11 +94,79 @@
           </svg>
           <h3>What we believe in</h3>
         </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-5-desktop">
-          <h4>Partnership</h4>
-          <p>At ARX we believe in the power of successful partnerships. Our primary goal
-            is to partner with owners and managers in releasing growth potential and
-            developing businesses.</p>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <div class="accordion">
+            <div class="accordion__item">
+              <div class="accordion__title">
+                <h4>Partnership</h4>
+              </div>
+              <div class="accordion__text">
+                <p>At ARX we believe in the power of successful partnerships. Our primary
+                  goal
+                  is to partner with owners and managers in releasing growth potential and
+                  developing businesses. Our firm also provides financing to
+                  entrepreneurially-minded managers in order to fund management buy-out and
+                  management buy-in (MBO &amp; MBI) transactions.</p>
+              </div>
+            </div>
+            <div class="accordion__item accordion__item--collapsed">
+              <div class="accordion__title">
+                <h4>Long-term Orientation</h4>
+              </div>
+              <div class="accordion__text">
+                <p>ARX is an established long-term player in the CE private equity market,
+                  and
+                  our investment philosophy is centred around building enduring value in our
+                  portfolio companies over the long-run. Our team has been investing in the CE
+                  region for over two decades we are personally dedicated to the region.</p>
+              </div>
+            </div>
+            <div class="accordion__item accordion__item--collapsed">
+              <div class="accordion__title">
+                <h4>Ethics</h4>
+              </div>
+              <div class="accordion__text">
+                <p>ARX is a reputable and responsible investor&nbsp;&ndash; and we hold
+                  ourselves to a
+                  high standard in this regard. We are proud of our reputation and transactional
+                  track-record with business owners, managers, lenders and other stakeholders. At
+                  ARX we firmly believe that our firm’s&nbsp;reputation for fairness and ethical
+                  treatment of business partners is one of our most valuable assets.</p>
+              </div>
+            </div>
+            <div class="accordion__item accordion__item--collapsed">
+              <div class="accordion__title">
+                <h4>Aligned Incentives</h4>
+              </div>
+              <div class="accordion__text">
+                <p>We are focused on increasing shareholder value for the investors in our
+                  funds
+                  and correspondingly for the partners and co-shareholders in each portfolio
+                  company. The ARX team is also personally invested in every ARX portfolio
+                  company. Our objective is long-term value-creation and this approach is
+                  transparent to all parties.</p>
+              </div>
+            </div>
+            <div class="accordion__item accordion__item--collapsed">
+              <div class="accordion__title">
+                <h4>Tailored Solutions</h4>
+              </div>
+              <div class="accordion__text">
+                <p>We create flexible investment solutions for owner-managers, which often
+                  satisfy the needs of business owners who may be approaching gradual or phased
+                  succession situations. Most ARX target companies are management or family-owned
+                  enterprises that require complex and discrete financing solutions. Our firm is
+                  experienced in successfully delivering such solutions, and we encourage you to
+                  check our references if you are facing a potential shareholder succession
+                  situation.</p>
+              </div>
+            </div>
+            <script type="module">
+              const accordion = document.querySelector(".accordion");
+              const getAccordionItem = (el) => el.classList.contains("accordion__item") ? el : getAccordionItem(el.parentElement);
+              accordion.addEventListener("click", ({target}) => getAccordionItem(target).classList.toggle("accordion__item--collapsed"));
+            </script>
+          </div>
         </div>
       </div>
     </div>
@@ -108,7 +177,7 @@
       <div class="jahudka">
         <h3>Meet our team</h3>
         <div class="button">
-          <a class="button__info" href="">MORE INFO</a>
+          <a class="button__info" href="/team/">OUR TEAM</a>
         </div>
       </div>
     </div>
@@ -127,8 +196,8 @@
         {%- for article in news | reverse -%}
           {%- if loop.index <= 2 -%}
             <div
-              class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-              {{ image(article.image, images, alt="", width="660", tabletWidth="420", phoneWidth="380") }}
+              class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+              {{ image(article.image, images, alt="", width=660, tabletWidth=420, phoneWidth=380, height=262) }}
               <time class="date"
                     datetime="{{ article.date }}">{{ article.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time>
               <div class="article-title">
