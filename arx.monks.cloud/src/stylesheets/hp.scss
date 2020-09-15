@@ -1,21 +1,21 @@
 /* Background for Small Devices */
 @media screen and (min-width: 1440px) {
   body {
-    background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
+    background: #fff cloudinaryUrl("arx.monks.cloud/header-bg.jpg", (width: 1920)) top right no-repeat;
     background-size: 60% 744px;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
   body {
-    background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
+    background: #fff cloudinaryUrl("arx.monks.cloud/header-bg.jpg", (width: 1440)) top right no-repeat;
     background-size: 70% 744px;
   }
 }
 
 @media (max-width: 1023px) {
   .intro {
-    background: url("/assets/img/header-bg.jpg") bottom center no-repeat;
+    background: cloudinaryUrl("arx.monks.cloud/header-bg.jpg", (width: 1024)) bottom center no-repeat;
     background-size: 100% 75%;
   }
 }
@@ -35,7 +35,7 @@
   @media screen and (min-width: 740px) {
     display: flex;
     .about__bg {
-      background: url("/assets/img/about-bg02.jpg") no-repeat;
+      background: cloudinaryUrl("arx.monks.cloud/about-bg02.jpg", (width: 960)) no-repeat;
       background-size: cover;
       filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.07));
     }
@@ -63,7 +63,7 @@
   }
 
   .investments__bg {
-    background: url("/assets/img/facts-bg.jpg") no-repeat;
+    background: cloudinaryUrl("arx.monks.cloud/facts-bg.jpg", (width: 960)) no-repeat;
     background-size: cover;
     @media screen and (min-width: 540px) {
       max-width: 50vw;
@@ -159,7 +159,7 @@
   }
 
   .column-2 {
-    background-image: url("/assets/img/hp_team-bg.jpg");
+    background-image: cloudinaryUrl("arx.monks.cloud/hp_team-bg.jpg", (width: 960));
     background-size: cover;
   }
 
