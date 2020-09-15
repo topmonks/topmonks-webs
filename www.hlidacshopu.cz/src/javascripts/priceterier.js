@@ -8,9 +8,16 @@ const tableRoot = document.getElementById("table-root");
 
 addEventListener("DOMContentLoaded", async e => {
   try {
-    const data = await fetchPriceterierData();
+    let data = await fetchPriceterierData();
     console.log("fetched data from fetchPriceterierData() ")
     console.log(data);//TODO remove
+    //add sequenceId
+    let a = data
+    for(let i = 0; i < a.length; i++) {
+      let obj = a[i];
+      obj.sequenceId = i + 1;
+    }
+    data = a;
     render(tableTemplate(data), tableRoot);
   } catch (ex) {
     console.error(ex);
@@ -20,10 +27,13 @@ addEventListener("DOMContentLoaded", async e => {
 function tableTemplate(data) {
   //return data.sort((a, b) => a.sortKey - b.sortKey).map(shopTemplate);
   console.log(data.map(shopTemplate));
+
+
   return data.map(shopTemplate);
 }
 
 function shopTemplate({
+                        sequenceId,
                         historyItems30Days,
                         date,
                         shop,
@@ -39,7 +49,7 @@ function shopTemplate({
 }) {
   return html`
     <tr class="dashboard-row">
-      <th>.</th>
+      <th>${sequenceId}</th>
       <td>${formatPercents(sale_perc/100)}</td>
       <td>${formatMoney(Math.round(minPrice30Days))}</td>
       <td>${formatMoney(Math.round(sale_abs))}</td>
