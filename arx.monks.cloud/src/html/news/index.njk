@@ -1,0 +1,60 @@
+{% extends "layouts/arx.njk" %}
+{% from "common/helpers.njk" import image %}
+
+{% block links %}
+  <link rel="stylesheet" href="/assets/css/news.css">
+{% endblock %}
+
+{% block main %}
+  <section class="intro">
+    <div class="mdc-layout-grid layout-arx">
+      <div class="mdc-layout-grid__inner">
+        <div class="intro__box box--white mdc-layout-grid__cell">
+          <p>News</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="mdc-layout-grid layout-arx">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>News About ARX</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="news_page">
+    <div class="mdc-layout-grid layout-arx">
+      <div class="mdc-layout-grid__inner">
+
+        {% for article in news | reverse %}
+          <article
+            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+            {{ image(article.image, images, alt="", width=660, height=270, tabletWidth=380, phoneWidth=440) }}
+            <h3><a href="/news/{{ article.date | replace("T00:00:00.000Z", "") }}/">{{ article.title }}</a></h3>
+            <p>
+              <time
+                datetime="{{ article.date }}">{{ article.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time>
+            </p>
+            {{ article.perex | safe }}
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="mdc-layout-grid layout-arx">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <div class="button text-center">
+            <a class="button__info" href="/news/">LOAD MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

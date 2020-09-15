@@ -249,7 +249,7 @@ function addSiteToCI(name) {
       name: `test-${siteName}`,
       site_name: name,
       context: "org-global",
-      requires: ["build"]
+      requires: ["build", "deploy-lighthouse-ci"]
     }
   };
   const deployJob = {

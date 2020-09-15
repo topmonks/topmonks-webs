@@ -1,0 +1,54 @@
+/* Background for Small Devices */
+@media screen and (min-width: 1440px) {
+  body {
+    background: #fff url("/assets/img/contacts-bg.jpg") top right no-repeat;
+    background-size: 65% 600px;
+  }
+  .intro {
+    min-height: 500px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    background: #fff url("/assets/img/contacts-bg.jpg") top right no-repeat;
+    background-size: 75% 600px;
+  }
+  .intro {
+    min-height: 700px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .intro {
+    background: #fff url("/assets/img/contacts-bg.jpg") bottom center no-repeat;
+    background-size: 100% 75%;
+  }
+}
+
+/* Typography */
+h2 {
+  font-size: 38px;
+  font-weight: normal;
+  line-height: 45px;
+}
+
+span, a {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 32px;
+  color: var(--mdc-theme--secondary);
+}
+
+/* Section: Intro */
+.intro__box {
+  padding: 2em 4em;
+  p {
+    color: var(--mdc-theme--primary);
+  }
+}
+
+/* Map */
+.contact__map:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,81 @@
+{% extends "layouts/arx.njk" %}
+{% from "common/helpers.njk" import image %}
+
+{% block links %}
+  <link rel="stylesheet" href="/assets/css/strategy.css">
+{% endblock %}
+
+{% block main %}
+  <section class="intro">
+    <div class="mdc-layout-grid layout-arx">
+      <div class="mdc-layout-grid__inner">
+        <div class="intro__box box--yellow mdc-layout-grid__cell">
+          <p>We seek to Invest in Central European companies with EBITDAs of at least €
+            1&nbsp;million that are valued between € 10&nbsp;million and € 50&nbsp;million in
+            enterprise value&nbsp;(“EV”).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mdc-layout-grid layout-arx">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <div class="square-icon"></div>
+      </div>
+    </div>
+  </div>
+  <section class="transaction">
+    <div class="mdc-layout-grid layout-arx">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <h2>KEY Transaction types</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row-1">
+      <div class="column-1 ovocna-zmrzlina">
+        <div class="jahudka">
+          <h3 class="underline--light">Succession Situations of Family Businesses</h3>
+          <p>This is our favorite type of transaction. The owners would like to divest
+            entirely from the business in order to pursue other opportunities, or partially
+            divest while retaining a shareholding alongside&nbsp;ARX.</p>
+        </div>
+      </div>
+      <div class="column-2">
+        <div class="boruvka">
+          <h3 class="underline--light">Corporate<br>Divestitures</h3>
+          <p>A&nbsp;corporation seeking to divest a Central European subsidiary.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row-2">
+      <div class="box--dark box--specific-height column-1">
+        <div class="jahudka">
+          <h3 class="underline--light">Management Buyouts (MBO) / Buy-ins (MBI)</h3>
+          <p>Managers of a company would like to become co-owners of the business, or an
+            outside management team would like to acquire a company with our financial
+            support.</p>
+        </div>
+      </div>
+      <div
+        class="box--yellow box--specific-height column-2">
+        <div class="boruvka">
+          <h3 class="underline--dark">Growth Equity</h3>
+          <p>A&nbsp;company seeking capital to strengthen its market position, acquire a
+            complementary business or fund a significant capex investment.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row-3">
+      <div
+        class="column-1 ovocna-zmrzlina">
+        <div class="jahudka">
+          <h3 class="underline--light">Financial Restructuring</h3>
+          <p>A&nbsp;company seeking capital to help get through a period of financial or
+            operational&nbsp;stress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

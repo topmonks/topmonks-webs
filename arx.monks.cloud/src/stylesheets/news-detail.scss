@@ -1,0 +1,25 @@
+header ul li {
+  color: var(--mdc-theme--third-dark);
+}
+
+.article__body {
+  border-top: 1px solid var(--mdc-theme--primary);
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: var(--mdc-theme--primary);
+  position: relative;
+  top: -8em;
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 32px;
+    margin: 2em 2em 0;
+  }
+  p {
+    margin: 1em 2em;
+  }
+}
+.news {
+  padding: 4em 0;
+}
+

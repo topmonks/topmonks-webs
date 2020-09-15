@@ -1,16 +1,18 @@
 version: 2.1
 orbs:
-  browser-tools: circleci/browser-tools@1.0.1
   aws-cli: circleci/aws-cli@1.2.1
   aws-cloudfront: topmonks/aws-cloudfront@1.0.0
   aws-s3: circleci/aws-s3@1.0.15
+  browser-tools: circleci/browser-tools@1.0.1
+  docker: circleci/docker@1.4.0
   github: topmonks/github@1.0.1
   pulumi: pulumi/pulumi@2.0.0
+  swarmpit: topmonks/swarmpit@1.2.0
 
 executors:
   nodejs:
     docker:
-      - image: cimg/node:14.5
+      - image: cimg/node:14.8
 
 commands:
   read_deployment_envs:
@@ -203,6 +205,26 @@ workflows:
           filters:
             branches:
               only: trunk
+      - docker/publish:
+          name: publish-lhci
+          context: org-docker
+          docker-context: lhci.dev.tmcloud.io
+          path: lhci.dev.tmcloud.io
+          image: topmonks/lhci-server
+          tag: latest
+          filters:
+            branches:
+              only: trunk
+      - swarmpit/deploy:
+          name: deploy-lighthouse-ci
+          stack_name: lighthouse-ci
+          compose_file_path: lhci.dev.tmcloud.io/docker-compose.yml
+          context: org-swarmpit-dev
+          requires:
+            - publish-lhci
+          filters:
+            branches:
+              only: trunk
       - merge_pr:
           context: org-github
           requires:
@@ -218,6 +240,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-www-topmonks-com
           site_name: www.topmonks.com
@@ -234,6 +257,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-blockchain-topmonks-com
           site_name: blockchain.topmonks.com
@@ -250,6 +274,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-studio-topmonks-com
           site_name: studio.topmonks.com
@@ -266,6 +291,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-www-topmonks-cz
           site_name: www.topmonks.cz
@@ -282,6 +308,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-caffe-topmonks-cz
           site_name: caffe.topmonks.cz
@@ -298,6 +325,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-prodeti-topmonks-cz
           site_name: prodeti.topmonks.cz
@@ -314,6 +342,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-session-monk-topmonks-com
           site_name: session-monk.topmonks.com
@@ -337,6 +366,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-monkslab-cz
           site_name: monkslab.cz
@@ -363,6 +393,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-www-hlidacshopu-cz
           site_name: www.hlidacshopu.cz
@@ -389,6 +420,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-www-ingridapp-io
           site_name: www.ingridapp.io
@@ -405,6 +437,7 @@ workflows:
           context: org-global
           requires:
             - build
+            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-arx-monks-cloud
           site_name: arx.monks.cloud

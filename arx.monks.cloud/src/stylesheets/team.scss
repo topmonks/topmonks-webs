@@ -1,0 +1,75 @@
+/* Background for Small Devices */
+@media screen and (min-width: 1440px) {
+  body {
+    background: #fff url("/assets/img/team-bg.jpg") top right no-repeat;
+    background-size: 60% 700px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    background: #fff url("/assets/img/team-bg.jpg") top right no-repeat;
+    background-size: 70% 700px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .intro {
+    background: #fff url("/assets/img/team-bg.jpg") bottom center no-repeat;
+    background-size: 100% 75%;
+  }
+}
+
+.intro__box {
+  padding: 6em 4em;
+}
+
+.team {
+  h2 {
+    color: var(--mdc-theme--third);
+  }
+  span {
+    color: var(--mdc-theme--primary);
+  }
+  img {
+    position: relative;
+    object-fit: cover;
+    @media (min-width: 840px) {
+      height: 600px;
+      width: 100%;
+    }
+  }
+  .member {
+    position: relative;
+  }
+  .member-description {
+    position: absolute;
+    bottom: 3.5em;
+    left: 2.5em;
+    @media (max-width: 839px) {
+      bottom: 2.5em;
+      left: 2.5em;
+    }
+  }
+  .member-description:before {
+    content: "";
+    display: block;
+    border: 6px solid rgba(255, 255, 255, 0.23);
+    box-sizing: border-box;
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    top: 1em;
+    left: -1em;
+  }
+  .member-name {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 32px;
+  }
+  .member-post {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 32px;
+  }
+}

@@ -20,7 +20,7 @@
     },
     "upload": {
       "target": "lhci",
-      "serverBaseUrl": "https://lighthouse.dev.tmcloud.io/"
+      "serverBaseUrl": "https://lhci.dev.tmcloud.io/"
     }
   }
 }

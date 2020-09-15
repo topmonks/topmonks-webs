@@ -1,0 +1,45 @@
+{% extends "layouts/arx.njk" %}
+{% from "common/helpers.njk" import image %}
+
+{% block links %}
+  <link rel="stylesheet" href="/assets/css/team.css">
+{% endblock %}
+
+{% block main %}
+<section class="intro">
+  <div class="mdc-layout-grid layout-arx">
+    <div class="mdc-layout-grid__inner">
+      <div class="intro__box box--white mdc-layout-grid__cell">
+        <p>Our team members personally invest in each transaction, our interests are
+          aligned with our partners in every situation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="mdc-layout-grid layout-arx">
+  <div class="mdc-layout-grid__inner">
+    <div class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+      <div class="square-icon"></div>
+    </div>
+  </div>
+</div>
+<section class="team">
+  <div class="mdc-layout-grid layout-arx">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Team</h2>
+      </div>
+      {% for member in team %}
+      <div class="member mdc-layout-grid__cell">
+        <!-- TODO: use cloudinary to generate responsive images -->
+        <img alt="Photo of {{ member.name }}" src="{{ member.image }}" class="responsive">
+        <div class="member-description">
+          <span class="member-name">{{ member.name }}</span><br>
+          <span class="member-post text-opacity">{{ member.title }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

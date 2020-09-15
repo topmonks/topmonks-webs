@@ -1,23 +1,45 @@
 {
   "blockchain.topmonks.com": {
-    "lhci": { "upload": { "token": "818a91e6-f322-4c1b-a8f3-687d066dc799" } }
+    "lhci": {
+      "upload": {
+        "token": "bd8e4c43-e5f9-470e-aa0c-2d5aa2a4670f"
+      }
+    }
   },
   "studio.topmonks.com": {
     "lhci": {
-      "assert": { "assertions": { "offscreen-images": "warn" } },
-      "upload": { "token": "88b179e8-4066-4364-8ada-79e443656c71" }
+      "assert": {
+        "assertions": {
+          "offscreen-images": "warn"
+        }
+      },
+      "upload": {
+        "token": "10581b7f-ae2f-4f9b-a3df-019189ead9d5"
+      }
     }
   },
   "www.topmonks.com": {
     "lhci": {
-      "assert": { "assertions": { "offscreen-images": "warn" } },
-      "upload": { "token": "7e020fdc-625f-403a-9d05-ab66dfe219cf" }
+      "assert": {
+        "assertions": {
+          "offscreen-images": "warn"
+        }
+      },
+      "upload": {
+        "token": "2180e794-acfa-441c-9004-93170eb785c4"
+      }
     }
   },
   "caffe.topmonks.cz": {
     "lhci": {
-      "assert": { "assertions": { "offscreen-images": "warn" } },
-      "upload": { "token": "bd46a906-4ce2-4335-bd2c-022bc048034b" }
+      "assert": {
+        "assertions": {
+          "offscreen-images": "warn"
+        }
+      },
+      "upload": {
+        "token": "cda1553d-bf69-4dc2-9349-20cf5f9d5a16"
+      }
     }
   },
   "prodeti.topmonks.cz": {
@@ -28,29 +50,62 @@
           "offscreen-images": "warn"
         }
       },
-      "upload": { "token": "7d580a37-e5e3-41c1-9e47-3605ffc330c4" }
+      "upload": {
+        "token": "ffdf7ea9-3479-431e-a2d4-7253de7aba35"
+      }
     }
   },
   "www.topmonks.cz": {
-    "lhci": { "upload": { "token": "b1c12639-5629-4983-b2cf-787cc683741b" } }
+    "lhci": {
+      "upload": {
+        "token": "44dc8f36-d30d-404d-9985-262dd824662e"
+      }
+    }
   },
   "www.hookamonk.com": {
-    "lhci": { "upload": { "token": "2bff9c0f-9628-4790-859c-4baff8c119ca" } }
+    "lhci": {
+      "upload": {
+        "token": "2534835b-9525-441b-b854-a1102dc3888c"
+      }
+    }
   },
   "monkslab.cz": {
     "lhci": {
-      "assert": { "assertions": { "errors-in-console": "warn" } },
-      "upload": { "token": "2abde14f-06dd-4f7a-8203-2ddc1575a40a" }
+      "assert": {
+        "assertions": {
+          "errors-in-console": "warn"
+        }
+      },
+      "upload": {
+        "token": "c3973dbc-b205-4b9a-80da-ea4de8d05d16"
+      }
     }
   },
   "www.hlidacshopu.cz": {
-    "lhci": { "upload": { "token": "b99d731f-aa95-4105-b71b-7ac29c93e81e" } },
-    "dns": { "disabled": true }
+    "lhci": {
+      "assert": {
+        "assertions": {
+          "unsized-images": "warn"
+        }
+      },
+      "upload": {
+        "token": "b6acc334-29ad-41ca-a4c0-dfc9e765dd57"
+      }
+    },
+    "dns": {
+      "disabled": true
+    }
   },
   "session-monk.topmonks.com": {
     "lhci": {
-      "assert": { "assertions": { "meta-description": "warn" } },
-      "upload": { "token": "a2c6aba5-ab1f-4483-bd81-727b871d1b79" }
+      "assert": {
+        "assertions": {
+          "meta-description": "warn"
+        }
+      },
+      "upload": {
+        "token": "96c5a992-873c-409a-8264-31d6a2ce1dfe"
+      }
     }
   },
   "room.monks.cloud": {},
@@ -66,7 +121,9 @@
           "uses-passive-event-listeners": "warn"
         }
       },
-      "upload": { "token": "c1c2996f-87f1-434c-b225-2e50f0134b01" }
+      "upload": {
+        "token": "71c706c6-ae1f-4955-a418-29ca9947795d"
+      }
     }
   },
   "arx.monks.cloud": {
@@ -77,7 +134,9 @@
           "meta-description": "warn"
         }
       },
-      "upload": { "token": "56219155-a075-4e2a-abd9-53e91c1d574f" }
+      "upload": {
+        "token": "d61f65f5-8db9-4129-af03-ef7308696a27"
+      }
     }
   }
 }

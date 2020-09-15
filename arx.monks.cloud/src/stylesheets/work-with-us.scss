@@ -1,0 +1,89 @@
+/* Background for Small Devices */
+@media screen and (min-width: 1440px) {
+  body {
+    background: #fff url("/assets/img/case-study-bg.jpg") top right no-repeat;
+    background-size: 60% 580px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    background: #fff url("/assets/img/case-study-bg.jpg") top right no-repeat;
+    background-size: 70% 580px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .intro {
+    background: #fff url("/assets/img/case-study-bg.jpg") bottom center no-repeat;
+    background-size: 100% 75%;
+    min-height: 300px;
+    margin-bottom: 3em;
+  }
+}
+
+
+/* Section: Intro */
+.intro__box:before {
+  content: "";
+  width: 40%;
+  height: 4px;
+  background-color: var(--mdc-theme--fourth);
+  display: block;
+  margin: 30px 0;
+}
+
+
+/* Section: Managers */
+.managers {
+  padding: 2em 0;
+  @media screen and (min-width: 1024px) {
+    background: url("/assets/img/managers-bg.jpg") 100% no-repeat;
+    background-size: 100% 100%;
+    .mdc-layout-grid__cell {
+      width: 50%;
+    }
+  }
+  @media (max-width: 1023px) {
+    color: var(--mdc-theme--primary);
+    background-color: var(--mdc-theme--third);
+  }
+}
+
+
+/* Section: Intermediaries */
+.intermediaries {
+  .column-1 {
+    color: var(--mdc-theme--primary);
+
+    .jahudka {
+      align-self: center;
+    }
+
+    @media screen and (min-width: 1440px) {
+      background: #fff url("/assets/img/intermediaries-bg.jpg") no-repeat;
+      background-size: cover;
+      .sub-title {
+        opacity: 0.77;
+      }
+    }
+    @media (min-width: 840px) and (max-width: 1439px) {
+      h2 {
+        font-size: 50px;
+      }
+    }
+    @media (max-width: 1439px) {
+      background-color: var(--mdc-theme--third);
+      .sub-title {
+        font-size: 20px;
+      }
+    }
+    @media (max-width: 739px) {
+      border-top: 2px solid var(--mdc-theme--fourth);
+    }
+  }
+
+  @media screen and (min-width: 740px) {
+    display: flex;
+  }
+}

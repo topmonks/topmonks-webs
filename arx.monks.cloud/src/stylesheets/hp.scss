@@ -1,0 +1,178 @@
+/* Background for Small Devices */
+@media screen and (min-width: 1440px) {
+  body {
+    background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
+    background-size: 60% 744px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    background: #fff url("/assets/img/header-bg.jpg") top right no-repeat;
+    background-size: 70% 744px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .intro {
+    background: url("/assets/img/header-bg.jpg") bottom center no-repeat;
+    background-size: 100% 75%;
+  }
+}
+
+/* Section: About */
+.about {
+  @media (min-width: 540px) {
+    .jahudka, .boruvka {
+      box-sizing: border-box;
+      max-width: calc(var(--arx-layout-max-width) / 2);
+      padding: 6em;
+    }
+    .column-2 {
+      margin-top: 6em;
+    }
+  }
+  @media screen and (min-width: 740px) {
+    display: flex;
+    .about__bg {
+      background: url("/assets/img/about-bg02.jpg") no-repeat;
+      background-size: cover;
+      filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.07));
+    }
+  }
+  @media (max-width: 739px) {
+    padding: 1em;
+  }
+}
+
+@media screen and (min-width: 740px) {
+  .column-1 {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+
+/* Section: Facts and Figures */
+.investments {
+  margin: 3em 0;
+
+  h3 {
+    color: var(--mdc-theme--primary);
+    padding-top: 0.5em;
+  }
+
+  .investments__bg {
+    background: url("/assets/img/facts-bg.jpg") no-repeat;
+    background-size: cover;
+    @media screen and (min-width: 540px) {
+      max-width: 50vw;
+      padding: 6em 6em 20em;
+    }
+    @media (max-width: 539px) {
+      max-width: 100vw;
+      padding: 2em;
+    }
+    @media (min-width: 740px) and (max-width: 839px) {
+      padding: 6em 6em 14em;
+    }
+  }
+
+  .broskev {
+    display: flex;
+    max-width: calc(var(--arx-layout-max-width) / 2);
+  }
+
+  .column-2 {
+    display: inline-flex;
+  }
+
+  .investments__box {
+    text-align: center;
+
+    h4 {
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      color: var(--mdc-theme--secondary-light);
+    }
+
+    .box_row {
+      padding: 0 1em;
+    }
+
+    .box--white {
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+      @media screen and (min-width: 1024px) {
+        margin-right: 24px;
+        &:nth-child(5) {
+          margin-right: 0;
+        }
+      }
+      @media (min-width: 740px) and (max-width: 1023px) {
+        margin: 0.5em 0 1.5em;
+        &:nth-child(5) {
+          margin-right: 0;
+        }
+      }
+      @media (max-width: 739px) {
+        padding: 1em;
+        margin-bottom: 1.5em;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      p {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    @media (min-width: 740px) {
+      margin: -18em 0 16em;
+      .box_row {
+        display: inline-flex;
+        max-width: var(--arx-layout-max-width);
+      }
+    }
+
+    @media (min-width: 740px) and (max-width: 839px) {
+      margin: -12em 0 14em;
+    }
+  }
+}
+
+/* Section: Our Believes */
+/**/
+
+/* Section: Team */
+.team {
+  color: var(--mdc-theme--primary);
+
+  .column-1 {
+    background-color: var(--mdc-theme--third);
+    justify-content: center;
+    align-self: center;
+  }
+
+  .column-2 {
+    background-image: url("/assets/img/hp_team-bg.jpg");
+    background-size: cover;
+  }
+
+  .jahudka {
+    align-self: center;
+  }
+
+  @media screen and (min-width: 740px) {
+    display: flex;
+  }
+}
+
+/* Section: News */
+/**/
+
+

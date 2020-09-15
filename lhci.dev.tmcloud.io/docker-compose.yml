@@ -1,0 +1,38 @@
+version: '3.3'
+services:
+  lhserver:
+    image: topmonks/lhci-server:latest
+    environment:
+      DB_NAME: lhci
+      DB_SERVER: dev-postgres.cwd4mvussnuk.eu-central-1.rds.amazonaws.com:5432
+      DB_PASSWORD_FILE: /run/secrets/postgres-password
+      DB_USER: monkadmin
+    networks:
+      - proxy
+    secrets:
+      - postgres-password
+    deploy:
+      replicas: 1
+      labels:
+        traefik.enable: 'true'
+        traefik.docker.network: proxy
+        traefik.frontend.auth.basic.removeHeader: 'true'
+        traefik.frontend.auth.basic.users: "admin:$$apr1$$Fm.nQhpt$$gpSg3OvssXIdD6FLVyDzb1"
+        traefik.frontend.headers.forceSTSHeader: 'true'
+        traefik.frontend.headers.STSIncludeSubdomains: 'true'
+        traefik.frontend.headers.STSPreload: 'true'
+        traefik.frontend.headers.STSSeconds: '315360000'
+        traefik.frontend.rule: Host:lhci.dev.tmcloud.io
+        traefik.port: '9001'
+      placement:
+        constraints:
+          - node.role == worker
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
+secrets:
+  postgres-password:
+    external: true
+networks:
+  proxy:
+    external: true

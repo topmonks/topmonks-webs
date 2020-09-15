@@ -1,0 +1,69 @@
+/* Background for Small Devices */
+@media screen and (min-width: 1440px) {
+  body {
+    background: #fff url("/assets/img/investments-bg.jpg") top right no-repeat;
+    background-size: 60% 600px;
+  }
+  .intro {
+    min-height: 500px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    background: #fff url("/assets/img/investments-bg.jpg") top right no-repeat;
+    background-size: 70% 600px;
+  }
+  .intro {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .intro {
+    background: #fff url("/assets/img/investments-bg.jpg") bottom center no-repeat;
+    background-size: 100% 75%;
+  }
+}
+
+
+.intro__box {
+  padding: 10em 4em;
+}
+
+.box__logo {
+  border-bottom: 1px solid #DBDBDB;
+  width: 100%;
+  height: 245px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box__text {
+  h3.sub-title {
+    margin-top: 1.458em;
+    margin-bottom: 0.4166em;
+  }
+}
+
+.box__info {
+  line-height: 1.6;
+
+  dt {
+    color: var(--mdc-theme--secondary);
+    font-weight: bold;
+    opacity: 1;
+    float: left;
+    clear: right;
+
+    &::after {
+      content: ":";
+      padding-right: 1ex;
+    }
+  }
+
+  dd {
+    clear: right;
+  }
+}
