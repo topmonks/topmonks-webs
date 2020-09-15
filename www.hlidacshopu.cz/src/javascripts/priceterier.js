@@ -1,7 +1,6 @@
-import { html, svg, render } from "lit-html/lit-html";
-import { formatPercents } from "./lib/format";
-import { formatMoney } from "./lib/format";
-import {fetchPriceterierData} from "./lib/remoting";
+import { html, render, svg } from "lit-html/lit-html";
+import { formatMoney, formatPercents } from "./lib/format";
+import { fetchPriceterierData } from "./lib/remoting";
 import { shops } from "./lib/shops.js";
 
 const tableRoot = document.getElementById("table-root");
@@ -31,30 +30,28 @@ function tableTemplate(data) {
   return data.map(shopTemplate);
 }
 
-function shopTemplate(
-  {
-    sequenceId,
-    historyItems30Days,
-    date,
-    shop,
-    itemId,
-    itemName,
-    itemUrl,
-    minPrice30Days,
-    currentPrice,
-    max_price,
-    sale_abs,
-    sale_perc
-  }
-  ) {
+function shopTemplate({
+  sequenceId,
+  historyItems30Days,
+  date,
+  shop,
+  itemId,
+  itemName,
+  itemUrl,
+  minPrice30Days,
+  currentPrice,
+  max_price,
+  sale_abs,
+  sale_perc
+}) {
   return html`
     <tr class="dashboard-row">
       <th>${sequenceId}</th>
-      <td>${formatPercents(sale_perc/100)}</td>
+      <td>${formatPercents(sale_perc / 100)}</td>
       <td>${formatMoney(Math.round(minPrice30Days))}</td>
       <td>${formatMoney(Math.round(sale_abs))}</td>
       <td>${formatMoney(Math.round(currentPrice))}</td>
-      <td>${(date)}</td>
+      <td>${date}</td>
       <td>${productLinkTemplate(shops.get(shop), itemName, itemUrl)}</td>
       <td>${logoTemplate(shops.get(shop))}</td>
     </tr>
@@ -69,13 +66,18 @@ function logoTemplate({ logo, name, url, viewBox }) {
       </svg>
     `;
   return html`
-    <a href="${url}" class="sprite sprite--${logo}" title="${name}" target="_blank">${image}</a>
+    <a
+      href="${url}"
+      class="sprite sprite--${logo}"
+      title="${name}"
+      target="_blank"
+      >${image}</a
+    >
   `;
 }
 
 function productLinkTemplate({ logo, name, url, viewBox }, itemName, itemUrl) {
-  const productUrl = itemUrl;
   return html`
-    <a href="${productUrl}" target="_blank">${itemName}</a>
+    <a href="${itemUrl}" target="_blank">${itemName}</a>
   `;
 }
