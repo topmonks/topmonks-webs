@@ -14,7 +14,7 @@
           <p><span>We are proud of our<br>20-year track record</span> of building great companies in
             successful partnerships with business owners and managers.</p>
           <div class="button">
-            <a class="button__info" href="">MORE INFO</a>
+            <a class="button__info" href="/investments/">MORE INFO</a>
           </div>
         </div>
       </div>
@@ -177,7 +177,7 @@
       <div class="jahudka">
         <h3>Meet our team</h3>
         <div class="button">
-          <a class="button__info" href="">MORE INFO</a>
+          <a class="button__info" href="/team/">MORE INFO</a>
         </div>
       </div>
     </div>
@@ -197,7 +197,7 @@
           {%- if loop.index <= 2 -%}
             <div
               class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-              {{ image(article.image, images, alt="", width="660", tabletWidth="420", phoneWidth="380") }}
+              {{ image(article.image, images, alt="", width=660, tabletWidth=420, phoneWidth=380, height=262) }}
               <time class="date"
                     datetime="{{ article.date }}">{{ article.date | replace("-", "/") | replace("T00:00:00.000Z", "") }}</time>
               <div class="article-title">
