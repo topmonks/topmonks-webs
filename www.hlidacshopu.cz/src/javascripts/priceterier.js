@@ -1,7 +1,7 @@
 import { html, svg, render } from "lit-html/lit-html";
 import { formatPercents } from "./lib/format";
 import { formatMoney } from "./lib/format";
-import {fetchPriceterierData, fetchShopsStats} from "./lib/remoting";
+import {fetchPriceterierData} from "./lib/remoting";
 import { shops } from "./lib/shops.js";
 
 const tableRoot = document.getElementById("table-root");
@@ -9,11 +9,11 @@ const tableRoot = document.getElementById("table-root");
 addEventListener("DOMContentLoaded", async e => {
   try {
     let data = await fetchPriceterierData();
-    console.log("fetched data from fetchPriceterierData() ")
-    console.log(data);//TODO remove
+    console.log("fetched data from fetchPriceterierData() ");
+    console.log(data);
     //add sequenceId
-    let a = data
-    for(let i = 0; i < a.length; i++) {
+    let a = data;
+    for (let i = 0; i < a.length; i++) {
       let obj = a[i];
       obj.sequenceId = i + 1;
     }
@@ -28,25 +28,25 @@ function tableTemplate(data) {
   //return data.sort((a, b) => a.sortKey - b.sortKey).map(shopTemplate);
   console.log(data.map(shopTemplate));
 
-
   return data.map(shopTemplate);
 }
 
-function shopTemplate({
-                        sequenceId,
-                        historyItems30Days,
-                        date,
-                        shop,
-                        itemId,
-                        itemName,
-                        itemUrl,
-                        minPrice30Days,
-                        currentPrice,
-                        max_price,
-                        sale_abs,
-                        sale_perc
-
-}) {
+function shopTemplate(
+  {
+    sequenceId,
+    historyItems30Days,
+    date,
+    shop,
+    itemId,
+    itemName,
+    itemUrl,
+    minPrice30Days,
+    currentPrice,
+    max_price,
+    sale_abs,
+    sale_perc
+  }
+  ) {
   return html`
     <tr class="dashboard-row">
       <th>${sequenceId}</th>
