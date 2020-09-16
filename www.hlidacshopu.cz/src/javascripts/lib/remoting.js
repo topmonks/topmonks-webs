@@ -172,7 +172,7 @@ export async function fetchDashboardData() {
 export async function fetchPriceterierData() {
   const resp = await Promise.race([
     timeout(4000),
-    fetch("http://localhost:3000/priceterier/sampleData1.html") //TODO
+    fetch("sampleData1.html") //TODO
   ]);
   if (!resp.ok) throw new Error("API error");
   const shopsData = await resp.json();
