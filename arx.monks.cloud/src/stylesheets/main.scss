@@ -19,6 +19,9 @@
 html {
   scroll-behavior: smooth;
 }
+html, body {
+  margin: 0;
+}
 
 .responsive {
   width: 100%;
