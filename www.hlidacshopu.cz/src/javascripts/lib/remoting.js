@@ -169,25 +169,24 @@ export async function fetchDashboardData() {
   );
 }
 
-export async function fetchPriceterierData() {
+export async function fetchPriceterierDataPercent() {
   const resp = await Promise.race([
     timeout(4000),
-    fetch("sampleData1.html") //TODO
+    fetch("percentdiscount.html") //TODO
   ]);
   if (!resp.ok) throw new Error("API error");
   const shopsData = await resp.json();
   return shopsData;
-  /*
-  console.log("shopsData");//TODO remove
-  console.log(shopsData);
-  const shopsStatsData = new Map(shopsData.map(shopStats).map(x => [x.key, x]));
-  console.log("shopsStatsData");//TODO remove
-  console.log(shopsStatsData);
-  return Array.from(shops.entries()).map(([key, x]) =>
-    Object.assign({}, x, shopsStatsData.get(key))
-  );
+}
 
-   */
+export async function fetchPriceterierDataKc() {
+  const resp = await Promise.race([
+    timeout(4000),
+    fetch("kcdiscount.html") //TODO
+  ]);
+  if (!resp.ok) throw new Error("API error");
+  const shopsData = await resp.json();
+  return shopsData;
 }
 
 const review = ({ avatar, date, name, text, rating, type, sourceUrl }) => ({
