@@ -18,7 +18,7 @@ if (tableRootPercent) {
         obj.sequenceId = i + 1;
       }
       data = a;
-      render(tableTemplate(data), tableRootPercent);
+      render(tableTemplatePercent(data), tableRootPercent);
     } catch (ex) {
       console.error(ex);
     }
@@ -38,34 +38,39 @@ if (tableRootKc) {
         obj.sequenceId = i + 1;
       }
       data = a;
-      render(tableTemplate(data), tableRootKc);
+      render(tableTemplateKc(data), tableRootKc);
     } catch (ex) {
       console.error(ex);
     }
   });
 }
 
-function tableTemplate(data) {
-  console.log(data.map(shopTemplate));
-  return data.map(shopTemplate);
+function tableTemplatePercent(data) {
+  console.log(data.map(shopTemplatePercent));
+  return data.map(shopTemplatePercent);
 }
 
-function shopTemplate({
-                        sequenceId,
-                        historyItems30Days,
-                        date,
-                        shop,
-                        itemId,
-                        itemName,
-                        itemUrl,
-                        minPrice30Days,
-                        currentPrice,
-                        max_price,
-                        sale_abs,
-                        sale_perc
-                      }) {
+function tableTemplateKc(data) {
+  console.log(data.map(shopTemplateKc));
+  return data.map(shopTemplateKc);
+}
+
+function shopTemplatePercent({
+                               sequenceId,
+                               historyItems30Days,
+                               date,
+                               shop,
+                               itemId,
+                               itemName,
+                               itemUrl,
+                               minPrice30Days,
+                               currentPrice,
+                               max_price,
+                               sale_abs,
+                               sale_perc
+                             }) {
   return html`
-    <tr class="dashboard-row">
+     <tr class="dashboard-row">
       <th>${sequenceId}</th>
       <td>${formatPercents(sale_perc / 100)}</td>
       <td>${formatMoney(Math.round(minPrice30Days))}</td>
@@ -77,6 +82,35 @@ function shopTemplate({
     </tr>
   `;
 }
+
+function shopTemplateKc({
+                          sequenceId,
+                          historyItems30Days,
+                          date,
+                          shop,
+                          itemId,
+                          itemName,
+                          itemUrl,
+                          minPrice30Days,
+                          currentPrice,
+                          max_price,
+                          sale_abs,
+                          sale_perc
+                        }) {
+  return html`
+    <tr class="dashboard-row">
+      <th>${sequenceId}</th>
+      <td>${formatMoney(Math.round(sale_abs))}</td>
+      <td>${formatMoney(Math.round(currentPrice))}</td>
+      <td>${formatMoney(Math.round(minPrice30Days))}</td>
+      <td>${formatPercents(sale_perc / 100)}</td>
+      <td>${date}</td>
+      <td>${productLinkTemplate(shops.get(shop), itemName, itemUrl)}</td>
+      <td>${logoTemplate(shops.get(shop))}</td>
+    </tr>
+  `;
+}
+
 
 function logoTemplate({logo, name, url, viewBox}) {
   const image = svg`
