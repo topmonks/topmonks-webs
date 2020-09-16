@@ -1,13 +1,14 @@
 import { html, render, svg } from "lit-html/lit-html";
 import { formatMoney, formatPercents } from "./lib/format";
-import { fetchPriceterierData } from "./lib/remoting";
+import { fetchPriceterierDataPercent } from "./lib/remoting";
+import { fetchPriceterierDataKc } from "./lib/remoting";
 import { shops } from "./lib/shops.js";
 
 const tableRoot = document.getElementById("table-root");
 
 addEventListener("DOMContentLoaded", async e => {
   try {
-    let data = await fetchPriceterierData();
+    let data = await fetchPriceterierDataPercent();
     console.log("fetched data from fetchPriceterierData() ");
     console.log(data);
     //add sequenceId
