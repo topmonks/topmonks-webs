@@ -1,8 +1,8 @@
-import {html, render, svg} from "lit-html/lit-html";
-import {formatMoney, formatPercents} from "./lib/format";
-import {fetchPriceterierDataPercent} from "./lib/remoting";
-import {fetchPriceterierDataKc} from "./lib/remoting";
-import {shops} from "./lib/shops.js";
+import { html, render, svg } from "lit-html/lit-html";
+import { formatMoney, formatPercents } from "./lib/format";
+import { fetchPriceterierDataPercent } from "./lib/remoting";
+import { fetchPriceterierDataKc } from "./lib/remoting";
+import { shops } from "./lib/shops.js";
 
 const tableRootPercent = document.getElementById("table-root-percent");
 if (tableRootPercent) {
@@ -56,21 +56,21 @@ function tableTemplateKc(data) {
 }
 
 function shopTemplatePercent({
-                               sequenceId,
-                               historyItems30Days,
-                               date,
-                               shop,
-                               itemId,
-                               itemName,
-                               itemUrl,
-                               minPrice30Days,
-                               currentPrice,
-                               max_price,
-                               sale_abs,
-                               sale_perc
-                             }) {
+  sequenceId,
+  historyItems30Days,
+  date,
+  shop,
+  itemId,
+  itemName,
+  itemUrl,
+  minPrice30Days,
+  currentPrice,
+  max_price,
+  sale_abs,
+  sale_perc
+}) {
   return html`
-     <tr class="dashboard-row">
+    <tr class="dashboard-row">
       <th>${sequenceId}</th>
       <td>${formatPercents(sale_perc / 100)}</td>
       <td>${formatMoney(Math.round(minPrice30Days))}</td>
@@ -84,19 +84,19 @@ function shopTemplatePercent({
 }
 
 function shopTemplateKc({
-                          sequenceId,
-                          historyItems30Days,
-                          date,
-                          shop,
-                          itemId,
-                          itemName,
-                          itemUrl,
-                          minPrice30Days,
-                          currentPrice,
-                          max_price,
-                          sale_abs,
-                          sale_perc
-                        }) {
+  sequenceId,
+  historyItems30Days,
+  date,
+  shop,
+  itemId,
+  itemName,
+  itemUrl,
+  minPrice30Days,
+  currentPrice,
+  max_price,
+  sale_abs,
+  sale_perc
+}) {
   return html`
     <tr class="dashboard-row">
       <th>${sequenceId}</th>
@@ -111,8 +111,7 @@ function shopTemplateKc({
   `;
 }
 
-
-function logoTemplate({logo, name, url, viewBox}) {
+function logoTemplate({ logo, name, url, viewBox }) {
   const image = svg`
       <svg viewBox="${viewBox}">
         <title>${name}</title>
@@ -130,7 +129,7 @@ function logoTemplate({logo, name, url, viewBox}) {
   `;
 }
 
-function productLinkTemplate({logo, name, url, viewBox}, itemName, itemUrl) {
+function productLinkTemplate({ logo, name, url, viewBox }, itemName, itemUrl) {
   return html`
     <a href="${itemUrl}" target="_blank">${itemName}</a>
   `;
