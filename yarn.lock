@@ -1199,10 +1199,10 @@
     "@pulumi/pulumi" "^2.0.0"
     semver "^5.4.0"
 
-"@pulumi/pulumi@^2.0.0", "@pulumi/pulumi@^2.10.0":
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-2.10.0.tgz#7fe0173e54d677950e79763af1e66b18e93cd597"
-  integrity sha512-XjI1OQhFI/i4zeIacBIfEcCh1dB+xlfJpPglhIk8E6U8VQdqtG+SD5jouCGTNpM+q0e0qqo5TVEIS7MSRrJ8+Q==
+"@pulumi/pulumi@^2.0.0", "@pulumi/pulumi@^2.10.1":
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-2.10.1.tgz#a527fd63bd8e67df6abefcce15311ccde801188a"
+  integrity sha512-kBO3ZPOF1153G5/rt3slJ43lCoFF7RkKoZW1QT2bX+wJj8FLrm6MgXIsT69Xs3HBM7ixsnDhGFiQ3Tna6j2ajQ==
   dependencies:
     "@grpc/grpc-js" "^0.6.15"
     "@pulumi/query" "^0.3.0"
@@ -1300,8 +1300,8 @@
 
 "@topmonks/blendid@git://github.com/topmonks/blendid.git":
   version "6.0.0"
-  uid "8d61de7d8c4f7de3529186ac08756a392ee09512"
-  resolved "git://github.com/topmonks/blendid.git#8d61de7d8c4f7de3529186ac08756a392ee09512"
+  uid a065ea65f62823e7f56549c411fa62b988a707a8
+  resolved "git://github.com/topmonks/blendid.git#a065ea65f62823e7f56549c411fa62b988a707a8"
   dependencies:
     "@rollup/plugin-alias" "^3.1.0"
     "@rollup/plugin-node-resolve" "^7.1.3"
@@ -1420,10 +1420,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.0.tgz#69a23a3ad29caf0097f06eda59b361ee2f0639f6"
   integrity sha1-aaI6OtKcrwCX8G7aWbNh7i8GOfY=
 
-"@types/node@*", "@types/node@^14.10.2":
-  version "14.10.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.10.2.tgz#9b47a2c8e4dabd4db73b57e750b24af689600514"
-  integrity sha512-IzMhbDYCpv26pC2wboJ4MMOa9GKtjplXfcAqrMeNJpUUwpM/2ATt2w1JPUXwS6spu856TvKZL2AOmeU2rAxskw==
+"@types/node@*", "@types/node@^14.10.3":
+  version "14.10.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.10.3.tgz#5ae1f119c96643fc9b19b2d1a83bfa2ec3dbb7ea"
+  integrity sha512-zdN0hor7TLkjAdKTnYW+Y22oIhUUpil5ZD1V1OFq0CR0CLKw+NdR6dkziTfkWRLo6sKzisayoj/GNpNbe4LY9Q==
 
 "@types/node@^13.7.0":
   version "13.13.15"
