@@ -172,7 +172,7 @@ export async function fetchDashboardData() {
 export async function fetchPriceterierDataPercent() {
   const resp = await Promise.race([
     timeout(4000),
-    fetch("percentdiscount.html") //TODO
+    fetch("/priceterier/percentdiscount.json") //TODO
   ]);
   if (!resp.ok) throw new Error("API error");
   const shopsData = await resp.json();
@@ -182,7 +182,7 @@ export async function fetchPriceterierDataPercent() {
 export async function fetchPriceterierDataKc() {
   const resp = await Promise.race([
     timeout(4000),
-    fetch("kcdiscount.html") //TODO
+    fetch("/priceterier/kcdiscount.json") //TODO
   ]);
   if (!resp.ok) throw new Error("API error");
   const shopsData = await resp.json();
