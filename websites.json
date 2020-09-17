@@ -118,7 +118,8 @@
           "heading-order": "warn",
           "unminified-css": "warn",
           "unused-css-rules": "warn",
-          "uses-passive-event-listeners": "warn"
+          "uses-passive-event-listeners": "warn",
+          "uses-text-compression": "warn"
         }
       },
       "upload": {
