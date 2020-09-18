@@ -21,33 +21,9 @@
       <div class="box jobs_positions mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h3>Open positions</h3>
         <div class="hire-jobs">
-          <a href="https://hire.withgoogle.com/public/jobs/topmonkscom">See open positions on Google Hire</a>
+          <p>We are always looking for passionate people with, not only, technical excelence. 
+            We can't promise you any current technology, but fun and challenging projects.</p>
         </div>
-        <script type="module">
-          import { html, render } from "https://unpkg.com/lit-html@1.1.0/lit-html.js?module";
-
-          const list = document.querySelector(".hire-jobs");
-          const jobsList = jobs => html`
-          <ul>
-            ${jobs.map(({ title, url, jobLocation }) => html`
-              <li>
-                <a href="${url}">${title}</a>
-                <span class="location">${address(jobLocation)}</span>
-              </li>`
-          )}
-          </ul>`;
-
-          fetch("https://hire.withgoogle.com/v2/api/t/topmonkscom/public/jobs", { mode: "cors" })
-            .then(r => r.json())
-            .then(jobs => render(jobsList(jobs), list));
-
-          function address({ address }) {
-            if (address.addressLocality) {
-              return address.addressLocality + ", " + address.addressCountry;
-            }
-            return address.addressCountry;
-          }
-        </script>
       </div>
     </div>
     <div class="contact-info mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
