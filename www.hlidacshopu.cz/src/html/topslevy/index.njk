@@ -1,6 +1,6 @@
-{% extends 'priceterier/master.njk' %}
+{% extends 'topslevy/master.njk' %}
 {% from 'macros/helpers.njk' import sprite %}
-{% block title %}Priceterier prototyp{% endblock %}
+{% block title %}Top slevy{% endblock %}
 
 {% block preload %}
   <link rel="modulepreload" href="https://unpkg.com/lit-html@1.1.1/lit-html.js?module" crossorigin/>
@@ -61,7 +61,7 @@
       <div class="layout-wrapper">
         <div class="mdc-layout-grid__inner">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-            <h2>Priceterier Prototyp V1 (max slevy %)</h2>
+            <h2>Top slevy (%)</h2>
           </div>
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <table class="shops-stats">
@@ -69,33 +69,33 @@
                 <col width="150"/>
               </colgroup>
               <thead>
-              <tr>
-                <th scope="col">Pořadí</th>
-                <th scope="col">Reálná sleva v %</th>
-                <th scope="col">Původní cena v Kč</th>
-                <th scope="col">Reálná sleva v Kč</th>
-                <th scope="col">Cena po slevě v Kč</th>
-                <th scope="col">Zlevněno od data</th>
-                <th scope="col">Produkt</th>
-                <th scope="col">Eshop</th>
-              </tr>
+                <tr>
+                  <th scope="col">Pořadí</th>
+                  <th scope="col">Reálná sleva v %</th>
+                  <th scope="col">Původní cena v Kč</th>
+                  <th scope="col">Reálná sleva v Kč</th>
+                  <th scope="col">Cena po slevě v Kč</th>
+                  <th scope="col">Zlevněno od data</th>
+                  <th scope="col">Produkt</th>
+                  <th scope="col">Eshop</th>
+                </tr>
               </thead>
               <tbody id="table-root-percent">
-              <tr>
-                <td colspan="5">
-                  <div class="loading-container">
-                    <div class="loader" aria-label="Načítám data…">
+                <tr>
+                  <td colspan="5">
+                    <div class="loading-container">
+                      <div class="loader" aria-label="Načítám data…">
                       Chvilku strpení, načítají se data&hellip;
                     </div>
-                  </div>
-                </td>
-              </tr>
+                    </div>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <p class="explanation">
-              Poznámka: <em>Reálná sleva</em> se počítá TODO.
+              Poznámka: <em>Reálná sleva</em> se počítá jako aktuální cena po slevě ku minimální ceně, za kterou se zboží prodávalo za předchozích maximálně 30 dní.
             </p>
           </div>
         </div>
@@ -105,5 +105,5 @@
 {% endblock %}
 
 {% block scripts %}
-  <script type="module" src="/assets/js/priceterier.js"></script>
+  <script type="module" src="/assets/js/topslevy.js"></script>
 {% endblock %}

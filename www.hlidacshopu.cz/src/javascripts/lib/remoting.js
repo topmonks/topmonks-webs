@@ -169,20 +169,20 @@ export async function fetchDashboardData() {
   );
 }
 
-export async function fetchPriceterierDataPercent() {
+export async function fetchDiscountDataPercent() {
   const resp = await Promise.race([
     timeout(4000),
-    fetch("/priceterier/percentdiscount.json") //TODO
+    fetch("/topslevy/percentdiscount.json") //TODO
   ]);
   if (!resp.ok) throw new Error("API error");
   const shopsData = await resp.json();
   return shopsData;
 }
 
-export async function fetchPriceterierDataKc() {
+export async function fetchDiscountDataCZK() {
   const resp = await Promise.race([
     timeout(4000),
-    fetch("/priceterier/kcdiscount.json") //TODO
+    fetch("/topslevy/kcdiscount.json") //TODO
   ]);
   if (!resp.ok) throw new Error("API error");
   const shopsData = await resp.json();
