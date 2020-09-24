@@ -114,7 +114,9 @@
     "start:www.ingridapp.io": "BLENDID_CONFIG_PATH=./www.ingridapp.io/config/ dotenv blendid",
     "build:www.ingridapp.io": "BLENDID_CONFIG_PATH=./www.ingridapp.io/config/ dotenv blendid -- build",
     "start:arx.monks.cloud": "BLENDID_CONFIG_PATH=./arx.monks.cloud/config/ dotenv blendid",
-    "build:arx.monks.cloud": "BLENDID_CONFIG_PATH=./arx.monks.cloud/config/ dotenv blendid -- build"
+    "build:arx.monks.cloud": "BLENDID_CONFIG_PATH=./arx.monks.cloud/config/ dotenv blendid -- build",
+    "start:zive.tv": "BLENDID_CONFIG_PATH=./zive.tv/config/ dotenv blendid",
+    "build:zive.tv": "BLENDID_CONFIG_PATH=./zive.tv/config/ dotenv blendid -- build"
   },
   "resolutions": {
     "bluebird": "npm:bluebird@3.7.2",

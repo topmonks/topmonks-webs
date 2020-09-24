@@ -448,3 +448,20 @@ workflows:
           filters:
             branches:
               only: trunk
+      - test_site:
+          name: test-zive-tv
+          site_name: zive.tv
+          context: org-global
+          requires:
+            - build
+            - deploy-lighthouse-ci
+      - deploy_site:
+          name: deploy-zive-tv
+          site_name: zive.tv
+          context: org-global
+          requires:
+            - provision
+            - test-zive-tv
+          filters:
+            branches:
+              only: trunk
