@@ -10,6 +10,7 @@ registerAutoTags({
 });
 
 topmonks.createCertificate("www.ingridapp.io");
+topmonks.createCertificate("www.zive.tv");
 
 const websites = require("./websites.json");
 export const sites: any = {};

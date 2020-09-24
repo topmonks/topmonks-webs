@@ -139,5 +139,12 @@
         "token": "d61f65f5-8db9-4129-af03-ef7308696a27"
       }
     }
+  },
+  "zive.tv": {
+    "lhci": {
+      "upload": {
+        "token": "aed43e13-59eb-49a0-9f72-e6dc22ce2578"
+      }
+    }
   }
 }
