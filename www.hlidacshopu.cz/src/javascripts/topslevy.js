@@ -78,7 +78,7 @@ function shopTemplatePercent({
       <td>${formatMoney(Math.round(minPrice30Days))}</td>
       <td>${formatMoney(Math.round(sale_abs))}</td>
       <td>${formatMoney(Math.round(currentPrice))}</td>
-      <td>${formatedDate}</td>
+      <td style="white-space: nowrap;">${formatedDate}</td>
       <td>${productLinkTemplate(shops.get(shop), itemName, itemUrl)}</td>
       <td>${logoTemplate(shops.get(shop))}</td>
     </tr>
@@ -106,7 +106,7 @@ function shopTemplateKc({
       <td>${formatMoney(Math.round(currentPrice))}</td>
       <td>${formatMoney(Math.round(minPrice30Days))}</td>
       <td>${formatPercents(sale_perc / 100)}</td>
-      <td>${formatedDate}</td>
+      <td style="white-space: nowrap;">${formatedDate}</td>
       <td>${productLinkTemplate(shops.get(shop), itemName, itemUrl)}</td>
       <td>${logoTemplate(shops.get(shop))}</td>
     </tr>
