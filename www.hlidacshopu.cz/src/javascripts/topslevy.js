@@ -14,7 +14,9 @@ if (tableRootPercent) {
       for (let i = 0; i < a.length; i++) {
         let obj = a[i];
         obj.sequenceId = i + 1;
-        obj.formatedDate = new Intl.DateTimeFormat('cs').format(Date.parse(obj.date));
+        obj.formatedDate = new Intl.DateTimeFormat("cs").format(
+          Date.parse(obj.date)
+        );
       }
       data = a;
       render(tableTemplatePercent(data), tableRootPercent);
@@ -33,7 +35,9 @@ if (tableRootKc) {
       for (let i = 0; i < a.length; i++) {
         let obj = a[i];
         obj.sequenceId = i + 1;
-        obj.formatedDate = new Intl.DateTimeFormat('cs').format(Date.parse(obj.date));
+        obj.formatedDate = new Intl.DateTimeFormat("cs").format(
+          Date.parse(obj.date)
+        );
       }
       data = a;
       render(tableTemplateKc(data), tableRootKc);
