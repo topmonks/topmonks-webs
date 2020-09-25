@@ -1,7 +1,7 @@
 {
   "app_name": "Hookamonk",
   "points": "HookaCoins",
-  "dashboard_start_session": "Start session",
+  "dashboard_start_session": "Join session",
   "session_info_attr_label": " °C",
   "session_rating_name": "Intensity",
   "session_rating_hint": "tap to set the intensity",
