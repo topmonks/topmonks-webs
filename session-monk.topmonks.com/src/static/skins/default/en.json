@@ -1,0 +1,11 @@
+{
+  "app_name": "Session Monk",
+  "points": "Points",
+  "dashboard_start_session": "Start session",
+  "session_info_attr_label": "",
+  "session_rating_name": "Strength",
+  "session_rating_hint": "tap to set the coffee strength",
+  "session_rating_option1": "low",
+  "session_rating_option2": "mild",
+  "session_rating_option3": "high"
+}
