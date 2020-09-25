@@ -150,7 +150,9 @@
 
 /* Section: Team */
 .team {
+  background: linear-gradient(to bottom, var(--mdc-theme--primary) 50%, var(--mdc-theme--secondary-bg) 50%);
   color: var(--mdc-theme--primary);
+  padding-bottom: 4em;
 
   .column-1 {
     background-color: var(--mdc-theme--third);
@@ -159,8 +161,7 @@
   }
 
   .column-2 {
-    background-image: cloudinaryUrl("arx.monks.cloud/hp_team-bg.jpg", (width: 960));
-    background-size: cover;
+    background: cloudinaryUrl("arx.monks.cloud/hp_team-bg.jpg", (width: 960)) 100% no-repeat;
   }
 
   .jahudka {
@@ -169,6 +170,25 @@
 
   @media screen and (min-width: 740px) {
     display: flex;
+    .column-1 {
+      height: 540px
+    }
+    .column-2 {
+      height: 540px;
+      margin-top: 12em;
+    }
+  }
+  @media (max-width: 739px) {
+    .button {
+      margin: 0 auto;
+    }
+    .column-1 {
+      text-align: center;
+      padding: 2em;
+    }
+    .column-2 {
+      display: none;
+    }
   }
 }
 
@@ -202,6 +222,7 @@
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.07);
     }
   }
+
   &__text {
     background-color: #eeeff1;
     padding: 23px 23px 23px 29px;
@@ -217,9 +238,11 @@
       background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='32' height='32'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z' fill='%23c4c4c4'/%3E%3C/svg%3E") 50% 50% no-repeat;
       box-shadow: none;
     }
+
     &:hover h4::before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='32' height='32'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z' fill='white'/%3E%3C/svg%3E");
     }
+
     .accordion__text {
       max-height: 1px;
       padding: 0;

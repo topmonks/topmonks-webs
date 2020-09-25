@@ -19,6 +19,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 html, body {
   margin: 0;
 }
@@ -56,6 +57,7 @@ html, body {
       height: 80px;
     }
   }
+
   .box__text, .box__info {
     padding: 0 1.75em 0.875em;
   }
@@ -193,6 +195,11 @@ html, body {
   }
 }
 
+.believes {
+  .believes__intro {
+    align-self: center;
+  }
+}
 
 /* Section: News */
 .news {
