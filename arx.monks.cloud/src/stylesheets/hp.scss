@@ -27,9 +27,6 @@
       box-sizing: border-box;
       max-width: calc(var(--arx-layout-max-width) / 2);
     }
-    .column-2 {
-      margin-top: 6em;
-    }
   }
   @media (min-width: 1024px) {
     .column-1__inner-box, .column-2__inner-box {
@@ -165,7 +162,7 @@
 
   .column-2 {
     background: cloudinaryUrl("arx.monks.cloud/hp_team-bg.jpg", (width: 960)) 100% no-repeat;
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.07);
   }
 
   .column-1__inner-box {
@@ -175,6 +172,11 @@
   @media screen and (min-width: 740px) {
     display: flex;
     padding-bottom: 4em;
+    .column-1, .column-2 {
+      max-width: 50vw;
+      flex-grow: 1;
+      display: flex;
+    }
     .column-1 {
       height: 540px
     }
@@ -256,5 +258,4 @@
     }
   }
 }
-
 

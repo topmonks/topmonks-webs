@@ -290,15 +290,8 @@ footer {
   }
 }
 
-@media (min-width: 740px) {
-  .column-1, .column-2 {
-    max-width: 50vw;
-    flex-grow: 1;
-    display: flex;
-  }
-}
 
-@media (max-width: 539px) {
+@media (max-width: 739px) {
   .column-1__inner-box, .column-2__inner-box {
     padding: 1em;
   }
