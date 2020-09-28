@@ -26,10 +26,14 @@
     .jahudka, .boruvka {
       box-sizing: border-box;
       max-width: calc(var(--arx-layout-max-width) / 2);
-      padding: 6em;
     }
     .column-2 {
       margin-top: 6em;
+    }
+  }
+  @media (min-width: 1024px) {
+    .jahudka, .boruvka {
+      padding: 6em;
     }
   }
   @media screen and (min-width: 740px) {
@@ -152,7 +156,6 @@
 .team {
   background: linear-gradient(to bottom, var(--mdc-theme--primary) 50%, var(--mdc-theme--secondary-bg) 50%);
   color: var(--mdc-theme--primary);
-  padding-bottom: 4em;
 
   .column-1 {
     background-color: var(--mdc-theme--third);
@@ -162,6 +165,7 @@
 
   .column-2 {
     background: cloudinaryUrl("arx.monks.cloud/hp_team-bg.jpg", (width: 960)) 100% no-repeat;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.07);
   }
 
   .jahudka {
@@ -170,6 +174,7 @@
 
   @media screen and (min-width: 740px) {
     display: flex;
+    padding-bottom: 4em;
     .column-1 {
       height: 540px
     }
@@ -179,6 +184,7 @@
     }
   }
   @media (max-width: 739px) {
+    margin-top: 2em;
     .button {
       margin: 0 auto;
     }
