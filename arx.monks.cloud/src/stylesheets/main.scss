@@ -284,9 +284,17 @@ footer {
   }
 }
 
-@media (min-width: 540px) and (max-width: 1439px) {
+@media (min-width: 740px) and (max-width: 1439px) {
   .column-1__inner-box, .column-2__inner-box {
     padding: 3em;
+  }
+}
+
+@media (min-width: 740px) {
+  .column-1, .column-2 {
+    max-width: 50vw;
+    flex-grow: 1;
+    display: flex;
   }
 }
 
@@ -296,12 +304,8 @@ footer {
   }
 }
 
+
 @media (min-width: 540px) {
-  .column-1, .column-2 {
-    max-width: 50vw;
-    flex-grow: 1;
-    display: flex;
-  }
   .column-1 {
     justify-content: flex-end;
   }

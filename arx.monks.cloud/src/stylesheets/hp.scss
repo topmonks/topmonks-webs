@@ -69,11 +69,11 @@
   .investments__bg {
     background: cloudinaryUrl("arx.monks.cloud/facts-bg.jpg", (width: 960)) no-repeat;
     background-size: cover;
-    @media screen and (min-width: 540px) {
+    @media screen and (min-width: 740px) {
       max-width: 50vw;
       padding: 6em 6em 20em;
     }
-    @media (max-width: 539px) {
+    @media (max-width: 739px) {
       max-width: 100vw;
       padding: 2em;
     }
