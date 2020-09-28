@@ -24,7 +24,7 @@
     "@topmonks/blendid": "git://github.com/topmonks/blendid.git",
     "@types/chart.js": "^2.9.24",
     "@types/yaml": "^1.9.7",
-    "ava": "^3.12.1",
+    "ava": "^3.13.0",
     "babel-eslint": "^10.1.0",
     "chalk": "^4.0.0",
     "commander": "^6.1.0",
