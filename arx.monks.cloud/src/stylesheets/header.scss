@@ -85,7 +85,7 @@ header {
     a {
       color: var(--mdc-theme--third);
     }
-    @media screen and (max-width: 913px) {
+    @media screen and (max-width: 1023px) {
       height: 58px;
     }
   }
@@ -96,7 +96,7 @@ header {
     align-self: center;
   }
 
-  @media screen and (max-width: 913px) {
+  @media screen and (max-width: 1023px) {
     height: 75px;
     padding-top: 8px;
 
@@ -132,7 +132,7 @@ header {
 
 .hamburger {
   margin-top: 1em;
-  @media screen and (min-width: 914px) {
+  @media screen and (min-width: 1024px) {
     display: none;
   }
 
@@ -204,7 +204,7 @@ header {
 }
 
 .menu {
-  @media screen and (max-width: 913px) {
+  @media screen and (max-width: 1023px) {
     width: 100vw;
     overflow: hidden;
     background-color: var(--mdc-theme--primary);
