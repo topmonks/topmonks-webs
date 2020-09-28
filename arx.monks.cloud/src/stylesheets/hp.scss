@@ -23,7 +23,7 @@
 /* Section: About */
 .about {
   @media (min-width: 540px) {
-    .jahudka, .boruvka {
+    .column-1__inner-box, .column-2__inner-box {
       box-sizing: border-box;
       max-width: calc(var(--arx-layout-max-width) / 2);
     }
@@ -32,7 +32,7 @@
     }
   }
   @media (min-width: 1024px) {
-    .jahudka, .boruvka {
+    .column-1__inner-box, .column-2__inner-box {
       padding: 6em;
     }
   }
@@ -168,7 +168,7 @@
     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.07);
   }
 
-  .jahudka {
+  .column-1__inner-box {
     align-self: center;
   }
 
