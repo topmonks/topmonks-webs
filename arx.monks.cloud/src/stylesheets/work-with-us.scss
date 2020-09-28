@@ -87,3 +87,12 @@
     display: flex;
   }
 }
+
+@media (min-width: 740px) {
+  .column-1, .column-2 {
+    max-width: 50vw;
+    flex-grow: 1;
+    display: flex;
+  }
+}
+
