@@ -1,9 +1,7 @@
 const utils = require("utils");
 
-
 const AWS = require("aws-sdk");
 const dynamodb = new AWS.DynamoDB();
-
 
 const formattedDate = utils.getFormattedPreviousDate(1).toString();
 
@@ -13,19 +11,20 @@ console.log("formatedDate=", formattedDate);
 let cachedData = null;
 let cachedDate = null;
 
-exports.handler = async(event) => {
-
+exports.handler = async event => {
   if (cachedDate !== formattedDate) {
     cachedData = null;
   }
 
   if (!cachedData) {
-    const res = await dynamodb.getItem({
-      Key: {
-        "pkey": { S: formattedDate },
-      },
-      TableName: "topslevy_perc_discount_daily",
-    }).promise();
+    const res = await dynamodb
+      .getItem({
+        Key: {
+          pkey: { S: formattedDate }
+        },
+        TableName: "topslevy_perc_discount_daily"
+      })
+      .promise();
 
     console.log("resp", res);
     if (!res.Item) {
@@ -33,10 +32,12 @@ exports.handler = async(event) => {
         statusCode: 404,
         headers: {
           "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
-          "Access-Control-Allow-Headers": "Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token",
+          "Access-Control-Allow-Methods":
+            "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
+          "Access-Control-Allow-Headers":
+            "Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token"
         },
-        body: JSON.stringify({ error: "Data not found" }),
+        body: JSON.stringify({ error: "Data not found" })
       };
     }
     cachedData = res.Item.json.S;
@@ -49,8 +50,9 @@ exports.handler = async(event) => {
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT",
-      "Access-Control-Allow-Headers": "Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token",
+      "Access-Control-Allow-Headers":
+        "Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token"
     },
-    body: cachedData,
+    body: cachedData
   };
 };
