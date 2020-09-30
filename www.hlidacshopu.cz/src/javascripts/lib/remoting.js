@@ -172,7 +172,8 @@ export async function fetchDashboardData() {
 export async function fetchDiscountDataPercent() {
   const resp = await Promise.race([
     timeout(4000),
-    fetch("/topslevy/percentdiscount.json") //TODO
+    //fetch("/topslevy/percentdiscount.json")
+    fetch("https://api.hlidacshopu.cz/topslevy-percdiscount")
   ]);
   if (!resp.ok) throw new Error("API error");
   const shopsData = await resp.json();
@@ -182,7 +183,8 @@ export async function fetchDiscountDataPercent() {
 export async function fetchDiscountDataCZK() {
   const resp = await Promise.race([
     timeout(4000),
-    fetch("/topslevy/kcdiscount.json") //TODO
+    //fetch("/topslevy/kcdiscount.json")
+    fetch("https://api.hlidacshopu.cz/topslevy-czkdiscount")
   ]);
   if (!resp.ok) throw new Error("API error");
   const shopsData = await resp.json();
