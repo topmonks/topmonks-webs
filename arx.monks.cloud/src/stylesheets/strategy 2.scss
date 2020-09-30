@@ -1,0 +1,9 @@
+.transaction {
+  h3, p {
+    color: var(--mdc-theme--third);
+  }
+  .dark-box h3, .dark-box p {
+    color: var(--mdc-theme--primary);
+  }
+}
+
