@@ -262,7 +262,26 @@ export function createCertificate(domain: string) {
   );
   const hostedZoneId = aws.route53
     .getZone({ name: parentDomain }, { async: true })
-    .then((zone) => zone.zoneId);
+    .then(zone => zone.zoneId);
+
+  /**
+   * Create a Certification Authority Authorization (CAA) DNS record to specify that AWS Certificate Manager (ACM)
+   * is allowed to issue a certificate for your domain or subdomain.
+   * See https://docs.aws.amazon.com/acm/latest/userguide/setup-caa.html for more info.
+   */
+  const caaRecord = new aws.route53.Record(`${parentDomain}-caaRecord`, {
+    name: parentDomain,
+    zoneId: hostedZoneId,
+    type: "CAA",
+    records: [
+      `0 issue "letsencrypt.org"`,
+      `0 issuewild "amazon.com"`,
+      `0 issuewild "amazontrust.com"`,
+      `0 issuewild "awstrust.com"`,
+      `0 issuewild "amazonaws.com"`,
+      `0 iodef "mailto:admin@topmonks.com"`
+    ]
+  });
 
   /**
    *  Create a DNS record to prove that we _own_ the domain we're requesting a certificate for.
