@@ -280,7 +280,8 @@ export function createCertificate(domain: string) {
       `0 issuewild "awstrust.com"`,
       `0 issuewild "amazonaws.com"`,
       `0 iodef "mailto:admin@topmonks.com"`
-    ]
+    ],
+    ttl: 3600
   });
 
   /**
