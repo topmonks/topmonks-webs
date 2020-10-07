@@ -79,6 +79,7 @@ function shopTemplatePercent({
       <td>${formatMoney(Math.round(currentPrice))}</td>
       <td style="white-space: nowrap;">${formatedDate}</td>
       <td>${productLinkTemplate(itemName, itemUrl)}</td>
+      <td>${productImageTemplate(itemImage)}</td>
       <td>${logoTemplate(shop)}</td>
     </tr>
   `;
@@ -108,6 +109,7 @@ function shopTemplateKc({
       <td>${formatPercents(salePerc / 100)}</td>
       <td style="white-space: nowrap;">${formatedDate}</td>
       <td>${productLinkTemplate(itemName, itemUrl)}</td>
+      <td>${productImageTemplate(itemImage)}</td>
       <td>${logoTemplate(shop)}</td>
     </tr>
   `;
@@ -143,5 +145,11 @@ function logoTemplate(shop) {
 function productLinkTemplate(itemName, itemUrl) {
   return html`
     <a href="${itemUrl}" target="_blank">${itemName}</a>
+  `;
+}
+
+function productImageTemplate(itemImage) {
+  return html`
+    <img src="${itemImage}" style="width:70px;height:70px;" alt="Not Found" />
   `;
 }
