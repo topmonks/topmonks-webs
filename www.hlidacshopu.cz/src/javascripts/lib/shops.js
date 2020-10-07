@@ -108,15 +108,6 @@ export const shops = new Map([
     }
   ],
   [
-    "xxx",
-    {
-      name: "Rohlík.cz",
-      logo: "rohlik_logo",
-      url: "https://www.rohlik.cz/",
-      viewBox: "0 0 51 28"
-    }
-  ],
-  [
     "tsbohemia",
     {
       name: "TSBohemia",

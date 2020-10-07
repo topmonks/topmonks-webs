@@ -48,90 +48,99 @@ if (tableRootKc) {
 }
 
 function tableTemplatePercent(data) {
-  //console.log(data.map(shopTemplatePercent));
   return data.map(shopTemplatePercent);
 }
 
 function tableTemplateKc(data) {
-  //console.log(data.map(shopTemplateKc));
   return data.map(shopTemplateKc);
 }
 
 function shopTemplatePercent({
   sequenceId,
-  historyItems30Days,
+  historyItemsTDays,
   formatedDate,
   shop,
   itemId,
+  itemImage,
   itemName,
   itemUrl,
-  minPrice30Days,
+  minPriceTDays,
   currentPrice,
-  max_price,
-  sale_abs,
-  sale_perc
+  maxPrice,
+  saleAbs,
+  salePerc
 }) {
   return html`
     <tr class="dashboard-row">
       <th>${sequenceId}</th>
-      <td>${formatPercents(sale_perc / 100)}</td>
-      <td>${formatMoney(Math.round(minPrice30Days))}</td>
-      <td>${formatMoney(Math.round(sale_abs))}</td>
+      <td>${formatPercents(salePerc / 100)}</td>
+      <td>${formatMoney(Math.round(minPriceTDays))}</td>
+      <td>${formatMoney(Math.round(saleAbs))}</td>
       <td>${formatMoney(Math.round(currentPrice))}</td>
       <td style="white-space: nowrap;">${formatedDate}</td>
-      <td>${productLinkTemplate(shops.get(shop), itemName, itemUrl)}</td>
-      <td>${logoTemplate(shops.get(shop))}</td>
+      <td>${productLinkTemplate(itemName, itemUrl)}</td>
+      <td>${logoTemplate(shop)}</td>
     </tr>
   `;
 }
 
 function shopTemplateKc({
   sequenceId,
-  historyItems30Days,
+  historyItemsTDays,
   formatedDate,
   shop,
   itemId,
+  itemImage,
   itemName,
   itemUrl,
-  minPrice30Days,
+  minPriceTDays,
   currentPrice,
-  max_price,
-  sale_abs,
-  sale_perc
+  maxPrice,
+  saleAbs,
+  salePerc
 }) {
   return html`
     <tr class="dashboard-row">
       <th>${sequenceId}</th>
-      <td>${formatMoney(Math.round(sale_abs))}</td>
+      <td>${formatMoney(Math.round(saleAbs))}</td>
       <td>${formatMoney(Math.round(currentPrice))}</td>
-      <td>${formatMoney(Math.round(minPrice30Days))}</td>
-      <td>${formatPercents(sale_perc / 100)}</td>
+      <td>${formatMoney(Math.round(minPriceTDays))}</td>
+      <td>${formatPercents(salePerc / 100)}</td>
       <td style="white-space: nowrap;">${formatedDate}</td>
-      <td>${productLinkTemplate(shops.get(shop), itemName, itemUrl)}</td>
-      <td>${logoTemplate(shops.get(shop))}</td>
+      <td>${productLinkTemplate(itemName, itemUrl)}</td>
+      <td>${logoTemplate(shop)}</td>
     </tr>
   `;
 }
 
-function logoTemplate({ logo, name, url, viewBox }) {
-  const image = svg`
+function logoTemplate(shop) {
+  const foundShop = shops.get(shop);
+  if (foundShop) {
+    const { logo, name, url, viewBox } = shops.get(shop);
+
+    const image = svg`
       <svg viewBox="${viewBox}">
         <title>${name}</title>
         <use href="#${logo}"/>
       </svg>
     `;
-  return html`
-    <a
-      href="${url}"
-      class="sprite sprite--${logo}"
-      title="${name}"
-      target="_blank"
-      >${image}</a
-    >
-  `;
+    return html`
+      <a
+        href="${url}"
+        class="sprite sprite--${logo}"
+        title="${name}"
+        target="_blank"
+        >${image}</a
+      >
+    `;
+  } else {
+    return html`
+      <p>${shop}</p>
+    `;
+  }
 }
 
-function productLinkTemplate({ logo, name, url, viewBox }, itemName, itemUrl) {
+function productLinkTemplate(itemName, itemUrl) {
   return html`
     <a href="${itemUrl}" target="_blank">${itemName}</a>
   `;
