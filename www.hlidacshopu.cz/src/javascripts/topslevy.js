@@ -20,6 +20,9 @@ if (tableRootPercent) {
       }
       data = a;
       render(tableTemplatePercent(data), tableRootPercent);
+      const buttonsSection = document.getElementById("below-buttons");
+      render(buttonsTemplatePercent(data), buttonsSection);
+      document.getElementById("show-more").addEventListener("click", showMore);
     } catch (ex) {
       console.error(ex);
     }
@@ -47,6 +50,23 @@ if (tableRootKc) {
   });
 }
 
+function showMore() {
+  const secondPart = document.querySelectorAll("[id=secondPart]");
+  secondPart.forEach(function(o) {
+    o.style.display = "";
+  });
+  const button = document.getElementById("show-more");
+  button.style.display = "none";
+}
+
+function buttonsTemplatePercent(data) {
+  return html`
+    <button type="button" class="button" id="show-more">
+      Zobrazit další slevy
+    </button>
+  `;
+}
+
 function tableTemplatePercent(data) {
   return data.map(shopTemplatePercent);
 }
@@ -70,19 +90,40 @@ function shopTemplatePercent({
   saleAbs,
   salePerc
 }) {
-  return html`
-    <tr class="dashboard-row">
-      <th>${sequenceId}</th>
-      <td>${formatPercents(salePerc / 100)}</td>
-      <td>${formatMoney(Math.round(minPriceTDays))}</td>
-      <td>${formatMoney(Math.round(saleAbs))}</td>
-      <td>${formatMoney(Math.round(currentPrice))}</td>
-      <td style="white-space: nowrap;">${formatedDate}</td>
-      <td>${productLinkTemplate(itemName, itemUrl)}</td>
-      <td>${productImageTemplate(itemImage)}</td>
-      <td>${logoTemplate(shop)}</td>
-    </tr>
-  `;
+  const rowId = Number(sequenceId);
+  let toHide = false;
+  if (rowId > 10) {
+    toHide = true;
+  }
+  if (!toHide) {
+    return html`
+      <tr class="dashboard-row" id="firstPart">
+        <th>${sequenceId}</th>
+        <td>${formatPercents(salePerc / 100)}</td>
+        <td>${formatMoney(Math.round(minPriceTDays))}</td>
+        <td>${formatMoney(Math.round(saleAbs))}</td>
+        <td>${formatMoney(Math.round(currentPrice))}</td>
+        <td style="white-space: nowrap;">${formatedDate}</td>
+        <td>${productLinkTemplate(itemName, itemUrl)}</td>
+        <td>${productImageTemplate(itemImage)}</td>
+        <td>${logoTemplate(shop)}</td>
+      </tr>
+    `;
+  } else {
+    return html`
+      <tr class="dashboard-row" id="secondPart" style="display: none">
+        <th>${sequenceId}</th>
+        <td>${formatPercents(salePerc / 100)}</td>
+        <td>${formatMoney(Math.round(minPriceTDays))}</td>
+        <td>${formatMoney(Math.round(saleAbs))}</td>
+        <td>${formatMoney(Math.round(currentPrice))}</td>
+        <td style="white-space: nowrap;">${formatedDate}</td>
+        <td>${productLinkTemplate(itemName, itemUrl)}</td>
+        <td>${productImageTemplate(itemImage)}</td>
+        <td>${logoTemplate(shop)}</td>
+      </tr>
+    `;
+  }
 }
 
 function shopTemplateKc({
@@ -150,6 +191,6 @@ function productLinkTemplate(itemName, itemUrl) {
 
 function productImageTemplate(itemImage) {
   return html`
-    <img src="${itemImage}" style="width:70px;height:70px;" alt="Not Found" />
+    <img src="${itemImage}" style="width:40px;height:40px;" alt="Not Found" />
   `;
 }
