@@ -13,5 +13,8 @@
   },
   "ingridapp.io": {
     "target": "https://www.ingridapp.io"
+  },
+  "hookamonk.com": {
+    "target": "https://www.hookamonk.com"
   }
 }
