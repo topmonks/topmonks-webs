@@ -23,6 +23,7 @@ if (tableRootPercent) {
       const buttonsSection = document.getElementById("below-buttons");
       render(buttonsTemplatePercent(data), buttonsSection);
       document.getElementById("show-more").addEventListener("click", showMore);
+      document.getElementById("subscribe").addEventListener("click", subscribe);
     } catch (ex) {
       console.error(ex);
     }
@@ -50,6 +51,15 @@ if (tableRootKc) {
   });
 }
 
+addEventListener("keydown", e => {
+  if (e.key === "Escape") {
+    history.pushState({ showModal: false }, null, "/topslevy");
+    const modal = document.getElementById("hlidac-shopu-modal");
+    modal.classList.add("modal--hidden");
+    document.body.classList.remove("no-scroll");
+  }
+});
+
 function showMore() {
   const secondPart = document.querySelectorAll("[id=secondPart]");
   secondPart.forEach(function(o) {
@@ -59,11 +69,139 @@ function showMore() {
   button.style.display = "none";
 }
 
+function subscribeSubmit() {
+  document.getElementById("mc-embedded-subscribe-form").submit();
+  const modal = document.getElementById("hlidac-shopu-modal");
+  modal.classList.add("modal--hidden");
+  document.body.classList.remove("no-scroll");
+}
+
+function subscribe() {
+  const modalRenderRoot = document.getElementById(
+    "hlidac-shopu-modal__placeholder"
+  );
+  render(subscribeModalTemplate(), modalRenderRoot);
+  const modal = document.getElementById("hlidac-shopu-modal");
+  modal.classList.remove("modal--hidden");
+  document.body.classList.add("no-scroll");
+  document
+    .getElementById("mc-embedded-subscribe")
+    .addEventListener("click", subscribeSubmit);
+}
+
+function subscribeModalTemplate() {
+  return html`
+    <div
+      id="hlidac-shopu-modal__not-found"
+      class="hs-result mdc-layout-grid__inner"
+    >
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 box box--purple"
+      >
+        <!-- Begin Mailchimp Signup Form -->
+        <link
+          href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <style type="text/css">
+          #mc_embed_signup {
+            background: #fff;
+            clear: left;
+            font: 14px Helvetica, Arial, sans-serif;
+          }
+        </style>
+
+        <div id="mc_embed_signup">
+          <form
+            action="https://yahoo.us2.list-manage.com/subscribe/post?u=55d428782519059e4ce0ab514&amp;id=1bb2f3682c"
+            method="post"
+            id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form"
+            class="validate"
+            target="_blank"
+            novalidate
+          >
+            <div id="mc_embed_signup_scroll">
+              <h2>Přihlásit k odběru top slev</h2>
+              <div class="mc-field-group">
+                <label for="mce-EMAIL"
+                  >Email <span class="asterisk">*</span>
+                </label>
+                <input
+                  type="email"
+                  value=""
+                  name="EMAIL"
+                  class="required email"
+                  id="mce-EMAIL"
+                />
+              </div>
+              <div class="mc-field-group">
+                <label for="mce-NAME">Jméno a Příjmení </label>
+                <input
+                  type="text"
+                  value=""
+                  name="NAME"
+                  class=""
+                  id="mce-NAME"
+                />
+              </div>
+              <div class="mc-field-group size1of2">
+                <label for="mce-PHONE">Telefonní číslo </label>
+                <input
+                  type="text"
+                  name="PHONE"
+                  class=""
+                  value=""
+                  id="mce-PHONE"
+                />
+              </div>
+              <div id="mce-responses" class="clear">
+                <div
+                  class="response"
+                  id="mce-error-response"
+                  style="display:none"
+                ></div>
+                <div
+                  class="response"
+                  id="mce-success-response"
+                  style="display:none"
+                ></div>
+              </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div
+                style="position: absolute; left: -5000px;"
+                aria-hidden="true"
+              >
+                <input
+                  type="text"
+                  name="b_55d428782519059e4ce0ab514_1bb2f3682c"
+                  tabindex="-1"
+                  value=""
+                />
+              </div>
+              <div class="clear"></div>
+              <div class="btn">
+                <a class="button" role="button" id="mc-embedded-subscribe"
+                  >Potvrdit</a
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--End mc_embed_signup-->
+      </div>
+    </div>
+  `;
+}
+
 function buttonsTemplatePercent(data) {
   return html`
-    <button type="button" class="button" id="show-more">
-      Zobrazit další slevy
-    </button>
+    <p></p>
+    <div class="btn">
+      <a class="button" role="button" id="show-more">Zobrazit další slevy</a>
+      <a class="button" role="button" id="subscribe">Přihlásit k odběru slev</a>
+    </div>
   `;
 }
 
