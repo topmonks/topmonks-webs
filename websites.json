@@ -85,14 +85,7 @@
     "lhci": {
       "assert": {
         "assertions": {
-          "unsized-images": "warn",
-          "font-display": "warn",
-          "frame-title": "warn",
-          "heading-order": "warn",
-          "unminified-css": "warn",
-          "unused-css-rules": "warn",
-          "uses-passive-event-listeners": "warn",
-          "uses-text-compression": "warn"
+          "unsized-images": "warn"
         }
       },
       "upload": {
