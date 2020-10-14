@@ -6,13 +6,9 @@ orbs:
   browser-tools: circleci/browser-tools@1.0.1
   docker: circleci/docker@1.4.0
   github: topmonks/github@1.0.1
+  node: circleci/node@4.1.0
   pulumi: pulumi/pulumi@2.0.0
   swarmpit: topmonks/swarmpit@1.2.0
-
-executors:
-  nodejs:
-    docker:
-      - image: cimg/node:14.8
 
 commands:
   read_deployment_envs:
@@ -54,22 +50,16 @@ commands:
 
 jobs:
   build:
-    executor: nodejs
+    executor:
+      name: node/default
+      tag: '14.13.1'
     working_directory: ~/topmonks-webs
     steps:
       - checkout
       - pulumi/login:
           cloud-url: s3://pulumi.tmcloud.io
-      - restore_cache:
-          keys:
-            - v7-dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn install --pure-lockfile  --link-duplicates --no-progress --no-default-rc
-      - save_cache:
-          paths:
-            - ~/.cache/yarn
-            - ./.pnp
-            - ./.pnp.js
-          key: v7-dependencies-{{ checksum "yarn.lock" }}
+      - node/install-packages:
+          pkg-manager: yarn
       - run: yarn build
       - run: |
           mkdir results
@@ -83,7 +73,9 @@ jobs:
           paths: [ public ]
 
   provision:
-    executor: nodejs
+    executor:
+      name: node/default
+      tag: '14.13.1'
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -91,18 +83,17 @@ jobs:
           at: ~/topmonks-webs
       - pulumi/login:
           cloud-url: s3://pulumi.tmcloud.io
-      - restore_cache:
-          keys:
-            - v7-dependencies-{{ checksum "yarn.lock" }}
-      - run:
-          name: Install deps
-          command: yarn install --pure-lockfile --link-duplicates --production --no-progress --disable-pnp --no-default-rc
+      - node/install-packages:
+          pkg-manager: yarn
+          override-ci-command: yarn install --pure-lockfile --link-duplicates --production --no-progress --disable-pnp --no-default-rc
       - pulumi/update:
           stack: topmonks-webs
           skip-preview: true
 
   preview-provision:
-    executor: nodejs
+    executor:
+      name: node/default
+      tag: '14.13.1'
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -110,12 +101,9 @@ jobs:
           at: ~/topmonks-webs
       - pulumi/login:
           cloud-url: s3://pulumi.tmcloud.io
-      - restore_cache:
-          keys:
-            - v7-dependencies-{{ checksum "yarn.lock" }}
-      - run:
-          name: Install deps
-          command: yarn install --pure-lockfile --link-duplicates --production --no-progress --disable-pnp --no-default-rc
+      - node/install-packages:
+          pkg-manager: yarn
+          override-ci-command: yarn install --pure-lockfile --link-duplicates --production --no-progress --disable-pnp --no-default-rc
       - pulumi/preview:
           stack: topmonks-webs
 
@@ -123,7 +111,9 @@ jobs:
     parameters:
       site_name:
         type: string
-    executor: nodejs
+    executor:
+      name: node/default
+      tag: '14.13.1'
     working_directory: ~/topmonks-webs
     steps:
       - browser-tools/install-chrome
@@ -131,10 +121,8 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/topmonks-webs
-      - restore_cache:
-          keys:
-            - v7-dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn install --pure-lockfile --link-duplicates --no-progress --no-default-rc
+      - node/install-packages:
+          pkg-manager: yarn
       - run:
           name: Install self-signed cert for localhost
           command: |
