@@ -1,6 +1,9 @@
 import * as pulumi from "@pulumi/pulumi";
-import * as topmonks from "@topmonks/pulumi-aws";
-import { registerAutoTags } from "./.scripts/pulumi-resources/autotag";
+import {
+  registerAutoTags,
+  createCertificate,
+  Website
+} from "@topmonks/pulumi-aws";
 import * as arx from "./arx.monks.cloud/infra";
 
 // Automatically inject tags.
@@ -9,13 +12,13 @@ registerAutoTags({
   "user:Stack": pulumi.getStack()
 });
 
-topmonks.createCertificate("www.ingridapp.io");
-topmonks.createCertificate("www.zive.tv");
+createCertificate("www.ingridapp.io");
+createCertificate("www.zive.tv");
 
 const websites = require("./websites.json");
 export const sites: any = {};
 for (const domain in websites) {
-  const website = topmonks.Website.create(domain, websites[domain]);
+  const website = Website.create(domain, websites[domain]);
   sites[domain] = {
     url: website.url,
     s3BucketUri: website.s3BucketUri,
@@ -27,7 +30,7 @@ for (const domain in websites) {
 const redirects = require("./redirects.json");
 export const redirectSites: any = {};
 for (const domain in redirects) {
-  const website = topmonks.Website.createRedirect(domain, redirects[domain]);
+  const website = Website.createRedirect(domain, redirects[domain]);
   redirectSites[domain] = {
     url: website.url,
     s3BucketUri: website.s3BucketUri,
