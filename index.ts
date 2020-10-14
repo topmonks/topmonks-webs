@@ -1,5 +1,5 @@
 import * as pulumi from "@pulumi/pulumi";
-import * as topmonks from "./.scripts/pulumi-resources/website";
+import * as topmonks from "@topmonks/pulumi-aws";
 import { registerAutoTags } from "./.scripts/pulumi-resources/autotag";
 import * as arx from "./arx.monks.cloud/infra";
 
