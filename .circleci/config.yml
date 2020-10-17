@@ -218,7 +218,6 @@ workflows:
           requires:
             - preview-provision
             - test-www-topmonks-com
-            - test-www-hlidacshopu-cz
           filters:
             branches:
               only: /dependabot\/.*/
@@ -372,23 +371,6 @@ workflows:
           requires:
             - provision
             - build
-          filters:
-            branches:
-              only: trunk
-      - test_site:
-          name: test-www-hlidacshopu-cz
-          site_name: www.hlidacshopu.cz
-          context: org-global
-          requires:
-            - build
-            - deploy-lighthouse-ci
-      - deploy_site:
-          name: deploy-www-hlidacshopu-cz
-          site_name: www.hlidacshopu.cz
-          context: org-global
-          requires:
-            - provision
-            - test-www-hlidacshopu-cz
           filters:
             branches:
               only: trunk
