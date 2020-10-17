@@ -128,7 +128,7 @@ function removeSiteFromCI(name) {
     const jobs = yamlData.getIn(["workflows", "build_and_deploy", "jobs"]);
     const siteJobs = jobs.items
       .filter(x => x.has("deploy_site") || x.has("test_site"))
-      .filter(x => x.items[0].value.get("site_name") === siteName);
+      .filter(x => x.items[0].value.get("site_name") === name);
     pull(jobs.items, ...siteJobs);
     strOptions.fold.lineWidth = 0;
     return fs.promises.writeFile(filePath, yamlData.toString(), "utf-8");
