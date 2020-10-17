@@ -106,8 +106,6 @@
     "build:www.hookamonk.com": "BLENDID_CONFIG_PATH=./www.hookamonk.com/config/ dotenv blendid -- build",
     "start:monkslab.cz": "BLENDID_CONFIG_PATH=./monkslab.cz/config/ dotenv blendid",
     "build:monkslab.cz": "BLENDID_CONFIG_PATH=./monkslab.cz/config/ dotenv blendid -- build",
-    "start:www.hlidacshopu.cz": "BLENDID_CONFIG_PATH=./www.hlidacshopu.cz/config/ dotenv blendid",
-    "build:www.hlidacshopu.cz": "BLENDID_CONFIG_PATH=./www.hlidacshopu.cz/config/ dotenv blendid -- build",
     "start:session-monk.topmonks.com": "BLENDID_CONFIG_PATH=./session-monk.topmonks.com/config/ dotenv blendid",
     "build:session-monk.topmonks.com": "BLENDID_CONFIG_PATH=./session-monk.topmonks.com/config/ dotenv blendid -- build",
     "start:room.monks.cloud": "BLENDID_CONFIG_PATH=./room.monks.cloud/config/ dotenv blendid",

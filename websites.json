@@ -81,21 +81,6 @@
       }
     }
   },
-  "www.hlidacshopu.cz": {
-    "lhci": {
-      "assert": {
-        "assertions": {
-          "unsized-images": "warn"
-        }
-      },
-      "upload": {
-        "token": "b6acc334-29ad-41ca-a4c0-dfc9e765dd57"
-      }
-    },
-    "dns": {
-      "disabled": true
-    }
-  },
   "session-monk.topmonks.com": {
     "lhci": {
       "assert": {
