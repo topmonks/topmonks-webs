@@ -10,9 +10,9 @@ function start(processorFn) {
                 let audioContext = new AudioContext();
                 let analyser = audioContext.createAnalyser();
                 let microphone = audioContext.createMediaStreamSource(stream);
-                let javascriptNode = audioContext.createScriptProcessor(2048, 1, 1);
+                let javascriptNode = audioContext.createScriptProcessor(256, 1, 1);
 
-                analyser.smoothingTimeConstant = 0.8;
+                analyser.smoothingTimeConstant = 0.83;
                 analyser.fftSize = 256;
 
                 microphone.connect(analyser);
@@ -20,17 +20,9 @@ function start(processorFn) {
                 javascriptNode.connect(audioContext.destination);
 
                 javascriptNode.onaudioprocess = function () {
-                    var array = new Uint8Array(analyser.frequencyBinCount);
+                    let array = new Uint8Array(analyser.frequencyBinCount);
                     analyser.getByteFrequencyData(array);
-                    var values = 0;
-
-                    var length = array.length;
-                    for (var i = 0; i < length; i++) {
-                        values += (array[i]);
-                    }
-
-                    var average = values / length;
-                    processorFn(average, array);
+                    processorFn(array);
                 }
             },
             function (err) {
