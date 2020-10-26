@@ -1355,10 +1355,10 @@
     vinyl "^2.2.1"
     workbox-build "5.1.4"
 
-"@topmonks/pulumi-aws@^1.4.5":
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/@topmonks/pulumi-aws/-/pulumi-aws-1.4.5.tgz#8dc0130d5b84afcd6423421c3e89e0ca946a103e"
-  integrity sha512-f+jFvV0crIwLDL7GOfBZox1g5d1cD5V/Hb9th7siWPDM5lGlrXfS0MwCCKaE3LeXcu/Ko8Be54eXZAD4BD4c9g==
+"@topmonks/pulumi-aws@^1.5.7":
+  version "1.5.7"
+  resolved "https://registry.yarnpkg.com/@topmonks/pulumi-aws/-/pulumi-aws-1.5.7.tgz#88dec663569566e50aaed4c1479968c0437e6136"
+  integrity sha512-K4tvbce7LMDJLX36piJWuzKhwA+zRq91kndMDV5PkuzRz4bgyd8PfuGMHZ3cNGW9P5VsHUs6HSgV/wY9BAdGZw==
 
 "@types/aws-lambda@^8.10.23":
   version "8.10.61"
