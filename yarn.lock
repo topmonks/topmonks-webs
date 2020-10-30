@@ -1311,8 +1311,8 @@
 
 "@topmonks/blendid@git://github.com/topmonks/blendid.git":
   version "6.0.0"
-  uid f5d2c4de9a4e547591cbd8c8ac6d59cb2f0f29ab
-  resolved "git://github.com/topmonks/blendid.git#f5d2c4de9a4e547591cbd8c8ac6d59cb2f0f29ab"
+  uid "3382a4fbe7b51cf910105cdb425fc0fdb52d9042"
+  resolved "git://github.com/topmonks/blendid.git#3382a4fbe7b51cf910105cdb425fc0fdb52d9042"
   dependencies:
     "@rollup/plugin-alias" "^3.1.0"
     "@rollup/plugin-node-resolve" "^7.1.3"
@@ -1358,7 +1358,7 @@
     rollup "^1.32.1"
     rollup-plugin-minify-html-literals "^1.2.5"
     rollup-plugin-terser "^5.3.1"
-    sass "^1.27.1"
+    sass "^1.28.0"
     stream-array "^1.1.2"
     terser "^4.6.13"
     through2 "^4.0.2"
@@ -10325,7 +10325,7 @@ sass-graph@2.2.5:
     scss-tokenizer "^0.2.3"
     yargs "^13.3.2"
 
-sass@^1.27.1:
+sass@^1.28.0:
   version "1.28.0"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.28.0.tgz#546f1308ff74cc4ec2ad735fd35dc18bc3f51f72"
   integrity sha512-9FWX/0wuE1KxwfiP02chZhHaPzu6adpx9+wGch7WMOuHy5npOo0UapRI3FNSHva2CczaYJu2yNUBN8cCSqHz/A==
