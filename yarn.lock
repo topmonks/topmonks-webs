@@ -1301,8 +1301,8 @@
 
 "@topmonks/blendid@git://github.com/topmonks/blendid.git":
   version "6.0.0"
-  uid "3382a4fbe7b51cf910105cdb425fc0fdb52d9042"
-  resolved "git://github.com/topmonks/blendid.git#3382a4fbe7b51cf910105cdb425fc0fdb52d9042"
+  uid "76ee4bc7f4b68e3a5f82fdee34c2c6fadbd61b06"
+  resolved "git://github.com/topmonks/blendid.git#76ee4bc7f4b68e3a5f82fdee34c2c6fadbd61b06"
   dependencies:
     "@rollup/plugin-alias" "^3.1.0"
     "@rollup/plugin-node-resolve" "^7.1.3"
