@@ -10,7 +10,7 @@
     "@lhci/utils": "^0.6.0",
     "@material/layout-grid": "^7.0.0",
     "@material/top-app-bar": "^7.0.0",
-    "@pulumi/aws": "^3.10.1",
+    "@pulumi/aws": "^3.11.0",
     "@pulumi/awsx": "^0.22.0",
     "@pulumi/pulumi": "^2.12.1",
     "@topmonks/pulumi-aws": "^1.5.8",
