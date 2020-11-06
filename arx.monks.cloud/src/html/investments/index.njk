@@ -22,6 +22,26 @@
       </div>
     </div>
   </div>
+  <div class="mdc-layout-grid layout-arx">
+    <div class="investments__filter">
+      <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <title>[Icon] Filter</title>
+        <rect y="11.2" width="11" height="2.8" fill="#C4C4C4"/>
+        <rect y="5.59998" width="15.2778" height="2.8" fill="#C4C4C4"/>
+        <rect width="22" height="2.8" fill="#C4C4C4"/>
+      </svg>
+      <div id="countries-select">
+        Sort by Country
+      </div>
+      <div id="transactions-select">
+        Sort by Transaction
+      </div>
+      <div id="years-select">
+        Sort by Investment year
+      </div>
+    </div>
+  </div>
+
   <script type="module">
     import {html, render} from "https://unpkg.com/lit-html@1.3.0/lit-html.js?module";
     import {repeat} from "https://unpkg.com/lit-html@1.3.0/directives/repeat.js?module";
@@ -49,18 +69,51 @@
       </article>
     `;
 
+    const select = (items, onChange) => html`
+      <select @change=${onChange}>
+        ${items.map(x => html`<option>${x}</option>`)}
+        </select>
+    `;
+
+    function renderInvestments(el, arr) {
+      render(
+        html`${repeat(sortDescBy("year", arr), investmentCard)}`,
+        document.getElementById(el)
+      );
+    }
+
+    function renderFilter(el, arr, prop) {
+      render(
+        select(Array.from(arr).sort((a, b) => (a > b ? 1 : -1)), (e) => {
+          renderInvestments("current-investments", currentInvestments.filter(x => x[prop] == e.target.value));
+          renderInvestments("realized-investments", realizedInvestments.filter(x => x[prop] == e.target.value));
+        }),
+        document.getElementById(el)
+      );
+    }
+
     const {Current: currentInvestments, Realized: realizedInvestments} = {{ investments | groupby("status") | dump | safe }};
+    const investments = [...currentInvestments, ...realizedInvestments];
+    const countries = new Set(investments.map(x => x.country));
+    const transactions = new Set(investments.map(x => x.transaction));
+    const years = new Set(investments.map(x => x.year));
+    console.log({countries, transactions, years});
     const sortBy = (prop, arr) => arr.sort((a, b) => (a[prop] > b[prop]) ? 1 : -1);
     const sortDescBy = (prop, arr) => arr.sort((a, b) => (a[prop] > b[prop]) ? -1 : 1);
 
+    renderFilter("countries-select", countries, "country");
+
     render(
-      html`${repeat(sortDescBy("year", currentInvestments), investmentCard)}`,
-      document.getElementById("current-investments")
+      select(Array.from(transactions).sort((a, b) => (a > b ? 1 : -1))),
+      document.getElementById("transactions-select")
     );
     render(
-      html`${repeat(sortDescBy("year", realizedInvestments), investmentCard)}`,
-      document.getElementById("realized-investments")
+      select(Array.from(years).sort((a, b) => (a > b ? 1 : -1))),
+      document.getElementById("years-select")
     );
+
+    renderInvestments("current-investments", currentInvestments);
+    renderInvestments("realized-investments", realizedInvestments);
   </script>
 
   {%- set byStatus = investments | groupby("status") -%}
