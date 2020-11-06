@@ -31,6 +31,26 @@
   padding: 10em 4em;
 }
 
+// Investments' Filter //
+
+.investments__filter {
+  border: 1px solid #DBDBDB;
+  box-sizing: border-box;
+  padding: 14px 10px;
+  svg {
+    padding-right: 18px;
+  }
+  button {
+    font: 20px proxima-nova, sans-serif;
+    border: none;
+    background: var(--mdc-theme--primary);
+    &:not(:last-child){
+      margin-right: 4em;
+    }
+  }
+}
+
+// List of Investments//
 .box__logo {
   border-bottom: 1px solid #DBDBDB;
   width: 100%;
