@@ -1,0 +1,23 @@
+:root {
+  --hm-black: #000000;
+  --hm-white: #ffffff;
+}
+
+body {
+  color: var(--tm-black);
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0;
+  font: 16px/1.5 "Work Sans", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-kerning: normal;
+  font-variant-numeric: lining-nums slashed-zero;
+  font-variant-ligatures: common-ligatures contextual;
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
