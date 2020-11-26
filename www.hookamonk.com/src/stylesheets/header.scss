@@ -68,17 +68,11 @@
     .tm-layout-wrapper {
       padding: 8px 16px 0 8px;
     }
-    + main {
-      margin-top: 52px;
-    }
   }
   @media screen and (min-width: 840px) {
     height: 78px;
     .tm-layout-wrapper {
       padding: 23px 0 0 16px;
-    }
-    + main {
-      margin-top: 78px;
     }
   }
 }

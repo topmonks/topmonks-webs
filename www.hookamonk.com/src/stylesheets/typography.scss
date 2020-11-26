@@ -22,6 +22,14 @@ body {
   text-rendering: geometricPrecision;
 }
 
+a {
+  text-decoration: none;
+  color: #502CCC;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
 ul,
 ul li {
   padding: 0;

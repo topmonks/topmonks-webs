@@ -1,0 +1,117 @@
+{% extends 'layouts/main.njk' %}
+{% from 'macros/helpers.njk' import css, sprite %}
+
+{% set page = 'hookamonk-cattering' %}
+{% set language = en %}
+
+{% block title %}
+  Hookamonk - Game changer in Hookah
+{% endblock %}
+
+{% block head %}
+  <meta name="description"
+        content="Hookamonk is an exclusive hand-made equipment for your hookah to make it wholly electronic while allowing you smoking* genuine tobacco, not any e-liquid imitations.">
+  <meta name="twitter:description" property="og:description"
+        content="Hookamonk is an exclusive hand-made equipment for your hookah to make it wholly electronic while allowing you smoking* genuine tobacco, not any e-liquid imitations.">
+  <link rel="canonical" href="https://www.hookamonk.com/">
+  {#  <meta name="twitter:card" content="summary_large_image">#}
+  {#  <meta name="twitter:site" content="@topmonks">#}
+  {#  <meta name="twitter:title" property="og:title" content="TopMonks - Software development partner for your business">#}
+  {#  <meta name="twitter:image" property="og:image" content="https://www.topmonks.com/images/og-image.png">#}
+  <meta property="og:type" content="company">
+  <meta property="og:url" content="https://www.hookamonk.com/">
+  <meta property="og:site_name" content="hookamonk.com">
+  <style>
+    @media screen and (max-width: 479px) {
+      .hm-hero-wrapper {
+        background: url({{ "hookamonk.com/bgnd_header.png" | cloudinaryUrl(width=800) }}) no-repeat fixed top center;
+        background-size: cover;
+      }
+    }
+
+    @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1), screen and (max-width: 479px) and (min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min-resolution: 192dpi), screen and (max-width: 479px) and (min-resolution: 2dppx) {
+      .hm-hero-wrapper {
+        background: url({{"hookamonk.com/bgnd_header.png" | cloudinaryUrl(width=800,dpr=2)}}) no-repeat fixed top center;
+        background-size: cover;
+      }
+    }
+
+    @media screen and (min-width: 480px) {
+      .hm-hero-wrapper {
+        background: url({{"hookamonk.com/bgnd_header.png" | cloudinaryUrl(width=1671)}}) no-repeat fixed top center;
+        background-size: cover;
+      }
+    }
+
+    @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+      .hm-hero-wrapper {
+        background: url({{"hookamonk.com/bgnd_header.png" | cloudinaryUrl(width=1671,dpr=2)}}) no-repeat fixed top center;
+        background-size: cover;
+      }
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  {{ css("hero") }}
+  <div class="mdc-layout-grid hm-hero-wrapper">
+    <div class="mdc-layout-grid__inner">
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <section class="hm-hero">
+          <h1 class="hm-hero__header">Hi-tech
+            unique solution for demanding users</h1>
+          <h2 class="hm-hero__sub-header">
+            If you want hookamonk for your lounge please contact us on email: <a href="mailto:sales@hookamonk.com">sales@hookamonk.com</a>
+          </h2>
+        </section>
+      </div>
+    </div>
+  </div>
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <h3>Heating only by electronics</h3>
+        <p>The are no charcoals in hookamonk. All heating is made by spiral heated from electronic devices in head. Tobacco is heated same way as in classic hookah, but charcoals are replaced by spiral.
+        </p>
+      </div>
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <h3>You pay as you smoke</h3>
+        <p>Hookamonk is not for sell. Lounges pay only for finished sessions.</p>
+      </div>
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <h3>Smart inhale detection</h3>
+        <p>Electronic head react on inhales. When you breathe in it will warm the tobacco, when you don't smoke it remains the temperature.
+        </p>
+      </div>
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <h3>Lounge app to track sessions</h3>
+        <p>Website you can open on your phone, tablet or computer. Stuff can easily see running sessions. You start session in this app. Informations about finished sessions</p>
+      </div>
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <h3>No stuff needed to take care about hookarians</h3>
+        <p>You need shishaman onl to fill the bowl by tobacco. There is no need to take care about charcoals and change them during the session.</p>
+      </div>
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <h3>New features updated automatically</h3>
+        <p>Hookah is still connected to wifi. You will receive every update automatically.</p>
+      </div>
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <h3>No burnt furniture</h3>
+        <p>If there are charcoals, there are no cinders that could damage your couch, chairs or table.</p>
+      </div>
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <h3>First electronic hookah for tobacco</h3>
+        <p>There is no e-liquid in hookamonk. You can use any tobacco you love and enjoy its clear taste.</p>
+      </div>
+  </div>
+</div>
+{% endblock %}
