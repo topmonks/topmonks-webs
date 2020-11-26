@@ -21,10 +21,54 @@
   <meta property="og:type" content="company">
   <meta property="og:url" content="https://www.hookamonk.com/">
   <meta property="og:site_name" content="hookamonk.com">
+  <style>
+    body {
+      height: 100vh;
+    }
+    @media screen and (max-width: 479px) {
+      body {
+        background: url({{ "hookamonk.com/bgnd_header.png" | cloudinaryUrl(width=800) }}) no-repeat fixed top center;
+        background-size: cover;
+      }
+    }
 
+    @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1), screen and (max-width: 479px) and (min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min-resolution: 192dpi), screen and (max-width: 479px) and (min-resolution: 2dppx) {
+      body {
+        background: url({{"hookamonk.com/bgnd_header.png" | cloudinaryUrl(width=800,dpr=2)}}) no-repeat fixed top center;
+        background-size: cover;
+      }
+    }
+
+    @media screen and (min-width: 480px) {
+      body {
+        background: url({{"hookamonk.com/bgnd_header.png" | cloudinaryUrl(width=1671)}}) no-repeat fixed top center;
+        background-size: cover;
+      }
+    }
+
+    @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+      body {
+        background: url({{"hookamonk.com/bgnd_header.png" | cloudinaryUrl(width=1671,dpr=2)}}) no-repeat fixed top center;
+        background-size: cover;
+      }
+    }
+  </style>
 {% endblock %}
 
 {% block content %}
-  <h1>Game changer in Hookah</h1>
-
+  {{ css("hero") }}
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <section class="hm-hero">
+          <h1 class="hm-hero__header">Game changer in Hookah</h1>
+          <h2 class="hm-hero__sub-header">First fully electronic hookah for tobacco</h2>
+          <p>
+            <a href="/cattering" class="hm-button">I want it for my lounge</a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
 {% endblock %}

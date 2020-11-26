@@ -1,0 +1,18 @@
+.hm-hero {
+  color: var(--hm-white);
+  text-align: center;
+}
+.hm-hero__header {
+  padding-top: 20vh;
+  font-size: 4em;
+  margin-bottom: 0;
+  @media screen and (max-width: 839px) {
+    padding-top: 10vh;
+    font-size: 3em;
+    line-height: 1.1em;
+  }
+}
+.hm-hero__sub-header {
+  font-size: 1.556em;
+  margin-bottom: 2em;
+}
