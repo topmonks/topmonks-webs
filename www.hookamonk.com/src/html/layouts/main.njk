@@ -23,10 +23,12 @@
 
   {% include "../components/work-sans.njk" %}
   {{ css("typography") }}
+  {{ css("main") }}
 
   {% block head %}{% endblock %}
 </head>
 <body id="page-{{page}}">
+{% include "../components/header.njk" %}
 <main>
   {% block content %}{% endblock %}
 </main>

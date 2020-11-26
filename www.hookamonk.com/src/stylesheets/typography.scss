@@ -5,6 +5,7 @@
 
 body {
   color: var(--tm-black);
+  background-color: #0A2137;
   margin: 0;
   padding: 0;
   letter-spacing: 0;
@@ -20,4 +21,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
+}
+
+ul,
+ul li {
+  padding: 0;
+}
+
+ul {
+  margin: 1em 0;
+}
+
+ul li {
+  list-style: none;
+  margin: 0;
 }
