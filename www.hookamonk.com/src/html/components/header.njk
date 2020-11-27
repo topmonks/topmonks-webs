@@ -52,8 +52,8 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop">
         <nav id="navigation" class="tm-menu">
           <ul class="tm-menu__list">
-            <li><a href="https://shop.hookamonk.com/">Hookamonk e-shop</a></li>
-            <li><a href="#">Lounge app</a></li>
+            <li><a href="https://shop.hookamonk.com/">Accessories</a></li>
+            <li><a href="/cattering">I want it for my lounge</a></li>
           </ul>
         </nav>
       </div>
@@ -72,23 +72,23 @@
       }
     }
 
-    var lastPosition = 0;
-    var ticking = false;
-    document.addEventListener("scroll", function() {
-      lastPosition = window.scrollY;
-      if (!ticking) {
-        window.requestAnimationFrame(function() {
-          if (lastPosition > 0) {
-            appBar.classList.add("tm-app-bar--sticky");
-          }
-          else {
-            appBar.classList.remove("tm-app-bar--sticky");
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
+    // var lastPosition = 0;
+    // var ticking = false;
+    // document.addEventListener("scroll", function() {
+    //   lastPosition = window.scrollY;
+    //   if (!ticking) {
+    //     window.requestAnimationFrame(function() {
+    //       if (lastPosition > 0) {
+    //         appBar.classList.add("tm-app-bar--sticky");
+    //       }
+    //       else {
+    //         appBar.classList.remove("tm-app-bar--sticky");
+    //       }
+    //       ticking = false;
+    //     });
+    //     ticking = true;
+    //   }
+    // });
 
   </script>
 </header>
