@@ -22,30 +22,41 @@
   <meta property="og:url" content="https://www.hookamonk.com/">
   <meta property="og:site_name" content="hookamonk.com">
   <style>
+    .hm-hero-wrapper{
+      padding-bottom: 0;
+    }
+    #page-hookamonk-cattering .hm-hero__sub-header {
+      color: var(--hm-black);
+      background-color: #FFF;
+      max-width: 1000px;
+      margin: 1em auto 0;
+      padding: 1em;
+
+    }
     @media screen and (max-width: 479px) {
       .hm-hero-wrapper {
-        background: url({{ "hookamonk.com/bgnd_header.png" | cloudinaryUrl(width=800) }}) no-repeat fixed top center;
+        background: url({{ "hookamonk.com/bgnd_header_cattering.png" | cloudinaryUrl(width=800) }}) no-repeat fixed top center;
         background-size: cover;
       }
     }
 
     @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1), screen and (max-width: 479px) and (min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min-resolution: 192dpi), screen and (max-width: 479px) and (min-resolution: 2dppx) {
       .hm-hero-wrapper {
-        background: url({{"hookamonk.com/bgnd_header.png" | cloudinaryUrl(width=800,dpr=2)}}) no-repeat fixed top center;
+        background: url({{"hookamonk.com/bgnd_header_cattering.png" | cloudinaryUrl(width=800,dpr=2)}}) no-repeat fixed top center;
         background-size: cover;
       }
     }
 
     @media screen and (min-width: 480px) {
       .hm-hero-wrapper {
-        background: url({{"hookamonk.com/bgnd_header.png" | cloudinaryUrl(width=1671)}}) no-repeat fixed top center;
+        background: url({{"hookamonk.com/bgnd_header_cattering.png" | cloudinaryUrl(width=1671)}}) no-repeat fixed top center;
         background-size: cover;
       }
     }
 
     @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
       .hm-hero-wrapper {
-        background: url({{"hookamonk.com/bgnd_header.png" | cloudinaryUrl(width=1671,dpr=2)}}) no-repeat fixed top center;
+        background: url({{"hookamonk.com/bgnd_header_cattering.png" | cloudinaryUrl(width=1671,dpr=2)}}) no-repeat fixed top center;
         background-size: cover;
       }
     }
