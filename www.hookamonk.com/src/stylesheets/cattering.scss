@@ -1,0 +1,18 @@
+.hm-section-features {
+  p {
+    color: #5e5e5e;
+  }
+};
+
+.hm-section-features__feature {
+  display: flex;
+  .material-icons {
+    display: block;
+    margin: 2em 1em 0 0;
+    color: #502CCC;
+    svg {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
