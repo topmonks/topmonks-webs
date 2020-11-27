@@ -22,6 +22,7 @@ body {
   text-rendering: geometricPrecision;
 }
 
+// LINKS
 a {
   text-decoration: none;
   color: #502CCC;
@@ -30,6 +31,7 @@ a {
   }
 }
 
+// LISTS
 ul,
 ul li {
   padding: 0;
@@ -42,4 +44,10 @@ ul {
 ul li {
   list-style: none;
   margin: 0;
+}
+
+//HEADINGS
+.hm-h2 {
+  font-weight: 400;
+  font-size: 3em;
 }

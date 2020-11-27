@@ -31,7 +31,7 @@
       max-width: 1000px;
       margin: 1em auto 0;
       padding: 1em;
-
+      font-weight: 400;
     }
     @media screen and (max-width: 479px) {
       .hm-hero-wrapper {
@@ -125,21 +125,37 @@
       </div>
       <div
         class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="text-align: center">
-        <h2>Products</h2>
+        <h2 class="hm-h2">Products</h2>
       </div>
       <div
         class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <img title="Hookamonk box product photo"
+             alt="[photo] Hookamonk box product photo"
+             width="90%"
+             src="{{ "hookamonk.com/img_box.png" | cloudinaryUrl(width=530) }}"
+             srcset="{{ "hookamonk.com/img_box.png" | cloudinaryUrl(width=530) }} 1x,
+                     {{ "hookamonk.com/img_box.png" | cloudinaryUrl(width=530,dpr=1.5) }} 1.5x,
+                     {{ "hookamonk.com/img_box.png" | cloudinaryUrl(width=530,dpr=2) }} 2x" />
       </div>
       <div
         class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-        <h2>Mobile box</h2>
+        <h3 class="hm-h2">Mobile box</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean id metus id velit ullamcorper pulvinar.</p>
       </div>
       <div
         class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-        <h2>Table</h2>
+        <h3 class="hm-h2">Table</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean id metus id velit ullamcorper pulvinar.</p>
       </div>
       <div
         class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        <img title="Hookamonk table product photo"
+             alt="[photo] Hookamonk table product photo"
+             width="90%"
+             src="{{ "hookamonk.com/img_table.png" | cloudinaryUrl(width=530) }}"
+             srcset="{{ "hookamonk.com/img_table.png" | cloudinaryUrl(width=530) }} 1x,
+                     {{ "hookamonk.com/img_table.png" | cloudinaryUrl(width=530,dpr=1.5) }} 1.5x
+                     {{ "hookamonk.com/img_table.png" | cloudinaryUrl(width=530,dpr=2) }} 2x"/>
       </div>
 
   </div>
