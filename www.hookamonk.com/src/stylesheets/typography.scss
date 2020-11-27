@@ -1,6 +1,8 @@
 :root {
   --hm-black: #000000;
   --hm-white: #ffffff;
+  --hm-grey: #5e5e5e;
+  --hm-violet: #502CCC;
 }
 
 body {
@@ -25,7 +27,7 @@ body {
 // LINKS
 a {
   text-decoration: none;
-  color: #502CCC;
+  color: var(--hm-violet);
   &:hover{
     text-decoration: underline;
   }
