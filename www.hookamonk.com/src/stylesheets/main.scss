@@ -42,3 +42,14 @@ body {
   }
 }
 // BUTTONS END
+
+.img-fullwidth-phone {
+  @media screen and (max-width: 478px) {
+    width: 100%;
+  }
+}
+.img-fullwidth-tablet {
+  @media screen and (min-width: 479px) and (max-width: 839px) {
+    width: 100%;
+  }
+}

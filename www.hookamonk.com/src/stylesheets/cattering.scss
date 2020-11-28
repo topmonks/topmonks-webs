@@ -1,4 +1,5 @@
 .hm-section-features {
+  margin-top: 1em;
   p {
     color: var(--hm-grey);
   }
@@ -19,6 +20,11 @@
 
 .hm-section-products {
   max-width: 1010px;
+}
+.hk-img-product {
+  @media screen and (min-width: 479px) {
+    width: 90%
+  }
 }
 
 .hm-section-apps {
