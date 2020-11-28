@@ -79,3 +79,12 @@
     }
   }
 }
+
+@media screen and (min-width: 479px) {
+  .hm-order-desktop--2 {
+    order: 2;
+  }
+  .hm-order-desktop--1 {
+    order: 1;
+  }
+}
