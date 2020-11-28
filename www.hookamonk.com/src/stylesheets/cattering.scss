@@ -16,3 +16,60 @@
     }
   }
 }
+
+.hm-section-products {
+  max-width: 1010px;
+}
+
+.hm-section-apps {
+  background-color: #EEEEEE;
+  overflow: hidden;
+}
+.hm-img--lounge-app {
+  @media screen and (max-width: 478px) {
+    width: 478px;
+    height: 345px;
+    background-size: 478px 345px;
+    background-repeat: no-repeat;
+    background-image: cloudinaryUrl(
+        "hookamonk.com/img_lounge_app.png",
+        (
+          "width": 478
+        )
+    );
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: cloudinaryUrl(
+          "hookamonk.com/img_lounge_app.png",
+          (
+            "width": 478,
+            "dpr": 2
+          )
+      );
+    }
+  }
+  @media screen and (min-width: 479px) {
+    width: 1157px;
+    height: 834px;
+    background-size: 1157px 834px;
+    background-repeat: no-repeat;
+    background-image: cloudinaryUrl(
+        "hookamonk.com/img_lounge_app.png",
+        (
+          "width": 1157
+        )
+    );
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: cloudinaryUrl(
+          "hookamonk.com/img_lounge_app.png",
+          (
+            "width": 1157,
+            "dpr": 2
+          )
+      );
+    }
+  }
+}

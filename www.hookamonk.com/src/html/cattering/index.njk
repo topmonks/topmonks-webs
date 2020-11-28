@@ -22,7 +22,7 @@
   <meta property="og:url" content="https://www.hookamonk.com/">
   <meta property="og:site_name" content="hookamonk.com">
   <style>
-    .hm-hero-wrapper{
+    .hm-hero-wrapper {
       padding-bottom: 0;
     }
     #page-hookamonk-cattering .hm-hero__sub-header {
@@ -80,8 +80,8 @@
     </div>
   </div>
   {{ css("cattering") }}
-<div class="mdc-layout-grid hm-section-features">
-  <div class="mdc-layout-grid__inner tm-layout-wrapper">
+  <div class="mdc-layout-grid hm-section-features">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div
         class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 hm-section-features__feature">
         <div class="material-icons">
@@ -228,6 +228,10 @@
           <p>Mobile app for Android and iOS. You can use it to change intensity of your hookah or create a diary with your sessions.</p>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper hm-section-products">
       <div
         class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="text-align: center">
         <h2 class="hm-h2">Products</h2>
@@ -262,7 +266,55 @@
                      {{ "hookamonk.com/img_table.png" | cloudinaryUrl(width=530,dpr=1.5) }} 1.5x,
                      {{ "hookamonk.com/img_table.png" | cloudinaryUrl(width=530,dpr=2) }} 2x"/>
       </div>
-
+    </div>
   </div>
-</div>
+  <div class="hm-section-apps">
+  <div class="mdc-layout-grid tm-bgnd-wrapper">
+    <div class="mdc-layout-grid__inner tm-layout-wrapper">
+      <div
+        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
+        style="text-align: center">
+        <h2 class="hm-h2">
+          Applications
+        </h2>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-desktop">
+        <h3 class="hm-h2">
+          Lounge app
+        </h3>
+        <h4>Features</h4>
+        <ul class="hm-formatted">
+          <li>Management of Hookamonk devices</li>
+          <li>Overview of running sessions</li>
+          <li>Monitoring of session run time</li>
+          <li>Maintenance status</li>
+          <li>Allows to remotely control hookahs</li>
+        </ul>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-desktop">
+        <figure class="hm-img--lounge-app"></figure>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-desktop">
+        <img title="Hookamonk mobile app"
+             alt="[photo] Hookamonk mobile app"
+             src="{{ "hookamonk.com/img_mobile_app.png" | cloudinaryUrl(width=647) }}"
+             srcset="{{ "hookamonk.com/img_mobile_app.png" | cloudinaryUrl(width=647) }} 1x,
+                     {{ "hookamonk.com/img_mobile_app.png" | cloudinaryUrl(width=647,dpr=1.5) }} 1.5x,
+                     {{ "hookamonk.com/img_mobile_app.png" | cloudinaryUrl(width=647,dpr=2) }} 2x" />
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-desktop">
+        <h3 class="hm-h2">
+          Mobile app
+        </h3>
+        <h4>Features</h4>
+        <ul class="hm-formatted">
+          <li>Manage intensity of your hookah session</li>
+          <li>Track your sessions and rate them</li>
+          <li>Track tobaccos you've tried and keep them in diary</li>
+          <li>Earn hookacoins</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
 {% endblock %}
