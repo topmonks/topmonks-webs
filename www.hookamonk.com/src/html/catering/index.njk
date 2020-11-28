@@ -1,7 +1,7 @@
 {% extends 'layouts/main.njk' %}
 {% from 'macros/helpers.njk' import css, sprite %}
 
-{% set page = 'hookamonk-cattering' %}
+{% set page = 'hookamonk-catering' %}
 {% set language = en %}
 
 {% block title %}
@@ -25,7 +25,7 @@
     .hm-hero-wrapper {
       padding-bottom: 0;
     }
-    #page-hookamonk-cattering .hm-hero__sub-header {
+    #page-hookamonk-catering .hm-hero__sub-header {
       color: var(--hm-black);
       background-color: #FFF;
       max-width: 1000px;
@@ -35,28 +35,28 @@
     }
     @media screen and (max-width: 479px) {
       .hm-hero-wrapper {
-        background: url({{ "hookamonk.com/bgnd_header_cattering.png" | cloudinaryUrl(width=800) }}) no-repeat fixed top center;
+        background: url({{ "hookamonk.com/bgnd_header_catering.png" | cloudinaryUrl(width=800) }}) no-repeat fixed top center;
         background-size: cover;
       }
     }
 
     @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1), screen and (max-width: 479px) and (min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min-resolution: 192dpi), screen and (max-width: 479px) and (min-resolution: 2dppx) {
       .hm-hero-wrapper {
-        background: url({{"hookamonk.com/bgnd_header_cattering.png" | cloudinaryUrl(width=800,dpr=2)}}) no-repeat fixed top center;
+        background: url({{"hookamonk.com/bgnd_header_catering.png" | cloudinaryUrl(width=800,dpr=2)}}) no-repeat fixed top center;
         background-size: cover;
       }
     }
 
     @media screen and (min-width: 480px) {
       .hm-hero-wrapper {
-        background: url({{"hookamonk.com/bgnd_header_cattering.png" | cloudinaryUrl(width=1671)}}) no-repeat fixed top center;
+        background: url({{"hookamonk.com/bgnd_header_catering.png" | cloudinaryUrl(width=1671)}}) no-repeat fixed top center;
         background-size: cover;
       }
     }
 
     @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
       .hm-hero-wrapper {
-        background: url({{"hookamonk.com/bgnd_header_cattering.png" | cloudinaryUrl(width=1671,dpr=2)}}) no-repeat fixed top center;
+        background: url({{"hookamonk.com/bgnd_header_catering.png" | cloudinaryUrl(width=1671,dpr=2)}}) no-repeat fixed top center;
         background-size: cover;
       }
     }
@@ -79,7 +79,7 @@
       </div>
     </div>
   </div>
-  {{ css("cattering") }}
+  {{ css("catering") }}
   <div class="mdc-layout-grid hm-section-features">
     <div class="mdc-layout-grid__inner tm-layout-wrapper">
       <div
