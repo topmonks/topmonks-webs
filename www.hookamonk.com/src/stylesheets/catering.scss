@@ -29,6 +29,36 @@
   }
 }
 .hm-section-apps {
+  @media screen and (max-width: 478px) {
+    background-repeat: no-repeat, no-repeat;
+    background-image: cloudinaryUrl(
+        "hookamonk.com/bgnd_apps_2.png",
+        (
+          "width": 478px
+        )
+    ),cloudinaryUrl(
+        "hookamonk.com/bgnd_apps_1.png",
+        (
+          "width": 900px
+        )
+    );
+    background-position: bottom 300px left,top 400px center;
+  }
+  @media screen and (min-width: 479px) {
+    background-repeat: no-repeat, no-repeat;
+    background-image: cloudinaryUrl(
+        "hookamonk.com/bgnd_apps_2.png",
+        (
+          "width": 1106px
+        )
+    ), cloudinaryUrl(
+        "hookamonk.com/bgnd_apps_1.png",
+        (
+          "width": 1680px
+        )
+    );
+    background-position: bottom -120px left -50px, top center;
+  }
   background-color: #EEEEEE;
   overflow: hidden;
 }
