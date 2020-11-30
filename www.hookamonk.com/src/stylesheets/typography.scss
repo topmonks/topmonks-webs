@@ -62,4 +62,11 @@ ul.hm-formatted {
 .hm-h2 {
   font-weight: 400;
   font-size: 3em;
+  @media screen and (max-width: 478px) {
+    margin-bottom: 0.5em;
+  }
+}
+h3.hm-h2 {
+  font-size: 2em;
+  margin-top: 0;
 }
