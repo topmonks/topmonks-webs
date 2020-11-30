@@ -67,6 +67,8 @@ ul.hm-formatted {
   }
 }
 h3.hm-h2 {
-  font-size: 2em;
-  margin-top: 0;
+  @media screen and (max-width: 478px) {
+    font-size: 2em;
+    margin-top: 0;
+  }
 }
