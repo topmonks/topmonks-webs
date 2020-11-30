@@ -1,0 +1,56 @@
+.hm-footer {
+  @media screen and (max-width: 479px) {
+    background-image: cloudinaryUrl(
+        "hookamonk.com/bgnd_footer.png",
+        (
+          "width": 800px
+        )
+    );
+    background-size: cover;
+  }
+  @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 479px) and (-o-min-device-pixel-ratio: 2/1), screen and (max-width: 479px) and (min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min-resolution: 192dpi), screen and (max-width: 479px) and (min-resolution: 2dppx) {
+    background-image: cloudinaryUrl(
+        "hookamonk.com/bgnd_footer.png",
+        (
+          "width": 800px,
+          "dpr": 2
+        )
+    );
+    background-size: cover;
+  }
+
+  @media screen and (min-width: 480px) {
+    background-image: cloudinaryUrl(
+        "hookamonk.com/bgnd_footer.png",
+        (
+          "width": 1680px
+        )
+    );
+    background-size: cover;
+  }
+  @media screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min--moz-device-pixel-ratio: 2), screen and (min-width: 480px) and (-o-min-device-pixel-ratio: 2/1), screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+    background-image: cloudinaryUrl(
+        "hookamonk.com/bgnd_footer.png",
+        (
+          "width": 1680px,
+          "dpr": 2
+        )
+    );
+    background-size: cover;
+  }
+  a {
+    color: var(--hm-white);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .material-icons svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  text-align: left;
+  padding: 6em 0;
+  background-position: bottom right;
+}

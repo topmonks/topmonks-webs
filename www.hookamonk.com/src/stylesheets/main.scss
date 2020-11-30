@@ -30,15 +30,18 @@ body {
   border-radius: 10px;
   padding: 20px 30px;
   width: max-content;
-  margin: 0 auto;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-
   transition: var(--hm-btn-transition);
 
   &:hover {
-    background-color: #ECA340;
+    background-color: var(--hm-orange);
+  }
+
+  &.hm-button--secondary {
+    background-color: var(--hm-orange-dark);
+    color: var(--hm-black);
   }
 }
 // BUTTONS END
