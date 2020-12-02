@@ -41,7 +41,7 @@
     "gulp-markdown-to-json": "^1.1.0",
     "gulp-merge-json": "^2.1.0",
     "isomorphic-fetch": "^3.0.0",
-    "lighthouse": "^6.4.1",
+    "lighthouse": "^6.5.0",
     "lighthouse-logger": "^1.2.0",
     "local-web-server": "^4.2.1",
     "lws": "3.1.0",
