@@ -4,7 +4,8 @@
   .box {
     margin: 0;
     padding: 0;
-    @media (min-width: 480px) {
+
+    .partners {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
@@ -12,34 +13,33 @@
     }
 
     a {
-      display: block;
+      display: flex;
       padding: 0 16px;
-      align-items: center;
-      text-align: center;
-      @media (min-width: 480px) {
-        display: inline-flex;
-      }
+    }
+
+    .sprite {
+      position: relative;
     }
 
     .sprite svg {
-      display: inline-block;
+      display: block;
       width: 110px;
       @media (max-width: 480px) {
         width: 90px;
       }
     }
 
-    .sprite--img_logo_apify, .sprite--img_logo_pricefx{
+    .sprite--img_logo_apify,
+    .sprite--img_logo_byzkids,
+    .sprite--img_logo_pricefx{
       &:after {
         content: "Partners";
         font-size: 12px;
         line-height: 14px;
         color: #979797;
-        display: flex;
-        margin-top: -34px;
-        @media (max-width: 839px) {
-          margin-top: -24px;
-        }
+        position: absolute;
+        bottom: 20px;
+        left: 0;
       }
     }
 
