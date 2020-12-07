@@ -270,73 +270,86 @@
       </div>
     </div>
   </div>
+{#  <div class="mdc-layout-grid">#}
+{#    <div class="mdc-layout-grid__inner tm-layout-wrapper">#}
+{#      <div#}
+{#        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="text-align: center">#}
+{#        <h2 class="hm-h2">Overview</h2>#}
+{#        <div class="hm-video-wrapper">#}
+{#          <video class="hm-overview-video" autoplay loop muted>#}
+{#            <source src="https://res.cloudinary.com/topmonks/video/upload/hookamonk.com/hookamonk_animace.mp4" type="video/mp4">#}
+{#            Your browser does not support the video tag.#}
+{#          </video>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
   <div class="hm-section-apps">
-  <div class="mdc-layout-grid tm-bgnd-wrapper">
-    <div class="mdc-layout-grid__inner tm-layout-wrapper">
-      <div
-        class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
-        style="text-align: center">
-        <h2 class="hm-h2">
-          Applications
-        </h2>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle">
-        <h3 class="hm-h2">
-          Lounge app
-        </h3>
-        <h4>Features</h4>
-        <ul class="hm-formatted">
-          <li>Management of Hookamonk devices</li>
-          <li>Overview of running sessions</li>
-          <li>Monitoring of session run time</li>
-          <li>Maintenance status</li>
-          <li>Allows to remotely control hookahs</li>
-        </ul>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-desktop">
-        <figure class="hm-img--lounge-app"></figure>
-      </div>
+    <div class="mdc-layout-grid tm-bgnd-wrapper">
+      <div class="mdc-layout-grid__inner tm-layout-wrapper">
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
+          style="text-align: center">
+          <h2 class="hm-h2">
+            Applications
+          </h2>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--align-middle">
+          <h3 class="hm-h2">
+            Lounge app
+          </h3>
+          <h4>Features</h4>
+          <ul class="hm-formatted">
+            <li>Management of Hookamonk devices</li>
+            <li>Overview of running sessions</li>
+            <li>Monitoring of session run time</li>
+            <li>Maintenance status</li>
+            <li>Allows to remotely control hookahs</li>
+          </ul>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-desktop">
+          <figure class="hm-img--lounge-app"></figure>
+        </div>
 
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--align-middle hm-order-desktop--2">
-        <h3 class="hm-h2">
-          Mobile app
-        </h3>
-        <h4>Features</h4>
-        <ul class="hm-formatted">
-          <li>Manage intensity of your hookah session</li>
-          <li>Track your sessions and rate them</li>
-          <li>Track tobaccos you've tried and keep them in diary</li>
-          <li>Earn hookacoins</li>
-          <p>
-            <a href="https://apps.apple.com/cz/app/session-monk/id1489139811" title="Hookamonk mobile app available on Apple App Store">
-              <img alt="[photo] Hookamonk mobile app available on Apple App Store"
-                   src="{{ "hookamonk.com/img_appstore.png" | cloudinaryUrl(width=209) }}"
-                   srcset="{{ "hookamonk.com/img_appstore.png" | cloudinaryUrl(width=209) }} 1x,
-                     {{ "hookamonk.com/img_appstore.png" | cloudinaryUrl(width=209,dpr=1.5) }} 1.5x,
-                     {{ "hookamonk.com/img_appstore.png" | cloudinaryUrl(width=209,dpr=2) }} 2x" />
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.topmonks.sessionmonk" title="Hookamonk mobile app available on Google Play">
-              <img alt="[photo] Hookamonk mobile app available on Google Play"
-                   src="{{ "hookamonk.com/img_google_play.png" | cloudinaryUrl(width=209) }}"
-                   srcset="{{ "hookamonk.com/img_google_play.png" | cloudinaryUrl(width=209) }} 1x,
-                       {{ "hookamonk.com/img_google_play.png" | cloudinaryUrl(width=209,dpr=1.5) }} 1.5x,
-                       {{ "hookamonk.com/img_google_play.png" | cloudinaryUrl(width=209,dpr=2) }} 2x" />
-            </a>
-          </p>
-
-        </ul>
-      </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-desktop hm-order-desktop--1">
-        <img title="Hookamonk mobile app"
-             alt="[photo] Hookamonk mobile app"
-             class="img-fullwidth-phone"
-             src="{{ "hookamonk.com/img_mobile_app.png" | cloudinaryUrl(width=647) }}"
-             srcset="{{ "hookamonk.com/img_mobile_app.png" | cloudinaryUrl(width=647) }} 1x,
-                     {{ "hookamonk.com/img_mobile_app.png" | cloudinaryUrl(width=647,dpr=1.5) }} 1.5x,
-                     {{ "hookamonk.com/img_mobile_app.png" | cloudinaryUrl(width=647,dpr=2) }} 2x" />
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--align-middle hm-order-desktop--2">
+          <h3 class="hm-h2">
+            Mobile app
+          </h3>
+          <h4>Features</h4>
+          <ul class="hm-formatted">
+            <li>Manage intensity of your hookah session</li>
+            <li>Track your sessions and rate them</li>
+            <li>Track tobaccos you've tried and keep them in diary</li>
+            <li>Earn hookacoins</li>
+            <p>
+              <a href="https://apps.apple.com/cz/app/session-monk/id1489139811" title="Hookamonk mobile app available on Apple App Store">
+                <img alt="[photo] Hookamonk mobile app available on Apple App Store"
+                     src="{{ "hookamonk.com/img_appstore.png" | cloudinaryUrl(width=209) }}"
+                     srcset="{{ "hookamonk.com/img_appstore.png" | cloudinaryUrl(width=209) }} 1x,
+                       {{ "hookamonk.com/img_appstore.png" | cloudinaryUrl(width=209,dpr=1.5) }} 1.5x,
+                       {{ "hookamonk.com/img_appstore.png" | cloudinaryUrl(width=209,dpr=2) }} 2x" />
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.topmonks.sessionmonk" title="Hookamonk mobile app available on Google Play">
+                <img alt="[photo] Hookamonk mobile app available on Google Play"
+                     src="{{ "hookamonk.com/img_google_play.png" | cloudinaryUrl(width=209) }}"
+                     srcset="{{ "hookamonk.com/img_google_play.png" | cloudinaryUrl(width=209) }} 1x,
+                         {{ "hookamonk.com/img_google_play.png" | cloudinaryUrl(width=209,dpr=1.5) }} 1.5x,
+                         {{ "hookamonk.com/img_google_play.png" | cloudinaryUrl(width=209,dpr=2) }} 2x" />
+              </a>
+            </p>
+          </ul>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-desktop hm-order-desktop--1">
+          <img title="Hookamonk mobile app"
+               alt="[photo] Hookamonk mobile app"
+               class="img-fullwidth-phone"
+               src="{{ "hookamonk.com/img_mobile_app.png" | cloudinaryUrl(width=647) }}"
+               srcset="{{ "hookamonk.com/img_mobile_app.png" | cloudinaryUrl(width=647) }} 1x,
+                       {{ "hookamonk.com/img_mobile_app.png" | cloudinaryUrl(width=647,dpr=1.5) }} 1.5x,
+                       {{ "hookamonk.com/img_mobile_app.png" | cloudinaryUrl(width=647,dpr=2) }} 2x" />
+        </div>
       </div>
     </div>
-  </div>
   </div>
 {% endblock %}
 
