@@ -1303,12 +1303,12 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
-"@pulumi/aws@^3.12.2":
-  version "3.12.2"
-  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-3.12.2.tgz#9686a7274d67f6e1d2f53f3462a9718e9433cae5"
-  integrity sha512-azoH3r2bI3KgK5Yyu2F2wL3yd+d8pnEblPmpPinSiJ8rgyv87E7Ot9GjEQgniuHaB1MODzox3B8ySflqwY9akA==
+"@pulumi/aws@^3.19.0":
+  version "3.19.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/aws/-/aws-3.19.0.tgz#5be8826f8d3231f070a38c49076f06b7ce638579"
+  integrity sha512-jJ+Wzio5MYvtKfykY0deMTisRxQMnanlN3OAtcmdB2entMd+/chB+kQibfPpO7s7ErRA6yjb7B08LYS6B1I+eQ==
   dependencies:
-    "@pulumi/pulumi" "^2.0.0"
+    "@pulumi/pulumi" "^2.15.0"
     aws-sdk "^2.0.0"
     builtin-modules "3.0.0"
     mime "^2.0.0"
@@ -1332,7 +1332,7 @@
     "@pulumi/pulumi" "^2.0.0"
     semver "^5.4.0"
 
-"@pulumi/pulumi@^2.0.0", "@pulumi/pulumi@^2.15.3":
+"@pulumi/pulumi@^2.0.0", "@pulumi/pulumi@^2.15.0", "@pulumi/pulumi@^2.15.3":
   version "2.15.3"
   resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-2.15.3.tgz#bd0958b4a3e970c92a10f23d0ea9994b77edab72"
   integrity sha512-w992vTNJhwASNqfQgLpzkER077rbHwmysj7WUozL9sCZafizB1DLa3FUywMeYHfC6birh87IBVMotcsPbanYuQ==
@@ -10173,14 +10173,7 @@ resolve-path@^1.4.0:
     http-errors "~1.6.2"
     path-is-absolute "1.0.1"
 
-resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.12.0, resolve@^1.3.2, resolve@^1.4.0, resolve@^1.7.1:
-  version "1.17.0"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.17.0.tgz#b25941b54968231cc2d1bb76a79cb7f2c0bf8444"
-  integrity sha512-ic+7JYiV8Vi2yzQGFWOkiZD5Z9z7O2Zhm9XMaTxdJExKasieFCr+yXZ/WmXsckHiKl12ar0y6XiXDx3m4RHn1w==
-  dependencies:
-    path-parse "^1.0.6"
-
-resolve@^1.17.0, resolve@^1.19.0:
+resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.12.0, resolve@^1.17.0, resolve@^1.19.0, resolve@^1.3.2, resolve@^1.4.0, resolve@^1.7.1:
   version "1.19.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.19.0.tgz#1af5bf630409734a067cae29318aac7fa29a267c"
   integrity sha512-rArEXAgsBG4UgRGcynxWIWKFvh/XZCcS8UJdHhwy91zwAvCZIbcs+vAbflgBnNjYMs/i/i+/Ux6IZhML1yPvxg==
