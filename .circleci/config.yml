@@ -435,3 +435,20 @@ workflows:
           filters:
             branches:
               only: trunk
+      - test_site:
+          name: test-cbx-cz
+          site_name: cbx.cz
+          context: org-global
+          requires:
+            - build
+            - deploy-lighthouse-ci
+      - deploy_site:
+          name: deploy-cbx-cz
+          site_name: cbx.cz
+          context: org-global
+          requires:
+            - provision
+            - test-cbx-cz
+          filters:
+            branches:
+              only: trunk
