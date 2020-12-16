@@ -78,17 +78,19 @@ body {
   flex-direction: column;
   margin-bottom: 16px;
   text-align: center;
-  text-transform: uppercase;
 }
 
 input {
+  font-family: "Andale Mono";
   border: none;
   border-bottom: dashed 1px var(--color-white);
   min-height: 44px;
   background-color: transparent;
   color: var(--color-white);
   font-size: var(--fontsize-mega);
-  max-width: 6em;
-  width: 6em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  max-width: 6.5em;
   margin: 0 auto;
+  padding-left: 0.5em;
 }

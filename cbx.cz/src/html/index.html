@@ -43,22 +43,21 @@
     <p>Zadejte prosím kód z poznámky k zásilce:</p>
       <form class="form-block">
         <div class="form-text-input-component">
-          <input name="deliveryCode" type="text" maxlength="6" placeholder="XXXXXX" pattern="[0-9A-Za-z]{6}" inputmode="numeric" title="6ti místné číslo zásilky"/>
+          <input name="deliveryCode" type="text" maxlength="6" placeholder="XXXXXX" pattern="[0-9A-Za-z]{6}" title="6ti místný kód zásilky"/>
         </div>
         <button class="button-component">Otevřít zásilku</button>
       </form>
     </div>
   </div>
-<script>
-
-  const form = document.querySelector(".form-block");
-  form.addEventListener("submit", function(e) {
-    e.stopImmediatePropagation();
-    e.preventDefault();
-    const input = document.querySelector("input[name=deliveryCode]");
-    window.location.replace(`https://chytrybox.monks.cloud/delivery/${input.value.toUpperCase()}`);
-  });
-</script>
+  <script>
+    const form = document.querySelector(".form-block");
+    form.addEventListener("submit", function(e) {
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      const input = document.querySelector("input[name=deliveryCode]");
+      window.location.replace(`https://chytrybox.monks.cloud/delivery/${input.value.toUpperCase()}`);
+    });
+  </script>
 
 </body>
 
