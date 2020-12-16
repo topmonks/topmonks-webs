@@ -1,7 +1,90 @@
-@import "@material/layout-grid/mdc-layout-grid";
-@import "common/colors";
+//@import "@material/layout-grid/mdc-layout-grid";
+//:root {
+//  --mdc-layout-grid-margin-desktop: 24px;
+//  --mdc-layout-grid-gutter-desktop: 20px;
+//  --mdc-layout-grid-column-width-desktop: 60px;
+//}
+
 :root {
-  --mdc-layout-grid-margin-desktop: 24px;
-  --mdc-layout-grid-gutter-desktop: 20px;
-  --mdc-layout-grid-column-width-desktop: 60px;
+  /* UI colors */
+  --color-primary: #00a1e5;
+  --color-black: #34374b;
+  --color-grey: #727582;
+  --color-grey-light: #b0b4cc;
+  --color-silver: #e5e8ee;
+  --color-shadow: rgba(20, 36, 146, 0.05);
+  --color-white: #ffffff;
+  --color-background: #f1f5f8;
+  --color-success: #7ecb1c;
+  --color-alert: #ffa800;
+  --color-bigbad: #ff2e00;
+
+  /* Font sizes */
+  --fontsize-normal: 18px;
+  --fontsize-large: 20px;
+  --fontsize-mega: 34px;
+
+  /* Layout */
+  --header-height: 88px;
+}
+
+.color-primary {
+  color: var(--color-primary);
+  fill: var(--color-primary);
+}
+
+.color-grey {
+  color: var(--color-grey);
+  fill: var(--color-grey);
+}
+
+body {
+  margin: 0;
+  font-family: "proxima-nova", "sans-serif";
+  text-rendering: geometricPrecision;
+  font-size: var(--fontsize-normal);
+}
+
+.application {
+  background: var(--color-primary);
+  color: var(--color-white);
+  min-height: 99.9vh;
+  max-height: 99.9vh;
+  overflow-y: auto;
+}
+.screen-view {
+  padding: 0 16px 104px 16px;
+  text-align: center;
+}
+
+.button-component {
+  background-color: var(--color-black);
+  font-size: var(--fontsize-normal);
+  color: var(--color-white);
+  border: none;
+  box-shadow: 0 5px 20px 0 var(--color-shadow);
+  width: 100%;
+  min-height: 44px;
+  height: 44px;
+  border-radius: 4px;
+  /* do not use cursor pointer https://medium.com/simple-human/buttons-shouldnt-have-a-hand-cursor-b11e99ca374b */
+}
+
+.form-text-input-component {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+input {
+  border: none;
+  border-bottom: dashed 1px var(--color-white);
+  min-height: 44px;
+  background-color: transparent;
+  color: var(--color-white);
+  font-size: var(--fontsize-mega);
+  max-width: 6em;
+  width: 6em;
+  margin: 0 auto;
 }
