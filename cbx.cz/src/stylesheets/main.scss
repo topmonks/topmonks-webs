@@ -69,12 +69,16 @@ body {
   border-radius: 4px;
   /* do not use cursor pointer https://medium.com/simple-human/buttons-shouldnt-have-a-hand-cursor-b11e99ca374b */
 }
+.button-component[disabled] {
+  background-color: var(--color-grey);
+}
 
 .form-text-input-component {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 input {
