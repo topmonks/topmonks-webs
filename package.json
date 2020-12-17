@@ -7,7 +7,6 @@
   "author": "TopMonks",
   "license": "MIT",
   "dependencies": {
-    "@lhci/utils": "^0.6.0",
     "@material/layout-grid": "^8.0.0",
     "@material/top-app-bar": "^8.0.0",
     "@pulumi/aws": "^3.12.2",
@@ -16,11 +15,11 @@
     "@topmonks/pulumi-aws": "^1.6.1",
     "@types/node": "^14.14.13",
     "lit-html": "^1.3.0",
-    "lodash": "4.17.20",
     "yaml": "^1.10.0"
   },
   "devDependencies": {
     "@lhci/cli": "^0.6.1",
+    "@lhci/utils": "^0.6.0",
     "@rollup/plugin-alias": "^3.1.1",
     "@topmonks/blendid": "git://github.com/topmonks/blendid.git",
     "@types/chart.js": "^2.9.28",
@@ -121,7 +120,7 @@
   },
   "resolutions": {
     "bluebird": "npm:bluebird@3.7.2",
-    "lodash": "npm:lodash@4.17.19",
+    "lodash": "npm:lodash@4.17.20",
     "html-minifier": "npm:html-minifier-terser@5.0.3",
     "source-map-resolve": "npm:source-map-resolve@0.6.0"
   },

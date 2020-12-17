@@ -12,6 +12,8 @@ registerAutoTags({
   "user:Stack": pulumi.getStack()
 });
 
+createCertificate("www.cbx.cz");
+createCertificate("www.hookamonk.com");
 createCertificate("www.ingridapp.io");
 createCertificate("www.zive.tv");
 
