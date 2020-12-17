@@ -63,6 +63,7 @@
     }
   },
   "www.hookamonk.com": {
+    "cdn": { "disabled": true },
     "lhci": {
       "upload": {
         "token": "2534835b-9525-441b-b854-a1102dc3888c"
