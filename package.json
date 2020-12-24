@@ -11,7 +11,7 @@
     "@material/top-app-bar": "^8.0.0",
     "@pulumi/aws": "^3.12.2",
     "@pulumi/awsx": "^0.22.0",
-    "@pulumi/pulumi": "^2.16.1",
+    "@pulumi/pulumi": "^2.16.2",
     "@topmonks/pulumi-aws": "^1.6.1",
     "@types/node": "^14.14.16",
     "lit-html": "^1.3.0",
