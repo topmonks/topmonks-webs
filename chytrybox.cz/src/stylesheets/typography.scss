@@ -1,13 +1,72 @@
 body {
   font-family: 'Nunito Sans', sans-serif;
+  font-kerning: normal;
+  font-variant-numeric: lining-nums slashed-zero;
+  font-variant-ligatures: common-ligatures contextual;
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+@media screen and (min-width: 840px) {
+  h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 48px;
+    //color: #FFFFFF;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #403068;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 32px;
+    color: #34374B;
+  }
+}
+@media (max-width: 839px) {
+  h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 42px;
+    //color: #FFFFFF;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #403068;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 32px;
+    color: #34374B;
+  }
 }
 
 .action-button {
+  font-size: 20px;
+  font-weight: 600;
   color: #FFFFFF;
   background-color: #403068;
   border-radius: 8px;
-  padding: 8px 40px;
+  padding: 10px 52px;
   text-decoration: none;
+  text-transform: uppercase;
   &:hover {
     background-color: #140a3d;
   }

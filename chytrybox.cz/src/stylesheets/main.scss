@@ -1,20 +1,201 @@
 @import "@material/layout-grid/mdc-layout-grid";
 @import "common/colors";
 
+html {
+  scroll-behavior: smooth;
+}
+
+textarea:focus, button:focus, input:focus {
+  outline: none;
+}
+
+section {
+  padding: 40px 0;
+}
+
+// Layout //
+body {
+  margin: 0;
+}
+
 :root {
   --mdc-layout-grid-margin-desktop: 24px;
   --mdc-layout-grid-gutter-desktop: 20px;
   --mdc-layout-grid-column-width-desktop: 60px;
 }
 
-.intro {
-  max-width: 416px;
-  margin: 0;
+.layout-wrapper {
+  max-width: 1224px;
+  margin: 0 auto;
 }
 
-/* Section: Contact */
-/* Máte zájem? Dotazy? */
-.contact {
+// Introduction //
+.intro {
+  p {
+    color: #FFFFFF;
+    max-width: 400px;
+  }
 
+  .intro__content {
+    align-self: center;
+  }
+
+  .delivery-boy_bg {
+    @media (max-width: 839px) {
+      display: none;
+    }
+    @media (min-width: 840px) and (max-width: 1239px) {
+      svg {
+        width: 560px;
+      }
+    }
+  }
+}
+
+// How it works //
+.how-it-works {
+  padding: 120px 0 200px;
+  text-align: center;
+
+  svg {
+    min-height: 154px;
+  }
+
+  p {
+    max-width: 325px;
+  }
+
+  @media (max-width: 839px) {
+    h2 {
+      margin-bottom: 40px;
+    }
+    p {
+      margin: 10px auto;
+      padding: 14px;
+    }
+    svg {
+      margin-top: 20px;
+    }
+    .button {
+      margin-top: 80px;
+    }
+  }
+  @media (min-width: 840px) {
+    h2 {
+      margin-bottom: 100px;
+    }
+    p {
+      margin: 60px auto;
+    }
+  }
+}
+
+// Contact //
+.contact {
+  background: #EDF4FA;
+  padding: 40px 0 80px;
+
+  h2 {
+    margin-bottom: 60px;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-top: 0;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #333333;
+    line-height: 24px;
+    text-align: center;
+    max-width: 514px;;
+    margin: 0 auto 40px;
+  }
+
+  .contact__content {
+    max-width: 740px;
+    margin: 0 auto;
+  }
+
+  .contact__form {
+    color: #333333;
+    input {
+      background: #FFFFFF;
+      border: 1px solid #DDDDDD;
+      border-radius: 30px;
+      height: 48px;
+      width: 85%;
+    }
+
+    button {
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #FFFFFF;
+      background: #00A1E5;
+      border: none;
+      border-radius: 46px;
+      text-transform: uppercase;
+
+      margin-top: 40px;
+      height: 48px;
+      width: 86%;
+
+    }
+  }
+
+  .contact--detail {
+    margin-top: 5px;
+
+    a {
+      font-size: 16px;
+      color: #333333;
+      text-decoration: none;
+      margin-left: 16px;
+    }
+  }
+
+  @media (max-width: 839px) {
+    h2 {
+      margin-bottom: 40px;
+    }
+    .contact__form {
+      margin-bottom: 80px;
+    }
+  }
+  @media (min-width: 840px) {
+    h2 {
+      margin-bottom: 60px;
+    }
+    .contact__form {
+      border-right: 1px solid #D6DEEA;
+    }
+  }
+}
+
+footer {
+  background: #403068;
+  color: #FFFFFF;
+  text-align: center;
+
+  .footer__content {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 32px;
+    padding: 18px 0;
+  }
 }
 
