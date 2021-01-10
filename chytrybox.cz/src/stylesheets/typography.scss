@@ -1,0 +1,14 @@
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.action-button {
+  color: #FFFFFF;
+  background-color: #403068;
+  border-radius: 8px;
+  padding: 8px 40px;
+  text-decoration: none;
+  &:hover {
+    background-color: #140a3d;
+  }
+}

@@ -440,3 +440,20 @@ workflows:
           filters:
             branches:
               only: trunk
+      - test_site:
+          name: test-chytrybox-cz
+          site_name: chytrybox.cz
+          context: org-global
+          requires:
+            - build
+            - deploy-lighthouse-ci
+      - deploy_site:
+          name: deploy-chytrybox-cz
+          site_name: chytrybox.cz
+          context: org-global
+          requires:
+            - provision
+            - test-chytrybox-cz
+          filters:
+            branches:
+              only: trunk
