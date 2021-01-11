@@ -18,6 +18,13 @@ createCertificate("www.hookamonk.com");
 createCertificate("www.ingridapp.io");
 createCertificate("www.zive.tv");
 
+createGoogleMxRecords("chytrybox.cz");
+createTxtRecord(
+  "google-site-verification",
+  "chytrybox.cz",
+  "google-site-verification=KlEgvM1Rx9iOnZm53YPCzRsHkmltTuIEMV63L50gfus"
+);
+
 const websites = require("./websites.json");
 export const sites: any = {};
 for (const domain in websites) {
