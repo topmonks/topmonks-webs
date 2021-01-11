@@ -68,6 +68,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   &:hover {
+    cursor: pointer;
     background-color: #140a3d;
   }
 }
