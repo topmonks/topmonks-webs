@@ -2,6 +2,8 @@ import * as pulumi from "@pulumi/pulumi";
 import {
   registerAutoTags,
   createCertificate,
+  createGoogleMxRecords,
+  createTxtRecord,
   Website
 } from "@topmonks/pulumi-aws";
 import * as arx from "./arx.monks.cloud/infra";
@@ -13,7 +15,7 @@ registerAutoTags({
 });
 
 createCertificate("www.cbx.cz");
-createCertificate("www.chytrybox.cz");
+//createCertificate("www.chytrybox.cz");
 createCertificate("www.hookamonk.com");
 createCertificate("www.ingridapp.io");
 createCertificate("www.zive.tv");
