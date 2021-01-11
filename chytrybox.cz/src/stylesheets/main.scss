@@ -16,6 +16,12 @@ section {
 // Layout //
 body {
   margin: 0;
+
+  @media (min-width: 1440px) and (max-width: 1839px) {
+    background-image: url("/assets/img/blue-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 726px;
+  }
 }
 
 :root {
@@ -31,9 +37,21 @@ body {
 
 // Introduction //
 .intro {
-  p {
+  @media (min-width: 1840px) {
+    background-color: #00A1E5;
+  }
+  @media (max-width: 1439px) {
+    padding-top: 80px;
+    background-color: #00A1E5;
+    min-height: 500px;
+  }
+    p {
     color: #FFFFFF;
     max-width: 400px;
+  }
+
+  .button {
+    margin-top: 60px;
   }
 
   .intro__content {
