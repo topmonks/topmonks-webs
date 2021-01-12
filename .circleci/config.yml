@@ -60,6 +60,7 @@ jobs:
           cloud-url: s3://pulumi.tmcloud.io
       - node/install-packages:
           pkg-manager: yarn
+          cache-version: v2
       - run: yarn build
       - run: |
           mkdir results
@@ -85,6 +86,7 @@ jobs:
           cloud-url: s3://pulumi.tmcloud.io
       - node/install-packages:
           pkg-manager: yarn
+          cache-version: v2
           override-ci-command: yarn install --pure-lockfile --link-duplicates --production --no-progress --disable-pnp --no-default-rc
       - pulumi/update:
           stack: topmonks-webs
@@ -103,6 +105,7 @@ jobs:
           cloud-url: s3://pulumi.tmcloud.io
       - node/install-packages:
           pkg-manager: yarn
+          cache-version: v2
           override-ci-command: yarn install --pure-lockfile --link-duplicates --production --no-progress --disable-pnp --no-default-rc
       - pulumi/preview:
           stack: topmonks-webs
@@ -123,6 +126,7 @@ jobs:
           at: ~/topmonks-webs
       - node/install-packages:
           pkg-manager: yarn
+          cache-version: v2
       - run:
           name: Install self-signed cert for localhost
           command: |
