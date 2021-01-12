@@ -687,10 +687,12 @@
             class="contact__form mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
             <h3>Dejte nám kontakt a ozveme se</h3>
             <form>
-              <label name="name"><h4>Název firmy</h4></label>
-              <input for="Název firmy" type="text">
-              <label name="intro"><h4>E-mail / Telefon</h4></label>
-              <input for="Telefon" type="text">
+              <h4><label data-name="Name" for="company-name">Název firmy</label></h4>
+              <input datatype="Název firmy" id="company-name" type="text">
+
+              <h4><label data-name="Name" for="phone-name">E-mail / Telefon</label></h4>
+              <input datatype="Telefon" id="phone-name" type="text">
+
               <button type="submit" class="btn btn__submit">ODESLAT</button>
             </form>
           </div>
