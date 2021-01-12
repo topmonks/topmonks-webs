@@ -45,7 +45,8 @@ body {
     background-color: #00A1E5;
     min-height: 500px;
   }
-    p {
+
+  p {
     color: #FFFFFF;
     max-width: 400px;
   }
@@ -149,6 +150,7 @@ body {
 
   .contact__form {
     color: #333333;
+
     input {
       background: #FFFFFF;
       border: 1px solid #DDDDDD;
@@ -170,6 +172,7 @@ body {
       margin-top: 40px;
       height: 48px;
       width: 86%;
+
       &:hover {
         cursor: pointer;
         background: #140a3d;
@@ -207,16 +210,32 @@ body {
 }
 
 footer {
+  padding: 20px 0;
   background: #403068;
   color: #FFFFFF;
   text-align: center;
 
-  .footer__content {
+  .footer__content, .footer__list a {
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: normal;
     line-height: 32px;
     padding: 18px 0;
+  }
+
+  .footer__list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  a {
+    color: #FFFFFF;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
 
