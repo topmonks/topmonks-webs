@@ -225,17 +225,18 @@ footer {
   }
 
   .footer__list {
-    list-style: none;
     padding-left: 0;
     text-align: left;
-  }
+    ul {
+      list-style: none;
+    }
+    a {
+      color: #FFFFFF;
+      text-decoration: none;
 
-  a {
-    color: #FFFFFF;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
