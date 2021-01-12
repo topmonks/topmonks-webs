@@ -80,7 +80,7 @@
     "lint": "run-p lint:*",
     "test:ava": "ava | tap-xunit > ./results/ava.xml",
     "test:lighthouse": "lighthouse https://localhost:8000/ --config-path=.scripts/lighthouse/config.js --output json --output html --output-path ./.lighthouseci/lh.html --chrome-flags=\"--headless\" --no-enable-error-reporting --skip-audits themed-omnibox --skip-audits redirects-http --skip-audits load-fast-enough-for-pwa --skip-audits service-worker --skip-audits splash-screen --skip-audits webapp-install-banner --skip-audits works-offline",
-    "test:eslint": "# eslint ./ --format junit --output-file ./results/eslint.xml",
+    "test:eslint": "eslint ./ --format junit --output-file ./results/eslint.xml",
     "test:stylelint": "stylelint-config-prettier-check",
     "test:website-create": "yarn create-site test.topmonks.com",
     "test:website-remove": "yarn remove-site test.topmonks.com",
@@ -126,8 +126,5 @@
     "lodash": "npm:lodash@4.17.20",
     "html-minifier": "npm:html-minifier-terser@5.0.3",
     "source-map-resolve": "npm:source-map-resolve@0.6.0"
-  },
-  "installConfig": {
-    "pnp": true
   }
 }
