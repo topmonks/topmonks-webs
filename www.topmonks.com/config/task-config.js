@@ -16,42 +16,42 @@ module.exports = {
 
   javascripts: {
     entry: {
-      app: ["./index.js"]
-    }
+      app: ["./index.js"],
+    },
   },
   hot: {
     enabled: true,
     reload: true,
     quiet: true,
-    react: false
+    react: false,
   },
 
   stylesheets: {
     sass: {
-      importer: globImporter()
-    }
+      importer: globImporter(),
+    },
   },
 
   html: {
     dataFile: "../data/team.json",
     src: "html",
-    excludeFolders: ["layouts", "shared", "macros"]
+    excludeFolders: ["layouts", "shared", "macros"],
   },
 
   browserSync: {
     server: {
       // should match `dest` in
       // path-config.json
-      baseDir: pathConfig.dest
-    }
+      baseDir: pathConfig.dest,
+    },
   },
 
   production: {
-    rev: true
+    rev: true,
   },
 
   additionalTasks: {
-    initialize: function(gulpInjected, PATH_CONFIG, TASK_CONFIG) {
+    initialize: function (gulpInjected, PATH_CONFIG, TASK_CONFIG) {
       const rootPath = `${path.resolve(__dirname, "../src/data")}`;
       const teamSrc = `${rootPath}/team/**/*.md`;
 
@@ -62,11 +62,11 @@ module.exports = {
           .pipe(
             merge({
               fileName: "team.json",
-              edit: function(parsedJson) {
+              edit: function (parsedJson) {
                 let editedJson = { members: {} };
                 editedJson.members[parsedJson.id] = parsedJson;
                 return editedJson;
-              }
+              },
             })
           )
           .pipe(gulp.dest(rootPath)); // it doesn't work with injected gulp, idkw
@@ -97,10 +97,10 @@ module.exports = {
     },
     development: {
       prebuild: ["team-data"],
-      postbuild: ["team-data:watch", "team-json:watch"]
+      postbuild: ["team-data:watch", "team-json:watch"],
     },
     production: {
-      prebuild: ["team-data"]
-    }
-  }
+      prebuild: ["team-data"],
+    },
+  },
 };

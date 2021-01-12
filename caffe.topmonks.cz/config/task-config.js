@@ -13,37 +13,37 @@ module.exports = {
 
   javascripts: {
     entry: {
-      app: ["./index.js"]
-    }
+      app: ["./index.js"],
+    },
   },
 
   stylesheets: {
     sass: {
-      importer: globImporter()
-    }
+      importer: globImporter(),
+    },
   },
 
   html: {
     nunjucksRender: {
-      manageEnv: function(env) {
-        env.addFilter("split", function(str, seperator) {
+      manageEnv: function (env) {
+        env.addFilter("split", function (str, seperator) {
           return str.split(seperator);
         });
-      }
+      },
     },
-    dataFile: "../data/events.json"
+    dataFile: "../data/events.json",
   },
 
   browserSync: {
     server: {
       // should match `dest` in
       // path-config.json
-      baseDir: pathConfig.dest
-    }
+      baseDir: pathConfig.dest,
+    },
   },
 
   additionalTasks: {
-    initialize: function(gulp) {
+    initialize: function (gulp) {
       gulp.task("prepareJsonData", () => {
         gulp
           .src("../../caffe.topmonks.cz/src/data/events/**/*.md")
@@ -51,22 +51,22 @@ module.exports = {
           .pipe(
             merge({
               fileName: "events.json",
-              edit: function(parsedJson) {
+              edit: function (parsedJson) {
                 let editedJson = { events: {} };
                 editedJson.events[parsedJson.sessionNumber] = parsedJson;
                 return editedJson;
-              }
+              },
             })
           )
           .pipe(gulp.dest("../../caffe.topmonks.cz/src/data/"));
       });
     },
     development: {
-      prebuild: ["prepareJsonData"]
-    }
+      prebuild: ["prepareJsonData"],
+    },
   },
 
   production: {
-    rev: true
-  }
+    rev: true,
+  },
 };

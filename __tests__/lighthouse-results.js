@@ -1,7 +1,7 @@
 import test from "ava";
 import results from "../results/lh.report.json";
 
-const assertThreshold = ({ score }, threshold) => t =>
+const assertThreshold = ({ score }, threshold) => (t) =>
   t.true(
     score >= threshold,
     `Score should be at least ${100 * threshold}%. Actual: ${100 * score}%`
