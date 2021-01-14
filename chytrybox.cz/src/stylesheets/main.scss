@@ -220,27 +220,28 @@ footer {
   color: #FFFFFF;
   text-align: center;
 
-  .footer__content, .footer__list a {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 32px;
-    padding: 18px 0;
+  .footer__logo {
+    align-self: center;
+    margin: 0 auto;
   }
 
-  .footer__content {
-    align-self: center;
-  }
 
   .footer__list {
     padding-left: 0;
     text-align: left;
+
     ul {
       list-style: none;
     }
+
     a {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: normal;
       color: #FFFFFF;
       text-decoration: none;
+      line-height: 32px;
+      padding: 18px 0;
 
       &:hover {
         text-decoration: underline;
