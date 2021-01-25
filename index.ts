@@ -7,6 +7,7 @@ import {
   Website
 } from "@topmonks/pulumi-aws";
 import * as arx from "./arx.monks.cloud/infra";
+import * as monksroom from "./room.monks.cloud/infra";
 
 // Automatically inject tags.
 registerAutoTags({
@@ -54,3 +55,5 @@ export const arxDocumentsBucketUri = arx.documentsBucketUri;
 export const arxDocumentsBucketEndpoint = arx.documentsBucketEndpoint;
 export const arxDocumentsTable = arx.documentsTable;
 export const arxDocumentsApi = arx.documentsApi;
+
+export const monksroomApiHost = monksroom.apiHost;
