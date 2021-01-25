@@ -32,7 +32,7 @@ export async function init() {
       {
         path: "/now-playing",
         method: "GET",
-        eventHandler: new aws.lambda.Function("", {
+        eventHandler: new aws.lambda.Function("monksroom-now-playing", {
           publish: true,
           runtime: aws.lambda.Runtime.NodeJS12dX,
           role: defaultLambdaRole.arn,
