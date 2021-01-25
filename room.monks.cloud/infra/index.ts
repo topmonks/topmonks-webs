@@ -7,7 +7,7 @@ import * as path from "path";
 export async function init() {
   const builder = await lambdaBuilder.init();
   const buildAssets = (fileName: string) =>
-    builder.buildCodeAsset(path.join(__dirname, "src", "lambda", fileName));
+    builder.buildCodeAsset(path.join(__dirname, "..", "lambda", fileName));
 
   const defaultLambdaRole = new aws.iam.Role("monksroom-default-lambda-role", {
     assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal(
@@ -37,7 +37,7 @@ export async function init() {
           runtime: aws.lambda.Runtime.NodeJS12dX,
           role: defaultLambdaRole.arn,
           handler: "index.handler",
-          code: buildAssets("../lambdas/now-playing/index.js")
+          code: buildAssets("now-playing/index.js")
         })
       }
     ]
