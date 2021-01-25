@@ -1,4 +1,5 @@
 import * as cheerio from "cheerio";
+import fetch from "node-fetch";
 
 /** @typedef { import("@pulumi/awsx/apigateway").Request } APIGatewayProxyEvent */
 /** @typedef { import("@pulumi/awsx/apigateway").Response } APIGatewayProxyResult */
@@ -45,10 +46,14 @@ function withCORS(methods, origin = "*") {
  * @returns {Promise.<APIGatewayProxyResult>}
  */
 export async function handler(event) {
-  const $ = cheerio.load(
+  /** @type Response */
+  const resp = await fetch(
     "https://serato.com/playlists/Alessio_Busta/24-01-2021"
   );
-  const currentSong = $(".playlist-trackname:last-of-type")
+  const html = await resp.text();
+  const $ = cheerio.load(html);
+  const currentSong = $(".playlist-trackname")
+    .last()
     .text()
     .trim();
   return withCORS(["GET"])(response(currentSong));
