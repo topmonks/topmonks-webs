@@ -48,7 +48,7 @@ export async function init() {
     "hlidac-shopu-api",
     {
       gateway: api,
-      domainName: "api.room.monks.cloud",
+      domainName: "room-api.monks.cloud",
       basePath: "v1"
     },
     { dependsOn: [api] }
