@@ -3,6 +3,7 @@ import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
 import * as lambdaBuilder from "../../lambda-builder";
 import * as path from "path";
+import { CustomDomainDistribution } from "@topmonks/pulumi-aws/apigateway";
 
 export async function init() {
   const builder = await lambdaBuilder.init();
@@ -42,5 +43,21 @@ export async function init() {
       }
     ]
   });
-  return { api };
+
+  const apiDistribution = new CustomDomainDistribution(
+    "hlidac-shopu-api",
+    {
+      gateway: api,
+      domainName: "api.room.monks.cloud",
+      basePath: "v1"
+    },
+    { dependsOn: [api] }
+  );
+  return {
+    api,
+    apiDistribution,
+    stop() {
+      builder.stop();
+    }
+  };
 }

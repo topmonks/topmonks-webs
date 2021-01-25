@@ -52,10 +52,13 @@ for (const domain in redirects) {
 }
 
 const monksroomInfra = monksroom.init();
+monksroomInfra.then(x => x.stop());
 
 export const arxDocumentsBucketUri = arx.documentsBucketUri;
 export const arxDocumentsBucketEndpoint = arx.documentsBucketEndpoint;
 export const arxDocumentsTable = arx.documentsTable;
 export const arxDocumentsApi = arx.documentsApi;
 
-export const monksroomApiHost = monksroomInfra.then(({ api }) => api.url);
+export const monksroomApiHost = monksroomInfra.then(
+  ({ apiDistribution }) => apiDistribution.url
+);
