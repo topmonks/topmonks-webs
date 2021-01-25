@@ -1,3 +1,5 @@
+import * as cheerio from "cheerio";
+
 /** @typedef { import("@pulumi/awsx/apigateway").Request } APIGatewayProxyEvent */
 /** @typedef { import("@pulumi/awsx/apigateway").Response } APIGatewayProxyResult */
 
@@ -43,5 +45,11 @@ function withCORS(methods, origin = "*") {
  * @returns {Promise.<APIGatewayProxyResult>}
  */
 export async function handler(event) {
-  return withCORS(["GET"])(response("Nutin"));
+  const $ = cheerio.load(
+    "https://serato.com/playlists/Alessio_Busta/24-01-2021"
+  );
+  const currentSong = $(".playlist-trackname:last-of-type")
+    .text()
+    .trim();
+  return withCORS(["GET"])(response(currentSong));
 }
