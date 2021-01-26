@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Monksroom - Now Playing</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <style>
+      /*@font-face {*/
+      /*  font-family: "AvantGarde";*/
+      /*  src: url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.eot');*/
+      /*  src: url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.eot?#iefix') format("embedded-opentype"),*/
+      /*    url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.woff2') format('woff2'),*/
+      /*    url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.woff') format('woff');*/
+      /*  font-weight: 400;*/
+      /*  font-style: normal*/
+      /*}*/
+
+      /*@font-face {*/
+      /*  font-family: "AvantGarde";*/
+      /*  src: url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.eot');*/
+      /*  src: url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.eot?#iefix') format("embedded-opentype"),*/
+      /*    url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.woff2') format('woff2'),*/
+      /*    url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.woff') format('woff');*/
+      /*  font-weight: 700;*/
+      /*  font-style: normal*/
+      /*}*/
+
+      body {
+        color: var(--color, #fff);
+        background-color: var(--background-color, #000);
+      }
+
+      h1 {
+        font-family: var(--font-family, "Helvetica Neue", sans-serif);
+        font-size: var(--font-size, 36px);
+        font-weight: var(--font-weight, 700);
+        margin: 0 0 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="now-playing"></h1>
+    <script type="module">
+      const nowPlaying = document.getElementById("now-playing");
+      const params = new URLSearchParams(location.search);
+
+      function setStyles(params) {
+        document.documentElement.style.setProperty(
+          "--color",
+          params.get("color")
+        );
+        document.documentElement.style.setProperty(
+          "--background-color",
+          params.get("background-color")
+        );
+        document.documentElement.style.setProperty(
+          "--font-family",
+          params.get("font-family")
+        );
+        document.documentElement.style.setProperty(
+          "--font-size",
+          params.get("font-size")
+        );
+        document.documentElement.style.setProperty(
+          "--font-weight",
+          params.get("font-weight")
+        );
+        if (params.has("gfonts")) {
+          const link = document.createElement("link");
+          link.href = `https://fonts.googleapis.com/css2?${new URLSearchParams({
+            family: params.get("gfonts"),
+            display: "swap"
+          })}`;
+          link.rel = "stylesheet";
+          document.head.appendChild(link);
+        }
+      }
+
+      async function update() {
+        const resp = await fetch("https://room-api.monks.cloud/v1/now-playing");
+        const trackName = await resp.text();
+        if (trackName) nowPlaying.innerText = trackName;
+      }
+
+      setStyles(params);
+      update();
+      setInterval(() => update(), 2 * 60 * 1000);
+    </script>
+  </body>
+</html>
