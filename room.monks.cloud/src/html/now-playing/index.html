@@ -6,25 +6,27 @@
     <title>Monksroom - Now Playing</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <style>
-      /*@font-face {*/
-      /*  font-family: "AvantGarde";*/
-      /*  src: url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.eot');*/
-      /*  src: url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.eot?#iefix') format("embedded-opentype"),*/
-      /*    url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.woff2') format('woff2'),*/
-      /*    url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.woff') format('woff');*/
-      /*  font-weight: 400;*/
-      /*  font-style: normal*/
-      /*}*/
+      @font-face {
+        font-family: "AvantGarde";
+        src: url("/assets/css/AvantGardeDefectedRegular.eot");
+        src: url("/assets/css/AvantGardeDefectedRegular.eot?#iefix")
+            format("embedded-opentype"),
+          url("/assets/css/AvantGardeDefectedRegular.woff2") format("woff2"),
+          url("/assets/css/AvantGardeDefectedRegular.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
 
-      /*@font-face {*/
-      /*  font-family: "AvantGarde";*/
-      /*  src: url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.eot');*/
-      /*  src: url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.eot?#iefix') format("embedded-opentype"),*/
-      /*    url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.woff2') format('woff2'),*/
-      /*    url('https://defected.com/frontend/Defected/default/en_GB/fonts/AvantGarde/AvantGardeDefectedRegular.woff') format('woff');*/
-      /*  font-weight: 700;*/
-      /*  font-style: normal*/
-      /*}*/
+      @font-face {
+        font-family: "AvantGarde";
+        src: url("/assets/css/AvantGardeDefectedRegular.eot");
+        src: url("/assets/css/AvantGardeDefectedRegular.eot?#iefix")
+            format("embedded-opentype"),
+          url("/assets/css/AvantGardeDefectedRegular.woff2") format("woff2"),
+          url("/assets/css/AvantGardeDefectedRegular.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+      }
 
       body {
         color: var(--color, #fff);
@@ -32,7 +34,12 @@
       }
 
       h1 {
-        font-family: var(--font-family, "Helvetica Neue", sans-serif);
+        font-family: var(
+          --font-family,
+          "AvantGarde",
+          "Helvetica Neue",
+          sans-serif
+        );
         font-size: var(--font-size, 36px);
         font-weight: var(--font-weight, 700);
         margin: 0 0 1em;

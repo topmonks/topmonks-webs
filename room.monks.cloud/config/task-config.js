@@ -4,7 +4,7 @@ const pathConfig = require("./path-config.json");
 const config = createSharedTaskConfig(__dirname, {
   images: false,
   cloudinary: false,
-  fonts: false,
+  fonts: true,
   static: true,
   svgSprite: false,
   javascripts: false,
