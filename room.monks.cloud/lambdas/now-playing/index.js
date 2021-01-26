@@ -5,7 +5,7 @@ import fetch from "node-fetch";
 /** @typedef { import("@pulumi/awsx/apigateway").Response } APIGatewayProxyResult */
 
 /**
- * @param {Record<string, any>} body
+ * @param {Record<string, any> | string} body
  * @param {Record<string, boolean | number | string>} [headers]
  * @returns {APIGatewayProxyResult}
  */
@@ -14,6 +14,17 @@ function response(body, headers) {
     statusCode: 200,
     body: typeof body === "string" ? body : JSON.stringify(body),
     headers
+  };
+}
+
+/**
+ * @param {Record<string, any>} body
+ * @returns {APIGatewayProxyResult}
+ */
+export function notFound(body = { error: "Data not found" }) {
+  return {
+    statusCode: 404,
+    body: JSON.stringify(body)
   };
 }
 
@@ -47,12 +58,14 @@ function withCORS(methods, origin = "*") {
  */
 export async function handler(event) {
   /** @type Response */
-  const resp = await fetch(
-    "https://serato.com/playlists/Alessio_Busta/24-01-2021"
-  );
+  const resp = await fetch("https://serato.com/playlists/Alessio_Busta/live");
   const html = await resp.text();
   const $ = cheerio.load(html);
-  const currentSong = $(".playlist-trackname")
+  let $playlist = $(".playlist-trackname");
+  if (!$playlist.length) {
+    return withCORS(["GET"])(notFound("Not playing"));
+  }
+  const currentSong = $playlist
     .last()
     .text()
     .trim();
