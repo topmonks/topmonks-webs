@@ -46,26 +46,23 @@
       const params = new URLSearchParams(location.search);
 
       function setStyles(params) {
-        document.documentElement.style.setProperty(
-          "--color",
-          params.get("color")
-        );
-        document.documentElement.style.setProperty(
-          "--background-color",
-          params.get("background-color")
-        );
-        document.documentElement.style.setProperty(
-          "--font-family",
-          params.get("font-family")
-        );
-        document.documentElement.style.setProperty(
-          "--font-size",
-          params.get("font-size")
-        );
-        document.documentElement.style.setProperty(
-          "--font-weight",
-          params.get("font-weight")
-        );
+        const setCssProperty = name =>
+          document.documentElement.style.setProperty(
+            `--${name}`,
+            params.get(name)
+          );
+
+        const allowedProperties = [
+          "color",
+          "background-color",
+          "font-family",
+          "font-size",
+          "font-weight"
+        ];
+        for (const prop of allowedProperties) {
+          if (params.has(prop)) setCssProperty(prop);
+        }
+
         if (params.has("gfonts")) {
           const link = document.createElement("link");
           link.href = `https://fonts.googleapis.com/css2?${new URLSearchParams({
