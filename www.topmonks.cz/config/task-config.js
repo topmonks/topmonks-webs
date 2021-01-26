@@ -13,34 +13,34 @@ module.exports = {
 
   javascripts: {
     entry: {
-      app: ["./index.js"]
-    }
+      app: ["./index.js"],
+    },
   },
 
   stylesheets: {
     sass: {
-      importer: globImporter()
-    }
+      importer: globImporter(),
+    },
   },
 
   html: {
-    dataFile: "../data/team.json"
+    dataFile: "../data/team.json",
   },
 
   browserSync: {
     server: {
       // should match `dest` in
       // path-config.json
-      baseDir: pathConfig.dest
-    }
+      baseDir: pathConfig.dest,
+    },
   },
 
   production: {
-    rev: true
+    rev: true,
   },
 
   additionalTasks: {
-    initialize: function(gulp) {
+    initialize: function (gulp) {
       gulp.task("prepareTeamData", () => {
         gulp
           .src("../../www.topmonks.com/src/data/team/**/*.md")
@@ -48,18 +48,18 @@ module.exports = {
           .pipe(
             merge({
               fileName: "team.json",
-              edit: function(parsedJson) {
+              edit: function (parsedJson) {
                 let editedJson = { members: {} };
                 editedJson.members[parsedJson.id] = parsedJson;
                 return editedJson;
-              }
+              },
             })
           )
           .pipe(gulp.dest("../../www.topmonks.cz/src/data/"));
       });
     },
     development: {
-      prebuild: ["prepareTeamData"]
-    }
-  }
+      prebuild: ["prepareTeamData"],
+    },
+  },
 };
