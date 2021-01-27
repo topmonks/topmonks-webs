@@ -10,7 +10,7 @@ const path = require("path");
  * @param {*} config your custom config
  * @returns {Object} new config object
  */
-const withShared = function(dirname, config) {
+const withShared = function (dirname, config) {
   return {
     ...config,
     stylesheets: {

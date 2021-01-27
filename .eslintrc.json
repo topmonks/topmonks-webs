@@ -8,8 +8,7 @@
     "allowImportExportEverywhere": true,
     "ecmaVersion": 2018,
     "ecmaFeatures": {
-      "spread": true,
-      "modules": false
+      "spread": true
     },
     "sourceType": "module"
   },

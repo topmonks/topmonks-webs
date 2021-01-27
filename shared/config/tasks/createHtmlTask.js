@@ -52,7 +52,7 @@ module.exports = (__GULP__, PATH_CONFIG, TASK_CONFIG) => () => {
 
   const dataFunction =
     TASK_CONFIG.html.dataFunction ||
-    function(file) {
+    function (file) {
       const dataPath = projectPath(
         PATH_CONFIG.src,
         PATH_CONFIG.html.src,
