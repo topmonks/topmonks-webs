@@ -1263,7 +1263,6 @@
 
 "@topmonks/blendid@git://github.com/topmonks/blendid.git":
   version "6.0.0"
-  uid "6ad872923e72dd86f85fee7adb86b929e5f8767a"
   resolved "git://github.com/topmonks/blendid.git#6ad872923e72dd86f85fee7adb86b929e5f8767a"
   dependencies:
     "@rollup/plugin-alias" "^3.1.0"
@@ -4157,9 +4156,9 @@ es6-weak-map@^2.0.1, es6-weak-map@^2.0.3:
     es6-symbol "^3.1.1"
 
 esbuild@^0.8.34:
-  version "0.8.34"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.34.tgz#16b4ac58f74c821d2c5a8c2f0585ca96a38ab4e6"
-  integrity sha512-tnr0V1ooakYr1aRLXQLzCn2GVG1kBTW3FWpRyC+NgrR3ntsouVpJOlTOV0BS4YLATx3/c+x3h/uBq9lWJlUAtQ==
+  version "0.8.36"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.36.tgz#f5b7c61473721c7d53ffe7c88708e25f3b6182f3"
+  integrity sha512-kcUQB61Tf8rLJ3mOwP2ruWi/iFufaQcEs4No+JA6e7W2kMOtFExOsbyeFpEF6zNacwk2RF5fYUz5jfZwgn/SJg==
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -6982,9 +6981,9 @@ lighthouse@6.4.1:
     yargs-parser "^18.1.3"
 
 lighthouse@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-7.0.0.tgz#3b070f129269889e853fcab629ded9418e417112"
-  integrity sha512-HxSbbg1WUZFsdUm0U6MCffr6J6marWW8kTlsAGaGh9oE7SFmxHh7eslK5u2sz70QXQZcZf8bfWRIkSx94dFbQA==
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-7.0.1.tgz#137868a92f0b43c5c3de242f01fbdc7ace756f86"
+  integrity sha512-OMCa/TmhrIXW5o9AtUuC3bUhiTABv53xD9bNuolUgdSwpAWHG6e5Iy/hXcA84WFB/7Zni0uExwgDDWx6KE9Ngw==
   dependencies:
     axe-core "4.1.1"
     chrome-launcher "^0.13.4"
@@ -7528,7 +7527,12 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-marked@^1.2.6, marked@^1.2.7:
+marked@^1.2.6:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-1.2.8.tgz#5008ece15cfa43e653e85845f3525af4beb6bdd4"
+  integrity sha512-lzmFjGnzWHkmbk85q/ILZjFoHHJIQGF+SxGEfIdGk/XhiTPhqGs37gbru6Kkd48diJnEyYwnG67nru0Z2gQtuQ==
+
+marked@^1.2.7:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/marked/-/marked-1.2.7.tgz#6e14b595581d2319cdcf033a24caaf41455a01fb"
   integrity sha512-No11hFYcXr/zkBvL6qFmAp1z6BKY3zqLMHny/JN/ey+al7qwCM2+CMBL9BOgqMxZU36fz4cCWfn2poWIf7QRXA==
