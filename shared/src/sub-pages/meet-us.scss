@@ -16,7 +16,7 @@
 
   .links a {
     font-size: 18px;
-    color: #FE664B;
+    color: #fe664b;
   }
 
   &.box img {
@@ -49,7 +49,7 @@
     filter: saturate(0);
 
     &:hover {
-      filter: saturate(1.0);
+      filter: saturate(1);
     }
   }
 

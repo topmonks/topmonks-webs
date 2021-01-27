@@ -1,130 +1,132 @@
 // Styling for the features section
 section.features {
-
-    .feature-text-right {
-        text-align: right;
-        @media (max-width: 768px) {
-            text-align: center;
-        }
+  .feature-text-right {
+    text-align: right;
+    @media (max-width: 768px) {
+      text-align: center;
     }
+  }
 
-    .feature-text-left {
-        text-align: left;
-        @media (max-width: 768px) {
-            text-align: center;
-        }
+  .feature-text-left {
+    text-align: left;
+    @media (max-width: 768px) {
+      text-align: center;
     }
+  }
 
+  padding-top: 0px;
+
+  .img-shadow {
+    -webkit-box-shadow: 10px 10px 66px -16px rgba(112, 112, 112, 1);
+    -moz-box-shadow: 10px 10px 66px -16px rgba(112, 112, 112, 1);
+    box-shadow: 10px 10px 66px -16px rgba(112, 112, 112, 1);
+  }
+
+  .row-features {
+    text-align: center;
     padding-top: 0px;
+  }
 
-    .img-shadow {
-        -webkit-box-shadow: 10px 10px 66px -16px rgba(112,112,112,1);
-        -moz-box-shadow: 10px 10px 66px -16px rgba(112,112,112,1);
-        box-shadow: 10px 10px 66px -16px rgba(112,112,112,1);
-    }
+  .features-item {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 
-    .row-features {
-        text-align: center;
-        padding-top: 0px;
-    }
-
-    .features-item {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-
-    background-color: $gray-lighter;
+  background-color: $gray-lighter;
+  h2 {
+    font-size: 50px;
+  }
+  .section-heading {
+    margin-top: 100px;
     h2 {
-        font-size: 50px;
+      margin-top: 0;
     }
-    .section-heading {
-        margin-top: 100px;
-        h2 {
-            margin-top: 0;
-        }
-        p {
-            margin-bottom: 0;
-        }
+    p {
+      margin-bottom: 0;
     }
-    .device-container,
-    .feature-item {
-        max-width: 325px;
-        margin: 0 auto;
+  }
+  .device-container,
+  .feature-item {
+    max-width: 325px;
+    margin: 0 auto;
+  }
+  .device-container {
+    margin-bottom: 100px;
+    @media (min-width: 992px) {
+      margin-bottom: 0;
     }
-    .device-container {
-        margin-bottom: 100px;
-        @media(min-width: 992px) {
-            margin-bottom: 0;
-        }
+  }
+  .feature-item {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    h3 {
+      font-size: 30px;
     }
-    .feature-item {
-        padding-top: 50px;
-        padding-bottom: 50px;
-        text-align: center;
-        h3 {
-            font-size: 30px;
-        }
-        i {
-            font-size: 80px;
-            display: block;
-            margin-bottom: 15px;
-            background: -webkit-linear-gradient(to left, $theme-secondary, $theme-tertiary);
-            background: linear-gradient(to left, $theme-secondary, $theme-tertiary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    i {
+      font-size: 80px;
+      display: block;
+      margin-bottom: 15px;
+      background: -webkit-linear-gradient(
+        to left,
+        $theme-secondary,
+        $theme-tertiary
+      );
+      background: linear-gradient(to left, $theme-secondary, $theme-tertiary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+  }
 }
 
 #adaptive li {
-    list-style-type: none;
-    margin-bottom: 44px;
+  list-style-type: none;
+  margin-bottom: 44px;
 
-    div {
-        color: black;
-        cursor: default;
-    }
-    .number {
-        display: inline-block;
-        float: left;
-        margin-right: 12px;
-        text-align: center;
-        font-size: 32px;
-        line-height: 44px;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        color: white;
-        background-color: none;
-        position: relative;
-        top: - 10px;
-    }
-    .highlight {
-        font-weight: bold;
-        color: white;
-    }
-
+  div {
+    color: black;
+    cursor: default;
+  }
+  .number {
+    display: inline-block;
+    float: left;
+    margin-right: 12px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: white;
+    background-color: none;
+    position: relative;
+    top: -10px;
+  }
+  .highlight {
+    font-weight: bold;
+    color: white;
+  }
 }
 
 #adaptive li .active {
-    color: white;
-    font-weight: bold;
-    cursor: default;
-    .number {
-        display: inline-block;
-        float: left;
-        margin-right: 12px;
-        text-align: center;
-        font-size: 32px;
-        line-height: 44px;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        color: $theme-secondary;
-        background-color: white;
-    }
+  color: white;
+  font-weight: bold;
+  cursor: default;
+  .number {
+    display: inline-block;
+    float: left;
+    margin-right: 12px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: $theme-secondary;
+    background-color: white;
+  }
 }
 
 #adaptive li #goToSlide:hover {
-    color: white;
+  color: white;
 }

@@ -11,12 +11,11 @@
 //* Section: Team *//
 
 #team:target .show-more,
-.show-less
-{
+.show-less {
   display: none;
 }
 #team:target {
-  .show-less{
+  .show-less {
     display: inline-block;
   }
   .tm-team__member {

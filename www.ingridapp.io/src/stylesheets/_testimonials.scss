@@ -1,115 +1,109 @@
-
 section.testimonials {
-    padding-bottom: 100px;
+  padding-bottom: 100px;
 
-    h2 {
-        font-size: 50px;
-    }
-
+  h2 {
+    font-size: 50px;
+  }
 }
 
 .t-photo {
-    padding-bottom: 16px;
-    padding-top: 16px;
+  padding-bottom: 16px;
+  padding-top: 16px;
 }
 
 .t-person {
-    margin-top: 0px;
-    text-align: center;
-    @media (max-width: 768px) {
-        text-align: left;
-    }
+  margin-top: 0px;
+  text-align: center;
+  @media (max-width: 768px) {
+    text-align: left;
+  }
 }
 
 .t-logo {
-    width: 100%;
-    display: flex;
-    @media (max-width: 768px) {
-        display: block;
-        text-align: center;
-    }
+  width: 100%;
+  display: flex;
+  @media (max-width: 768px) {
+    display: block;
+    text-align: center;
+  }
 }
 
 .t-company {
-    line-height: 80px;
-    padding-left: 32px;
-    @media (max-width: 768px) {
-        line-height: 50px;
-        padding-left: 0px;
-        text-align: center;
-    }
+  line-height: 80px;
+  padding-left: 32px;
+  @media (max-width: 768px) {
+    line-height: 50px;
+    padding-left: 0px;
+    text-align: center;
+  }
 }
 
 .tname {
+  font-size: 0.8em;
+  .t-desc {
     font-size: 0.8em;
-    .t-desc {
-        font-size: 0.8em;
-    }
+  }
 }
 
 .t-gsr {
-    h4 {
-        color: $theme-secondary;
-    }
-    p {
-        font-size: 0.8em;
-    }
+  h4 {
+    color: $theme-secondary;
+  }
+  p {
+    font-size: 0.8em;
+  }
 }
 
 .t-content {
-
-    p {
-        font-size: 0.8em;
-    }
+  p {
+    font-size: 0.8em;
+  }
 }
 
 .t-left {
-    border-right: solid 1px #dddddd;
-    margin-bottom: 16px;
-    @media (max-width: 768px) {
-        border: none;
-    }
+  border-right: solid 1px #dddddd;
+  margin-bottom: 16px;
+  @media (max-width: 768px) {
+    border: none;
+  }
 }
 
 .t-right {
-    padding-left: 32px;
-    @media (max-width: 768px) {
-        padding-left: 15px;
-    }
+  padding-left: 32px;
+  @media (max-width: 768px) {
+    padding-left: 15px;
+  }
 }
 
 .t-right-header {
-    h4 {
-        color: $theme-secondary;
-        @media (max-width: 768px) {
-            text-align: left;
-        }
+  h4 {
+    color: $theme-secondary;
+    @media (max-width: 768px) {
+      text-align: left;
     }
+  }
 }
 
 .t-download {
-    background-color: $gray-lighter;
-    width: 100%;
-    border-radius: 100px;
-    p {
-        float: left;
-    }
+  background-color: $gray-lighter;
+  width: 100%;
+  border-radius: 100px;
+  p {
+    float: left;
+  }
 }
 
 .t-btn-download {
-    background-color: $theme-tertiary;
-    margin: 8px;
-    padding: 8px 24px;
-    border-radius: 100px;
-    float: right;
-    color: white;
-    text-align: center;
-    line-height: 0.8em;
-    .t-btn-second {
-        font-size: 0.6em;
-        line-height: 0.6em;
-    }
-
-
-
+  background-color: $theme-tertiary;
+  margin: 8px;
+  padding: 8px 24px;
+  border-radius: 100px;
+  float: right;
+  color: white;
+  text-align: center;
+  line-height: 0.8em;
+  .t-btn-second {
+    font-size: 0.6em;
+    line-height: 0.6em;
+  }
 }

@@ -1,17 +1,20 @@
 main {
   @media (min-width: 1301px) and (max-width: 1800px) {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1551973762/topmonks.com/jobs/img_side.png") center 6.5% no-repeat;
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1551973762/topmonks.com/jobs/img_side.png")
+      center 6.5% no-repeat;
     background-size: 440px 571px;
     background-position-x: 0;
   }
   @media (min-width: 1024px) and (max-width: 1300px) {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1551973762/topmonks.com/jobs/img_side.png") center 6.5% no-repeat;
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1551973762/topmonks.com/jobs/img_side.png")
+      center 6.5% no-repeat;
     background-size: 336px 467px;
     background-position-x: 0;
   }
 }
 
-p, a {
+p,
+a {
   line-height: 26px;
 }
 
@@ -21,13 +24,14 @@ p, a {
   }
 
   p {
-    color: #9B9B9B;
+    color: #9b9b9b;
     line-height: 35px;
   }
 }
 
 .page_sub-title_left {
-  h2, p {
+  h2,
+  p {
     text-align: left;
   }
 }
@@ -55,7 +59,7 @@ p, a {
 
     span.location {
       float: right;
-      color: #9B9B9B;
+      color: #9b9b9b;
     }
   }
 
@@ -72,7 +76,7 @@ p, a {
     @media screen and (min-width: 840px) {
       padding: 18px 40px 38px;
     }
-    @media (min-width: 1024px) and (max-width: 1840px){
+    @media (min-width: 1024px) and (max-width: 1840px) {
       min-height: 400px;
     }
   }
@@ -117,9 +121,9 @@ p, a {
   border: none;
 
   hr {
-    background-color: #F3F3F3;
+    background-color: #f3f3f3;
     @media (max-width: 840px) {
-      background-color: #F3F3F3;
+      background-color: #f3f3f3;
     }
   }
 }
@@ -128,9 +132,9 @@ p, a {
   border: none;
 
   hr {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     @media (max-width: 840px) {
-      background-color: #F3F3F3;
+      background-color: #f3f3f3;
     }
   }
 }
@@ -165,7 +169,9 @@ p, a {
 //* Section: TopMonks Jobs Info *//
 
 .tm-jobs-info {
-  h2, h3, p {
+  h2,
+  h3,
+  p {
     text-align: left;
   }
 
@@ -218,7 +224,8 @@ p, a {
 
 @media screen and (min-width: 1030px) {
   body {
-    background: url("https://res.cloudinary.com/topmonks/image/upload/v1548594687/topmonks.com/rounded_bgnd.png") center 46.5% no-repeat;
+    background: url("https://res.cloudinary.com/topmonks/image/upload/v1548594687/topmonks.com/rounded_bgnd.png")
+      center 46.5% no-repeat;
     background-size: 100%;
   }
   #gallery {
@@ -233,7 +240,6 @@ p, a {
     }
   }
 }
-
 
 @media (max-width: 840px) {
   .mdc-layout-grid {
