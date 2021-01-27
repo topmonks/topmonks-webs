@@ -40,6 +40,17 @@ export async function init() {
           handler: "index.handler",
           code: buildAssets("now-playing/index.js")
         })
+      },
+      {
+        path: "/beatport",
+        method: "GET",
+        eventHandler: new aws.lambda.Function("monksroom-beatport", {
+          publish: true,
+          runtime: aws.lambda.Runtime.NodeJS12dX,
+          role: defaultLambdaRole.arn,
+          handler: "index.handler",
+          code: buildAssets("beatport/index.js")
+        })
       }
     ]
   });
