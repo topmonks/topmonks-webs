@@ -49,7 +49,8 @@ export async function init() {
           runtime: aws.lambda.Runtime.NodeJS12dX,
           role: defaultLambdaRole.arn,
           handler: "index.handler",
-          code: buildAssets("beatport/index.js")
+          code: buildAssets("beatport/index.js"),
+          timeout: 20
         })
       }
     ]
