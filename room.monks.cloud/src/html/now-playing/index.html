@@ -89,7 +89,9 @@
 
       setStyles(params);
       update();
-      setInterval(() => update(), 2 * 60 * 1000);
+      
+      const updateTime = params.get("refresh") || 120;
+      setInterval(() => update(), updateTime * 1000);
     </script>
   </body>
 </html>
