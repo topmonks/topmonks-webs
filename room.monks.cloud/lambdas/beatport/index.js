@@ -37,10 +37,16 @@ export async function handler(event) {
   const $track = $tracks.first();
   return withCORS(["GET"])(
     response({
-      link: `https://www.beatport.com${$track
+      "@context": "https://schema.org",
+      "@type": "MusicRecording",
+      byArtist: $track.find(".buk-track-artists").text().trim(),
+      name: $track.find(".buk-track-primary-title").text().trim(),
+      version: $track.find(".buk-track-remixed").text().trim(),
+      genre: $track.find(".buk-track-genre").text().trim(),
+      url: `https://www.beatport.com${$track
         .find(".buk-track-title a")
         .attr("href")}`,
-      img: $track.find("img").attr("src")
+      image: $track.find("img").attr("src")
     })
   );
 }
