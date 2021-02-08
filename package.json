@@ -7,7 +7,7 @@
   "author": "TopMonks",
   "license": "MIT",
   "dependencies": {
-    "@material/layout-grid": "^9.0.0",
+    "@material/layout-grid": "^10.0.0",
     "@material/top-app-bar": "^10.0.0",
     "@pulumi/aws": "^3.27.0",
     "@pulumi/awsx": "^0.24.0",
