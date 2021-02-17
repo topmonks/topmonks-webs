@@ -9,7 +9,7 @@
   "dependencies": {
     "@material/layout-grid": "^10.0.0",
     "@material/top-app-bar": "^10.0.0",
-    "@pulumi/aws": "^3.29.0",
+    "@pulumi/aws": "^3.29.1",
     "@pulumi/awsx": "^0.25.0",
     "@pulumi/pulumi": "^2.20.0",
     "@topmonks/pulumi-aws": "^1.6.1",
