@@ -51,7 +51,7 @@
     "lws-basic-auth": "^2.0.0",
     "lws-blacklist": "^3.0.0",
     "lws-body-parser": "^2.0.0",
-    "lws-compress": "^2.0.0",
+    "lws-compress": "^3.0.0",
     "lws-conditional-get": "^2.0.0",
     "lws-cors": "^3.0.0",
     "lws-index": "^2.0.0",
