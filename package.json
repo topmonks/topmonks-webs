@@ -11,7 +11,7 @@
     "@material/top-app-bar": "^10.0.0",
     "@pulumi/aws": "^3.30.0",
     "@pulumi/awsx": "^0.25.0",
-    "@pulumi/pulumi": "^2.21.1",
+    "@pulumi/pulumi": "^2.21.2",
     "@topmonks/pulumi-aws": "^1.6.1",
     "@types/node": "^14.14.31",
     "cheerio": "^1.0.0-rc.5",
