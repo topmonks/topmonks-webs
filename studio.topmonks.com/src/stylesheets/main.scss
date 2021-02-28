@@ -210,6 +210,9 @@ button {
   }
   h2 {
     padding-top: 1em;
+    @media (min-width: 1024px) {
+      margin-bottom: 0;
+    }
   }
 }
 
