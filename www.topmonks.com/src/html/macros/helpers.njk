@@ -1,7 +1,7 @@
-{% macro boolAttr(name, value) %}
-  {% if value %}{{ name }}{% endif %}
-{% endmacro %}
-
+{% macro sprite(id, altText, viewBox, classes, ariaHidden) %}
+{% set viewBox = viewBox or "0 0 1 1"%}
+<span class='sprite sprite--{{id}} {{classes}}' {% if ariaHidden %}aria-hidden='{{ ariaHidden }}'{% endif %}>
+  
 {% macro sprite(id, altText, viewBox, classes) %}
 {% set viewBox = viewBox or "0 0 1 1"%}
 <span class='sprite sprite--{{id}} {{classes}}'>
