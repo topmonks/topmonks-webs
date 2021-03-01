@@ -1,5 +1,8 @@
-{% macro sprite(id, altText, viewBox, classes) %}
+{% macro sprite(id, altText, viewBox, classes, ariaHidden) %}
 {% set viewBox = viewBox or "0 0 1 1"%}
+<span class='sprite sprite--{{id}} {{classes}}' {% if ariaHidden %}aria-hidden='{{ ariaHidden }}'{% endif %}>
+
+  {% set viewBox = viewBox or "0 0 1 1"%}
 <span class='sprite sprite--{{id}} {{classes}}'>
   <svg viewBox="{{viewBox}}">
     <title>{{altText}}</title>
