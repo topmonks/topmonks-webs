@@ -4,7 +4,9 @@ import {
   createCertificate,
   createGoogleMxRecords,
   createTxtRecord,
-  Website
+  Website,
+  AssetsCachingLambda,
+  SecurityHeadersLambda
 } from "@topmonks/pulumi-aws";
 import * as arx from "./arx.monks.cloud/infra";
 import * as monksroom from "./room.monks.cloud/infra";
@@ -28,10 +30,27 @@ createTxtRecord(
   "google-site-verification=KlEgvM1Rx9iOnZm53YPCzRsHkmltTuIEMV63L50gfus"
 );
 
+const assetsCachingLambda = AssetsCachingLambda.create("topmonks-webs-caching");
+const securityHeadersLambda = SecurityHeadersLambda.create(
+  "topmonks-webs-security"
+);
+
+export const assetsCachingLambdaArn = assetsCachingLambda.arn;
+export const securityHeadersLambdaArn = securityHeadersLambda.arn;
+
 const websites = require("./websites.json");
 export const sites: any = {};
 for (const domain in websites) {
-  const website = Website.create(domain, websites[domain]);
+  const website = Website.create(
+    domain,
+    Object.assign(
+      {
+        assetsCachingLambdaArn: assetsCachingLambda.arn,
+        securityHeadersLambdaArn: securityHeadersLambda.arn
+      },
+      websites[domain]
+    )
+  );
   sites[domain] = {
     url: website.url,
     s3BucketUri: website.s3BucketUri,
