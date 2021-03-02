@@ -46,6 +46,7 @@
     "lhci": {
       "assert": {
         "assertions": {
+          "preload-lcp-image": "warn",
           "errors-in-console": "warn",
           "offscreen-images": "warn"
         }
