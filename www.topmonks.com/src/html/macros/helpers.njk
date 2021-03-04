@@ -25,12 +25,12 @@
 {% macro avatar(member, imageSize) -%}
 {% set fullName = member.name + ' ' + member.surname %}
 {% set fallback = '/assets/img/monk_logo.png' %}
-<img alt="[photo] {{fullName}}" loading="lazy"
+<img alt="[photo] {{fullName}}" loading="lazy" aria-hidden="true"
      src="https://res.cloudinary.com/topmonks/image/fetch/w_{{imageSize}},dpr_auto,f_auto/https://insight.topmonks.com/avatar/{{member.id}}"
      srcset="https://res.cloudinary.com/topmonks/image/fetch/w_{{imageSize}},dpr_1,f_auto/https://insight.topmonks.com/avatar/{{member.id}} 1x,
              https://res.cloudinary.com/topmonks/image/fetch/w_{{imageSize}},dpr_1.5,f_auto/https://insight.topmonks.com/avatar/{{member.id}} 1.5x,
              https://res.cloudinary.com/topmonks/image/fetch/w_{{imageSize}},dpr_2,f_auto/https://insight.topmonks.com/avatar/{{member.id}} 2x"
-     onerror="this.onerror = undefined; this.src='{{ fallback }}'; this.srcset = undefined"
+     onerror="delete this.onerror; this.src='{{ fallback }}'; delete this.srcset"
      width="{{imageSize}}" height="{{imageSize}}">
 {%- endmacro %}
 
