@@ -2,7 +2,7 @@
 id: pavel-trnka
 name: Pavel
 surname: Trnka
-job_title: Interaction Designer
+job_title: Mr. Empathix
 twitter: fromen
 github: trnkapavel
 linkedin: in/pavel-trnka-a2045b76

@@ -2,7 +2,7 @@
 id: tomas-ganaj
 name: Tomáš
 surname: Ganaj
-job_title: Java Developer
+job_title: Pricefx consultant
 github: tganaj
 linkedin: in/tomasganaj
 quote: Trust Yourself
