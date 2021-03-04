@@ -30,7 +30,7 @@
      srcset="https://res.cloudinary.com/topmonks/image/fetch/w_{{imageSize}},dpr_1,f_auto/https://insight.topmonks.com/avatar/{{member.id}} 1x,
              https://res.cloudinary.com/topmonks/image/fetch/w_{{imageSize}},dpr_1.5,f_auto/https://insight.topmonks.com/avatar/{{member.id}} 1.5x,
              https://res.cloudinary.com/topmonks/image/fetch/w_{{imageSize}},dpr_2,f_auto/https://insight.topmonks.com/avatar/{{member.id}} 2x"
-     onerror="delete this.onerror; this.src='{{ fallback }}'; delete this.srcset"
+     onerror="this.onerror=undefined; this.src='{{ fallback }}';this.srcset='{{ fallback }}'"
      width="{{imageSize}}" height="{{imageSize}}">
 {%- endmacro %}
 
