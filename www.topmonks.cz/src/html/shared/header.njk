@@ -4,7 +4,7 @@
   <div class="mdc-layout-grid tm-layout-wrapper">
     <div class="mdc-layout-grid__inner">
       <div class="tm-hamburger mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-5-tablet">
-        <div class="tm-hamburger__container">
+        <div class="tm-hamburger__container" aria-expanded="false" role="button">
           <div class="tm-hamburger__bar"></div>
           <div class="tm-hamburger__bar"></div>
           <div class="tm-hamburger__bar"></div>
@@ -34,9 +34,9 @@
         </a>
       </div>
 
-      <a class="screen-reader-shortcut" href="#maincontent">Přejít na hlavní obsah stránky.</a>
+      <a class="screen-reader-shortcut" href="#obsah">Přejít na hlavní obsah stránky.</a>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-9-desktop">
-        <nav id="navigation" class="tm-menu">
+        <nav id="navigation" class="tm-menu" aria-hidden="false">
           <ul class="tm-menu__list">
             <li class=""><a href="/tym/">náš tým</a></li>
             <li class=""><a href="/potkejte-nas/">potkejte nás</a></li>
@@ -55,7 +55,9 @@
     hamburger.addEventListener("click", toggleMenu(hamburger));
     function toggleMenu(hamburger) {
       return function() {
-        hamburger.classList.toggle("tm-hamburger__container--open");
+        var isOpen = hamburger.classList.toggle("tm-hamburger__container--open");
+        hamburger.setAttribute("aria-expanded", isOpen);
+        menu.setAttribute("aria-hidden", !isOpen);
         appBar.classList.toggle("tm-app-bar--open");
       }
     }
