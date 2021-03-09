@@ -85,9 +85,11 @@
         window.requestAnimationFrame(function() {
           if (window.matchMedia("(min-width: 841px)").matches) {
             menu.classList.add("tm-menu--horizontal");
+            menu.setAttribute("aria-hidden", "false");
           }
           else {
             menu.classList.remove("tm-menu--horizontal");
+            menu.setAttribute("aria-hidden", "true");
           }
           ticking = false;
         });
@@ -96,7 +98,8 @@
     });
 
     if (window.matchMedia("(min-width: 841px)").matches) {
-      menu.classList.toggle("tm-menu--horizontal");
+      var isHorizontal = menu.classList.toggle("tm-menu--horizontal");
+      menu.setAttribute("aria-hidden", !isHorizontal);
     }
   </script>
 </header>
