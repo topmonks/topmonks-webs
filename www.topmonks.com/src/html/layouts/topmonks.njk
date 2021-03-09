@@ -25,7 +25,6 @@
   <link rel="stylesheet" href="/assets/css/typography.css">
   <link rel="stylesheet" href="/assets/css/main.css">
 
-
   {% block head %}{% endblock %}
   {% include "shared/app-icons.njk" %}
   {% include 'shared/analytics.njk' %}
@@ -34,7 +33,7 @@
 
 {% include 'shared/header.njk' %}
 
-<main>
+<main id="content">
   {% block content %}{% endblock %}
 </main>
 
