@@ -97,7 +97,9 @@
 
     if (window.matchMedia("(min-width: 841px)").matches) {
       var isHorizontal = menu.classList.toggle("tm-menu--horizontal");
-      menu.setAttribute("aria-hidden", !isHorizontal);
+    }
+    else {
+      menu.setAttribute("aria-hidden", true);
     }
   </script>
 </header>
