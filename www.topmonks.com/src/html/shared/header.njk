@@ -55,7 +55,8 @@
       return function() {
         var isOpen = hamburger.classList.toggle("tm-hamburger__container--open");
         hamburger.setAttribute("aria-expanded", isOpen);
-        menu.setAttribute("aria-hidden", !isOpen);
+        var timeout = isOpen ? 0 : 200;
+        setTimeout(() => menu.setAttribute("aria-hidden", !isOpen), timeout);
         appBar.classList.toggle("tm-app-bar--open");
       }
     }
