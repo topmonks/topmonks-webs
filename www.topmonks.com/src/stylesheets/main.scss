@@ -18,6 +18,10 @@ img.responsive {
   height: auto;
 }
 
+[aria-hidden="true"] {
+  visibility: hidden;
+}
+
 .tm-layout-wrapper {
   max-width: 1008px;
   margin: 0 auto;
