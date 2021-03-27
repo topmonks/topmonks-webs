@@ -1,6 +1,6 @@
 # Dockerize the app
 # Very usefull when running on Windows because of eternal problems with npm install, node gyp etc
-FROM node:10.0.0
+FROM node:10.24.0
 
 RUN echo node version
 RUN node --version
