@@ -174,7 +174,7 @@ jobs:
 
   merge_pr:
     docker:
-      - image: cimg/base:2020.01
+      - image: cimg/base:2020.12
     working_directory: ~/topmonks-webs
     steps:
       - checkout
