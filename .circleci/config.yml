@@ -197,26 +197,26 @@ workflows:
           filters:
             branches:
               only: trunk
-      - docker/publish:
-          name: publish-lhci
-          context: org-docker
-          docker-context: lhci.dev.tmcloud.io
-          path: lhci.dev.tmcloud.io
-          image: topmonks/lhci-server
-          tag: latest
-          filters:
-            branches:
-              only: trunk
-      - swarmpit/deploy:
-          name: deploy-lighthouse-ci
-          stack_name: lighthouse-ci
-          compose_file_path: lhci.dev.tmcloud.io/docker-compose.yml
-          context: org-swarmpit-dev
-          requires:
-            - publish-lhci
-          filters:
-            branches:
-              only: trunk
+#      - docker/publish:
+#          name: publish-lhci
+#          context: org-docker
+#          docker-context: lhci.dev.tmcloud.io
+#          path: lhci.dev.tmcloud.io
+#          image: topmonks/lhci-server
+#          tag: latest
+#          filters:
+#            branches:
+#              only: trunk
+#      - swarmpit/deploy:
+#          name: deploy-lighthouse-ci
+#          stack_name: lighthouse-ci
+#          compose_file_path: lhci.dev.tmcloud.io/docker-compose.yml
+#          context: org-swarmpit-dev
+#          requires:
+#            - publish-lhci
+#          filters:
+#            branches:
+#              only: trunk
       - merge_pr:
           context: org-github
           requires:
