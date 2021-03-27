@@ -466,7 +466,6 @@ workflows:
           context: org-global
           requires:
             - build
-            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-www-hackercamp-cz
           site_name: www.hackercamp.cz
