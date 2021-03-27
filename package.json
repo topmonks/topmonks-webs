@@ -122,7 +122,9 @@
     "start:cbx.cz": "BLENDID_CONFIG_PATH=./cbx.cz/config/ dotenv blendid",
     "build:cbx.cz": "BLENDID_CONFIG_PATH=./cbx.cz/config/ dotenv blendid -- build",
     "start:chytrybox.cz": "BLENDID_CONFIG_PATH=./chytrybox.cz/config/ dotenv blendid",
-    "build:chytrybox.cz": "BLENDID_CONFIG_PATH=./chytrybox.cz/config/ dotenv blendid -- build"
+    "build:chytrybox.cz": "BLENDID_CONFIG_PATH=./chytrybox.cz/config/ dotenv blendid -- build",
+    "start:www.hackercamp.cz": "BLENDID_CONFIG_PATH=./www.hackercamp.cz/config/ dotenv blendid",
+    "build:www.hackercamp.cz": "BLENDID_CONFIG_PATH=./www.hackercamp.cz/config/ dotenv blendid -- build"
   },
   "resolutions": {
     "bluebird": "npm:bluebird@3.7.2",
