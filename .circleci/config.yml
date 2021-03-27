@@ -224,7 +224,7 @@ workflows:
             - test-www-topmonks-com
           filters:
             branches:
-              only: /dependabot\/.*/
+              only: /renovate\/.*/
       - test_site:
           name: test-www-topmonks-com
           site_name: www.topmonks.com
