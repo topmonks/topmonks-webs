@@ -45,12 +45,11 @@ h3 {
 
 
 .tm-menu__list a {
-  color: var(--tm-black-title);
+  color: #FFFFFF;
 
   &:hover {
-    color: var(--tm-primary);
+    color: var(--tm-hamburger-label);
     text-decoration: none;
-    border-bottom: 2px solid var(--tm-primary-light);
   }
 }
 

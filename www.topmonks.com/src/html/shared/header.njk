@@ -3,7 +3,7 @@
   <div class="mdc-layout-grid tm-layout-wrapper">
     <div class="mdc-layout-grid__inner">
       <div class="tm-hamburger mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-5-tablet">
-        <div class="tm-hamburger__container">
+        <div class="tm-hamburger__container" aria-expanded="false" aria-label="Toggle navigation menu" role="button">
           <div class="tm-hamburger__bar"></div>
           <div class="tm-hamburger__bar"></div>
           <div class="tm-hamburger__bar"></div>
@@ -33,7 +33,7 @@
         </a>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-8-desktop">
-        <nav id="navigation" class="tm-menu">
+        <nav id="navigation" class="tm-menu" aria-hidden="false">
           <ul class="tm-menu__list">
             <li class=""><a href="/about-us/">about us</a></li>
             <li class=""><a href="/meet-us/">meet us</a></li>
@@ -53,7 +53,10 @@
     hamburger.addEventListener("click", toggleMenu(hamburger));
     function toggleMenu(hamburger) {
       return function() {
-        hamburger.classList.toggle("tm-hamburger__container--open");
+        var isOpen = hamburger.classList.toggle("tm-hamburger__container--open");
+        hamburger.setAttribute("aria-expanded", isOpen);
+        var timeout = isOpen ? 0 : 200;
+        setTimeout(() => menu.setAttribute("aria-hidden", !isOpen), timeout);
         appBar.classList.toggle("tm-app-bar--open");
       }
     }
@@ -81,9 +84,11 @@
         window.requestAnimationFrame(function() {
           if (window.matchMedia("(min-width: 841px)").matches) {
             menu.classList.add("tm-menu--horizontal");
+            menu.setAttribute("aria-hidden", "false");
           }
           else {
             menu.classList.remove("tm-menu--horizontal");
+            menu.setAttribute("aria-hidden", "true");
           }
           ticking = false;
         });
@@ -92,7 +97,10 @@
     });
 
     if (window.matchMedia("(min-width: 841px)").matches) {
-      menu.classList.toggle("tm-menu--horizontal");
+      var isHorizontal = menu.classList.toggle("tm-menu--horizontal");
+    }
+    else {
+      menu.setAttribute("aria-hidden", true);
     }
   </script>
 </header>

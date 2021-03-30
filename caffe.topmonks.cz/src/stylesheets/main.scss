@@ -67,6 +67,27 @@ img.responsive {
   height: auto;
 }
 
+.screen-reader-shortcut{
+  position: absolute;
+  top: -1000em;
+  &:focus {
+    left: 6px;
+    top: 7px;
+    height: auto;
+    width: auto;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 23px 14px;
+    background: #f06b4f;
+    color: #FFFFFF;
+    z-index: 100000;
+    line-height: normal;
+    text-decoration: none;
+    box-shadow: 2px 10px 23px rgb(92 95 255 / 10%);
+  }
+}
+
 .tm-logo {
   font-family: Futura, futura-pt, -apple-system, BlinkMacSystemFont, Roboto,
     "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",

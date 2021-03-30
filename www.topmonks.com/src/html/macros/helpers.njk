@@ -1,10 +1,6 @@
-{% macro boolAttr(name, value) %}
-  {% if value %}{{ name }}{% endif %}
-{% endmacro %}
-
-{% macro sprite(id, altText, viewBox, classes) %}
+{% macro sprite(id, altText, viewBox, classes, ariaHidden) %}
 {% set viewBox = viewBox or "0 0 1 1"%}
-<span class='sprite sprite--{{id}} {{classes}}'>
+<span class='sprite sprite--{{id}} {{classes}}' {% if ariaHidden %}aria-hidden='{{ ariaHidden }}'{% endif %}>
   <svg viewBox="{{viewBox}}">
     <title>{{altText}}</title>
     <use xlink:href='#{{id}}'></use>
@@ -24,12 +20,13 @@
 
 {% macro avatar(member, imageSize) -%}
 {% set fullName = member.name + ' ' + member.surname %}
-<img alt="[photo] {{fullName}}" loading="lazy"
+{% set fallback = '/assets/img/monk_logo.png' %}
+<img alt="[photo] {{fullName}}" loading="lazy" aria-hidden="true"
      src="https://res.cloudinary.com/topmonks/image/fetch/w_{{imageSize}},dpr_auto,f_auto/https://insight.topmonks.com/avatar/{{member.id}}"
      srcset="https://res.cloudinary.com/topmonks/image/fetch/w_{{imageSize}},dpr_1,f_auto/https://insight.topmonks.com/avatar/{{member.id}} 1x,
              https://res.cloudinary.com/topmonks/image/fetch/w_{{imageSize}},dpr_1.5,f_auto/https://insight.topmonks.com/avatar/{{member.id}} 1.5x,
              https://res.cloudinary.com/topmonks/image/fetch/w_{{imageSize}},dpr_2,f_auto/https://insight.topmonks.com/avatar/{{member.id}} 2x"
-     onerror="this.onerror=null; this.src='/assets/img/monk_logo.png'"
+     onerror="this.onerror=undefined; this.src='{{ fallback }}';this.srcset='{{ fallback }}'"
      width="{{imageSize}}" height="{{imageSize}}">
 {%- endmacro %}
 

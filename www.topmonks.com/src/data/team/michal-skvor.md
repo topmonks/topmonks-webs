@@ -2,7 +2,7 @@
 id: michal-skvor
 name: Michal
 surname: Skvor
-job_title: Developer
+job_title: Pricefx consultant
 twitter:
 github:
 linkedin:

@@ -1,12 +1,12 @@
 version: 2.1
 orbs:
-  aws-cli: circleci/aws-cli@1.2.1
+  aws-cli: circleci/aws-cli@1.4.1
   aws-cloudfront: topmonks/aws-cloudfront@1.0.0
-  aws-s3: circleci/aws-s3@1.0.15
-  browser-tools: circleci/browser-tools@1.0.1
-  docker: circleci/docker@1.4.0
-  github: topmonks/github@1.0.1
-  node: circleci/node@4.1.0
+  aws-s3: circleci/aws-s3@2.0.0
+  browser-tools: circleci/browser-tools@1.1.3
+  docker: circleci/docker@1.5.0
+  github: topmonks/github@1.0.2
+  node: circleci/node@4.2.1
   pulumi: pulumi/pulumi@2.0.0
   swarmpit: topmonks/swarmpit@1.2.0
 
@@ -174,7 +174,7 @@ jobs:
 
   merge_pr:
     docker:
-      - image: cimg/base:2020.01
+      - image: cimg/base:2020.12
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -197,26 +197,26 @@ workflows:
           filters:
             branches:
               only: trunk
-      - docker/publish:
-          name: publish-lhci
-          context: org-docker
-          docker-context: lhci.dev.tmcloud.io
-          path: lhci.dev.tmcloud.io
-          image: topmonks/lhci-server
-          tag: latest
-          filters:
-            branches:
-              only: trunk
-      - swarmpit/deploy:
-          name: deploy-lighthouse-ci
-          stack_name: lighthouse-ci
-          compose_file_path: lhci.dev.tmcloud.io/docker-compose.yml
-          context: org-swarmpit-dev
-          requires:
-            - publish-lhci
-          filters:
-            branches:
-              only: trunk
+#      - docker/publish:
+#          name: publish-lhci
+#          context: org-docker
+#          docker-context: lhci.dev.tmcloud.io
+#          path: lhci.dev.tmcloud.io
+#          image: topmonks/lhci-server
+#          tag: latest
+#          filters:
+#            branches:
+#              only: trunk
+#      - swarmpit/deploy:
+#          name: deploy-lighthouse-ci
+#          stack_name: lighthouse-ci
+#          compose_file_path: lhci.dev.tmcloud.io/docker-compose.yml
+#          context: org-swarmpit-dev
+#          requires:
+#            - publish-lhci
+#          filters:
+#            branches:
+#              only: trunk
       - merge_pr:
           context: org-github
           requires:
@@ -224,7 +224,7 @@ workflows:
             - test-www-topmonks-com
           filters:
             branches:
-              only: /dependabot\/.*/
+              only: /renovate\/.*/
       - test_site:
           name: test-www-topmonks-com
           site_name: www.topmonks.com
@@ -457,6 +457,22 @@ workflows:
           requires:
             - provision
             - test-chytrybox-cz
+          filters:
+            branches:
+              only: trunk
+      - test_site:
+          name: test-www-hackercamp-cz
+          site_name: www.hackercamp.cz
+          context: org-global
+          requires:
+            - build
+      - deploy_site:
+          name: deploy-www-hackercamp-cz
+          site_name: www.hackercamp.cz
+          context: org-global
+          requires:
+            - provision
+            - test-www-hackercamp-cz
           filters:
             branches:
               only: trunk

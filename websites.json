@@ -46,6 +46,7 @@
     "lhci": {
       "assert": {
         "assertions": {
+          "preload-lcp-image": "warn",
           "errors-in-console": "warn",
           "offscreen-images": "warn"
         }
@@ -143,6 +144,13 @@
     "lhci": {
       "upload": {
         "token": "98c6788a-dbc4-49d5-ab7d-b3e26d549763"
+      }
+    }
+  },
+  "www.hackercamp.cz": {
+    "lhci": {
+      "upload": {
+        "token": "c18f07e4-d6ed-430d-ad9c-ba008107d9fb"
       }
     }
   }

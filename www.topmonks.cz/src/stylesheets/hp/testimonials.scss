@@ -8,16 +8,22 @@
     text-align: left;
     line-height: 1.625em; //26px
     padding-bottom: 3em; //48px
+    display: flex;
+    flex-direction: column;
+    .box--inner {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
     blockquote {
-      height: 15.25em; //244px
-      @media (max-width: 800px) {
-        height: 13em; //208px
-      }
+      margin: 0;
     }
 
     figcaption {
-      padding-top: 1em; //16px
+      padding-top: 3em; //48px
     }
+
   }
 
   hr.line-between_grey {

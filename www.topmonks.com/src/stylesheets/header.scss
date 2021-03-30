@@ -1,21 +1,24 @@
 .tm-logo {
   display: flex;
   align-items: center;
-  font-size: 28px;
+  font-weight: 700;
   line-height: 32px;
   letter-spacing: -1px;
   text-decoration: none;
   text-transform: uppercase;
-  color: #fff;
-  @media screen and (max-width: 479px) {
-    font-size: 24px;
+  color: #FFFFFF;
+  @media (max-width: 839px) {
     padding-top: 2px;
     justify-content: flex-end;
   }
-  @media screen and (max-width: 839px) {
-    font-size: 24px;
-    padding-top: 2px;
-    justify-content: flex-end;
+  @media screen and (min-width: 540px) {
+    font-size: 28px;
+  }
+
+  svg {
+    @media (max-width: 539px) {
+      width: 22px;
+    }
   }
 }
 
@@ -38,11 +41,12 @@
   }
   .tm-hamburger__container::after {
     content: "menu";
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--tm-secondary);
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 13px;
     position: absolute;
-    top: 5px;
+    top: 7px;
     left: 36px;
   }
   .tm-hamburger__bar {
@@ -110,7 +114,7 @@
     background-color: var(--tm-primary);
   }
   .tm-hamburger .tm-hamburger__container::after {
-    color: rgba(0, 0, 0, 0.25);
+    color: var(--tm-secondary);
   }
   @media screen and (min-width: 840px) {
     height: 78px;
@@ -132,7 +136,7 @@
 .tm-app-bar.tm-app-bar--open {
   color: #fff;
   .tm-hamburger__container::after {
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
   }
   .tm-hamburger__bar {
     background-color: #fff;

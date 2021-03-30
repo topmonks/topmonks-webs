@@ -18,7 +18,11 @@
        class="{{ class }}">
 {% endmacro %}
 
-{% macro sprite(id, alt, viewBox, class) %}
+{% macro boolAttr(name, value) %}
+  {% if value %}{{ name }}{% endif %}
+{% endmacro %}
+
+{% macro sprite(id, altText, viewBox, classes, ariaHidden) %}
   {% set viewBox = viewBox or "0 0 1 1"%}
   <span class='sprite sprite--{{id}} {{class}}'>
   <svg viewBox="{{viewBox}}">
