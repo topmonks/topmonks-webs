@@ -2,6 +2,7 @@
 {% from 'macros/helpers.njk' import avatar %}
 {% from 'common/helpers.njk' import googleMap %}
 {% set page = 'topmonks-contact' %}
+{% set pageType = 'ContactPage' %}
 {% block title %}TopMonks Contacts{% endblock %}
 
 {% block head %}
@@ -139,7 +140,7 @@
 {% endblock %}
 
 {% block content %}
-  <div itemscope itemtype="https://schema.org/Organization">
+  <div>
     <section id="contacts-main" class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
         <div class="page_sub-title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -150,8 +151,7 @@
 
         <div
           class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
-          itemprop="employee" itemscope
-          itemtype="https://schema.org/Person">
+          property="employee" typeof="Person">
           <h3>Sales</h3>
           <p class="box_text-about">If you are a medium- or large-sized organization and looking to solve an existing
             challenge, please get in touch with &nbsp;Ondrej.</p>
@@ -160,16 +160,16 @@
               {{ avatar(team.members['ondrej-tupy'], 112) }}
             </div>
             <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-              <p><span itemprop="name">Ondrej Tupý</span><br>
-                <a itemprop="telephone" href="tel:+420730581488">+420&nbsp;730&nbsp;581&nbsp;488</a><br/>
-                <a itemprop="email" href="mailto:sales&#64;topmonks.com">sales@​topmonks.com</a></p>
+              <p><span property="name">Ondrej Tupý</span><br>
+                <a property="telephone" href="tel:+420730581488">+420&nbsp;730&nbsp;581&nbsp;488</a><br/>
+                <a property="email" href="mailto:sales&#64;topmonks.com">sales@​topmonks.com</a></p>
             </div>
           </div>
         </div>
 
         <div
           class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
-          itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
+          property="employee" typeof="Person">
           <h3>Blockchain studio</h3>
           <p class="box_text-about">If you are ready to
             <a href="https://blockchain.topmonks.com">bring blockchain to your business</a>,
@@ -179,16 +179,16 @@
               {{ avatar(team.members['lea-petrasova'], 112) }}
             </div>
             <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-              <p><span itemprop="name">Lea Petrášová</span><br/>
-                <a itemprop="telephone" href="tel:+421948609650">+421&nbsp;948&nbsp;609&nbsp;650</a><br>
-                <a itemprop="email" href="mailto:blockchain&#64;topmonks.com">blockchain<!----> @​topmonks.com</a></p>
+              <p><span property="name">Lea Petrášová</span><br/>
+                <a property="telephone" href="tel:+421948609650">+421&nbsp;948&nbsp;609&nbsp;650</a><br>
+                <a property="email" href="mailto:blockchain&#64;topmonks.com">blockchain<!----> @​topmonks.com</a></p>
             </div>
           </div>
         </div>
 
         <div
           class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
-          itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
+          property="employee" typeof="Person">
           <h3>Startup studio</h3>
           <p class="box_text-about"><a href="https://studio.topmonks.com/">TopMonks Startup Monastery</a> can boost your
             idea from scratch. We are
@@ -199,16 +199,16 @@
               {{ avatar(team.members['jiri-penzes'], 112) }}
             </div>
             <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-              <p><span itemprop="name">Jirka Pénzeš</span><br>
-                <a itemprop="telephone" href="tel:+420732364404">+420&nbsp;732&nbsp;364&nbsp;404</a><br>
-                <a itemprop="email" href="mailto:studio&#64;topmonks.com">studio@​topmonks.com</a></p>
+              <p><span property="name">Jirka Pénzeš</span><br>
+                <a property="telephone" href="tel:+420732364404">+420&nbsp;732&nbsp;364&nbsp;404</a><br>
+                <a property="email" href="mailto:studio&#64;topmonks.com">studio@​topmonks.com</a></p>
             </div>
           </div>
         </div>
 
         <div
           class="box box-member mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
-          itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
+          property="employee" typeof="Person">
           <h3>Happy Maker AKA HR</h3>
           <p class="box_text-about">We are always on the lookout for talented Monks to join our team. Take a look at <a
               href="https://www.topmonks.com/jobs">Jobs</a> page
@@ -218,8 +218,8 @@
               {{ avatar(team.members['ales-roubicek'], 112) }}
             </div>
             <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-              <p><span itemprop="name">Aleš Roubíček</span><br>
-                <a itemprop="email" href="mailto:happy&#64;topmonks.com">happy@topmonks.com</a></p>
+              <p><span property="name">Aleš Roubíček</span><br>
+                <a property="email" href="mailto:happy&#64;topmonks.com">happy@topmonks.com</a></p>
             </div>
           </div>
         </div>
@@ -231,75 +231,75 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <h2>TopMonks Monasteries</h2>
         </div>
-        <div class="box mdc-layout-grid__cell address" itemprop="subOrganization" itemscope=""
-             itemtype="https://schema.org/Organization"
+        <div class="box mdc-layout-grid__cell address" property="subOrganization"
+             typeof="Organization"
              id="prague">
           <a href="https://goo.gl/maps/SBK1BRsmgu22" class="map" title="Show Prague Office on map">
             {{ googleMap(alt="[mapa] Praha Spořilov", lat=50.045386, long=14.491246) }}
           </a>
           <div class="content">
-            <h3 itemprop="name">Prague</h3>
-            <span itemprop="legalName"><b>TopMonks s.r.o.</b></span>
-            <div itemprop="location" itemscope itemtype="https://schema.org/Place">
-              <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                <span itemprop="streetAddress"><b>Struhařovská 2931/9</b></span><br>
-                <span itemprop="postalCode">141 00</span>
-                <span itemprop="addressLocality">Praha 4</span><br>
-                <span itemprop="addressCountry">Czech Republic</span>
+            <h3 property="name">Prague</h3>
+            <span property="legalName"><b>TopMonks s.r.o.</b></span>
+            <div property="location" typeof="Place">
+              <div property="address" typeof="PostalAddress">
+                <span property="streetAddress"><b>Struhařovská 2931/9</b></span><br>
+                <span property="postalCode">141 00</span>
+                <span property="addressLocality">Praha 4</span><br>
+                <span property="addressCountry">Czech Republic</span>
               </div>
               <a href="https://goo.gl/maps/SBK1BRsmgu22" class="button" data-marker="praha">show on map</a>
-              <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-                <meta itemprop="latitude" content="50.045386">
-                <meta itemprop="longitude" content="14.491246">
+              <div property="geo" typeof="GeoCoordinates">
+                <meta property="latitude" content="50.045386">
+                <meta property="longitude" content="14.491246">
               </div>
             </div>
           </div>
         </div>
-        <div class="box mdc-layout-grid__cell address" itemprop="subOrganization" itemscope=""
-             itemtype="https://schema.org/Organization"
+        <div class="box mdc-layout-grid__cell address" property="subOrganization"
+             typeof="Organization"
              id="ostrava">
           <a href="https://goo.gl/maps/jF7BXs5QX7ek82Wc9" class="map" title="Show Ostrava Office on map">
             {{ googleMap(alt="[mapa] Ostrava", lat=49.8458747, long=18.2806027) }}
           </a>
           <div class="content">
-            <h3 itemprop="name">Ostrava</h3>
-            <span itemprop="legalName"><b>TopMonks s.r.o.</b></span>
-            <div itemprop="location" itemscope itemtype="https://schema.org/Place">
-              <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                <span itemprop="streetAddress"><b>Nádražní 921/108</b></span><br>
-                <span itemprop="postalCode">702 00</span>
-                <span itemprop="addressLocality">Ostrava</span><br>
-                <span itemprop="addressCountry">Czech Republic</span>
+            <h3 property="name">Ostrava</h3>
+            <span property="legalName"><b>TopMonks s.r.o.</b></span>
+            <div property="location" typeof="Place">
+              <div property="address" typeof="PostalAddress">
+                <span property="streetAddress"><b>Nádražní 921/108</b></span><br>
+                <span property="postalCode">702 00</span>
+                <span property="addressLocality">Ostrava</span><br>
+                <span property="addressCountry">Czech Republic</span>
               </div>
               <a href="https://goo.gl/maps/jF7BXs5QX7ek82Wc9" class="button" data-marker="ostrava">show on map</a>
-              <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-                <meta itemprop="latitude" content="49.8458747">
-                <meta itemprop="longitude" content="18.2806027">
+              <div property="geo" typeof="GeoCoordinates">
+                <meta property="latitude" content="49.8458747">
+                <meta property="longitude" content="18.2806027">
               </div>
             </div>
           </div>
         </div>
-        <div class="box mdc-layout-grid__cell address" itemprop="subOrganization" itemscope=""
-             itemtype="https://schema.org/Organization"
+        <div class="box mdc-layout-grid__cell address" property="subOrganization"
+             typeof="Organization"
              id="san-francisco">
           <a href="https://goo.gl/maps/vXg6iCGmYsGpYyd48" class="map" title="Show San Francisco Office on map">
             {{ googleMap(alt="[mapa] San Francisco", lat=37.3378495, long=-121.8924583) }}
           </a>
           <div class="content">
-            <h3 itemprop="name">San Francisco</h3>
-            <span itemprop="legalName"><b>TopMonks INC</b></span>
-            <div itemprop="location" itemscope itemtype="https://schema.org/Place">
-              <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                <span itemprop="streetAddress"><b>105 N 1st Street</b></span><br>
-                <span itemprop="addressLocality">San Jose</span>,
-                <span itemprop="addressRegion">CA</span>
-                <span itemprop="postalCode">95113</span><br>
-                <span itemprop="addressCountry">United States of America</span>
+            <h3 property="name">San Francisco</h3>
+            <span property="legalName"><b>TopMonks INC</b></span>
+            <div property="location" typeof="Place">
+              <div property="address" typeof="PostalAddress">
+                <span property="streetAddress"><b>105 N 1st Street</b></span><br>
+                <span property="addressLocality">San Jose</span>,
+                <span property="addressRegion">CA</span>
+                <span property="postalCode">95113</span><br>
+                <span property="addressCountry">United States of America</span>
               </div>
               <a href="https://goo.gl/maps/vXg6iCGmYsGpYyd48" class="button" data-marker="san-francisco">show on map</a>
-              <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
-                <meta itemprop="latitude" content="37.3378495">
-                <meta itemprop="longitude" content="-121.8924583">
+              <div property="geo" typeof="GeoCoordinates">
+                <meta property="latitude" content="37.3378495">
+                <meta property="longitude" content="-121.8924583">
               </div>
             </div>
           </div>
@@ -314,29 +314,29 @@
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
           <h3>US Billing address</h3>
-          <span itemprop="legalName"><b>TopMonks INC.</b></span><br>
-          <span itemprop="foundingLocation" itemscope="" itemtype="https://schema.org/Place">
-          <span itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress">
-            <span itemprop="streetAddress"><b>105 N 1st Street</b></span><br>
-            <b><span itemprop="addressLocality">San Jose</span>,
-              <span itemprop="addressLocality">California</span>
-              <span itemprop="postalCode">95113</span></b><br>
+          <span property="legalName"><b>TopMonks INC.</b></span><br>
+          <span property="foundingLocation" typeof="Place">
+          <span property="address" typeof="PostalAddress">
+            <span property="streetAddress"><b>105 N 1st Street</b></span><br>
+            <b><span property="addressLocality">San Jose</span>,
+              <span property="addressLocality">California</span>
+              <span property="postalCode">95113</span></b><br>
           </span>
         </span>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
           <h3>Billing address</h3>
-          <span itemprop="legalName"><b>TopMonks s.r.o.</b></span><br>
-          <span itemprop="foundingLocation" itemscope="" itemtype="https://schema.org/Place">
-          <span itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress">
-            <span itemprop="streetAddress"><b>Struhařovská 2931/9</b></span><br>
-            <span itemprop="postalCode"><b>141 00</b></span>
-          <span itemprop="addressLocality"><b>Praha 4</b></span>
+          <span property="legalName"><b>TopMonks s.r.o.</b></span><br>
+          <span property="foundingLocation" typeof="Place">
+          <span property="address" typeof="PostalAddress">
+            <span property="streetAddress"><b>Struhařovská 2931/9</b></span><br>
+            <span property="postalCode"><b>141 00</b></span>
+          <span property="addressLocality"><b>Praha 4</b></span>
           </span>
           </span><br>
           <a href="mailto:invoices@topmonks.com">invoices@topmonks.com</a>
 
-          <div>Reg. No: 24847437<br> VAT ID: <span itemprop="vatID">CZ24847437</span></div>
+          <div>Reg. No: 24847437<br> VAT ID: <span property="vatID">CZ24847437</span></div>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
           <h3>Bank account</h3>
@@ -352,62 +352,65 @@
 {% endblock %}
 
 {% block scripts %}
-<script type="module">
-  // https://www.ietf.org/rfc/rfc5870.txt
-  // https://developer.android.com/guide/components/intents-common.html#Maps
-  const toGeoUri = ({ geo, name, placeName }) => `geo:${geo.lat},${geo.lng}?q=${geo.lat},${geo.lng}(${name} ${placeName})&z=6`;
-  const isGeoUriCapable = useragent => /Android/i.exec(useragent)
-    || /Sailfish/i.exec(useragent)
-    || /Midori/i.exec(useragent)
-    || false;
+  <script type="module">
+    // https://www.ietf.org/rfc/rfc5870.txt
+    // https://developer.android.com/guide/components/intents-common.html#Maps
+    const toGeoUri = ({ geo: { lat, lng }, name, placeName }) =>
+      `geo:${lat},${lng}?q=${lat},${lng}(${name} ${placeName})&z=6`;
+    const isGeoUriCapable = useragent => /Android/i.exec(useragent)
+      || /Sailfish/i.exec(useragent)
+      || /Midori/i.exec(useragent)
+      || false;
 
-  // https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj635237.aspx
-  const toBingMapsUri = ({ geo, name, placeName }) => `bingmaps:?collection=point.${geo.lat}_${geo.lng}_${name} ${placeName}`;
-  const isBingMapsUriCapable = ua => /Windows\sNT\s10.0/i.exec(ua)
-    || /Windows\sNT\s6.[2-9]/i.exec(ua)
-    || /Windows\sPhone\s8/i.exec(ua)
-    || /Windows\sPhone\s1/i.exec(ua)
-    || false;
+    // https://msdn.microsoft.com/en-us/library/windows/apps/xaml/jj635237.aspx
+    const toBingMapsUri = ({ geo: { lat, lng }, name, placeName }) =>
+      `bingmaps:?collection=point.${lat}_${lng}_${name} ${placeName}`;
+    const isBingMapsUriCapable = ua => /Windows\sNT\s10.0/i.exec(ua)
+      || /Windows\sNT\s6.[2-9]/i.exec(ua)
+      || /Windows\sPhone\s8/i.exec(ua)
+      || /Windows\sPhone\s1/i.exec(ua)
+      || false;
 
-  // https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html
-  const toAppleMapsUri = ({ address, geo }) => `http://maps.apple.com/?sll=${geo.lat},${geo.lng}&z=6&q=${address.street}, ${address.locality}, ${address.country}`;
-  const isAppleMapsUriCapable = ua => /iOS/i.exec(ua) || /iPad/i.exec(ua) || false;
+    // https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html
+    const toAppleMapsUri = ({ address: { country, locality, street }, geo: { lat, lng } }) =>
+      `http://maps.apple.com/?sll=${lat},${lng}&z=6&q=${street}, ${locality}, ${country}`;
+    const isAppleMapsUriCapable = ua => /iOS/i.exec(ua) || /iPad/i.exec(ua) || false;
 
-  const getLocationUri = (location, ua) => {
-    if (isBingMapsUriCapable(ua))
-      return toBingMapsUri(location);
-    if (isGeoUriCapable(ua))
-      return toGeoUri(location);
-    if (isAppleMapsUriCapable(ua))
-      return toAppleMapsUri(location);
-    return null;
-  };
+    const getLocationUri = (location, ua) => {
+      if (isBingMapsUriCapable(ua))
+        return toBingMapsUri(location);
+      if (isGeoUriCapable(ua))
+        return toGeoUri(location);
+      if (isAppleMapsUriCapable(ua))
+        return toAppleMapsUri(location);
+      return null;
+    };
 
-  function parseLocations() {
-    const locations = Array.from(document.querySelectorAll('.address[itemprop=subOrganization]'));
-    return new Map(locations.map((el) => {
-      return [el.querySelector('.button').dataset['marker'], {
-        name: el.querySelector('[itemprop=legalName]').innerText,
-        placeName: el.querySelector('[itemprop=name]').innerText,
-        address: {
-          street: el.querySelector('[itemprop=streetAddress]').innerText,
-          locality: el.querySelector('[itemprop=addressLocality]').innerText,
-          country: el.querySelector('[itemprop=addressCountry]').innerText
-        },
-        geo: {
-          lat: el.querySelector('[itemprop=latitude]').getAttribute("content"),
-          lng: el.querySelector('[itemprop=longitude]').getAttribute("content")
-        }
-      }];
-    }));
-  }
+    function parseLocations() {
+      const locations = Array.from(document.querySelectorAll('.address[property=subOrganization]'));
+      return new Map(locations.map((el) => {
+        return [el.querySelector('.button').dataset['marker'], {
+          name: el.querySelector('[property=legalName]').innerText,
+          placeName: el.querySelector('[property=name]').innerText,
+          address: {
+            street: el.querySelector('[property=streetAddress]').innerText,
+            locality: el.querySelector('[property=addressLocality]').innerText,
+            country: el.querySelector('[property=addressCountry]').innerText
+          },
+          geo: {
+            lat: el.querySelector('[property=latitude]').getAttribute("content"),
+            lng: el.querySelector('[property=longitude]').getAttribute("content")
+          }
+        }];
+      }));
+    }
 
-  const locations = parseLocations();
-  const userAgent = navigator.userAgent;
-  for (let [id, loc] of locations) {
-    const btn = document.querySelector(`.button[data-marker=${id}]`);
-    const locationUri = getLocationUri(loc, userAgent);
-    if (locationUri) btn.setAttribute("href", encodeURI(locationUri));
-  }
-</script>
+    const locations = parseLocations();
+    const userAgent = navigator.userAgent;
+    for (let [id, loc] of locations) {
+      const btn = document.querySelector(`.button[data-marker=${id}]`);
+      const locationUri = getLocationUri(loc, userAgent);
+      if (locationUri) btn.setAttribute("href", encodeURI(locationUri));
+    }
+  </script>
 {% endblock %}
