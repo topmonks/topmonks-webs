@@ -35,6 +35,8 @@
 </head>
 
 <body vocab="https://schema.org" typeof="Festival">
+<link property="eventStatus" href="https://schema.org/EventScheduled">
+<link property="eventAttendanceMode" href="https://schema.org/MixedEventAttendanceMode">
 <!-- Google Tag Manager (noscript) -->
 <noscript>
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5F59KHT"
@@ -100,9 +102,14 @@
 
   <h2 id="toc-kde-budeme">Kde budeme?</h2>
 
-  <p property="location" typeof="Place">
-    <a property="url" href="https://www.sobenak.cz/"><span property="name">Rekreační středisko
-    Sobeňák</span></a></p>
+  <div property="location" typeof="Place">
+    <h3 property="name"><a property="url" href="https://www.sobenak.cz/">Rekreační středisko
+    Sobeňák</a></h3>
+    <div property="address" typeof="PostalAddress">
+      <span property="streetAddress">Starý Rožmitál 148</span><br>
+      <span property="postalCode">262 42</span> <span property="addressLocality">Rožmitál pod Třemšínem</span>
+    </div>
+  </div>
 
   <h2 id="toc-co-to-bude-stat">Co to bude stát?</h2>
 
