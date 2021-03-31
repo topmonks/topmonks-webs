@@ -2,6 +2,7 @@
 {% from 'macros/helpers.njk' import avatar, css, sprite %}
 
 {% set page = 'topmonks-index' %}
+{% set pageType = 'Organization' %}
 {% set language = en %}
 
 {% block title %}
@@ -21,6 +22,13 @@
   <meta property="og:type" content="company">
   <meta property="og:url" content="https://www.topmonks.com/">
   <meta property="og:site_name" content="TopMonks.com">
+  <meta property="business:contact_data:street_address" content="Struhařovská 2931/9"/>
+  <meta property="business:contact_data:locality" content="Praha 4"/>
+  <meta property="business:contact_data:postal_code" content="141 00"/>
+  <meta property="business:contact_data:country_name" content="Czech republic"/>
+  <meta property="business:contact_data:email" content="info@topmonks.com"/>
+  <meta property="business:contact_data:phone_number" content="+420 226 257 521"/>
+  <meta property="business:contact_data:website" content="https://www.topmonks.com/"/>
   <style>
     @media screen and (max-width: 479px) {
       body {
@@ -72,7 +80,7 @@
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
           <h2 class="jumbotron__title">From your idea to <br>an effective solution</h2>
           <div class="box box--lead box--mobile-only">
-            <p>We are building companies, integrating infrastructure, developing apps and
+            <p property="description">We are building companies, integrating infrastructure, developing apps and
               testing software for banks, startup and&nbsp;blockchain projects.</p>
             <a class="action-button jumbotron__cta" href="#how-we-work">MORE ABOUT US</a>
           </div>
@@ -118,7 +126,7 @@
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner tm-layout-wrapper">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2><span class="box--purple">TopMonks</span></h2>
+          <h2 property="name"><span class="box--purple">TopMonks</span></h2>
         </div>
         <div class="box box--listen mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
           {{ sprite("ico_listen", "We listen", "0 0 152 142", "box__icon box__icon--listen") }}
@@ -203,7 +211,7 @@
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <h2>Our customers say…</h2>
           </div>
-          <div
+          <figure
             class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
             <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <title>Quotation</title>
@@ -219,8 +227,8 @@
             </blockquote>
             <hr class="line-between_grey">
             <figcaption><b>Nataliya Rozhok</b><br>XIXOIO</figcaption>
-          </div>
-          <div
+          </figure>
+          <figure
             class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
             <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <title>Quotation</title>
@@ -234,8 +242,8 @@
             </blockquote>
             <hr class="line-between_grey">
             <figcaption><b>Karel Dostál</b><br>24Cryptex</figcaption>
-          </div>
-          <div class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          </figure>
+          <figure class="box mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
             <svg width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <title>Quotation</title>
               <path
@@ -249,7 +257,7 @@
             </blockquote>
             <hr class="line-between_grey">
             <figcaption><b>Patrik Tjokorda</b><br>DEBNK</figcaption>
-          </div>
+          </figure>
         </div>
       </div>
     </div>
@@ -268,8 +276,8 @@
 
         <div
           class="box box-member mdc-layout-grid__cell  mdc-layout-grid__cell--span-6-desktop"
-          itemprop="employee" itemscope="" itemtype="https://schema.org/Person">
-          <h3>Sales</h3>
+          property="employee" typeof="Person">
+          <h3 property="jobTitle">Sales</h3>
           <p class="box_text-about">If you're medium or large size organization and you're looking to solve
             existing challenge, please get in touch with&nbsp;Ondrej.</p>
           <div class="mdc-layout-grid__inner">
@@ -277,9 +285,9 @@
               {{ avatar(team.members['ondrej-tupy'], 112) }}
             </div>
             <div class="box_member-contact mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-              <p><span itemprop="name">Ondrej Tupý</span><br>
-                <a itemprop="telephone" href="tel:+420730581488">+420&nbsp;730&nbsp;581&nbsp;488</a><br>
-                <a itemprop="email" href="mailto:sales@topmonks.com">sales@​topmonks.com</a>
+              <p><span property="name">Ondrej Tupý</span><br>
+                <a property="telephone" href="tel:+420730581488">+420&nbsp;730&nbsp;581&nbsp;488</a><br>
+                <a property="email" href="mailto:sales&#64;topmonks.com">sales@​topmonks.com</a>
               </p></div>
           </div>
         </div>
