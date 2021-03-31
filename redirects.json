@@ -16,5 +16,8 @@
   },
   "hookamonk.com": {
     "target": "https://www.hookamonk.com"
+  },
+  "hackercamp.cz": {
+    "target": "https://www.hackercamp.cz"
   }
 }
