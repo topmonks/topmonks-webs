@@ -7,7 +7,8 @@
 }
 
 body {
-  font-family: 'Inconsolata', monospace;
+  color: #585A5C;
+  font-family: 'Mukta Mahee', monospace;
   font-size: 16px;
   letter-spacing: 0;
   font-kerning: normal;
@@ -29,7 +30,16 @@ section {
 }
 
 h1, h2 {
-  font-family: 'Syne Mono', monospace;
+  font-family: 'PT Mono', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+}
+h1 {  color: #585A5C;
+  margin-bottom: 0;
+}
+small {
+  text-transform: uppercase;
 }
 
 ul {
