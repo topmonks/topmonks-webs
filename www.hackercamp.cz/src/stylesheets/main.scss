@@ -4,8 +4,8 @@
   font-weight: 400;
   font-stretch: normal;
   font-style: normal;
-  src: url("iosevka-regular.woff2") format("woff2"),
-    url("iosevka-regular.ttf") format("truetype");
+  src: url("/assets/css/iosevka-regular.woff2") format("woff2"),
+    url("/assets/css/iosevka-regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -14,8 +14,8 @@
   font-weight: 700;
   font-stretch: normal;
   font-style: normal;
-  src: url("iosevka-bold.woff2") format("woff2"),
-    url("iosevka-bold.ttf") format("truetype");
+  src: url("/assets/css/iosevka-bold.woff2") format("woff2"),
+    url("/assets/css/iosevka-bold.ttf") format("truetype");
 }
 
 :root {
