@@ -6,8 +6,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://www.google-analytics.com" />
-    <link rel="preload" href="/assets/css/iosevka-regular.woff2" as="font" crossorigin>
-    <link rel="preload" href="/assets/css/iosevka-bold.woff2" as="font" crossorigin>
+    <link
+      rel="preload"
+      href="/assets/css/iosevka-regular.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/css/iosevka-bold.woff2"
+      as="font"
+      crossorigin
+    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width,Save-Data" />
     <meta
@@ -26,7 +36,7 @@
         font-stretch: normal;
         font-style: normal;
         src: url("/assets/css/iosevka-regular.woff2") format("woff2"),
-        url("/assets/css/iosevka-regular.ttf") format("truetype");
+          url("/assets/css/iosevka-regular.ttf") format("truetype");
       }
 
       @font-face {
@@ -36,7 +46,7 @@
         font-stretch: normal;
         font-style: normal;
         src: url("/assets/css/iosevka-bold.woff2") format("woff2"),
-        url("/assets/css/iosevka-bold.ttf") format("truetype");
+          url("/assets/css/iosevka-bold.ttf") format("truetype");
       }
     </style>
     <link
@@ -75,7 +85,8 @@
         font-kerning: normal;
         font-variant-numeric: lining-nums slashed-zero;
         font-variant-ligatures: common-ligatures contextual;
-        -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+        -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum",
+          "zero";
         font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
         -webkit-text-size-adjust: 100%;
         -webkit-font-smoothing: antialiased;
@@ -120,9 +131,13 @@
       }
       hgroup {
         text-align: center;
-        display: inline-block;
+        width: fit-content;
       }
-      small {
+      hgroup h2 {
+        width: 100%;
+        margin: 0;
+      }
+      hgroup small {
         text-transform: capitalize;
       }
       h2 {
@@ -130,7 +145,7 @@
         background-image: var(--hc-gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        display: inline;
+        width: fit-content;
       }
 
       ul {
