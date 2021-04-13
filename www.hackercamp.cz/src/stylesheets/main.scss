@@ -1,9 +1,30 @@
+@font-face {
+  font-family: "Iosevka Web";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("iosevka-regular.woff2") format("woff2"),
+    url("iosevka-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Iosevka Web";
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("iosevka-bold.woff2") format("woff2"),
+    url("iosevka-bold.ttf") format("truetype");
+}
+
 :root {
   --hc-background: #fff;
   --hc-text-color: #585a5c;
   --hc-heading-color: #000;
   --hc-link-color: #2161b1;
   --hc-link-visited-color: #bb006e;
+  --hc-gradient: linear-gradient(to right, #fb5108, #bb006e, #2161b1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,9 +42,10 @@ body {
   color: var(--hc-text-color);
   background-color: var(--hc-background-color);
   background-image: var(--hc-background-image, none);
-  font-family: "Mukta Mahee", monospace;
+  font-family: "Iosevka Web", monospace;
   font-size: 16px;
   letter-spacing: 0;
+  line-height: 1.5;
   font-kerning: normal;
   font-variant-numeric: lining-nums slashed-zero;
   font-variant-ligatures: common-ligatures contextual;
@@ -48,8 +70,14 @@ section {
   max-width: 40em;
   margin: 0 auto;
 }
-footer {
-  border-top: 3px solid var(--hc-text-color);
+section {
+  margin-top: 3em;
+}
+footer::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background-image: var(--hc-gradient);
 }
 
 h1,
@@ -72,12 +100,11 @@ small {
   text-transform: capitalize;
 }
 h2 {
-  background-image: linear-gradient(to right, #fb5108, #bb006e, #2161b1);
+  background-image: var(--hc-gradient);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline;
 }
-
 
 ul {
   list-style-position: inside;

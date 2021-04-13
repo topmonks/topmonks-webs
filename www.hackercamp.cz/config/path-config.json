@@ -38,7 +38,7 @@
 
   "fonts": {
     "src": "fonts",
-    "dest": "fonts"
+    "dest": "assets/css"
   },
 
   "icons": {
