@@ -78,13 +78,13 @@ h2 {
   display: inline;
 }
 
-@counter-style emoji-hand {
-  system: cyclic;
-  symbols: "\1F449";
-  suffix: "   ";
-}
 
 ul {
-  list-style: inside emoji-hand;
+  list-style-position: inside;
+  list-style-type: none;
   padding: 0;
+}
+ul li::before {
+  content: "👉";
+  padding-right: 1ex;
 }
