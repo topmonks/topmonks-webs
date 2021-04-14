@@ -6,18 +6,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://www.google-analytics.com" />
-    <link
-      rel="preload"
-      href="/assets/css/iosevka-regular.woff2"
-      as="font"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/css/iosevka-bold.woff2"
-      as="font"
-      crossorigin
-    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width,Save-Data" />
     <meta
@@ -28,27 +16,6 @@
       name="description"
       content="Zažijte nultý ročník netradičního třídenního festivalu pro lidi z české tech scény. V duchu nekonference či barcampu se od sebe budeme vzájemně učit, bavit se a poznávat."
     />
-    <style>
-      @font-face {
-        font-family: "Iosevka Web";
-        font-display: swap;
-        font-weight: 400;
-        font-stretch: normal;
-        font-style: normal;
-        src: url("/assets/css/iosevka-regular.woff2") format("woff2"),
-          url("/assets/css/iosevka-regular.ttf") format("truetype");
-      }
-
-      @font-face {
-        font-family: "Iosevka Web";
-        font-display: swap;
-        font-weight: 700;
-        font-stretch: normal;
-        font-style: normal;
-        src: url("/assets/css/iosevka-bold.woff2") format("woff2"),
-          url("/assets/css/iosevka-bold.ttf") format("truetype");
-      }
-    </style>
     <link
       href="https://fonts.googleapis.com/css2?family=PT+Mono&amp;display=swap"
       rel="stylesheet"
@@ -78,7 +45,7 @@
         color: var(--hc-text-color);
         background-color: var(--hc-background-color);
         background-image: var(--hc-background-image, none);
-        font-family: "Iosevka Web", monospace;
+        font-family: "PT Mono", monospace;
         font-size: 16px;
         letter-spacing: 0;
         line-height: 1.5;
@@ -119,7 +86,6 @@
 
       h1,
       h2 {
-        font-family: "PT Mono", monospace;
         font-weight: bold;
         text-transform: uppercase;
         color: var(--hc-heading-color);
