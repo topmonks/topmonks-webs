@@ -129,7 +129,7 @@
   "resolutions": {
     "bluebird": "npm:bluebird@3.7.2",
     "lodash": "npm:lodash@4.17.21",
-    "html-minifier": "npm:html-minifier-terser@5.0.3",
+    "html-minifier": "npm:html-minifier-terser@5.1.1",
     "source-map-resolve": "npm:source-map-resolve@0.6.0"
   }
 }
