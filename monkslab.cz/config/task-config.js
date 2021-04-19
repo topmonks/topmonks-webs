@@ -12,7 +12,7 @@ const config = createSharedTaskConfig(__dirname, {
   workboxBuild: false,
 
   html: {
-    dataFile: "../data/global.json"
+    collections: []
   },
 
   browserSync: {

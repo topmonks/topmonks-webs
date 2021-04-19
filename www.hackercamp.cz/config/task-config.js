@@ -10,7 +10,9 @@ const config = createSharedTaskConfig(__dirname, {
   javascripts: false,
   stylesheets: true,
   workboxBuild: false,
-  html: true,
+  html: {
+    collections: []
+  },
 
   browserSync: {
     server: {
