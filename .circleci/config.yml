@@ -60,7 +60,9 @@ jobs:
           cloud-url: s3://pulumi.tmcloud.io
       - node/install-packages:
           pkg-manager: yarn
-          cache-version: v2
+          override-ci-command: yarn install --immutable
+          cache-version: v3
+          cache-path: .yarn/cache
       - run: yarn build
       - run: |
           mkdir results
@@ -86,8 +88,9 @@ jobs:
           cloud-url: s3://pulumi.tmcloud.io
       - node/install-packages:
           pkg-manager: yarn
-          cache-version: v2
-          override-ci-command: yarn install --pure-lockfile --link-duplicates --production --no-progress --disable-pnp --no-default-rc
+          override-ci-command: yarn install --immutable
+          cache-version: v3
+          cache-path: .yarn/cache
       - pulumi/update:
           stack: topmonks-webs
           skip-preview: true
@@ -105,8 +108,9 @@ jobs:
           cloud-url: s3://pulumi.tmcloud.io
       - node/install-packages:
           pkg-manager: yarn
-          cache-version: v2
-          override-ci-command: yarn install --pure-lockfile --link-duplicates --production --no-progress --disable-pnp --no-default-rc
+          override-ci-command: yarn install --immutable
+          cache-version: v3
+          cache-path: .yarn/cache
       - pulumi/preview:
           stack: topmonks-webs
 
@@ -126,7 +130,9 @@ jobs:
           at: ~/topmonks-webs
       - node/install-packages:
           pkg-manager: yarn
-          cache-version: v2
+          override-ci-command: yarn install --immutable
+          cache-version: v3
+          cache-path: .yarn/cache
       - run:
           name: Install self-signed cert for localhost
           command: |
@@ -197,26 +203,26 @@ workflows:
           filters:
             branches:
               only: trunk
-#      - docker/publish:
-#          name: publish-lhci
-#          context: org-docker
-#          docker-context: lhci.dev.tmcloud.io
-#          path: lhci.dev.tmcloud.io
-#          image: topmonks/lhci-server
-#          tag: latest
-#          filters:
-#            branches:
-#              only: trunk
-#      - swarmpit/deploy:
-#          name: deploy-lighthouse-ci
-#          stack_name: lighthouse-ci
-#          compose_file_path: lhci.dev.tmcloud.io/docker-compose.yml
-#          context: org-swarmpit-dev
-#          requires:
-#            - publish-lhci
-#          filters:
-#            branches:
-#              only: trunk
+      #      - docker/publish:
+      #          name: publish-lhci
+      #          context: org-docker
+      #          docker-context: lhci.dev.tmcloud.io
+      #          path: lhci.dev.tmcloud.io
+      #          image: topmonks/lhci-server
+      #          tag: latest
+      #          filters:
+      #            branches:
+      #              only: trunk
+      #      - swarmpit/deploy:
+      #          name: deploy-lighthouse-ci
+      #          stack_name: lighthouse-ci
+      #          compose_file_path: lhci.dev.tmcloud.io/docker-compose.yml
+      #          context: org-swarmpit-dev
+      #          requires:
+      #            - publish-lhci
+      #          filters:
+      #            branches:
+      #              only: trunk
       - merge_pr:
           context: org-github
           requires:
