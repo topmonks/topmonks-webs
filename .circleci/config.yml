@@ -138,9 +138,9 @@ jobs:
           command: |
             sudo apt-get install libnss3-tools
             mkdir -p $HOME/.pki/nssdb
-            certutil -d $HOME/.pki/nssdb -N --empty-password
-            certutil -d sql:$HOME/.pki/nssdb -A -t TC -n lws-cert -i $(yarn -s node --print "require.resolve('lws/ssl/lws-cert.pem')")
-            certutil -d sql:$HOME/.pki/nssdb -L
+            certutil -N -d $HOME/.pki/nssdb --empty-password
+            certutil -A -d sql:$HOME/.pki/nssdb -t TC -n lws-cert -i $(yarn -s node --print "require.resolve('lws/ssl/lws-cert.pem')")
+            certutil -L -d sql:$HOME/.pki/nssdb
       - run:
           name: Serve site content
           command: yarn serve -d ./public/<< parameters.site_name >>
