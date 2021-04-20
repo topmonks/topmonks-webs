@@ -38,8 +38,8 @@ const IS_VERBOSE = !!program.verbose;
 const generatedDirectories = [
   "config",
   "src",
+  "src/data",
   "src/html",
-  "src/html/data",
   "src/images",
   "src/javascripts",
   "src/static",
@@ -49,7 +49,7 @@ const generatedDirectories = [
 const generatedFiles = [
   "config/task-config.js",
   "config/path-config.json",
-  "src/html/data/global.json",
+  "src/data/global.json",
   "src/html/index.html",
   "src/javascripts/index.js",
   "src/stylesheets/main.scss"
