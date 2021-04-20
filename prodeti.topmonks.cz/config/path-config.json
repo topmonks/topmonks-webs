@@ -5,6 +5,10 @@
     "src": "html",
     "dest": "./"
   },
+
+  "data": {
+    "src": "data"
+  },
   "static": {
     "src": "static",
     "dest": "./"
