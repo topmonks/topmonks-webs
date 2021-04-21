@@ -149,6 +149,11 @@
   },
   "www.hackercamp.cz": {
     "lhci": {
+      "assert": {
+        "assertions": {
+          "offscreen-image": "warn"
+        }
+      },
       "upload": {
         "token": "c18f07e4-d6ed-430d-ad9c-ba008107d9fb"
       }
