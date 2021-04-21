@@ -1,0 +1,5 @@
+/* TEAM */
+Copy writing: Irena Zatloukalová <ir@fenekpr.cz>
+Design: Pavel Trnka <pavel.trnka@topmonks.com>
+Development: Aleš Roubíček <ales.roubicek@topmonks.com>
+Executive Director: Jakub Balada <jakub.balada@gmail.com>
