@@ -7,6 +7,7 @@
 .hc-people-bg {
   background: #c98988 no-repeat 50% 50%;
   background-size: cover;
+  background-image: cloudinaryUrl("www.hackercamp.cz/bg-people.png");
   height: 440px;
 }
 
@@ -18,6 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: cloudinaryUrl("www.hackercamp.cz/bg-camp.png");
 }
 
 @media screen and (min-resolution: 2dppx) {
@@ -61,28 +63,56 @@
 }
 
 @media screen and (min-width: 840px) {
-  .hc-people-section  .hc-card {
+  .hc-people-section .hc-card {
     margin: var(--mdc-layout-grid-margin-desktop);
   }
 }
 
+#koho {
+  @media screen and (min-width: 600px) {
+    .mdc-layout-grid__inner {
+      gap: 0;
+      margin-bottom: 6em;
+    }
+    .mdc-layout-grid__cell + .mdc-layout-grid__cell {
+      transform: translateY(6em);
+    }
+  }
+}
 
 #kde {
   width: 100%;
   max-width: var(--hc-layout-width);
-  a:link, a:visited {
+
+  a:link,
+  a:visited {
     color: #fff;
     text-decoration: none;
   }
+
   a:hover {
     text-decoration: underline;
   }
+
   a em {
     display: block;
     font-style: normal;
     font-weight: normal;
   }
-  .hc-card {
-    order: 2;
+
+  .mdc-layout-grid__cell {
+    padding: 2em 0;
+  }
+
+  @media screen and (min-width: 600px) {
+    .mdc-layout-grid__cell {
+      padding: 4em 0;
+    }
+  }
+
+  @media screen and (min-width: 840px) {
+    .hc-card {
+      order: 2;
+    }
   }
 }

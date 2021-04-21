@@ -165,6 +165,7 @@
         height: 100px;
         background: var(--hc-background-color);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        z-index: 1000;
       }
 
       .hc-hero {
@@ -305,13 +306,17 @@
     </div>
     <section class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner">
-        <article class="hc-card hc-card--decorated mdc-layout-grid__cell">
+        <article
+          class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
+        >
           <p>
             Neformální atmosféra campu nebo festivalu
             v&nbsp;přírodě&nbsp;&ndash; potkáme se fyzicky
           </p>
         </article>
-        <article class="hc-card hc-card--decorated mdc-layout-grid__cell">
+        <article
+          class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
+        >
           <p>
             Maximálně&nbsp;
             <data property="maximumAttendeeCapacity" value="300"
@@ -320,7 +325,9 @@
             v&nbsp;srdci
           </p>
         </article>
-        <article class="hc-card hc-card--decorated mdc-layout-grid__cell">
+        <article
+          class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
+        >
           <p>Každý z&nbsp;účastníků je zároveň aktivním tvůrcem programu</p>
         </article>
       </div>
@@ -356,7 +363,7 @@
         </article>
       </div>
     </section>
-    <section class="mdc-layout-grid">
+    <section id="koho" class="mdc-layout-grid">
       <h2 id="toc-koho-potkas">Koho potkáš?</h2>
 
       <div class="mdc-layout-grid__inner">
@@ -482,14 +489,46 @@
       <section id="kde" class="mdc-layout-grid">
         <div class="mdc-layout-grid__inner">
           <div
-            class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+            class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop"
           >
-            <h2 id="toc-kde-budeme">Kde budeme?</h2>
+            <h2 id="toc-kde-budeme">
+              <svg
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 107 107"
+                width="68"
+                height="68"
+                style="display: block; margin: 0 auto"
+              >
+                <path
+                  d="M53.5 8.917c-17.254 0-31.208 13.954-31.208 31.208 0 23.406 31.208 57.958 31.208 57.958s31.208-34.552 31.208-57.958c0-17.254-13.954-31.208-31.208-31.208zm0 42.354c-6.153 0-11.146-4.993-11.146-11.146 0-6.152 4.993-11.146 11.146-11.146 6.153 0 11.146 4.994 11.146 11.146 0 6.153-4.993 11.146-11.146 11.146z"
+                  fill="url(#paint0_linear)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear"
+                    x1="22.286"
+                    y1="53.508"
+                    x2="84.721"
+                    y2="53.508"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#EE771B" />
+                    <stop offset=".256" stop-color="#E9444E" />
+                    <stop offset=".427" stop-color="#E62271" />
+                    <stop offset=".789" stop-color="#684997" />
+                    <stop offset="1" stop-color="#3E7ABC" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              Kde budeme?
+            </h2>
           </div>
           <div
             property="location"
             typeof="Campground"
-            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop"
           >
             <h3>
               <a property="url" href="https://www.sobenak.cz/"
@@ -583,7 +622,9 @@
     <section id="o-nas" class="mdc-layout-grid">
       <h2 id="toc-kdo-jsme">Kdo jsme</h2>
       <div class="mdc-layout-grid__inner">
-        <article class="hc-card hc-card--decorated mdc-layout-grid__cell">
+        <article
+          class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
+        >
           <p>
             Nápad na Hacker Camp vznikl v hlavě Kuby Balady (Apify). Náš core
             organizační tým je složený z Páji (Czechitas), Kačky, Káji (Apify),
@@ -591,13 +632,17 @@
             Orchestra).
           </p>
         </article>
-        <article class="hc-card hc-card--decorated mdc-layout-grid__cell">
+        <article
+          class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
+        >
           <p>
             Všichni jsme součástí české tech scény. Znáte nás ze startupů,
             neziskovek i akcí, kde jsme se už určitě potkali.
           </p>
         </article>
-        <article class="hc-card hc-card--decorated mdc-layout-grid__cell">
+        <article
+          class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
+        >
           <p>
             Všem nám chybí fyzické akce a eventy a věříme, že právě v
             netradičních set-upech a prostředích vznikají ty nejlepší nečekané
