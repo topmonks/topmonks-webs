@@ -118,6 +118,16 @@
         color: var(--hc-link-visited-color);
       }
 
+      strong em {
+        font-style: normal;
+      }
+
+      p, ul {
+        max-width: 60em;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       header,
       footer,
       section {
@@ -151,7 +161,7 @@
       hgroup small {
         text-transform: capitalize;
       }
-      h2 {
+      h2, strong em {
         color: #fff;
         background-image: var(--hc-gradient);
         -webkit-background-clip: text;
@@ -195,6 +205,15 @@
         background-image: var(--hc-gradient);
       }
 
+      .hc-card.hc-card--flat {
+        background-image: var(--hc-gradient);
+        color: #fff;
+      }
+
+      .hc-card.hc-card--centered {
+        text-align: center;
+      }
+
       @media screen and (min-width: 600px) and (max-width: 839px) {
         .hc-card {
           padding: var(--mdc-layout-grid-gutter-tablet);
@@ -215,7 +234,7 @@
         font-weight: bold;
         display: inline-block;
         text-decoration: none;
-        padding: 0.5em 1em;
+        padding: 0.75em 2.5em;
       }
     </style>
     <link rel="stylesheet" href="/assets/css/main.css" />
@@ -323,11 +342,11 @@
       <h2 id="toc-co-cekat">Co čekat?</h2>
       <div class="mdc-layout-grid__inner">
         <article
-          class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
+          class="hc-card hc-card--centered mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
         >
           <p>
-            technologie, workshopy, panelovky, sport i&nbsp;relax a
-            večerní&nbsp;zábava
+            <strong><em>Technologie, workshopy, panelovky, sport i&nbsp;relax a
+              večerní&nbsp;zábava</em></strong>
           </p>
           <p>
             V&nbsp;duchu nekonference či barcampu se od sebe budeme vzájemně
@@ -337,8 +356,8 @@
           </p>
 
           <p>
-            Potkejte se s&nbsp;lidmi, kteří jsou podobně naladěni, a dejte
-            vzniknout novým&nbsp;věcem.
+            <strong>Potkejte se s&nbsp;lidmi, kteří jsou podobně naladěni, a dejte
+              vzniknout novým&nbsp;věcem.</strong>
           </p>
         </article>
       </div>
@@ -358,7 +377,9 @@
             Jakoukoliv akci tvoří totiž hlavně lidi, a tuhle akci chceme strávit
             s&nbsp;kamarády a těmi, které za kamarády chceme.
           </p>
-          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        </article>
+        <article
+          class="hc-card hc-card--flat mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
         >
           <p>
             Blízko máme k&nbsp;těm, kteří mají v&nbsp;srdci kus hackera. Chtějí
@@ -375,12 +396,18 @@
     <section id="pro-koho" class="mdc-layout-grid">
       <h2 id="toc-pro-koho">Pro koho?</h2>
       <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <article
+          class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
+        >
           <p>
             Můžete přijet jako jednotlivec, nebo vyrazit s&nbsp;celým svým týmem
-            a tři dny v&nbsp;přírodě si užít společně. Máme už první předběžné
-            zájemce o&nbsp;účast. Potkáte se například s&nbsp;klukama a holkama
-            z&nbsp;<span property="organizer" typeof="Organization"
+            a tři dny v&nbsp;přírodě si užít společně.
+          </p>
+          <p>
+            Máme už první předběžné zájemce o&nbsp;účast. Potkáte se například
+            s&nbsp;klukama a holkama z&nbsp;<span
+              property="organizer"
+              typeof="Organization"
               ><a property="sameAs" href="https://apify.com/">Apify</a></span
             >,
             <span property="organizer" typeof="Organization"
@@ -412,7 +439,7 @@
               ><a property="sameAs" href="https://geneea.com/">Geneea</a></span
             >, …a seznam pořád&nbsp;roste.
           </p>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -466,18 +493,29 @@
 
     <section id="kolik" class="mdc-layout-grid">
       <h2 id="toc-co-to-bude-stat">Co to bude stát?</h2>
+      <div class="mdc-layout-grid__inner">
+        <article
+          class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        >
+          <h3>5&nbsp;&ndash; 10&nbsp;tisíc Kč</h3>
+          <p>
+            Finální cenovka bude záležet na nákladech. Na akci neplánujeme
+            vydělávat, zároveň ji chceme tvořit bez velkých komerčních sponzorů.
+            Cena tedy půjde na pokrytí nákladů. Počítáme zhruba
+            s&nbsp;5&nbsp;&ndash; 10&nbsp;tisíci na každého z&nbsp;nás.
+          </p>
+        </article>
 
-      <p>
-        Finální cenovka bude záležet na nákladech. Na akci neplánujeme
-        vydělávat, zároveň ji chceme tvořit bez velkých komerčních sponzorů.
-        Cena tedy půjde na pokrytí nákladů. Počítáme zhruba
-        s&nbsp;5&nbsp;&ndash; 10&nbsp;tisíci na každého z&nbsp;nás.
-      </p>
-
-      <p>
-        Jako firma můžete podpořit účast nějaké neziskovky, nebo studenta. Dejte
-        nám vědět, zda o&nbsp;něco takového máte zájem. Rádi vás propojíme!
-      </p>
+        <article
+          class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        >
+          <p>
+            Jako firma můžete podpořit účast nějaké neziskovky, nebo studenta.
+            Dejte nám vědět, zda o&nbsp;něco takového máte zájem. Rádi vás
+            propojíme!
+          </p>
+        </article>
+      </div>
     </section>
 
     <section class="mdc-layout-grid">
@@ -531,20 +569,30 @@
 
     <section id="o-nas" class="mdc-layout-grid">
       <h2 id="toc-kdo-jsme">Kdo jsme</h2>
-
-      <p>
-        Nápad na Hacker Camp vznikl v hlavě Kuby Balady (Apify). Náš core
-        organizační tým je složený z Páji (Czechitas), Kačky, Káji (Apify),
-        Irči, Jirky (Fenek), Jirky, Aleše (TopMonks) a Pavla (Elephant
-        Orchestra).
-      </p>
-      <p>
-        Všichni jsme součástí české tech scény. Znáte nás ze startupů,
-        neziskovek i akcí, kde jsme se už určitě potkali. Všem nám chybí fyzické
-        akce a eventy a věříme, že právě v netradičních set-upech a prostředích
-        vznikají ty nejlepší nečekané nápady. Už teď se na nultý ročník Hacker
-        Campu i tebe a tvůj tým těšíme!
-      </p>
+      <div class="mdc-layout-grid__inner">
+        <article class="hc-card hc-card--decorated mdc-layout-grid__cell">
+          <p>
+            Nápad na Hacker Camp vznikl v hlavě Kuby Balady (Apify). Náš core
+            organizační tým je složený z Páji (Czechitas), Kačky, Káji (Apify),
+            Irči, Jirky (Fenek), Jirky, Aleše (TopMonks) a Pavla (Elephant
+            Orchestra).
+          </p>
+        </article>
+        <article class="hc-card hc-card--decorated mdc-layout-grid__cell">
+          <p>
+            Všichni jsme součástí české tech scény. Znáte nás ze startupů,
+            neziskovek i akcí, kde jsme se už určitě potkali.
+          </p>
+        </article>
+        <article class="hc-card hc-card--decorated mdc-layout-grid__cell">
+          <p>
+            Všem nám chybí fyzické akce a eventy a věříme, že právě v
+            netradičních set-upech a prostředích vznikají ty nejlepší nečekané
+            nápady. Už teď se na nultý ročník Hacker Campu i tebe a tvůj tým
+            těšíme!
+          </p>
+        </article>
+      </div>
     </section>
 
     <section class="mdc-layout-grid">
@@ -559,7 +607,7 @@
     </section>
 
     <footer class="mdc-layout-grid">
-      <p>© 2021 Hacker camp</p>
+      <p>© 2021 Hacker Camp</p>
     </footer>
   </body>
 </html>
