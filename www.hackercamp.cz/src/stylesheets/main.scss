@@ -1,16 +1,88 @@
 @use "@material/layout-grid/mdc-layout-grid";
 
+.hc-grey-bg {
+  background-color: #f7f7f7;
+}
+
+.hc-people-bg {
+  background: #c98988 no-repeat 50% 50%;
+  background-size: cover;
+  height: 440px;
+}
+
+.hc-camp-bg {
+  color: #fff;
+  background: #d3a684 no-repeat 50% 50%;
+  background-size: cover;
+  height: 732px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-resolution: 2dppx) {
+  .hc-camp-bg {
+    background-image: cloudinaryUrl(
+      "www.hackercamp.cz/bg-camp.png",
+      (
+        dpr: 2
+      )
+    );
+  }
+  .hc-people-bg {
+    background-image: cloudinaryUrl(
+      "www.hackercamp.cz/bg-people.png",
+      (
+        dpr: 2
+      )
+    );
+  }
+}
+
 @media screen and (prefers-color-scheme: light) {
   .hc-code-bg {
-    background-image: cloudinaryUrl("www.hackercamp.cz/bg-light-1x.png");
-    background-repeat: repeat-x;
+    background: cloudinaryUrl("www.hackercamp.cz/bg-light-1x.png") repeat-x;
   }
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (prefers-color-scheme: light) {
-  .hc-code-bg {
-    background-image: cloudinaryUrl("www.hackercamp.cz/bg-light-2x.png");
-    background-repeat: repeat-x;
+.hc-people-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hc-people-section .hc-card {
+  margin: var(--mdc-layout-grid-margin-phone);
+}
+@media screen and (min-width: 600px) and (max-width: 839px) {
+  .hc-people-section .hc-card {
+    margin: var(--mdc-layout-grid-margin-tablet);
   }
 }
 
+@media screen and (min-width: 840px) {
+  .hc-people-section  .hc-card {
+    margin: var(--mdc-layout-grid-margin-desktop);
+  }
+}
+
+
+#kde {
+  width: 100%;
+  max-width: var(--hc-layout-width);
+  a:link, a:visited {
+    color: #fff;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a em {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+  }
+  .hc-card {
+    order: 2;
+  }
+}
