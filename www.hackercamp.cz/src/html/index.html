@@ -225,7 +225,6 @@
         padding: 0.75em 2.5em;
       }
     </style>
-    <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="canonical" href="https://www.hackercamp.cz/" />
     <link rel="author" href="/humans.txt" type="text/plain" />
 
@@ -668,5 +667,12 @@
     <footer class="mdc-layout-grid">
       <p>© 2021 Hacker Camp</p>
     </footer>
+
+    <script type="module">
+      const stylesheet = document.createElement("link");
+      stylesheet.rel = "stylesheet";
+      stylesheet.href = "/assets/css/main.css";
+      document.head.appendChild(stylesheet);
+    </script>
   </body>
 </html>
