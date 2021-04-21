@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Hacker Camp</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://use.typekit.net" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://www.google-analytics.com" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -16,18 +16,49 @@
       name="description"
       content="Zažijte nultý ročník netradičního třídenního festivalu pro lidi z české tech scény. V duchu nekonference či barcampu se od sebe budeme vzájemně učit, bavit se a poznávat."
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Mono&amp;display=swap"
-      rel="stylesheet"
-    />
+    <style>
+      @font-face {
+        font-family: "pt-mono";
+        src: url("https://use.typekit.net/af/7d382a/00000000000000007735a11b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+            format("woff2"),
+          url("https://use.typekit.net/af/7d382a/00000000000000007735a11b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+            format("woff"),
+          url("https://use.typekit.net/af/7d382a/00000000000000007735a11b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+            format("opentype");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: "pt-mono";
+        src: url("https://use.typekit.net/af/275cbc/00000000000000007735a125/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+            format("woff2"),
+          url("https://use.typekit.net/af/275cbc/00000000000000007735a125/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+            format("woff"),
+          url("https://use.typekit.net/af/275cbc/00000000000000007735a125/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
+            format("opentype");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 700;
+      }
+    </style>
     <style>
       :root {
+        --hc-font-family: pt-mono, monospace;
         --hc-background: #fff;
         --hc-text-color: #585a5c;
         --hc-heading-color: #000;
         --hc-link-color: #2161b1;
         --hc-link-visited-color: #bb006e;
-        --hc-gradient: linear-gradient(90deg, #EE771B -0.01%, #E9444E 25.57%, #E62271 42.71%, #684997 78.9%, #3E7ABC 100.02%);
+        --hc-gradient: linear-gradient(
+          90deg,
+          #ee771b -0.01%,
+          #e9444e 25.57%,
+          #e62271 42.71%,
+          #684997 78.9%,
+          #3e7abc 100.02%
+        );
       }
 
       @media (prefers-color-scheme: dark) {
@@ -41,11 +72,17 @@
         }
       }
 
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
       body {
         color: var(--hc-text-color);
         background-color: var(--hc-background-color);
         background-image: var(--hc-background-image, none);
-        font-family: "PT Mono", monospace;
+        font-family: var(--hc-font-family);
         font-size: 16px;
         letter-spacing: 0;
         line-height: 1.5;
@@ -95,13 +132,7 @@
         font-weight: 800;
         font-size: 3em;
       }
-      hgroup {
-        text-align: center;
-        width: -moz-fit-content;
-        width: fit-content;
-      }
       hgroup h2 {
-        width: 100%;
         margin: 0;
       }
       hgroup small {
@@ -134,7 +165,7 @@
         font-weight: bold;
         display: inline-block;
         text-decoration: none;
-        padding: 0.5em 1em
+        padding: 0.5em 1em;
       }
     </style>
     <link rel="canonical" href="https://www.hackercamp.cz/" />
