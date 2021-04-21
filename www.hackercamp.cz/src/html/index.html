@@ -121,8 +121,8 @@
       header,
       footer,
       section {
-        max-width: 40em;
         margin: 0 auto;
+        max-width: 1600px;
       }
       section {
         margin-top: 3em;
@@ -158,15 +158,21 @@
         width: -moz-fit-content;
         width: fit-content;
       }
-
-      ul {
-        list-style-position: inside;
-        list-style-type: none;
-        padding: 0;
+      section h2 {
+        margin-left: auto;
+        margin-right: auto;
       }
-      ul li::before {
-        content: "👉";
-        padding-right: 1ex;
+
+      .hc-navbar {
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        background: #ffffff;
+        box-shadow: 04px 20px rgba(0, 0, 0, 0.04);
+      }
+
+      .hc-hero {
+        font-weight: bold;
       }
 
       .hc-cta,
@@ -180,6 +186,7 @@
         padding: 0.5em 1em;
       }
     </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="canonical" href="https://www.hackercamp.cz/" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -230,157 +237,209 @@
       ></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header>
-      <hgroup>
-        <h1 property="name">Hacker Camp</h1>
-        <h2><small>Hack to the Future</small></h2>
-      </hgroup>
+    <header id="top" class="hc-hero mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        >
+          <hgroup>
+            <h1 property="name">Hacker Camp</h1>
+            <h2><small>Hack to the Future</small></h2>
+          </hgroup>
+          <p property="description">
+            Zažijte nultý ročník netradičního třídenního festivalu pro lidi
+            z&nbsp;české tech scény.
+          </p>
+          <p>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeDdZ5ZLSxS6lVXM4jshT8fBFQkMVww3jT5etoAPf8aK0yK0A/viewform"
+              class="hc-cta"
+              >Chci se zapojit</a
+            >
+          </p>
+        </div>
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        ></div>
+      </div>
     </header>
-    <section>
-      <ul>
-        <li><strong>Tři dny na konci léta</strong></li>
-        <li>
-          <strong
-            >Neformální atmosféra campu nebo festivalu v&nbsp;přírodě</strong
-          >&nbsp;&ndash; potkáme se fyzicky
-        </li>
-        <li>
-          Maximálně&nbsp;<strong>
+
+    <section class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <article class="mdc-layout-grid__cell">
+          <p>
+            Neformální atmosféra campu nebo festivalu
+            v&nbsp;přírodě&nbsp;&ndash; potkáme se fyzicky
+          </p>
+        </article>
+        <article class="mdc-layout-grid__cell">
+          <p>
+            Maximálně&nbsp;
             <data property="maximumAttendeeCapacity" value="300"
-              >tři stovky </data
-            >&nbsp;lidí z&nbsp;české tech scény</strong
-          >
-          s&nbsp;kusem hackera v&nbsp;srdci
-        </li>
-        <li>
-          <strong
-            >Každý z&nbsp;účastníků je zároveň aktivním tvůrcem programu</strong
-          >
-        </li>
-        <li>
-          Co čekat: technologie, workshopy, panelovky, sport i&nbsp;relax a
-          večerní&nbsp;zábava
-        </li>
-      </ul>
-      <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeDdZ5ZLSxS6lVXM4jshT8fBFQkMVww3jT5etoAPf8aK0yK0A/viewform" class="hc-cta">Chci se zapojit</a></p>
-    </section>
-    <section id="popis">
-      <p property="description">
-        Zažijte nultý ročník netradičního třídenního festivalu pro lidi
-        z&nbsp;české tech scény. V&nbsp;duchu nekonference či barcampu se od
-        sebe budeme vzájemně učit, bavit se a poznávat. Večer se vám postaráme
-        o&nbsp;festivalový program&nbsp;&ndash; s&nbsp;kapelami, dobrým pivem a
-        vším, co k&nbsp;festivalům patří. Jaké si to uděláme, takové
-        to&nbsp;bude.
-      </p>
-
-      <p>
-        Potkejte se s&nbsp;lidmi, kteří jsou podobně naladěni, a dejte vzniknout
-        novým&nbsp;věcem.
-      </p>
-    </section>
-    <section>
-      <h2 id="toc-koho-potkas">Koho potkáš?</h2>
-
-      <p>
-        Lidi z&nbsp;české tech scény a spřátelených neziskovek. Maximálně nás
-        letos budou tři stovky. Hacker Camp je jen pro zvané. Jakoukoliv akci
-        tvoří totiž hlavně lidi, a tuhle akci chceme strávit s&nbsp;kamarády a
-        těmi, které za kamarády chceme. Blízko máme k&nbsp;těm, kteří mají
-        v&nbsp;srdci kus hackera. Chtějí
-        <strong>zažít a sami postavit</strong> něco nového. Mají rádi a rádi se
-        podílejí například i&nbsp;na neziskových projektech. A&nbsp;hlavně se
-        chtějí konečně potkat fyzicky a něco nového se od sebe
-        <strong>vzájemně naučit</strong>. Každý účastník je zároveň tvůrcem
-        programu. Proto zveme hlavně ty, kdo se chtějí do programu společných
-        tří dní zapojit.
-      </p>
-
-      <p>
-        Můžete přijet jako jednotlivec, nebo vyrazit s&nbsp;celým svým týmem a
-        tři dny v&nbsp;přírodě si užít společně. Máme už první předběžné zájemce
-        o&nbsp;účast. Potkáte se například s&nbsp;klukama a holkama z&nbsp;<span
-          property="organizer"
-          typeof="Organization"
-          ><a property="sameAs" href="https://apify.com/">Apify</a></span
-        >,
-        <span property="organizer" typeof="Organization"
-          ><a property="sameAs" href="https://www.topmonks.com/"
-            >TopMonks</a
-          ></span
-        >,
-        <span property="organizer" typeof="Organization"
-          ><a property="sameAs" href="https://www.czechitas.cz/"
-            >Czechitas</a
-          ></span
-        >,
-        <span property="attendee" typeof="Organization"
-          ><a property="sameAs" href="https://www.hlidacstatu.cz/"
-            >Hlídač Státu</a
-          ></span
-        >,
-        <span property="organizer" typeof="Organization"
-          ><a property="sameAs" href="https://www.fenekpr.cz/">Fenek</a></span
-        >,
-        <span property="attendee" typeof="Organization"
-          ><a property="sameAs" href="https://www.mavericks.legal/"
-            >Mavericks</a
-          ></span
-        >,
-        <span property="attendee" typeof="Organization"
-          ><a property="sameAs" href="https://geneea.com/">Geneea</a></span
-        >, …a seznam pořád&nbsp;roste.
-      </p>
-
-      <!--
-<div class="hc-cta">
-<a href="#" class="hc-btn">Přijeďte taky</a>
-</div>
--->
-    </section>
-
-    <section id="kdy">
-      <h2 id="toc-kdy-prijet">Kdy přijet?</h2>
-
-      <p>
-        První týden v&nbsp;září:
-        <strong
-          >Začínáme ve čtvrtek
-          <time property="startDate" datetime="2021-09-02">2.&nbsp;září</time>
-          a končíme v&nbsp;neděli
-          <time property="endDate" datetime="2021-09-05">5.&nbsp;září</time>
-        </strong>
-        v&nbsp;poledne, hned jak se proberete po good-bye&nbsp;party.
-      </p>
-    </section>
-
-    <section id="kde">
-      <h2 id="toc-kde-budeme">Kde budeme?</h2>
-
-      <div property="location" typeof="Campground">
-        <h3>
-          <a property="url" href="https://www.sobenak.cz/"
-            ><span property="name">Sobeňák</span> - krásný areál v srdci Brd</a
-          >
-        </h3>
-        <p property="address" typeof="PostalAddress">
-          <span property="streetAddress">Starý Rožmitál 148</span><br />
-          <span property="postalCode">262 42</span>
-          <span property="addressLocality">Rožmitál pod Třemšínem</span>
-        </p>
+              >tři stovky</data
+            >&nbsp;lidí z&nbsp;české tech scény s&nbsp;kusem hackera
+            v&nbsp;srdci
+          </p>
+        </article>
+        <article class="mdc-layout-grid__cell">
+          <p>Každý z&nbsp;účastníků je zároveň aktivním tvůrcem programu</p>
+        </article>
       </div>
     </section>
-    <section id="kolik">
+
+    <section id="co-cekat" class="mdc-layout-grid">
+      <h2 id="toc-co-cekat">Co čekat?</h2>
+      <div class="mdc-layout-grid__inner">
+        <article class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <p>
+            technologie, workshopy, panelovky, sport i&nbsp;relax a
+            večerní&nbsp;zábava
+          </p>
+          <p>
+            V&nbsp;duchu nekonference či barcampu se od sebe budeme vzájemně
+            učit, bavit se a poznávat. Večer se vám postaráme o&nbsp;festivalový
+            program&nbsp;&ndash; s&nbsp;kapelami, dobrým pivem a vším, co
+            k&nbsp;festivalům patří. Jaké si to uděláme, takové to&nbsp;bude.
+          </p>
+
+          <p>
+            Potkejte se s&nbsp;lidmi, kteří jsou podobně naladěni, a dejte
+            vzniknout novým&nbsp;věcem.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section class="mdc-layout-grid">
+      <h2 id="toc-koho-potkas">Koho potkáš?</h2>
+
+      <div class="mdc-layout-grid__inner">
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        >
+          <p>
+            Lidi z&nbsp;české tech scény a spřátelených neziskovek. Maximálně
+            nás letos budou tři stovky. Hacker Camp je jen pro zvané.
+          </p>
+          <p>
+            Jakoukoliv akci tvoří totiž hlavně lidi, a tuhle akci chceme strávit
+            s&nbsp;kamarády a těmi, které za kamarády chceme.
+          </p>
+        </div>
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        >
+          <p>
+            Blízko máme k&nbsp;těm, kteří mají v&nbsp;srdci kus hackera. Chtějí
+            zažít a sami postavit něco nového. Mají rádi a rádi se podílejí
+            například i&nbsp;na neziskových projektech. A&nbsp;hlavně se chtějí
+            konečně potkat fyzicky a něco nového se od sebe vzájemně naučit.
+            Každý účastník je zároveň tvůrcem programu. Proto zveme hlavně ty,
+            kdo se chtějí do programu společných tří dní zapojit.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pro-koho" class="mdc-layout-grid">
+      <h2 id="toc-pro-koho">Pro koho?</h2>
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <p>
+            Můžete přijet jako jednotlivec, nebo vyrazit s&nbsp;celým svým týmem
+            a tři dny v&nbsp;přírodě si užít společně. Máme už první předběžné
+            zájemce o&nbsp;účast. Potkáte se například s&nbsp;klukama a holkama
+            z&nbsp;<span property="organizer" typeof="Organization"
+              ><a property="sameAs" href="https://apify.com/">Apify</a></span
+            >,
+            <span property="organizer" typeof="Organization"
+              ><a property="sameAs" href="https://www.topmonks.com/"
+                >TopMonks</a
+              ></span
+            >,
+            <span property="organizer" typeof="Organization"
+              ><a property="sameAs" href="https://www.czechitas.cz/"
+                >Czechitas</a
+              ></span
+            >,
+            <span property="attendee" typeof="Organization"
+              ><a property="sameAs" href="https://www.hlidacstatu.cz/"
+                >Hlídač Státu</a
+              ></span
+            >,
+            <span property="organizer" typeof="Organization"
+              ><a property="sameAs" href="https://www.fenekpr.cz/"
+                >Fenek</a
+              ></span
+            >,
+            <span property="attendee" typeof="Organization"
+              ><a property="sameAs" href="https://www.mavericks.legal/"
+                >Mavericks</a
+              ></span
+            >,
+            <span property="attendee" typeof="Organization"
+              ><a property="sameAs" href="https://geneea.com/">Geneea</a></span
+            >, …a seznam pořád&nbsp;roste.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kdy" class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        >
+          <h2 id="toc-kdy-prijet">Kdy přijet?</h2>
+        </div>
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        >
+          <p>
+            První týden v&nbsp;září: Začínáme ve čtvrtek
+            <time property="startDate" datetime="2021-09-02">2.&nbsp;září</time>
+            a končíme v&nbsp;neděli
+            <time property="endDate" datetime="2021-09-05">5.&nbsp;září</time>
+            v&nbsp;poledne, hned jak se proberete po good-bye&nbsp;party.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kde" class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        >
+          <h2 id="toc-kde-budeme">Kde budeme?</h2>
+        </div>
+        <div
+          property="location"
+          typeof="Campground"
+          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        >
+          <h3>
+            <a property="url" href="https://www.sobenak.cz/"
+              ><span property="name">Sobeňák</span> - krásný areál v srdci
+              Brd</a
+            >
+          </h3>
+          <p property="address" typeof="PostalAddress">
+            <span property="streetAddress">Starý Rožmitál 148</span><br />
+            <span property="postalCode">262 42</span>
+            <span property="addressLocality">Rožmitál pod Třemšínem</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kolik" class="mdc-layout-grid">
       <h2 id="toc-co-to-bude-stat">Co to bude stát?</h2>
 
       <p>
         Finální cenovka bude záležet na nákladech. Na akci neplánujeme
         vydělávat, zároveň ji chceme tvořit bez velkých komerčních sponzorů.
-        Cena tedy půjde na pokrytí nákladů.
-        <strong
-          >Počítáme zhruba s&nbsp;5&nbsp;&ndash; 10&nbsp;tisíci na každého
-          z&nbsp;nás</strong
-        >.
+        Cena tedy půjde na pokrytí nákladů. Počítáme zhruba
+        s&nbsp;5&nbsp;&ndash; 10&nbsp;tisíci na každého z&nbsp;nás.
       </p>
 
       <p>
@@ -388,13 +447,14 @@
         nám vědět, zda o&nbsp;něco takového máte zájem. Rádi vás propojíme!
       </p>
     </section>
-    <section id="co-cekat">
+
+    <section class="mdc-layout-grid">
       <h2 id="toc-co-od-hacker-campu-cekat">Co od Hacker Campu čekat?</h2>
 
       <p>
-        Děláme nekomerční a z&nbsp;principu <strong>neformální akci</strong>,
-        kde nám má všem být dobře. Tohle jsou základní geny Hacker campu. Jediná
-        část, kde nestrpíme kompromisy:
+        Děláme nekomerční a z&nbsp;principu neformální akci, kde nám má všem být
+        dobře. Tohle jsou základní geny Hacker campu. Jediná část, kde nestrpíme
+        kompromisy:
       </p>
 
       <ul>
@@ -436,7 +496,8 @@
         </li>
       </ul>
     </section>
-    <section id="o-nas">
+
+    <section id="o-nas" class="mdc-layout-grid">
       <h2 id="toc-kdo-jsme">Kdo jsme</h2>
 
       <p>
@@ -453,17 +514,19 @@
         Campu i tebe a tvůj tým těšíme!
       </p>
     </section>
-    <section>
+
+    <section class="mdc-layout-grid">
       <h2>Chceš přijet?</h2>
       <p>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSeDdZ5ZLSxS6lVXM4jshT8fBFQkMVww3jT5etoAPf8aK0yK0A/viewform"
           >Vyplň nám dotazníček</a
-        >, ideálně rovnou s nápadem, jak bys Hacker Camp obohatil(a) a my se ti pak ozveme. Těšíme se!
+        >, ideálně rovnou s nápadem, jak bys Hacker Camp obohatil(a) a my se ti
+        pak ozveme. Těšíme se!
       </p>
     </section>
 
-    <footer>
+    <footer class="mdc-layout-grid">
       <p>© 2021 Hacker camp</p>
     </footer>
   </body>
