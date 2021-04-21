@@ -176,6 +176,37 @@
         font-weight: bold;
       }
 
+      .hc-card {
+        background-color: var(--hc-background-color);
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.07);
+        padding: var(--mdc-layout-grid-gutter-phone);
+      }
+      .hc-card.hc-card--decorated {
+        position: relative;
+      }
+      .hc-card.hc-card--decorated::before {
+        content: "";
+        display: block;
+        width: 135px;
+        height: 4px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: var(--hc-gradient);
+      }
+
+      @media screen and (min-width: 600px) and (max-width: 839px) {
+        .hc-card {
+          padding: var(--mdc-layout-grid-gutter-tablet);
+        }
+      }
+
+      @media screen and (min-width: 840px) {
+        .hc-card {
+          padding: var(--mdc-layout-grid-gutter-desktop);
+        }
+      }
+
       .hc-cta,
       .hc-cta:link,
       .hc-cta:visited {
@@ -267,13 +298,13 @@
 
     <section class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner">
-        <article class="mdc-layout-grid__cell">
+        <article class="hc-card hc-card--decorated mdc-layout-grid__cell">
           <p>
             Neformální atmosféra campu nebo festivalu
             v&nbsp;přírodě&nbsp;&ndash; potkáme se fyzicky
           </p>
         </article>
-        <article class="mdc-layout-grid__cell">
+        <article class="hc-card hc-card--decorated mdc-layout-grid__cell">
           <p>
             Maximálně&nbsp;
             <data property="maximumAttendeeCapacity" value="300"
@@ -282,7 +313,7 @@
             v&nbsp;srdci
           </p>
         </article>
-        <article class="mdc-layout-grid__cell">
+        <article class="hc-card hc-card--decorated mdc-layout-grid__cell">
           <p>Každý z&nbsp;účastníků je zároveň aktivním tvůrcem programu</p>
         </article>
       </div>
@@ -291,7 +322,9 @@
     <section id="co-cekat" class="mdc-layout-grid">
       <h2 id="toc-co-cekat">Co čekat?</h2>
       <div class="mdc-layout-grid__inner">
-        <article class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <article
+          class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
+        >
           <p>
             technologie, workshopy, panelovky, sport i&nbsp;relax a
             večerní&nbsp;zábava
@@ -314,8 +347,8 @@
       <h2 id="toc-koho-potkas">Koho potkáš?</h2>
 
       <div class="mdc-layout-grid__inner">
-        <div
-          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+        <article
+          class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
         >
           <p>
             Lidi z&nbsp;české tech scény a spřátelených neziskovek. Maximálně
@@ -325,8 +358,6 @@
             Jakoukoliv akci tvoří totiž hlavně lidi, a tuhle akci chceme strávit
             s&nbsp;kamarády a těmi, které za kamarády chceme.
           </p>
-        </div>
-        <div
           class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
         >
           <p>
@@ -337,7 +368,7 @@
             Každý účastník je zároveň tvůrcem programu. Proto zveme hlavně ty,
             kdo se chtějí do programu společných tří dní zapojit.
           </p>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -358,6 +389,11 @@
               ></span
             >,
             <span property="organizer" typeof="Organization"
+              ><a property="sameAs" href="https://www.fenekpr.cz/"
+                >Fenek</a
+              ></span
+            >,
+            <span property="organizer" typeof="Organization"
               ><a property="sameAs" href="https://www.czechitas.cz/"
                 >Czechitas</a
               ></span
@@ -365,11 +401,6 @@
             <span property="attendee" typeof="Organization"
               ><a property="sameAs" href="https://www.hlidacstatu.cz/"
                 >Hlídač Státu</a
-              ></span
-            >,
-            <span property="organizer" typeof="Organization"
-              ><a property="sameAs" href="https://www.fenekpr.cz/"
-                >Fenek</a
               ></span
             >,
             <span property="attendee" typeof="Organization"
