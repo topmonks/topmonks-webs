@@ -1,1 +1,16 @@
 @use "@material/layout-grid/mdc-layout-grid";
+
+@media screen and (prefers-color-scheme: light) {
+  .hc-code-bg {
+    background-image: cloudinaryUrl("www.hackercamp.cz/bg-light-1x.png");
+    background-repeat: repeat-x;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (prefers-color-scheme: light) {
+  .hc-code-bg {
+    background-image: cloudinaryUrl("www.hackercamp.cz/bg-light-2x.png");
+    background-repeat: repeat-x;
+  }
+}
+

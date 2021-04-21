@@ -42,7 +42,7 @@
     <style>
       :root {
         --hc-font-family: PT Mono, monospace;
-        --hc-background: #fff;
+        --hc-background-color: #fff;
         --hc-text-color: #585a5c;
         --hc-heading-color: #000;
         --hc-link-color: #2161b1;
@@ -162,8 +162,8 @@
         position: fixed;
         width: 100%;
         height: 100px;
-        background: #ffffff;
-        box-shadow: 04px 20px rgba(0, 0, 0, 0.04);
+        background: var(--hc-background-color);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
       }
 
       .hc-hero {
@@ -177,6 +177,7 @@
       }
       .hc-card.hc-card--decorated {
         position: relative;
+        z-index: 1;
       }
       .hc-card.hc-card--decorated::before {
         content: "";
@@ -186,6 +187,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 2;
         background-image: var(--hc-gradient);
       }
 
@@ -272,33 +274,34 @@
       ></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header id="top" class="hc-hero mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
-        <div
-          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
-        >
-          <hgroup>
-            <h1 property="name">Hacker Camp</h1>
-            <h2><small>Hack to the Future</small></h2>
-          </hgroup>
-          <p property="description">
-            Zažijte nultý ročník netradičního třídenního festivalu pro lidi
-            z&nbsp;české tech scény.
-          </p>
-          <p>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeDdZ5ZLSxS6lVXM4jshT8fBFQkMVww3jT5etoAPf8aK0yK0A/viewform"
-              class="hc-cta"
-              >Chci se zapojit</a
-            >
-          </p>
+    <div class="hc-code-bg">
+      <header id="top" class="hc-hero mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <div
+            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+          >
+            <hgroup>
+              <h1 property="name">Hacker Camp</h1>
+              <h2><small>Hack to the Future</small></h2>
+            </hgroup>
+            <p property="description">
+              Zažijte nultý ročník netradičního třídenního festivalu pro lidi
+              z&nbsp;české tech scény.
+            </p>
+            <p>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeDdZ5ZLSxS6lVXM4jshT8fBFQkMVww3jT5etoAPf8aK0yK0A/viewform"
+                class="hc-cta"
+                >Chci se zapojit</a
+              >
+            </p>
+          </div>
+          <div
+            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+          ></div>
         </div>
-        <div
-          class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
-        ></div>
-      </div>
-    </header>
-
+      </header>
+    </div>
     <section class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner">
         <article class="hc-card hc-card--decorated mdc-layout-grid__cell">
