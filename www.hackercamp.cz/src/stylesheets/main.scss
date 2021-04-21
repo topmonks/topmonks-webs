@@ -3,6 +3,7 @@
 
 @media screen and (min-width: 600px) {
   .hc-card.hc-card--superdecorated {
+    width: 66%;
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
@@ -22,8 +23,8 @@
       width: 148px;
       height: 148px;
       position: absolute;
-      bottom: -20px;
-      right: -20px;
+      bottom: -22px;
+      right: -22px;
       z-index: -1;
       background-image: cloudinaryUrl("www.hackercamp.cz/gay-dots.png");
     }
