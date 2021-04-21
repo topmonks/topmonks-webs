@@ -151,7 +151,7 @@
     "lhci": {
       "assert": {
         "assertions": {
-          "offscreen-image": "warn"
+          "offscreen-images": "warn"
         }
       },
       "upload": {
