@@ -18,12 +18,19 @@ registerAutoTags({
 });
 
 createCertificate("www.cbx.cz");
-createCertificate("www.chytrybox.cz");
-createCertificate("www.hackercamp.cz");
 createCertificate("www.hookamonk.com");
 createCertificate("www.ingridapp.io");
 createCertificate("www.zive.tv");
 
+createCertificate("www.hackercamp.cz");
+createGoogleMxRecords("hackercamp.cz");
+createTxtRecord(
+  "hc-google-site-verification",
+  "hackercamp.cz",
+  "google-site-verification=eIaBVqhznPV-0AAEEbFJN82j3w063w_tW0-DUZWX5C0"
+);
+
+createCertificate("www.chytrybox.cz");
 createGoogleMxRecords("chytrybox.cz");
 createTxtRecord(
   "google-site-verification",
