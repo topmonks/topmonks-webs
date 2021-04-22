@@ -143,7 +143,7 @@
         text-transform: capitalize;
       }
       h2,
-      strong em {
+      .hc-text--gay {
         color: #fff;
         background-image: var(--hc-gradient);
         -webkit-background-clip: text;
@@ -187,6 +187,11 @@
         left: 0;
         z-index: 2;
         background-image: var(--hc-gradient);
+        transition: width 0.4s ease;
+      }
+      .hc-card.hc-card--decorated:active::before,
+      .hc-card.hc-card--decorated:hover::before {
+        width: 100%;
       }
 
       .hc-card.hc-card--flat {
@@ -219,6 +224,23 @@
         display: inline-block;
         text-decoration: none;
         padding: 0.75em 2.5em;
+      }
+      .hc-icon-link:link,
+      .hc-icon-link:visited {
+        --icon-color: var(--hc-text-color);
+        color: var(--hc-text-color);
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+      }
+      .hc-icon-link:hover {
+        --icon-color: var(--hc-link-color);
+        color: var(--hc-link-color);
+        text-decoration: underline;
+      }
+      .hc-icon-link svg {
+        padding-right: 1ex;
       }
     </style>
     <link rel="canonical" href="https://www.hackercamp.cz/" />
@@ -336,7 +358,7 @@
         <article
           class="hc-card hc-card--centered hc-card--superdecorated mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
         >
-          <p>
+          <p class="hc-text--gay">
             <strong
               ><em
                 >Technologie, workshopy, panelovky, sport i&nbsp;relax a
@@ -487,9 +509,9 @@
             </h2>
           </div>
           <article
-            class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+            class="hc-card hc-card--semidecorated mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
           >
-            <h3>První týden v&nbsp;září</h3>
+            <h3 class="hc-text--gay">První týden v&nbsp;září</h3>
             <p>
               Začínáme ve čtvrtek
               <time property="startDate" datetime="2021-09-02"
@@ -501,8 +523,21 @@
             </p>
             <p>
               <a
+                class="hc-icon-link"
                 href="http://www.google.com/calendar/event?action=TEMPLATE&amp;dates=20210902%2F20210906&amp;text=Hacker%20Camp&amp;location=Sobe%C5%88%C3%A1k%2C%20Star%C3%BD%20Ro%C5%BEmit%C3%A1l%20148%2C%20Ro%C5%BEmit%C3%A1l%20pod%20T%C5%99em%C5%A1%C3%ADnem&amp;details=Za%C5%BEijte%20nult%C3%BD%20ro%C4%8Dn%C3%ADk%20netradi%C4%8Dn%C3%ADho%20t%C5%99%C3%ADdenn%C3%ADho%20festivalu%20pro%20lidi%20z%20%C4%8Desk%C3%A9%20tech%20sc%C3%A9ny."
-                >Přidat do kalendáře</a
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19a2 2 0 002 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                    fill="var(--icon-color)"
+                  />
+                </svg>
+                Přidat do kalendáře</a
               >
             </p>
           </article>
@@ -576,7 +611,7 @@
           <article
             class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
           >
-            <h3>5&nbsp;&ndash; 10&nbsp;tisíc Kč</h3>
+            <h3 class="hc-text--gay">5&nbsp;&ndash; 10&nbsp;tisíc Kč</h3>
             <p>
               Finální cenovka bude záležet na nákladech. Na akci neplánujeme
               vydělávat, zároveň ji chceme tvořit bez velkých komerčních
