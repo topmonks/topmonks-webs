@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Hacker Camp</title>
+    <link rel="preconnect" href="https://res.cloudinary.com" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://www.google-analytics.com" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -343,30 +344,33 @@
           <div
             class="hc-camp-detail mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
           >
-            {% set publicId = images["header-camp.png"]["public_id"] %}
-            <picture>
-              <source
-                media="screen and (max-width: 599px)"
-                srcset="{{ publicId | cloudinaryUrl(width=480,height=480,dpr=1) }} 1x,
-                    {{ publicId | cloudinaryUrl(width=480,height=480,dpr=1.5) }} 1.5x,
-                    {{ publicId | cloudinaryUrl(width=480,height=480,dpr=2) }} 2x"
-              />
-              <source
-                media="screen and (min-width: 600px) and (max-width: 839px)"
-                srcset="{{ publicId | cloudinaryUrl(width=360,height=360,dpr=1) }} 1x,
-                    {{ publicId | cloudinaryUrl(width=360,height=360,dpr=1.5) }} 1.5x,
-                    {{ publicId | cloudinaryUrl(width=360,height=360,dpr=2) }} 2x"
-              />
-              <source
-                media="screen and (min-width: 840px)"
-                srcset="{{ publicId | cloudinaryUrl(width=622,height=622,crop="fill",dpr=1) }} 1x,
-                    {{ publicId | cloudinaryUrl(width=622,height=622,crop="fill",dpr=1.5) }} 1.5x,
-                    {{ publicId | cloudinaryUrl(width=622,height=622,crop="fill",dpr=2) }} 2x">
-              <img
-                alt="" loading="lazy" class="responsive"
-                width="622" height="622"
-                src="{{ publicId | cloudinaryUrl(width=622,height=622,crop="fill",dpr="auto") }}">
-            </picture>
+            <video class="responsive" autoplay loop>
+              <source src="https://res.cloudinary.com/topmonks/video/upload/c_crop,f_auto,g_center,h_622,q_auto,w_622/v1619106183/www.hackercamp.cz/Pohled_na_Soben%CC%8Ca%CC%81k_z_dronu.mp4">
+              {% set publicId = images["header-camp.png"]["public_id"] %}
+              <picture>
+                <source
+                  media="screen and (max-width: 599px)"
+                  srcset="{{ publicId | cloudinaryUrl(width=480,height=480,dpr=1) }} 1x,
+                      {{ publicId | cloudinaryUrl(width=480,height=480,dpr=1.5) }} 1.5x,
+                      {{ publicId | cloudinaryUrl(width=480,height=480,dpr=2) }} 2x"
+                />
+                <source
+                  media="screen and (min-width: 600px) and (max-width: 839px)"
+                  srcset="{{ publicId | cloudinaryUrl(width=360,height=360,dpr=1) }} 1x,
+                      {{ publicId | cloudinaryUrl(width=360,height=360,dpr=1.5) }} 1.5x,
+                      {{ publicId | cloudinaryUrl(width=360,height=360,dpr=2) }} 2x"
+                />
+                <source
+                  media="screen and (min-width: 840px)"
+                  srcset="{{ publicId | cloudinaryUrl(width=622,height=622,crop="fill",dpr=1) }} 1x,
+                      {{ publicId | cloudinaryUrl(width=622,height=622,crop="fill",dpr=1.5) }} 1.5x,
+                      {{ publicId | cloudinaryUrl(width=622,height=622,crop="fill",dpr=2) }} 2x">
+                <img
+                  alt="" loading="lazy" class="responsive"
+                  width="622" height="622"
+                  src="{{ publicId | cloudinaryUrl(width=622,height=622,crop="fill",dpr="auto") }}">
+              </picture>
+            </video>
           </div>
         </div>
       </header>
