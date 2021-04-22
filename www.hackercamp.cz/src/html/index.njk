@@ -262,6 +262,10 @@
       .hc-icon-link svg {
         padding-right: 1ex;
       }
+
+      /*#top {*/
+      /*  padding-top: 132px;*/
+      /*}*/
     </style>
     <link rel="canonical" href="https://www.hackercamp.cz/" />
     <link rel="author" href="/humans.txt" type="text/plain" />
@@ -344,24 +348,25 @@
             <picture>
               <source
                 media="screen and (max-width: 599px)"
-                srcset="{{ publicId | cloudinaryUrl(width=343,height=172,dpr=1)}} 1x,
-                    {{ publicId | cloudinaryUrl(width=343,height=172,dpr=1.5)}} 1.5x,
-                    {{ publicId | cloudinaryUrl(width=343,height=172,dpr=2)}} 2x"
+                srcset="{{ publicId | cloudinaryUrl(width=343,height=172,dpr=1) }} 1x,
+                    {{ publicId | cloudinaryUrl(width=343,height=172,dpr=1.5) }} 1.5x,
+                    {{ publicId | cloudinaryUrl(width=343,height=172,dpr=2) }} 2x"
               />
               <source
                 media="screen and (min-width: 600px) and (max-width: 839px)"
-                srcset="{{ publicId | cloudinaryUrl(width=360,height=180,dpr=1)}} 1x,
-                    {{ publicId | cloudinaryUrl(width=360,height=180,dpr=1.5)}} 1.5x,
-                    {{ publicId | cloudinaryUrl(width=360,height=180,dpr=2)}} 2x"
+                srcset="{{ publicId | cloudinaryUrl(width=360,height=180,dpr=1) }} 1x,
+                    {{ publicId | cloudinaryUrl(width=360,height=180,dpr=1.5) }} 1.5x,
+                    {{ publicId | cloudinaryUrl(width=360,height=180,dpr=2) }} 2x"
               />
-              <source media="screen and (min-width: 840px)" srcset="{{ publicId
-              | cloudinaryUrl(width=622,height=622,crop="fill",dpr=1)}} 1x, {{
-              publicId |
-              cloudinaryUrl(width=622,height=622,crop="fill",dpr=1.5)}} 1.5x, {{
-              publicId | cloudinaryUrl(width=622,height=622,crop="fill",dpr=2)}}
-              2x"> <img alt="" loading="lazy" class="responsive" width="622"
-              height="622" src="{{ publicId |
-              cloudinaryUrl(width=622,height=622,crop="fill",dpr="auto")}}">
+              <source
+                media="screen and (min-width: 840px)"
+                srcset="{{ publicId | cloudinaryUrl(width=622,height=622,crop="fill",dpr=1) }} 1x,
+                    {{ publicId | cloudinaryUrl(width=622,height=622,crop="fill",dpr=1.5) }} 1.5x,
+                    {{ publicId | cloudinaryUrl(width=622,height=622,crop="fill",dpr=2) }} 2x">
+              <img
+                alt="" loading="lazy" class="responsive"
+                width="622" height="622"
+                src="{{ publicId | cloudinaryUrl(width=622,height=622,crop="fill",dpr="auto") }}">
             </picture>
           </div>
         </div>
