@@ -207,5 +207,26 @@
     "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1619013533/www.hackercamp.cz/gay-dots.png",
     "existing": false,
     "original_filename": "gay-dots"
+  },
+  "header-camp.png": {
+    "asset_id": "4ce099b6dd0ce78b6b15b636c2a9e429",
+    "public_id": "www.hackercamp.cz/header-camp",
+    "version": 1619094471,
+    "version_id": "f59a1d2f9452e434f7c92e2a9e7d4c3e",
+    "signature": "80c9d61afa7f291a0ed64542ecaf9afe733bfd55",
+    "width": 622,
+    "height": 654,
+    "format": "png",
+    "resource_type": "image",
+    "created_at": "2021-04-22T12:27:51Z",
+    "tags": [],
+    "bytes": 555583,
+    "type": "upload",
+    "etag": "fe6b793b69d20e6827daac4b2e870e0f",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1619094471/www.hackercamp.cz/header-camp.png",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1619094471/www.hackercamp.cz/header-camp.png",
+    "existing": false,
+    "original_filename": "header-camp"
   }
 }

@@ -338,8 +338,32 @@
             </p>
           </div>
           <div
-            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
-          ></div>
+            class="hc-camp-detail mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+          >
+            {% set publicId = images["header-camp.png"]["public_id"] %}
+            <picture>
+              <source
+                media="screen and (max-width: 599px)"
+                srcset="{{ publicId | cloudinaryUrl(width=343,height=172,dpr=1)}} 1x,
+                    {{ publicId | cloudinaryUrl(width=343,height=172,dpr=1.5)}} 1.5x,
+                    {{ publicId | cloudinaryUrl(width=343,height=172,dpr=2)}} 2x"
+              />
+              <source
+                media="screen and (min-width: 600px) and (max-width: 839px)"
+                srcset="{{ publicId | cloudinaryUrl(width=360,height=180,dpr=1)}} 1x,
+                    {{ publicId | cloudinaryUrl(width=360,height=180,dpr=1.5)}} 1.5x,
+                    {{ publicId | cloudinaryUrl(width=360,height=180,dpr=2)}} 2x"
+              />
+              <source media="screen and (min-width: 840px)" srcset="{{ publicId
+              | cloudinaryUrl(width=622,height=622,crop="fill",dpr=1)}} 1x, {{
+              publicId |
+              cloudinaryUrl(width=622,height=622,crop="fill",dpr=1.5)}} 1.5x, {{
+              publicId | cloudinaryUrl(width=622,height=622,crop="fill",dpr=2)}}
+              2x"> <img alt="" loading="lazy" class="responsive" width="622"
+              height="622" src="{{ publicId |
+              cloudinaryUrl(width=622,height=622,crop="fill",dpr="auto")}}">
+            </picture>
+          </div>
         </div>
       </header>
     </div>
@@ -529,7 +553,7 @@
             </h2>
           </div>
           <article
-            class="hc-card hc-card--semidecorated mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
+            class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
           >
             <h3 class="hc-text--gay">První týden v&nbsp;září</h3>
             <p>
