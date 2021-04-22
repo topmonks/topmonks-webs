@@ -5,15 +5,55 @@ img.responsive {
   height: auto;
 }
 
-.hc-hero__inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+@media only screen and (max-width: 599px) {
+  .hc-hero .mdc-layout-grid__cell:last-of-type {
+    display: none;
+  }
 }
+@media screen and (min-width: 600px) {
+  .hc-hero {
+    margin-bottom: 5em;
+  }
 
-.hc-camp-detail img {
-  width: 80%;
-  max-width: 622px;
+  .hc-hero__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hc-camp-detail {
+    position: relative;
+    z-index: 1;
+  }
+  .hc-camp-detail::before {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 260px;
+    right: -20px;
+    z-index: -1;
+    background-image: cloudinaryUrl("www.hackercamp.cz/lines.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+  .hc-camp-detail::after {
+    content: "";
+    position: absolute;
+    width: 175px;
+    height: 238px;
+    bottom: -68px;
+    right: 70px;
+    z-index: -1;
+    background-image: cloudinaryUrl("www.hackercamp.cz/gray-dots.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+
+  .hc-camp-detail img {
+    width: 80%;
+    max-width: 622px;
+  }
 }
 
 @media screen and (min-width: 600px) {
