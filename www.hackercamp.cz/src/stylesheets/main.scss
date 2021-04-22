@@ -5,6 +5,17 @@ img.responsive {
   height: auto;
 }
 
+.hc-hero__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hc-camp-detail img {
+  width: 80%;
+  max-width: 622px;
+}
+
 @media screen and (min-width: 600px) {
   .hc-card.hc-card--semidecorated {
     padding: 4em;
