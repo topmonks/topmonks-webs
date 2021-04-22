@@ -56,6 +56,18 @@
           #684997 78.9%,
           #3e7abc 100.02%
         );
+        --hc-gradient-btn: linear-gradient(
+          90deg,
+          #ee771b -0.01%,
+          #e9444e 11.28%,
+          #e62271 24.31%,
+          #684997 36.29%,
+          #3e7abc 50%,
+          #684997 61.3%,
+          #e62271 74.84%,
+          #e9444e 88.39%,
+          #ee771b 100.02%
+        );
       }
 
       @media (prefers-color-scheme: dark) {
@@ -219,12 +231,20 @@
       .hc-cta:link,
       .hc-cta:visited {
         color: #fff;
-        background-image: var(--hc-gradient);
+        background-image: var(--hc-gradient-btn);
+        background-size: 200% 100%;
         font-weight: bold;
         display: inline-block;
         text-decoration: none;
         padding: 0.75em 2.5em;
+        transition: background-position 0.4s ease-in-out;
       }
+
+      .hc-cta:active,
+      .hc-cta:hover {
+        background-position: 100% 0;
+      }
+
       .hc-icon-link:link,
       .hc-icon-link:visited {
         --icon-color: var(--hc-text-color);

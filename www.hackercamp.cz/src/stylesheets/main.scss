@@ -56,6 +56,12 @@
   background-color: #f7f7f7;
 }
 
+@media screen and (prefers-color-scheme: dark) {
+  .hc-grey-bg {
+    background-color: #423839;
+  }
+}
+
 .hc-people-bg {
   background: #c98988 cloudinaryUrl("www.hackercamp.cz/bg-people.png") no-repeat
     50% 50%;
@@ -208,7 +214,7 @@
     -webkit-text-fill-color: initial;
     background-image: none;
   }
-  .hc-card--flat{
+  .hc-card--flat {
     display: flex;
     align-items: center;
     justify-content: center;
