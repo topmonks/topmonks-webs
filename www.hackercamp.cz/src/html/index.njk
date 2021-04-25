@@ -111,6 +111,7 @@
       a:link {
         color: var(--hc-link-color);
       }
+
       a:visited {
         color: var(--hc-link-visited-color);
       }
@@ -131,6 +132,7 @@
         margin: 0 auto;
         max-width: var(--hc-layout-width);
       }
+
       footer::before {
         content: "";
         display: block;
@@ -143,17 +145,21 @@
         font-weight: bold;
         color: var(--hc-heading-color);
       }
+
       h1 {
         margin-bottom: 0;
         font-weight: 800;
         font-size: 3em;
       }
+
       hgroup h2 {
         margin: 0;
       }
+
       hgroup small {
         text-transform: capitalize;
       }
+
       h2,
       .hc-text--gay {
         color: #fff;
@@ -163,6 +169,7 @@
         width: -moz-fit-content;
         width: fit-content;
       }
+
       section h2 {
         margin: 3em auto 2em;
       }
@@ -185,10 +192,12 @@
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.07);
         padding: var(--mdc-layout-grid-gutter-phone);
       }
+
       .hc-card.hc-card--decorated {
         position: relative;
         z-index: 1;
       }
+
       .hc-card.hc-card--decorated::before {
         content: "";
         display: block;
@@ -201,6 +210,7 @@
         background-image: var(--hc-gradient);
         transition: width 0.4s ease;
       }
+
       .hc-card.hc-card--decorated:active::before,
       .hc-card.hc-card--decorated:hover::before {
         width: 100%;
@@ -254,11 +264,13 @@
         display: inline-flex;
         align-items: center;
       }
+
       .hc-icon-link:hover {
         --icon-color: var(--hc-link-color);
         color: var(--hc-link-color);
         text-decoration: underline;
       }
+
       .hc-icon-link svg {
         padding-right: 1ex;
       }
@@ -344,8 +356,10 @@
           <div
             class="hc-camp-detail mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
           >
-            <video class="responsive" muted autoplay loop>
-              <source src="https://res.cloudinary.com/topmonks/video/upload/c_crop,f_auto,g_center,h_622,q_auto,w_622/v1619106183/www.hackercamp.cz/Pohled_na_Soben%CC%8Ca%CC%81k_z_dronu.mp4">
+            <video aria-hidden="true" class="responsive" muted autoplay loop>
+              <source
+                src="https://res.cloudinary.com/topmonks/video/upload/c_crop,f_auto,g_center,h_622,q_auto,w_622/v1619106183/www.hackercamp.cz/Pohled_na_Soben%CC%8Ca%CC%81k_z_dronu.mp4"
+              />
               {% set publicId = images["header-camp.png"]["public_id"] %}
               <picture>
                 <source
@@ -377,37 +391,37 @@
     </div>
     <section class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner">
-        <article
+        <div
           class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
         >
           <p>
             Neformální atmosféra campu nebo festivalu
             v&nbsp;přírodě&nbsp;&ndash; potkáme se fyzicky
           </p>
-        </article>
-        <article
+        </div>
+        <div
           class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
         >
           <p>
             Maximálně&nbsp;
             <data property="maximumAttendeeCapacity" value="300"
-              >tři stovky</data
+              >tři stovky </data
             >&nbsp;lidí z&nbsp;české tech scény s&nbsp;kusem hackera
             v&nbsp;srdci
           </p>
-        </article>
-        <article
+        </div>
+        <div
           class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
         >
           <p>Každý z&nbsp;účastníků je zároveň aktivním tvůrcem programu</p>
-        </article>
+        </div>
       </div>
     </section>
 
     <section id="co-cekat" class="mdc-layout-grid">
       <h2 id="toc-co-cekat">Co čekat?</h2>
       <div class="mdc-layout-grid__inner">
-        <article
+        <div
           class="hc-card hc-card--centered hc-card--superdecorated mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
         >
           <p class="hc-text--gay">
@@ -431,14 +445,14 @@
               vzniknout novým&nbsp;věcem.</strong
             >
           </p>
-        </article>
+        </div>
       </div>
     </section>
     <section id="koho" class="mdc-layout-grid">
       <h2 id="toc-koho-potkas">Koho potkáš?</h2>
 
       <div class="mdc-layout-grid__inner">
-        <article
+        <div
           class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
         >
           <p>
@@ -449,8 +463,8 @@
             Jakoukoliv akci tvoří totiž hlavně lidi, a tuhle akci chceme strávit
             s&nbsp;kamarády a těmi, které za kamarády chceme.
           </p>
-        </article>
-        <article
+        </div>
+        <div
           class="hc-card hc-card--flat mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
         >
           <p>
@@ -461,14 +475,14 @@
             Každý účastník je zároveň tvůrcem programu. Proto zveme hlavně ty,
             kdo se chtějí do programu společných tří dní zapojit.
           </p>
-        </article>
+        </div>
       </div>
     </section>
     <section id="pro-koho">
       <h2 id="toc-pro-koho">Pro koho?</h2>
     </section>
     <div class="hc-people-bg hc-people-section">
-      <article class="hc-card">
+      <div class="hc-card">
         <p>
           Můžeš přijet jako jednotlivec, nebo vyrazit s&nbsp;celým svým týmem a
           tři dny v&nbsp;přírodě si užít společně.
@@ -507,7 +521,7 @@
             ><a property="sameAs" href="https://geneea.com/">Geneea</a></span
           >, …a seznam pořád&nbsp;roste.
         </p>
-      </article>
+      </div>
     </div>
     <div class="hc-grey-bg">
       <section id="obsah-campu" class="mdc-layout-grid">
@@ -515,22 +529,22 @@
           Každý z nás tvoří obsah campu
         </h2>
         <div class="mdc-layout-grid__inner">
-          <article
+          <div
             class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
           >
             <p>
               Každý účastník je zároveň tvůrce akce. Od každého čekáme aktivní
               zapojení podle vlastních možností.
             </p>
-          </article>
-          <article
+          </div>
+          <div
             class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop"
           >
             <p>
               Můžeš přispět přednáškou, workshopem, v&nbsp;panelovce,
               zorganizovat ranní výběh nebo turnaj ve fotbálku.
             </p>
-          </article>
+          </div>
         </div>
       </section>
       <section id="kdy" class="mdc-layout-grid">
@@ -540,6 +554,7 @@
           >
             <h2 id="toc-kdy-prijet">
               <svg
+                aria-hidden="true"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 95 95"
@@ -567,8 +582,8 @@
             <p>
               Začínáme ve čtvrtek
               <time property="startDate" datetime="2021-09-02"
-                >2.&nbsp;září</time
-              >
+                >2.&nbsp;září
+              </time>
               a končíme v&nbsp;neděli
               <time property="endDate" datetime="2021-09-05">5.&nbsp;září</time>
               v&nbsp;poledne, hned jak se proberete po good-bye&nbsp;party.
@@ -577,7 +592,9 @@
               <a
                 class="hc-icon-link"
                 href="http://www.google.com/calendar/event?action=TEMPLATE&amp;dates=20210902%2F20210906&amp;text=Hacker%20Camp&amp;location=Sobe%C5%88%C3%A1k%2C%20Star%C3%BD%20Ro%C5%BEmit%C3%A1l%20148%2C%20Ro%C5%BEmit%C3%A1l%20pod%20T%C5%99em%C5%A1%C3%ADnem&amp;details=Za%C5%BEijte%20nult%C3%BD%20ro%C4%8Dn%C3%ADk%20netradi%C4%8Dn%C3%ADho%20t%C5%99%C3%ADdenn%C3%ADho%20festivalu%20pro%20lidi%20z%20%C4%8Desk%C3%A9%20tech%20sc%C3%A9ny."
-                ><svg
+              >
+                <svg
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   width="16"
@@ -604,6 +621,7 @@
           >
             <h2 id="toc-kde-budeme">
               <svg
+                aria-hidden="true"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 107 107"
@@ -637,6 +655,7 @@
             </h2>
           </div>
           <div
+            style="text-shadow: #222 1px 1px 2px"
             property="location"
             typeof="Campground"
             class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop"
@@ -733,7 +752,7 @@
     <section id="o-nas" class="mdc-layout-grid">
       <h2 id="toc-kdo-jsme">Kdo jsme</h2>
       <div class="mdc-layout-grid__inner">
-        <article
+        <div
           class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
         >
           <p>
@@ -742,16 +761,16 @@
             Irči, Jirky (Fenek), Jirky, Aleše (TopMonks) a Pavla (Elephant
             Orchestra).
           </p>
-        </article>
-        <article
+        </div>
+        <div
           class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
         >
           <p>
             Všichni jsme součástí české tech scény. Znáte nás ze startupů,
             neziskovek i akcí, kde jsme se už určitě potkali.
           </p>
-        </article>
-        <article
+        </div>
+        <div
           class="hc-card hc-card--decorated mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet"
         >
           <p>
@@ -760,7 +779,7 @@
             nápady. Už teď se na nultý ročník Hacker Campu i tebe a tvůj tým
             těšíme!
           </p>
-        </article>
+        </div>
       </div>
     </section>
 
