@@ -293,3 +293,16 @@ img.responsive {
     }
   }
 }
+
+#co-vse-cekat {
+  p {
+    max-width: 60em;
+    margin: 1em auto 4em;
+  }
+
+  .hc-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
