@@ -206,9 +206,11 @@ img.responsive {
 }
 
 #koho {
+  .mdc-layout-grid__inner {
+    gap: 0;
+  }
   @media screen and (min-width: 600px) {
     .mdc-layout-grid__inner {
-      gap: 0;
       margin-bottom: 6em;
     }
     .hc-card:first-child {
@@ -276,14 +278,19 @@ img.responsive {
     -webkit-text-fill-color: initial;
     background-image: none;
   }
+
   .hc-card--flat {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
+  .mdc-layout-grid__inner {
+    gap: 0;
+  }
+
   @media screen and (min-width: 600px) {
     .mdc-layout-grid__inner {
-      gap: 0;
       margin-top: 6em;
       margin-bottom: 12em;
     }
@@ -304,5 +311,6 @@ img.responsive {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 8em;
   }
 }
