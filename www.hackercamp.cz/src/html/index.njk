@@ -216,6 +216,10 @@
         text-align: center;
       }
 
+      .hc-card.hc-card--picture {
+        padding: 0
+      }
+
       @media screen and (min-width: 600px) and (max-width: 839px) {
         .hc-card {
           padding: var(--mdc-layout-grid-gutter-tablet);
@@ -795,20 +799,39 @@
 
         <div class="mdc-layout-grid__inner">
           <div
-            class="hc-card hc-card--decorated hc-card--centered mdc-layout-grid__cell"
+            class="hc-card hc-card--decorated hc-card--centered mdc-layout-grid__cell mdc-layout-grid__cell--span-2"
           >
             Akce je jen pro pozvané
           </div>
 
           <div
-            class="hc-card hc-card--decorated hc-card--centered mdc-layout-grid__cell"
+            class="hc-card hc-card--decorated hc-card--centered mdc-layout-grid__cell mdc-layout-grid__cell--span-2"
           >
             Tykáme si
           </div>
 
+          <div
+            class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
+          >
+            {% set publicId = images["DSC01380.jpeg"]["public_id"] %}
+            <picture>
+              <img class="responsive" loading="lazy" alt="" src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
+            </picture>
+          </div>
+
+
           <div class="hc-card hc-card--decorated mdc-layout-grid__cell">
             Vstupenku si kupuješ na celou akci a budeme rádi, když s&nbsp;námi
             zůstaneš všechny tři dny
+          </div>
+
+          <div
+            class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
+          >
+            {% set publicId = images["68592294_10157524875643035_7721315333700583424_n.jpg"]["public_id"] %}
+            <picture>
+              <img class="responsive" loading="lazy" alt="" src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
+            </picture>
           </div>
 
           <div class="hc-card hc-card--decorated mdc-layout-grid__cell">
@@ -828,6 +851,16 @@
             Nemáme žádné VIP zóny
           </div>
 
+          <div
+            class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
+          >
+            {% set publicId = images["DSC05231.jpg"]["public_id"] %}
+            <picture>
+              <img class="responsive" loading="lazy" alt="" src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
+            </picture>
+          </div>
+
+
           <div class="hc-card hc-card--decorated mdc-layout-grid__cell">
             Přivést můžeš i&nbsp;jakýkoliv doprovodný program&nbsp;&ndash;
             uvítáme vše od pípy, baristy a přípravy kávy až po&nbsp;DJs.
@@ -842,6 +875,14 @@
             nebo produkt můžeš propagovat a nabízet jen pokud to obohatí
             samotnou&nbsp;akci
           </div>
+
+          <div
+            class="hc-card hc-card--picture hc-card--centered mdc-layout-grid__cell"
+          >
+            {% set publicId = images["106340091_1166165130412802_2437425872883373385_n.jpeg"]["public_id"] %}
+            <picture>
+              <img class="responsive" loading="lazy" alt="" src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}"
+              ></picture></div>
         </div>
       </section>
     </div>

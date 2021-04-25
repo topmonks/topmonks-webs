@@ -201,6 +201,7 @@ img.responsive {
 
 @media screen and (min-width: 840px) {
   .hc-people-section .hc-card {
+    max-width: 800px;
     margin: var(--mdc-layout-grid-margin-desktop);
   }
 }
@@ -312,5 +313,6 @@ img.responsive {
     align-items: center;
     justify-content: center;
     min-height: 8em;
+    aspect-ratio: 16/9;
   }
 }
