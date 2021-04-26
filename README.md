@@ -43,7 +43,7 @@ nvm install node
 brew install yarn
 # Install Pulumi
 brew install pulumi
-pulumi plugin install
+pulumi install plugin
 ```
 
 Checkout repository
@@ -78,6 +78,12 @@ and copy the `Environment variable` with credentials. One time run this command:
 pbpaste > .env
 ```
 
+If this step is skipped you will get following error:
+
+```
+cloudinaryUrl Unknown cloud_name
+```
+
 ### Sites available
 
 The following sites can be build and ran using the `yarn start:[SITE]` command.
@@ -109,8 +115,8 @@ yarn serve -d public/www.topmonks.com
 
 ## Create new site
 
-**Before first creation** of site, you will need to setup LHCI authentication,
-because create script will generate LHCI token for you. Open 1Password
+**Before first creation** of site, you will need to setup LHCI authentication, 
+because create script will generate LHCI token for you. Open 1Password 
 and search for `Lighthouse CI sever DEV`. Copy `LHCI_BASIC_AUTH=...` token
 and paste it to `.env` file, e.g. `pbpaste > .env`.
 
@@ -126,7 +132,7 @@ then simply run for development mode
 yarn start:new-site.topmonks.com
 ```
 
-The command will generate initial files and package.json scripts,
+The command will generate initial files and package.json scripts, 
 Pulumi resources and build/deployment steps for you.
 
 ### Options
