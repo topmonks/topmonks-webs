@@ -1,0 +1,109 @@
+// Introduction //
+
+.intro {
+  color: var(--postcube-primary);
+
+  .intro__content {
+    align-self: center;
+  }
+
+  p {
+    max-width: 480px;
+    font-size: 24px;
+  }
+}
+
+// How it works //
+
+.how-it-works {
+  h3 {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  p {
+    max-width: 325px;
+  }
+}
+
+// About PostCube //
+.about-postCube {
+  padding: 120px 0 200px;
+  text-align: center;
+  p {
+    max-width: 325px;
+    margin: 20px auto;
+  }
+  .button {
+    margin-top: 40px;
+  }
+}
+
+// Special Interest Group - SIG //
+.SIG {
+  background-color: var(--postcube-primary);
+  color: var(--postcube-white);
+  text-align: center;
+
+  .SIG__numbers {
+    max-width: 280px;
+    margin: 0 auto;
+
+    p.users {
+      font-weight: 800;
+      margin: 0;
+      @media screen and (min-width: 840px) {
+        font-size: 66px;
+        line-height: 72px;
+      }
+      @media (max-width: 839px) {
+        font-size: 40px;
+        line-height: 44px;
+      }
+    }
+  }
+
+  .SIG__clients {
+    p {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    @media screen and (min-width: 840px) {
+      border-left: 1px solid white;
+    }
+  }
+}
+
+// Quotation //
+.quotation {
+  color: var(--postcube-primary);
+  .quotation__title {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 58px;
+    margin-bottom: 0;
+  }
+}
+
+// How it Works //
+.how-it-works {
+  padding: 120px 0 200px;
+  text-align: center;
+  p {
+    max-width: 325px;
+    margin: 20px auto;
+  }
+  .button {
+    margin-top: 40px;
+  }
+}
+
+// Download the App //
+.download-app {
+  background-color: var(--postcube-primary);
+  h2,p {
+    color: var(--postcube-white);
+    text-align: left;
+    max-width: 420px;
+  }
+}
