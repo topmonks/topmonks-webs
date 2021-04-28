@@ -89,13 +89,33 @@
   padding: 120px 0 200px;
   text-align: center;
 
-  p {
+  h3, p {
     max-width: 325px;
     margin: 20px auto;
   }
 
   .button {
     margin-top: 40px;
+  }
+
+  @media screen and (min-width: 840px) {
+    h3 {
+      min-height: 64px;
+    }
+    .after-icon {
+      position: relative;
+
+      .after-icon__line {
+        position: absolute;
+        left: 73%;
+        top: 8%;
+      }
+    }
+  }
+  @media (max-width: 839px) {
+    .after-icon__line {
+      display: none;
+    }
   }
 }
 
@@ -148,6 +168,7 @@
 
     .submit-button {
       align-self: center;
+
       button {
         font-size: 20px;
         color: var(--postcube-black);
@@ -155,6 +176,7 @@
         border: none;
         width: 100%;
         height: 50px;
+
         &:hover {
           cursor: pointer;
           background: var(--postcube-secondary-light);
@@ -169,11 +191,19 @@
       font-weight: 800;
       text-decoration: none;
     }
+
     a.info--number {
       color: var(--postcube-white);
     }
+
     a.info--email {
       color: var(--postcube-secondary);
+    }
+    .social-buttons {
+      margin-top: 3em;
+      svg:hover {
+        fill: #0a2137;
+      }
     }
   }
 }
