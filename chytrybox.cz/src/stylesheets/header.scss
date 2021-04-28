@@ -1,9 +1,8 @@
 // Header//
 
 header {
-  font-family: 'Poppins', sans-serif;
-  color: #FFFFFF;
-  background: #00A1E5;
+  position: relative;
+  color: var(--postcube-white);
   nav {
     float: right;
   }
@@ -16,17 +15,41 @@ header {
       font-size: 16px;
       font-style: normal;
       font-weight: normal;
-      color: #FFFFFF;
+      color: var(--postcube-black);
       line-height: 32px;
-      border-bottom: 1px solid transparent;
+      border-bottom: 2px solid transparent;
       text-decoration: none;
       margin-right: 44px;
+      padding: 4px 0;
       &:hover,
       &.active {
-        text-decoration: underline;
+        border-bottom: 2px solid var(--postcube-secondary);
+      }
+    }
+    a.list__btn {
+      background-color: var(--postcube-secondary);
+      padding: 4px 14px;
+      &:hover {
+        cursor: pointer;
+        background-color: var(--postcube-secondary-light);
+        border-bottom: transparent;
+      }
+    }
+    a.list__lang--cz {
+      margin-right: 6px;
+    }
+    a.list__lang--sk {
+      color: var(--postcube-grey);
+      &:active {
+        color: var(--postcube-black);
       }
     }
   }
+}
+.logo {
+  position: absolute;
+  left: 0;
+  top: -110%;
 }
 
 // HAMBURGER
@@ -42,11 +65,6 @@ header {
     padding-top: 2px;
     justify-content: flex-end;
   }
-}
-
-.logo .monk {
-  fill: currentColor;
-  padding-right: 8px;
 }
 
 .app-bar_menu {
@@ -74,7 +92,7 @@ header {
   }
 
   .hamburger__bar {
-    background-color: #FFFFFF;
+    background-color: var(--postcube-primary);
     width: 20px;
     height: 2px;
     position: absolute;
@@ -106,14 +124,14 @@ header {
 }
 
 .app-bar.app-bar--open {
-  color: #fff;
+  color: var(--postcube-primary);
 
   .hamburger__container::after {
-    color: #fff;
+    color: var(--postcube-primary);
   }
 
   .hamburger__bar {
-    background-color: #fff;
+    color: var(--postcube-primary);
   }
 
   .menu {
@@ -133,8 +151,8 @@ header {
     z-index: 3;
     transition: transform 0.3s;
     overflow: hidden;
-    background-color: #00A1E5;
-    color: #fff;
+    color: var(--postcube-primary);
+    color: var(--postcube-white);
     ul.menu__list {
       display: inline-grid;
     }
