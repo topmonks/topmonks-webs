@@ -169,15 +169,15 @@
         fill="#fff"/>
     </svg>
     <h1>
-      <b>TopMonks Caffè: 10 let TopMonks</b>
-      <small>Živé vysílání - úterý 4. května 2021 od 19.00</small>
+      <b>{{ caffe.title }}</b>
+      <small>{{ caffe.subtitle}}</small>
     </h1>
   </header>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/yMVM4vTqk3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <div class="video-box">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ caffe["youtube-id"] }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div class="slido-box">
-    <iframe src="https://app.sli.do/event/eye6xpdd" height="100%" width="100%" frameBorder="0"
+    <iframe src="https://app.sli.do/event/{{ caffe["slido-id"] }}" height="100%" width="100%" frameBorder="0"
             style="min-height: 560px;"></iframe>
   </div>
 </main>
@@ -229,7 +229,7 @@
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop">
-          <p>© 2020 TopMonks s.r.o.</p></div>
+          <p>© 2020 - {{ "" | year }} TopMonks s.r.o.</p></div>
         <div
           class="footer_social-buttons mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-6-desktop">
           <div class="social-buttons">

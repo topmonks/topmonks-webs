@@ -12,7 +12,12 @@ const config = createSharedTaskConfig(__dirname, {
   workboxBuild: false,
 
   html: {
-    collections: []
+    collections: ["caffe"],
+    nunjucksRender: {
+      filters: {
+        year: () => new Date().getFullYear()
+      }
+    }
   },
 
   browserSync: {
