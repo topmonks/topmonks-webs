@@ -50,20 +50,25 @@ body {
 
 @media (max-width: 839px) {
   h1 {
-    font-size: 36px;
+    font-size: 54px;
     font-weight: 800;
-    line-height: 42px;
+    line-height: 60px;
+    margin: 0;
   }
 
   h2 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 800;
-    line-height: 38px;
-    text-align: center;
+    line-height: 36px;
+  }
+  h3 {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 30px;
   }
 
   p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
     line-height: 32px;
   }

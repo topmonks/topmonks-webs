@@ -2,16 +2,28 @@
 
 .intro {
   color: var(--postcube-primary);
-  background-image: url("/assets/img/deliveryman.jpg");
-  background-size: 45% auto;
-  background-position: left center;
-  background-repeat: no-repeat;
 
   p {
     max-width: 480px;
     font-size: 24px;
   }
 
+  @media screen and (min-width: 840px) {
+    background-image: url("/assets/img/deliveryman.jpg");
+    background-size: 45% auto;
+    background-position: left center;
+    background-repeat: no-repeat;
+    img {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 839px) {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 // About PostCube //
@@ -26,6 +38,10 @@
 
   .button {
     margin-top: 40px;
+  }
+
+  @media (max-width: 839px) {
+    padding: 20px 20px 100px;
   }
 }
 
@@ -64,6 +80,10 @@
       border-left: 1px solid white;
     }
   }
+
+  @media (max-width: 839px) {
+    padding: 3em 1em;
+  }
 }
 
 // Quotation //
@@ -74,12 +94,38 @@
     font-size: 44px;
     font-weight: 800;
     line-height: 58px;
-    margin-bottom: 0;
+    margin: 0;
   }
 
   p {
     font-size: 26px;
     margin-top: 10px;
+  }
+
+  .content--mark {
+    font-size: 60px;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 840px) {
+    margin: 6em 0 3em;
+    .content--mark {
+      font-size: 150px;
+      margin: 0;
+    }
+  }
+  @media (max-width: 839px) {
+    h2 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 26px;
+    }
+    .quotation__content {
+      margin: 2em 0;
+    }
   }
 }
 
@@ -113,6 +159,8 @@
     }
   }
   @media (max-width: 839px) {
+    padding: 20px 20px 100px;
+
     .after-icon__line {
       display: none;
     }
@@ -128,12 +176,27 @@
     text-align: left;
     max-width: 420px;
   }
+
+  @media (max-width: 839px) {
+    h2 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 16px;
+      text-align: center;
+    }
+    .btn {
+      padding: 20px 10px;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
 }
 
 // FAQ //
 .FAQ {
-  padding: 120px 0 200px;
-  width: 100%;
   box-sizing: inherit;
 
   h2 {
@@ -146,6 +209,7 @@
     font-weight: normal;
     color: var(--postcube-black);
     margin-bottom: 0;
+
     &:hover {
       cursor: pointer;
     }
@@ -175,18 +239,40 @@
     transition: max-height 650ms;
   }
 
+  a.accordion-link:before {
+    content: url("/assets/img/list-style_cube.svg");
+    display: block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: -30px;
+    top: 5px;
+  }
+
   .accordion {
     max-width: 420px;
     margin: 2em 0;
+    padding-left: 30px;
+  }
+
+  .accordion-item {
+    position: relative;
   }
 
   .accordion-item:target {
     .answer {
-      max-height: 20rem;
+      max-height: 26rem;
     }
 
     h3 {
       font-weight: 800;
+    }
+  }
+
+  @media (max-width: 839px) {
+    padding: 24px;
+    .container {
+      display: block;
     }
   }
 }
@@ -235,6 +321,17 @@
           cursor: pointer;
           background: var(--postcube-secondary-light);
         }
+
+        @media (max-width: 839px) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    @media (max-width: 839px) {
+      p {
+        font-size: 12px;
+        line-height: 18px;
       }
     }
   }
@@ -244,6 +341,10 @@
       font-size: 40px;
       font-weight: 800;
       text-decoration: none;
+      @media (max-width: 839px) {
+        font-size: 30px;
+        line-height: 36px;
+      }
     }
 
     a.info--number {
@@ -259,6 +360,10 @@
 
       svg:hover {
         fill: #0a2137;
+      }
+
+      @media (max-width: 839px) {
+        margin-top: 1em;
       }
     }
   }

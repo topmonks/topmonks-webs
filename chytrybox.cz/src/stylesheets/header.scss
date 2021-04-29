@@ -3,6 +3,7 @@
 header {
   position: relative;
   color: var(--postcube-white);
+
   nav {
     float: right;
   }
@@ -22,49 +23,68 @@ header {
       text-decoration: none;
       margin-right: 44px;
       padding: 4px 0;
+
       &:hover,
       &.active a:after {
         border-bottom: 2px solid var(--postcube-secondary);
       }
     }
+
     a.list__btn {
       background-color: var(--postcube-secondary);
       padding: 4px 14px;
+
       &:hover {
         cursor: pointer;
         background-color: var(--postcube-secondary-light);
         border-bottom: transparent;
       }
     }
+
     a.list__lang--cz {
       margin-right: 6px;
     }
+
     a.list__lang--sk {
       color: var(--postcube-grey);
+
       &:active {
         color: var(--postcube-black);
       }
     }
   }
 }
-.logo {
-  position: absolute;
-  left: 0;
-  top: -110%;
-}
 
 // HAMBURGER
 
 .logo {
-  display: flex;
-  align-items: center;
-  @media screen and (max-width: 479px) {
-    justify-content: flex-end;
-  }
+  position: absolute;
+  left: 0;
+  top: -110%;
   @media screen and (max-width: 839px) {
-    font-size: 24px;
-    padding-top: 2px;
-    justify-content: flex-end;
+    top: 14%;
+    left: 4%;
+    svg {
+      height: 65px;
+      width: 65px;
+    }
+
+    .logo--phone {
+      display: block;
+    }
+
+    .logo--desktop {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 840px) {
+    .logo--phone {
+      display: none;
+    }
+
+    .logo--desktop {
+      display: block;
+    }
   }
 }
 
@@ -74,11 +94,12 @@ header {
 
 .app-bar {
   @media screen and (max-width: 839px) {
-   height: 70px;
+    height: 70px;
   }
 }
 
 .hamburger {
+  text-align: right;
   @media screen and (min-width: 840px) {
     display: none;
   }
@@ -152,16 +173,10 @@ header {
     z-index: 3;
     transition: transform 0.3s;
     overflow: hidden;
-    color: var(--postcube-primary);
+    background-color: var(--postcube-primary);;
     color: var(--postcube-white);
     ul.menu__list {
       display: inline-grid;
-    }
-    .menu__list li {
-      margin: 0 24px;
-    }
-    .menu__list li + li {
-      border-top: 1px solid rgba(255, 255, 255, 0.25);
     }
     .menu__list a {
       color: #ffffff;

@@ -20,11 +20,12 @@ body {
   margin: 0 auto;
 }
 
-section {
-  padding: 40px 0;
-}
-
 textarea:focus, button:focus, input:focus {
   outline: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
