@@ -91,7 +91,7 @@
       height: 100vh;
     }
 
-    main .restream-box {
+    main .video-box {
       order: 2;
     }
 
@@ -106,31 +106,18 @@
       }
     }
 
-    [style*="--aspect-ratio"] > :first-child {
+    .video-box {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+    }
+
+    .video-box iframe {
       width: 100%;
-    }
-
-    [style*="--aspect-ratio"] > img {
-      height: auto;
-    }
-
-    @supports (--custom:property) {
-      [style*="--aspect-ratio"] {
-        position: relative;
-      }
-
-      [style*="--aspect-ratio"]::before {
-        content: "";
-        display: block;
-        padding-bottom: calc(100% / (var(--aspect-ratio)));
-      }
-
-      [style*="--aspect-ratio"] > :first-child {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-      }
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
     footer {
@@ -186,8 +173,8 @@
       <small>Živé vysílání - úterý 4. května 2021 od 19.00</small>
     </h1>
   </header>
-  <div class="restream-box" style="--aspect-ratio: 16/9;">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/yMVM4vTqk3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="video-box">
   </div>
   <div class="slido-box">
     <iframe src="https://app.sli.do/event/eye6xpdd" height="100%" width="100%" frameBorder="0"
