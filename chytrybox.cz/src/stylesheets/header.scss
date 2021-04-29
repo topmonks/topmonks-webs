@@ -10,6 +10,7 @@ header {
   ul li {
     list-style: none;
     display: inline-flex;
+    position: relative;
 
     a {
       font-size: 16px;
@@ -22,7 +23,7 @@ header {
       margin-right: 44px;
       padding: 4px 0;
       &:hover,
-      &.active {
+      &.active a:after {
         border-bottom: 2px solid var(--postcube-secondary);
       }
     }

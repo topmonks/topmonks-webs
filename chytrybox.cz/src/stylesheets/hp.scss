@@ -132,8 +132,62 @@
 
 // FAQ //
 .FAQ {
+  padding: 120px 0 200px;
+  width: 100%;
+  box-sizing: inherit;
+
   h2 {
     max-width: 420px;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: normal;
+    color: var(--postcube-black);
+    margin-bottom: 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    text-decoration: none;
+
+  }
+
+  a.remove {
+    color: var(--postcube-primary);
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 650ms;
+  }
+
+  .accordion {
+    max-width: 420px;
+    margin: 2em 0;
+  }
+
+  .accordion-item:target {
+    .answer {
+      max-height: 20rem;
+    }
+
+    h3 {
+      font-weight: 800;
+    }
   }
 }
 
@@ -199,8 +253,10 @@
     a.info--email {
       color: var(--postcube-secondary);
     }
+
     .social-buttons {
       margin-top: 3em;
+
       svg:hover {
         fill: #0a2137;
       }
