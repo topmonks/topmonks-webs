@@ -1,0 +1,102 @@
+:root {
+  --postcube-black: #000;
+  --postcube-grey: #A5A5A5;
+  --postcube-white: #fff;
+
+  --postcube-primary: #1538E5;
+  --postcube-secondary: #00F483;
+  --postcube-secondary-light: #7FF9C1;
+}
+
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-kerning: normal;
+  font-variant-numeric: lining-nums slashed-zero;
+  font-variant-ligatures: common-ligatures contextual;
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+@media screen and (min-width: 840px) {
+  h1 {
+    font-size: 82px;
+    font-weight: 800;
+    line-height: 84px;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 48px;
+  }
+  h3 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 32px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 839px) {
+  h1 {
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 60px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 36px;
+  }
+  h3 {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 30px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 32px;
+  }
+}
+
+.btn {
+  text-align: center;
+  background-color: var(--postcube-secondary);
+  padding: 20px 30px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--postcube-secondary-light);
+  }
+}
+
+.action-btn, .download-btn {
+  color: var(--postcube-black);
+  text-decoration: none;
+  text-align: center;
+}
+
+.action-btn {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.download-btn {
+  font-size: 18px;
+  font-weight: normal;
+}

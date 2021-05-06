@@ -21,11 +21,13 @@
   <![endif]-->
   <link rel="stylesheet" href="/assets/css/typography.css">
   <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/hp.css">
 
   {% block head %}{% endblock %}
 </head>
 <body id="page-{{page}}" vocab="https://schema.org/" typeof="{{ pageType or 'WebPage' }}">
 
+<link rel="stylesheet" href="/assets/css/header.css">
 {% include 'components/header.njk' %}
 
 <main id="content">
