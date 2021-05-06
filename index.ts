@@ -21,6 +21,8 @@ createCertificate("www.cbx.cz");
 createCertificate("www.hookamonk.com");
 createCertificate("www.ingridapp.io");
 createCertificate("www.zive.tv");
+createCertificate("www.postcube.cz");
+createCertificate("www.postcube.com");
 
 createCertificate("www.hackercamp.cz");
 createGoogleMxRecords("hackercamp.cz");
