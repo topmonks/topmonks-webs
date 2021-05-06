@@ -489,7 +489,6 @@ workflows:
           context: org-global
           requires:
             - build
-            - deploy-lighthouse-ci
       - deploy_site:
           name: deploy-postcube-cz
           site_name: postcube.cz
