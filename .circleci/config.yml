@@ -18,10 +18,11 @@ commands:
     steps:
       - pulumi/login:
           cloud-url: s3://pulumi.tmcloud.io
+      - run: pulumi stack select topmonks-webs
       - run:
           name: Read Cloudfront ID from Pulumi state for << parameters.site_name >>
           command: |
-            CLOUDFRONT_ID=$(pulumi stack output sites --stack topmonks-webs | jq -rM  '.["<< parameters.site_name >>"] | .cloudFrontId | @text')
+            CLOUDFRONT_ID=$(pulumi stack output sites | jq -rM  '.["<< parameters.site_name >>"] | .cloudFrontId | @text')
             echo "export AWS_CLOUDFRONT_DISTRIBUTION_ID=\"${CLOUDFRONT_ID}\"" >> $BASH_ENV
   deploy_website:
     parameters:
@@ -91,6 +92,7 @@ jobs:
           override-ci-command: yarn install --immutable
           cache-version: v3
           cache-path: .yarn/cache
+      - run: pulumi stack select topmonks-webs
       - pulumi/update:
           stack: topmonks-webs
           skip-preview: true
@@ -111,6 +113,7 @@ jobs:
           override-ci-command: yarn install --immutable
           cache-version: v3
           cache-path: .yarn/cache
+      - run: pulumi stack select topmonks-webs
       - pulumi/preview:
           stack: topmonks-webs
 
