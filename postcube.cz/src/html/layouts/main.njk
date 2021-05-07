@@ -7,18 +7,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
   <title>{% block title %}{{ language[page].title }}{% endblock %}</title>
-  <link rel="dns-prefetch" href="https://www.google.com">
-  <link rel="dns-prefetch" href="https://stats.g.doubleclick.net">
-  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://res.cloudinary.com">
   {% block preconnect %}{% endblock %}
-  <link rel="preload" as="script" href="https://www.googletagmanager.com/gtm.js?id=GTM-WW7T986">
   {% block preload %}{% endblock %}
 
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/typography.css">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/assets/css/hp.css">
