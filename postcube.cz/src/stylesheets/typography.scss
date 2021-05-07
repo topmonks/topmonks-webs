@@ -10,12 +10,12 @@
 
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: Roobert, sans-serif;
   font-kerning: normal;
-  font-variant-numeric: lining-nums slashed-zero;
+  font-variant-numeric: lining-nums;
   font-variant-ligatures: common-ligatures contextual;
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
-  font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum";
+  font-feature-settings: "kern", "liga", "clig", "calt", "lnum";
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
