@@ -1170,6 +1170,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@digitalbazaar/http-client@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@digitalbazaar/http-client@npm:1.1.0"
+  dependencies:
+    esm: ^3.2.22
+    ky: ^0.25.1
+    ky-universal: ^0.8.2
+  checksum: 5a1ef2a522b43f5dd60b657ea52bc4248cffcb4c49b53d2b75336e501700cfde598876509c64940856e497960da6f9873d738bff69c2f53e26b03ff9e301c9f1
+  languageName: node
+  linkType: hard
+
 "@eslint/eslintrc@npm:^0.4.0":
   version: 0.4.0
   resolution: "@eslint/eslintrc@npm:0.4.0"
@@ -1280,11 +1291,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lhci/cli@npm:^0.7.1":
-  version: 0.7.1
-  resolution: "@lhci/cli@npm:0.7.1"
+"@lhci/cli@npm:^0.7.2":
+  version: 0.7.2
+  resolution: "@lhci/cli@npm:0.7.2"
   dependencies:
-    "@lhci/utils": 0.7.1
+    "@lhci/utils": 0.7.2
     chrome-launcher: ^0.13.4
     compression: ^1.7.4
     debug: ^4.3.1
@@ -1301,20 +1312,20 @@ __metadata:
     yargs-parser: ^13.1.2
   bin:
     lhci: ./src/cli.js
-  checksum: d712d0f09be8e7491c787ce6f444cb753b4dbf965261f0e69d06d02dd1ac9912822d99ae8e22968723fe1f61f748a55e1c3d09168b99ab49bb9e7579b2596ea9
+  checksum: 5f52c6441ee86f6357e9fcb8e428a3818b1d71d9e190e1530e87a1b82a55f99e9addb848a74d5a65074625eb4e207086bd8506d20cfcdea4eb08c47f4a21f26e
   languageName: node
   linkType: hard
 
-"@lhci/utils@npm:0.7.1, @lhci/utils@npm:^0.7.1":
-  version: 0.7.1
-  resolution: "@lhci/utils@npm:0.7.1"
+"@lhci/utils@npm:0.7.2, @lhci/utils@npm:^0.7.2":
+  version: 0.7.2
+  resolution: "@lhci/utils@npm:0.7.2"
   dependencies:
     debug: ^4.3.1
     isomorphic-fetch: ^3.0.0
     js-yaml: ^3.13.1
     lighthouse: 7.3.0
     tree-kill: ^1.2.1
-  checksum: d69ca08fb5bd6cec1b286c48507285cb8a3bb7117216b2866837cec8c8082479e9328b969e7ed389aadeb67759728198148291904528b1d9fc43eaa899841062
+  checksum: 5a3df7be5e9ec0213fcbe7661402188118d899499af45b28bf722e4e88ccdce0840bde724d2ba4ad2dcfe8c525e2aa808b8ca8a97f83680e783cc8b5c794503f
   languageName: node
   linkType: hard
 
@@ -1899,8 +1910,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@topmonks/webs@workspace:."
   dependencies:
-    "@lhci/cli": ^0.7.1
-    "@lhci/utils": ^0.7.1
+    "@lhci/cli": ^0.7.2
+    "@lhci/utils": ^0.7.2
     "@material/button": ^11.0.0
     "@material/layout-grid": ^11.0.0
     "@material/top-app-bar": ^11.0.0
@@ -1930,7 +1941,7 @@ __metadata:
     gulp-markdown-to-json: ^1.1.0
     gulp-merge-json: ^2.1.1
     isomorphic-fetch: ^3.0.0
-    lighthouse: ^7.3.0
+    lighthouse: ^7.4.0
     lighthouse-logger: ^1.2.0
     lit-html: ^1.3.0
     local-web-server: ^4.2.1
@@ -4998,6 +5009,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"data-uri-to-buffer@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "data-uri-to-buffer@npm:3.0.1"
+  checksum: 9f28217ba76eaca400a75f4b1a1d0f55058082c8152a3d88ad5feeec5e54b8c7b6d8a7bb210206bfa552a927c1b942b6102ddbb2feaa557321ea94762c4f14e2
+  languageName: node
+  linkType: hard
+
 "date-time@npm:^3.1.0":
   version: 3.1.0
   resolution: "date-time@npm:3.1.0"
@@ -5725,7 +5743,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enquirer@npm:^2.3.5":
+"enquirer@npm:^2.3.5, enquirer@npm:^2.3.6":
   version: 2.3.6
   resolution: "enquirer@npm:2.3.6"
   dependencies:
@@ -6062,7 +6080,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esm@npm:^3.2.25":
+"esm@npm:^3.2.22, esm@npm:^3.2.25":
   version: 3.2.25
   resolution: "esm@npm:3.2.25"
   checksum: 12a0272aaa15ce4bc07e52cbb66d471cf56ad81ad1a3c1d9f6fa1e29e8c2712716333825e2572f9dbdfdc787e5717a75cb00ce2846e2a50e2bba6971c24402f3
@@ -6482,6 +6500,16 @@ __metadata:
   dependencies:
     pend: ~1.2.0
   checksum: ec759b16aea613f79540b450ffc278dcb927dccf55c89a364b68547441bec776d637f0a53aee9c9c70683406e4fc4b3aff29b1732bb388f9fa6ba200e8a79caa
+  languageName: node
+  linkType: hard
+
+"fetch-blob@npm:^2.1.1":
+  version: 2.1.2
+  resolution: "fetch-blob@npm:2.1.2"
+  peerDependenciesMeta:
+    domexception:
+      optional: true
+  checksum: c11ab96a1961c61b4f200fa1bf8da2feb48e999ed661bf792469a0dc1e4cc4ee4fa5da1e0091687ca34cabb91b4f4f3fcc5177019709b0ea7fbc28cc07f55b9f
   languageName: node
   linkType: hard
 
@@ -9379,6 +9407,18 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"jsonld@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "jsonld@npm:5.2.0"
+  dependencies:
+    "@digitalbazaar/http-client": ^1.1.0
+    canonicalize: ^1.0.1
+    lru-cache: ^6.0.0
+    rdf-canonize: ^3.0.0
+  checksum: 583020207c04021daf450ccb9bef618aeff22b011ab733659e272d4d0873a5f44c4604920733bba0bae6c41f07945682395281eca7dff0471493ef94340a5528
+  languageName: node
+  linkType: hard
+
 "jsonlint-mod@npm:^1.7.6":
   version: 1.7.6
   resolution: "jsonlint-mod@npm:1.7.6"
@@ -9679,6 +9719,29 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"ky-universal@npm:^0.8.2":
+  version: 0.8.2
+  resolution: "ky-universal@npm:0.8.2"
+  dependencies:
+    abort-controller: ^3.0.0
+    node-fetch: 3.0.0-beta.9
+  peerDependencies:
+    ky: ">=0.17.0"
+    web-streams-polyfill: ">=2.0.0"
+  peerDependenciesMeta:
+    web-streams-polyfill:
+      optional: true
+  checksum: da33c771eaa63348d586846ce706c03c42f4ab475c5661609712e0e62078d11bbbc98834257dd3b81838e094613800724756c23550e295f6e8aa0dbc67d16f43
+  languageName: node
+  linkType: hard
+
+"ky@npm:^0.25.1":
+  version: 0.25.1
+  resolution: "ky@npm:0.25.1"
+  checksum: af13618fd3d2d2cb18657dadec99381bd0be8ca7047079a12390ae0098a83e8a7defe980199ce3846dbbcc330bf6c418bb63b358a2af6d10b405ef0cebb7af1a
+  languageName: node
+  linkType: hard
+
 "last-run@npm:^1.1.0":
   version: 1.1.1
   resolution: "last-run@npm:1.1.1"
@@ -9768,7 +9831,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lighthouse@npm:7.3.0, lighthouse@npm:^7.3.0":
+"lighthouse@npm:7.3.0":
   version: 7.3.0
   resolution: "lighthouse@npm:7.3.0"
   dependencies:
@@ -9811,6 +9874,50 @@ fsevents@~2.3.1:
     chrome-debug: ./lighthouse-core/scripts/manual-chrome-launcher.js
     lighthouse: ./lighthouse-cli/index.js
   checksum: c086b1860e2d7771bf5ddd223ecfe7a473a2cc66d366d2e8d14d9c8c0f48718be924a4f15c2365c549a44981630a9811b36bf2eb0612b4513e3289554964c538
+  languageName: node
+  linkType: hard
+
+"lighthouse@npm:^7.4.0":
+  version: 7.4.0
+  resolution: "lighthouse@npm:7.4.0"
+  dependencies:
+    axe-core: 4.1.3
+    chrome-launcher: ^0.13.4
+    configstore: ^5.0.1
+    csp_evaluator: ^1.0.1
+    cssstyle: 1.2.1
+    enquirer: ^2.3.6
+    http-link-header: ^0.8.0
+    intl: ^1.2.5
+    intl-messageformat: ^4.4.0
+    intl-pluralrules: ^1.0.3
+    jpeg-js: ^0.4.1
+    js-library-detector: ^6.4.0
+    jsonld: ^5.2.0
+    jsonlint-mod: ^1.7.6
+    lighthouse-logger: ^1.2.0
+    lighthouse-stack-packs: ^1.4.0
+    lodash.get: ^4.4.2
+    lodash.isequal: ^4.5.0
+    lodash.set: ^4.3.2
+    lookup-closest-locale: 6.0.4
+    metaviewport-parser: 0.2.0
+    open: ^6.4.0
+    parse-cache-control: 1.0.1
+    ps-list: ^7.2.0
+    raven: ^2.2.1
+    robots-parser: ^2.0.1
+    semver: ^5.3.0
+    speedline-core: ^1.4.3
+    third-party-web: ^0.12.2
+    update-notifier: ^4.1.0
+    ws: 3.3.2
+    yargs: ^16.1.1
+    yargs-parser: ^20.2.4
+  bin:
+    chrome-debug: lighthouse-core/scripts/manual-chrome-launcher.js
+    lighthouse: lighthouse-cli/index.js
+  checksum: 3ecc8245b59e403f3629d6af22ff726502a10c14adeb1b393d0fd954c26543bb48d55c2cf13adb2e0c56f018c1c783e16d19842c6478fbe469e84bb442d03509
   languageName: node
   linkType: hard
 
@@ -11228,6 +11335,16 @@ fsevents@~2.3.1:
   dependencies:
     lower-case: ^1.1.1
   checksum: b4206dd12c6c02743a6e530f4c9439d51f4c4e75d307b8682d9a07f8d5e3662acc204ab5f64f83f725ed1a2a854f90a1bf5fd25fa7f442f82488e1391e4249b3
+  languageName: node
+  linkType: hard
+
+"node-fetch@npm:3.0.0-beta.9":
+  version: 3.0.0-beta.9
+  resolution: "node-fetch@npm:3.0.0-beta.9"
+  dependencies:
+    data-uri-to-buffer: ^3.0.1
+    fetch-blob: ^2.1.1
+  checksum: e1b71946805b6dbe44394df4dcd7287bb18c2d93bb5b1d41de24c5d87bc3ec28be5e7ec0601dfc93a62d41c05a25dc5f7c0804912e2c11bfbb23252c8ff2a155
   languageName: node
   linkType: hard
 
@@ -13310,6 +13427,15 @@ fsevents@~2.3.1:
     semver: ^6.3.0
     setimmediate: ^1.0.5
   checksum: ec457088ef620ee808875a6de6c685adbc4868c8e04ed768f9405dfd2094c6dd55a8a950b90c2f099fcfe526765b962f21d15b88962c017ff31709227fbcf48f
+  languageName: node
+  linkType: hard
+
+"rdf-canonize@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "rdf-canonize@npm:3.0.0"
+  dependencies:
+    setimmediate: ^1.0.5
+  checksum: aee9fa1ee636ae05aea8bdb6c608d8dd5fa6dcc49676cf66efb6954da8cf55e5f6c8f119535d9d10dc6fc0cb29237c4c24b26ce1f9e67d1c50f088c48d732ee4
   languageName: node
   linkType: hard
 
