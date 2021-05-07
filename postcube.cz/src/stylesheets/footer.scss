@@ -1,17 +1,24 @@
 // Footer //
 footer {
-  background: var(--postcube-primary);
+  background-color: var(--postcube-primary);
+  background-image: url("/assets/css/pc-logo--white.svg");
+  background-position: right bottom;
+  background-size: 91px 258px;
+
   .footer__list {
     ul {
       padding: 0;
       display: inline-flex;
+
       li {
         list-style: none;
+
         a {
           text-decoration: none;
           color: var(--postcube-white);
           margin-right: 24px;
           border-bottom: 2px solid transparent;
+
           &:hover,
           &.active {
             border-bottom: 2px solid var(--postcube-secondary);

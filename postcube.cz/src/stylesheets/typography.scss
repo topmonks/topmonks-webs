@@ -48,7 +48,7 @@ body {
   }
 }
 
-@media (max-width: 839px) {
+@media screen and (max-width: 839px) {
   h1 {
     font-size: 54px;
     font-weight: 800;
@@ -74,6 +74,8 @@ body {
   }
 }
 
+
+// Buttons //
 button {
   width: 100%;
   height: 56px;
@@ -92,7 +94,6 @@ button {
     background-color: var(--postcube-secondary-light);
   }
 }
-
 
 .action-btn {
   .action-btn__label {
