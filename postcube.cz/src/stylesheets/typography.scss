@@ -74,10 +74,18 @@ body {
   }
 }
 
-.btn {
-  text-align: center;
+button {
+  width: 100%;
+  height: 56px;
   background-color: var(--postcube-secondary);
-  padding: 20px 30px;
+  border: none;
+  text-align: center;
+  transition-duration: 0.4s;
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--postcube-black);
+  }
 
   &:hover {
     cursor: pointer;
@@ -85,18 +93,20 @@ body {
   }
 }
 
-.action-btn, .download-btn {
-  color: var(--postcube-black);
-  text-decoration: none;
-  text-align: center;
-}
 
 .action-btn {
-  font-size: 22px;
-  font-weight: 800;
-}
+  .action-btn__label {
+    font-size: 22px;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--postcube-black);
+    background-color: var(--postcube-secondary);
+    padding: 24px 30px;
 
-.download-btn {
-  font-size: 18px;
-  font-weight: normal;
+    &:hover {
+      cursor: pointer;
+      background-color: var(--postcube-secondary-light);
+      transition-duration: 0.4s;
+    }
+  }
 }

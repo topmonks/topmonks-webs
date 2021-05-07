@@ -1343,6 +1343,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@material/button@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "@material/button@npm:11.0.0"
+  dependencies:
+    "@material/density": ^11.0.0
+    "@material/dom": ^11.0.0
+    "@material/elevation": ^11.0.0
+    "@material/feature-targeting": ^11.0.0
+    "@material/ripple": ^11.0.0
+    "@material/rtl": ^11.0.0
+    "@material/shape": ^11.0.0
+    "@material/theme": ^11.0.0
+    "@material/touch-target": ^11.0.0
+    "@material/typography": ^11.0.0
+    tslib: ^2.1.0
+  checksum: 7c1d60e7dce7d2d68fada70296c33b2a43008ccb37c45cb7e8fa6c9a29b80212e6543d075ddb6e2beeac99943950f6e6e50327095d640ae44e3a5a54d51ad7ae
+  languageName: node
+  linkType: hard
+
+"@material/density@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "@material/density@npm:11.0.0"
+  dependencies:
+    tslib: ^2.1.0
+  checksum: 9b825ab9f974306adf1369c8e50889d75347bc438a6616597faf8e764bb5c98e3cd45f29391d7bf1227c3ce60266cc4e8721077ce24d915ef808255c10439ccb
+  languageName: node
+  linkType: hard
+
 "@material/dom@npm:^11.0.0":
   version: 11.0.0
   resolution: "@material/dom@npm:11.0.0"
@@ -1444,6 +1472,17 @@ __metadata:
     "@material/typography": ^11.0.0
     tslib: ^2.1.0
   checksum: f7d2055aad24b50bc84cd409204c12a8713303e65e354e1d2abb7b96282b3dd0afa4340cc55053d2029589d60cd7231836c7af5f57470a8af22a8f4e27fa7a7c
+  languageName: node
+  linkType: hard
+
+"@material/touch-target@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "@material/touch-target@npm:11.0.0"
+  dependencies:
+    "@material/base": ^11.0.0
+    "@material/feature-targeting": ^11.0.0
+    tslib: ^2.1.0
+  checksum: c242adfcb12c5a2492ccb5013e1b6221038c92e9251377ee19af500dd79c217ce25b02ae80bf1b0a3994aa430efa17c7872dd4a96a9ceeb10d3f3c67c15eed47
   languageName: node
   linkType: hard
 
@@ -1838,6 +1877,7 @@ __metadata:
   dependencies:
     "@lhci/cli": ^0.7.1
     "@lhci/utils": ^0.7.1
+    "@material/button": ^11.0.0
     "@material/layout-grid": ^11.0.0
     "@material/top-app-bar": ^11.0.0
     "@pulumi/aws": ^4.0.0
