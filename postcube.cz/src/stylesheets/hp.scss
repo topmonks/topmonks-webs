@@ -76,18 +76,28 @@
 
 // Download the App - Get the App //
 .get-app {
-  background: var(--postcube-primary);
   color: var(--postcube-white);
   padding-top: 2em;
-  padding-bottom: 4em;
 
-  h2, p {
-    color: var(--postcube-white);
-    text-align: left;
-    max-width: 420px;
+  .get-app__content {
+    h2, p {
+      color: var(--postcube-white);
+      text-align: left;
+      max-width: 420px;
+    }
   }
-
+  @media screen and (min-width: 840px) {
+    background-image: cloudinaryUrl("postcube.cz/download-app_bg.png");
+    background-size: 90% 500px;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    min-height: 540px;
+    .get-app__content {
+      margin-left: 8em;
+    }
+  }
   @media (max-width: 839px) {
+    background-color: var(--postcube-primary);
     h2 {
       font-size: 30px;
       text-align: center;
@@ -183,6 +193,10 @@
     h2 {
       margin-bottom: 0;
     }
+
+    p {
+      max-width: 440px;
+    }
   }
 
   .contact__content {
@@ -199,6 +213,7 @@
       padding-left: 20px;
       margin-bottom: 20px;
       background: var(--postcube-white);
+
       &::placeholder {
         font-size: 18px;
         color: var(--postcube-black);
@@ -215,6 +230,7 @@
         }
       }
     }
+
     p {
       font-size: 14px;
       line-height: 20px;
