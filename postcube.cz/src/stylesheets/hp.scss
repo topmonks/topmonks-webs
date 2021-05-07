@@ -8,7 +8,7 @@
 }
 
 // Fact and Clients //
-.facts {
+.detailed-info {
   background-color: var(--postcube-primary);
   color: var(--postcube-white);
   text-align: center;
@@ -17,6 +17,15 @@
     font-size: 66px;
     font-weight: 800;
     margin-bottom: 44px;
+  }
+  .detailed-info--clients {
+    padding: 24px;
+    @media screen and (min-width: 540px) {
+      border-left: 1px solid white;
+    }
+    @media (max-width: 539px) {
+      border-top: 1px solid white;
+    }
   }
 }
 
@@ -46,7 +55,7 @@
         content: '"';
         display: block;
         font-size: 159px;
-        height: 80px;
+        height: 74px;
       }
     }
   }
