@@ -42,10 +42,21 @@ svg {
   .icon-section__content {
     max-width: 280px;
     margin: 0 auto;
+    position: relative;
   }
 
-    .action-btn {
-      margin: 2em 0;
-    }
+  .action-btn {
+    margin: 2em 0;
+  }
+
+  .after-icon:after {
+    content: url("assets/css/line.svg");
+    display: block;
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
 }
 
