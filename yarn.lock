@@ -1181,9 +1181,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/eslintrc@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "@eslint/eslintrc@npm:0.4.0"
+"@eslint/eslintrc@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "@eslint/eslintrc@npm:0.4.1"
   dependencies:
     ajv: ^6.12.4
     debug: ^4.1.1
@@ -1194,7 +1194,7 @@ __metadata:
     js-yaml: ^3.13.1
     minimatch: ^3.0.4
     strip-json-comments: ^3.1.1
-  checksum: d3f51b741997cbf36662d8b5a52985bfa5d2873e48cadccd95c67fcce1706327ec98ebb6f0be79c6ecbc31bdeca32c2b1c4f66fd1cf3934c434d1ac269cbceac
+  checksum: 418f5810c8dd9897d2457ceef098197d0e5f1ad345fbe4cd9256fd4223d7ea83d5e350f9091b3ab3483b6b1c367fa560df3ba1fccc7eb8ca6e1aae5a5b126d60
   languageName: node
   linkType: hard
 
@@ -1618,9 +1618,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pulumi/aws@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "@pulumi/aws@npm:4.2.0"
+"@pulumi/aws@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "@pulumi/aws@npm:4.3.0"
   dependencies:
     "@pulumi/pulumi": ^3.0.0
     aws-sdk: ^2.0.0
@@ -1628,7 +1628,7 @@ __metadata:
     mime: ^2.0.0
     read-package-tree: ^5.2.1
     resolve: ^1.7.1
-  checksum: 05b404e105091af14883a00c4cf1cc61c89c9aa5b9aeec851badb5dcf91c5ffb993635f5a50d996993c1633b8dc6b95d06ed220d95387d5832f95db1b5f86a36
+  checksum: 688a67b55a49019f106837c4bed3300179ef1558d56c0e2847d893bb2a19db9f136188e6f138b3edab4feedd890c7c8a8d61d2e368cc2326fcacc4f3148c5e6e
   languageName: node
   linkType: hard
 
@@ -1838,7 +1838,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@topmonks/blendid@topmonks/blendid":
+"@topmonks/blendid@https://github.com/topmonks/blendid.git#commit=cf98f025a94b506f734106e9925e9cbcfae39cd2":
   version: 6.0.0
   resolution: "@topmonks/blendid@https://github.com/topmonks/blendid.git#commit=cf98f025a94b506f734106e9925e9cbcfae39cd2"
   dependencies:
@@ -1915,23 +1915,23 @@ __metadata:
     "@material/button": ^11.0.0
     "@material/layout-grid": ^11.0.0
     "@material/top-app-bar": ^11.0.0
-    "@pulumi/aws": ^4.2.0
+    "@pulumi/aws": ^4.3.0
     "@pulumi/awsx": ^0.30.0
     "@pulumi/pulumi": ^3.2.1
-    "@topmonks/blendid": topmonks/blendid
+    "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=cf98f025a94b506f734106e9925e9cbcfae39cd2"
     "@topmonks/pulumi-aws": ^1.7.7
     "@types/chart.js": ^2.9.32
     "@types/node": ^14.14.44
     "@types/yaml": ^1.9.7
     ava: ^3.15.0
     babel-eslint: ^10.1.0
-    chalk: ^4.1.0
-    cheerio: ^1.0.0-rc.6
+    chalk: ^4.1.1
+    cheerio: ^1.0.0-rc.9
     commander: ^7.2.0
     dotenv: ^9.0.0
     dotenv-cli: ^4.0.0
-    esbuild: ^0.11.12
-    eslint: ^7.25.0
+    esbuild: ^0.11.20
+    eslint: ^7.26.0
     eslint-config-prettier: ^8.3.0
     eslint-plugin-ava: ^12.0.0
     eslint-plugin-lit: ^1.3.0
@@ -1943,7 +1943,7 @@ __metadata:
     isomorphic-fetch: ^3.0.0
     lighthouse: ^7.4.0
     lighthouse-logger: ^1.2.0
-    lit-html: ^1.3.0
+    lit-html: ^1.4.1
     local-web-server: ^4.2.1
     lodash: ^4.17.21
     lws: 3.1.0
@@ -1966,7 +1966,7 @@ __metadata:
     node-fetch: ^2.6.1
     npm-run-all: ^4.1.5
     prettier: ^2.2.1
-    puppeteer: ^9.0.0
+    puppeteer: ^9.1.1
     rimraf: ^3.0.2
     stylelint: ^13.13.1
     stylelint-config-prettier: ^8.0.2
@@ -3804,7 +3804,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cheerio-select@npm:^1.3.0":
+"cheerio-select@npm:^1.4.0":
   version: 1.4.0
   resolution: "cheerio-select@npm:1.4.0"
   dependencies:
@@ -3841,17 +3841,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cheerio@npm:^1.0.0-rc.6":
-  version: 1.0.0-rc.6
-  resolution: "cheerio@npm:1.0.0-rc.6"
+"cheerio@npm:^1.0.0-rc.9":
+  version: 1.0.0-rc.9
+  resolution: "cheerio@npm:1.0.0-rc.9"
   dependencies:
-    cheerio-select: ^1.3.0
+    cheerio-select: ^1.4.0
     dom-serializer: ^1.3.1
-    domhandler: ^4.1.0
+    domhandler: ^4.2.0
     htmlparser2: ^6.1.0
     parse5: ^6.0.1
     parse5-htmlparser2-tree-adapter: ^6.0.1
-  checksum: 75778a0f749972322a36107622ed5b9d1888dc7bc01809bb1f94ef9b095a410ae8ca91a91a66c23682cc1742ef0d3346040c24306aa89cdcfdcc64f2e42ff628
+    tslib: ^2.2.0
+  checksum: 0fafd41c8063675280978071d97bd7f9dec3b111d93e0fded74aeb0634bd72afcf4fae0597507e30f9fac4a8f744d85683ccdbc2150ca4d64067c5f6d12e12da
   languageName: node
   linkType: hard
 
@@ -5450,7 +5451,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"domhandler@npm:^4.0.0, domhandler@npm:^4.1.0, domhandler@npm:^4.2.0":
+"domhandler@npm:^4.0.0, domhandler@npm:^4.2.0":
   version: 4.2.0
   resolution: "domhandler@npm:4.2.0"
   dependencies:
@@ -5899,12 +5900,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.11.12":
-  version: 0.11.12
-  resolution: "esbuild@npm:0.11.12"
+"esbuild@npm:^0.11.20":
+  version: 0.11.20
+  resolution: "esbuild@npm:0.11.20"
   bin:
     esbuild: bin/esbuild
-  checksum: 06139e5fe1f960db65d093f8439f3da73f63f3ec7202bf08dd8ca64d60efe49335fec4f24e637fc815bf5f77c3a047b83c91c07a08f2c09ea2c5d79f2600ad85
+  checksum: 553f88218a18d018d690f6512b10f4a37b6e7545b48aad02a1ed77e4b7a01d0261dc4213557d694c55f9e130527a064ed1db872c878a2133a0b3a90122299c82
   languageName: node
   linkType: hard
 
@@ -6050,12 +6051,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.25.0":
-  version: 7.25.0
-  resolution: "eslint@npm:7.25.0"
+"eslint@npm:^7.26.0":
+  version: 7.26.0
+  resolution: "eslint@npm:7.26.0"
   dependencies:
     "@babel/code-frame": 7.12.11
-    "@eslint/eslintrc": ^0.4.0
+    "@eslint/eslintrc": ^0.4.1
     ajv: ^6.10.0
     chalk: ^4.0.0
     cross-spawn: ^7.0.2
@@ -6093,7 +6094,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: 6e1782e2264ebf987504746ee82e996bf0ef2c29a2eaea869b54cb8aa1eaf10945b1d563618515e65ac934ca626f3609282127773f45868ad4a98744458a3c62
+  checksum: 08f99befd764fbd6ea811e9eec27d5c6b9dc9d1bbfe5ffa1016e4f1fe526a4f45ea127c4e30c554c423ee55eb290ce9af4fb7fedf9b7af3f84076a444c2bbdf6
   languageName: node
   linkType: hard
 
@@ -9962,10 +9963,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lit-html@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "lit-html@npm:1.3.0"
-  checksum: b32528e92f47d2ad6a306319a16a8301e1d8bd7cd1a065516a4fc14e55904f054bfe38dd1725e584ba2bdd71549c88c90107e493e3094a2f13b507c1ba86bd39
+"lit-html@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "lit-html@npm:1.4.1"
+  checksum: cf3dea0afa2cb014a258169b1b597272f868385ba7b5d7a55258500aa4f2fb3d79e903dd22aa2076ff1c801ba5fbcde3db2ca185707ae57ca3816c95e8bcc086
   languageName: node
   linkType: hard
 
@@ -13281,9 +13282,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"puppeteer@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "puppeteer@npm:9.0.0"
+"puppeteer@npm:^9.1.1":
+  version: 9.1.1
+  resolution: "puppeteer@npm:9.1.1"
   dependencies:
     debug: ^4.1.0
     devtools-protocol: 0.0.869402
@@ -13297,7 +13298,7 @@ fsevents@~2.3.1:
     tar-fs: ^2.0.0
     unbzip2-stream: ^1.3.3
     ws: ^7.2.3
-  checksum: 35af7ab296f91cac69be93d99914b5b6c7fc8d5f38f5b3484c4fb917d34b4f819d93795580f8052793236414069f613469a208e23ba86e6f65ed812504be57dd
+  checksum: d680e469c2ac724bae1bb7087748b903a7a965fe00f622e17fd40aafd9589351bfa0c472fc200a717706d04f846788e63ab9d07e2d418f994612cb2c0cb68943
   languageName: node
   linkType: hard
 
@@ -16197,7 +16198,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.1.0":
+"tslib@npm:^2.1.0, tslib@npm:^2.2.0":
   version: 2.2.0
   resolution: "tslib@npm:2.2.0"
   checksum: 2d35468c470410871c5246e43f12dcb6d0fc363b617c176f26443b9530e5c5ee8448966892a42956168d8f495da7865bda33dfe82c26c91991e28999974a618f
