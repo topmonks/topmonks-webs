@@ -81,7 +81,7 @@ for (const domain in redirects) {
 }
 
 const monksroomInfra = monksroom.init();
-monksroomInfra.then(x => x.stop());
+monksroomInfra.then(x => x.stop()).catch(err => console.error(err));
 
 export const arxDocumentsBucketUri = arx.documentsBucketUri;
 export const arxDocumentsBucketEndpoint = arx.documentsBucketEndpoint;

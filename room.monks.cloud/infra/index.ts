@@ -35,7 +35,7 @@ export async function init() {
         method: "GET",
         eventHandler: new aws.lambda.Function("monksroom-now-playing", {
           publish: true,
-          runtime: aws.lambda.Runtime.NodeJS12dX,
+          runtime: aws.lambda.Runtime.NodeJS14dX,
           role: defaultLambdaRole.arn,
           handler: "index.handler",
           code: buildAssets("now-playing/index.js")
@@ -46,7 +46,7 @@ export async function init() {
         method: "GET",
         eventHandler: new aws.lambda.Function("monksroom-beatport", {
           publish: true,
-          runtime: aws.lambda.Runtime.NodeJS12dX,
+          runtime: aws.lambda.Runtime.NodeJS14dX,
           role: defaultLambdaRole.arn,
           handler: "index.handler",
           code: buildAssets("beatport/index.js"),
