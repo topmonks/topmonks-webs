@@ -53,12 +53,10 @@ jobs:
   build:
     executor:
       name: node/default
-      tag: '14.13.1'
+      tag: '16.1.0'
     working_directory: ~/topmonks-webs
     steps:
       - checkout
-      - pulumi/login:
-          cloud-url: s3://pulumi.tmcloud.io
       - node/install-packages:
           pkg-manager: yarn
           override-ci-command: yarn install --immutable
@@ -79,7 +77,7 @@ jobs:
   provision:
     executor:
       name: node/default
-      tag: '14.13.1'
+      tag: '16.1.0'
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -92,6 +90,7 @@ jobs:
           override-ci-command: yarn install --immutable
           cache-version: v3
           cache-path: .yarn/cache
+      - run: pulumi version
       - run: pulumi stack select topmonks-webs
       - pulumi/update:
           stack: topmonks-webs
@@ -100,7 +99,7 @@ jobs:
   preview-provision:
     executor:
       name: node/default
-      tag: '14.13.1'
+      tag: '16.1.0'
     working_directory: ~/topmonks-webs
     steps:
       - checkout
@@ -123,7 +122,7 @@ jobs:
         type: string
     executor:
       name: node/default
-      tag: '14.13.1'
+      tag: '16.1.0'
     working_directory: ~/topmonks-webs
     steps:
       - browser-tools/install-chrome
