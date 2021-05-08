@@ -130,6 +130,7 @@
   },
   "resolutions": {
     "bluebird": "npm:bluebird@3.7.2",
-    "lodash": "npm:lodash@4.17.21"
+    "lodash": "npm:lodash@4.17.21",
+    "marky": "npm:marky@1.2.2"
   }
 }

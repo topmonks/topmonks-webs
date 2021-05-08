@@ -10701,10 +10701,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"marky@npm:^1.2.0":
-  version: 1.2.1
-  resolution: "marky@npm:1.2.1"
-  checksum: b83093655855cb7b867b0bcc1b444e168cadb3721bf3ee60f733943db814a1d35997cde8423beabd17080875fd39c24c1dfc8c4341008e4be9e668c4e33481dd
+"marky@npm:marky@1.2.2":
+  version: 1.2.2
+  resolution: "marky@npm:1.2.2"
+  checksum: e0df8df2f5048a0c2cd9b643187a436d99937211a6fc50a3514eb89edb3ffcde2977e854432cdb78fdd64d345a68e4e368690d7e233da853f4b0cf2a7e4c72f3
   languageName: node
   linkType: hard
 
