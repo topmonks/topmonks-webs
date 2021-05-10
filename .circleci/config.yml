@@ -60,7 +60,7 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
           override-ci-command: yarn install --immutable
-          cache-version: v3
+          cache-version: v4
           cache-path: .yarn/cache
       - run: yarn build
       - run: |
@@ -88,9 +88,8 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
           override-ci-command: yarn install --immutable
-          cache-version: v3
+          cache-version: v4
           cache-path: .yarn/cache
-      - run: pulumi version
       - run: pulumi stack select topmonks-webs
       - pulumi/update:
           stack: topmonks-webs
@@ -110,7 +109,7 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
           override-ci-command: yarn install --immutable
-          cache-version: v3
+          cache-version: v4
           cache-path: .yarn/cache
       - run: pulumi stack select topmonks-webs
       - pulumi/preview:
@@ -133,7 +132,7 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
           override-ci-command: yarn install --immutable
-          cache-version: v3
+          cache-version: v4
           cache-path: .yarn/cache
       - run:
           name: Install self-signed cert for localhost
