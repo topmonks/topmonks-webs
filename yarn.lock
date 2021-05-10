@@ -1680,7 +1680,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pulumi/pulumi@npm:^3.2.1":
+"@pulumi/pulumi@npm:^3.1.0":
   version: 3.2.1
   resolution: "@pulumi/pulumi@npm:3.2.1"
   dependencies:
@@ -1917,7 +1917,7 @@ __metadata:
     "@material/top-app-bar": ^11.0.0
     "@pulumi/aws": ^4.3.0
     "@pulumi/awsx": ^0.30.0
-    "@pulumi/pulumi": ^3.2.1
+    "@pulumi/pulumi": ^3.1.0
     "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=cf98f025a94b506f734106e9925e9cbcfae39cd2"
     "@topmonks/pulumi-aws": ^1.7.9
     "@types/chart.js": ^2.9.32
