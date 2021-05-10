@@ -90,12 +90,10 @@ jobs:
           override-ci-command: yarn install --immutable
           cache-version: v4
           cache-path: .yarn/cache
-      - run: |
-          pulumi stack select topmonks-webs
-          pulumi update --yes --stack topmonks-webs --cwd . --skip-preview --debug --parallel 1
-#      - pulumi/update:
-#          stack: topmonks-webs
-#          skip-preview: true
+      - run: pulumi stack select topmonks-webs
+      - pulumi/update:
+          stack: topmonks-webs
+          skip-preview: true
 
   preview-provision:
     executor:
