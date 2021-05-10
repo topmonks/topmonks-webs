@@ -1,0 +1,66 @@
+// Accordion - FAQ Component //
+.faq {
+  padding-top: 4em;
+  padding-bottom: 6em;
+
+  h2 {
+    margin-bottom: 0;
+    max-width: 420px;
+  }
+}
+
+.accordion {
+  max-width: 480px;
+  padding-left: 30px;
+  overflow: hidden;
+
+  .faq--input {
+    display: none;
+  }
+
+  .faq--content {
+    font-size: 16px;
+    line-height: 22px;
+    display: none;
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  .faq--input:checked ~ .faq--content {
+    display: block;
+  }
+
+  .faq--input:checked ~ .faq--label {
+    font-weight: 800;
+  }
+
+  .faq--label {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 26px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin: 14px 0;
+    border-bottom: 2px solid transparent;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 14px;
+      background-color: var(--postcube-primary);
+      position: absolute;
+      left: -30px;
+      top: 6px;
+    }
+
+    @media screen and (min-width: 840px) {
+      &:hover {
+        border-bottom: 2px solid var(--postcube-secondary);
+      }
+    }
+  }
+}

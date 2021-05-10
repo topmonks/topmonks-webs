@@ -47,14 +47,14 @@
 </head>
 <body id="page-{{page}}" vocab="https://schema.org/" typeof="{{ pageType or 'WebPage' }}">
 
-<link rel="stylesheet" href="/assets/css/header.css">
+<link rel="stylesheet" href="/assets/css/components/header.css">
 {% include 'components/header.njk' %}
 
 <main id="content">
   {% block content %}{% endblock %}
 </main>
 
-<link rel="stylesheet" href="/assets/css/footer.css">
+<link rel="stylesheet" href="/assets/css/components/footer.css">
 {% include 'components/footer.njk' %}
 
 
