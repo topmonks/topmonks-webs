@@ -1928,7 +1928,7 @@ __metadata:
     chalk: ^4.1.1
     cheerio: ^1.0.0-rc.9
     commander: ^7.2.0
-    dotenv: ^9.0.0
+    dotenv: ^9.0.1
     dotenv-cli: ^4.0.0
     esbuild: ^0.11.20
     eslint: ^7.26.0
@@ -1965,7 +1965,7 @@ __metadata:
     marked: ^2.0.3
     node-fetch: ^2.6.1
     npm-run-all: ^4.1.5
-    prettier: ^2.2.1
+    prettier: ^2.3.0
     puppeteer: ^9.1.1
     rimraf: ^3.0.2
     stylelint: ^13.13.1
@@ -5537,10 +5537,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "dotenv@npm:9.0.0"
-  checksum: 8111fb99a12a8da9fedc90d855d734bbf026f3257d67b611b2517d393b027ca5774c1f9dd5aa0887f339f4e7c711f99bdd8bc82fa076e572f3eb6000b2c09343
+"dotenv@npm:^9.0.1":
+  version: 9.0.1
+  resolution: "dotenv@npm:9.0.1"
+  checksum: d269ad03ed91e8f44a77fbf04ac6f67678b22a7ca2094f3033e1197d5d4756be29ad1ea3951a335149a2363889144a6b171dc91fda88a60114c5dd388a6e17d3
   languageName: node
   linkType: hard
 
@@ -13087,12 +13087,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "prettier@npm:2.2.1"
+"prettier@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "prettier@npm:2.3.0"
   bin:
     prettier: bin-prettier.js
-  checksum: 92c6c9f4b87eba1f28466edee57dd18c80d00b858edda77d46d1950d20e6e302b68ee255fc91133ba931e63c4577b5ae30da194d9626a8f3c0177778b91bf056
+  checksum: 652640cc8b71bc5277cfb8bf6f161783ca588efcf683c3d630837b39da8d57fef35c9e00ae5855a8e3c75136c42274046c913cc2b2d2968558315f31c6a26981
   languageName: node
   linkType: hard
 
