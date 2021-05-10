@@ -9,8 +9,8 @@ import {
   AssetsCachingLambda,
   SecurityHeadersLambda
 } from "@topmonks/pulumi-aws";
-// import * as arx from "./arx.monks.cloud/infra";
-//import * as monksroom from "./room.monks.cloud/infra";
+import * as arx from "./arx.monks.cloud/infra";
+import * as monksroom from "./room.monks.cloud/infra";
 
 export = async () => {
   // Automatically inject tags.
@@ -22,7 +22,7 @@ export = async () => {
   createCertificate("www.cbx.cz");
   createCertificate("www.hookamonk.com");
   createCertificate("www.ingridapp.io");
-  //createCertificate("monks.cloud");
+  createCertificate("monks.cloud");
   createCertificate("www.postcube.cz");
   createCertificate("www.postcube.com");
   createCertificate("www.zive.tv");
@@ -85,23 +85,23 @@ export = async () => {
     };
   }
 
-  // const monksroomInfra = await monksroom.init();
-  // await monksroomInfra.stop();
-  // const monksroomApiHost = monksroomInfra.apiDistribution.url;
+  const monksroomInfra = await monksroom.init();
+  await monksroomInfra.stop();
+  const monksroomApiHost = monksroomInfra.apiDistribution.url;
 
-  // const arxDocumentsBucketUri = arx.documentsBucketUri;
-  // const arxDocumentsBucketEndpoint = arx.documentsBucketEndpoint;
-  // const arxDocumentsTable = arx.documentsTable;
-  // const arxDocumentsApi = arx.documentsApi;
+  const arxDocumentsBucketUri = arx.documentsBucketUri;
+  const arxDocumentsBucketEndpoint = arx.documentsBucketEndpoint;
+  const arxDocumentsTable = arx.documentsTable;
+  const arxDocumentsApi = arx.documentsApi;
   return {
     sites,
     redirectSites,
     assetsCachingLambdaArn,
-    securityHeadersLambdaArn
-    // arxDocumentsBucketUri,
-    // arxDocumentsBucketEndpoint,
-    // arxDocumentsTable,
-    // arxDocumentsApi
-    // monksroomApiHost
+    securityHeadersLambdaArn,
+    arxDocumentsBucketUri,
+    arxDocumentsBucketEndpoint,
+    arxDocumentsTable,
+    arxDocumentsApi,
+    monksroomApiHost
   };
 };

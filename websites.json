@@ -94,6 +94,7 @@
       }
     }
   },
+  "room.monks.cloud": {},
   "www.ingridapp.io": {
     "lhci": {
       "assert": {
@@ -109,6 +110,19 @@
       },
       "upload": {
         "token": "71c706c6-ae1f-4955-a418-29ca9947795d"
+      }
+    }
+  },
+  "arx.monks.cloud": {
+    "lhci": {
+      "assert": {
+        "assertions": {
+          "errors-in-console": "warn",
+          "meta-description": "warn"
+        }
+      },
+      "upload": {
+        "token": "d61f65f5-8db9-4129-af03-ef7308696a27"
       }
     }
   },
@@ -143,6 +157,13 @@
       },
       "upload": {
         "token": "c18f07e4-d6ed-430d-ad9c-ba008107d9fb"
+      }
+    }
+  },
+  "postcube.cz": {
+    "lhci": {
+      "upload": {
+        "token": "1ed787ee-329a-4625-9407-2a543bd8e92c"
       }
     }
   }

@@ -19,5 +19,14 @@
   },
   "hackercamp.cz": {
     "target": "https://www.hackercamp.cz"
+  },
+  "www.postcube.cz": {
+    "target": "https://postcube.cz"
+  },
+  "postcube.com": {
+    "target": "https://postcube.cz"
+  },
+  "www.postcube.com": {
+    "target": "https://postcube.cz"
   }
 }
