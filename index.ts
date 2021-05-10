@@ -85,17 +85,14 @@ export = async () => {
     };
   }
 
-  const monksroomInfra = monksroom.init();
-  await monksroomInfra.then(x => x.stop()).catch(err => console.error(err));
+  const monksroomInfra = await monksroom.init();
+  await monksroomInfra.stop();
+  const monksroomApiHost = monksroomInfra.apiDistribution.url;
 
   const arxDocumentsBucketUri = arx.documentsBucketUri;
   const arxDocumentsBucketEndpoint = arx.documentsBucketEndpoint;
   const arxDocumentsTable = arx.documentsTable;
   const arxDocumentsApi = arx.documentsApi;
-
-  const monksroomApiHost = monksroomInfra.then(
-    ({ apiDistribution }) => apiDistribution.url
-  );
   return {
     sites,
     redirectSites,

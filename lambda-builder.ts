@@ -26,7 +26,7 @@ export async function init() {
       });
     },
     stop() {
-      return Promise.all(buildTasks).catch(err => console.error(err));
+      return Promise.all(buildTasks);
     }
   };
 }
