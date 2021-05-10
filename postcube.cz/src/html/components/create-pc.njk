@@ -1,0 +1,39 @@
+<style>
+  .create-postcube {
+    text-align: center;
+    padding: 4em 0 7em;
+  }
+
+  .create-postcube h2 {
+    color: var(--postcube-white)
+  }
+  .action-btn {
+    margin-top: 2em;
+  }
+  @media screen and (min-width: 840px) {
+    .create-postcube {
+      background-image: url("https://res.cloudinary.com/topmonks/image/upload/v1620658169/postcube.cz/create-pc_bg.png");
+      background-size: 100% auto;
+      background-position: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+  @media (max-width: 839px) {
+    .create-postcube {
+      background-color: var(--postcube-primary);
+    }
+  }
+</style>
+
+<section class="create-postcube">
+  <div class="mdc-layout-grid layout-wrapper">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>Sestavte si svou PostCube a zjistěte její cenu</h2>
+      </div>
+      <div class="action-btn mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <a href="#" class="action-btn__label">Postavit PostCube</a>
+      </div>
+    </div>
+  </div>
+</section>

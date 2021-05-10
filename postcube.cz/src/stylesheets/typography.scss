@@ -1,6 +1,7 @@
 :root {
   --postcube-black: #000;
   --postcube-grey: #A5A5A5;
+  --postcube-grey-light: #F2F2F2;
   --postcube-white: #fff;
 
   --postcube-primary: #1538E5;
@@ -28,12 +29,14 @@ body {
     font-weight: 800;
     line-height: 84px;
     margin-bottom: 0;
+    color: var(--postcube-primary);
   }
 
   h2 {
     font-size: 40px;
     font-weight: 800;
     line-height: 48px;
+    color: var(--postcube-primary);
   }
   h3 {
     font-size: 30px;
@@ -54,12 +57,14 @@ body {
     font-weight: 800;
     line-height: 60px;
     margin: 0;
+    color: var(--postcube-primary);
   }
 
   h2 {
     font-size: 28px;
     font-weight: 800;
     line-height: 36px;
+    color: var(--postcube-primary);
   }
   h3 {
     font-size: 22px;

@@ -26,6 +26,23 @@ body {
 textarea:focus, button:focus, input:focus {
   outline: none;
 }
+.content-title {
+  text-align: center;
+  margin: 4em 0 0.5em;
+}
+
+// Main Introduction Text //
+.main-info {
+  color: var(--postcube-primary);
+
+  .main-info__content {
+    align-self: center;
+    max-width: 380px;
+  }
+  .main-info__bg {
+    align-self: center;
+  }
+}
 
 
 
@@ -59,6 +76,49 @@ svg {
     position: absolute;
     top: 10px;
     left: 10px;
+  }
+}
+
+// Testimonials //
+.testimonial {
+  color: var(--postcube-primary);
+  padding-top: 4em;
+  padding-bottom: 4em;
+
+  h2 {
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 20px;
+  }
+
+  @media (min-width: 840px) {
+    h2 {
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 50px;
+    }
+    p {
+      font-size: 26px;
+    }
+    .testimonial__content {
+      &:before {
+        content: '"';
+        display: block;
+        font-size: 159px;
+        height: 74px;
+      }
+    }
+  }
+  @media (max-width: 839px) {
+    .testimonial__content {
+      &:before {
+        content: '"';
+        display: block;
+        font-size: 104px;
+        height: 48px;
+      }
+    }
   }
 }
 
