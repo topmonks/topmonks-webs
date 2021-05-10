@@ -10,7 +10,7 @@ import {
   SecurityHeadersLambda
 } from "@topmonks/pulumi-aws";
 import * as arx from "./arx.monks.cloud/infra";
-import * as monksroom from "./room.monks.cloud/infra";
+//import * as monksroom from "./room.monks.cloud/infra";
 
 export = async () => {
   // Automatically inject tags.
@@ -85,9 +85,9 @@ export = async () => {
     };
   }
 
-  const monksroomInfra = await monksroom.init();
-  await monksroomInfra.stop();
-  const monksroomApiHost = monksroomInfra.apiDistribution.url;
+  // const monksroomInfra = await monksroom.init();
+  // await monksroomInfra.stop();
+  // const monksroomApiHost = monksroomInfra.apiDistribution.url;
 
   const arxDocumentsBucketUri = arx.documentsBucketUri;
   const arxDocumentsBucketEndpoint = arx.documentsBucketEndpoint;
@@ -101,7 +101,7 @@ export = async () => {
     arxDocumentsBucketUri,
     arxDocumentsBucketEndpoint,
     arxDocumentsTable,
-    arxDocumentsApi,
-    monksroomApiHost
+    arxDocumentsApi
+    // monksroomApiHost
   };
 };
