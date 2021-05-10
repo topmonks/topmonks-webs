@@ -18,7 +18,7 @@ registerAutoTags({
 });
 
 createCertificate("www.cbx.cz");
-createCertificate("www.hookamonk.com");
+//createCertificate("www.hookamonk.com");
 createCertificate("www.ingridapp.io");
 createCertificate("www.zive.tv");
 createCertificate("www.postcube.cz");
