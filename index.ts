@@ -10,7 +10,7 @@ import {
   SecurityHeadersLambda
 } from "@topmonks/pulumi-aws";
 import * as arx from "./arx.monks.cloud/infra";
-import * as monksroom from "./room.monks.cloud/infra";
+//import * as monksroom from "./room.monks.cloud/infra";
 
 export = async () => {
   // Automatically inject tags.
@@ -55,7 +55,7 @@ export = async () => {
 
   const websites = require("./websites.json");
   const sites: any = {};
-  for (const domain in websites) {
+  for (const domain of Object.keys(websites)) {
     const website = Website.create(
       domain,
       Object.assign(
@@ -76,7 +76,7 @@ export = async () => {
 
   const redirects = require("./redirects.json");
   const redirectSites: any = {};
-  for (const domain in redirects) {
+  for (const domain of Object.keys(redirects)) {
     const website = Website.createRedirect(domain, redirects[domain]);
     redirectSites[domain] = {
       url: website.url,
@@ -85,9 +85,9 @@ export = async () => {
     };
   }
 
-  const monksroomInfra = await monksroom.init();
-  await monksroomInfra.stop();
-  const monksroomApiHost = monksroomInfra.apiDistribution.url;
+  // const monksroomInfra = await monksroom.init();
+  // await monksroomInfra.stop();
+  // const monksroomApiHost = monksroomInfra.apiDistribution.url;
 
   const arxDocumentsBucketUri = arx.documentsBucketUri;
   const arxDocumentsBucketEndpoint = arx.documentsBucketEndpoint;
@@ -101,7 +101,7 @@ export = async () => {
     arxDocumentsBucketUri,
     arxDocumentsBucketEndpoint,
     arxDocumentsTable,
-    arxDocumentsApi,
-    monksroomApiHost
+    arxDocumentsApi
+    // monksroomApiHost
   };
 };
