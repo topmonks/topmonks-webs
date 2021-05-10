@@ -92,7 +92,7 @@ jobs:
           cache-path: .yarn/cache
       - run: |
           pulumi stack select topmonks-webs
-          pulumi update --yes --stack topmonks-webs --cwd . --skip-preview --non-interactive -v=3
+          pulumi update --yes --stack topmonks-webs --cwd . --skip-preview --non-interactive --debug
 #      - pulumi/update:
 #          stack: topmonks-webs
 #          skip-preview: true
