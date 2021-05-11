@@ -12,6 +12,10 @@ import {
 import * as arx from "./arx.monks.cloud/infra";
 import * as monksroom from "./room.monks.cloud/infra";
 
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("Unhandled Rejection at:", promise, "reason:", reason);
+});
+
 export = async () => {
   try {
     // Automatically inject tags.
@@ -78,7 +82,16 @@ export = async () => {
     const redirects = require("./redirects.json");
     const redirectSites: any = {};
     for (const domain of Object.keys(redirects)) {
-      const website = Website.createRedirect(domain, redirects[domain]);
+      const website = Website.createRedirect(
+        domain,
+        Object.assign(
+          {
+            assetsCachingLambdaArn: assetsCachingLambda.arn,
+            securityHeadersLambdaArn: securityHeadersLambda.arn
+          },
+          redirects[domain]
+        )
+      );
       redirectSites[domain] = {
         url: website.url,
         s3BucketUri: website.s3BucketUri,
