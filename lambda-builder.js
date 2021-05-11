@@ -16,11 +16,7 @@ exports.init = async function init() {
         external: ["aws-sdk"],
         entryPoints: [entrypoint],
         write: false
-      }).then(result =>
-        result && result.outputFiles && result.outputFiles[0].text != null
-          ? result.outputFiles[0].text
-          : ""
-      );
+      }).then(result => result?.outputFiles?.[0].text ?? "");
       buildTasks.push(promise);
       return promise;
     },

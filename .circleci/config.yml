@@ -77,7 +77,7 @@ jobs:
   provision:
     executor:
       name: node/default
-      tag: '12.22'
+      tag: 'current'
     steps:
       - checkout
       - pulumi/login:
