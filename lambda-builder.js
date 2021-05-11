@@ -2,10 +2,10 @@ import * as pulumi from "@pulumi/pulumi";
 import { build } from "esbuild";
 
 export async function init() {
-  const buildTasks: Promise<string>[] = [];
+  const buildTasks = [];
 
   return {
-    build(entrypoint: string, minify: boolean) {
+    build(entrypoint, minify) {
       const promise = build({
         bundle: true,
         minify,
@@ -20,7 +20,7 @@ export async function init() {
       buildTasks.push(promise);
       return promise;
     },
-    buildCodeAsset(entrypoint: string, minify: boolean = false) {
+    buildCodeAsset(entrypoint, minify = false) {
       return new pulumi.asset.AssetArchive({
         "index.js": new pulumi.asset.StringAsset(this.build(entrypoint, minify))
       });
