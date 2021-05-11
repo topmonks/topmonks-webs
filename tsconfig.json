@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "bin",
     "target": "ES2020",
-    "lib": ["ESNext"],
+    "lib": ["ESNext.Promise"],
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
