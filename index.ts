@@ -78,7 +78,16 @@ export = async () => {
     const redirects = require("./redirects.json");
     const redirectSites: any = {};
     for (const domain of Object.keys(redirects)) {
-      const website = Website.createRedirect(domain, redirects[domain]);
+      const website = Website.createRedirect(
+        domain,
+        Object.assign(
+          {
+            assetsCachingLambdaArn: assetsCachingLambda.arn,
+            securityHeadersLambdaArn: securityHeadersLambda.arn
+          },
+          redirects[domain]
+        )
+      );
       redirectSites[domain] = {
         url: website.url,
         s3BucketUri: website.s3BucketUri,
