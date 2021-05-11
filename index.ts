@@ -12,6 +12,10 @@ import {
 import * as arx from "./arx.monks.cloud/infra";
 import * as monksroom from "./room.monks.cloud/infra";
 
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("Unhandled Rejection at:", promise, "reason:", reason);
+});
+
 export = async () => {
   try {
     // Automatically inject tags.
