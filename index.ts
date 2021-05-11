@@ -14,10 +14,10 @@ import * as arx from "./arx.monks.cloud/infra";
 
 export = async () => {
   // Automatically inject tags.
-  registerAutoTags({
-    "user:Project": pulumi.getProject(),
-    "user:Stack": pulumi.getStack()
-  });
+  // registerAutoTags({
+  //   "user:Project": pulumi.getProject(),
+  //   "user:Stack": pulumi.getStack()
+  // });
 
   createCertificate("www.cbx.cz");
   createCertificate("www.hookamonk.com");
