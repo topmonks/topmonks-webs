@@ -26,7 +26,7 @@ export async function init() {
       });
     },
     stop() {
-      return Promise.all(buildTasks);
+      return Promise.allSettled(buildTasks);
     }
   };
 }
