@@ -78,18 +78,16 @@ jobs:
     executor:
       name: node/default
       tag: 'lts'
-    working_directory: ~/topmonks-webs
     steps:
       - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
       - pulumi/login:
           cloud-url: s3://pulumi.tmcloud.io
       - node/install-packages:
           pkg-manager: yarn
           override-ci-command: yarn install --immutable
-          cache-version: v5
-          cache-path: .yarn/cache
+          with-cache: false
+#          cache-version: v5
+#          cache-path: .yarn/cache
       - run: pulumi stack select topmonks-webs
       - pulumi/update:
           stack: topmonks-webs
@@ -99,11 +97,8 @@ jobs:
     executor:
       name: node/default
       tag: 'lts'
-    working_directory: ~/topmonks-webs
     steps:
       - checkout
-      - attach_workspace:
-          at: ~/topmonks-webs
       - pulumi/login:
           cloud-url: s3://pulumi.tmcloud.io
       - node/install-packages:
