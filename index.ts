@@ -101,7 +101,7 @@ export = async () => {
     arxDocumentsBucketUri,
     arxDocumentsBucketEndpoint,
     arxDocumentsTable,
-    arxDocumentsApi
+    arxDocumentsApi,
     monksroomApiHost
   };
 };
