@@ -34,11 +34,7 @@ textarea:focus, button:focus, input:focus {
 // Main Introduction Text //
 .main-info {
   color: var(--postcube-primary);
-
   .main-info__content {
-    align-self: center;
-  }
-  .main-info__bg {
     align-self: center;
   }
 }
