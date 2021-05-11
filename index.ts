@@ -107,5 +107,6 @@ export = async () => {
     };
   } catch (err) {
     console.error(err);
+    return {};
   }
 };
