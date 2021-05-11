@@ -1,7 +1,7 @@
-import * as pulumi from "@pulumi/pulumi";
-import { build } from "esbuild";
+const pulumi = require("@pulumi/pulumi");
+const { build } = require("esbuild");
 
-export async function init() {
+exports.init = async function init() {
   const buildTasks = [];
 
   return {
@@ -29,4 +29,4 @@ export async function init() {
       return Promise.allSettled(buildTasks);
     }
   };
-}
+};
