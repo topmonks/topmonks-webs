@@ -81,13 +81,13 @@ svg {
   padding-bottom: 4em;
 
   h2 {
-    margin-bottom: 0;
+    margin: 14px 0 0;
   }
   p {
     font-size: 20px;
   }
 
-  @media (min-width: 840px) {
+  @media screen and (min-width: 840px) {
     h2 {
       font-size: 44px;
       font-weight: 800;
@@ -96,23 +96,13 @@ svg {
     p {
       font-size: 26px;
     }
-    .testimonial__content {
-      &:before {
-        content: '"';
-        display: block;
-        font-size: 159px;
-        height: 74px;
-      }
+    svg {
+      width: 83px;
     }
   }
   @media (max-width: 839px) {
-    .testimonial__content {
-      &:before {
-        content: '"';
-        display: block;
-        font-size: 104px;
-        height: 48px;
-      }
+    svg {
+      width: 44px;
     }
   }
 }
