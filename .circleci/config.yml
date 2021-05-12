@@ -82,6 +82,7 @@ jobs:
       - checkout
       - pulumi/login:
           cloud-url: s3://pulumi.tmcloud.io
+          version: "3.1.0"
       - node/install-packages:
           pkg-manager: yarn
           override-ci-command: yarn install --immutable
