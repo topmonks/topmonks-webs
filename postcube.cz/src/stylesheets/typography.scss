@@ -81,7 +81,7 @@ body {
 
 
 // Buttons //
-button {
+button.content-btn {
   width: 100%;
   height: 56px;
   background-color: var(--postcube-secondary);
@@ -93,7 +93,6 @@ button {
     text-decoration: none;
     color: var(--postcube-black);
   }
-
   &:hover {
     cursor: pointer;
     background-color: var(--postcube-secondary-light);
