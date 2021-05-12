@@ -1906,7 +1906,7 @@ __metadata:
     commander: ^7.2.0
     dotenv: ^9.0.1
     dotenv-cli: ^4.0.0
-    esbuild: ^0.11.20
+    esbuild: ^0.11.12
     eslint: ^7.26.0
     eslint-config-prettier: ^8.3.0
     eslint-plugin-ava: ^12.0.0
@@ -5876,7 +5876,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.11.20":
+"esbuild@npm:^0.11.12":
   version: 0.11.20
   resolution: "esbuild@npm:0.11.20"
   bin:
