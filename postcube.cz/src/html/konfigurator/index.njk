@@ -1,0 +1,35 @@
+{% extends 'layouts/main.njk' %}
+{% set language = cs %}
+
+{% block title %}
+  PostCube - Konfigurátor
+{% endblock %}
+{% block head %}
+  <meta name="description"
+        content="Chytrá schránka PostCube pro vyzvedávání zásilek kdykoliv.">
+  <link rel="canonical" href="https://postcube.cz/">
+  <meta property="og:type" content="company">
+  <meta property="og:url" content="https://www.postcube.cz/">
+  <meta property="og:site_name" content="postcube.cz">
+
+  <style>
+    {# TBD #}
+  </style>
+
+{% endblock %}
+
+{% block content %}
+  <section id="main-info" class="main-info">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner layout-wrapper">
+        <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+          <h1>Konfigurátor</h1>
+          <p>Sestavte su PostCube na míru podle Vašich představ.</p>
+        </div>
+        <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
