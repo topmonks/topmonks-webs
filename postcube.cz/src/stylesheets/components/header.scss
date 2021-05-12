@@ -3,6 +3,13 @@ header {
   position: relative;
   color: var(--postcube-white);
 
+  .app-bar__logo {
+    align-self: center;
+  }
+  .layout-wrapper {
+    padding-left: 0;
+  }
+
   nav {
     float: right;
   }
@@ -107,15 +114,15 @@ header {
   display: none;
 }
 .logo__subpage {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 800;
   color: var(--postcube-primary);
-  display: none;
+  text-decoration: none;
 }
 
 // HAMBURGER
 
-.logo {
+.logo__hp{
   position: absolute;
   left: 0;
   top: -110%;
