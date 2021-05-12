@@ -1618,47 +1618,47 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pulumi/aws@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "@pulumi/aws@npm:4.3.0"
+"@pulumi/aws@npm:^3.38.1":
+  version: 3.38.1
+  resolution: "@pulumi/aws@npm:3.38.1"
   dependencies:
-    "@pulumi/pulumi": ^3.0.0
+    "@pulumi/pulumi": ^2.17.0
     aws-sdk: ^2.0.0
     builtin-modules: 3.0.0
     mime: ^2.0.0
     read-package-tree: ^5.2.1
     resolve: ^1.7.1
-  checksum: 688a67b55a49019f106837c4bed3300179ef1558d56c0e2847d893bb2a19db9f136188e6f138b3edab4feedd890c7c8a8d61d2e368cc2326fcacc4f3148c5e6e
+  checksum: e98bc4935b4fa018633babc150e838b183b8e579dc26e53212321a15fc7d7753ee1d043bcdbb11fe6c661c9c3b2f6785a2a5a12af6ce57f923c959f6a81ce00a
   languageName: node
   linkType: hard
 
-"@pulumi/awsx@npm:^0.30.0":
-  version: 0.30.0
-  resolution: "@pulumi/awsx@npm:0.30.0"
+"@pulumi/awsx@npm:^0.26.0":
+  version: 0.26.0
+  resolution: "@pulumi/awsx@npm:0.26.0"
   dependencies:
-    "@pulumi/docker": ^3.0.0
+    "@pulumi/docker": ^1.0.0 || ^2.0.0
     "@types/aws-lambda": ^8.10.23
     mime: ^2.0.0
   peerDependencies:
-    "@pulumi/aws": ^4.0.0
-    "@pulumi/pulumi": ^3.0.0
-  checksum: 3a97e8c9563fff953310f681ba871751c68ffe4382c4d605339b24b18ce93dbab8d35ffa643d895cd8e73f0c62ca2e09a519cdedf2387a1ccbd68ff828d05f0b
+    "@pulumi/aws": ^3.25.1
+    "@pulumi/pulumi": ^1.9.1 || ^2.0.0
+  checksum: 70c21d33adf630be0fa49f8162194a616990f76dd4183d7ee3c5c5cec04434eb9138a26345a913438ce9a49c082dd2e7dc00fd6963d56aa8d59a926459c370fd
   languageName: node
   linkType: hard
 
-"@pulumi/docker@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@pulumi/docker@npm:3.0.0"
+"@pulumi/docker@npm:^1.0.0 || ^2.0.0":
+  version: 2.10.0
+  resolution: "@pulumi/docker@npm:2.10.0"
   dependencies:
-    "@pulumi/pulumi": ^3.0.0
+    "@pulumi/pulumi": ^2.15.0
     semver: ^5.4.0
-  checksum: ebbaf71437caaf82abddc95f7284827a281cb0a1f6d0970848776451ffe8d2e6c4b7e60fd726d66627659dcfa512ff1844357959b09fe636b20a69d1cd198dbb
+  checksum: d9ba981286b26395f970e153d87873e3928879509d2cdb3cbb9addff0df0fce06bb14097e4fbd4bf12acdaafdd2632db1ea235415d54a223f3475d112a67945c
   languageName: node
   linkType: hard
 
-"@pulumi/pulumi@npm:^3.0.0, @pulumi/pulumi@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "@pulumi/pulumi@npm:3.2.1"
+"@pulumi/pulumi@npm:^2.15.0, @pulumi/pulumi@npm:^2.17.0, @pulumi/pulumi@npm:^2.25.2":
+  version: 2.25.2
+  resolution: "@pulumi/pulumi@npm:2.25.2"
   dependencies:
     "@grpc/grpc-js": ^1.2.7
     "@logdna/tail-file": ^2.0.6
@@ -1676,7 +1676,7 @@ __metadata:
     ts-node: ^7.0.1
     typescript: ~3.7.3
     upath: ^1.1.0
-  checksum: 1da7203ebc4f8917cd66807ff054eecf80ca4eceb5c4a6f8e64c00c9e29bb8a903c15f35c28f316a869728613d0de5ca73ab6f973bd28246b2c12ebf7eb48e25
+  checksum: 41c42b0801b06b67041445fc414d2f5dd9fa0d13e6eeda89dcf13cda35ab61ca78899de9341240846c12c9b6556a3f6a9797439d273cc817b1db834c940f9ef5
   languageName: node
   linkType: hard
 
@@ -1891,9 +1891,9 @@ __metadata:
     "@material/button": ^11.0.0
     "@material/layout-grid": ^11.0.0
     "@material/top-app-bar": ^11.0.0
-    "@pulumi/aws": ^4.3.0
-    "@pulumi/awsx": ^0.30.0
-    "@pulumi/pulumi": ^3.2.1
+    "@pulumi/aws": ^3.38.1
+    "@pulumi/awsx": ^0.26.0
+    "@pulumi/pulumi": ^2.25.2
     "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=cf98f025a94b506f734106e9925e9cbcfae39cd2"
     "@topmonks/pulumi-aws": ^1.7.10
     "@types/chart.js": ^2.9.32
