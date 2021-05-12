@@ -103,6 +103,16 @@ header {
   }
 }
 
+.logo__hp {
+  display: none;
+}
+.logo__subpage {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--postcube-primary);
+  display: none;
+}
+
 // HAMBURGER
 
 .logo {
