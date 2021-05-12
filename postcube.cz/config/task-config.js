@@ -11,7 +11,7 @@ const config = createSharedTaskConfig(__dirname, {
   stylesheets: true,
   workboxBuild: false,
   html: {
-    collections: []
+    collections: ["products", "configurator"]
   },
 
   browserSync: {

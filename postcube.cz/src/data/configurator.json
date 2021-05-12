@@ -1,0 +1,97 @@
+{
+  "sizes": [
+    {
+      "value": "46",
+      "label": "S"
+    },
+    {
+      "value": "49",
+      "label": "M"
+    },
+    {
+      "value": "55",
+      "label": "L"
+    }
+  ],
+  "colors": [
+    {
+      "value": "MOD",
+      "label": "Modrá"
+    },
+    {
+      "value": "SED",
+      "label": "Šedá"
+    }
+  ],
+  "accessories": [
+    {
+      "name": "Noha",
+      "options": [
+        {
+          "value": null,
+          "label": "žádná"
+        },
+        {
+          "value": 30,
+          "label": "30cm"
+        },
+        {
+          "value": 65,
+          "label": "65cm"
+        }
+      ]
+    },
+    {
+      "name": "Stříška",
+      "options": [
+        {
+          "value": null,
+          "label": "ne"
+        },
+        {
+          "value": 64,
+          "label": "ano"
+        }
+      ]
+    },
+    {
+      "name": "Stříška",
+      "options": [
+        {
+          "value": null,
+          "label": "ne"
+        },
+        {
+          "value": 64,
+          "label": "ano"
+        }
+      ]
+    },
+    {
+      "name": "Podstavec 80x80 cm",
+      "options": [
+        {
+          "value": null,
+          "label": "ne"
+        },
+        {
+          "value": 61,
+          "label": "ano"
+        }
+      ]
+    },
+    {
+      "name": "Montáž na míru",
+      "options": [
+        {
+          "value": null,
+          "label": "ne"
+        },
+        {
+          "value": 61,
+          "label": "ano"
+        }
+      ]
+    }
+  ]
+}
