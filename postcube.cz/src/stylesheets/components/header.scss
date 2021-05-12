@@ -52,6 +52,55 @@ header {
       }
     }
   }
+
+  button.dropbtn {
+    background-color: transparent;
+    padding: 0;
+  }
+  .dropdown {
+    float: left;
+    overflow: hidden;
+    .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      background-color: inherit;
+      font-family: inherit;
+      line-height: 32px;
+      border-bottom: 2px solid transparent;
+      text-decoration: none;
+      margin-right: 44px;
+      padding: 4px 0;
+
+      &:hover,
+      &.active a:after {
+        border-bottom: 2px solid var(--postcube-secondary);
+      }
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: var(--postcube-primary);
+      min-width: 180px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: var(--postcube-white);
+      padding: 18px 30px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      &:hover {
+        color: var(--postcube-secondary);
+      }
+    }
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 }
 
 // HAMBURGER

@@ -104,7 +104,16 @@
         class="app-bar_menu mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-9-desktop">
         <nav id="navigation" class="menu">
           <ul class="menu__list">
-            <li class=""><a href="#how-it-works">Nabídka</a></li>
+            <div class="dropdown">
+              <button class="dropbtn">Nabídka
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="/domacnosti">Rodinné domy</a>
+                <a href="/firmy">Firmy a bytové domy</a>
+                <a href="/prepravci">Přepravní společnosti</a>
+              </div>
+            </div>
             <li class=""><a href="#how-it-works">Jak box funguje</a></li>
             <li class=""><a href="#contact">Kontakt</a></li>
             <li class=""><a class="list__btn" href="#contact">Objednat box</a></li>
