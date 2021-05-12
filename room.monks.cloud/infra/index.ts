@@ -70,7 +70,7 @@ export async function init() {
     api,
     apiDistribution,
     stop() {
-      builder.stop();
+      return builder.stop();
     }
   };
 }
