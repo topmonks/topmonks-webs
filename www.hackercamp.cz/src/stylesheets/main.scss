@@ -184,6 +184,41 @@ img.responsive {
   }
 }
 
+.hc-price-list {
+  &__item {
+    h3 {
+      margin: 6px 0 0;
+    }
+    hgroup h3 {
+      margin-bottom: 0;
+    }
+    hgroup h4 {
+      font-weight: normal;
+      margin-top: 0;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 86px;
+  }
+  &__badge {
+    padding-right: 1em;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  &__value {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  &__text {
+    text-align: center;
+    max-width: 40em;
+    margin: 4em auto 0;
+  }
+}
+
 .hc-people-section {
   display: flex;
   align-items: center;
