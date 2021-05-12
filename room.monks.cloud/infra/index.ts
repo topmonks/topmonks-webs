@@ -5,7 +5,7 @@ import * as lambdaBuilder from "../../lambda-builder";
 import * as path from "path";
 import { CustomDomainDistribution } from "@topmonks/pulumi-aws/apigateway";
 
-const buildAssets = (fileName: string) =>
+const codeAsset = (fileName: string) =>
   lambdaBuilder.buildCodeAsset(path.join(__dirname, "..", "lambdas", fileName));
 
 const defaultLambdaRole = new aws.iam.Role("monksroom-default-lambda-role", {
@@ -36,7 +36,7 @@ export const api = new awsx.apigateway.API("monksroom-api", {
         runtime: aws.lambda.Runtime.NodeJS14dX,
         role: defaultLambdaRole.arn,
         handler: "index.handler",
-        code: buildAssets("now-playing/index.js")
+        code: codeAsset("now-playing/index.js")
       })
     },
     {
@@ -47,7 +47,7 @@ export const api = new awsx.apigateway.API("monksroom-api", {
         runtime: aws.lambda.Runtime.NodeJS14dX,
         role: defaultLambdaRole.arn,
         handler: "index.handler",
-        code: buildAssets("beatport/index.js"),
+        code: codeAsset("beatport/index.js"),
         timeout: 20
       })
     }
@@ -55,7 +55,7 @@ export const api = new awsx.apigateway.API("monksroom-api", {
 });
 
 export const apiDistribution = new CustomDomainDistribution(
-  "hlidac-shopu-api",
+  "monksroom-api",
   {
     gateway: api,
     domainName: "room-api.monks.cloud",
