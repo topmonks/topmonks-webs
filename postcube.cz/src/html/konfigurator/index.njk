@@ -17,9 +17,64 @@
       font-size: 2rem;
     }
     form h2 {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
+      margin-top: 24px;
+      margin-bottom: 0px;
       color: #707070;
     }
+
+    .select-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .select-dropdown {
+      flex: 1;
+      height: 48px;
+      border-radius: 0px;
+      border: solid 1px #A5A5A5;
+      font-size: 1rem;
+      padding-left: 16px;
+    }
+
+    .main-info__radio-container {
+      position: relative;
+      flex: 1;
+    }
+
+    .input-radio {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .input-radio--custom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: solid 1px #A5A5A5;
+      flex: 1;
+      background-color: #1538E5;
+      height: 48px;
+    }
+
+    .main-info__radio-container .input-radio ~ .input-radio--custom {
+      background-color: white;
+      color: black;
+      font-weight: bold;
+    }
+
+    .main-info__radio-container:hover .input-radio ~ .input-radio--custom {
+      background-color: white;
+      color: black;
+    }
+
+    .main-info__radio-container .input-radio:checked ~ .input-radio--custom {
+      background-color: #1538E5;
+      color: white;
+    }
+
+
   </style>
 
 {% endblock %}
@@ -32,28 +87,36 @@
           <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
             <h1>Objednejte si box podle vašich představ</h1>
             <h2>Velikost boxu</h2>
-            {% for item in configurator.sizes %}
-              <label>
-                {{ item.label }}<input type="radio" name="box-size" value="{{ item.value }}"/>
-              </label>
-            {% endfor %}
+            <div class="select-container">
+              {% for item in configurator.sizes %}
+                <label class="main-info__radio-container">
+                  <input type="radio" class="input-radio" name="box-size" value="{{ item.value }}"/>
+                  <div class="input-radio--custom">{{ item.label }}</div>
+                </label>
+              {% endfor %}
+            </div>
 
             <h2>Barva</h2>
-            <select name="color">
-              {% for item in configurator.colors %}
-                <option value="{{ item.value }}">
-                  {{ item.label }}
-                </option>
-              {% endfor %}
-            </select>
+            <div class="select-container">
+              <select name="color" class="select-dropdown">
+                {% for item in configurator.colors %}
+                  <option value="{{ item.value }}">
+                    {{ item.label }}
+                  </option>
+                {% endfor %}
+              </select>
+            </div>
 
             {% for item in configurator.accessories %}
               <h2>{{ item.name }}</h2>
+              <div class="select-container">
               {% for option in item.options %}
-                <label>
-                  {{ option.label }}<input type="radio" name="{{ item.name }}" value="{{ option.value }}"/>
+                <label class="main-info__radio-container">
+                  <input type="radio"  class="input-radio"  name="{{ item.name }}" value="{{ option.value }}"/>
+                  <div class="input-radio--custom">{{ option.label }}</div>
                 </label>
               {% endfor %}
+              </div>
             {% endfor %}
           </div>
           <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
