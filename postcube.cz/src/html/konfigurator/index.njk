@@ -5,8 +5,7 @@
   PostCube - Konfigurátor
 {% endblock %}
 {% block head %}
-  <meta name="description"
-        content="Chytrá schránka PostCube pro vyzvedávání zásilek kdykoliv.">
+  <meta name="description" content="Chytrá schránka PostCube pro vyzvedávání zásilek kdykoliv.">
   <link rel="canonical" href="https://postcube.cz/">
   <meta property="og:type" content="company">
   <meta property="og:url" content="https://www.postcube.cz/">
@@ -19,7 +18,7 @@
     form h2 {
       font-size: 1.2rem;
       margin-top: 24px;
-      margin-bottom: 0px;
+      margin-bottom: 0;
       color: #707070;
     }
 
@@ -31,7 +30,7 @@
     .select-dropdown {
       flex: 1;
       height: 48px;
-      border-radius: 0px;
+      border-radius: 0;
       border: solid 1px #A5A5A5;
       font-size: 1rem;
       padding-left: 16px;
@@ -73,8 +72,6 @@
       background-color: #1538E5;
       color: white;
     }
-
-
   </style>
 
 {% endblock %}
@@ -87,10 +84,11 @@
           <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
             <h1>Objednejte si box podle vašich představ</h1>
             <h2>Velikost boxu</h2>
+
             <div class="select-container">
               {% for item in configurator.sizes %}
                 <label class="main-info__radio-container">
-                  <input type="radio" class="input-radio" name="box-size" value="{{ item.value }}"/>
+                  <input type="radio" class="input-radio" name="size" value="{{ item.value }}"/>
                   <div class="input-radio--custom">{{ item.label }}</div>
                 </label>
               {% endfor %}
@@ -110,12 +108,12 @@
             {% for item in configurator.accessories %}
               <h2>{{ item.name }}</h2>
               <div class="select-container">
-              {% for option in item.options %}
-                <label class="main-info__radio-container">
-                  <input type="radio"  class="input-radio"  name="{{ item.name }}" value="{{ option.value }}"/>
-                  <div class="input-radio--custom">{{ option.label }}</div>
-                </label>
-              {% endfor %}
+                {% for option in item.options %}
+                  <label class="main-info__radio-container">
+                    <input type="radio" class="input-radio" name="{{ item.name }}" value="{{ option.value }}"/>
+                    <div class="input-radio--custom">{{ option.label }}</div>
+                  </label>
+                {% endfor %}
               </div>
             {% endfor %}
           </div>
@@ -128,14 +126,12 @@
       <script>
         const form = document.getElementById('configuration-form');
 
-        for (let input of form.querySelectorAll('input, select')) {
-          input.addEventListener('change', (event) => {
-            const name = event.target.name;
-            const value = event.target.value;
-            console.log(name + " changed to " + value);
-            // tbd, 1. update order preview (product list and prices)
-          });
-        }
+        form.addEventListener('change', (event) => {
+          const name = event.target.name;
+          const value = event.target.value;
+          console.log(name + " changed to " + value);
+          // tbd, 1. update order preview (product list and prices)
+        });
 
         form.addEventListener('submit', event => {
           event.preventDefault();
