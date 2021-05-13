@@ -119,7 +119,21 @@
           </div>
           <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
             <h3>Shrnutí objednávky</h3>
-            <div id="order-preview"></div>
+            <ul class="order-preview-list">
+              <li>Schránka PostCube S (modrá)
+                <strong class="price">5,000 CZK</strong>
+              </li>
+              <li>Noha 65 cm
+                <strong class="price">1,200 CZK</strong>
+              </li>
+              <li>Montáž na míru
+                <strong class="price">2,500 CZK</strong>
+              </li>
+            </ul>
+            <div class="order-preview-summary">
+              <p>Celková cena vč. DPH</p>
+              <strong class="total-price">8,700 CZK</strong>
+            </div>
             <script>
               function renderOrderPreview(payload) {
                 console.log(payload)
