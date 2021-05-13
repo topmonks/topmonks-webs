@@ -2,7 +2,8 @@
   "sizes": [
     {
       "value": "46",
-      "label": "S"
+      "label": "S",
+      "default": true
     },
     {
       "value": "49",
@@ -16,7 +17,8 @@
   "colors": [
     {
       "value": "MOD",
-      "label": "Modrá"
+      "label": "Modrá",
+      "default": true
     },
     {
       "value": "SED",
@@ -29,7 +31,8 @@
       "options": [
         {
           "value": null,
-          "label": "žádná"
+          "label": "žádná",
+          "default": true
         },
         {
           "value": 30,
@@ -46,20 +49,8 @@
       "options": [
         {
           "value": null,
-          "label": "ne"
-        },
-        {
-          "value": 64,
-          "label": "ano"
-        }
-      ]
-    },
-    {
-      "name": "Stříška",
-      "options": [
-        {
-          "value": null,
-          "label": "ne"
+          "label": "ne",
+          "default": true
         },
         {
           "value": 64,
@@ -72,7 +63,8 @@
       "options": [
         {
           "value": null,
-          "label": "ne"
+          "label": "ne",
+          "default": true
         },
         {
           "value": 61,
@@ -85,7 +77,8 @@
       "options": [
         {
           "value": null,
-          "label": "ne"
+          "label": "ne",
+          "default": true
         },
         {
           "value": 61,
