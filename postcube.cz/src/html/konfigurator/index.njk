@@ -14,12 +14,17 @@
   <style>
     .main-info h1 {
       font-size: 2rem;
+      margin: 0px;
     }
     form h2 {
       font-size: 1.2rem;
       margin-top: 24px;
-      margin-bottom: 0;
+      margin-bottom: 0px;
       color: #707070;
+    }
+
+    .main-info {
+      margin-top: 48px;
     }
 
     .select-container {
@@ -72,6 +77,86 @@
       background-color: #1538E5;
       color: white;
     }
+
+    .order-preview__container {
+        background-color: #F2F2F2;
+        padding: 32px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .order-preview__item {
+      display: flex;
+    }
+
+    .order-preview__summary {
+      text-align: right;
+      color: #707070;
+      font-size: 1rem;
+      margin-top: 32px;
+    }
+
+    .order-preview__summary p {
+      margin: 0px;
+    }
+
+    .order-preview__summary .total-price {
+      font-size: 2rem;
+      color: black;
+    }
+
+    .order-preview__container .button-order {
+    border: none;
+    background-color: #00F483;
+    color: black;
+    height: 48px;
+    margin-top: 24px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 50%;
+    }
+
+    .order-preview__container .button-order__container {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .order-preview-list {
+      margin: 0px;
+      padding: 0px;
+      padding-top: 24px;
+      color: #707070;
+      width: 100%;
+    }
+
+    .order-preview-list .price {
+      color: black;
+    }
+
+    .order-preview-list li {
+      list-style-type: none;
+      height: 48px;
+      line-height: 48px;
+      border-bottom: solid 1px #A5A5A5;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .order-preview__container:before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    border-left: 80px solid white;
+    border-top: 80px solid #F2F2F2;
+    width: 0;
+}
+
+    .order-preview__container h3 {
+        color: black;
+        font-size: 1.2rem;
+        margin: 0px;
+    }
   </style>
 
 {% endblock %}
@@ -117,31 +202,38 @@
               </div>
             {% endfor %}
           </div>
-          <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-            <h3>Shrnutí objednávky</h3>
-            <ul class="order-preview-list">
-              <li>Schránka PostCube S (modrá)
-                <strong class="price">5,000 CZK</strong>
-              </li>
-              <li>Noha 65 cm
-                <strong class="price">1,200 CZK</strong>
-              </li>
-              <li>Montáž na míru
-                <strong class="price">2,500 CZK</strong>
-              </li>
-            </ul>
-            <div class="order-preview-summary">
-              <p>Celková cena vč. DPH</p>
-              <strong class="total-price">8,700 CZK</strong>
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1"></div>
+          <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-5">
+            <div class="order-preview__container">
+                <h3>Shrnutí objednávky</h3>
+                <div class="order-preview__item">
+                  <ul class="order-preview-list">
+                    <li>Schránka PostCube S (modrá)
+                      <strong class="price">5,000 CZK</strong>
+                    </li>
+                    <li>Noha 65 cm
+                      <strong class="price">1,200 CZK</strong>
+                    </li>
+                    <li>Montáž na míru
+                      <strong class="price">2,500 CZK</strong>
+                    </li>
+                  </ul>
+                </div>
+                <div class="order-preview__summary">
+                  <p>Celková cena vč. DPH</p>
+                  <strong class="total-price">8,700 CZK</strong>
+                </div>
+              <script>
+                function renderOrderPreview(payload) {
+                  console.log(payload)
+                }
+              </script>
+              {# tbd, order overview ~ product list, prices and total price #}
+              <div class="button-order__container">
+                <button type="submit" class="button-order">Pokračovat</button>
+              </div>
+              </div>
             </div>
-            <script>
-              function renderOrderPreview(payload) {
-                console.log(payload)
-              }
-            </script>
-            {# tbd, order overview ~ product list, prices and total price #}
-            <button type="submit">Pokračovat</button>
-          </div>
         </div>
       </div>
       <script>
