@@ -14,12 +14,12 @@
   <style>
     .main-info h1 {
       font-size: 2rem;
-      margin: 0px;
+      margin: 0;
     }
     form h2 {
       font-size: 1.2rem;
       margin-top: 24px;
-      margin-bottom: 0px;
+      margin-bottom: 0;
       color: #707070;
     }
 
@@ -79,11 +79,11 @@
     }
 
     .order-preview__container {
-        background-color: #F2F2F2;
-        padding: 32px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
+      background-color: #F2F2F2;
+      padding: 32px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
     }
 
     .order-preview__item {
@@ -98,7 +98,7 @@
     }
 
     .order-preview__summary p {
-      margin: 0px;
+      margin: 0;
     }
 
     .order-preview__summary .total-price {
@@ -107,14 +107,14 @@
     }
 
     .order-preview__container .button-order {
-    border: none;
-    background-color: #00F483;
-    color: black;
-    height: 48px;
-    margin-top: 24px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    width: 50%;
+      border: none;
+      background-color: #00F483;
+      color: black;
+      height: 48px;
+      margin-top: 24px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      width: 50%;
     }
 
     .order-preview__container .button-order__container {
@@ -123,9 +123,8 @@
     }
 
     .order-preview-list {
-      margin: 0px;
-      padding: 0px;
-      padding-top: 24px;
+      margin: 0;
+      padding: 24px 0 0;
       color: #707070;
       width: 100%;
     }
@@ -144,18 +143,19 @@
     }
 
     .order-preview__container:before {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0;
-    border-left: 80px solid white;
-    border-top: 80px solid #F2F2F2;
-    width: 0;
-}
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-left: 80px solid white;
+      border-top: 80px solid #F2F2F2;
+      width: 0;
+    }
 
     .order-preview__container h3 {
-        color: black;
-        font-size: 1.2rem;
-        margin: 0px;
+      color: black;
+      font-size: 1.2rem;
+      margin: 0;
     }
   </style>
 
@@ -205,24 +205,24 @@
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1"></div>
           <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-5">
             <div class="order-preview__container">
-                <h3>Shrnutí objednávky</h3>
-                <div class="order-preview__item">
-                  <ul class="order-preview-list">
-                    <li>Schránka PostCube S (modrá)
-                      <strong class="price">5,000 CZK</strong>
-                    </li>
-                    <li>Noha 65 cm
-                      <strong class="price">1,200 CZK</strong>
-                    </li>
-                    <li>Montáž na míru
-                      <strong class="price">2,500 CZK</strong>
-                    </li>
-                  </ul>
-                </div>
-                <div class="order-preview__summary">
-                  <p>Celková cena vč. DPH</p>
-                  <strong class="total-price">8,700 CZK</strong>
-                </div>
+              <h3>Shrnutí objednávky</h3>
+              <div class="order-preview__item">
+                <ul class="order-preview-list">
+                  <li>Schránka PostCube S (modrá)
+                    <strong class="price">5,000 CZK</strong>
+                  </li>
+                  <li>Noha 65 cm
+                    <strong class="price">1,200 CZK</strong>
+                  </li>
+                  <li>Montáž na míru
+                    <strong class="price">2,500 CZK</strong>
+                  </li>
+                </ul>
+              </div>
+              <div class="order-preview__summary">
+                <p>Celková cena vč. DPH</p>
+                <strong class="total-price">8,700 CZK</strong>
+              </div>
               <script>
                 function renderOrderPreview(payload) {
                   console.log(payload)
@@ -232,8 +232,8 @@
               <div class="button-order__container">
                 <button type="submit" class="button-order">Pokračovat</button>
               </div>
-              </div>
             </div>
+          </div>
         </div>
       </div>
       <script>
