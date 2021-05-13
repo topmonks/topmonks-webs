@@ -22,7 +22,7 @@ createCertificate("www.topmonks.cz");
 createCertificate("www.topmonks.com");
 
 createCertificate("www.cbx.cz");
-createCertificate("www.hookamonk.com");
+// createCertificate("www.hookamonk.com");
 createCertificate("www.ingridapp.io");
 createCertificate("monks.cloud");
 createCertificate("www.postcube.cz");
