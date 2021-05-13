@@ -215,6 +215,9 @@ img.responsive {
   &__text {
     text-align: center;
     max-width: 40em;
+    margin: 0 auto 4em;
+  }
+  &__text:last-of-type {
     margin: 4em auto 0;
   }
 }
