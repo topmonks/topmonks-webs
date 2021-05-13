@@ -143,8 +143,7 @@
     }
 
     .order-preview__container:before {
-      content: '';
-      position: absolute;
+      content:"" position: absolute;
       bottom: 0;
       left: 0;
       border-left: 80px solid white;
@@ -207,28 +206,12 @@
             <div class="order-preview__container">
               <h3>Shrnutí objednávky</h3>
               <div class="order-preview__item">
-                <ul class="order-preview-list">
-                  <li>Schránka PostCube S (modrá)
-                    <strong class="price">5,000 CZK</strong>
-                  </li>
-                  <li>Noha 65 cm
-                    <strong class="price">1,200 CZK</strong>
-                  </li>
-                  <li>Montáž na míru
-                    <strong class="price">2,500 CZK</strong>
-                  </li>
-                </ul>
+                <ul id="order-preview-list" class="order-preview-list"></ul>
               </div>
               <div class="order-preview__summary">
                 <p>Celková cena vč. DPH</p>
-                <strong class="total-price">8,700 CZK</strong>
+                <strong id="order-preview-total-price" class="total-price"></strong>
               </div>
-              <script>
-                function renderOrderPreview(payload) {
-                  console.log(payload)
-                }
-              </script>
-              {# tbd, order overview ~ product list, prices and total price #}
               <div class="button-order__container">
                 <button type="submit" class="button-order">Pokračovat</button>
               </div>
@@ -237,29 +220,99 @@
         </div>
       </div>
       <script>
+        const configurator = {{ configurator | dump | safe }};
+        const products = {{ products | dump | safe }};
+
+        function findAndTransformSelectedProduct(values) {
+          const product = products.find(product => product.code === [values.size, values.color].join("/"))
+          const color = configurator
+            .colors
+            .find(clr => clr.value === values.color);
+          return {
+            code: product.code,
+            label: `${product
+              .name} (${color
+              .label
+              .toLowerCase()})`,
+            price: product.price
+          }
+        }
+
+        const toSelectedAccesoryOption = values => (accessory) => {
+          const value = values[accessory.name]
+          if (value) {
+            const isBoolOption = accessory.options.length === 2 && accessory
+              .options
+              .find(option => option.value === null) && true;
+            const selected = accessory
+              .options
+              .find(option => option.value == value);
+
+            return {
+              code: [accessory.productId, selected.value]
+                .filter(Boolean)
+                .join("/"),
+              label: isBoolOption
+                ? accessory.name
+                : `${accessory.name} ${selected.label}`,
+              price: selected.price
+            }
+          }
+        }
+
+        const renderOrderPreview = (items) => {
+          const currency = Intl.NumberFormat(navigator.language, {
+            style: "currency",
+            currency: "{{ configurator.currency }}",
+            maximumSignificantDigits: 3
+          });
+
+          const previewListElement = document.querySelector("#order-preview-list");
+          previewListElement.innerHTML = "";
+
+          for (let item of items) {
+            console.log(item.price)
+            previewListElement.innerHTML += `<li>${item
+              .label}<strong class="price">${currency
+              .format(parseInt(item.price))}</strong>`;
+          }
+
+          const totalPriceElement = document.querySelector("#order-preview-total-price");
+          const totalPrice = items.reduce((total, item) => parseInt(item.price) + total, 0);
+          totalPriceElement.innerHTML = currency.format(totalPrice);
+        }
+
+        const calculateOrderPreview = () => {
+          const values = serialize(form);
+          const mainProduct = findAndTransformSelectedProduct(values);
+          const accessories = configurator
+            .accessories
+            .map(toSelectedAccesoryOption(values))
+            .filter(Boolean)
+
+          return [
+            mainProduct, ...accessories
+          ];
+        }
+
+        const encodeURLConfiguratorParamHash = (ids) => btoa(ids.join("+"))
+
         const form = document.getElementById('configuration-form');
 
-        form.addEventListener('change', (event) => {
-          const name = event.target.name;
-          const value = event.target.value;
-          console.log(name + " changed to " + value);
-          const data = serialize(form);
-          console.log('Updated form data:', data)
-          // tbd, 1. update order preview (product list and prices)
-        });
+        window.addEventListener("load", () => renderOrderPreview(calculateOrderPreview()));
+        form.addEventListener("change", () => renderOrderPreview(calculateOrderPreview()));
 
-        form.addEventListener('submit', event => {
+        form.addEventListener("submit", event => {
           event.preventDefault();
-          // tbd, 1. serilize form
-          // tbd, 2. validate
-          // tbd, 3. generate product code based on selected options
-          // tbd, 4. using https://gist.github.com/junkycoder/a98c8e2c9c4804b6e2209acaf3c5fea7
-          // tbd, 5. redirect to url like https://chytrybox.myshoptet.com/?c=NDYvU0VEKzU4LzMwKzYxKzY0
+          const hash = encodeURLConfiguratorParamHash(calculateOrderPreview().map(product => product.code));
+          window
+            .location
+            .assign(configurator.shopLink + hash);
         });
 
         function serialize(formElement) {
           const result = {};
-          for (let inputElement of formElement.querySelectorAll('input, select')) {
+          for (let inputElement of formElement.querySelectorAll("input, select")) {
             if (inputElement.selected || inputElement.checked || inputElement.type.startsWith('select')) {
               result[inputElement.name] = inputElement.value;
             }

@@ -1,17 +1,23 @@
 {
+  "shopLink": "https://chytrybox.myshoptet.com?c=",
+  "currency": "CZK",
   "sizes": [
     {
       "value": "46",
       "label": "S",
-      "default": true
+      "info": "",
+      "default": true,
+      "price": "5000,00"
     },
     {
       "value": "49",
-      "label": "M"
+      "label": "M",
+      "price": "6000,00"
     },
     {
       "value": "55",
-      "label": "L"
+      "label": "L",
+      "price": "7000,00"
     }
   ],
   "colors": [
@@ -28,6 +34,7 @@
   "accessories": [
     {
       "name": "Noha",
+      "productId": "58",
       "options": [
         {
           "value": null,
@@ -36,11 +43,13 @@
         },
         {
           "value": 30,
-          "label": "30cm"
+          "label": "30cm",
+          "price": "1000,00"
         },
         {
           "value": 65,
-          "label": "65cm"
+          "label": "65cm",
+          "price": "1200,00"
         }
       ]
     },
@@ -54,7 +63,8 @@
         },
         {
           "value": 64,
-          "label": "ano"
+          "label": "ano",
+          "price": "800,00"
         }
       ]
     },
@@ -68,7 +78,8 @@
         },
         {
           "value": 61,
-          "label": "ano"
+          "label": "ano",
+          "price": "1000,00"
         }
       ]
     },
@@ -81,8 +92,9 @@
           "default": true
         },
         {
-          "value": 61,
-          "label": "ano"
+          "value": 67,
+          "label": "ano",
+          "price": "2500,00"
         }
       ]
     }
