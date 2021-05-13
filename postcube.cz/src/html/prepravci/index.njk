@@ -17,12 +17,6 @@
       width: 100%;
       height: auto;
     }
-    .main-info {
-      background-image: cloudinaryUrl("/postcube.cz/section-bg01.png");
-      background-size: 100% auto;
-      background-position: 100%;
-      background-repeat: no-repeat;
-    }
     .main-info__content {
       max-width: 95%;
     }
@@ -36,6 +30,49 @@
       font-size: 24px;
       text-decoration: none;
     }
+    @media (min-width: 840px) and (max-width: 2039px) {
+      .main-info {
+        align-self: center;
+        background-image: url("https://res.cloudinary.com/topmonks/image/upload/v1620806015/postcube.cz/deliveryman.png");
+        background-size: 45% auto;
+        background-position: center left;
+        background-repeat: no-repeat;
+        margin-top: 4em;
+      }
+      .main-info img {
+        display: none;
+      }
+    }
+    @media (min-width: 2040px) {
+      .main-info {
+        min-width: 700px;
+        align-self: center;
+        background-image: url("https://res.cloudinary.com/topmonks/image/upload/v1620806015/postcube.cz/deliveryman.png");
+        background-size: 45% auto;
+        background-position: center left;
+        background-repeat: no-repeat;
+        min-height: 600px;
+        margin-top: 4em;
+      }
+      .main-info img {
+        display: none;
+      }
+    }
+    @media (max-width: 839px) {
+      .main-info img {
+        display: block;
+      }
+      .main-info .mdc-layout-grid {
+        padding: 0;
+      }
+      .main-info__content {
+        padding: 20px;
+      }
+      .main-info__bg {
+        margin-top: 2em;
+        align-self: center;
+      }
+    }
   </style>
 
 {% endblock %}
@@ -44,13 +81,14 @@
   <section id="main-info" class="main-info">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner layout-wrapper">
+        <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+          <img alt="Fotka PostCube Kurýra" src="https://res.cloudinary.com/topmonks/image/upload/v1620806015/postcube.cz/deliveryman.png">
+        </div>
         <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
           <h1>Vaši kurýři nás budou milovat!</h1>
           <p>PostCube šetří náklady a ulehčí práci kurýrům. Spolupracujte
             s&nbsp;námi a zajistěte svým zákazníkům maximální pohodlí při online
             nakupování.</p>
-        </div>
-        <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
         </div>
       </div>
     </div>
@@ -155,7 +193,7 @@
           například o&nbsp;umístění&nbsp;boxu.</p>
       </div>
       <div
-        class="icon-section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-desktop">
+        class="after-icon icon-section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-desktop">
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 0V32.0002L16.0004 48H48.0005V16.0001L32.0001 0H0Z" fill="#1538E5"/>
           <path d="M24.0793 38.256C28.5593 38.256 32.4633 35.696 32.4633 31.344C32.4633 28.912 31.0553 26.992 28.8793 26.192C30.4792 25.296 31.5353 23.504 31.5353 21.424C31.5353 18.096 28.2393 15.344 23.8553 15.344C19.7913 15.344 16.0473 17.968 16.0153 22.448H20.5593C20.5913 20.368 21.9353 19.472 23.7593 19.472C25.6153 19.472 26.8953 20.432 26.8953 21.936C26.8953 23.44 25.7433 24.496 23.9833 24.496H21.9353V28.432H24.0793C26.2873 28.432 27.6953 29.488 27.6953 31.216C27.6953 33.008 26.2873 34.096 24.0793 34.096C21.9993 34.096 20.2713 33.04 20.2713 30.928H15.6313C15.6313 35.536 19.4073 38.256 24.0793 38.256ZM35.507 33.392V38H40.339V33.392H35.507Z" fill="white"/>
