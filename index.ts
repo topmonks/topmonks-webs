@@ -18,6 +18,9 @@ registerAutoTags({
   "user:Stack": pulumi.getStack()
 });
 
+createCertificate("www.topmonks.cz");
+createCertificate("www.topmonks.com");
+
 createCertificate("www.cbx.cz");
 createCertificate("www.hookamonk.com");
 createCertificate("www.ingridapp.io");
