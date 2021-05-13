@@ -78,6 +78,7 @@
     "outdated": "yarn upgrade-interactive",
     "build": "run-s 'build:*'",
     "serve": "ws --http2 --compress",
+    "deploy": "./.scripts/deploy-site.sh",
     "lint:es": "eslint ./",
     "lint:scss": "stylelint-config-prettier-check",
     "lint": "run-p 'lint:*'",
