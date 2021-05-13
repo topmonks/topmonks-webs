@@ -17,13 +17,6 @@
       width: 100%;
       height: auto;
     }
-    .main-info {
-      background-image: cloudinaryUrl("/postcube.cz/section-bg02.png");
-      background-size: 100% auto;
-      background-position: 100%;
-      background-repeat: no-repeat;
-    }
-
     .testimonial__content {
       max-width: 80%;
     }
@@ -39,6 +32,24 @@
         background-repeat: no-repeat;
         margin-top: 4em;
       }
+      .main-info__bg {
+        display: none;
+      }
+    }
+    @media (max-width: 839px) {
+      .main-info img {
+        display: block;
+      }
+      .main-info .mdc-layout-grid {
+        padding: 0;
+      }
+      .main-info__content {
+        padding: 20px;
+      }
+      .main-info__bg {
+        margin-top: 2em;
+        align-self: center;
+      }
     }
   </style>
 
@@ -48,13 +59,14 @@
   <section id="" class="main-info">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner layout-wrapper">
+        <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+          <img alt="Fotka Vyzvednutí Zásilky" src="https://res.cloudinary.com/topmonks/image/upload/v1620652588/postcube.cz/section-bg02.png">
+        </div>
         <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
           <h1>PostCube do bytového domu nebo firmy</h1>
           <p>Zásilka vám dorazí nezávisle na tom, co právě děláte. Kurýr ji
             zvládne doručit bez vaší přítomnosti! #necekamnakuryra
           <b><br>#necekamnakuryra</b></p>
-        </div>
-        <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
         </div>
       </div>
     </div>

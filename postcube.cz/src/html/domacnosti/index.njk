@@ -23,6 +23,23 @@
     .testimonial__content {
       max-width: 80%;
     }
+
+    @media (max-width: 839px) {
+      .main-info img {
+        display: block;
+      }
+      .main-info .mdc-layout-grid {
+        padding: 0;
+      }
+      .main-info__content {
+        padding: 20px;
+      }
+      .main-info__bg {
+        margin-top: 2em;
+        align-self: center;
+      }
+    }
+
     @media screen and (min-width: 840px) {
       .main-info {
         align-self: center;
@@ -31,6 +48,9 @@
         background-position: center right;
         background-repeat: no-repeat;
         margin-top: 4em;
+      }
+      .main-info__bg {
+        display: none;
       }
     }
   </style>
@@ -41,13 +61,14 @@
   <section id="main-info" class="main-info">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner layout-wrapper">
+        <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+          <img alt="Fotka PostCube" src="https://res.cloudinary.com/topmonks/image/upload/v1620652588/postcube.cz/section-bg01.png">
+        </div>
         <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
           <h1>PostCube k&nbsp;rodinnému domu</h1>
           <p>Zásilka vám dorazí nezávisle na tom, co právě děláte. Kurýr ji
             zvládne doručit bez vaší přítomnosti!
           <b>#necekamnakuryra</b></p>
-        </div>
-        <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
         </div>
       </div>
     </div>
