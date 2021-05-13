@@ -34,13 +34,15 @@ header {
     }
 
     a.list__btn {
-      background-color: var(--postcube-secondary);
-      padding: 4px 14px;
-
       &:hover {
         cursor: pointer;
         background-color: var(--postcube-secondary-light);
         border-bottom: transparent;
+      }
+
+      @media screen and (min-width: 840px) {
+        background-color: var(--postcube-secondary);
+        padding: 4px 14px;
       }
     }
 
@@ -61,11 +63,12 @@ header {
     background-color: transparent;
     padding: 0;
   }
+
   .dropdown {
     float: left;
     overflow: hidden;
+
     .dropbtn {
-      font-size: 16px;
       border: none;
       outline: none;
       background-color: inherit;
@@ -73,20 +76,25 @@ header {
       line-height: 32px;
       border-bottom: 2px solid transparent;
       text-decoration: none;
-      margin-right: 44px;
-      padding: 4px 0;
 
       &:hover,
       &.active a:after {
         border-bottom: 2px solid var(--postcube-secondary);
       }
+
+      @media screen and (min-width: 840px) {
+        font-size: 16px;
+        margin-right: 44px;
+        padding: 4px 0;
+      }
     }
+
     .dropdown-content {
       display: none;
       position: absolute;
       background-color: var(--postcube-primary);
       min-width: 180px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
 
@@ -97,14 +105,17 @@ header {
       text-decoration: none;
       display: block;
       text-align: left;
+
       &:hover {
         color: var(--postcube-secondary);
       }
     }
   }
+
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
   @media screen and (min-width: 1440px) {
     .layout-wrapper {
       padding-left: 0;
@@ -115,6 +126,7 @@ header {
 .logo__hp {
   display: none;
 }
+
 .logo__subpage {
   font-size: 28px;
   font-weight: 800;
@@ -124,7 +136,7 @@ header {
 
 // HAMBURGER
 
-.logo__hp{
+.logo__hp {
   position: absolute;
   left: 0;
   top: -110%;
@@ -244,10 +256,40 @@ header {
     color: var(--postcube-white);
     ul.menu__list {
       display: inline-grid;
+      padding-left: 1em;
     }
     .menu__list a {
+      font-size: 30px;
+      font-weight: bold;
       color: #ffffff;
       display: block;
+      padding: 12px;
+      margin: 4px;
+    }
+    a.list__btn {
+      color: var(--postcube-secondary);
+    }
+    .header--social {
+      margin-top: 2em;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+
+      a.list__lang--cz {
+        font-size: 26px;
+      }
+    }
+    a.social-icons--fb {
+      margin-left: 2em;
+    }
+    .header--policy a {
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    .dropbtn {
+      font-size: 30px;
+      font-weight: bold;
+      color: #ffffff;
       padding: 12px;
       margin: 4px;
     }
@@ -259,4 +301,12 @@ header {
   align-items: flex-start;
   justify-content: flex-end;
   margin: 0;
+}
+
+@media screen and (min-width: 840px) {
+  header {
+    a.social-icons, .header--policy {
+      display: none;
+    }
+  }
 }
