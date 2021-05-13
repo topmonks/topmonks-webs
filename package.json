@@ -10,7 +10,7 @@
     "@material/button": "^11.0.0",
     "@material/layout-grid": "^11.0.0",
     "@material/top-app-bar": "^11.0.0",
-    "@pulumi/aws": "^4.3.0",
+    "@pulumi/aws": "^4.2.0",
     "@pulumi/awsx": "^0.30.0",
     "@pulumi/pulumi": "^3.2.1",
     "@topmonks/pulumi-aws": "^1.7.10",

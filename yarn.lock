@@ -1618,7 +1618,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pulumi/aws@npm:^4.3.0":
+"@pulumi/aws@npm:^4.2.0":
   version: 4.3.0
   resolution: "@pulumi/aws@npm:4.3.0"
   dependencies:
@@ -1891,7 +1891,7 @@ __metadata:
     "@material/button": ^11.0.0
     "@material/layout-grid": ^11.0.0
     "@material/top-app-bar": ^11.0.0
-    "@pulumi/aws": ^4.3.0
+    "@pulumi/aws": ^4.2.0
     "@pulumi/awsx": ^0.30.0
     "@pulumi/pulumi": ^3.2.1
     "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=cf98f025a94b506f734106e9925e9cbcfae39cd2"
