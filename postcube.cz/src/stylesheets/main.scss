@@ -26,6 +26,7 @@ body {
 textarea:focus, button:focus, input:focus {
   outline: none;
 }
+
 .content-title {
   text-align: center;
   margin: 4em 0 0.5em;
@@ -34,11 +35,11 @@ textarea:focus, button:focus, input:focus {
 // Main Introduction Text //
 .main-info {
   color: var(--postcube-primary);
+
   .main-info__content {
     align-self: center;
   }
 }
-
 
 
 // Svg filling color //
@@ -50,9 +51,8 @@ svg {
 
 // For Similar Sections of Icons and Text //
 .icon-section {
-  text-align: center;
-  padding: 4em 0 6em;
-
+    text-align: center;
+    padding: 4em 0 6em;
   .icon-section__content {
     max-width: 280px;
     margin: 0 auto;
@@ -63,14 +63,16 @@ svg {
     margin: 2em 0;
   }
 
-  .after-icon:after {
-    content: url("/assets/css/line.svg");
-    display: block;
-    width: 100px;
-    height: 2px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  @media screen and (min-width: 840px) {
+    .after-icon:after {
+      content: url("/assets/img/line.svg");
+      display: block;
+      width: 100px;
+      height: 2px;
+      position: absolute;
+      top: 4px;
+      right: -36px;
+    }
   }
 }
 
@@ -83,6 +85,7 @@ svg {
   h2 {
     margin: 14px 0 0;
   }
+
   p {
     font-size: 20px;
   }
