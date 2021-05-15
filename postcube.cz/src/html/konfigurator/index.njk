@@ -272,7 +272,6 @@
           previewListElement.innerHTML = "";
 
           for (let item of items) {
-            console.log(item.price)
             previewListElement.innerHTML += `<li>${item
               .label}<strong class="price">${currency
               .format(parseInt(item.price))}</strong>`;
