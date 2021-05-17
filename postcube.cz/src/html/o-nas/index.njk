@@ -1,5 +1,10 @@
 {% extends 'layouts/main.njk' %}
 {% set language = cs %}
+{% set contactMap = images["contact-map.png"]["public_id"] %}
+{% set team-slavicek = images["jan-slavicek.png"]["public_id"] %}
+{% set team-topmonks = images["Topmonks.png"]["public_id"] %}
+{% set team-lakum = images["Lakum.png"]["public_id"] %}
+
 
 {% block title %}
   PostCube - O nás
@@ -53,7 +58,7 @@
     @media screen and (min-width: 840px) {
       .main-info {
         align-self: center;
-        background-image: url("https://res.cloudinary.com/topmonks/image/upload/v1620804984/postcube.cz/contact-map.png");
+        background-image: url({{ contactMap | cloudinaryUrl(dpr="auto", width=860) }});
         background-size: 45% auto;
         background-position: center right;
         background-repeat: no-repeat;
@@ -119,9 +124,7 @@
           <h2>Kdo za projektem stojí?</h2>
         </div>
         <div class="team__member--photo mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
-          <img alt="Fotografie Jana Slavíčka"
-               src="https://res.cloudinary.com/topmonks/image/upload/v1620804034/postcube.cz/Team/jan-slavicek.png"
-               width="180px" height="180px">
+          <img alt="Fotografie Jana Slavíčka" src="{{ team-slavicek | cloudinaryUrl(dpr="auto", width=180) }}">
         </div>
         <div class="team__member--details mdc-layout-grid__cell mdc-layout-grid__cell--span-9-desktop">
           <h3>Jan Slavíček</h3>
@@ -136,9 +139,7 @@
             Facilituje několik Leadership Master Mindových&nbsp;kruhů.</p>
         </div>
         <div class="team__member--photo mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
-          <img alt="Logo Firmy Lakum"
-               src="https://res.cloudinary.com/topmonks/image/upload/v1620804087/postcube.cz/Team/Lakum.png"
-               width="180px" height="180px">
+          <img alt="Logo Firmy Lakum" src="{{ team-lakum | cloudinaryUrl(dpr="auto", width=180) }}">
         </div>
         <div class="team__member--details mdc-layout-grid__cell mdc-layout-grid__cell--span-9-desktop">
           <h3>Lakum</h3>
@@ -148,9 +149,7 @@
 </p>
         </div>
         <div class="team__member--photo mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
-          <img alt="Logo Firmy TopMonks"
-               src="https://res.cloudinary.com/topmonks/image/upload/v1620804164/postcube.cz/Team/TopMonks.png"
-               width="180px" height="180px">
+          <img alt="Logo Firmy TopMonks" src="{{ team-topmonks | cloudinaryUrl(dpr="auto", width=180) }}">
         </div>
         <div class="team__member--details mdc-layout-grid__cell mdc-layout-grid__cell--span-9-desktop">
           <h3>TopMonks, s.r.o.</h3>

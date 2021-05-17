@@ -1,5 +1,6 @@
 {% extends 'layouts/main.njk' %}
 {% set language = cs %}
+{% set deliveryman = images["deliveryman.png"]["public_id"] %}
 
 {% block title %}
   PostCube - Hlavní stránka
@@ -11,7 +12,6 @@
   <meta property="og:type" content="company">
   <meta property="og:url" content="https://www.postcube.cz/">
   <meta property="og:site_name" content="postcube.cz">
-
   <style>
     img {
       width: 100%;
@@ -25,16 +25,20 @@
     .testimonial__content {
       max-width: 520px;
     }
+
     @media (max-width: 839px) {
       .main-info img {
         display: block;
       }
+
       .main-info .mdc-layout-grid {
         padding: 0;
       }
+
       .main-info__content {
         padding: 20px;
       }
+
       .main-info__bg {
         margin-top: 2em;
         align-self: center;
@@ -44,28 +48,30 @@
     @media (min-width: 840px) and (max-width: 2039px) {
       .main-info {
         align-self: center;
-        background-image: url("https://res.cloudinary.com/topmonks/image/upload/v1620806015/postcube.cz/deliveryman.png");
+        background-image: url({{ deliveryman | cloudinaryUrl(dpr="auto", width=860) }});
         background-size: 45% auto;
         background-position: center left;
         background-repeat: no-repeat;
         margin-top: 4em;
       }
+
       .main-info img {
         display: none;
       }
     }
+
     @media (min-width: 2040px) {
       .main-info {
         min-width: 700px;
         align-self: center;
-        background-image: url("https://res.cloudinary.com/topmonks/image/upload/v1620806015/postcube.cz/deliveryman.png");
+        background-image: url({{ deliveryman | cloudinaryUrl(dpr="auto", width=1020) }});
         background-size: 45% auto;
         background-position: center left;
         background-repeat: no-repeat;
         min-height: 600px;
         margin-top: 4em;
       }
-      .main-info img {
+      .main-info__bg img {
         display: none;
       }
     }
@@ -78,9 +84,10 @@
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner layout-wrapper">
         <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <img alt="Fotka PostCube Kurýra" src="https://res.cloudinary.com/topmonks/image/upload/v1620806015/postcube.cz/deliveryman.png">
+          <img alt="Fotka PostCube Kurýra" src="{{ deliveryman | cloudinaryUrl(dpr="auto", width=860) }}">
         </div>
-        <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <div
+          class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
           <h1>Nečekejte na kurýra</h1>
           <p>Je spousta lepších činností než čekání na kurýra. S&nbsp;chytrou
             schránkou PostCube si zásilku vyzvednete, až vy budete&nbsp;chtít!

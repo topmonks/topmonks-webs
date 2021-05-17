@@ -1,3 +1,5 @@
+{% set createPostcube = images["create-pc_bg.png"]["public_id"] %}
+
 <style>
   .create-postcube {
     text-align: center;
@@ -12,7 +14,7 @@
   }
   @media screen and (min-width: 840px) {
     .create-postcube {
-      background-image: url("https://res.cloudinary.com/topmonks/image/upload/v1620658169/postcube.cz/create-pc_bg.png");
+      background-image: url({{ createPostcube | cloudinaryUrl(dpr="auto", width=1020) }});
       background-size: 100% auto;
       background-position: 100%;
       background-repeat: no-repeat;

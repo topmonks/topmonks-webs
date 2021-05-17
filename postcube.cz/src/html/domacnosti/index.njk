@@ -1,5 +1,8 @@
 {% extends 'layouts/main.njk' %}
 {% set language = cs %}
+{% set postcubeBox = images["section-bg01.png"]["public_id"] %}
+
+
 
 {% block title %}
   PostCube - Domácnosti
@@ -43,7 +46,7 @@
     @media screen and (min-width: 840px) {
       .main-info {
         align-self: center;
-        background-image: url("https://res.cloudinary.com/topmonks/image/upload/v1620652588/postcube.cz/section-bg01.png");
+        background-image: url({{ postcubeBox | cloudinaryUrl(dpr="auto", width=1020) }});
         background-size: 45% auto;
         background-position: center right;
         background-repeat: no-repeat;
@@ -62,7 +65,7 @@
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner layout-wrapper">
         <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <img alt="Fotka PostCube" src="https://res.cloudinary.com/topmonks/image/upload/v1620652588/postcube.cz/section-bg01.png">
+          <img alt="Fotka PostCube" src="{{ postcubeBox | cloudinaryUrl(dpr="auto", width=860) }}">
         </div>
         <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
           <h1>PostCube k&nbsp;rodinnému domu</h1>
