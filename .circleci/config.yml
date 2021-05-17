@@ -86,13 +86,12 @@ jobs:
           pkg-manager: yarn
           override-ci-command: yarn install --immutable
           with-cache: false
-#          cache-version: v5
-#          cache-path: .yarn/cache
+          cache-version: v5
+          cache-path: .yarn/cache
       - run: pulumi stack select topmonks-webs
-      - run: pulumi update --yes --stack topmonks-webs --cwd . --skip-preview --debug -v=3 --parallel=1
-#      - pulumi/update:
-#          stack: topmonks-webs
-#          skip-preview: true
+      - pulumi/update:
+          stack: topmonks-webs
+          skip-preview: true
 
   preview-provision:
     executor:
