@@ -1871,14 +1871,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@topmonks/pulumi-aws@npm:^1.7.11":
-  version: 1.7.11
-  resolution: "@topmonks/pulumi-aws@npm:1.7.11"
+"@topmonks/pulumi-aws@npm:^1.8.0":
+  version: 1.8.0
+  resolution: "@topmonks/pulumi-aws@npm:1.8.0"
   peerDependencies:
     "@pulumi/aws": ^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0
     "@pulumi/awsx": "*"
     "@pulumi/pulumi": ^1.9.1 || ^2.0.0 || ^3.0.0
-  checksum: 241d4f64c6791efb2b847478ab9eb94885418410c0c2e513b0689bd25de73317f544638a16247c818d6cf708cb7b4c82861d617ce308daed4badba7705348069
+  checksum: b01ee38e58b1b755d546436bd37daa19c7438cbc25ad5a66ed99b7e8dea2acd317d4b31560e82b33940ce5bf19f7ab2c705add16db1a5ccbaf97a4ef92b77764
   languageName: node
   linkType: hard
 
@@ -1895,7 +1895,7 @@ __metadata:
     "@pulumi/awsx": ^0.30.0
     "@pulumi/pulumi": ^3.2.1
     "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=cf98f025a94b506f734106e9925e9cbcfae39cd2"
-    "@topmonks/pulumi-aws": ^1.7.11
+    "@topmonks/pulumi-aws": ^1.8.0
     "@types/chart.js": ^2.9.32
     "@types/node": ^14.14.45
     "@types/yaml": ^1.9.7
