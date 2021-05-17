@@ -3,7 +3,7 @@ const pathConfig = require("./path-config.json");
 
 const config = createSharedTaskConfig(__dirname, {
   images: true,
-  cloudinary: false,
+  cloudinary: true,
   fonts: true,
   static: true,
   svgSprite: true,
@@ -11,7 +11,7 @@ const config = createSharedTaskConfig(__dirname, {
   stylesheets: true,
   workboxBuild: false,
   html: {
-    collections: ["products", "configurator"]
+    collections: ["products", "configurator", "images"]
   },
 
   browserSync: {
