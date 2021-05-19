@@ -6,7 +6,7 @@ orbs:
   browser-tools: circleci/browser-tools@1.1.3
   docker: circleci/docker@1.5.0
   github: topmonks/github@1.1.0
-  node: circleci/node@4.3.0
+  node: circleci/node@4.4.0
   pulumi: pulumi/pulumi@2.0.0
   swarmpit: topmonks/swarmpit@1.2.0
 
@@ -58,10 +58,8 @@ jobs:
     steps:
       - checkout
       - node/install-packages:
-          pkg-manager: yarn
-          override-ci-command: yarn install --immutable
+          pkg-manager: yarn-berry
           cache-version: v4
-          cache-path: .yarn/cache
       - run: yarn build
       - run: |
           mkdir results
@@ -83,11 +81,8 @@ jobs:
       - pulumi/login:
           cloud-url: s3://pulumi.tmcloud.io
       - node/install-packages:
-          pkg-manager: yarn
-          override-ci-command: yarn install --immutable
-          with-cache: false
-          cache-version: v5
-          cache-path: .yarn/cache
+          pkg-manager: yarn-berry
+          cache-version: v4
       - run: pulumi stack select topmonks-webs
       - pulumi/update:
           stack: topmonks-webs
@@ -102,10 +97,8 @@ jobs:
       - pulumi/login:
           cloud-url: s3://pulumi.tmcloud.io
       - node/install-packages:
-          pkg-manager: yarn
-          override-ci-command: yarn install --immutable
-          cache-version: v5
-          cache-path: .yarn/cache
+          pkg-manager: yarn-berry
+          cache-version: v4
       - run: pulumi stack select topmonks-webs
       - pulumi/preview:
           stack: topmonks-webs
@@ -125,10 +118,8 @@ jobs:
       - attach_workspace:
           at: ~/topmonks-webs
       - node/install-packages:
-          pkg-manager: yarn
-          override-ci-command: yarn install --immutable
+          pkg-manager: yarn-berry
           cache-version: v4
-          cache-path: .yarn/cache
       - run:
           name: Install self-signed cert for localhost
           command: |
