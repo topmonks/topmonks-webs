@@ -5,29 +5,26 @@
     {
       "value": "46",
       "label": "S",
-      "info": "50 x 50 x 50 cm",
+      "info": "",
       "default": true,
       "price": "5000,00"
     },
     {
       "value": "49",
       "label": "M",
-      "info": "60 x 60 x 60 cm",
-      "default": false,
       "price": "6000,00"
     },
     {
       "value": "55",
       "label": "L",
-      "info": "70 x 70 x 70 cm",
-      "default": false,
       "price": "7000,00"
     }
   ],
   "colors": [
     {
       "value": "MOD",
-      "label": "Modrá"
+      "label": "Modrá",
+      "default": true
     },
     {
       "value": "SED",
@@ -37,6 +34,7 @@
   "accessories": [
     {
       "name": "Noha",
+      "productId": "58",
       "options": [
         {
           "value": null,
@@ -44,14 +42,14 @@
           "default": true
         },
         {
-          "value": "30",
-          "price": "1000,00",
-          "label": "30 cm"
+          "value": 30,
+          "label": "30cm",
+          "price": "1000,00"
         },
         {
-          "value": "65",
-          "price": "1200,00",
-          "label": "65 cm"
+          "value": 65,
+          "label": "65cm",
+          "price": "1200,00"
         }
       ]
     },
@@ -64,9 +62,9 @@
           "default": true
         },
         {
-          "value": "64",
-          "price": "800,00",
-          "label": "ano"
+          "value": 64,
+          "label": "ano",
+          "price": "800,00"
         }
       ]
     },
@@ -79,9 +77,9 @@
           "default": true
         },
         {
-          "value": "61",
-          "price": "1000,00",
-          "label": "ano"
+          "value": 61,
+          "label": "ano",
+          "price": "1000,00"
         }
       ]
     },
@@ -94,9 +92,9 @@
           "default": true
         },
         {
-          "value": "67",
-          "price": "2500,00",
-          "label": "ano"
+          "value": 67,
+          "label": "ano",
+          "price": "2500,00"
         }
       ]
     }

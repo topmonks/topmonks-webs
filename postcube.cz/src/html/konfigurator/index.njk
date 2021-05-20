@@ -59,7 +59,7 @@
       border: solid 1px #A5A5A5;
       flex: 1;
       background-color: #1538E5;
-      height: 48px;
+      min-height: 48px;
     }
 
     .main-info__radio-container .input-radio ~ .input-radio--custom {
@@ -76,6 +76,18 @@
     .main-info__radio-container .input-radio:checked ~ .input-radio--custom {
       background-color: #1538E5;
       color: white;
+    }
+
+    .main-product-option {
+      text-align: center;
+      padding: 8px;
+    }
+    .main-product-option > strong {
+      display: block;
+      font-size: 1.2rem;
+    }
+    .main-product-option > span {
+      font-weight: normal;
     }
 
     .order-preview__container {
@@ -143,7 +155,7 @@
     }
 
     .order-preview__container:before {
-      content:"";
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -174,7 +186,12 @@
               {% for item in configurator.sizes %}
                 <label class="main-info__radio-container">
                   <input type="radio" class="input-radio" name="size" value="{{ item.value }}" {{ "checked" if item.default }}/>
-                  <div class="input-radio--custom">{{ item.label }}</div>
+                  <div class="input-radio--custom">
+                    <div class="main-product-option">
+                      <strong>{{ item.label }}</strong>
+                      <span>{{ item.info }}</span>
+                    </div>
+                  </div>
                 </label>
               {% endfor %}
             </div>
@@ -222,22 +239,6 @@
       </div>
       <script>
         const configurator = {{ configurator | dump | safe }};
-        const products = {{ products | dump | safe }};
-
-        function findAndTransformSelectedProduct(values) {
-          const product = products.find(product => product.code === [values.size, values.color].join("/"))
-          const color = configurator
-            .colors
-            .find(clr => clr.value === values.color);
-          return {
-            code: product.code,
-            label: `${product
-              .name} (${color
-              .label
-              .toLowerCase()})`,
-            price: product.price
-          }
-        }
 
         const toSelectedAccesoryOption = values => (accessory) => {
           const value = values[accessory.name]
@@ -284,14 +285,26 @@
 
         const calculateOrderPreview = () => {
           const values = serialize(form);
-          const mainProduct = findAndTransformSelectedProduct(values);
-          const accessories = configurator
-            .accessories
-            .map(toSelectedAccesoryOption(values))
-            .filter(Boolean)
+          const color = configurator
+            .colors
+            .find((color) => color.value === values.color);
+          const size = configurator
+            .sizes
+            .find((size) => size.value === values.size);
 
           return [
-            mainProduct, ...accessories
+            {
+              code: [values.size, values.color].join("/"),
+              label: `Schránka PostCube ${size
+                .label} (${color
+                .label
+                .toLowerCase()})`,
+              price: size.price
+            },
+            ...configurator
+              .accessories
+              .map(toSelectedAccesoryOption(values))
+              .filter(Boolean)
           ];
         }
 

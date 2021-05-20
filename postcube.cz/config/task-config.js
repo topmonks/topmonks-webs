@@ -1,5 +1,23 @@
 const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
 const pathConfig = require("./path-config.json");
+const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
+const shell = require("gulp-shell");
+const csvtojson = require("csvtojson");
+const fs = require("fs");
+const fetch = require("node-fetch");
+const iconv = require("iconv-lite");
+
+const SHOP_LINK = "https://chytrybox.myshoptet.com?c=";
+const SHOP_EXPORT_URL =
+  "https://chytrybox.myshoptet.com/export/products.csv?patternId=4&hash=2bebc2db23a8bf3116c41286e7383e12eec0b45e450c1e3430511f4615c76d09";
+
+// https://stackoverflow.com/a/34890276/13890034
+function groupBy(xs, key) {
+  return xs.reduce((rv, x) => {
+    (rv[x[key]] = rv[x[key]] || []).push(x);
+    return rv;
+  }, {});
+}
 
 const config = createSharedTaskConfig(__dirname, {
   images: true,
@@ -11,12 +29,155 @@ const config = createSharedTaskConfig(__dirname, {
   stylesheets: true,
   workboxBuild: false,
   html: {
-    collections: ["products", "configurator", "images"]
+    collections: ["configurator", "images"]
   },
 
   browserSync: {
     server: {
       baseDir: pathConfig.dest
+    }
+  },
+
+  additionalTasks: {
+    initialize({ task, src, dest, series, watch }, PATH_CONFIG, TASK_CONFIG) {
+      const dataPath = projectPath(PATH_CONFIG.src, PATH_CONFIG.data.src);
+      const productsRawCsvPath = `${dataPath}/products.raw.csv`;
+      const productsCsvPath = `${dataPath}/products.csv`;
+      const configuratorJsonPath = `${dataPath}/configurator.json`;
+
+      const download = async fileurl => {
+        const response = await fetch(fileurl);
+        const buffer = await response.buffer();
+        const data = iconv.decode(buffer, "win1250");
+
+        return data;
+      };
+
+      const transform = products => {
+        if (!products.length) throw "No products to transform!";
+
+        const mainProducts = [];
+        for (let product of products) {
+          if (product.categoryText === "Schránky > Jednoduché") {
+            if (!mainProducts.find(({ name }) => name === product.name))
+              mainProducts.push(product);
+          }
+        }
+
+        const colors = [];
+        for (let product of products) {
+          const [, code] = product.code.split("/");
+          const label = product["variant:Barva"];
+          if (code && label) {
+            if (!colors.find(({ value }) => value === code))
+              colors.push({ value: code, label });
+          }
+        }
+
+        const accessories = groupBy(
+          products.filter(({ categoryText }) =>
+            ["Příslušenství", "Služby"].includes(categoryText)
+          ),
+          "name"
+        );
+
+        return {
+          shopLink: SHOP_LINK,
+          currency: products[0].currency,
+          sizes: mainProducts.map(
+            ({ code, name, textProperty, textProperty2, price }, index) => ({
+              value: code.split("/")[0],
+              label: name.replace("PostCube ", ""),
+              info: textProperty.startsWith("Velikost;")
+                ? textProperty.replace("Velikost;", "")
+                : textProperty2.replace("Velikost;", ""),
+              default: !index,
+              price
+            })
+          ),
+          colors,
+          accessories: [
+            {
+              name: "Noha",
+              options: [
+                {
+                  value: null,
+                  label: "žádná",
+                  default: true
+                },
+                ...accessories["Noha"].map(
+                  ({ code, price, "variant:Velikost": label }) => ({
+                    value: code.split("/")[1],
+                    price,
+                    label
+                  })
+                )
+              ]
+            },
+            {
+              name: "Stříška",
+              options: [
+                {
+                  value: null,
+                  label: "ne",
+                  default: true
+                },
+                {
+                  value: accessories["Stříška"][0].code,
+                  price: accessories["Stříška"][0].price,
+                  label: "ano"
+                }
+              ]
+            },
+            {
+              name: "Podstavec 80x80 cm",
+              options: [
+                {
+                  value: null,
+                  label: "ne",
+                  default: true
+                },
+                {
+                  value: accessories["Podstavec 80x80 cm"][0].code,
+                  price: accessories["Podstavec 80x80 cm"][0].price,
+                  label: "ano"
+                }
+              ]
+            },
+            {
+              name: "Montáž na míru",
+              options: [
+                {
+                  value: null,
+                  label: "ne",
+                  default: true
+                },
+                {
+                  value: accessories["Montáž na míru"][0].code,
+                  price: accessories["Montáž na míru"][0].price,
+                  label: "ano"
+                }
+              ]
+            }
+          ]
+        };
+      };
+
+      task("configurator-data", async () => {
+        const csv = await download(SHOP_EXPORT_URL);
+        const data = await csvtojson({ delimiter: ";" }).fromString(csv);
+
+        return fs.promises.writeFile(
+          configuratorJsonPath,
+          JSON.stringify(transform(data))
+        );
+      });
+    },
+    development: {
+      prebuild: ["configurator-data"]
+    },
+    production: {
+      prebuild: ["configurator-data"]
     }
   },
 
