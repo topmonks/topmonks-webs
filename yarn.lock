@@ -1967,7 +1967,6 @@ __metadata:
     esm: ^3.2.25
     gulp-markdown-to-json: ^1.1.0
     gulp-merge-json: ^2.1.1
-    gulp-shell: ^0.8.0
     iconv-lite: ^0.6.2
     isomorphic-fetch: ^3.0.0
     lighthouse: ^7.4.0
@@ -7602,20 +7601,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"gulp-shell@npm:^0.8.0":
-  version: 0.8.0
-  resolution: "gulp-shell@npm:0.8.0"
-  dependencies:
-    chalk: ^3.0.0
-    fancy-log: ^1.3.3
-    lodash.template: ^4.5.0
-    plugin-error: ^1.0.1
-    through2: ^3.0.1
-    tslib: ^1.10.0
-  checksum: 73ac0bf2d90137b1223a1dd7bd28e233266d654bc1b4d2478f968adf200624f37dbe19670c1c3ab10601ea06d1047670533d28f9d7e704a77b52a9d7d51e8bab
-  languageName: node
-  linkType: hard
-
 "gulp-sizereport@npm:^1.2.1":
   version: 1.2.1
   resolution: "gulp-sizereport@npm:1.2.1"
@@ -10185,7 +10170,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lodash.template@npm:^4.4.0, lodash.template@npm:^4.5.0":
+"lodash.template@npm:^4.4.0":
   version: 4.5.0
   resolution: "lodash.template@npm:4.5.0"
   dependencies:
@@ -16091,7 +16076,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.10.0, tslib@npm:^1.9.0":
+"tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: f44fe7f216946b17d3e3074df3746372703cf24e9127b4c045511456e8e4bf25515fb0a1bb3937676cc305651c5d4fcb6377b0588a4c6a957e748c4c28905d17

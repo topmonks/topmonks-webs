@@ -44,7 +44,6 @@
     "esm": "^3.2.25",
     "gulp-markdown-to-json": "^1.1.0",
     "gulp-merge-json": "^2.1.1",
-    "gulp-shell": "^0.8.0",
     "iconv-lite": "^0.6.2",
     "isomorphic-fetch": "^3.0.0",
     "lighthouse": "^7.4.0",

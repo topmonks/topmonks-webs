@@ -1,7 +1,6 @@
 const createSharedTaskConfig = require("../../shared/config/createSharedTaskConfig");
 const pathConfig = require("./path-config.json");
 const projectPath = require("@topmonks/blendid/gulpfile.js/lib/projectPath");
-const shell = require("gulp-shell");
 const csvtojson = require("csvtojson");
 const fs = require("fs");
 const fetch = require("node-fetch");
@@ -99,6 +98,7 @@ const config = createSharedTaskConfig(__dirname, {
           accessories: [
             {
               name: "Noha",
+              productId: accessories["Noha"][0].code.split("/")[0],
               options: [
                 {
                   value: null,
