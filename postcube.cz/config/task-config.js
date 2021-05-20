@@ -6,7 +6,7 @@ const fs = require("fs");
 const fetch = require("node-fetch");
 const iconv = require("iconv-lite");
 
-const SHOP_LINK = "https://chytrybox.myshoptet.com?c=";
+const SHOP_LINK = "https://shop.postcube.cz/?c=";
 const SHOP_EXPORT_URL =
   "https://chytrybox.myshoptet.com/export/products.csv?patternId=4&hash=2bebc2db23a8bf3116c41286e7383e12eec0b45e450c1e3430511f4615c76d09";
 
