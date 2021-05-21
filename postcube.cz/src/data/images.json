@@ -261,5 +261,26 @@
     "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1620652588/postcube.cz/section-bg02.png",
     "existing": true,
     "original_filename": "section-bg02"
+  },
+  "notification-img.png": {
+    "asset_id": "f677edd201777a872103467d3538f600",
+    "public_id": "postcube.cz/notification-img",
+    "version": 1621579337,
+    "version_id": "0847a66c25f8657dfbbaf1e0abaae34c",
+    "signature": "463984eb3e22e0926df92f52225c5f7933bab0d3",
+    "width": 1380,
+    "height": 868,
+    "format": "png",
+    "resource_type": "image",
+    "created_at": "2021-05-21T06:42:17Z",
+    "tags": [],
+    "bytes": 1327588,
+    "type": "upload",
+    "etag": "54de4431b8d82df924fd8c11c76a79e9",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1621579337/postcube.cz/notification-img.png",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1621579337/postcube.cz/notification-img.png",
+    "existing": false,
+    "original_filename": "notification-img"
   }
 }
