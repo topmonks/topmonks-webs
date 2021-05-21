@@ -2,6 +2,13 @@
 {% set language = cs %}
 {% set notify = images["notification-img.png"]["public_id"] %}
 
+{% set app01 = images["mobile-app01.svg"]["public_id"] %}
+{% set app02 = images["mobile-app02.svg"]["public_id"] %}
+{% set app03 = images["mobile-app03.svg"]["public_id"] %}
+{% set app04 = images["mobile-app04.svg"]["public_id"] %}
+{% set app05 = images["mobile-app05.svg"]["public_id"] %}
+{% set app06 = images["mobile-app06.svg"]["public_id"] %}
+
 
 {% block title %}
   PostCube - Jak box funguje
@@ -19,26 +26,64 @@
       width: 100%;
       height: auto;
     }
+
     .main-info__content {
       max-width: 95%;
+    }
+
+    .how-pc-works__content h3 {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+
+    .how-pc-works__content p {
+      margin-top: 8px;
+    }
+
+    hr {
+      background-color: var(--postcube-grey-lighter);
+      border: none;
+      height: 2px;
+      margin: 3em 0 4em;
+    }
+
+    .btn-price {
+      text-align: center;
+    }
+
+    button.content-btn {
+      width: 280px;
+    }
+
+    .btn-android {
+      text-align: right;
+    }
+
+    .how-pc-works__title p {
+      font-size: 24px;
+    }
+
+    p.content__subtitle--blue {
+      color: var(--postcube-primary);
+    }
+
+    p.content__subtitle--grey {
+      color: var(--postcube-grey);
     }
   </style>
 
 {% endblock %}
 
 {% block content %}
-  <section id="main-info" class="main-info">
-    <div class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner layout-wrapper">
-        <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <img alt="Fotka PostCube Kurýra" src="{{ deliveryman | cloudinaryUrl(dpr="auto", width=860) }}">
-        </div>
-        <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-          <h1>Jak funguje PostCube?</h1>
-        </div>
+<section id="main-info" class="main-info">
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner layout-wrapper">
+      <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h1>Jak funguje PostCube?</h1>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <section id="" class="">
   <div class="mdc-layout-grid">
@@ -46,20 +91,20 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>1.&nbsp;Přijímání zásilek a nákupů</h2>
       </div>
-      <div class="choose-postcube__content mdc-layout-grid__cell">
+      <div class="how-pc-works__content mdc-layout-grid__cell">
         <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
         <h3>Notifikace o&nbsp;doručení</h3>
         <p>Kurýr přes jednorázový kód otevře vaši PostCube a vloží do ní
           balík. V&nbsp;aplikaci pak potvrdí doručení a vám o&nbsp;tom ihned přijde
           notifikace.</p>
       </div>
-      <div class="choose-postcube__content mdc-layout-grid__cell">
+      <div class="how-pc-works__content mdc-layout-grid__cell">
         <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
         <h3>Otevření chytrého boxu</h3>
         <p>V&nbsp;okamžiku, kdy chcete zásilku vyzvednout, přijmete v&nbsp;aplikaci
           doručenou objednávku a spárováním přes Bluetooth otevřete&nbsp;box.</p>
       </div>
-      <div class="choose-postcube__content mdc-layout-grid__cell">
+      <div class="how-pc-works__content mdc-layout-grid__cell">
         <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
         <h3>Převzetí zásilky</h3>
         <p>Pak stačí kliknout na tlačítko „zásilka v&nbsp;pořádku převzata“.
@@ -73,28 +118,28 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>2.&nbsp;Odesílání zásilek a vrácení zboží</h2>
       </div>
-      <div class="choose-postcube__content mdc-layout-grid__cell">
+      <div class="how-pc-works__content mdc-layout-grid__cell">
         <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
         <h3>Zadání požadavku</h3>
         <p>V&nbsp;mobilní aplikaci zadáte kód boxu příjemce nebo adresu pro doručení,
           zvolíte přepravní společnost, vyberete způsob platby a uhradíte
           dopravu.</p>
       </div>
-      <div class="choose-postcube__content mdc-layout-grid__cell">
+      <div class="how-pc-works__content mdc-layout-grid__cell">
         <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
         <h3>Označení balíku</h3>
         <p>Z&nbsp;aplikace si stáhnete a vytisknete štítek s&nbsp;kódem a ten nalepíte na
           balík. Kód můžete napsat také ručně fixem&nbsp;&ndash; čitelně a
           viditelně.</p>
       </div>
-      <div class="choose-postcube__content mdc-layout-grid__cell">
+      <div class="how-pc-works__content mdc-layout-grid__cell">
         <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
         <h3>Převzetí zásilky</h3>
         <p>Pak stačí kliknout na tlačítko „zásilka v&nbsp;pořádku převzata“.
           Pokud se vyskytne nějaká nesrovnalost, můžete v&nbsp;aplikaci nahlásit
           problém.</p>
       </div>
-      <div class="choose-postcube__content mdc-layout-grid__cell">
+      <div class="how-pc-works__content mdc-layout-grid__cell">
         <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
         <h3>Vyzvednutí přepravcem</h3>
         <p>Aplikace pošle ihned informaci o&nbsp;nové zásilce dopravci a ten ji předá
@@ -105,10 +150,122 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>3.&nbsp;Mobilní aplikace</h2>
       </div>
+      <div class="how-pc-works__content mdc-layout-grid__cell">
+        <img alt="Stáhnout aplikaci Postcube" src="{{ app01 | cloudinaryUrl(dpr="auto", width=400) }}">
+        <h3>Zdarma ke stažení</h3>
+        <p>Aplikaci si do svého telefonu stáhnete přes App Store nebo
+          Google&nbsp;Play.</p>
+      </div>
+      <div class="how-pc-works__content mdc-layout-grid__cell">
+        <img alt="Aplikace Postcube" src="{{ app02 | cloudinaryUrl(dpr="auto", width=400) }}">
+        <h3>Propojená s&nbsp;přepravcem</h3>
+        <p>Aplikace komunikuje automaticky s&nbsp;přepravcem. Vy na příjmu být
+          nemusíte.</p>
+      </div>
+      <div class="how-pc-works__content mdc-layout-grid__cell">
+        <img alt="Sdílený přístup v aplikaci" src="{{ app03 | cloudinaryUrl(dpr="auto", width=400) }}">
+        <h3>Sdílený přístup</h3>
+        <p>Sami si určíte, kdo může vaši PostCube otevřít a vyzvednout
+          zásilku.</p>
+      </div>
+
+      <div class="how-pc-works__content mdc-layout-grid__cell">
+        <img alt="Registrace v aplikaci" src="{{ app04 | cloudinaryUrl(dpr="auto", width=400) }}">
+        <h3>Registrace</h3>
+        <p>K&nbsp;přihlášení do mobilní aplikace stačí pouze vaše telefonní číslo
+          a jeho ověření přes SMS zprávu.</p>
+      </div>
+      <div class="how-pc-works__content mdc-layout-grid__cell">
+        <img alt="Možnost bluetooth" src="{{ app05 | cloudinaryUrl(dpr="auto", width=400) }}">
+        <h3>Jednoduché párování</h3>
+        <p>Propojení PostCube a mobilní aplikace je snadné. Jako když přes
+          Bluetooth párujete reproduktor.</p>
+      </div>
+      <div class="how-pc-works__content mdc-layout-grid__cell">
+        <img alt="Kompatibilita aplikace" src="{{ app06 | cloudinaryUrl(dpr="auto", width=400) }}">
+        <h3>Vše na jednom místě</h3>
+        <p>Přes mobilní aplikaci si vybíráte dopravce, hradíte dopravu a sledujete
+          zásilky na cestě i&nbsp;historii přepravy.</p>
+      </div>
+      <div
+        class="btn-android mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <button class="mdc-button content-btn" type="button">
+          <a href="#" class="mdc-button__label">Stáhnout pro Android</a>
+        </button>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <button class="mdc-button content-btn" type="button">
+          <a href="#" class="mdc-button__label">Stáhnout pro iPhone</a>
+        </button>
+      </div>
+
+      <div class="how-pc-works__title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>4.&nbsp;Instalace schránky</h2>
+        <p>O&nbsp;kompletní instalaci samostatné PostCube se může postarat náš
+          montážní tým, nebo ji můžete nainstalovat svépomocí. Přehledný návod,
+          jak na to, je součástí balení.</p>
+      </div>
+      <div class="how-pc-works__content mdc-layout-grid__cell">
+        <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+        <h3>Na zeď nebo na plot</h3>
+        <p class="content__subtitle--blue">Lze provést svépomocí</p>
+        <p>Na volné místo na zdi přivrtáte rám a na něj PostCube přichytíte
+          spojovacím materiálem, který je součástí sady. Postup pro umístění
+          chytrého boxu na plot je téměř totožný.</p>
+      </div>
+      <div class="how-pc-works__content mdc-layout-grid__cell">
+        <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+        <h3>Volně stojící u&nbsp;domu</h3>
+        <p class="content__subtitle--blue">Lze provést svépomocí</p>
+        <p>PostCube můžete umístit na zem. Pro pohodlnější odebírání pošty ji
+          ale doporučujeme připevnit na stojan. Ten se navrtá na betonový základ nebo
+          dlaždici z&nbsp;naší nabídky, kterou je možno položit kamkoliv.</p>
+      </div>
+      <div class="how-pc-works__content mdc-layout-grid__cell">
+        <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+        <h3>Sdílené hnízdo</h3>
+        <p class="content__subtitle--grey">Provádí montážní tým</p>
+        <p>Instalaci několika PostCube vedle sebe i&nbsp;na sebe provádí náš
+          specializovaný montážní tým, který boxy bezpečně sešroubuje. Cena
+          montáže závisí na lokalitě a počtu chytrých&nbsp;boxů.</p>
+      </div>
+      <div class="btn-price mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <button class="mdc-button content-btn" type="button">
+          <a href="#" class="mdc-button__label">Ceník příslušenství a montáže</a>
+        </button>
+      </div>
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <hr>
+      </div>
+
+
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>5.&nbsp;Servis a reklamace</h2>
+      </div>
+      <div class="how-pc-works__content mdc-layout-grid__cell">
+        <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+        <h3>Kontaktujte nás</h3>
+        <p>Naše zákaznická podpora je vám k&nbsp;dispozici na telefonním čísle
+          +420603&nbsp;314&nbsp;050, e-mailu <a
+            href="mailto:info&#64;chytrybox.cz">info&#64;<!-- -->chytrybox.cz</a> a
+          v&nbsp;online chatu na&nbsp;webu.</p>
+      </div>
+      <div class="how-pc-works__content mdc-layout-grid__cell">
+        <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+        <h3>Nahlásíte požadavky</h3>
+        <p>V&nbsp;e-mailu nebo po telefonu nám sdělíte číslo vaší objednávky,
+          popřípadě faktury a problém, který nastal.</p>
+      </div>
+      <div class="how-pc-works__content mdc-layout-grid__cell">
+        <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+        <h3>Přijede technik</h3>
+        <p>Pokud je chyba na naší straně, servisní technik z&nbsp;našeho týmu vám
+          přijede vyměnit kus za kus. Veškeré náklady hradíme&nbsp;my.</p>
+      </div>
 
     </div>
   </div>
-
+</section>
 
 
   <section id="contact" class="contact">
@@ -120,7 +277,8 @@
             jak vypadá v&nbsp;reálu.</p>
         </div>
 
-        <div class="contact__form mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+        <div
+          class="contact__form mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
           <h3>Dejte nám kontakt a my se ozveme</h3>
           <form>
             <input datatype="name" placeholder="Jméno nebo název firmy" id="company-name" type="text">
@@ -173,5 +331,5 @@
       </div>
     </div>
   </section>
-{% endblock %}
+  {% endblock %}
 
