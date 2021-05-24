@@ -17,34 +17,52 @@ header {
 .main-info {
   background-color: var(--postcube-grey-light);
   padding-bottom: 4em;
+
   .main-info__list {
-    ul {
-      display: flex;
-      justify-content: flex-start;
-      padding-left: 0;
-    }
     li {
-      margin-left: 36px;
+      &::marker {
+        font-size: 24px;
+        color: var(--postcube-secondary);
+      }
       a {
         font-size: 20px;
         text-decoration: none;
         border-bottom: 2px solid transparent;
         display: inline-block;
+
         &:hover {
           border-bottom: 2px solid var(--postcube-secondary);
         }
       }
-      &:first-child {
-        list-style: none;
-        margin: 3px 0 3px;
+    }
+
+    @media (max-width: 839px) {
+      margin-top: 1em;
+      ul {
+        margin: 0;
+        li {
+          margin: 1em 0;
+        }
+      }
+    }
+    @media (min-width: 840px) {
+      ul {
+        display: flex;
+        justify-content: flex-start;
         padding-left: 0;
       }
-      &::marker {
-        font-size: 24px;
-        color: var(--postcube-secondary);
+      li {
+        margin-left: 36px;
+
+        &:first-child {
+          list-style: none;
+          margin: 3px 0 3px;
+          padding-left: 0;
+        }
       }
     }
   }
+
   .main-info__content {
     max-width: 95%;
   }
@@ -52,33 +70,41 @@ header {
 
 .how-pc-works {
   margin-bottom: 10em;
+
   .steps {
     margin: 1em 0 1.5em;
+
     p.steps__subtitle {
       font-size: 24px;
     }
+
     .steps__bg {
       background-image: cloudinaryUrl("/postcube.cz/steps_bg.png");
       background-size: 100% 100%;
       background-repeat: no-repeat;
       text-align: center;
+
       svg {
         height: 217px;
       }
     }
+
     .steps__content {
       h3 {
         font-size: 18px;
         margin-bottom: 0;
       }
+
       p {
         margin-top: 8px;
       }
+
       p.content__subtitle--blue {
         color: var(--postcube-primary);
       }
     }
   }
+
   .btn-price {
     text-align: center;
   }
