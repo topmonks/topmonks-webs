@@ -14,6 +14,7 @@
   <meta property="og:site_name" content="postcube.cz">
 
   <link rel="stylesheet" href="/assets/css/jak-box-funguje.css">
+  <link rel="stylesheet" href="/assets/css/components/faq.css">
 
 
 
@@ -71,219 +72,364 @@
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
               <hr>
             </div>
-          </div>
-        </div>
-        <div id="step--two" class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>2.&nbsp;Odesílání zásilek a vrácení zboží</h2>
-          <div class="mdc-layout-grid__inner">
-            <div class="steps__content mdc-layout-grid__cell">
-              <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
-              <h3>Zadání požadavku</h3>
-              <p>V&nbsp;mobilní aplikaci zadáte kód boxu příjemce nebo adresu pro doručení,
-                zvolíte přepravní společnost, vyberete způsob platby a uhradíte
-                dopravu.</p>
-            </div>
-            <div class="steps__content mdc-layout-grid__cell">
-              <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
-              <h3>Označení balíku</h3>
-              <p>Z&nbsp;aplikace si stáhnete a vytisknete štítek s&nbsp;kódem a ten nalepíte na
-                balík. Kód můžete napsat také ručně fixem&nbsp;&ndash; čitelně a
-                viditelně.</p>
-            </div>
-            <div class="steps__content mdc-layout-grid__cell">
-              <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
-              <h3>Převzetí zásilky</h3>
-              <p>Pak stačí kliknout na tlačítko „zásilka v&nbsp;pořádku převzata“.
-                Pokud se vyskytne nějaká nesrovnalost, můžete v&nbsp;aplikaci nahlásit
-                problém.</p>
-            </div>
-            <div class="steps__content mdc-layout-grid__cell">
-              <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
-              <h3>Vyzvednutí přepravcem</h3>
-              <p>Aplikace pošle ihned informaci o&nbsp;nové zásilce dopravci a ten ji předá
-                nejbližšímu kurýrovi. Kurýr pak zásilku vyzvedne bez vaší
-                přítomnosti.</p>
-            </div>
-          </div>
-        </div>
-        <div id="step--three" class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>3.&nbsp;Mobilní aplikace</h2>
-          <div class="mdc-layout-grid__inner">
-            <div class="steps__content mdc-layout-grid__cell">
-              <div class="steps__bg">
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M42.6667 29.3333H56L32 56L8 29.3333H21.3333V0H42.6667V29.3333ZM50.6667 50.6667V58.6667H13.3333V50.6667H8V64H56V50.6667H50.6667Z"
-                    fill="#1538E5"/>
-                </svg>
+            <div
+              class="accordion mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+              <div>
+                <input type="checkbox" name="accordion__faq" id="faq1" class="faq--input">
+                <label for="faq1" class="faq--label">Je možné poštovní box sdílet s&nbsp;někým jiným?</label>
+                <div class="faq--content">
+                  <p>Ano. Můžete si například pořídit jeden společný poštovní box se
+                    sousedem a náklady na jeho pořízení si rozdělit mezi sebou. Vyplatí se to
+                    zvlášť tehdy, když si z&nbsp;e-shopu objednáváte jen jednou za čas, ale
+                    i&nbsp;přesto chcete mít zmíněný komfort a nečekat na kurýra nebo objíždět
+                    výdejní místa, když vás doma nezastihne.</p>
+                </div>
               </div>
-              <h3>Zdarma ke stažení</h3>
-              <p>Aplikaci si do svého telefonu stáhnete přes App Store nebo
-                Google&nbsp;Play.</p>
-            </div>
-            <div class="steps__content mdc-layout-grid__cell">
-              <div class="steps__bg">
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M8 48H2.66667C1.19467 48 0 46.8053 0 45.3333V40H40V16H52.4453C55.424 16 56.712 17.536 57.608 18.952C59.192 21.4587 61.704 25.4373 63.232 27.96C63.7333 28.792 64 29.7467 64 30.72V42.6667C64 45.656 62.0587 48 58.6667 48H56C56 52.416 52.416 56 48 56C43.584 56 40 52.416 40 48H24C24 52.416 20.416 56 16 56C11.584 56 8 52.416 8 48ZM16 44.8C17.7653 44.8 19.2 46.2347 19.2 48C19.2 49.7653 17.7653 51.2 16 51.2C14.2347 51.2 12.8 49.7653 12.8 48C12.8 46.2347 14.2347 44.8 16 44.8ZM48 44.8C49.7653 44.8 51.2 46.2347 51.2 48C51.2 49.7653 49.7653 51.2 48 51.2C46.2347 51.2 44.8 49.7653 44.8 48C44.8 46.2347 46.2347 44.8 48 44.8ZM37.3333 37.3333H0V10.6667C0 9.19467 1.19467 8 2.66667 8H34.6667C36.1387 8 37.3333 9.19467 37.3333 10.6667V37.3333ZM45.3333 21.3333V29.3333H57.9067L54.1013 22.6773C53.6267 21.8453 52.744 21.3333 51.7867 21.3333H45.3333Z"
-                        fill="#1538E5"/>
-                </svg>
-              </div>
-              <h3>Propojená s&nbsp;přepravcem</h3>
-              <p>Aplikace komunikuje automaticky s&nbsp;přepravcem. Vy na příjmu být
-                nemusíte.</p>
-            </div>
-            <div class="steps__content mdc-layout-grid__cell">
-              <div class="steps__bg">
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0)">
-                    <path
-                      d="M28.3843 45.5466C36.027 43.7813 40.4883 42.2373 37.0403 35.7279C26.555 15.9226 34.2617 5.33325 45.3363 5.33325C56.6297 5.33325 64.147 16.3306 53.6297 35.7279C50.0777 42.2746 54.795 43.8186 62.275 45.5466C68.8963 47.0773 69.3337 50.3119 69.3337 55.9173V58.6666H21.3337C21.3337 51.3466 20.747 47.3119 28.3843 45.5466ZM-5.33301 58.6666H15.491C15.3977 36.8613 24.6537 44.4986 24.6537 28.9946C24.6537 22.2986 20.283 18.6666 14.659 18.6666C6.35233 18.6666 0.573659 26.6106 8.43766 41.4639C11.0217 46.3439 5.68833 47.5039 -0.0450077 48.8266C-5.01034 49.9733 -5.33301 52.3999 -5.33301 56.6053V58.6666Z"
-                      fill="#1538E5"/>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0">
-                      <rect width="64" height="64" fill="white"/>
-                    </clipPath>
-                  </defs>
-                </svg>
-              </div>
-              <h3>Sdílený přístup</h3>
-              <p>Sami si určíte, kdo může vaši PostCube otevřít a vyzvednout
-                zásilku.</p>
-            </div>
-            <div class="steps__content mdc-layout-grid__cell">
-              <div class="steps__bg">
-                <svg width="48" height="64" viewBox="0 0 48 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0)">
-                    <path
-                      d="M29.5933 13.0049C19.5581 13.0049 11.2637 19.6609 11.2637 27.8529C11.2637 32.1537 13.6189 36.2497 17.6125 39.1169C17.4077 39.7313 17.1005 40.3457 16.7933 40.9601C16.1789 42.1889 16.2813 43.6225 17.1005 44.7489C17.7149 45.5681 18.7389 46.0801 19.8653 46.0801C20.1725 46.0801 20.3773 46.0801 20.6845 45.9777C23.4493 45.3633 25.8045 44.2369 27.6477 42.5985C28.3645 42.7009 28.9789 42.7009 29.5933 42.7009C39.6285 42.7009 47.8205 36.0449 47.8205 27.8529C47.8205 19.6609 39.6285 13.0049 29.5933 13.0049ZM21.7085 38.6049L21.9133 37.2737L20.7869 36.5569C17.2029 34.4065 15.1549 31.2321 15.1549 27.8529C15.1549 21.8113 21.6061 16.7937 29.5933 16.7937C37.5805 16.7937 44.0317 21.8113 44.0317 27.8529C44.0317 33.9969 37.5805 38.9121 29.5933 38.9121C28.8765 38.9121 28.0573 38.8097 27.2381 38.7073L26.3165 38.6049L25.5997 39.3217C24.3709 40.5505 22.7325 41.4721 20.5821 42.0865C21.1965 40.9601 21.5037 39.7313 21.7085 38.6049Z"
-                      fill="#1538E5"/>
-                    <path
-                      d="M22.1185 31.232C23.5889 31.232 24.7809 30.04 24.7809 28.5696C24.7809 27.0992 23.5889 25.9072 22.1185 25.9072C20.6481 25.9072 19.4561 27.0992 19.4561 28.5696C19.4561 30.04 20.6481 31.232 22.1185 31.232Z"
-                      fill="#1538E5"/>
-                    <path
-                      d="M29.594 31.232C31.0644 31.232 32.2564 30.04 32.2564 28.5696C32.2564 27.0992 31.0644 25.9072 29.594 25.9072C28.1236 25.9072 26.9316 27.0992 26.9316 28.5696C26.9316 30.04 28.1236 31.232 29.594 31.232Z"
-                      fill="#1538E5"/>
-                    <path
-                      d="M37.0687 31.232C38.5391 31.232 39.7311 30.04 39.7311 28.5696C39.7311 27.0992 38.5391 25.9072 37.0687 25.9072C35.5982 25.9072 34.4062 27.0992 34.4062 28.5696C34.4062 30.04 35.5982 31.232 37.0687 31.232Z"
-                      fill="#1538E5"/>
-                    <path
-                      d="M33.9968 0H4.608C2.048 0 0 2.048 0 4.608V59.392C0 61.952 2.048 64 4.608 64H33.9968C36.5568 64 38.6048 61.952 38.6048 59.392V44.1344C36.9664 44.7488 35.2256 45.2608 33.4848 45.4656V50.5856H5.12V7.7824H33.4848V10.24C35.328 10.5472 36.9664 10.9568 38.6048 11.6736V4.608C38.6048 2.048 36.5568 0 33.9968 0ZM19.3536 53.9648C21.0944 53.9648 22.4256 55.3984 22.4256 57.0368C22.4256 58.6752 20.992 60.1088 19.3536 60.1088C17.6128 60.1088 16.2816 58.6752 16.2816 57.0368C16.1792 55.296 17.6128 53.9648 19.3536 53.9648ZM25.8048 5.0176H12.8C12.4928 5.0176 12.1856 4.5056 12.1856 3.8912C12.1856 3.2768 12.4928 2.7648 12.8 2.7648H25.9072C26.2144 2.7648 26.5216 3.2768 26.5216 3.8912C26.4192 4.5056 26.2144 5.0176 25.8048 5.0176Z"
-                      fill="#1538E5"/>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0">
-                      <rect width="47.9232" height="64" fill="white"/>
-                    </clipPath>
-                  </defs>
-                </svg>
-              </div>
-              <h3>Registrace</h3>
-              <p>K&nbsp;přihlášení do mobilní aplikace stačí pouze vaše telefonní číslo
-                a jeho ověření přes SMS zprávu.</p>
-            </div>
-            <div class="steps__content mdc-layout-grid__cell">
-              <div class="steps__bg">
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M29.333 26.1093V0L50.6663 18.6667L35.7703 31.9253L50.6663 45.3333L29.333 64V37.7413L16.909 48.9707L13.333 45.0133L27.8157 31.9253L13.333 18.8373L16.909 14.88L29.333 26.1093ZM34.661 52.2507L42.6263 45.28L34.6557 38.1173L34.661 52.2507ZM34.6663 25.7227L42.597 18.6933L34.6663 11.7547V25.7227Z"
-                        fill="#1538E5"/>
-                </svg>
-              </div>
-              <h3>Jednoduché párování</h3>
-              <p>Propojení PostCube a mobilní aplikace je snadné. Jako když přes
-                Bluetooth párujete reproduktor.</p>
-            </div>
-            <div class="steps__content mdc-layout-grid__cell">
-              <div class="steps__bg">
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M36.168 64H5.33333C2.38933 64 0 61.6107 0 58.6667V5.33333C0 2.38933 2.38933 0 5.33333 0H42.6667C45.6107 0 48 2.38933 48 5.33333V16H42.6667V8H5.33333V53.3333H34.6667V60C34.6667 61.3973 35.152 63.1333 36.168 64ZM60 18.6667C62.208 18.6667 64 20.4587 64 22.6667V60C64 62.2027 62.2107 64 60 64H41.3333C39.1227 64 37.3333 62.2 37.3333 60V22.6667C37.3333 20.4613 39.128 18.6667 41.3333 18.6667H60ZM24 56C25.472 56 26.6667 57.1947 26.6667 58.6667C26.6667 60.1387 25.472 61.3333 24 61.3333C22.528 61.3333 21.3333 60.1387 21.3333 58.6667C21.3333 57.1947 22.528 56 24 56ZM50.6667 61.3333C49.192 61.3333 48 60.1387 48 58.6667C48 57.1947 49.192 56 50.6667 56C52.1387 56 53.3307 57.1947 53.3307 58.6667C53.3307 60.1387 52.1387 61.3333 50.6667 61.3333ZM61.3333 53.3333V26.6027H40V53.3333H61.3333ZM52 24C52.7333 24 53.3333 23.4027 53.3333 22.6667C53.3333 21.9307 52.7333 21.3333 52 21.3333H49.3333C48.5973 21.3333 48 21.9307 48 22.6667C48 23.4027 48.5973 24 49.3333 24H52Z" fill="#1538E5"/>
-                </svg>
-              </div>
-              <h3>Vše na jednom místě</h3>
-              <p>Přes mobilní aplikaci si vybíráte dopravce, hradíte dopravu a sledujete
-                zásilky na cestě i&nbsp;historii přepravy.</p>
             </div>
             <div
-              class="btn-android mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-              <button class="mdc-button content-btn" type="button">
-                <a href="#" class="mdc-button__label">Stáhnout pro Android</a>
-              </button>
+              class="accordion mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+              <div>
+                <input type="checkbox" name="accordion__faq" id="faq2" class="faq--input">
+                <label for="faq2" class="faq--label">Je možné poštovní box sdílet s&nbsp;někým jiným?</label>
+                <div class="faq--content">
+                  <p>Ano. Můžete si například pořídit jeden společný poštovní box se
+                    sousedem a náklady na jeho pořízení si rozdělit mezi sebou. Vyplatí se to
+                    zvlášť tehdy, když si z&nbsp;e-shopu objednáváte jen jednou za čas, ale
+                    i&nbsp;přesto chcete mít zmíněný komfort a nečekat na kurýra nebo objíždět
+                    výdejní místa, když vás doma nezastihne.</p>
+                </div>
+              </div>
             </div>
-            <div
-              class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-              <button class="mdc-button content-btn" type="button">
-                <a href="#" class="mdc-button__label">Stáhnout pro iPhone</a>
-              </button>
+          </div>
+          <div id="step--two" class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <h2>2.&nbsp;Odesílání zásilek a vrácení zboží</h2>
+            <div class="mdc-layout-grid__inner">
+              <div class="steps__content mdc-layout-grid__cell">
+                <img alt="Fotografie - Upozornění na Telefonu"
+                     src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+                <h3>Zadání požadavku</h3>
+                <p>V&nbsp;mobilní aplikaci zadáte kód boxu příjemce nebo adresu pro doručení,
+                  zvolíte přepravní společnost, vyberete způsob platby a uhradíte
+                  dopravu.</p>
+              </div>
+              <div class="steps__content mdc-layout-grid__cell">
+                <img alt="Fotografie - Upozornění na Telefonu"
+                     src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+                <h3>Označení balíku</h3>
+                <p>Z&nbsp;aplikace si stáhnete a vytisknete štítek s&nbsp;kódem a ten nalepíte na
+                  balík. Kód můžete napsat také ručně fixem&nbsp;&ndash; čitelně a
+                  viditelně.</p>
+              </div>
+              <div class="steps__content mdc-layout-grid__cell">
+                <img alt="Fotografie - Upozornění na Telefonu"
+                     src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+                <h3>Převzetí zásilky</h3>
+                <p>Pak stačí kliknout na tlačítko „zásilka v&nbsp;pořádku převzata“.
+                  Pokud se vyskytne nějaká nesrovnalost, můžete v&nbsp;aplikaci nahlásit
+                  problém.</p>
+              </div>
+              <div class="steps__content mdc-layout-grid__cell">
+                <img alt="Fotografie - Upozornění na Telefonu"
+                     src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+                <h3>Vyzvednutí přepravcem</h3>
+                <p>Aplikace pošle ihned informaci o&nbsp;nové zásilce dopravci a ten ji předá
+                  nejbližšímu kurýrovi. Kurýr pak zásilku vyzvedne bez vaší
+                  přítomnosti.</p>
+              </div>
+            </div>
+          </div>
+          <div id="step--three" class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <h2>3.&nbsp;Mobilní aplikace</h2>
+            <div class="mdc-layout-grid__inner">
+              <div class="steps__content mdc-layout-grid__cell">
+                <div class="steps__bg">
+                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M42.6667 29.3333H56L32 56L8 29.3333H21.3333V0H42.6667V29.3333ZM50.6667 50.6667V58.6667H13.3333V50.6667H8V64H56V50.6667H50.6667Z"
+                      fill="#1538E5"/>
+                  </svg>
+                </div>
+                <h3>Zdarma ke stažení</h3>
+                <p>Aplikaci si do svého telefonu stáhnete přes App Store nebo
+                  Google&nbsp;Play.</p>
+              </div>
+              <div class="steps__content mdc-layout-grid__cell">
+                <div class="steps__bg">
+                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M8 48H2.66667C1.19467 48 0 46.8053 0 45.3333V40H40V16H52.4453C55.424 16 56.712 17.536 57.608 18.952C59.192 21.4587 61.704 25.4373 63.232 27.96C63.7333 28.792 64 29.7467 64 30.72V42.6667C64 45.656 62.0587 48 58.6667 48H56C56 52.416 52.416 56 48 56C43.584 56 40 52.416 40 48H24C24 52.416 20.416 56 16 56C11.584 56 8 52.416 8 48ZM16 44.8C17.7653 44.8 19.2 46.2347 19.2 48C19.2 49.7653 17.7653 51.2 16 51.2C14.2347 51.2 12.8 49.7653 12.8 48C12.8 46.2347 14.2347 44.8 16 44.8ZM48 44.8C49.7653 44.8 51.2 46.2347 51.2 48C51.2 49.7653 49.7653 51.2 48 51.2C46.2347 51.2 44.8 49.7653 44.8 48C44.8 46.2347 46.2347 44.8 48 44.8ZM37.3333 37.3333H0V10.6667C0 9.19467 1.19467 8 2.66667 8H34.6667C36.1387 8 37.3333 9.19467 37.3333 10.6667V37.3333ZM45.3333 21.3333V29.3333H57.9067L54.1013 22.6773C53.6267 21.8453 52.744 21.3333 51.7867 21.3333H45.3333Z"
+                          fill="#1538E5"/>
+                  </svg>
+                </div>
+                <h3>Propojená s&nbsp;přepravcem</h3>
+                <p>Aplikace komunikuje automaticky s&nbsp;přepravcem. Vy na příjmu být
+                  nemusíte.</p>
+              </div>
+              <div class="steps__content mdc-layout-grid__cell">
+                <div class="steps__bg">
+                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                      <path
+                        d="M28.3843 45.5466C36.027 43.7813 40.4883 42.2373 37.0403 35.7279C26.555 15.9226 34.2617 5.33325 45.3363 5.33325C56.6297 5.33325 64.147 16.3306 53.6297 35.7279C50.0777 42.2746 54.795 43.8186 62.275 45.5466C68.8963 47.0773 69.3337 50.3119 69.3337 55.9173V58.6666H21.3337C21.3337 51.3466 20.747 47.3119 28.3843 45.5466ZM-5.33301 58.6666H15.491C15.3977 36.8613 24.6537 44.4986 24.6537 28.9946C24.6537 22.2986 20.283 18.6666 14.659 18.6666C6.35233 18.6666 0.573659 26.6106 8.43766 41.4639C11.0217 46.3439 5.68833 47.5039 -0.0450077 48.8266C-5.01034 49.9733 -5.33301 52.3999 -5.33301 56.6053V58.6666Z"
+                        fill="#1538E5"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="64" height="64" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <h3>Sdílený přístup</h3>
+                <p>Sami si určíte, kdo může vaši PostCube otevřít a vyzvednout
+                  zásilku.</p>
+              </div>
+              <div class="steps__content mdc-layout-grid__cell">
+                <div class="steps__bg">
+                  <svg width="48" height="64" viewBox="0 0 48 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                      <path
+                        d="M29.5933 13.0049C19.5581 13.0049 11.2637 19.6609 11.2637 27.8529C11.2637 32.1537 13.6189 36.2497 17.6125 39.1169C17.4077 39.7313 17.1005 40.3457 16.7933 40.9601C16.1789 42.1889 16.2813 43.6225 17.1005 44.7489C17.7149 45.5681 18.7389 46.0801 19.8653 46.0801C20.1725 46.0801 20.3773 46.0801 20.6845 45.9777C23.4493 45.3633 25.8045 44.2369 27.6477 42.5985C28.3645 42.7009 28.9789 42.7009 29.5933 42.7009C39.6285 42.7009 47.8205 36.0449 47.8205 27.8529C47.8205 19.6609 39.6285 13.0049 29.5933 13.0049ZM21.7085 38.6049L21.9133 37.2737L20.7869 36.5569C17.2029 34.4065 15.1549 31.2321 15.1549 27.8529C15.1549 21.8113 21.6061 16.7937 29.5933 16.7937C37.5805 16.7937 44.0317 21.8113 44.0317 27.8529C44.0317 33.9969 37.5805 38.9121 29.5933 38.9121C28.8765 38.9121 28.0573 38.8097 27.2381 38.7073L26.3165 38.6049L25.5997 39.3217C24.3709 40.5505 22.7325 41.4721 20.5821 42.0865C21.1965 40.9601 21.5037 39.7313 21.7085 38.6049Z"
+                        fill="#1538E5"/>
+                      <path
+                        d="M22.1185 31.232C23.5889 31.232 24.7809 30.04 24.7809 28.5696C24.7809 27.0992 23.5889 25.9072 22.1185 25.9072C20.6481 25.9072 19.4561 27.0992 19.4561 28.5696C19.4561 30.04 20.6481 31.232 22.1185 31.232Z"
+                        fill="#1538E5"/>
+                      <path
+                        d="M29.594 31.232C31.0644 31.232 32.2564 30.04 32.2564 28.5696C32.2564 27.0992 31.0644 25.9072 29.594 25.9072C28.1236 25.9072 26.9316 27.0992 26.9316 28.5696C26.9316 30.04 28.1236 31.232 29.594 31.232Z"
+                        fill="#1538E5"/>
+                      <path
+                        d="M37.0687 31.232C38.5391 31.232 39.7311 30.04 39.7311 28.5696C39.7311 27.0992 38.5391 25.9072 37.0687 25.9072C35.5982 25.9072 34.4062 27.0992 34.4062 28.5696C34.4062 30.04 35.5982 31.232 37.0687 31.232Z"
+                        fill="#1538E5"/>
+                      <path
+                        d="M33.9968 0H4.608C2.048 0 0 2.048 0 4.608V59.392C0 61.952 2.048 64 4.608 64H33.9968C36.5568 64 38.6048 61.952 38.6048 59.392V44.1344C36.9664 44.7488 35.2256 45.2608 33.4848 45.4656V50.5856H5.12V7.7824H33.4848V10.24C35.328 10.5472 36.9664 10.9568 38.6048 11.6736V4.608C38.6048 2.048 36.5568 0 33.9968 0ZM19.3536 53.9648C21.0944 53.9648 22.4256 55.3984 22.4256 57.0368C22.4256 58.6752 20.992 60.1088 19.3536 60.1088C17.6128 60.1088 16.2816 58.6752 16.2816 57.0368C16.1792 55.296 17.6128 53.9648 19.3536 53.9648ZM25.8048 5.0176H12.8C12.4928 5.0176 12.1856 4.5056 12.1856 3.8912C12.1856 3.2768 12.4928 2.7648 12.8 2.7648H25.9072C26.2144 2.7648 26.5216 3.2768 26.5216 3.8912C26.4192 4.5056 26.2144 5.0176 25.8048 5.0176Z"
+                        fill="#1538E5"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="47.9232" height="64" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <h3>Registrace</h3>
+                <p>K&nbsp;přihlášení do mobilní aplikace stačí pouze vaše telefonní číslo
+                  a jeho ověření přes SMS zprávu.</p>
+              </div>
+              <div class="steps__content mdc-layout-grid__cell">
+                <div class="steps__bg">
+                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M29.333 26.1093V0L50.6663 18.6667L35.7703 31.9253L50.6663 45.3333L29.333 64V37.7413L16.909 48.9707L13.333 45.0133L27.8157 31.9253L13.333 18.8373L16.909 14.88L29.333 26.1093ZM34.661 52.2507L42.6263 45.28L34.6557 38.1173L34.661 52.2507ZM34.6663 25.7227L42.597 18.6933L34.6663 11.7547V25.7227Z"
+                          fill="#1538E5"/>
+                  </svg>
+                </div>
+                <h3>Jednoduché párování</h3>
+                <p>Propojení PostCube a mobilní aplikace je snadné. Jako když přes
+                  Bluetooth párujete reproduktor.</p>
+              </div>
+              <div class="steps__content mdc-layout-grid__cell">
+                <div class="steps__bg">
+                  <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M36.168 64H5.33333C2.38933 64 0 61.6107 0 58.6667V5.33333C0 2.38933 2.38933 0 5.33333 0H42.6667C45.6107 0 48 2.38933 48 5.33333V16H42.6667V8H5.33333V53.3333H34.6667V60C34.6667 61.3973 35.152 63.1333 36.168 64ZM60 18.6667C62.208 18.6667 64 20.4587 64 22.6667V60C64 62.2027 62.2107 64 60 64H41.3333C39.1227 64 37.3333 62.2 37.3333 60V22.6667C37.3333 20.4613 39.128 18.6667 41.3333 18.6667H60ZM24 56C25.472 56 26.6667 57.1947 26.6667 58.6667C26.6667 60.1387 25.472 61.3333 24 61.3333C22.528 61.3333 21.3333 60.1387 21.3333 58.6667C21.3333 57.1947 22.528 56 24 56ZM50.6667 61.3333C49.192 61.3333 48 60.1387 48 58.6667C48 57.1947 49.192 56 50.6667 56C52.1387 56 53.3307 57.1947 53.3307 58.6667C53.3307 60.1387 52.1387 61.3333 50.6667 61.3333ZM61.3333 53.3333V26.6027H40V53.3333H61.3333ZM52 24C52.7333 24 53.3333 23.4027 53.3333 22.6667C53.3333 21.9307 52.7333 21.3333 52 21.3333H49.3333C48.5973 21.3333 48 21.9307 48 22.6667C48 23.4027 48.5973 24 49.3333 24H52Z"
+                          fill="#1538E5"/>
+                  </svg>
+                </div>
+                <h3>Vše na jednom místě</h3>
+                <p>Přes mobilní aplikaci si vybíráte dopravce, hradíte dopravu a sledujete
+                  zásilky na cestě i&nbsp;historii přepravy.</p>
+              </div>
+              <div
+                class="btn-android mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+                <button class="mdc-button content-btn" type="button">
+                  <a href="#" class="mdc-button__label">Stáhnout pro Android</a>
+                </button>
+              </div>
+              <div
+                class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+                <button class="mdc-button content-btn" type="button">
+                  <a href="#" class="mdc-button__label">Stáhnout pro iPhone</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div id="step--four" class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <h2>4.&nbsp;Instalace schránky</h2>
+            <p class="steps__subtitle">O&nbsp;kompletní instalaci samostatné PostCube se může postarat náš
+              montážní tým, nebo ji můžete nainstalovat svépomocí. Přehledný návod,
+              jak na to, je součástí balení.</p>
+            <div class="mdc-layout-grid__inner">
+              <div class="steps__content mdc-layout-grid__cell">
+                <img alt="Fotografie - Upozornění na Telefonu"
+                     src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+                <h3>Na zeď nebo na plot</h3>
+                <p class="content__subtitle--blue">Lze provést svépomocí</p>
+                <p>Na volné místo na zdi přivrtáte rám a na něj PostCube přichytíte
+                  spojovacím materiálem, který je součástí sady. Postup pro umístění
+                  chytrého boxu na plot je téměř totožný.</p>
+              </div>
+              <div class="steps__content mdc-layout-grid__cell">
+                <img alt="Fotografie - Upozornění na Telefonu"
+                     src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+                <h3>Volně stojící u&nbsp;domu</h3>
+                <p class="content__subtitle--blue">Lze provést svépomocí</p>
+                <p>PostCube můžete umístit na zem. Pro pohodlnější odebírání pošty ji
+                  ale doporučujeme připevnit na stojan. Ten se navrtá na betonový základ nebo
+                  dlaždici z&nbsp;naší nabídky, kterou je možno položit kamkoliv.</p>
+              </div>
+              <div class="steps__content mdc-layout-grid__cell">
+                <img alt="Fotografie - Upozornění na Telefonu"
+                     src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+                <h3>Sdílené hnízdo</h3>
+                <p class="content__subtitle--grey">Provádí montážní tým</p>
+                <p>Instalaci několika PostCube vedle sebe i&nbsp;na sebe provádí náš
+                  specializovaný montážní tým, který boxy bezpečně sešroubuje. Cena
+                  montáže závisí na lokalitě a počtu chytrých&nbsp;boxů.</p>
+              </div>
+              <div class="btn-price mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                <button class="mdc-button content-btn" type="button">
+                  <a href="#" class="mdc-button__label">Ceník příslušenství a montáže</a>
+                </button>
+              </div>
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                <hr>
+              </div>
+
+              <div
+                class="accordion mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+                <div>
+                  <input type="checkbox" name="accordion__faq" id="faq3" class="faq--input">
+                  <label for="faq3" class="faq--label">Je možné poštovní box sdílet s&nbsp;někým jiným?</label>
+                  <div class="faq--content">
+                    <p>Ano. Můžete si například pořídit jeden společný poštovní box se
+                      sousedem a náklady na jeho pořízení si rozdělit mezi sebou. Vyplatí se to
+                      zvlášť tehdy, když si z&nbsp;e-shopu objednáváte jen jednou za čas, ale
+                      i&nbsp;přesto chcete mít zmíněný komfort a nečekat na kurýra nebo objíždět
+                      výdejní místa, když vás doma nezastihne.</p>
+                  </div>
+                </div>
+                <div>
+                  <input type="checkbox" name="accordion__faq" id="faq4" class="faq--input">
+                  <label for="faq4" class="faq--label">Je možné poštovní box sdílet s&nbsp;někým jiným?</label>
+                  <div class="faq--content">
+                    <p>Ano. Můžete si například pořídit jeden společný poštovní box se
+                      sousedem a náklady na jeho pořízení si rozdělit mezi sebou. Vyplatí se to
+                      zvlášť tehdy, když si z&nbsp;e-shopu objednáváte jen jednou za čas, ale
+                      i&nbsp;přesto chcete mít zmíněný komfort a nečekat na kurýra nebo objíždět
+                      výdejní místa, když vás doma nezastihne.</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="accordion mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+                <div>
+                  <input type="checkbox" name="accordion__faq" id="faq5" class="faq--input">
+                  <label for="faq5" class="faq--label">Je možné poštovní box sdílet s&nbsp;někým jiným?</label>
+                  <div class="faq--content">
+                    <p>Ano. Můžete si například pořídit jeden společný poštovní box se
+                      sousedem a náklady na jeho pořízení si rozdělit mezi sebou. Vyplatí se to
+                      zvlášť tehdy, když si z&nbsp;e-shopu objednáváte jen jednou za čas, ale
+                      i&nbsp;přesto chcete mít zmíněný komfort a nečekat na kurýra nebo objíždět
+                      výdejní místa, když vás doma nezastihne.</p>
+                  </div>
+                </div>
+                <div>
+                  <input type="checkbox" name="accordion__faq" id="faq6" class="faq--input">
+                  <label for="faq6" class="faq--label">Je možné poštovní box sdílet s&nbsp;někým jiným?</label>
+                  <div class="faq--content">
+                    <p>Ano. Můžete si například pořídit jeden společný poštovní box se
+                      sousedem a náklady na jeho pořízení si rozdělit mezi sebou. Vyplatí se to
+                      zvlášť tehdy, když si z&nbsp;e-shopu objednáváte jen jednou za čas, ale
+                      i&nbsp;přesto chcete mít zmíněný komfort a nečekat na kurýra nebo objíždět
+                      výdejní místa, když vás doma nezastihne.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div id="step--five" class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <h2>5.&nbsp;Servis a reklamace</h2>
+            <div class="mdc-layout-grid__inner">
+              <div class="steps__content mdc-layout-grid__cell">
+                <img alt="Fotografie - Upozornění na Telefonu"
+                     src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+                <h3>Kontaktujte nás</h3>
+                <p>Naše zákaznická podpora je vám k&nbsp;dispozici na telefonním čísle
+                  +420603&nbsp;314&nbsp;050, e-mailu <a
+                    href="mailto:info&#64;chytrybox.cz">info&#64;<!-- -->chytrybox.cz</a> a
+                  v&nbsp;online chatu na&nbsp;webu.</p>
+              </div>
+              <div class="steps__content mdc-layout-grid__cell">
+                <img alt="Fotografie - Upozornění na Telefonu"
+                     src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+                <h3>Nahlásíte požadavky</h3>
+                <p>V&nbsp;e-mailu nebo po telefonu nám sdělíte číslo vaší objednávky,
+                  popřípadě faktury a problém, který nastal.</p>
+              </div>
+              <div class="steps__content mdc-layout-grid__cell">
+                <img alt="Fotografie - Upozornění na Telefonu"
+                     src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
+                <h3>Přijede technik</h3>
+                <p>Pokud je chyba na naší straně, servisní technik z&nbsp;našeho týmu vám
+                  přijede vyměnit kus za kus. Veškeré náklady hradíme&nbsp;my.</p>
+              </div>
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                <hr>
+              </div>
+              <div class="accordion mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+                <div>
+                  <input type="checkbox" name="accordion__faq" id="faq7" class="faq--input">
+                  <label for="faq7" class="faq--label">Je možné poštovní box sdílet s&nbsp;někým jiným?</label>
+                  <div class="faq--content">
+                    <p>Ano. Můžete si například pořídit jeden společný poštovní box se
+                      sousedem a náklady na jeho pořízení si rozdělit mezi sebou. Vyplatí se to
+                      zvlášť tehdy, když si z&nbsp;e-shopu objednáváte jen jednou za čas, ale
+                      i&nbsp;přesto chcete mít zmíněný komfort a nečekat na kurýra nebo objíždět
+                      výdejní místa, když vás doma nezastihne.</p>
+                  </div>
+                </div>
+                <div>
+                  <input type="checkbox" name="accordion__faq" id="faq8" class="faq--input">
+                  <label for="faq8" class="faq--label">Je možné poštovní box sdílet s&nbsp;někým jiným?</label>
+                  <div class="faq--content">
+                    <p>Ano. Můžete si například pořídit jeden společný poštovní box se
+                      sousedem a náklady na jeho pořízení si rozdělit mezi sebou. Vyplatí se to
+                      zvlášť tehdy, když si z&nbsp;e-shopu objednáváte jen jednou za čas, ale
+                      i&nbsp;přesto chcete mít zmíněný komfort a nečekat na kurýra nebo objíždět
+                      výdejní místa, když vás doma nezastihne.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+                <div>
+                  <input type="checkbox" name="accordion__faq" id="faq9" class="faq--input">
+                  <label for="faq9" class="faq--label">Je možné poštovní box sdílet s&nbsp;někým jiným?</label>
+                  <div class="faq--content">
+                    <p>Ano. Můžete si například pořídit jeden společný poštovní box se
+                      sousedem a náklady na jeho pořízení si rozdělit mezi sebou. Vyplatí se to
+                      zvlášť tehdy, když si z&nbsp;e-shopu objednáváte jen jednou za čas, ale
+                      i&nbsp;přesto chcete mít zmíněný komfort a nečekat na kurýra nebo objíždět
+                      výdejní místa, když vás doma nezastihne.</p>
+                  </div>
+                </div>
+                <div>
+                  <input type="checkbox" name="accordion__faq" id="faq10" class="faq--input">
+                  <label for="faq10" class="faq--label">Je možné poštovní box sdílet s&nbsp;někým jiným?</label>
+                  <div class="faq--content">
+                    <p>Ano. Můžete si například pořídit jeden společný poštovní box se
+                      sousedem a náklady na jeho pořízení si rozdělit mezi sebou. Vyplatí se to
+                      zvlášť tehdy, když si z&nbsp;e-shopu objednáváte jen jednou za čas, ale
+                      i&nbsp;přesto chcete mít zmíněný komfort a nečekat na kurýra nebo objíždět
+                      výdejní místa, když vás doma nezastihne.</p>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
-        <div id="step--four" class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>4.&nbsp;Instalace schránky</h2>
-          <p class="steps__subtitle">O&nbsp;kompletní instalaci samostatné PostCube se může postarat náš
-            montážní tým, nebo ji můžete nainstalovat svépomocí. Přehledný návod,
-            jak na to, je součástí balení.</p>
-          <div class="mdc-layout-grid__inner">
-            <div class="steps__content mdc-layout-grid__cell">
-              <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
-              <h3>Na zeď nebo na plot</h3>
-              <p class="content__subtitle--blue">Lze provést svépomocí</p>
-              <p>Na volné místo na zdi přivrtáte rám a na něj PostCube přichytíte
-                spojovacím materiálem, který je součástí sady. Postup pro umístění
-                chytrého boxu na plot je téměř totožný.</p>
-            </div>
-            <div class="steps__content mdc-layout-grid__cell">
-              <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
-              <h3>Volně stojící u&nbsp;domu</h3>
-              <p class="content__subtitle--blue">Lze provést svépomocí</p>
-              <p>PostCube můžete umístit na zem. Pro pohodlnější odebírání pošty ji
-                ale doporučujeme připevnit na stojan. Ten se navrtá na betonový základ nebo
-                dlaždici z&nbsp;naší nabídky, kterou je možno položit kamkoliv.</p>
-            </div>
-            <div class="steps__content mdc-layout-grid__cell">
-              <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
-              <h3>Sdílené hnízdo</h3>
-              <p class="content__subtitle--grey">Provádí montážní tým</p>
-              <p>Instalaci několika PostCube vedle sebe i&nbsp;na sebe provádí náš
-                specializovaný montážní tým, který boxy bezpečně sešroubuje. Cena
-                montáže závisí na lokalitě a počtu chytrých&nbsp;boxů.</p>
-            </div>
-            <div class="btn-price mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-              <button class="mdc-button content-btn" type="button">
-                <a href="#" class="mdc-button__label">Ceník příslušenství a montáže</a>
-              </button>
-            </div>
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-              <hr>
-            </div>
-          </div>
-        </div>
-        <div id="step--five" class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-          <h2>5.&nbsp;Servis a reklamace</h2>
-          <div class="mdc-layout-grid__inner">
-            <div class="steps__content mdc-layout-grid__cell">
-              <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
-              <h3>Kontaktujte nás</h3>
-              <p>Naše zákaznická podpora je vám k&nbsp;dispozici na telefonním čísle
-                +420603&nbsp;314&nbsp;050, e-mailu <a
-                  href="mailto:info&#64;chytrybox.cz">info&#64;<!-- -->chytrybox.cz</a> a
-                v&nbsp;online chatu na&nbsp;webu.</p>
-            </div>
-            <div class="steps__content mdc-layout-grid__cell">
-              <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
-              <h3>Nahlásíte požadavky</h3>
-              <p>V&nbsp;e-mailu nebo po telefonu nám sdělíte číslo vaší objednávky,
-                popřípadě faktury a problém, který nastal.</p>
-            </div>
-            <div class="steps__content mdc-layout-grid__cell">
-              <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
-              <h3>Přijede technik</h3>
-              <p>Pokud je chyba na naší straně, servisní technik z&nbsp;našeho týmu vám
-                přijede vyměnit kus za kus. Veškeré náklady hradíme&nbsp;my.</p>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
