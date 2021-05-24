@@ -1934,7 +1934,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@topmonks/pulumi-aws@npm:^1.7.7":
+"@topmonks/pulumi-aws@npm:^1.8.3":
   version: 1.8.3
   resolution: "@topmonks/pulumi-aws@npm:1.8.3"
   peerDependencies:
@@ -1958,7 +1958,7 @@ __metadata:
     "@pulumi/awsx": ^0.30.0
     "@pulumi/pulumi": ^3.3.0
     "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=cf98f025a94b506f734106e9925e9cbcfae39cd2"
-    "@topmonks/pulumi-aws": ^1.7.7
+    "@topmonks/pulumi-aws": ^1.8.3
     "@types/chart.js": ^2.9.32
     "@types/node": ^14.17.0
     "@types/yaml": ^1.9.7

@@ -13,7 +13,7 @@
     "@pulumi/aws": "^4.5.1",
     "@pulumi/awsx": "^0.30.0",
     "@pulumi/pulumi": "^3.3.0",
-    "@topmonks/pulumi-aws": "^1.7.7",
+    "@topmonks/pulumi-aws": "^1.8.3",
     "@types/node": "^14.17.0",
     "cheerio": "^1.0.0-rc.9",
     "esbuild": "^0.12.1",
