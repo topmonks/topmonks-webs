@@ -54,26 +54,31 @@ header {
   margin-bottom: 10em;
   .steps {
     margin: 1em 0 1.5em;
-  }
-  p.how-pc-works__subtitle {
-    font-size: 24px;
-  }
-
-  .how-pc-works__content {
-    h3 {
-      font-size: 18px;
-      margin-bottom: 0;
+    p.steps__subtitle {
+      font-size: 24px;
     }
-
-    p {
-      margin-top: 8px;
+    .steps__bg {
+      background-image: cloudinaryUrl("/postcube.cz/steps_bg.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      text-align: center;
+      svg {
+        height: 217px;
+      }
     }
-
-    p.content__subtitle--blue {
-      color: var(--postcube-primary);
+    .steps__content {
+      h3 {
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+      p {
+        margin-top: 8px;
+      }
+      p.content__subtitle--blue {
+        color: var(--postcube-primary);
+      }
     }
   }
-
   .btn-price {
     text-align: center;
   }

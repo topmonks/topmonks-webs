@@ -528,5 +528,26 @@
     "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1621595116/postcube.cz/mobile-app06.png",
     "existing": true,
     "original_filename": "mobile-app06"
+  },
+  "steps_bg.png": {
+    "asset_id": "260c5fb886151e55a1e941e8a3767aa6",
+    "public_id": "postcube.cz/steps_bg",
+    "version": 1621864599,
+    "version_id": "01f339a7013e51667e6c04307a23d8a7",
+    "signature": "30561328fbd4a5f749e4b6e3ec016867a1bf8008",
+    "width": 1380,
+    "height": 868,
+    "format": "png",
+    "resource_type": "image",
+    "created_at": "2021-05-24T13:56:39Z",
+    "tags": [],
+    "bytes": 7686,
+    "type": "upload",
+    "etag": "a43b3a9b0043847aac791c09b614fbc9",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1621864599/postcube.cz/steps_bg.png",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1621864599/postcube.cz/steps_bg.png",
+    "existing": false,
+    "original_filename": "steps_bg"
   }
 }
