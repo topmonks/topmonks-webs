@@ -1037,8 +1037,8 @@
         {% set publicId = images["106340091_1166165130412802_2437425872883373385_n.jpeg"]["public_id"] %}
         <picture>
           <img class="responsive" loading="lazy" alt=""
-               src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}"
-          ></picture>
+               src="{{ publicId | cloudinaryUrl(width=500, height=281, crop="fill", dpr="auto") }}">
+        </picture>
       </div>
     </div>
   </section>
