@@ -2,7 +2,7 @@
 {% set language = cs %}
 {% set contactMap = images["contact-map.png"]["public_id"] %}
 {% set teamSlavicek = images["jan-slavicek.png"]["public_id"] %}
-{% set teamTopmonks = images["Topmonks.png"]["public_id"] %}
+{% set teamTopmonks = images["TopMonks.png"]["public_id"] %}
 {% set teamLakum = images["Lakum.png"]["public_id"] %}
 
 
@@ -31,7 +31,7 @@
       font-size: 24px;
       line-height: 36px;
       color: var(--postcube-black);
-      margin-bottom: 2em;
+      margin-bottom: 1em;
     }
 
     .main-info__content a {
@@ -49,21 +49,46 @@
 
     .team__member--photo {
       margin: 32px 32px 0 0;
+      padding-bottom: 2em;
     }
 
     .team__member--details {
       max-width: 617px;
+      margin-bottom: 4em;
     }
 
-    @media screen and (min-width: 840px) {
-      .main-info {
-        align-self: center;
-        background-image: url({{ contactMap | cloudinaryUrl(dpr="auto", width=860) }});
-        background-size: 45% auto;
-        background-position: center right;
-        background-repeat: no-repeat;
-        margin-top: 4em;
+    .main-info {
+      position: relative;
+    }
+
+    @media screen and (min-width: 1440px) {
+      .main-info img {
+        width: 45%;
+        height: auto;
+        position: absolute;
+        top: 5%;
+        right: 0;
       }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      .main-info img {
+        width: 420px;
+        height: auto;
+        position: absolute;
+        top: 8%;
+        right: 0;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .main-info img {
+        margin: 4em 0;
+      }
+    }
+
+    .contact {
+      margin-top: 8em;
     }
   </style>
 
@@ -78,16 +103,19 @@
           <div class="mdc-layout-grid__inner layout-wrapper">
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.9998 0C13.0032 0 6.6665 5.67167 6.6665 12.67C6.6665 19.6667 12.4482 28.02 19.9998 40C27.5515 28.02 33.3332 19.6667 33.3332 12.67C33.3332 5.67167 26.9982 0 19.9998 0ZM19.9998 18.3333C17.2382 18.3333 14.9998 16.095 14.9998 13.3333C14.9998 10.5717 17.2382 8.33333 19.9998 8.33333C22.7615 8.33333 24.9998 10.5717 24.9998 13.3333C24.9998 16.095 22.7615 18.3333 19.9998 18.3333Z" fill="#1538E5"/>
+                <path
+                  d="M19.9998 0C13.0032 0 6.6665 5.67167 6.6665 12.67C6.6665 19.6667 12.4482 28.02 19.9998 40C27.5515 28.02 33.3332 19.6667 33.3332 12.67C33.3332 5.67167 26.9982 0 19.9998 0ZM19.9998 18.3333C17.2382 18.3333 14.9998 16.095 14.9998 13.3333C14.9998 10.5717 17.2382 8.33333 19.9998 8.33333C22.7615 8.33333 24.9998 10.5717 24.9998 13.3333C24.9998 16.095 22.7615 18.3333 19.9998 18.3333Z"
+                  fill="#1538E5"/>
               </svg>
             </div>
-            <div class="main-info__content--location mdc-layout-grid__cell mdc-layout-grid__cell--span-3-phone mdc-layout-grid__cell--span-7-tablet mdc-layout-grid__cell--span-11-desktop">
+            <div
+              class="main-info__content--location mdc-layout-grid__cell mdc-layout-grid__cell--span-3-phone mdc-layout-grid__cell--span-7-tablet mdc-layout-grid__cell--span-11-desktop">
               <span property="legalName">Chytrý box, s.r.o.</span>
               <div property="location" typeof="Place">
                 <div property="address" typeof="PostalAddress"><span
                     property="streetAddress">Struhařovská 2931/9</span><br>
                   <span property="addressLocality">Praha 4, 141 00</span><br>
-                  <a href="https://goo.gl/maps/SBK1BRsmgu22" class="button" data-marker="praha">mapa</a>
+                  <a href="https://goo.gl/maps/SBK1BRsmgu22" class="button" data-marker="praha" target="_blank">mapa</a>
                   <div property="geo" typeof="GeoCoordinates">
                     <meta property="latitude" content="50.045386">
                     <meta property="longitude" content="14.491246">
@@ -98,23 +126,33 @@
 
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1" style="align-self: center">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12.042 23.648C4.229 23.648 0 18.772 0 12.477C0 5.74999 4.762 0.35199 13.276 0.35199C19.49 0.35199 24 4.38999 24 9.95299C24 18.665 13.67 20.965 14.188 15.995C13.478 17.103 12.334 18.349 10.135 18.349C7.619 18.349 6.055 16.507 6.055 13.542C6.055 9.09799 8.976 5.34299 12.434 5.34299C14.093 5.34299 15.234 6.21899 15.711 7.56399L16.175 5.93199H18.513C18.269 6.76399 16.192 14.459 16.192 14.459C15.544 17.125 17.542 17.172 19.314 15.756C22.643 13.176 22.815 6.42899 18.316 3.61499C13.495 0.72399 2.521 2.51299 2.521 12.308C2.521 17.919 6.471 21.689 12.35 21.689C15.786 21.689 17.892 20.759 19.645 19.741L20.822 21.439C19.111 22.405 16.361 23.648 12.042 23.648ZM9.698 9.34299C8.983 10.683 8.521 12.419 8.521 13.767C8.521 17.377 12.043 17.4 13.773 14.006C14.485 12.612 14.944 10.835 14.944 9.47699C14.944 6.55999 11.449 6.04299 9.698 9.34299Z" fill="#1538E5"/>
+                <path
+                  d="M12.042 23.648C4.229 23.648 0 18.772 0 12.477C0 5.74999 4.762 0.35199 13.276 0.35199C19.49 0.35199 24 4.38999 24 9.95299C24 18.665 13.67 20.965 14.188 15.995C13.478 17.103 12.334 18.349 10.135 18.349C7.619 18.349 6.055 16.507 6.055 13.542C6.055 9.09799 8.976 5.34299 12.434 5.34299C14.093 5.34299 15.234 6.21899 15.711 7.56399L16.175 5.93199H18.513C18.269 6.76399 16.192 14.459 16.192 14.459C15.544 17.125 17.542 17.172 19.314 15.756C22.643 13.176 22.815 6.42899 18.316 3.61499C13.495 0.72399 2.521 2.51299 2.521 12.308C2.521 17.919 6.471 21.689 12.35 21.689C15.786 21.689 17.892 20.759 19.645 19.741L20.822 21.439C19.111 22.405 16.361 23.648 12.042 23.648ZM9.698 9.34299C8.983 10.683 8.521 12.419 8.521 13.767C8.521 17.377 12.043 17.4 13.773 14.006C14.485 12.612 14.944 10.835 14.944 9.47699C14.944 6.55999 11.449 6.04299 9.698 9.34299Z"
+                  fill="#1538E5"/>
               </svg>
             </div>
-            <div class="main-info__content--email mdc-layout-grid__cell mdc-layout-grid__cell--span-3-phone mdc-layout-grid__cell--span-7-tablet mdc-layout-grid__cell--span-11-desktop">
-              <a property="email" href="mailto:studio@topmonks.com">studio@​topmonks.com</a>
+            <div
+              class="main-info__content--email mdc-layout-grid__cell mdc-layout-grid__cell--span-3-phone mdc-layout-grid__cell--span-7-tablet mdc-layout-grid__cell--span-11-desktop">
+              <a property="email" href="mailto:info@postcube.cz" class="info--email">info@postcube.cz</a>
             </div>
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1" style="align-self: center">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 22.621L16.479 15.826C16.471 15.83 14.505 16.796 14.415 16.837C12.175 17.923 7.61604 9.017 9.80604 7.843L11.889 6.817L8.39604 0L6.29004 1.039C-0.911963 4.794 10.523 27.021 17.89 23.654C18.011 23.599 19.992 22.625 20 22.621Z" fill="#1538E5"/>
+                <path
+                  d="M20 22.621L16.479 15.826C16.471 15.83 14.505 16.796 14.415 16.837C12.175 17.923 7.61604 9.017 9.80604 7.843L11.889 6.817L8.39604 0L6.29004 1.039C-0.911963 4.794 10.523 27.021 17.89 23.654C18.011 23.599 19.992 22.625 20 22.621Z"
+                  fill="#1538E5"/>
               </svg>
             </div>
-            <div class="main-info__content--phone mdc-layout-grid__cell mdc-layout-grid__cell--span-3-phone mdc-layout-grid__cell--span-7-tablet mdc-layout-grid__cell--span-11-desktop">
+            <div
+              class="main-info__content--phone mdc-layout-grid__cell mdc-layout-grid__cell--span-3-phone mdc-layout-grid__cell--span-7-tablet mdc-layout-grid__cell--span-11-desktop">
               <a property="telephone" href="tel:+420732364404">+420&nbsp;732&nbsp;364&nbsp;404</a>
             </div>
           </div>
         </div>
       </div>
+        <a href="https://goo.gl/maps/SBK1BRsmgu22" class="map" title="Show Prague Office on map"  target="_blank">
+          <img  alt="[mapa] Praha Spořilov"
+                src="{{ contactMap | cloudinaryUrl(dpr="auto", width=860) }}" width="860" height="581">
+        </a>
     </div>
   </section>
   <section id="" class="team">
@@ -143,17 +181,21 @@
         </div>
         <div class="team__member--details mdc-layout-grid__cell mdc-layout-grid__cell--span-9-desktop">
           <h3>Lakum</h3>
-          <p>Lakum je skupina strojírenských specialistů. Dává plechu život od roku 1998. Poskytuje kompletní servis v oblasti zpracování plechů, trubek, drátů a povrchových úprav. V několika výrobních závodech v České republice a na Slovensku zaměstnává přes 400 kolegů.
-</p>
-          <p>Profesionální práci Lakumu důvěřují značky jako Audi, Bentley, McLaren, BMW, Škoda Auto a jiní světově známí výrobci automobilů.
-</p>
+          <p>Lakum je skupina strojírenských specialistů. Dává plechu život od roku 1998. Poskytuje kompletní servis v
+            oblasti zpracování plechů, trubek, drátů a povrchových úprav. V několika výrobních závodech v České
+            republice a na Slovensku zaměstnává přes 400 kolegů.
+          </p>
+          <p>Profesionální práci Lakumu důvěřují značky jako Audi, Bentley, McLaren, BMW, Škoda Auto a jiní světově
+            známí výrobci automobilů.
+          </p>
         </div>
         <div class="team__member--photo mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
           <img alt="Logo Firmy TopMonks" src="{{ teamTopmonks | cloudinaryUrl(dpr="auto", width=180) }}">
         </div>
         <div class="team__member--details mdc-layout-grid__cell mdc-layout-grid__cell--span-9-desktop">
           <h3>TopMonks, s.r.o.</h3>
-          <p>Stavíme softwarové firmy od základu. Spojujeme vývoj softwaru a moderních webových aplikací s hardwarem.</p>
+          <p>Stavíme softwarové firmy od základu. Spojujeme vývoj softwaru a moderních webových aplikací s
+            hardwarem.</p>
         </div>
       </div>
     </div>
