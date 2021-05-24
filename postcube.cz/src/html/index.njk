@@ -71,6 +71,7 @@
         min-height: 600px;
         margin-top: 4em;
       }
+
       .main-info__bg img {
         display: none;
       }
@@ -83,8 +84,10 @@
   <section id="" class="main-info">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner layout-wrapper">
-        <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <img alt="Fotka PostCube Kurýra" src="{{ deliveryman | cloudinaryUrl(dpr="auto", width=860) }}" width="860" height="581">
+        <div
+          class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+          <img alt="Fotka PostCube Kurýra" src="{{ deliveryman | cloudinaryUrl(dpr="auto", width=860) }}" width="860"
+               height="581">
         </div>
         <div
           class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
@@ -161,6 +164,9 @@
         <h3>Bezkontaktní a jednoduché</h3>
         <p>Kovová PostCube funguje přes Bluetooth. Nepotřebujete kabel, připojení
           k&nbsp;internetu, klíč ani si pamatovat PIN&nbsp;kód.</p>
+      </div>
+      <div class="action-link mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <a href="#">Jak schránka PostCube funguje?</a>
       </div>
       <div class="action-btn mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <a href="/konfigurator" class="action-btn__label">Objednat PostCube</a>
