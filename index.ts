@@ -19,22 +19,22 @@ registerAutoTags({
   "user:Stack": pulumi.getStack()
 });
 
-const certificateProvider = new aws.Provider(`topmonks-webs/us-east-1`, {
+const usProvider = new aws.Provider(`topmonks-webs/us-east-1`, {
   region: aws.USEast1Region
 });
 
-createCertificate("www.topmonks.cz", certificateProvider);
-createCertificate("www.topmonks.com", certificateProvider);
+createCertificate("www.topmonks.cz");
+createCertificate("www.topmonks.com");
 
-createCertificate("www.cbx.cz, certificateProvider");
-createCertificate("www.hookamonk.com", certificateProvider);
-createCertificate("www.ingridapp.io", certificateProvider);
-createCertificate("monks.cloud", certificateProvider);
-createCertificate("www.postcube.cz", certificateProvider);
-createCertificate("www.postcube.com", certificateProvider);
-createCertificate("www.zive.tv", certificateProvider);
+createCertificate("www.cbx.cz");
+createCertificate("www.hookamonk.com");
+createCertificate("www.ingridapp.io");
+createCertificate("monks.cloud");
+createCertificate("www.postcube.cz");
+createCertificate("www.postcube.com");
+createCertificate("www.zive.tv");
 
-createCertificate("www.hackercamp.cz", certificateProvider);
+createCertificate("www.hackercamp.cz");
 createGoogleMxRecords("hackercamp.cz");
 createTxtRecord(
   "hc-google-site-verification",
@@ -42,7 +42,7 @@ createTxtRecord(
   "google-site-verification=eIaBVqhznPV-0AAEEbFJN82j3w063w_tW0-DUZWX5C0"
 );
 
-createCertificate("www.chytrybox.cz", certificateProvider);
+createCertificate("www.chytrybox.cz");
 createGoogleMxRecords("chytrybox.cz");
 createTxtRecord(
   "google-site-verification",
@@ -66,8 +66,7 @@ for (const domain of Object.keys(websites)) {
     Object.assign(
       {
         assetsCachingLambdaArn,
-        securityHeadersLambdaArn,
-        certificateProvider
+        securityHeadersLambdaArn
       },
       websites[domain]
     )
@@ -88,8 +87,7 @@ for (const domain of Object.keys(redirects)) {
     Object.assign(
       {
         assetsCachingLambdaArn,
-        securityHeadersLambdaArn,
-        certificateProvider
+        securityHeadersLambdaArn
       },
       redirects[domain]
     )
