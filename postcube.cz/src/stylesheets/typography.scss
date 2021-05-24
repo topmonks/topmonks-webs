@@ -90,11 +90,13 @@ button.content-btn {
   border: none;
   text-align: center;
   transition-duration: 0.4s;
+
   a {
     font-size: 18px;
     text-decoration: none;
     color: var(--postcube-black);
   }
+
   &:hover {
     cursor: pointer;
     background-color: var(--postcube-secondary-light);
@@ -114,6 +116,18 @@ button.content-btn {
       cursor: pointer;
       background-color: var(--postcube-secondary-light);
       transition-duration: 0.4s;
+    }
+  }
+}
+
+.action-link {
+  margin: 2em 0;
+  a {
+    font-size: 24px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    &:hover {
+      border-bottom: 2px solid var(--postcube-secondary);
     }
   }
 }
