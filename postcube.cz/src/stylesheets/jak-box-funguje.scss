@@ -1,0 +1,83 @@
+img {
+  width: 100%;
+  height: auto;
+}
+
+hr {
+  background-color: var(--postcube-grey-lighter);
+  border: none;
+  height: 2px;
+  margin: 3em 0 4em;
+}
+
+header {
+  background-color: var(--postcube-grey-light);
+}
+
+.main-info {
+  background-color: var(--postcube-grey-light);
+  .main-info__list {
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 0;
+    }
+    li {
+      margin-left: 36px;
+      a {
+        font-size: 20px;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        display: inline-block;
+        &:hover {
+          border-bottom: 2px solid var(--postcube-secondary);
+        }
+      }
+      &:first-child {
+        list-style: none;
+        margin: 3px 0 3px;
+        padding-left: 0;
+      }
+      &::marker {
+        font-size: 24px;
+        color: var(--postcube-secondary);
+      }
+    }
+  }
+  .main-info__content {
+    max-width: 95%;
+  }
+}
+
+.how-pc-works {
+  .how-pc-works__title p {
+    font-size: 24px;
+  }
+
+  .how-pc-works__content {
+    h3 {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-top: 8px;
+    }
+
+    p.content__subtitle--blue {
+      color: var(--postcube-primary);
+    }
+  }
+
+  .btn-price {
+    text-align: center;
+  }
+
+  .btn-android {
+    text-align: right;
+  }
+
+  button.content-btn {
+    width: 280px;
+  }
+}

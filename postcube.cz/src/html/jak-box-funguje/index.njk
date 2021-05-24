@@ -21,56 +21,9 @@
   <meta property="og:url" content="https://www.postcube.cz/">
   <meta property="og:site_name" content="postcube.cz">
 
-  <style>
-    img {
-      width: 100%;
-      height: auto;
-    }
+  <link rel="stylesheet" href="/assets/css/jak-box-funguje.css">
 
-    .main-info__content {
-      max-width: 95%;
-    }
 
-    .how-pc-works__content h3 {
-      font-size: 18px;
-      margin-bottom: 0;
-    }
-
-    .how-pc-works__content p {
-      margin-top: 8px;
-    }
-
-    hr {
-      background-color: var(--postcube-grey-lighter);
-      border: none;
-      height: 2px;
-      margin: 3em 0 4em;
-    }
-
-    .btn-price {
-      text-align: center;
-    }
-
-    button.content-btn {
-      width: 280px;
-    }
-
-    .btn-android {
-      text-align: right;
-    }
-
-    .how-pc-works__title p {
-      font-size: 24px;
-    }
-
-    p.content__subtitle--blue {
-      color: var(--postcube-primary);
-    }
-
-    p.content__subtitle--grey {
-      color: var(--postcube-grey);
-    }
-  </style>
 
 {% endblock %}
 
@@ -81,14 +34,26 @@
       <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h1>Jak funguje PostCube?</h1>
       </div>
+      <div class="main-info__list mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <ul>
+          <li><a href="#step--one">Přijímání zásilek</a></li>
+          <li><a href="#step--two">Odesílání zásilek</a></li>
+          <li><a href="#step--three">Mobilní aplikace</a></li>
+          <li><a href="#step--four">Instalace</a></li>
+        </ul>
+        <ul>
+          <li><a href="#step--five">Servis a reklamace</a></li>
+          <li><a href="#">Prémiové vybavení</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="" class="">
+<section id="" class="how-pc-works">
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner layout-wrapper">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+      <div id="step--one" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>1.&nbsp;Přijímání zásilek a nákupů</h2>
       </div>
       <div class="how-pc-works__content mdc-layout-grid__cell">
@@ -115,7 +80,7 @@
         <hr>
       </div>
 
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+      <div id="step--two" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>2.&nbsp;Odesílání zásilek a vrácení zboží</h2>
       </div>
       <div class="how-pc-works__content mdc-layout-grid__cell">
@@ -147,7 +112,7 @@
           přítomnosti.</p>
       </div>
 
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+      <div id="step--three" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>3.&nbsp;Mobilní aplikace</h2>
       </div>
       <div class="how-pc-works__content mdc-layout-grid__cell">
@@ -199,7 +164,7 @@
         </button>
       </div>
 
-      <div class="how-pc-works__title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+      <div id="step--four" class="how-pc-works__title mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>4.&nbsp;Instalace schránky</h2>
         <p>O&nbsp;kompletní instalaci samostatné PostCube se může postarat náš
           montážní tým, nebo ji můžete nainstalovat svépomocí. Přehledný návod,
@@ -239,7 +204,7 @@
       </div>
 
 
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+      <div id="step--five" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2>5.&nbsp;Servis a reklamace</h2>
       </div>
       <div class="how-pc-works__content mdc-layout-grid__cell">
