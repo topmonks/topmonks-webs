@@ -34,8 +34,10 @@ footer {
         right: 0;
       }
     }
+    @media (min-width: 600px) and (max-width: 839px) {
+      text-align: center;
+    }
   }
-
   @media (max-width: 839px) {
     .mdc-layout-grid {
       padding-bottom: 0;
