@@ -549,5 +549,26 @@
     "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1621864599/postcube.cz/steps_bg.png",
     "existing": false,
     "original_filename": "steps_bg"
+  },
+  "pc-phones.png": {
+    "asset_id": "fde03bdedebcd57b0813ed1e783546ec",
+    "public_id": "postcube.cz/pc-phones",
+    "version": 1621929175,
+    "version_id": "e5360f18a94e718349d33251c802a2b8",
+    "signature": "4dd477e9242b49d2936aad559630462d23c63260",
+    "width": 2434,
+    "height": 2887,
+    "format": "png",
+    "resource_type": "image",
+    "created_at": "2021-05-25T07:52:55Z",
+    "tags": [],
+    "bytes": 1784275,
+    "type": "upload",
+    "etag": "64e7e2f8eac8740ad0e6f2b236ed24e3",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1621929175/postcube.cz/pc-phones.png",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1621929175/postcube.cz/pc-phones.png",
+    "existing": false,
+    "original_filename": "pc-phones"
   }
 }

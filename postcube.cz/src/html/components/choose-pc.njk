@@ -1,21 +1,12 @@
 {% set chooseBox = images["choose-pc01.png"]["public_id"] %}
 {% set choosePickup = images["choose-pc02.png"]["public_id"] %}
 
-
 <style>
   .choose-postcube h3 {
     font-size: 18px;
   }
   .choose-postcube__content {
     max-width: 350px;
-  }
-  .choose-postcube__content a {
-    font-weight: 800;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-  }
-  .choose-postcube__content a:hover {
-    border-bottom: 2px solid var(--postcube-secondary);
   }
 </style>
 
@@ -36,7 +27,7 @@
         <h3>Instalace na míru nebo svépomocí</h3>
         <p>S&nbsp;instalací PostCube vám rádi pomůžeme. Pokud jste zruční, zvládnete
           ji připevnit na plot, k&nbsp;domu nebo umístit na zahradu i&nbsp;sami.
-          <a href="#">Jak na&nbsp;to</a></p>
+        </p>
       </div>
       <div class="choose-postcube__content mdc-layout-grid__cell">
         <img alt="Fotografie PostCube" src="{{ chooseBox | cloudinaryUrl(dpr="auto", width=400) }}">
