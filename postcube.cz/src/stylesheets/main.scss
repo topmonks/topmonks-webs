@@ -39,6 +39,9 @@ textarea:focus, button:focus, input:focus {
   .main-info__content {
     align-self: center;
   }
+  @media (max-width: 839px) {
+    padding-top: 5em;
+  }
 }
 
 

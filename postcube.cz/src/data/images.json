@@ -612,5 +612,26 @@
     "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1621930756/postcube.cz/smartphones_bg.svg",
     "existing": false,
     "original_filename": "smartphones_bg"
+  },
+  "logo--scroll.svg": {
+    "asset_id": "25ef8fafcfce2af414b0f31d52c30337",
+    "public_id": "postcube.cz/logo--scroll",
+    "version": 1621957363,
+    "version_id": "b82f9f605c2057e81818b66eaec99101",
+    "signature": "df36701b74553527cd7ed44d2b61e4f2dd21fe94",
+    "width": 79,
+    "height": 79,
+    "format": "svg",
+    "resource_type": "image",
+    "created_at": "2021-05-25T15:42:43Z",
+    "tags": [],
+    "bytes": 4274,
+    "type": "upload",
+    "etag": "f3c045163fcbca8f54b113c76abed009",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1621957363/postcube.cz/logo--scroll.svg",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1621957363/postcube.cz/logo--scroll.svg",
+    "existing": false,
+    "original_filename": "logo--scroll"
   }
 }

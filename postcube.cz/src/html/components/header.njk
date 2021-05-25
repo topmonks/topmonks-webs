@@ -168,9 +168,9 @@
       if (!ticking) {
         window.requestAnimationFrame(function () {
           if (lastPosition > 0) {
-            appBar.classList.add("app-bar--sticky");
+            appBar.classList.add("app-bar--sticky","logo--scroll");
           } else {
-            appBar.classList.remove("app-bar--sticky");
+            appBar.classList.remove("app-bar--sticky","logo--scroll");
           }
           ticking = false;
         });
