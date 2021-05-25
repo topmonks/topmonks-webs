@@ -143,19 +143,6 @@ header {
     animation-play-state: unset;
     animation-iteration-count: 1;
   }
-  #logo--text {
-    position: fixed;
-    top: 32px;
-    width: 100%;
-    display: block;
-    transition: top 0.3s;
-  }
-  .logo--scroll {
-    background-image: cloudinaryUrl("/postcube.cz/logo--scroll.svg");
-    background-repeat: no-repeat;
-    background-position: 7%;
-    background-size: 65px 65px;
-  }
 }
 
 #logo--text {
