@@ -24,4 +24,21 @@ footer {
       }
     }
   }
+
+  .footer__logo {
+    position: relative;
+    @media (min-width: 840px) {
+      svg {
+        position: absolute;
+        bottom: -25px;
+        right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 839px) {
+    .mdc-layout-grid {
+      padding-bottom: 0;
+    }
+  }
 }
