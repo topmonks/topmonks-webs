@@ -104,16 +104,22 @@ header {
       }
     }
   }
-
-  .btn-price {
-    text-align: center;
+  @media (max-width: 839px) {
+    button {
+      width: 100%;
+    }
   }
 
-  .btn-android {
-    text-align: right;
-  }
-
-  button.content-btn {
-    width: 280px;
+  @media (min-width: 840px) {
+    .btn-android {
+      text-align: right;
+    }
+    .btn-price {
+      text-align: center;
+    }
+    button.content-btn {
+      width: 280px;
+    }
   }
 }
+
