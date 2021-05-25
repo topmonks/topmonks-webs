@@ -1,6 +1,8 @@
 {% extends 'layouts/homepage.njk' %}
 {% set language = cs %}
 {% set deliveryman = images["deliveryman.png"]["public_id"] %}
+{% set hpBg01 = images["hp-bg01.png"]["public_id"] %}
+{% set hpBg02 = images["hp-bg02.png"]["public_id"] %}
 
 {% block title %}
   PostCube - Hlavní stránka
@@ -175,6 +177,11 @@
   </section>
 
   {% include 'components/guarantee.njk' %}
+  <div class="guarantee__bg">
+    <img alt="Fotografie PostCube u domu" src="{{ hpBg01 | cloudinaryUrl(dpr="auto", width=860) }}">
+    <img alt="Fotografie PostCube jako poštovní schránky" src="{{ hpBg02 | cloudinaryUrl(dpr="auto", width=860) }}">
+  </div>
+
 
   <section class="testimonial mdc-layout-grid">
     <div class="mdc-layout-grid__inner layout-wrapper">
@@ -213,7 +220,7 @@
       </div>
     </div>
   </section>
-
+  {% include 'components/video.njk' %}
   {% include 'components/how-it-works.njk' %}
   {% include 'components/get-app.njk' %}
   {% include 'components/faq.njk' %}

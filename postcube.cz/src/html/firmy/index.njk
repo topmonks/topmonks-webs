@@ -1,6 +1,8 @@
 {% extends 'layouts/main.njk' %}
 {% set language = cs %}
-{% set postcubePickup = images["section-bg02.png"]["public_id"] %}
+{% set firmyBG = images["firmy-bg01.png"]["public_id"] %}
+{% set firmyBG01 = images["hp-bg02.png"]["public_id"] %}
+{% set firmyBG02 = images["firmy-bg02.png"]["public_id"] %}
 
 
 {% block title %}
@@ -28,7 +30,7 @@
     @media screen and (min-width: 840px) {
       .main-info {
         align-self: center;
-        background-image: url({{ postcubePickup | cloudinaryUrl(dpr="auto", width=860) }});
+        background-image: url({{ firmyBG | cloudinaryUrl(dpr="auto", width=860) }});
         background-size: 45% auto;
         background-position: center right;
         background-repeat: no-repeat;
@@ -62,7 +64,7 @@
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner layout-wrapper">
         <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <img alt="Fotka Vyzvednutí Zásilky" src="{{ postcubePickup | cloudinaryUrl(dpr="auto", width=860) }}">
+          <img alt="Fotografie PostCube" src="{{ firmyBG | cloudinaryUrl(dpr="auto", width=860) }}">
         </div>
         <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
           <h1>PostCube do bytového domu nebo firmy</h1>
@@ -112,6 +114,12 @@
     </div>
   </section>
   {% include 'components/guarantee.njk' %}
+  <div class="guarantee__bg">
+    <img alt="Fotografie PostCube" src="{{ firmyBG01 | cloudinaryUrl(dpr="auto", width=860) }}">
+    <img alt="Fotografie PostCube" src="{{ firmyBG02 | cloudinaryUrl(dpr="auto", width=860) }}">
+  </div>
+
+
 
   <section class="testimonial mdc-layout-grid">
     <div class="mdc-layout-grid__inner layout-wrapper">

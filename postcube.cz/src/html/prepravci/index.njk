@@ -1,6 +1,9 @@
 {% extends 'layouts/main.njk' %}
 {% set language = cs %}
 {% set deliveryman = images["deliveryman.png"]["public_id"] %}
+{% set prepravciBG01 = images["domacnosti-bg02.png"]["public_id"] %}
+{% set prepravciBG02 = images["delivery.jpg"]["public_id"] %}
+
 
 
 {% block title %}
@@ -19,6 +22,9 @@
       width: 100%;
       height: auto;
     }
+    .main-info {
+      padding-top: 4em;
+    }
     .main-info__content {
       max-width: 95%;
     }
@@ -35,11 +41,11 @@
     @media (min-width: 840px) and (max-width: 2039px) {
       .main-info {
         align-self: center;
-        background-image: url({{ deliveryman | cloudinaryUrl(dpr="auto", width=860) }});
+        background-image: url({{ deliveryman | cloudinaryUrl(dpr="auto", width=1020) }});
         background-size: 45% auto;
-        background-position: center left;
+        background-position: center right;
         background-repeat: no-repeat;
-        margin-top: 4em;
+        margin-top: 5em;
       }
       .main-info img {
         display: none;
@@ -51,7 +57,7 @@
         align-self: center;
         background-image: url({{ deliveryman | cloudinaryUrl(dpr="auto", width=860) }});
         background-size: 45% auto;
-        background-position: center left;
+        background-position: center right;
         background-repeat: no-repeat;
         min-height: 600px;
         margin-top: 4em;
@@ -83,14 +89,14 @@
   <section id="main-info" class="main-info">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner layout-wrapper">
-        <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <img alt="Fotka PostCube Kurýra" src="{{ deliveryman | cloudinaryUrl(dpr="auto", width=860) }}">
-        </div>
         <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
           <h1>Vaši kurýři nás budou milovat!</h1>
           <p>PostCube šetří náklady a ulehčí práci kurýrům. Spolupracujte
             s&nbsp;námi a zajistěte svým zákazníkům maximální pohodlí při online
             nakupování.</p>
+        </div>
+        <div class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+          <img alt="Fotka PostCube Kurýra" src="{{ deliveryman | cloudinaryUrl(dpr="auto", width=860) }}">
         </div>
       </div>
     </div>
@@ -133,6 +139,14 @@
     </div>
   </section>
   {% include 'components/guarantee.njk' %}
+  <div class="guarantee__bg">
+    <img alt="Fotografie dovezení PostCube až k domu" src="{{ prepravciBG01 | cloudinaryUrl(dpr="auto", width=860) }}">
+    <img alt="Fotografie přeprava PostCube" src="{{ prepravciBG02 | cloudinaryUrl(dpr="auto", width=860) }}">
+  </div>
+
+
+
+
   <section id="" class="transport icon-section mdc-layout-grid">
     <div class="mdc-layout-grid__inner layout-wrapper">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
