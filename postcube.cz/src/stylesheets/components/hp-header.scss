@@ -186,6 +186,14 @@ header {
     background-size: 65px 65px;
   }
 }
+@media (min-width: 2140px) {
+  .logo--scroll {
+    background-image: cloudinaryUrl("/postcube.cz/logo--scroll.svg");
+    background-repeat: no-repeat;
+    background-position: 25% 40%;
+    background-size: 65px 65px;
+  }
+}
 @media (max-width: 839px) {
   #logo--blue {
     position: absolute;
