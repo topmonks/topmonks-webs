@@ -1,10 +1,10 @@
 // Header Component//
 header {
+  position: relative;
   color: var(--postcube-white);
 
   .app-bar__logo {
     align-self: center;
-    position: relative;
   }
 
   nav {
@@ -135,6 +135,33 @@ header {
 // Animation //
 // Fade In Logo //
 @media screen and (min-width: 1024px) {
+  @-webkit-keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-300px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-150px);
+    }
+  }
+
+  .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    animation-iteration-count: 1;
+  }
   .app-bar__logo {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
@@ -143,12 +170,14 @@ header {
     animation-play-state: unset;
     animation-iteration-count: 1;
   }
-  #logo--text {
+  #logo--blue {
     position: fixed;
-    top: 32px;
+    top: 0;
+    left: -115px;
     width: 100%;
     display: block;
-    transition: top 0.3s;
+    transition: top 0.6s;
+    animation-iteration-count: 1;
   }
   .logo--scroll {
     background-image: cloudinaryUrl("/postcube.cz/logo--scroll.svg");
@@ -157,17 +186,12 @@ header {
     background-size: 65px 65px;
   }
 }
-
-#logo--text {
-  font-family: Roobert, sans-serif;
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--postcube-primary);
-  text-decoration: none;
+@media (max-width: 839px) {
+  #logo--blue {
+    position: absolute;
+    top: -60%!important;
+  }
 }
-
-
-
 
 .app-bar--sticky {
   background-color: var(--postcube-white);
@@ -184,6 +208,10 @@ header {
 
 // HAMBURGER
 .logo__hp {
+  position: absolute;
+  left: -40%;
+  top: -110%;
+  z-index: 1;
   @media screen and (max-width: 839px) {
     left: -10%;
     top: -55%;
