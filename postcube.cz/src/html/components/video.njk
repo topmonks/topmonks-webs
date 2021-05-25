@@ -1,0 +1,26 @@
+{% set video = images["video-img.png"]["public_id"] %}
+
+<style>
+  .video h2{
+    text-align: center;
+  }
+  .video__content {
+    text-align: center;
+  }
+  .video__content video {
+    width: 80%;
+  }
+
+</style>
+<section id="" class="video">
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner layout-wrapper">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <h2>100&nbsp;% doručených zásilek a 0&nbsp;% starostí</h2>
+      </div>
+      <div class="video__content mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <video src="https://res.cloudinary.com/topmonks/video/upload/v1621971318/postcube.cz/PostCube-Video.mp4" controls="true"></video>
+      </div>
+    </div>
+  </div>
+</section>
