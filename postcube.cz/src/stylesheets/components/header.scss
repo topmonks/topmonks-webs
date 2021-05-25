@@ -65,9 +65,6 @@ header {
   }
 
   .dropdown {
-    float: left;
-    overflow: hidden;
-
     .dropbtn {
       border: none;
       outline: none;
@@ -108,6 +105,10 @@ header {
       &:hover {
         color: var(--postcube-secondary);
       }
+    }
+    @media screen and (min-width: 840px) {
+      float: left;
+      overflow: hidden;
     }
   }
 
@@ -175,6 +176,14 @@ header {
     height: 70px;
   }
 }
+.hamburger-logo {
+  position: absolute;
+  top: 20px;
+  left: 31px;
+  @media screen and (min-width: 840px) {
+    display: none;
+  }
+}
 
 .hamburger {
   text-align: right;
@@ -189,6 +198,7 @@ header {
     width: 18px;
     height: 18px;
     position: relative;
+    z-index: 1000;
   }
 
   .hamburger__bar {
@@ -211,6 +221,7 @@ header {
   .hamburger__container--open {
     .hamburger__bar:first-of-type {
       transform: rotate(-45deg);
+      background-color: white;
     }
 
     .hamburger__bar:nth-of-type(2) {
@@ -219,6 +230,7 @@ header {
 
     .hamburger__bar:last-of-type {
       transform: rotate(45deg);
+      background-color: white;
     }
   }
 }
@@ -244,7 +256,7 @@ header {
   @media screen and (max-width: 839px) {
     width: 100vw;
     height: 100vh;
-    margin-top: 60px;
+    padding-top: 140px;
     transform: translate(calc(-100vw - 12px), -64px);
     transform: translate(calc(-140vw - 12px), -64px);
     position: absolute;
@@ -256,6 +268,7 @@ header {
     ul.menu__list {
       display: inline-grid;
       padding-left: 1em;
+      margin-top: 0;
     }
     .menu__list a {
       font-size: 30px;
@@ -289,8 +302,8 @@ header {
       font-size: 30px;
       font-weight: bold;
       color: #ffffff;
-      padding: 12px;
       margin: 4px;
+      padding-left: 1em;
     }
   }
 }
