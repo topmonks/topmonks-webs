@@ -1,4 +1,4 @@
-<header class="app-bar app-bar--sticky">
+<header class="app-bar">
   <div class="mdc-layout-grid layout-wrapper">
     <div class="mdc-layout-grid__inner">
       <div class="app-bar__logo fadeInDown mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-3-desktop">
@@ -162,13 +162,14 @@
 
     var lastPosition = 0;
     var ticking = false;
+    var HEADER_HEIGHT = 72;
     const onScroll = function () {
       lastPosition = window.scrollY;
       if (!ticking) {
         window.requestAnimationFrame(function () {
-          if (lastPosition > 0) {
+          if (lastPosition > 0 && lastPosition < HEADER_HEIGHT) {
             appBar.classList.add("app-bar--sticky","logo--scroll");
-          } else {
+          } else if(lastPosition < HEADER_HEIGHT) {
             appBar.classList.remove("app-bar--sticky","logo--scroll");
           }
           ticking = false;
@@ -198,11 +199,12 @@
       menu.classList.toggle("menu--horizontal");
     }
   </script>
+
   <script>
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
       var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
+      if (prevScrollpos > currentScrollPos && currentScrollPos < HEADER_HEIGHT) {
         document.getElementById("logo--blue").style.top = "0";
       } else {
         document.getElementById("logo--blue").style.top = "-300px";
@@ -210,6 +212,5 @@
       prevScrollpos = currentScrollPos;
     }
   </script>
-
 
 </header>
