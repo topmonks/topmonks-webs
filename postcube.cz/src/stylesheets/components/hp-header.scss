@@ -134,6 +134,7 @@ header {
 
 // Animation //
 // Fade In Logo //
+/*
 @media screen and (min-width: 1024px) {
   @-webkit-keyframes fadeInDown {
     0% {
@@ -170,15 +171,6 @@ header {
     animation-play-state: unset;
     animation-iteration-count: 1;
   }
-  #logo--blue {
-    position: fixed;
-    top: 0;
-    left: -115px;
-    width: 100%;
-    display: block;
-    transition: top 0.6s;
-    animation-iteration-count: 1;
-  }
   .logo--scroll {
     background-image: cloudinaryUrl("/postcube.cz/logo--scroll.svg");
     background-repeat: no-repeat;
@@ -193,11 +185,24 @@ header {
     background-position: 25% 40%;
     background-size: 65px 65px;
   }
-}
+}*/
+
 @media (max-width: 839px) {
   #logo--blue {
     position: absolute;
     top: -60%!important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #logo--blue {
+    position: fixed;
+    top: 0;
+    left: -115px;
+    width: 100%;
+    display: block;
+    transition: top 0.6s;
+    animation-iteration-count: 1;
   }
 }
 
