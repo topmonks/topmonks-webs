@@ -990,5 +990,26 @@
     "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1622010079/postcube.cz/box-bg10.png",
     "existing": false,
     "original_filename": "box-bg10"
+  },
+  "postcube-logo.svg": {
+    "asset_id": "2c1ffdfbd8ef4876ca9b7917ff35389d",
+    "public_id": "postcube.cz/postcube-logo",
+    "version": 1622015277,
+    "version_id": "9de6d87aee47ab8030bf3b1a18410423",
+    "signature": "40457c17b9b31beb96cf98ff5c181fa664b018e8",
+    "width": 135,
+    "height": 25,
+    "format": "svg",
+    "resource_type": "image",
+    "created_at": "2021-05-26T07:47:57Z",
+    "tags": [],
+    "bytes": 3737,
+    "type": "upload",
+    "etag": "13a3d40beeec8546b39845289743dc22",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1622015277/postcube.cz/postcube-logo.svg",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1622015277/postcube.cz/postcube-logo.svg",
+    "existing": false,
+    "original_filename": "postcube-logo"
   }
 }
