@@ -134,7 +134,6 @@ header {
 
 // Animation //
 // Fade In Logo //
-/*
 @media screen and (min-width: 1024px) {
   @-webkit-keyframes fadeInDown {
     0% {
@@ -185,7 +184,7 @@ header {
     background-position: 25% 40%;
     background-size: 65px 65px;
   }
-}*/
+}
 
 @media (max-width: 839px) {
   #logo--blue {
@@ -210,7 +209,6 @@ header {
   background-color: var(--postcube-white);
   box-shadow: 2px 4px 10px rgb(92 95 212 / 10%);
 }
-
 
 .logo__subpage {
   font-size: 28px;
