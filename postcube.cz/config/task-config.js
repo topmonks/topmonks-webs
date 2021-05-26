@@ -6,9 +6,9 @@ const fs = require("fs");
 const fetch = require("node-fetch");
 const iconv = require("iconv-lite");
 
-const SHOP_LINK = "https://shop.postcube.cz/?c=";
+const SHOP_LINK = "https://448050.myshoptet.com/?c=";
 const SHOP_EXPORT_URL =
-  "https://chytrybox.myshoptet.com/export/products.csv?patternId=4&hash=2bebc2db23a8bf3116c41286e7383e12eec0b45e450c1e3430511f4615c76d09";
+  "https://448050.myshoptet.com/export/products.csv?patternId=4&hash=426e0c1d97348728b110e4d17b25c1db2e232722f4da58621d18f081ca83cc1b";
 
 // https://stackoverflow.com/a/34890276/13890034
 function groupBy(xs, key) {
@@ -80,6 +80,8 @@ const config = createSharedTaskConfig(__dirname, {
           "name"
         );
 
+        console.log(products);
+
         return {
           shopLink: SHOP_LINK,
           currency: products[0].currency,
@@ -114,8 +116,23 @@ const config = createSharedTaskConfig(__dirname, {
                 )
               ]
             },
+            // {
+            //   name: "Stříška",
+            //   options: [
+            //     {
+            //       value: null,
+            //       label: "ne",
+            //       default: true
+            //     },
+            //     {
+            //       value: accessories["Stříška"][0].code,
+            //       price: accessories["Stříška"][0].price,
+            //       label: "ano"
+            //     }
+            //   ]
+            // },
             {
-              name: "Stříška",
+              name: "Držák na zeď",
               options: [
                 {
                   value: null,
@@ -123,14 +140,14 @@ const config = createSharedTaskConfig(__dirname, {
                   default: true
                 },
                 {
-                  value: accessories["Stříška"][0].code,
-                  price: accessories["Stříška"][0].price,
+                  value: accessories["Držák na zeď"][0].code,
+                  price: accessories["Držák na zeď"][0].price,
                   label: "ano"
                 }
               ]
             },
             {
-              name: "Podstavec 80x80 cm",
+              name: "Dlaždice 50 x 50 cm",
               options: [
                 {
                   value: null,
@@ -138,8 +155,8 @@ const config = createSharedTaskConfig(__dirname, {
                   default: true
                 },
                 {
-                  value: accessories["Podstavec 80x80 cm"][0].code,
-                  price: accessories["Podstavec 80x80 cm"][0].price,
+                  value: accessories["Dlaždice 50 x 50 cm"][0].code,
+                  price: accessories["Dlaždice 50 x 50 cm"][0].price,
                   label: "ano"
                 }
               ]
