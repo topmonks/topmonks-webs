@@ -129,8 +129,8 @@ header {
   top: 0;
   width: 100vw;
   z-index: 1000;
-
 }
+
 
 // Animation //
 // Fade In Logo //
@@ -162,6 +162,7 @@ header {
     animation-name: fadeInDown;
     animation-iteration-count: 1;
   }
+
   .app-bar__logo {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
@@ -170,24 +171,10 @@ header {
     animation-play-state: unset;
     animation-iteration-count: 1;
   }
-  .logo--scroll {
-    background-image: cloudinaryUrl("/postcube.cz/logo--scroll.svg");
-    background-repeat: no-repeat;
-    background-position: 15%;
-    background-size: 65px 65px;
-  }
-}
-@media (min-width: 2140px) {
-  .logo--scroll {
-    background-image: cloudinaryUrl("/postcube.cz/logo--scroll.svg");
-    background-repeat: no-repeat;
-    background-position: 25% 40%;
-    background-size: 65px 65px;
-  }
 }
 
 @media (max-width: 839px) {
-  #logo--blue {
+  #logo--blue .logo__image--scroll {
     position: absolute;
     top: -60%!important;
   }
@@ -217,14 +204,15 @@ header {
   text-decoration: none;
 }
 
-// HAMBURGER
 .logo__hp {
   position: absolute;
   left: -40%;
   top: -110%;
   z-index: 1;
+  text-decoration: none;
+
   @media screen and (max-width: 839px) {
-    left: -10%;
+    left: -5%;
     top: -55%;
     svg {
       height: 100px;
@@ -247,6 +235,27 @@ header {
     .logo--desktop {
       display: block;
     }
+  }
+}
+
+.logo__hp--scroll {
+  opacity: 0;
+  position: relative;
+  top: 152px;
+  transition: opacity .25s ease-in-out;
+}
+
+
+@media screen and (min-width: 840px) and (max-width: 1024px) {
+  .logo__hp--scroll {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .app-bar.app-bar--sticky.logo--scroll .logo__hp--scroll {
+    opacity: 1;
   }
 }
 
