@@ -3,6 +3,7 @@ footer {
   background-color: var(--postcube-primary);
 
   .footer__list {
+    align-self: center;
     ul {
       padding: 0;
       display: inline-flex;
@@ -27,6 +28,7 @@ footer {
 
   .footer__logo {
     position: relative;
+    min-height: 150px;
     @media (min-width: 840px) {
       svg {
         position: absolute;
