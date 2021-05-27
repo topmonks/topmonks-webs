@@ -80,22 +80,34 @@ const config = createSharedTaskConfig(__dirname, {
           "name"
         );
 
-        console.log(products);
+        console.log("Exported products", products);
+
+        const byOrderProperty = (a, b) => {
+          const order = ({ textProperty2 }) =>
+            textProperty2.startsWith("Poradi;")
+              ? parseInt(textProperty2.split(";")[1], 10)
+              : 0;
+          return order(a) - order(b);
+        };
+
+        const tranformSizes = (
+          { code, name, textProperty, textProperty2, textProperty3, price },
+          index
+        ) => ({
+          value: code.split("/")[0],
+          label: name.replace("PostCube ", ""),
+          info: textProperty.startsWith("Velikost;")
+            ? textProperty.replace("Velikost;", "")
+            : "",
+          default: index === 1,
+          price,
+          disabled: textProperty3 === "meta;disabled"
+        });
 
         return {
           shopLink: SHOP_LINK,
           currency: products[0].currency,
-          sizes: mainProducts.map(
-            ({ code, name, textProperty, textProperty2, price }, index) => ({
-              value: code.split("/")[0],
-              label: name.replace("PostCube ", ""),
-              info: textProperty.startsWith("Velikost;")
-                ? textProperty.replace("Velikost;", "")
-                : textProperty2.replace("Velikost;", ""),
-              default: !index,
-              price
-            })
-          ),
+          sizes: mainProducts.sort(byOrderProperty).map(tranformSizes),
           colors,
           accessories: [
             {

@@ -47,6 +47,11 @@
       flex: 1;
       max-width: 50%;
     }
+    .main-info__radio-container.main-info__radio-container--disabled .input-radio~.input-radio--custom,
+    .main-info__radio-container.main-info__radio-container--disabled .input-radio~.input-radio--custom:hover {
+      background-color: #f5f5f5;
+      border-color: transparent;
+    }
 
     .input-radio {
       position: absolute;
@@ -199,13 +204,17 @@
 
             <div class="select-container">
               {% for item in configurator.sizes %}
-                <label class="main-info__radio-container">
-                  <input type="radio" class="input-radio" name="size"
+                <label class="main-info__radio-container {{ "main-info__radio-container--disabled" if item.disabled }}">
+                  <input type="radio" class="input-radio" name="size"  {{ "disabled" if item.disabled }}
                          value="{{ item.value }}" {{ "checked" if item.default }}/>
                   <div class="input-radio--custom">
                     <div class="main-product-option">
                       <strong>{{ item.label }}</strong>
-                      <span>{{ item.info }}</span>
+                      {% if item.disabled %}
+                        <span><small>(chystáme)</small></span>
+                      {% elif item.info %}
+                        <span>{{ item.info }}</span>
+                      {% endif %}
                     </div>
                   </div>
                 </label>
@@ -283,7 +292,8 @@
           const currency = Intl.NumberFormat(navigator.language, {
             style: "currency",
             currency: "{{ configurator.currency }}",
-            maximumSignificantDigits: 3
+            // Fixes 9999.00 => 10000 issue 🤦‍♂️
+            // maximumSignificantDigits: 10
           });
 
           const previewListElement = document.querySelector("#order-preview-list");
