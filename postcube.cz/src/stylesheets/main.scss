@@ -32,6 +32,12 @@ textarea:focus, button:focus, input:focus {
   margin: 4em 0 0.5em;
 }
 
+.testimonial__content {
+  svg {
+    fill: var(--postcube-primary);
+  }
+}
+
 // Main Introduction Text //
 .main-info {
   color: var(--postcube-primary);
