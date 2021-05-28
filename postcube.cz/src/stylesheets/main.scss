@@ -38,6 +38,11 @@ textarea:focus, button:focus, input:focus {
   }
 }
 
+.guarantee__bg {
+  line-height: 0;
+  display: flex;
+}
+
 // Main Introduction Text //
 .main-info {
   color: var(--postcube-primary);
