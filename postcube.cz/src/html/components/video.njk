@@ -16,12 +16,44 @@
     position: relative;
   }
   .video__content-wrapper button {
-    position: absolute;
-    top: 33%;
-    left: 43%;
     background: none;
     border: none;
+    cursor: pointer;
   }
+
+  @media (max-width: 539px) {
+    .video__content-wrapper svg {
+      position: absolute;
+      top: 26%;
+      left: 38%;
+      width: 65px;
+      height: 65px;
+    }
+  }
+  @media (min-width: 540px) and (max-width: 839px) {
+    .video__content-wrapper svg {
+      position: absolute;
+      left: 41%;
+      top: 32%;
+      width: 120px;
+      height: 120px;
+    }
+  }
+  @media (min-width: 840px) and (max-width: 1439px) {
+    .video__content-wrapper svg {
+      position: absolute;
+      top: 33%;
+      left: 42%;
+    }
+  }
+  @media (min-width: 1440px) {
+    .video__content-wrapper svg {
+      position: absolute;
+      top: 35%;
+      left: 43%;
+    }
+  }
+
 
 </style>
 <section id="" class="video">
