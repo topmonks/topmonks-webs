@@ -28,5 +28,11 @@
   },
   "www.postcube.com": {
     "target": "https://postcube.cz"
+  },
+  "chytrybox.cz": {
+    "target": "https://postcube.cz"
+  },
+  "www.chytrybox.cz": {
+    "target": "https://postcube.cz"
   }
 }

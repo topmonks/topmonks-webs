@@ -124,8 +124,6 @@
     "build:zive.tv": "BLENDID_CONFIG_PATH=./zive.tv/config/ dotenv blendid -- build",
     "start:cbx.cz": "BLENDID_CONFIG_PATH=./cbx.cz/config/ dotenv blendid",
     "build:cbx.cz": "BLENDID_CONFIG_PATH=./cbx.cz/config/ dotenv blendid -- build",
-    "start:chytrybox.cz": "BLENDID_CONFIG_PATH=./chytrybox.cz/config/ dotenv blendid",
-    "build:chytrybox.cz": "BLENDID_CONFIG_PATH=./chytrybox.cz/config/ dotenv blendid -- build",
     "start:www.hackercamp.cz": "BLENDID_CONFIG_PATH=./www.hackercamp.cz/config/ dotenv blendid",
     "build:www.hackercamp.cz": "BLENDID_CONFIG_PATH=./www.hackercamp.cz/config/ dotenv blendid -- build",
     "start:postcube.cz": "BLENDID_CONFIG_PATH=./postcube.cz/config/ dotenv blendid",
