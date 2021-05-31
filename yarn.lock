@@ -1892,9 +1892,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@topmonks/blendid@https://github.com/topmonks/blendid.git#commit=698c69e57624606a287972eeae70434611db33f0":
+"@topmonks/blendid@https://github.com/topmonks/blendid.git#commit=eecc67ba2de3b4f9d9705e6517bb56f9dc5a2bbd":
   version: 6.0.0
-  resolution: "@topmonks/blendid@https://github.com/topmonks/blendid.git#commit=698c69e57624606a287972eeae70434611db33f0"
+  resolution: "@topmonks/blendid@https://github.com/topmonks/blendid.git#commit=eecc67ba2de3b4f9d9705e6517bb56f9dc5a2bbd"
   dependencies:
     "@rollup/plugin-alias": ^3.1.2
     "@rollup/plugin-node-resolve": ^13.0.0
@@ -1938,14 +1938,14 @@ __metadata:
     pretty-hrtime: ^1.0.3
     rollup: ^2.50.4
     rollup-plugin-minify-html-literals: ^1.2.6
-    sass: 1.32.10
+    sass: =1.32.10
     stream-array: ^1.1.2
     through2: ^4.0.2
     vinyl: ^2.2.1
     workbox-build: ^6.1.5
   bin:
     blendid: bin/blendid.js
-  checksum: 8f2eb671384ade69a0de1b08bda7cfb6cabf6c6bf4d4a048fd31cc05a9af69b9e61e94bfbdd4aa1b0930ac75f2ca3e449c8a77ddf53493a60ac3e583c67b5a2d
+  checksum: 1e761e3935ead7fbd8c189c9bf7ffe4e47058bef7c10ca85871a3b836ed8de6994936f93f09024bfc595d914b3caae9f4a678dd547454b0b5ebf36b215813629
   languageName: node
   linkType: hard
 
@@ -1972,7 +1972,7 @@ __metadata:
     "@pulumi/aws": ^4.6.0
     "@pulumi/awsx": ^0.30.0
     "@pulumi/pulumi": ^3.3.1
-    "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=698c69e57624606a287972eeae70434611db33f0"
+    "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=eecc67ba2de3b4f9d9705e6517bb56f9dc5a2bbd"
     "@topmonks/pulumi-aws": ^1.8.3
     "@types/chart.js": ^2.9.32
     "@types/node": ^14.17.1
@@ -14193,7 +14193,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"sass@npm:1.32.10":
+"sass@npm:sass@1.32.10":
   version: 1.32.10
   resolution: "sass@npm:1.32.10"
   dependencies:
@@ -14201,17 +14201,6 @@ fsevents@~2.3.1:
   bin:
     sass: sass.js
   checksum: dc310c9d4f73fc9fd39c7c3cb7adc481f1d3a7cbd51704ed94972738b181b3db1e485864497edf2d2954340a34b49bfccac61b792e2609431227a6ab521997db
-  languageName: node
-  linkType: hard
-
-"sass@npm:^1.26.3":
-  version: 1.32.13
-  resolution: "sass@npm:1.32.13"
-  dependencies:
-    chokidar: ">=3.0.0 <4.0.0"
-  bin:
-    sass: sass.js
-  checksum: 93913232ec9efbd9edbe63e9c32e08c90e2ca7e1b75079b570207aa828386ad1391a0944a06411f2b2add88803a41dd3ecbfbbcf45ec4c2b288154e17243e71f
   languageName: node
   linkType: hard
 

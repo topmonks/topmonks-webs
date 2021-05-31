@@ -25,7 +25,7 @@
   "devDependencies": {
     "@lhci/cli": "^0.7.2",
     "@lhci/utils": "^0.7.2",
-    "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=698c69e57624606a287972eeae70434611db33f0",
+    "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=eecc67ba2de3b4f9d9705e6517bb56f9dc5a2bbd",
     "@types/chart.js": "^2.9.32",
     "@types/yaml": "^1.9.7",
     "ava": "^3.15.0",
@@ -134,6 +134,7 @@
   "resolutions": {
     "bluebird": "npm:bluebird@3.7.2",
     "lodash": "npm:lodash@4.17.21",
-    "marky": "npm:marky@1.2.2"
+    "marky": "npm:marky@1.2.2",
+    "sass": "npm:sass@1.32.10"
   }
 }
