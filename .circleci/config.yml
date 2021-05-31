@@ -230,7 +230,7 @@ workflows:
           site_name: www.topmonks.com
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-www-topmonks-com
           filters:
             branches:
@@ -246,7 +246,7 @@ workflows:
           site_name: blockchain.topmonks.com
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-blockchain-topmonks-com
           filters:
             branches:
@@ -262,7 +262,7 @@ workflows:
           site_name: studio.topmonks.com
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-studio-topmonks-com
           filters:
             branches:
@@ -278,7 +278,7 @@ workflows:
           site_name: www.topmonks.cz
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-www-topmonks-cz
           filters:
             branches:
@@ -294,7 +294,7 @@ workflows:
           site_name: caffe.topmonks.cz
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-caffe-topmonks-cz
           filters:
             branches:
@@ -310,7 +310,7 @@ workflows:
           site_name: prodeti.topmonks.cz
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-prodeti-topmonks-cz
           filters:
             branches:
@@ -333,7 +333,7 @@ workflows:
                     --recursive s3://session-monk.topmonks.com/ s3://session-monk.topmonks.com/
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-session-monk-topmonks-com
           filters:
             branches:
@@ -349,7 +349,7 @@ workflows:
           site_name: monkslab.cz
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-monkslab-cz
           filters:
             branches:
@@ -359,7 +359,7 @@ workflows:
           site_name: www.hookamonk.com
           context: org-global
           requires:
-            - provision
+          #  - provision
             - build
           filters:
             branches:
@@ -369,7 +369,7 @@ workflows:
           site_name: room.monks.cloud
           context: org-global
           requires:
-            - provision
+          #  - provision
             - build
           filters:
             branches:
@@ -385,7 +385,7 @@ workflows:
           site_name: www.ingridapp.io
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-www-ingridapp-io
           filters:
             branches:
@@ -401,7 +401,7 @@ workflows:
           site_name: arx.monks.cloud
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-arx-monks-cloud
           filters:
             branches:
@@ -417,7 +417,7 @@ workflows:
           site_name: zive.tv
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-zive-tv
           filters:
             branches:
@@ -433,7 +433,7 @@ workflows:
           site_name: cbx.cz
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-cbx-cz
           filters:
             branches:
@@ -449,7 +449,7 @@ workflows:
           site_name: chytrybox.cz
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-chytrybox-cz
           filters:
             branches:
@@ -465,7 +465,7 @@ workflows:
           site_name: www.hackercamp.cz
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-www-hackercamp-cz
           filters:
             branches:
@@ -481,7 +481,7 @@ workflows:
           site_name: postcube.cz
           context: org-global
           requires:
-            - provision
+          #  - provision
             - test-postcube-cz
           filters:
             branches:
