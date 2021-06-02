@@ -1997,7 +1997,7 @@ __metadata:
     gulp-merge-json: ^2.1.1
     iconv-lite: ^0.6.3
     isomorphic-fetch: ^3.0.0
-    lighthouse: ^7.5.0
+    lighthouse: ^8.0.0
     lighthouse-logger: ^1.2.0
     lit-html: ^1.4.1
     local-web-server: ^4.2.1
@@ -3000,6 +3000,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axe-core@npm:4.2.1":
+  version: 4.2.1
+  resolution: "axe-core@npm:4.2.1"
+  checksum: 6a3f1a9f2d4c8a27aafd044acb2d02d52008ef392aeced4859fcfa85a559347e267eeb9db1f7d5807eda30d895354cdbfeb3437b018b45904e3cc609bf461906
+  languageName: node
+  linkType: hard
+
 "axios@npm:0.21.1":
   version: 0.21.1
   resolution: "axios@npm:0.21.1"
@@ -3953,6 +3960,18 @@ __metadata:
     mkdirp: ^0.5.3
     rimraf: ^3.0.2
   checksum: c571a990545d06f31e2afc0f8e7ad8c0f4824ee2c8c3a21f74d523595de3c0688a92e6dda9d1d278083f85fd25400e9088cb81afee5efeaee47d382b6fef86fd
+  languageName: node
+  linkType: hard
+
+"chrome-launcher@npm:^0.14.0":
+  version: 0.14.0
+  resolution: "chrome-launcher@npm:0.14.0"
+  dependencies:
+    "@types/node": "*"
+    escape-string-regexp: ^4.0.0
+    is-wsl: ^2.2.0
+    lighthouse-logger: ^1.0.0
+  checksum: 9c538d68069a90a7235b1f0bc323f287844fa92c7dd31985f138dd6a4d0717cdecb368821cf6f839f760b0a79f67b6d48c1aa4bd3b53f296d08532ab98c48657
   languageName: node
   linkType: hard
 
@@ -9726,6 +9745,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"lighthouse-stack-packs@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "lighthouse-stack-packs@npm:1.5.0"
+  checksum: 15da9d2fd4f5f34bc298bd22f266ae8f91e854f4104e4b973c192cefe66c72cb642b191f06337841d22ca257cb2e8a8aa3e704ebd5abb45af7214f2f209127b0
+  languageName: node
+  linkType: hard
+
 "lighthouse@npm:7.3.0":
   version: 7.3.0
   resolution: "lighthouse@npm:7.3.0"
@@ -9772,24 +9798,22 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lighthouse@npm:^7.5.0":
-  version: 7.5.0
-  resolution: "lighthouse@npm:7.5.0"
+"lighthouse@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "lighthouse@npm:8.0.0"
   dependencies:
-    axe-core: 4.1.3
-    chrome-launcher: ^0.13.4
+    axe-core: 4.2.1
+    chrome-launcher: ^0.14.0
     configstore: ^5.0.1
     csp_evaluator: ^1.0.1
     cssstyle: 1.2.1
     enquirer: ^2.3.6
     http-link-header: ^0.8.0
-    intl: ^1.2.5
     intl-messageformat: ^4.4.0
-    intl-pluralrules: ^1.0.3
     jpeg-js: ^0.4.1
     js-library-detector: ^6.4.0
     lighthouse-logger: ^1.2.0
-    lighthouse-stack-packs: ^1.4.0
+    lighthouse-stack-packs: ^1.5.0
     lodash.clonedeep: ^4.5.0
     lodash.get: ^4.4.2
     lodash.isequal: ^4.5.0
@@ -9812,7 +9836,7 @@ fsevents@~2.3.1:
     chrome-debug: ./lighthouse-core/scripts/manual-chrome-launcher.js
     lighthouse: ./lighthouse-cli/index.js
     smokehouse: ./lighthouse-cli/test/smokehouse/frontends/smokehouse-bin.js
-  checksum: 9ced0938253a3231956b019b3a514d625ef7aa60a725f9f2183737b0b1043f47078da0b6afad102ee2858607192d0201fe5d9092ba6db99ba30b4acfe9149ad6
+  checksum: f896b099f0f8b587f97eeec2ff8413f4d8bb401cc6fe3b0473c3d668cd0383aac958bcfa2ababd889dcd962849bad27c9d012c40acd909fa179f3a9fa76bc5fe
   languageName: node
   linkType: hard
 

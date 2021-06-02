@@ -46,7 +46,7 @@
     "gulp-merge-json": "^2.1.1",
     "iconv-lite": "^0.6.3",
     "isomorphic-fetch": "^3.0.0",
-    "lighthouse": "^7.5.0",
+    "lighthouse": "^8.0.0",
     "lighthouse-logger": "^1.2.0",
     "local-web-server": "^4.2.1",
     "lws": "3.1.0",
