@@ -1355,7 +1355,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lhci/utils@npm:0.7.2, @lhci/utils@npm:^0.7.2":
+"@lhci/utils@npm:0.7.2":
   version: 0.7.2
   resolution: "@lhci/utils@npm:0.7.2"
   dependencies:
@@ -1365,6 +1365,19 @@ __metadata:
     lighthouse: 7.3.0
     tree-kill: ^1.2.1
   checksum: 5a3df7be5e9ec0213fcbe7661402188118d899499af45b28bf722e4e88ccdce0840bde724d2ba4ad2dcfe8c525e2aa808b8ca8a97f83680e783cc8b5c794503f
+  languageName: node
+  linkType: hard
+
+"@lhci/utils@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "@lhci/utils@npm:0.8.0"
+  dependencies:
+    debug: ^4.3.1
+    isomorphic-fetch: ^3.0.0
+    js-yaml: ^3.13.1
+    lighthouse: 8.0.0
+    tree-kill: ^1.2.1
+  checksum: ccf359864106d238ec6f14ee633568403c9af1790dfa86e403acae636226a349d83a343d1829ec6e0269f832a090e64666bd2a7da3915b2703479b2c78d89244
   languageName: node
   linkType: hard
 
@@ -1965,7 +1978,7 @@ __metadata:
   resolution: "@topmonks/webs@workspace:."
   dependencies:
     "@lhci/cli": ^0.7.2
-    "@lhci/utils": ^0.7.2
+    "@lhci/utils": ^0.8.0
     "@material/button": ^11.0.0
     "@material/layout-grid": ^11.0.0
     "@material/top-app-bar": ^11.0.0
@@ -3000,6 +3013,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axe-core@npm:4.2.1":
+  version: 4.2.1
+  resolution: "axe-core@npm:4.2.1"
+  checksum: 6a3f1a9f2d4c8a27aafd044acb2d02d52008ef392aeced4859fcfa85a559347e267eeb9db1f7d5807eda30d895354cdbfeb3437b018b45904e3cc609bf461906
+  languageName: node
+  linkType: hard
+
 "axios@npm:0.21.1":
   version: 0.21.1
   resolution: "axios@npm:0.21.1"
@@ -3953,6 +3973,18 @@ __metadata:
     mkdirp: ^0.5.3
     rimraf: ^3.0.2
   checksum: c571a990545d06f31e2afc0f8e7ad8c0f4824ee2c8c3a21f74d523595de3c0688a92e6dda9d1d278083f85fd25400e9088cb81afee5efeaee47d382b6fef86fd
+  languageName: node
+  linkType: hard
+
+"chrome-launcher@npm:^0.14.0":
+  version: 0.14.0
+  resolution: "chrome-launcher@npm:0.14.0"
+  dependencies:
+    "@types/node": "*"
+    escape-string-regexp: ^4.0.0
+    is-wsl: ^2.2.0
+    lighthouse-logger: ^1.0.0
+  checksum: 9c538d68069a90a7235b1f0bc323f287844fa92c7dd31985f138dd6a4d0717cdecb368821cf6f839f760b0a79f67b6d48c1aa4bd3b53f296d08532ab98c48657
   languageName: node
   linkType: hard
 
@@ -9726,6 +9758,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"lighthouse-stack-packs@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "lighthouse-stack-packs@npm:1.5.0"
+  checksum: 15da9d2fd4f5f34bc298bd22f266ae8f91e854f4104e4b973c192cefe66c72cb642b191f06337841d22ca257cb2e8a8aa3e704ebd5abb45af7214f2f209127b0
+  languageName: node
+  linkType: hard
+
 "lighthouse@npm:7.3.0":
   version: 7.3.0
   resolution: "lighthouse@npm:7.3.0"
@@ -9769,6 +9808,48 @@ fsevents@~2.3.1:
     chrome-debug: ./lighthouse-core/scripts/manual-chrome-launcher.js
     lighthouse: ./lighthouse-cli/index.js
   checksum: c086b1860e2d7771bf5ddd223ecfe7a473a2cc66d366d2e8d14d9c8c0f48718be924a4f15c2365c549a44981630a9811b36bf2eb0612b4513e3289554964c538
+  languageName: node
+  linkType: hard
+
+"lighthouse@npm:8.0.0":
+  version: 8.0.0
+  resolution: "lighthouse@npm:8.0.0"
+  dependencies:
+    axe-core: 4.2.1
+    chrome-launcher: ^0.14.0
+    configstore: ^5.0.1
+    csp_evaluator: ^1.0.1
+    cssstyle: 1.2.1
+    enquirer: ^2.3.6
+    http-link-header: ^0.8.0
+    intl-messageformat: ^4.4.0
+    jpeg-js: ^0.4.1
+    js-library-detector: ^6.4.0
+    lighthouse-logger: ^1.2.0
+    lighthouse-stack-packs: ^1.5.0
+    lodash.clonedeep: ^4.5.0
+    lodash.get: ^4.4.2
+    lodash.isequal: ^4.5.0
+    lodash.set: ^4.3.2
+    lookup-closest-locale: 6.0.4
+    metaviewport-parser: 0.2.0
+    open: ^6.4.0
+    parse-cache-control: 1.0.1
+    ps-list: ^7.2.0
+    raven: ^2.2.1
+    robots-parser: ^2.0.1
+    semver: ^5.3.0
+    speedline-core: ^1.4.3
+    third-party-web: ^0.12.2
+    update-notifier: ^4.1.0
+    ws: 3.3.2
+    yargs: ^16.1.1
+    yargs-parser: ^20.2.4
+  bin:
+    chrome-debug: ./lighthouse-core/scripts/manual-chrome-launcher.js
+    lighthouse: ./lighthouse-cli/index.js
+    smokehouse: ./lighthouse-cli/test/smokehouse/frontends/smokehouse-bin.js
+  checksum: f896b099f0f8b587f97eeec2ff8413f4d8bb401cc6fe3b0473c3d668cd0383aac958bcfa2ababd889dcd962849bad27c9d012c40acd909fa179f3a9fa76bc5fe
   languageName: node
   linkType: hard
 

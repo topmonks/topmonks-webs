@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@lhci/cli": "^0.7.2",
-    "@lhci/utils": "^0.7.2",
+    "@lhci/utils": "^0.8.0",
     "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=eecc67ba2de3b4f9d9705e6517bb56f9dc5a2bbd",
     "@types/chart.js": "^2.9.32",
     "@types/yaml": "^1.9.7",
