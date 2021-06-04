@@ -1,9 +1,6 @@
 export default function setStyles(params) {
   const setCssProperty = name =>
-    document.documentElement.style.setProperty(
-      `--${name}`,
-      params.get(name)
-    );
+    document.documentElement.style.setProperty(`--${name}`, params.get(name));
 
   const allowedProperties = [
     "color",
