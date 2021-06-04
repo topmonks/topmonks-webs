@@ -27,7 +27,6 @@ const config = createSharedTaskConfig(__dirname, {
     extensions: ["js", "mjs"],
     options: {
       bundle: true,
-      splitting: true,
       minify: mode.production(),
       sourcemap: true,
       format: "esm",
