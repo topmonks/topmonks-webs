@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <title>Countdown</title>
+    <style>
+      body {
+        color: var(--color, #fff);
+        background-color: var(--background-color, #000);
+        -webkit-font-feature-settings: "kern","liga","clig","calt","lnum","zero";
+        font-feature-settings: "kern","liga","clig","calt","lnum","zero";
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: geometricPrecision;
+        -webkit-font-kerning: normal;
+        font-kerning: normal;
+        font-size: 16px;
+        -webkit-font-variant-ligatures: common-ligatures contextual;
+        font-variant-ligatures: common-ligatures contextual;
+        font-variant-numeric: lining-nums slashed-zero;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        font-family: var(
+          --font-family,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          "Liberation Sans",
+          "Helvetica Neue",
+          sans-serif
+        );
+        font-size: var(--font-size, 36px);
+        font-weight: var(--font-weight, 700);
+        margin: 0 0 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="countdown"></h1>
+    <script src="/assets/esm/countdown.js" type="module"></script>
+  </body>
+</html>

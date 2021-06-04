@@ -26,6 +26,11 @@
     "dest": "assets/js"
   },
 
+  "esbuild": {
+    "src": "javascripts",
+    "dest": "assets/esm"
+  },
+
   "stylesheets": {
     "src": "stylesheets",
     "dest": "assets/css"

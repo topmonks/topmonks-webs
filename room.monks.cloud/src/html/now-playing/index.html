@@ -31,6 +31,20 @@
       body {
         color: var(--color, #fff);
         background-color: var(--background-color, #000);
+        -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum",
+          "zero";
+        font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: geometricPrecision;
+        -webkit-font-kerning: normal;
+        font-kerning: normal;
+        font-size: 16px;
+        -webkit-font-variant-ligatures: common-ligatures contextual;
+        font-variant-ligatures: common-ligatures contextual;
+        font-variant-numeric: lining-nums slashed-zero;
+        letter-spacing: 0;
       }
 
       h1 {
@@ -49,37 +63,10 @@
   <body>
     <h1 id="now-playing"></h1>
     <script type="module">
+      import setStyles from "https://zive.tv/assets/esm/set-styles.js";
+
       const nowPlaying = document.getElementById("now-playing");
       const params = new URLSearchParams(location.search);
-
-      function setStyles(params) {
-        const setCssProperty = name =>
-          document.documentElement.style.setProperty(
-            `--${name}`,
-            params.get(name)
-          );
-
-        const allowedProperties = [
-          "color",
-          "background-color",
-          "font-family",
-          "font-size",
-          "font-weight"
-        ];
-        for (const prop of allowedProperties) {
-          if (params.has(prop)) setCssProperty(prop);
-        }
-
-        if (params.has("gfonts")) {
-          const link = document.createElement("link");
-          link.href = `https://fonts.googleapis.com/css2?${new URLSearchParams({
-            family: params.get("gfonts"),
-            display: "swap"
-          })}`;
-          link.rel = "stylesheet";
-          document.head.appendChild(link);
-        }
-      }
 
       async function update() {
         const resp = await fetch("https://room-api.monks.cloud/v1/now-playing");

@@ -1885,6 +1885,60 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@thi.ng/api@npm:^7.1.4":
+  version: 7.1.4
+  resolution: "@thi.ng/api@npm:7.1.4"
+  checksum: 48406ac38b88b4e612c259e6637455ff31a21882456fd94069346a5658d889e1c6acafb5752325cdebbbd2658078739bdd412aebde7752d7ba0bbffc59937e91
+  languageName: node
+  linkType: hard
+
+"@thi.ng/atom@npm:^4.1.35":
+  version: 4.1.35
+  resolution: "@thi.ng/atom@npm:4.1.35"
+  dependencies:
+    "@thi.ng/api": ^7.1.4
+    "@thi.ng/equiv": ^1.0.41
+    "@thi.ng/errors": ^1.3.0
+    "@thi.ng/paths": ^4.2.7
+    tslib: ^2.1.0
+  checksum: a944482dac0703857c2ff9e3dca521e01621fc91c1ab0a681e568641dff88485be4caba42ec642a3040c0bb49340af6256d36908da7f7e86b0011c8094bebd0d
+  languageName: node
+  linkType: hard
+
+"@thi.ng/checks@npm:^2.9.6":
+  version: 2.9.6
+  resolution: "@thi.ng/checks@npm:2.9.6"
+  dependencies:
+    tslib: ^2.1.0
+  checksum: 20639efb8b81304192a5b41558d594683e07149f46bd34b5a53ca8301554089c926105906c7a2b3cffe98c6233c8043a45180d36d9c479642b20723e9920133c
+  languageName: node
+  linkType: hard
+
+"@thi.ng/equiv@npm:^1.0.41":
+  version: 1.0.41
+  resolution: "@thi.ng/equiv@npm:1.0.41"
+  checksum: 4cb5d653fc59458ffdaf1ca40747643d4fc34ae674c801c567ca8cebba6213e13f986e0337e232d1edb4d89d054eb4f3e34cfba854477a534aa230c105ca102c
+  languageName: node
+  linkType: hard
+
+"@thi.ng/errors@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@thi.ng/errors@npm:1.3.0"
+  checksum: 890a74ae6468f15c6f1d81c2d05bfb6c888f6e3d5d0917ee113d74488f871bd92028f51fe37b618f6d853f3a6ff993e233fee0acdd4bc56854d1a10313af008e
+  languageName: node
+  linkType: hard
+
+"@thi.ng/paths@npm:^4.2.7":
+  version: 4.2.7
+  resolution: "@thi.ng/paths@npm:4.2.7"
+  dependencies:
+    "@thi.ng/api": ^7.1.4
+    "@thi.ng/checks": ^2.9.6
+    "@thi.ng/errors": ^1.3.0
+  checksum: 8ead8cd959d9cf066b7097d37ac46edabc1094e0474bd42e31748a3ae8baa2793849f5b89c5371aa9bafc5bb731a2c0fde6c63445bcc63302bcbe51734e87a06
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:1":
   version: 1.1.2
   resolution: "@tootallnate/once@npm:1.1.2"
@@ -1972,6 +2026,7 @@ __metadata:
     "@pulumi/aws": ^4.6.0
     "@pulumi/awsx": ^0.30.0
     "@pulumi/pulumi": ^3.3.1
+    "@thi.ng/atom": ^4.1.35
     "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=eecc67ba2de3b4f9d9705e6517bb56f9dc5a2bbd"
     "@topmonks/pulumi-aws": ^1.8.3
     "@types/chart.js": ^2.9.32
@@ -1993,13 +2048,15 @@ __metadata:
     eslint-plugin-prettier: ^3.4.0
     eslint-plugin-promise: ^5.1.0
     esm: ^3.2.25
+    gulp-esbuild: ^0.8.1
     gulp-markdown-to-json: ^1.1.0
     gulp-merge-json: ^2.1.1
+    gulp-mode: ^1.1.0
     iconv-lite: ^0.6.3
     isomorphic-fetch: ^3.0.0
     lighthouse: ^7.5.0
     lighthouse-logger: ^1.2.0
-    lit-html: ^1.4.1
+    lit-html: 2.0.0-rc.3
     local-web-server: ^4.2.1
     lodash: ^4.17.21
     lws: 3.1.0
@@ -2021,9 +2078,11 @@ __metadata:
     marked: ^2.0.6
     node-fetch: 3.0.0-beta.9
     npm-run-all: ^4.1.5
+    parse-duration: ^1.0.0
     prettier: ^2.3.0
     puppeteer: ^10.0.0
     rimraf: ^3.0.2
+    rxjs: ^7.1.0
     stylelint: ^13.13.1
     stylelint-config-prettier: ^8.0.2
     tap-xunit: ^2.4.1
@@ -2171,6 +2230,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: e6e6613c800aeda63e2331e753e8d21df1a2c9aa7a4bc71ed792a848e4811fc96e609759089355314a2318c76eff1f161499cd242044838ab1e6f56e463ebb9c
+  languageName: node
+  linkType: hard
+
+"@types/trusted-types@npm:^1.0.1":
+  version: 1.0.6
+  resolution: "@types/trusted-types@npm:1.0.6"
+  checksum: a2eb3e307d4fa212888285de782e96bd083dbabb991c3803aed124d50c9637529699299319ec8be301b3c5668067f6ea07785c3c6099f99d92783a3dab48de29
   languageName: node
   linkType: hard
 
@@ -7422,6 +7488,17 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"gulp-esbuild@npm:^0.8.1":
+  version: 0.8.1
+  resolution: "gulp-esbuild@npm:0.8.1"
+  dependencies:
+    esbuild: ^0.12.5
+    plugin-error: ^1.0.1
+    vinyl: ^2.2.1
+  checksum: c9c4f087784c67afbc2b7cd4b032590779c3764e88256dd61bd05a4ff6d772a84998d36db101f47c970303d46db910c4489939057d43840cd5f942d9a5109fe3
+  languageName: node
+  linkType: hard
+
 "gulp-html-postcss@npm:^7.1.4":
   version: 7.1.4
   resolution: "gulp-html-postcss@npm:7.1.4"
@@ -7521,6 +7598,26 @@ fsevents@~2.3.1:
     through: ^2.3.8
     vinyl: ^2.1.0
   checksum: 14bd322cde9426dd14739ea5b15b9a71eaefa9f9c5d921295837589163f6c248c58cae59486bc81a7bfe8a225f729569483e531fdb46d8d8419dbcbf2a1c9a27
+  languageName: node
+  linkType: hard
+
+"gulp-mode@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "gulp-mode@npm:1.1.0"
+  dependencies:
+    ansi-colors: ^4.1.1
+    fancy-log: ^1.3.3
+    gulp-noop: ^1.0.1
+  checksum: 0b9e9758f1a9af0b91455afb3d6963c1e51815999975ac47bab9a057f99e3bbb9e84057268a8466235c437829646fe587aa5f8f2477be784c7a1d5bb08af21f8
+  languageName: node
+  linkType: hard
+
+"gulp-noop@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "gulp-noop@npm:1.0.1"
+  dependencies:
+    through2: ^2.0.0
+  checksum: 7d1e6852bbff62af84b6dc0c231bea37500322493531c8b15cfc2b935ef169ae480db9b50f367d37b9f31cb508c5b3bcc433827ee478ead5d351a22f646a54ef
   languageName: node
   linkType: hard
 
@@ -9840,10 +9937,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lit-html@npm:^1.4.1":
-  version: 1.4.1
-  resolution: "lit-html@npm:1.4.1"
-  checksum: cf3dea0afa2cb014a258169b1b597272f868385ba7b5d7a55258500aa4f2fb3d79e903dd22aa2076ff1c801ba5fbcde3db2ca185707ae57ca3816c95e8bcc086
+"lit-html@npm:2.0.0-rc.3":
+  version: 2.0.0-rc.3
+  resolution: "lit-html@npm:2.0.0-rc.3"
+  dependencies:
+    "@types/trusted-types": ^1.0.1
+  checksum: 6e7f6411f1749dd925d6bb2ff9af9d9fc5bede25c6cf3ef45b7d1fcd888a43096fa6be555fee43626ea1be1c2a82a282d73ce90a7465c775aed03bc1a8398cac
   languageName: node
   linkType: hard
 
@@ -11923,6 +12022,13 @@ fsevents@~2.3.1:
   version: 1.0.1
   resolution: "parse-cache-control@npm:1.0.1"
   checksum: 2a3e5bc32adb707a1a1784b44e01d54d894bfad894aaede2e293f9c374fe735ef852164d94b615e513ceccf0638c4e175c774056a308d47e9e38221cd90523aa
+  languageName: node
+  linkType: hard
+
+"parse-duration@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "parse-duration@npm:1.0.0"
+  checksum: a2d18d9d2231fe637a032d19a853f7ecaffdfa67a6d0cd220e755cee128ef8eeca4bbb0ae4103a22bc0f81c8c9e91deb1cc79b023482135ec236f5fcee9af6f4
   languageName: node
   linkType: hard
 
@@ -14163,6 +14269,15 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"rxjs@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "rxjs@npm:7.1.0"
+  dependencies:
+    tslib: ~2.1.0
+  checksum: e4d71512e71278002f8399e0741b6a51b383b74476b687074961bc3a66ed48d657fa7b77a6d6dc07535fe265abd9d510afbcab598f86dba3218e76470f0ec3e7
+  languageName: node
+  linkType: hard
+
 "safe-buffer@npm:5.1.2, safe-buffer@npm:~5.1.0, safe-buffer@npm:~5.1.1":
   version: 5.1.2
   resolution: "safe-buffer@npm:5.1.2"
@@ -16049,6 +16164,13 @@ fsevents@~2.3.1:
   version: 2.2.0
   resolution: "tslib@npm:2.2.0"
   checksum: 2d35468c470410871c5246e43f12dcb6d0fc363b617c176f26443b9530e5c5ee8448966892a42956168d8f495da7865bda33dfe82c26c91991e28999974a618f
+  languageName: node
+  linkType: hard
+
+"tslib@npm:~2.1.0":
+  version: 2.1.0
+  resolution: "tslib@npm:2.1.0"
+  checksum: d8f5bdd067611651c6b846c2388f4dc8ba1f5af124e66105f5263d1ad56da17f4b8c6566887ca2f205c5a9758451871ceca87d5d06087af2dca1699c5e33db69
   languageName: node
   linkType: hard
 
