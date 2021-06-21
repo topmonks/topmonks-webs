@@ -29,6 +29,9 @@
     .testimonial__content {
       max-width: 80%;
     }
+    .about .icon-section__content svg {
+      min-height: 48px;
+    }
 
     @media (max-width: 839px) {
       .main-info img {
@@ -81,9 +84,9 @@
           <img alt="Fotka PostCube" src="{{ domacnostiPC | cloudinaryUrl(dpr="auto", width=860) }}">
         </div>
         <div class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-          <h1>PostCube k&nbsp;rodinnému domu</h1>
-          <p>Zásilka vám dorazí nezávisle na tom, co právě děláte. Kurýr ji
-            zvládne doručit bez vaší přítomnosti!
+          <h1>PostCube do bytového domu nebo firmy</h1>
+          <p>Soustřeďte se na činnosti, které za to stojí. Přijímejte a odesílejte
+            zásilky v&nbsp;pohodlí domova či kanceláře!
             <b>#necekamnakuryra</b></p>
         </div>
       </div>
@@ -168,7 +171,7 @@
 
   {% include 'components/how-it-works.njk' %}
   {% include 'components/get-app.njk' %}
-  {% include 'components/choose-pc.njk' %}
+  {% include 'components/domacnosti__choose-pc.njk' %}
   {% include 'components/create-pc.njk' %}
   {% include 'components/faq.njk' %}
 
