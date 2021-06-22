@@ -145,7 +145,8 @@
       "assert": {
         "assertions": {
           "offscreen-images": "warn",
-          "preload-lcp-image": "warn"
+          "preload-lcp-image": "warn",
+          "is-crawlable": "warn"
         }
       },
       "upload": {
