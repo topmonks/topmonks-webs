@@ -15,7 +15,8 @@
         "redirects-http": "off",
         "render-blocking-resources": "warn",
         "uses-rel-preconnect": "warn",
-        "unused-javascript": "warn"
+        "unused-javascript": "warn",
+        "csp-xss": "warn"
       }
     },
     "upload": {
