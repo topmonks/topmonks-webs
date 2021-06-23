@@ -1946,21 +1946,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@topmonks/blendid@https://github.com/topmonks/blendid.git#commit=eecc67ba2de3b4f9d9705e6517bb56f9dc5a2bbd":
+"@topmonks/blendid@https://github.com/topmonks/blendid.git#commit=bb9d8cd3ea1d1ae5b3e4c2f2cd5ee4a01bff7dfe":
   version: 6.0.0
-  resolution: "@topmonks/blendid@https://github.com/topmonks/blendid.git#commit=eecc67ba2de3b4f9d9705e6517bb56f9dc5a2bbd"
+  resolution: "@topmonks/blendid@https://github.com/topmonks/blendid.git#commit=bb9d8cd3ea1d1ae5b3e4c2f2cd5ee4a01bff7dfe"
   dependencies:
     "@rollup/plugin-alias": ^3.1.2
     "@rollup/plugin-node-resolve": ^13.0.0
     ansi-colors: 4.1.1
     autoprefixer: 10.2.6
     browser-sync: 2.26.14
-    cloudinary: ^1.25.1
-    cssnano: ^5.0.5
+    cloudinary: ^1.26.1
+    cssnano: ^5.0.6
     del: 6.0.0
     fancy-log: ^1.3.3
     gulp: ^4.0.2
-    gulp-changed: ^4.0.2
+    gulp-changed: ^4.0.3
     gulp-cloudinary-upload: "https://github.com/topmonks/gulp-cloudinary-upload.git#50b82e73a9d9cd4b350647b8717e843c1acd201a"
     gulp-dart-sass: ^1.0.2
     gulp-data: ^1.3.1
@@ -1981,16 +1981,16 @@ __metadata:
     gulp-sizereport: ^1.2.1
     gulp-sourcemaps: "git://github.com/gulp-sourcemaps/gulp-sourcemaps.git"
     gulp-svgmin: ^3.0.0
-    gulp-svgstore: ^7.0.1
+    gulp-svgstore: ^8.0.0
     lodash: ^4.17.21
-    marked: ^2.0.6
+    marked: ^2.1.2
     merge-stream: ^2.0.0
     minify-html-literals: ^1.3.5
-    open: ^8.2.0
+    open: ^8.2.1
     plugin-error: ^1.0.1
-    postcss: ^8.3.0
+    postcss: ^8.3.5
     pretty-hrtime: ^1.0.3
-    rollup: ^2.50.4
+    rollup: ^2.52.2
     rollup-plugin-minify-html-literals: ^1.2.6
     sass: =1.32.10
     stream-array: ^1.1.2
@@ -1999,7 +1999,7 @@ __metadata:
     workbox-build: ^6.1.5
   bin:
     blendid: bin/blendid.js
-  checksum: 1e761e3935ead7fbd8c189c9bf7ffe4e47058bef7c10ca85871a3b836ed8de6994936f93f09024bfc595d914b3caae9f4a678dd547454b0b5ebf36b215813629
+  checksum: b40a41f3826d3c0f84e955111b4488ef99911759363f2ccf52bbdbb2f973f1b2ac7bc6617c27d3ee5e1fd881bdb49af35f8d8cb28ef5c32d54bf4791229d07bf
   languageName: node
   linkType: hard
 
@@ -2027,7 +2027,7 @@ __metadata:
     "@pulumi/awsx": ^0.30.0
     "@pulumi/pulumi": ^3.5.1
     "@thi.ng/atom": ^4.1.36
-    "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=eecc67ba2de3b4f9d9705e6517bb56f9dc5a2bbd"
+    "@topmonks/blendid": "https://github.com/topmonks/blendid.git#commit=bb9d8cd3ea1d1ae5b3e4c2f2cd5ee4a01bff7dfe"
     "@topmonks/pulumi-aws": ^1.8.3
     "@types/chart.js": ^2.9.32
     "@types/node": ^14.17.3
@@ -3837,30 +3837,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cheerio@npm:0.*":
-  version: 0.22.0
-  resolution: "cheerio@npm:0.22.0"
-  dependencies:
-    css-select: ~1.2.0
-    dom-serializer: ~0.1.0
-    entities: ~1.1.1
-    htmlparser2: ^3.9.1
-    lodash.assignin: ^4.0.9
-    lodash.bind: ^4.1.4
-    lodash.defaults: ^4.0.1
-    lodash.filter: ^4.4.0
-    lodash.flatten: ^4.2.0
-    lodash.foreach: ^4.3.0
-    lodash.map: ^4.4.0
-    lodash.merge: ^4.4.0
-    lodash.pick: ^4.2.1
-    lodash.reduce: ^4.4.0
-    lodash.reject: ^4.4.0
-    lodash.some: ^4.4.0
-  checksum: fbdec8b182e1f070b3b351c8084cfd1d11e05f6e609ff9dbd5ba13d87f1ffe8f6ce033149e8bcf5ddfbc1cc4e0f2b853d6f35884c3e019ee66cbee47cea25d7a
-  languageName: node
-  linkType: hard
-
 "cheerio@npm:^1.0.0-rc.10":
   version: 1.0.0-rc.10
   resolution: "cheerio@npm:1.0.0-rc.10"
@@ -4171,7 +4147,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cloudinary@npm:^1.13.1, cloudinary@npm:^1.25.1":
+"cloudinary@npm:^1.13.1":
   version: 1.25.1
   resolution: "cloudinary@npm:1.25.1"
   dependencies:
@@ -4180,6 +4156,18 @@ __metadata:
     lodash: ^4.17.11
     q: ^1.5.1
   checksum: 1e8d320cff8b6702ce720be2be82dee0e3011eb95f39519193883d608b845cc2cbaaeb68d23d17e78a83d5a68a09a57f4e23fea2c27212888848786dd570239c
+  languageName: node
+  linkType: hard
+
+"cloudinary@npm:^1.26.1":
+  version: 1.26.1
+  resolution: "cloudinary@npm:1.26.1"
+  dependencies:
+    cloudinary-core: ^2.10.2
+    core-js: 3.6.5
+    lodash: ^4.17.11
+    q: ^1.5.1
+  checksum: 71aff47fb7e1dd573f425e448b3e8fc45565384e1235bb3c4d54ac8bed564dcda8695d1b39e183f7982c73ed4d7a646701620ac23e248f10085fa0ddd8cc92c7
   languageName: node
   linkType: hard
 
@@ -4836,18 +4824,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-select@npm:~1.2.0":
-  version: 1.2.0
-  resolution: "css-select@npm:1.2.0"
-  dependencies:
-    boolbase: ~1.0.0
-    css-what: 2.1
-    domutils: 1.5.1
-    nth-check: ~1.0.1
-  checksum: c1fdd9040c677cd872e57761aafce8b603fa3c979117cc9d70e0e4901d6e0c751abe3b05b93d918835413165916d7f7132559a6f350863124f6bbbec2b1694d8
-  languageName: node
-  linkType: hard
-
 "css-tree@npm:1.0.0-alpha.37":
   version: 1.0.0-alpha.37
   resolution: "css-tree@npm:1.0.0-alpha.37"
@@ -4865,13 +4841,6 @@ __metadata:
     mdn-data: 2.0.14
     source-map: ^0.6.1
   checksum: 5b1bf44c457f4682feef5d1fccf0758aabaec3b77f264418a022826a0e4c2dc9f2283205223ddba147eba8ee4cb88caa91298b54c4b7e9af345bb820e9a32868
-  languageName: node
-  linkType: hard
-
-"css-what@npm:2.1":
-  version: 2.1.3
-  resolution: "css-what@npm:2.1.3"
-  checksum: 732fcecfe3247eadd79081790934f9aa003ca935657d87a4737afc03dc378f8f3d1a071066328a226d98299d15e855c886f625119fe1d7f2367659d3335bde6f
   languageName: node
   linkType: hard
 
@@ -4923,9 +4892,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssnano-preset-default@npm:^5.1.2":
-  version: 5.1.2
-  resolution: "cssnano-preset-default@npm:5.1.2"
+"cssnano-preset-default@npm:^5.1.3":
+  version: 5.1.3
+  resolution: "cssnano-preset-default@npm:5.1.3"
   dependencies:
     css-declaration-sorter: ^6.0.3
     cssnano-utils: ^2.0.1
@@ -4949,16 +4918,16 @@ __metadata:
     postcss-normalize-string: ^5.0.1
     postcss-normalize-timing-functions: ^5.0.1
     postcss-normalize-unicode: ^5.0.1
-    postcss-normalize-url: ^5.0.1
+    postcss-normalize-url: ^5.0.2
     postcss-normalize-whitespace: ^5.0.1
-    postcss-ordered-values: ^5.0.1
+    postcss-ordered-values: ^5.0.2
     postcss-reduce-initial: ^5.0.1
     postcss-reduce-transforms: ^5.0.1
     postcss-svgo: ^5.0.2
     postcss-unique-selectors: ^5.0.1
   peerDependencies:
     postcss: ^8.2.15
-  checksum: d8f76d7f4e59a1062fbf7abb9f929cc8d67d4384c6d97d8615c2e2c8e95f140ccd57bd394f3c3c8f98c693351e8efe6a55f4aa281b709c231a0e04029228bbe2
+  checksum: 81590cb54b12012c175a98d2e8d09b39574083974abae3abb55f67694f9db8b864707b21b16f2db8d89bb48d27375bb0f48449b3551f794f5bf558640d0c1113
   languageName: node
   linkType: hard
 
@@ -4971,16 +4940,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssnano@npm:^5.0.5":
-  version: 5.0.5
-  resolution: "cssnano@npm:5.0.5"
+"cssnano@npm:^5.0.6":
+  version: 5.0.6
+  resolution: "cssnano@npm:5.0.6"
   dependencies:
     cosmiconfig: ^7.0.0
-    cssnano-preset-default: ^5.1.2
+    cssnano-preset-default: ^5.1.3
     is-resolvable: ^1.1.0
   peerDependencies:
     postcss: ^8.2.15
-  checksum: 9aa3c957db2dad2dbd054f8450210333d93da25f094529ebc1b21bb69bd5512e5114a11c918375e18f03c3831e3ea556c347b177cbb7411ed08caa02acf1bc93
+  checksum: 086ad98e2c55f2307ab3ca15c584d2ed8924456c3893a755155778bf2203ba5318699fefb4e91e15e6e4c4b38cb364c889e366ca44c95b3a4c9d34c23fedb9a2
   languageName: node
   linkType: hard
 
@@ -5429,17 +5398,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dom-serializer@npm:~0.1.0":
-  version: 0.1.1
-  resolution: "dom-serializer@npm:0.1.1"
-  dependencies:
-    domelementtype: ^1.3.0
-    entities: ^1.1.1
-  checksum: 5c6c89b18c6db6dcb3697b1e63a3118ae7126c5bf1f3d39861bb9e585b7a46232866c5e0d5ff9175afac79395618716cfb285439c85f8c805f09da1f5caf2264
-  languageName: node
-  linkType: hard
-
-"domelementtype@npm:1, domelementtype@npm:^1.3.0, domelementtype@npm:^1.3.1":
+"domelementtype@npm:1, domelementtype@npm:^1.3.1":
   version: 1.3.1
   resolution: "domelementtype@npm:1.3.1"
   checksum: a4791788de07071422b2fe63b58cfb89c2507def6864954d0d7a062adb00fc925059856d29c3e48051c8fa2f20147e5d3fb24b1adbc5bdf0f9e99981b53b74c6
@@ -5468,16 +5427,6 @@ __metadata:
   dependencies:
     domelementtype: ^2.2.0
   checksum: 1bdb0ae6b9a93f4a2e8a77da304a435bfd35af0e52c5208f24277093b7fa2e6084cdbd4eb7fdd5c0ca5bf2c67736a19b258fe9e61588f4c49eaa0abde8d3595d
-  languageName: node
-  linkType: hard
-
-"domutils@npm:1.5.1":
-  version: 1.5.1
-  resolution: "domutils@npm:1.5.1"
-  dependencies:
-    dom-serializer: 0
-    domelementtype: 1
-  checksum: ffc578118d3e50d0f34a0bba37575492998d43b7e54764533b1890e6c233b67068a0f369d1d23d200aa71c3fe87f2d60fdc4a87479e416edafecc33f00fc9735
   languageName: node
   linkType: hard
 
@@ -5773,7 +5722,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"entities@npm:^1.1.1, entities@npm:~1.1.1":
+"entities@npm:^1.1.1":
   version: 1.1.2
   resolution: "entities@npm:1.1.2"
   checksum: 3a4259db358c612853e616915d398e692a3c5dbaa4da44b9a6fce15ab88615cadc9790af608c3bee152972ece69ae61a22f4a13272fd943db2ceaee02ce5cc87
@@ -6869,7 +6818,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@~2.3.1#builtin<compat/fsevents>":
+"fsevents@patch:fsevents@~2.3.1#builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.2#builtin<compat/fsevents>":
   version: 2.3.2
   resolution: "fsevents@patch:fsevents@npm%3A2.3.2#builtin<compat/fsevents>::version=2.3.2&hash=11e9ea"
   dependencies:
@@ -6878,7 +6827,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-fsevents@~2.3.1:
+"fsevents@~2.3.1, fsevents@~2.3.2":
   version: 2.3.2
   resolution: "fsevents@npm:2.3.2"
   dependencies:
@@ -7261,9 +7210,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"gulp-changed@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "gulp-changed@npm:4.0.2"
+"gulp-changed@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "gulp-changed@npm:4.0.3"
   dependencies:
     make-dir: ^3.0.0
     plugin-error: ^1.0.1
@@ -7275,7 +7224,7 @@ fsevents@~2.3.1:
   peerDependenciesMeta:
     gulp:
       optional: true
-  checksum: 1465d1d91b89a84da2b1450832cc2f57d51c0b545a6437cba4d6d2e3efddcf40ca853c257aa08ef2fafa9b59c904f772010de761b1c956ae716fe95a4ae97c54
+  checksum: 829261fdcad4add5c447b8bf5a8df3df85d3384add9d392883201e61c942f32b391e12a25ab40322114c196db62cff658e92ab482f8b2ad127194db4a48e4bc5
   languageName: node
   linkType: hard
 
@@ -7625,15 +7574,15 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"gulp-svgstore@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "gulp-svgstore@npm:7.0.1"
+"gulp-svgstore@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "gulp-svgstore@npm:8.0.0"
   dependencies:
-    cheerio: 0.*
-    fancy-log: ^1.3.2
-    plugin-error: ^0.1.2
-    vinyl: ^2.1.0
-  checksum: 7b51e4b970794c3da89f755028f05bfe126acd47b6f56b6c833abb4144163c42c426b70ffa8c9f6bbb530c6ca9771c95c3491ab3325c4ccfa028999ac9d09531
+    cheerio: ^1.0.0-rc.10
+    fancy-log: ^1.3.3
+    plugin-error: ^1.0.1
+    vinyl: ^2.2.1
+  checksum: f0ba9cf721570e4ed033ed7becaf44ba7f455c4704bdfcdc05ba25a6e64ee06fe5ec26145194089e88dcd613a7deaf37a77e047baafb3deb70d65c0ab59a55ca
   languageName: node
   linkType: hard
 
@@ -7877,7 +7826,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"htmlparser2@npm:^3.10.0, htmlparser2@npm:^3.9.1, htmlparser2@npm:^3.9.2":
+"htmlparser2@npm:^3.10.0, htmlparser2@npm:^3.9.2":
   version: 3.10.1
   resolution: "htmlparser2@npm:3.10.1"
   dependencies:
@@ -9780,24 +9729,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lodash.assignin@npm:^4.0.9":
-  version: 4.2.0
-  resolution: "lodash.assignin@npm:4.2.0"
-  checksum: 0f6714535147b9114e3acb59a80b8e43f1d2c7b9ab0fee3ae5e8df93cecda3c6f6c1e513b2ce8b8e81d89b15481f2df69cfe0abf2584c739f96890cca858b173
-  languageName: node
-  linkType: hard
-
 "lodash.assignwith@npm:^4.2.0":
   version: 4.2.0
   resolution: "lodash.assignwith@npm:4.2.0"
   checksum: d35a6e3762f9eab3838b624d1067e21587ab2680074ec84783f9aacb4c830953ae0fe43ce241ee376177c10f9461391a136d43bf3a79d1fc563229f7f7dc5919
-  languageName: node
-  linkType: hard
-
-"lodash.bind@npm:^4.1.4":
-  version: 4.2.1
-  resolution: "lodash.bind@npm:4.2.1"
-  checksum: 8f6e03432ca47650aaa7565c33511272fdcc2c51eefaa12d8fac06704610a1987b68a62cabe0a18068412df7066e62ee0bc4e10d5fbaf1b28e4edb275bed3b46
   languageName: node
   linkType: hard
 
@@ -9822,34 +9757,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lodash.defaults@npm:^4.0.1":
-  version: 4.2.0
-  resolution: "lodash.defaults@npm:4.2.0"
-  checksum: fde72e71f7b7ece10c24e43dd601574168467d50bc76687302d40de341d5cb8e35b100105d938458747d2ad5f20d8bb736e62523ef39d1a8b40f7307c50f10ac
-  languageName: node
-  linkType: hard
-
-"lodash.filter@npm:^4.4.0":
-  version: 4.6.0
-  resolution: "lodash.filter@npm:4.6.0"
-  checksum: b4f23b12f04c56484871a05016830b601f2c87405b1ddaf5f786d1040991ef081a9864e70b00e495b8fe3fb0d47fd288af240d55ce46a8ab6722168127455872
-  languageName: node
-  linkType: hard
-
-"lodash.flatten@npm:^4.2.0":
-  version: 4.4.0
-  resolution: "lodash.flatten@npm:4.4.0"
-  checksum: f22a7f6f163256d87345b07c76122e03d03abbf943b6c3aa5e5fafb7d5bce765013aedfc2aae7e649af0907287a2cf85de24237dbdd3ecd485a77d56e070b54c
-  languageName: node
-  linkType: hard
-
-"lodash.foreach@npm:^4.3.0":
-  version: 4.5.0
-  resolution: "lodash.foreach@npm:4.5.0"
-  checksum: aa177589a923db147831937b2b74746276247a4c0870c8dfe14bcebb009e9a89b33287589ba0af90a6fa2355b0759cea03ab6d0a25219a25d0d96222de4a831f
-  languageName: node
-  linkType: hard
-
 "lodash.get@npm:^4.4.2":
   version: 4.4.2
   resolution: "lodash.get@npm:4.4.2"
@@ -9871,13 +9778,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lodash.map@npm:^4.4.0":
-  version: 4.6.0
-  resolution: "lodash.map@npm:4.6.0"
-  checksum: f8a8f4072c8ed72f07d63514e45d7267fa619a7998b8a1ccb875db4c265e655f4a71c5d527370185070be80900ab574c5cd285debce557e6cb4f9692a02ffa62
-  languageName: node
-  linkType: hard
-
 "lodash.memoize@npm:^4.1.2":
   version: 4.1.2
   resolution: "lodash.memoize@npm:4.1.2"
@@ -9885,7 +9785,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lodash.merge@npm:^4.4.0, lodash.merge@npm:^4.6.2":
+"lodash.merge@npm:^4.6.2":
   version: 4.6.2
   resolution: "lodash.merge@npm:4.6.2"
   checksum: 4e2bb42a87a148991458d7c384bc197e96f7115e9536fc8e2c86ae9e99ce1c1f693ff15eb85761952535f48d72253aed8e673d9f32dde3e671cd91e3fde220a7
@@ -9899,38 +9799,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lodash.pick@npm:^4.2.1":
-  version: 4.4.0
-  resolution: "lodash.pick@npm:4.4.0"
-  checksum: 3cf24484b1bd36652bfbe1e925e6955ee0332f1612919331a2d6115d5617bcaaf559e4fb21f4160d51eb2359f7a8dc0e478773da516b4ccc15ef261327064aab
-  languageName: node
-  linkType: hard
-
-"lodash.reduce@npm:^4.4.0":
-  version: 4.6.0
-  resolution: "lodash.reduce@npm:4.6.0"
-  checksum: 1f8eb29e6f14ceb7abae77c1815eaeca329a8fe419b02236f60ab19dfc88c8475e959990afe93118534c4d7c9d17fed1f1876a36dda16cb70e27eb779fecf15a
-  languageName: node
-  linkType: hard
-
-"lodash.reject@npm:^4.4.0":
-  version: 4.6.0
-  resolution: "lodash.reject@npm:4.6.0"
-  checksum: cc377681a5449065b0dd14c6c57b384257e9ab7b5af9efe69b7c3ab17c2ab02e0b72005fd6153fcd2ba0ba741aa53e11936ad2b7037e0f593e6a510a783b6ffc
-  languageName: node
-  linkType: hard
-
 "lodash.set@npm:^4.3.2":
   version: 4.3.2
   resolution: "lodash.set@npm:4.3.2"
   checksum: 4dfedacae1c1cf86385a2b6e30ba538f06c90d703a0abd83a11432d80ec24b4016fe27359cdc0554a02a31a468789cbb282801dd755e54581cf0295477e2341d
-  languageName: node
-  linkType: hard
-
-"lodash.some@npm:^4.4.0":
-  version: 4.6.0
-  resolution: "lodash.some@npm:4.6.0"
-  checksum: ac19755d79e0745643762f0415b667034837b137d801f0bd0a7fa2a21b653f3f9342076f6fd2ddb394109a96cd68a157b84d961d3c91e47b37a5d96a40c2233e
   languageName: node
   linkType: hard
 
@@ -10360,15 +10232,6 @@ fsevents@~2.3.1:
   version: 1.1.3
   resolution: "markdown-table@npm:1.1.3"
   checksum: 9b77ee80cad3837c2ba5cb9a5aa458c465d2e98d5a493bfdc4c7a643490704c119f83ccbdd019b40384feff1e47666e47437fb03febe3af0e330bd008ef917f8
-  languageName: node
-  linkType: hard
-
-"marked@npm:^2.0.6":
-  version: 2.0.6
-  resolution: "marked@npm:2.0.6"
-  bin:
-    marked: bin/marked
-  checksum: 73c10b8531521f16ba79b4f9cfd6d35a9e454ab795586aaff004a5f88c2db8e669c7db4e4079123823baf596df2a5a5aa39e50663eb8b86b25a59bc0d5f4b5b3
   languageName: node
   linkType: hard
 
@@ -11175,10 +11038,17 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"normalize-url@npm:^4.1.0, normalize-url@npm:^4.5.0":
+"normalize-url@npm:^4.1.0":
   version: 4.5.0
   resolution: "normalize-url@npm:4.5.0"
   checksum: 09794941dbe5c7b91caf6f3cd1ae167c27f6d09793e4a03601a68b62de7e8ee9e5de21a246130cdbab98b01481de292f9556d492444a527648f9cf1220e4b0df
+  languageName: node
+  linkType: hard
+
+"normalize-url@npm:^6.0.1":
+  version: 6.1.0
+  resolution: "normalize-url@npm:6.1.0"
+  checksum: 5fb69e98c149f4a54a7bb0f1904cc524627c0d23327a9feafacacf135d01d9595c65e80ced6f27c17c1959541ea732815b604ff8a6ec52ec3fe7a391b92cfba9
   languageName: node
   linkType: hard
 
@@ -11240,7 +11110,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"nth-check@npm:^1.0.2, nth-check@npm:~1.0.1":
+"nth-check@npm:^1.0.2":
   version: 1.0.2
   resolution: "nth-check@npm:1.0.2"
   dependencies:
@@ -11476,14 +11346,14 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"open@npm:^8.2.0":
-  version: 8.2.0
-  resolution: "open@npm:8.2.0"
+"open@npm:^8.2.1":
+  version: 8.2.1
+  resolution: "open@npm:8.2.1"
   dependencies:
     define-lazy-prop: ^2.0.0
     is-docker: ^2.1.1
     is-wsl: ^2.2.0
-  checksum: fb1cc80b7891f2c92dbbc28b2efa5d4a5881eb6784473328b36508ade91ed9c5460f7f0c09fcff20c81be6c462e1e9daf4833d3307cf96dc24694fe7c0ad5e28
+  checksum: 69c86cddeaec0917fae43fa3c8801a6a11d0c8794da66556f1987233961f8558a952570a61c1991ee53d31117efb5774c8df87c70509ad6fec0c79adf34864d7
   languageName: node
   linkType: hard
 
@@ -12475,16 +12345,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss-normalize-url@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "postcss-normalize-url@npm:5.0.1"
+"postcss-normalize-url@npm:^5.0.2":
+  version: 5.0.2
+  resolution: "postcss-normalize-url@npm:5.0.2"
   dependencies:
     is-absolute-url: ^3.0.3
-    normalize-url: ^4.5.0
+    normalize-url: ^6.0.1
     postcss-value-parser: ^4.1.0
   peerDependencies:
     postcss: ^8.2.15
-  checksum: 6aba19eb7ead19df1c2fdc350ead4bf2552a430227a09f03899bc21ed442acb38f331f335bf3cd7784953d7c3f5863cdf8b4665f7a2366fcb5c9c775faebd923
+  checksum: 6a939267f58b5ed7c89e0771bded5dbf31342c0131ffd42d928afb110430622a08ce85b057fe66382407ce8ff4dbd448952278bacf61274c94afe516adaa74d5
   languageName: node
   linkType: hard
 
@@ -12499,15 +12369,15 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss-ordered-values@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "postcss-ordered-values@npm:5.0.1"
+"postcss-ordered-values@npm:^5.0.2":
+  version: 5.0.2
+  resolution: "postcss-ordered-values@npm:5.0.2"
   dependencies:
     cssnano-utils: ^2.0.1
     postcss-value-parser: ^4.1.0
   peerDependencies:
     postcss: ^8.2.15
-  checksum: bb1720395bfe96eac41e44a5dc09eb9b8c40e38fd39e11965ec6943baf0fbf862b851e2c67c385b7e94180e1751a9786d7c7672d28b36b7fa18db8418a5fb81e
+  checksum: 479311212309ec73d0e7bbc19fb81345f4eb8d69e504337e774adc3dd6403a53d99c0ed687989b0ddf4bbbfc981e8dfacefa1112fd22179bbf11e11525735eba
   languageName: node
   linkType: hard
 
@@ -12684,14 +12554,14 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.3.0":
-  version: 8.3.0
-  resolution: "postcss@npm:8.3.0"
+"postcss@npm:^8.3.5":
+  version: 8.3.5
+  resolution: "postcss@npm:8.3.5"
   dependencies:
     colorette: ^1.2.2
     nanoid: ^3.1.23
     source-map-js: ^0.6.2
-  checksum: 438f9b9ea5a1ad66a36c944c77a55218ea0ac9d07ba63891854e8597b1a3b7710caa25d01f7783a6b8f4a3a8d52c295da422b92e546b37d6896909c19c7d4975
+  checksum: 87dc16efcf40286fad4ded0a433497ddbc55dfad3d7ddb200ba9c0761ec376280fa2c06a522628583c9284def85894c52bc361cffedf0679f4936370c084a145
   languageName: node
   linkType: hard
 
@@ -13833,17 +13703,17 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.50.4":
-  version: 2.50.5
-  resolution: "rollup@npm:2.50.5"
+"rollup@npm:^2.52.2":
+  version: 2.52.2
+  resolution: "rollup@npm:2.52.2"
   dependencies:
-    fsevents: ~2.3.1
+    fsevents: ~2.3.2
   dependenciesMeta:
     fsevents:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 1e56eb05085fdba94eca783cbf399617d3151cf024ed39897ea46f4e2fa8a37b836770926575dcfe7e3a419e5a34c4a7dc8d77c90e94117a7072bfc327c77117
+  checksum: b08f33d8e8813d99a223658d951395be939d187afbc7af079afb3e695d47dd7664514a8379380953903683fe59a0133ee2c595e5ed680947e40c110c0641a6f3
   languageName: node
   linkType: hard
 
