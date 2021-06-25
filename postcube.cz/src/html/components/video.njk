@@ -12,9 +12,11 @@
   .video__content video {
     width: 80%;
   }
+
   .video__content-wrapper {
     position: relative;
   }
+
   .video__content-wrapper button {
     background: none;
     border: none;
@@ -30,6 +32,7 @@
       height: 65px;
     }
   }
+
   @media (min-width: 540px) and (max-width: 839px) {
     .video__content-wrapper svg {
       position: absolute;
@@ -39,6 +42,7 @@
       height: 120px;
     }
   }
+
   @media (min-width: 840px) and (max-width: 1439px) {
     .video__content-wrapper svg {
       position: absolute;
@@ -46,6 +50,7 @@
       left: 42%;
     }
   }
+
   @media (min-width: 1440px) {
     .video__content-wrapper svg {
       position: absolute;
@@ -64,23 +69,26 @@
       </div>
       <div class="video__content mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <div class="video__content-wrapper">
-        <video id="video"
-               src="https://res.cloudinary.com/topmonks/video/upload/f_auto/v1621971318/postcube.cz/PostCube-Video.mp4">
-          <img alt="Video"
-               src="{{ video | cloudinaryUrl(dpr="auto", width=1082) }}"
-               srcset="{{ video | cloudinaryUrl(dpr="1", width=1082) }} 1x,
-                       {{ video | cloudinaryUrl(dpr="1.5", width=1082) }} 1.5x,
-                       {{ video | cloudinaryUrl(dpr="2", width=1082) }} 2x"
-               width="1082"
-               height="608">
-        </video>
-        <button id="play-btn" aria-label="Přehrát video o PostCube">
-          <svg width="162" height="162" viewBox="0 0 162 162" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M81 0C36.2677 0 0 36.2677 0 81C0 125.732 36.2677 162 81 162C125.732 162 162 125.732 162 81C162 36.2677 125.732 0 81 0ZM60.75 114.75V47.25L121.5 81.9855L60.75 114.75Z"
-              fill="white"/>
-          </svg>
-        </button>
+          <video
+            id="video"
+            src="https://res.cloudinary.com/topmonks/video/upload/f_auto/v1621971318/postcube.cz/PostCube-Video.mp4">
+            <img
+              alt="Video"
+              loading="lazy"
+              src="{{ video | cloudinaryUrl(dpr="auto", width=1082) }}"
+              srcset="{{ video | cloudinaryUrl(dpr="1", width=1082) }} 1x,
+                      {{ video | cloudinaryUrl(dpr="1.5", width=1082) }} 1.5x,
+                      {{ video | cloudinaryUrl(dpr="2", width=1082) }} 2x"
+              width="1082"
+              height="608">
+          </video>
+          <button id="play-btn" aria-label="Přehrát video o PostCube">
+            <svg width="162" height="162" viewBox="0 0 162 162" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M81 0C36.2677 0 0 36.2677 0 81C0 125.732 36.2677 162 81 162C125.732 162 162 125.732 162 81C162 36.2677 125.732 0 81 0ZM60.75 114.75V47.25L121.5 81.9855L60.75 114.75Z"
+                fill="white"/>
+            </svg>
+          </button>
         </div>
 
         <script type="module">
@@ -89,7 +97,7 @@
           playButton.addEventListener("click", () => {
             video.play();
             video.controls = true;
-            playButton.style.display="none";
+            playButton.style.display = "none";
           });
         </script>
 
