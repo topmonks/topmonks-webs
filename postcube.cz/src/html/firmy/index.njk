@@ -117,17 +117,17 @@
           otevřete pohodlně přes Bluetooth ve svém telefonu.</p>
       </div>
       <div class="action-btn mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <a href="https://shop.postcube.cz/" class="action-btn__label">Objednat PostCube</a>
+        {# <a href="https://shop.postcube.cz/" class="action-btn__label">Objednat PostCube</a> #}
+        <a href="#contact" class="action-btn__label">Kontaktujte nás</a>
       </div>
     </div>
   </section>
+
   {% include 'components/guarantee.njk' %}
   <div class="guarantee__bg">
     <img alt="Fotografie PostCube" src="{{ firmyBG01 | cloudinaryUrl(dpr="auto", width=860) }}">
     <img alt="Fotografie PostCube" src="{{ firmyBG02 | cloudinaryUrl(dpr="auto", width=860) }}">
   </div>
-
-
 
   <section class="testimonial mdc-layout-grid">
     <div class="mdc-layout-grid__inner layout-wrapper">
