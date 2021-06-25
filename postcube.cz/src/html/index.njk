@@ -1,6 +1,6 @@
 {% extends 'layouts/homepage.njk' %}
 {% set language = cs %}
-{% set hpBg01 = images["hp-bg01.png"]["public_id"] %}
+{% set box_n_woman = images["box-n-woman.jpg"]["public_id"] %}
 {% set hpBg02 = images["hp-bg02.png"]["public_id"] %}
 {% set box_header = images["box-header-image.jpg"]["public_id"] %}
 
@@ -182,10 +182,10 @@
 
   {% include 'components/guarantee.njk' %}
   <div class="guarantee__bg">
-    <img alt="Fotografie PostCube u domu" src="{{ hpBg01 | cloudinaryUrl(dpr="auto", width=860) }}"
-                   srcset="{{ hpBg01 | cloudinaryUrl(dpr="1", width=860) }} 1x,
-                       {{ hpBg01 | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
-                       {{ hpBg01 | cloudinaryUrl(dpr="2", width=860) }} 2x"
+    <img alt="Fotografie PostCube u domu" src="{{ box_n_woman | cloudinaryUrl(dpr="auto", width=860) }}"
+                   srcset="{{ box_n_woman | cloudinaryUrl(dpr="1", width=860) }} 1x,
+                       {{ box_n_woman | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
+                       {{ box_n_woman | cloudinaryUrl(dpr="2", width=860) }} 2x"
                width="860"
                height="640">
     <img alt="Fotografie PostCube jako poštovní schránky" src="{{ hpBg02 | cloudinaryUrl(dpr="auto", width=860) }}"
@@ -219,7 +219,7 @@
 </svg>
         <h2>Pokus o&nbsp;doručení nebyl úspěšný. Zásilku si vyzvedněte na
           pobočce.</h2>
-        <p>Tyhle lístečky aby čert vzal!</p>
+        <p>Tyhle zprávy aby čert vzal.</p>
       </div>
     </div>
   </section>
