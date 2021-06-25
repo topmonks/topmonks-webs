@@ -1161,5 +1161,26 @@
     "existing": false,
     "original_filename": "hp-bg022",
     "api_key": "389916164315219"
+  },
+  "hp-bg023.png": {
+    "asset_id": "e1efe190e3dd285f34e9e94306941b2f",
+    "public_id": "postcube.cz/hp-bg023",
+    "version": 1624643548,
+    "version_id": "3d1f33c5a46819e16578bfc5009a3e21",
+    "signature": "af847e47ad681edeb2daad8d33439cbfe889dbb2",
+    "width": 2560,
+    "height": 1707,
+    "format": "png",
+    "resource_type": "image",
+    "created_at": "2021-06-25T17:52:28Z",
+    "tags": [],
+    "bytes": 2441967,
+    "type": "upload",
+    "placeholder": false,
+    "url": "http://res.cloudinary.com/topmonks/image/upload/v1624643548/postcube.cz/hp-bg023.png",
+    "secure_url": "https://res.cloudinary.com/topmonks/image/upload/v1624643548/postcube.cz/hp-bg023.png",
+    "existing": true,
+    "api_key": "389916164315219",
+    "original_filename": "hp-bg023"
   }
 }
