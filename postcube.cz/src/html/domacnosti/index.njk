@@ -22,6 +22,13 @@
       height: auto;
     }
 
+    .guarantee__bg {
+      width: 100%;
+    }
+    .guarantee__bg picture {
+      flex-grow: 1;
+    }
+
     .main-info__content {
       max-width: 97%;
     }
@@ -132,7 +139,7 @@
             fill="#1538E5"/>
         </svg>
         <h3>Úžasně jednoduché</h3>
-        <p>Při objednávce zboží stačí zaslat odkaz k otevření kurýrovi. 
+        <p>Při objednávce zboží stačí zaslat odkaz k otevření kurýrovi.
           Mobilní aplikace vás sama upozorní, že balík právě přišel.</p>
       </div>
       <div class="action-btn mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -142,18 +149,40 @@
   </section>
   {% include 'components/guarantee.njk' %}
   <div class="guarantee__bg">
-    <img alt="Fotografie PostCube u domu" src="{{ domacnostiBG01 | cloudinaryUrl(dpr="auto", width=860) }}"
-                   srcset="{{ domacnostiBG01 | cloudinaryUrl(dpr="1", width=860) }} 1x,
-                       {{ domacnostiBG01 | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
-                       {{ domacnostiBG01 | cloudinaryUrl(dpr="2", width=860) }} 2x"
-               width="860"
-               height="640">
-    <img alt="Fotografie PostCube ve vašem domě" src="{{ domacnostiBG02 | cloudinaryUrl(dpr="auto", width=860) }}"
-                       srcset="{{ domacnostiBG02 | cloudinaryUrl(dpr="1", width=860) }} 1x,
-                       {{ domacnostiBG02 | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
-                       {{ domacnostiBG02 | cloudinaryUrl(dpr="2", width=860) }} 2x"
-               width="860"
-               height="640">
+    <picture>
+      <source
+        media="screen and (min-width: 839px)"
+        srcset="{{ domacnostiBG01 | cloudinaryUrl(dpr="1", width=420) }} 1x,
+                {{ domacnostiBG01 | cloudinaryUrl(dpr="1.5", width=420) }} 1.5x,
+                {{ domacnostiBG01 | cloudinaryUrl(dpr="2", width=420) }} 2x">
+      <source
+        media="screen and (min-width: 840px)"
+        srcset="{{ domacnostiBG01 | cloudinaryUrl(dpr="1", width=860) }} 1x,
+                {{ domacnostiBG01 | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
+                {{ domacnostiBG01 | cloudinaryUrl(dpr="2", width=860) }} 2x">
+      <img
+        alt="Fotografie PostCube u domu"
+        src="{{ domacnostiBG01 | cloudinaryUrl(dpr="auto", width=860) }}"
+        width="860"
+        height="573">
+    </picture>
+    <picture>
+      <source
+        media="screen and (min-width: 839px)"
+        srcset="{{ domacnostiBG02 | cloudinaryUrl(dpr="1", width=420) }} 1x,
+                {{ domacnostiBG02 | cloudinaryUrl(dpr="1.5", width=420) }} 1.5x,
+                {{ domacnostiBG02 | cloudinaryUrl(dpr="2", width=420) }} 2x">
+      <source
+        media="screen and (min-width: 840px)"
+        srcset="{{ domacnostiBG02 | cloudinaryUrl(dpr="1", width=860) }} 1x,
+                {{ domacnostiBG02 | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
+                {{ domacnostiBG02 | cloudinaryUrl(dpr="2", width=860) }} 2x">
+      <img
+        alt="Fotografie PostCube ve vašem domě"
+        src="{{ domacnostiBG02 | cloudinaryUrl(dpr="auto", width=860) }}"
+        width="860"
+        height="573">
+    </picture>
   </div>
 
 
