@@ -156,6 +156,12 @@
   },
   "postcube.cz": {
     "lhci": {
+      "assert":  {
+        "assertions":{
+          "uses-responsive-images": "warn",
+          "errors-in-console": "warn"
+        }
+      },
       "upload": {
         "token": "1ed787ee-329a-4625-9407-2a543bd8e92c"
       }
