@@ -17,13 +17,14 @@ body {
   margin: 0;
 }
 
-
 .layout-wrapper {
   max-width: 1224px;
   margin: 0 auto;
 }
 
-textarea:focus, button:focus, input:focus {
+textarea:focus,
+button:focus,
+input:focus {
   outline: none;
 }
 
@@ -55,7 +56,6 @@ textarea:focus, button:focus, input:focus {
   }
 }
 
-
 // Svg filling color //
 svg {
   .a {
@@ -65,12 +65,19 @@ svg {
 
 // For Similar Sections of Icons and Text //
 .icon-section {
-    text-align: center;
-    padding: 4em 1em 6em;
+  text-align: center;
+  padding: 4em 1em 6em;
   .icon-section__content {
     max-width: 290px;
     margin: 0 auto;
     position: relative;
+
+    @media (min-width: 800px) {
+      &--wide {
+        margin-top: 4em;
+        max-width: 760px;
+      }
+    }
   }
 
   .action-btn {
@@ -123,4 +130,3 @@ svg {
     }
   }
 }
-
