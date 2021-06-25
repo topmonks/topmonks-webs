@@ -87,13 +87,28 @@
       <div class="mdc-layout-grid__inner layout-wrapper">
         <div
           class="main-info__bg mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
-          <img alt="Fotka PostCube"
-               src="{{ box_header | cloudinaryUrl(dpr="auto", width=860) }}"
-               srcset="{{ box_header | cloudinaryUrl(dpr="1", width=860) }} 1x,
-                       {{ box_header | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
-                       {{ box_header | cloudinaryUrl(dpr="2", width=860) }} 2x"
-               width="860"
-               height="581">
+          <picture>
+            <source
+              media="screen and (max-width: 399px)"
+              srcset="{{ box_header | cloudinaryUrl(dpr="1", width=400) }} 1x,
+                      {{ box_header | cloudinaryUrl(dpr="1.5", width=400) }} 1.5x,
+                      {{ box_header | cloudinaryUrl(dpr="2", width=400) }} 2x">
+            <source
+              media="screen and (min-width: 400px) and (max-width: 599px)"
+              srcset="{{ box_header | cloudinaryUrl(dpr="1", width=600) }} 1x,
+                      {{ box_header | cloudinaryUrl(dpr="1.5", width=600) }} 1.5x,
+                      {{ box_header | cloudinaryUrl(dpr="2", width=600) }} 2x">
+            <source
+              media="screen and (min-width: 840px)"
+              srcset="{{ box_header | cloudinaryUrl(dpr="1", width=860) }} 1x,
+                      {{ box_header | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
+                      {{ box_header | cloudinaryUrl(dpr="2", width=860) }} 2x">
+            <img
+              alt="Fotka PostCube"
+              src="{{ box_header | cloudinaryUrl(dpr="auto", width=860) }}"
+              width="860"
+              height="581">
+          </picture>
         </div>
         <div
           class="main-info__content mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
@@ -201,18 +216,40 @@
 
   {% include 'components/guarantee.njk' %}
   <div class="guarantee__bg">
-    <img alt="Fotografie PostCube u domu" src="{{ box_n_woman | cloudinaryUrl(dpr="auto", width=860) }}"
-                   srcset="{{ box_n_woman | cloudinaryUrl(dpr="1", width=860) }} 1x,
-                       {{ box_n_woman | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
-                       {{ box_n_woman | cloudinaryUrl(dpr="2", width=860) }} 2x"
-               width="860"
-               height="640">
-    <img alt="Fotografie PostCube jako poštovní schránky" src="{{ hpBg02 | cloudinaryUrl(dpr="auto", width=860) }}"
-              srcset="{{ hpBg02 | cloudinaryUrl(dpr="1", width=860) }} 1x,
+    <picture>
+      <source
+        media="screen and (max-width: 839px)"
+        srcset="{{ box_n_woman | cloudinaryUrl(dpr="1", width=420) }} 1x,
+                {{ box_n_woman | cloudinaryUrl(dpr="1.5", width=420) }} 1.5x,
+                {{ box_n_woman | cloudinaryUrl(dpr="2", width=420) }} 2x">
+      <source
+        media="screen and (min-width: 840px)"
+        srcset="{{ box_n_woman | cloudinaryUrl(dpr="1", width=860) }} 1x,
+                {{ box_n_woman | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
+                {{ box_n_woman | cloudinaryUrl(dpr="2", width=860) }} 2x">
+      <img alt="Fotografie PostCube u domu"
+           loading="lazy"
+           src="{{ box_n_woman | cloudinaryUrl(dpr="auto", width=860) }}"
+           width="860"
+           height="574">
+    </picture>
+    <picture>
+      <source
+        media="screen and (max-width: 839px)"
+        srcset="{{ hpBg02 | cloudinaryUrl(dpr="1", width=420) }} 1x,
+                {{ hpBg02 | cloudinaryUrl(dpr="1.5", width=420) }} 1.5x,
+                {{ hpBg02 | cloudinaryUrl(dpr="2", width=420) }} 2x">
+      <source
+        media="screen and (min-width: 840px)"
+        srcset="{{ hpBg02 | cloudinaryUrl(dpr="1", width=860) }} 1x,
                 {{ hpBg02 | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
-                {{ hpBg02 | cloudinaryUrl(dpr="2", width=860) }} 2x"
-                width="860"
-                height="640">
+                {{ hpBg02 | cloudinaryUrl(dpr="2", width=860) }} 2x">
+      <img alt="Fotografie PostCube jako poštovní schránky"
+          loading="lazy"
+          src="{{ hpBg02 | cloudinaryUrl(dpr="auto", width=860) }}"
+          width="860"
+          height="574">
+    </picture>
   </div>
 
   <section class="testimonial mdc-layout-grid">
