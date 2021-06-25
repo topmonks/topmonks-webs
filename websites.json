@@ -159,7 +159,8 @@
       "assert":  {
         "assertions":{
           "uses-responsive-images": "warn",
-          "errors-in-console": "warn"
+          "errors-in-console": "warn",
+          "no-unload-listeners": "warn"
         }
       },
       "upload": {
