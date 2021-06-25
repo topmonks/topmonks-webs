@@ -83,7 +83,7 @@ body {
 
 // Buttons //
 button.content-btn {
-  font-family: 'Roobert';
+  font-family: 'Roobert', sans-serif;
   width: 100%;
   height: 56px;
   background-color: var(--postcube-secondary);
@@ -91,7 +91,7 @@ button.content-btn {
   text-align: center;
   transition-duration: 0.4s;
 
-  a {
+  a, span {
     font-size: 18px;
     text-decoration: none;
     color: var(--postcube-black);
@@ -100,6 +100,11 @@ button.content-btn {
   &:hover {
     cursor: pointer;
     background-color: var(--postcube-secondary-light);
+  }
+
+  &[disabled] {
+    background-color: #B3B4BA;
+    color: #444;
   }
 }
 
