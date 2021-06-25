@@ -4,8 +4,6 @@
 {% set prepravciBG01 = images["delivery-van.jpg"]["public_id"] %}
 {% set prepravciBG02 = images["delivery-mobile.jpg"]["public_id"] %}
 
-
-
 {% block title %}
   PostCube - Přepravci
 {% endblock %}
@@ -42,14 +40,16 @@
     @media (min-width: 840px) and (max-width: 2039px) {
       .main-info {
         align-self: center;
-        background-image: url({{ deliveryman | cloudinaryUrl(dpr="auto", width=1020) }});
-        background-size: 45% auto;
-        background-position: center right;
-        background-repeat: no-repeat;
         margin-top: 8em;
       }
       .main-info img {
         display: none;
+      }
+      .main-info__bg {
+        background-image: url({{ deliveryman | cloudinaryUrl(dpr="auto", width=1020) }});
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
       }
     }
     @media (min-width: 2040px) {
