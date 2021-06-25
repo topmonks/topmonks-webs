@@ -152,8 +152,14 @@ const config = createSharedTaskConfig(__dirname, {
                   default: true
                 },
                 {
-                  value: accessories["Držák na zeď"][0].code,
-                  price: accessories["Držák na zeď"][0].price,
+                  value:
+                    accessories[
+                      "Držák na zeď (k dispozici pouze s hranatým boxem)"
+                    ][0].code,
+                  price:
+                    accessories[
+                      "Držák na zeď (k dispozici pouze s hranatým boxem)"
+                    ][0].price,
                   label: "ano"
                 }
               ]
@@ -203,10 +209,10 @@ const config = createSharedTaskConfig(__dirname, {
       });
     },
     development: {
-      prebuild: ["configurator-data"]
+      //prebuild: ["configurator-data"]
     },
     production: {
-      prebuild: ["configurator-data"]
+      // prebuild: ["configurator-data"]
     }
   },
 
