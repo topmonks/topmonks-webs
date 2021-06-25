@@ -182,8 +182,18 @@
 
   {% include 'components/guarantee.njk' %}
   <div class="guarantee__bg">
-    <img alt="Fotografie PostCube u domu" src="{{ hpBg01 | cloudinaryUrl(dpr="auto", width=860) }}">
-    <img alt="Fotografie PostCube jako poštovní schránky" src="{{ hpBg02 | cloudinaryUrl(dpr="auto", width=860) }}">
+    <img alt="Fotografie PostCube u domu" src="{{ hpBg01 | cloudinaryUrl(dpr="auto", width=860) }}"
+                   srcset="{{ hpBg01 | cloudinaryUrl(dpr="1", width=860) }} 1x,
+                       {{ hpBg01 | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
+                       {{ hpBg01 | cloudinaryUrl(dpr="2", width=860) }} 2x"
+               width="860"
+               height="640">
+    <img alt="Fotografie PostCube jako poštovní schránky" src="{{ hpBg02 | cloudinaryUrl(dpr="auto", width=860) }}"
+    srcset="{{ hpBg02 | cloudinaryUrl(dpr="1", width=860) }} 1x,
+                       {{ hpBg02 | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
+                       {{ hpBg02 | cloudinaryUrl(dpr="2", width=860) }} 2x"
+               width="860"
+               height="640">
   </div>
 
   <section class="testimonial mdc-layout-grid">

@@ -142,8 +142,18 @@
   </section>
   {% include 'components/guarantee.njk' %}
   <div class="guarantee__bg">
-    <img alt="Fotografie PostCube u domu" src="{{ domacnostiBG01 | cloudinaryUrl(dpr="auto", width=860) }}">
-    <img alt="Fotografie PostCube ve vašem domě" src="{{ domacnostiBG02 | cloudinaryUrl(dpr="auto", width=860) }}">
+    <img alt="Fotografie PostCube u domu" src="{{ domacnostiBG01 | cloudinaryUrl(dpr="auto", width=860) }}"
+                   srcset="{{ domacnostiBG01 | cloudinaryUrl(dpr="1", width=860) }} 1x,
+                       {{ domacnostiBG01 | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
+                       {{ domacnostiBG01 | cloudinaryUrl(dpr="2", width=860) }} 2x"
+               width="860"
+               height="640">
+    <img alt="Fotografie PostCube ve vašem domě" src="{{ domacnostiBG02 | cloudinaryUrl(dpr="auto", width=860) }}"
+                       srcset="{{ domacnostiBG02 | cloudinaryUrl(dpr="1", width=860) }} 1x,
+                       {{ domacnostiBG02 | cloudinaryUrl(dpr="1.5", width=860) }} 1.5x,
+                       {{ domacnostiBG02 | cloudinaryUrl(dpr="2", width=860) }} 2x"
+               width="860"
+               height="640">
   </div>
 
 
