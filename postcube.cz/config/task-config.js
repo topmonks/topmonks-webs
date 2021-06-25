@@ -110,24 +110,24 @@ const config = createSharedTaskConfig(__dirname, {
           sizes: mainProducts.sort(byOrderProperty).map(tranformSizes),
           colors,
           accessories: [
-            {
-              name: "Noha",
-              productId: accessories["Noha"][0].code.split("/")[0],
-              options: [
-                {
-                  value: null,
-                  label: "žádná",
-                  default: true
-                },
-                ...accessories["Noha"].map(
-                  ({ code, price, "variant:Velikost": label }) => ({
-                    value: code.split("/")[1],
-                    price,
-                    label
-                  })
-                )
-              ]
-            },
+            // {
+            //   name: "Noha",
+            //   productId: accessories["Noha"][0].code.split("/")[0],
+            //   options: [
+            //     {
+            //       value: null,
+            //       label: "žádná",
+            //       default: true
+            //     },
+            //     ...accessories["Noha"].map(
+            //       ({ code, price, "variant:Velikost": label }) => ({
+            //         value: code.split("/")[1],
+            //         price,
+            //         label
+            //       })
+            //     )
+            //   ]
+            // },
             // {
             //   name: "Stříška",
             //   options: [
