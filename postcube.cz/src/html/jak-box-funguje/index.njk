@@ -32,6 +32,12 @@
         font-size: 70px;
       }
     }
+
+    .accordion {
+      margin-top: 2em;
+      border-top: 1px solid #B3B4BA;
+      padding-top: 2em;
+    }
   </style>
 
 {% endblock %}
@@ -56,7 +62,7 @@
     </div>
   </section>
 
-  <section id="" class="how-pc-works">
+  <section id="prijimani-zasilek" class="how-pc-works">
     <div class="mdc-layout-grid">
       <div class="mdc-layout-grid__inner layout-wrapper">
         <div id="step--one" class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -65,15 +71,15 @@
             <div class="steps__content mdc-layout-grid__cell">
               <img alt="Fotografie - Upozornění na Telefonu" src="{{ notify | cloudinaryUrl(dpr="auto", width=400) }}">
               <h3>Notifikace o&nbsp;doručení</h3>
-              <p>Kurýr přes jednorázový kód otevře vaši PostCube a vloží do ní
+              <p>Kurýr pomocí zaslaného jednorázového kódu otevře vaši PostCube a vloží do ní
                 balík. V&nbsp;aplikaci pak potvrdí doručení a vám o&nbsp;tom ihned přijde
                 notifikace.</p>
             </div>
             <div class="steps__content mdc-layout-grid__cell">
               <img alt="Fotografie - Otevření boxu" src="{{ boxBG02 | cloudinaryUrl(dpr="auto", width=400) }}">
               <h3>Otevření chytrého boxu</h3>
-              <p>V&nbsp;okamžiku, kdy chcete zásilku vyzvednout, přijmete v&nbsp;aplikaci
-                doručenou objednávku a spárováním přes Bluetooth otevřete&nbsp;box.</p>
+              <p>V&nbsp;okamžiku, kdy chcete zásilku vyzvednout, v&nbsp;aplikaci ve svém telefonu
+                otevřete poštovní schránku a zkontrolujete její&nbsp;obsah.</p>
             </div>
             <div class="steps__content mdc-layout-grid__cell">
               <img alt="Fotografie Převzetí zásilky" src="{{ boxBG03 | cloudinaryUrl(dpr="auto", width=400) }}">
@@ -81,6 +87,28 @@
               <p>Pak stačí kliknout na tlačítko „zásilka v&nbsp;pořádku převzata“.
                 Pokud se vyskytne nějaká nesrovnalost, můžete v&nbsp;aplikaci nahlásit
                 problém.</p>
+            </div>
+
+            <div class="accordion mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop">
+              <div>
+                <input type="checkbox" name="accordion__faq" id="faq1-1" class="faq--input">
+                <label for="faq1-1" class="faq--label">Co když se zásilka do poštovní schránky nevejde?</label>
+                <div class="faq--content">
+                  <p>Pokud e-shop nebo přepravce zadá velikost zásilky, která se do vaší
+                    PostCube nevejde, kurýr ji doručí běžným způsobem a kontaktuje vás
+                    telefonicky až bude se zásilkou u&nbsp;vašich dveří. Těmto situacím můžete
+                    předejít pořízením PostCube ve velikosti M, která pojme 90&nbsp;% všech
+                    běžných zásilek.</p>
+                </div>
+              </div>
+              <div>
+                <input type="checkbox" name="accordion__faq" id="faq1-2" class="faq--input">
+                <label for="faq1-2" class="faq--label">Mohu schránku přestěhovat při změně bydliště?</label>
+                <div class="faq--content">
+                  <p>Není problém schránku přestěhovat na jiné místo, ale je potřeba to
+                    v&nbsp;aplikaci změnit, aby kurýr věděl, kam má doručovat.</p>
+                </div>
+              </div>
             </div>
           </div>
           <div id="step--two" class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -90,8 +118,7 @@
                 <img alt="Fotografie - Zadání požadavku" src="{{ boxBG04 | cloudinaryUrl(dpr="auto", width=400) }}">
                 <h3>Zadání požadavku</h3>
                 <p>V&nbsp;mobilní aplikaci zadáte kód boxu příjemce nebo adresu pro doručení,
-                  zvolíte přepravní společnost, vyberete způsob platby a uhradíte
-                  dopravu.</p>
+                  zvolíte přepravní společnost, způsob platby a uhradíte dopravu.</p>
               </div>
               <div class="steps__content mdc-layout-grid__cell">
                 <img alt="Fotografie - Označení balíku"
@@ -105,9 +132,9 @@
                 <img alt="Fotografie - Převzetí zásilky"
                      src="{{ boxBG06 | cloudinaryUrl(dpr="auto", width=400) }}">
                 <h3>Převzetí zásilky</h3>
-                <p>Pak stačí kliknout na tlačítko „zásilka v&nbsp;pořádku převzata“.
-                  Pokud se vyskytne nějaká nesrovnalost, můžete v&nbsp;aplikaci nahlásit
-                  problém.</p>
+                <p>Otevřete PostCube, vložíte do ní zásilku nebo zboží k&nbsp;vrácení a
+                  v&nbsp;aplikaci kliknete na „odeslat kurýrovi“. Následně můžete sledovat
+                  pohyb zásilky.</p>
               </div>
               <div class="steps__content mdc-layout-grid__cell">
                 <img alt="Fotografie - Vyzvednutí přepravcem"
@@ -120,7 +147,7 @@
             </div>
           </div>
           <div id="step--three" class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-            <h2>3.&nbsp;Mobilní aplikace</h2>
+            <h2>3.&nbsp;Způsob fungování mobilní aplikace</h2>
             <div class="mdc-layout-grid__inner">
               <div class="steps__content mdc-layout-grid__cell">
                 <div class="steps__bg">
@@ -143,8 +170,8 @@
                   </svg>
                 </div>
                 <h3>Propojená s&nbsp;přepravcem</h3>
-                <p>Aplikace komunikuje automaticky s&nbsp;přepravcem. Vy na příjmu být
-                  nemusíte.</p>
+                <p>Vy na příjmu být nemusíte. Aplikace komunikuje s&nbsp;přepravcem
+                  automaticky.</p>
               </div>
               <div class="steps__content mdc-layout-grid__cell">
                 <div class="steps__bg">
@@ -217,26 +244,41 @@
                   </svg>
                 </div>
                 <h3>Vše na jednom místě</h3>
-                <p>Přes mobilní aplikaci si vybíráte dopravce, hradíte dopravu a sledujete
+                <p>V&nbsp;mobilní aplikaci si vybíráte přepravce, hradíte dopravu sledujete
                   zásilky na cestě i&nbsp;historii přepravy.</p>
               </div>
               <div
                 class="btn-android mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-                <button class="mdc-button content-btn" type="button">
+                <button class="mdc-button content-btn">
                   <a href="https://app.postcube.cz/" class="mdc-button__label" target="_blank" rel="noopener">Stáhnout
                     pro Android</a>
                 </button>
               </div>
               <div
                 class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-                <button class="mdc-button content-btn" type="button">
-                  <a href="#" class="mdc-button__label" target="_blank" rel="noopener">Stáhnout pro iPhone</a>
+                <button class="mdc-button content-btn" disabled>
+                  <span class="mdc-button__label" target="_blank" rel="noopener">Stáhnout pro iPhone</span>
                 </button>
+              </div>
+              <div class="accordion mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop">
+                <div>
+                  <input type="checkbox" name="accordion__faq" id="faq3-1" class="faq--input">
+                  <label for="faq3-1" class="faq--label">Musím nakupovat jen přes partnerské e-shopy?</label>
+                  <div class="faq--content">
+                    <p>Nemusíte. U&nbsp;e-shopů, které spolupracují s&nbsp;PostCube je výhodou to, že
+                      při nákupu pouze zadáte číslo své chytré poštovní schránky a dále už
+                      se o&nbsp;nic nestaráte. U&nbsp;e-shopů, které ještě s&nbsp;PostCube nejsou
+                      integrované, je potřeba do poznámky v&nbsp;objednávce napsat kód vaší
+                      PostCube, na základě kterého kurýr obdrží unikátní kód pro její
+                      otevření. Tímto způsobem si můžete nechat zboží doručit odkudkoliv a
+                      komukoliv.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div id="step--four" class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-            <h2>4.&nbsp;Instalace schránky</h2>
+            <h2>4.&nbsp;Instalace poštovní schránky PostCube</h2>
             <p class="steps__subtitle">O&nbsp;kompletní instalaci samostatné PostCube se může postarat náš
               montážní tým, nebo ji můžete nainstalovat svépomocí. Přehledný návod,
               jak na to, je součástí balení.</p>
@@ -255,9 +297,9 @@
                      src="{{ boxBG09 | cloudinaryUrl(dpr="auto", width=400) }}">
                 <h3>Volně stojící u&nbsp;domu</h3>
                 <p class="content__subtitle--blue">Lze provést svépomocí</p>
-                <p>PostCube můžete umístit na zem. Pro pohodlnější odebírání pošty ji
-                  ale doporučujeme připevnit na stojan. Ten se navrtá na betonový základ nebo
-                  dlaždici z&nbsp;naší nabídky, kterou je možno položit kamkoliv.</p>
+                <p>PostCube lze umístit na zem. Pro pohodlnější odebírání zásilek ji ale
+                  doporučujeme připevnit na stojan. Ten se navrtá na betonový základ nebo
+                  přenosnou dlaždici z&nbsp;naší nabídky.</p>
               </div>
               <div class="steps__content mdc-layout-grid__cell">
                 <img alt="Fotografie - Upozornění na Telefonu"
@@ -268,8 +310,45 @@
                   specializovaný montážní tým, který boxy bezpečně sešroubuje. Cena
                   montáže závisí na lokalitě a počtu chytrých&nbsp;boxů.</p>
               </div>
+              <div class="accordion mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop">
+                <div>
+                  <input type="checkbox" name="accordion__faq" id="faq4-1" class="faq--input">
+                  <label for="faq4-1" class="faq--label">Jaké nářadí je potřeba k instalaci volně stojící PostCube?</label>
+                  <div class="faq--content">
+                    <p>K&nbsp;instalaci samostatně stojící PostCube svépomocí (do dlaždice
+                      o&nbsp;rozměru 600&nbsp;mm × 800&nbsp;mm a váze cca 100&nbsp;kg nebo do betonového základu)
+                      potřebujete vrtačku pro vyvrtání čtyř otvorů pro šrouby, šestihranný
+                      klíč nebo golu a torx šroubovák nebo imbus pro utáhnutí šroubů.
+                      Spojovací materiál je součástí sady. Pokud se rozhodnete instalaci
+                      přenechat našemu montážnímu týmu, nepotřebujete žádné nářadí.</p>
+                  </div>
+                </div>
+                <div>
+                  <input type="checkbox" name="accordion__faq" id="faq4-2" class="faq--input">
+                  <label for="faq4-2" class="faq--label">Jaké nářadí je potřeba k instalaci sdíleného hnízda?</label>
+                  <div class="faq--content">
+                    <p>Náš montážní tým si vše potřebné přiveze s&nbsp;sebou. Instalace
+                      svépomocí v&nbsp;tomto případě není možná z&nbsp;bezpečnostních důvodů.</p>
+                  </div>
+                </div>
+                <div>
+                  <input type="checkbox" name="accordion__faq" id="faq4-3" class="faq--input">
+                  <label for="faq4-3" class="faq--label">Kolik místa je potřeba pro PostCube?</label>
+                  <div class="faq--content">
+                    <p>PostCube nabízíme ve čtyřech rozměrech a všechny lze libovolně
+                      kombinovat a stohovat až do výšky dvou metrů. Na 1m2 umístíte až
+                      16&nbsp;boxů ve velikosti XS. Díky tomu zabere tzv. hnízdo poštovních boxů
+                      v&nbsp;bytovém domě nebo ve firmě jen minimum místa. Prostor pro umístění
+                      samostatně stojící PostCube u&nbsp;domu záleží na její velikosti a podkladu,
+                      na kterém stojí (betonovém základu nebo dlaždici o&nbsp;rozměru 600&nbsp;mm ×
+                      800&nbsp;mm).</p>
+                </div>
+              </div>
             </div>
           </div>
+
+          {# TODO: Prémiové funkce a vybavení #}
+
           <div id="step--five" class="steps mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <h2>5.&nbsp;Servis a reklamace</h2>
             <div class="mdc-layout-grid__inner">
