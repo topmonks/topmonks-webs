@@ -12,6 +12,7 @@ import {
 } from "@topmonks/pulumi-aws";
 import * as arx from "./arx.monks.cloud/infra";
 import * as monksroom from "./room.monks.cloud/infra";
+import * as postcube from "./postcube.cz/infra";
 
 // Automatically inject tags.
 registerAutoTags({
@@ -104,3 +105,4 @@ export const arxDocumentsBucketEndpoint = arx.documentsBucketEndpoint;
 export const arxDocumentsTable = arx.documentsTable;
 export const arxDocumentsApi = arx.documentsApi;
 export const monksroomApiHost = monksroom.apiDistribution.url;
+export const postcubeContactFormArn = postcube.contactFormArn;

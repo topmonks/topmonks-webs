@@ -9,13 +9,13 @@
 
       <div class="contact__form mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
         <h3>Dejte nám kontakt a my se ozveme</h3>
-        <form>
-          <input datatype="name" placeholder="Jméno nebo název firmy" id="company-name" type="text">
-          <input datatype="email" id="phone-name" placeholder="Email" type="text">
+        <form id="contact-form" action="https://uwjqzwx0d3.execute-api.eu-central-1.amazonaws.com/production/postcube-contact-form" method="POST">
+          <label><input name="name" placeholder="Jméno nebo název firmy" id="company-name" type="text"></label>
+          <label><input name="email" id="phone-name" placeholder="Email" type="text"></label>
           <div class="mdc-layout-grid__inner">
             <div class="contact__form--button mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone">
               <button class="mdc-button content-btn" type="submit">
-                <a href="#" class="mdc-button__label">ODESLAT</a>
+                <span class="mdc-button__label">ODESLAT</span>
               </button>
             </div>
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone">
@@ -23,6 +23,21 @@
             </div>
           </div>
         </form>
+        <script type="module">
+          const contactForm = document.getElementById("contact-form");
+          contactForm.addEventListener("submit", async e => {
+            e.preventDefault();
+            const button = e.target.querySelector("button");
+            button.disabled = true;
+            alert("Děkujeme. Brzy se Vám ozveme.");
+            await fetch(e.target.action, {
+              method: e.target.method.toUpperCase(),
+              body: new FormData(e.target)
+            });
+            contactForm.reset();
+            button.disabled = false;
+          })
+        </script>
       </div>
 
       <div
