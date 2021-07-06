@@ -5,6 +5,16 @@ __metadata:
   version: 4
   cacheKey: 7
 
+"@75lb/deep-merge@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@75lb/deep-merge@npm:1.0.0"
+  dependencies:
+    lodash.assignwith: ^4.2.0
+    typical: ^7.0.0
+  checksum: aaaeb15a2d79c140b99caea531f11410063060d27b9fcc6260402eb47f14ff50f2e07f0c4177570b3cc24520fb24e0ba6fc0ad820ace081bd385ee27ae7bd325
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:7.12.11":
   version: 7.12.11
   resolution: "@babel/code-frame@npm:7.12.11"
@@ -2059,7 +2069,7 @@ __metadata:
     lit-html: 2.0.0-rc.3
     local-web-server: ^4.2.1
     lodash: ^4.17.21
-    lws: 3.1.0
+    lws: 4.0.1
     lws-basic-auth: ^2.0.0
     lws-blacklist: ^3.0.0
     lws-body-parser: ^2.0.0
@@ -2464,6 +2474,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ansi-escape-sequences@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "ansi-escape-sequences@npm:6.1.0"
+  dependencies:
+    array-back: ^6.1.2
+  checksum: d233c65daaec2775d31cccd0d58e55eae98f3a44540458619478248541f389702dd74a86dec39b0f5f10d94a898312c68e07ee689b7ad65f7aece7ed81edc31e
+  languageName: node
+  linkType: hard
+
 "ansi-escapes@npm:^3.2.0":
   version: 3.2.0
   resolution: "ansi-escapes@npm:3.2.0"
@@ -2692,6 +2711,13 @@ __metadata:
   version: 4.0.2
   resolution: "array-back@npm:4.0.2"
   checksum: e8b488d0bb2ea6ad335221f2b0eb22297955fd2521914928fd1637c876468f48c3a140694e92d2db87fc3588f9258b4a45344ef6f13119e992e40878c132d331
+  languageName: node
+  linkType: hard
+
+"array-back@npm:^6.0.0, array-back@npm:^6.1.2":
+  version: 6.1.2
+  resolution: "array-back@npm:6.1.2"
+  checksum: 321910726eba9fd500cecc29e672aa6cfce4776b053f4332b9ce82f8a42c995728c4612961edad8ad63f4de321953d2a38b1d81fe37c0d9100017b496ae31da5
   languageName: node
   linkType: hard
 
@@ -3540,6 +3566,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"byte-size@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "byte-size@npm:8.0.0"
+  checksum: a7017dbe1c211fa0c0752d419bb93a235c3c4230d30281866b471e4da0b360f09b994cba1818cf5a49b6ef7020327bdc39fefafe3ed000c2fd5ad4ae01449cc5
+  languageName: node
+  linkType: hard
+
 "bytes@npm:3.0.0":
   version: 3.0.0
   resolution: "bytes@npm:3.0.0"
@@ -4319,7 +4352,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"command-line-usage@npm:^6.1.0":
+"command-line-usage@npm:^6.1.0, command-line-usage@npm:^6.1.1":
   version: 6.1.1
   resolution: "command-line-usage@npm:6.1.1"
   dependencies:
@@ -4995,6 +5028,13 @@ __metadata:
   bin:
     csvtojson: ./bin/csvtojson
   checksum: 44c83d3a0b2171905c1edb616c97945f9135c996e5a0c1250fb16030a6ceae60be0074419e5658d29ce901c8657759cb48fad8114cbe87b2144e2c3490f9ab7f
+  languageName: node
+  linkType: hard
+
+"current-module-paths@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "current-module-paths@npm:1.0.0"
+  checksum: 7a832697da019c23a80da65869fafdc9b481775e11dde06e3502eb8dcc5c24c8559b3e28c115d9b91666200922c515b68491eb323d68b06d990b8c33f4e47a4b
   languageName: node
   linkType: hard
 
@@ -9420,7 +9460,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"koa@npm:^2.11.0":
+"koa@npm:^2.11.0, koa@npm:^2.13.1":
   version: 2.13.1
   resolution: "koa@npm:2.13.1"
   dependencies:
@@ -9659,6 +9699,15 @@ fsevents@^1.2.7:
   dependencies:
     array-back: ^4.0.1
   checksum: 87814ac84a51f1c9081fa13fe9d8afb2893289f5b769f1f64b6d92466dbb597c247edd8bfe2bdea59555c8c944c10f761bff282258c8f8c7bd187c118cec6c04
+  languageName: node
+  linkType: hard
+
+"load-module@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "load-module@npm:4.0.1"
+  dependencies:
+    array-back: ^6.0.0
+  checksum: fec3323d6a8f915205ed43c0fce1056e8c2a41dc0b452a47349047322611b5f99cd776001d0132a44b6aee053abcf7c49bfe3af2bc3f9ace700fae6c472c90a4
   languageName: node
   linkType: hard
 
@@ -10107,7 +10156,31 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lws@npm:3.1.0, lws@npm:^3.1.0":
+"lws@npm:4.0.1":
+  version: 4.0.1
+  resolution: "lws@npm:4.0.1"
+  dependencies:
+    "@75lb/deep-merge": ^1.0.0
+    ansi-escape-sequences: ^6.1.0
+    array-back: ^6.1.2
+    byte-size: ^8.0.0
+    command-line-args: ^5.1.1
+    command-line-usage: ^6.1.1
+    create-mixin: ^3.0.0
+    current-module-paths: ^1.0.0
+    koa: ^2.13.1
+    load-module: ^4.0.1
+    open: ^8.2.1
+    qrcode-terminal: ^0.12.0
+    typical: ^7.0.0
+    walk-back: ^5.0.0
+  bin:
+    lws: bin/cli.mjs
+  checksum: d89fc8f98359472f9e3bb8d9925fd9d8f36a3c0c5f19ce7fc1a736765dc68cd1cec1075cd783ba74387d5fa37c4dbb99a4523240572a2b9dd1ca24880289b1c4
+  languageName: node
+  linkType: hard
+
+"lws@npm:^3.1.0":
   version: 3.1.0
   resolution: "lws@npm:3.1.0"
   dependencies:
@@ -15816,6 +15889,13 @@ typescript@~3.7.3:
   languageName: node
   linkType: hard
 
+"typical@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "typical@npm:7.0.0"
+  checksum: d4c5c090bd3bad08e48ae62be4656c651772ed94e0c384eb40fed482430fb2ba1efdc09fe86e7d11e02c21feccbe196619c54ba2f242b551b3602bb880bb2e5a
+  languageName: node
+  linkType: hard
+
 "ua-parser-js@npm:^0.7.18":
   version: 0.7.28
   resolution: "ua-parser-js@npm:0.7.28"
@@ -16506,6 +16586,13 @@ typescript@~3.7.3:
   version: 4.0.0
   resolution: "walk-back@npm:4.0.0"
   checksum: cdab2a49bc3c539591f36909b4fff5d84cf9e851ad67a0c44fb03abc1c41c3aabfc3e8fafacef5b801b67734634588d1906088220ff74375dd608f79a70308f1
+  languageName: node
+  linkType: hard
+
+"walk-back@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "walk-back@npm:5.0.0"
+  checksum: e6c98928a8668c57948f15995f57044c5e24077f94b17ae6af66bebdeb45d995128f405646bdedb55c2e89f8ef49fa29fa69091e5a82c113ec06249022e0cfb8
   languageName: node
   linkType: hard
 
