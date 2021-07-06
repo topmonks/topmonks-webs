@@ -61,7 +61,7 @@
     "lws-compress": "^3.0.0",
     "lws-conditional-get": "^2.0.0",
     "lws-cors": "^3.0.0",
-    "lws-index": "^2.0.0",
+    "lws-index": "^3.0.0",
     "lws-json": "^2.0.0",
     "lws-log": "^2.0.0",
     "lws-mime": "^2.0.0",
