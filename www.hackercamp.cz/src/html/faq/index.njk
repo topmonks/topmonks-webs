@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8"/>
+  <title>Často kladené dotazy Hacker Campu</title>
+  <link rel="preconnect" href="https://res.cloudinary.com"/>
+  <link rel="preconnect" href="https://www.googletagmanager.com"/>
+  <link rel="preconnect" href="https://www.google-analytics.com"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width,Save-Data"/>
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1,viewport-fit=cover"
+  />
+  <meta
+    name="description"
+    content="Zažijte nultý ročník netradičního třídenního festivalu pro lidi z české tech scény. V duchu nekonference či barcampu se od sebe budeme vzájemně učit, bavit se a poznávat."
+  />
+  <style>
+    /* Font PT Mono: Copyright © ParaType, 2018. All rights reserved.*/
+    @font-face {
+      font-family: "PT Mono";
+      src: local("PT Mono"),
+      url("/assets/css/PT-Mono_Regular.woff2") format("woff2"),
+      url("/assets/css/PT-Mono_Regular.woff") format("woff"),
+      url("/assets/css/PT-Mono_Regular.tff") format("tff");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "PT Mono";
+      src: local("PT Mono Bold"),
+      url("/assets/css/PT-Mono_Bold.woff2") format("woff2"),
+      url("/assets/css/PT-Mono_Bold.woff") format("woff"),
+      url("/assets/css/PT-Mono_Bold.tff") format("tff");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  <style>
+    :root {
+      --hc-layout-width: 1600px;
+      --hc-font-family: PT Mono, monospace;
+      --hc-background-color: #fff;
+      --hc-text-color: #585a5c;
+      --hc-heading-color: #000;
+      --hc-link-color: #2161b1;
+      --hc-link-visited-color: #bb006e;
+      --hc-gradient: linear-gradient(
+        90deg,
+        #ee771b -0.01%,
+        #e9444e 25.57%,
+        #e62271 42.71%,
+        #684997 78.9%,
+        #3e7abc 100.02%
+      );
+      --hc-gradient-btn: linear-gradient(
+        90deg,
+        #ee771b -0.01%,
+        #e9444e 11.28%,
+        #e62271 24.31%,
+        #684997 36.29%,
+        #3e7abc 50%,
+        #684997 61.3%,
+        #e62271 74.84%,
+        #e9444e 88.39%,
+        #ee771b 100.02%
+      );
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --hc-background-color: #222;
+        --hc-background-image: url(data:image/png;base64,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);
+        --hc-text-color: #ececec;
+        --hc-heading-color: #fff;
+        --hc-link-color: #5d88c8;
+        --hc-link-visited-color: #ea7c46;
+      }
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      color: var(--hc-text-color);
+      background-color: var(--hc-background-color);
+      background-image: var(--hc-background-image, none);
+      font-family: var(--hc-font-family);
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 1.5;
+      font-kerning: normal;
+      font-variant-numeric: lining-nums slashed-zero;
+      font-variant-ligatures: common-ligatures contextual;
+      -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "lnum",
+      "zero";
+      font-feature-settings: "kern", "liga", "clig", "calt", "lnum", "zero";
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: geometricPrecision;
+    }
+
+    a:link {
+      color: var(--hc-link-color);
+    }
+
+    a:visited {
+      color: var(--hc-link-visited-color);
+    }
+
+    strong em {
+      font-style: normal;
+    }
+
+    ul {
+      max-width: 60em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header,
+    footer,
+    section {
+      margin: 0 auto;
+      max-width: var(--hc-layout-width);
+    }
+
+    footer::before {
+      content: "";
+      display: block;
+      height: 3px;
+      background-image: var(--hc-gradient);
+    }
+
+    h1,
+    h2 {
+      font-weight: bold;
+      color: var(--hc-heading-color);
+    }
+
+    h1 {
+      margin-bottom: 0;
+      font-weight: 800;
+      font-size: 3em;
+    }
+
+    hgroup h2 {
+      margin: 0;
+    }
+
+    hgroup small {
+      text-transform: capitalize;
+    }
+
+    h2,
+    .hc-text--gay {
+      color: #fff;
+      background-image: var(--hc-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+
+    section h2 {
+      margin: 3em auto 2em;
+    }
+
+    .hc-hero {
+      font-weight: bold;
+    }
+
+    .hc-card {
+      background-color: var(--hc-background-color);
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.07);
+      padding: var(--mdc-layout-grid-gutter-phone);
+    }
+
+    .hc-card.hc-card--decorated {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hc-card.hc-card--decorated::before {
+      content: "";
+      display: block;
+      width: 135px;
+      height: 4px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background-image: var(--hc-gradient);
+      transition: width 0.4s ease;
+    }
+
+    .hc-card.hc-card--decorated:active::before,
+    .hc-card.hc-card--decorated:hover::before {
+      width: 100%;
+    }
+
+    .hc-card.hc-card--flat {
+      background-image: var(--hc-gradient);
+      color: #fff;
+    }
+
+    .hc-card.hc-card--centered {
+      text-align: center;
+    }
+
+    .hc-card.hc-card--picture {
+      padding: 0
+    }
+
+    @media screen and (min-width: 600px) and (max-width: 839px) {
+      .hc-card {
+        padding: var(--mdc-layout-grid-gutter-tablet);
+      }
+    }
+
+    @media screen and (min-width: 840px) {
+      .hc-card {
+        padding: var(--mdc-layout-grid-gutter-desktop);
+      }
+    }
+
+    .hc-cta,
+    .hc-cta:link,
+    .hc-cta:visited {
+      color: #fff;
+      background-image: var(--hc-gradient-btn);
+      background-size: 200% 100%;
+      font-weight: bold;
+      display: inline-block;
+      text-decoration: none;
+      padding: 0.75em 2.5em;
+      transition: background-position 0.4s ease-in-out;
+    }
+
+    .hc-cta:active,
+    .hc-cta:hover {
+      background-position: 100% 0;
+    }
+
+    .hc-icon-link:link,
+    .hc-icon-link:visited {
+      --icon-color: var(--hc-text-color);
+      color: var(--hc-text-color);
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .hc-icon-link:hover {
+      --icon-color: var(--hc-link-color);
+      color: var(--hc-link-color);
+      text-decoration: underline;
+    }
+
+    .hc-icon-link svg {
+      padding-right: 1ex;
+    }
+
+    .hc-link--decorated {
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      padding: 18px 16px;
+      border: 2px solid;
+      border-image-slice: 1;
+      border-image-source: var(--hc-gradient);
+      background-image: var(--hc-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hc-navbar {
+      position: fixed;
+      width: 100%;
+      height: 78px;
+      background: var(--hc-background-color);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      z-index: 1000;
+    }
+
+    #top {
+      padding-top: 78px;
+    }
+
+    .hc-logo {
+      width: 190px;
+      height: 40px;
+      transform: translateY(6px);
+    }
+
+    .hc-navbar__right {
+      display: none;
+    }
+
+    @media screen and (min-width: 600px) {
+      .hc-navbar {
+        height: 100px;
+      }
+
+      .hc-navbar__right {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .hc-logo {
+        width: 266px;
+        height: 54px;
+        transform: translateY(4px);
+      }
+
+      #top {
+        padding-top: 100px;
+      }
+    }
+
+  </style>
+  <link rel="canonical" href="https://www.hackercamp.cz/"/>
+  <link rel="author" href="/humans.txt" type="text/plain"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+  <link rel="manifest" href="/sitemanifest.json"/>
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e052a4"/>
+  <meta name="msapplication-TileColor" content="#f5f5f5"/>
+  <meta name="theme-color" content="#e052a4"/>
+
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js"
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-5F59KHT");
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body vocab="https://schema.org" typeof="FAQPage">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-5F59KHT"
+    height="0"
+    width="0"
+    style="display: none; visibility: hidden"
+  ></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav class="hc-navbar mdc-layout-grid" style="line-height: 1;">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+      <svg
+        class="hc-logo"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 266 54"
+        width="266"
+        height="54"
+      >
+        <title>Hacker Camp</title>
+        <path d="M27 0l16.134 17.685L50.383 40.5 27 45.63 3.617 40.5l7.249-22.815L27 0z"
+              fill="url(#paint0_linear)"/>
+        <path d="M28.782 17.89l-2.785-4.776M25.982 17.89l2.792-4.776" stroke="#fff" stroke-width=".5"
+              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M34.8 35.717h6.078l-13.5-20.62-13.492 20.62h5.878l5.138-7.845L27 31.073l2.376-3.641 5.423 8.285z"
+              fill="#fff"/>
+        <path
+          d="M75.166 13.062H68.16v9.091h-4.255V.441h4.255v8.844h7.007V.44h4.255v21.73h-4.255v-9.109zM93.4 17.352h-6.495l-1.483 4.819h-4.254L88.176.44h4.254l6.99 21.73h-4.466l-1.553-4.82zm-5.507-3.407h4.66l-2.206-7.273h-.282l-2.172 7.273zM113.383 14.863h3.406v6.213c-.67.477-1.5.848-2.524 1.112a12.576 12.576 0 01-3.142.406c-1.359 0-2.665-.194-3.901-.6a8.403 8.403 0 01-3.248-1.96c-.935-.9-1.677-2.064-2.242-3.512-.565-1.447-.829-3.177-.829-5.225 0-2.136.317-3.919.953-5.348.635-1.43 1.447-2.595 2.436-3.478A8.801 8.801 0 01107.61.583 11.812 11.812 0 01111.211 0c1.236 0 2.295.106 3.142.318.865.212 1.571.441 2.136.706v6.46h-3.407v-3.53a12.166 12.166 0 00-1.994-.159c-.812 0-1.554.141-2.242.441-.688.3-1.306.76-1.818 1.377-.512.618-.918 1.395-1.218 2.348-.3.953-.441 2.048-.441 3.336 0 1.112.141 2.136.406 3.054a7.16 7.16 0 001.182 2.383 5.125 5.125 0 001.889 1.536c.741.37 1.589.547 2.542.547.688 0 1.341-.07 1.995-.194v-3.76zM126.18 13.098h-2.206v9.055h-4.255V.441h4.255v8.88h2.206l4.96-8.88h4.837l-6.108 10.486 6.884 11.244h-5.242l-5.331-9.073zM139.031.441h14.245v3.795h-9.991v5.066h9.214v3.796h-9.214v5.313h10.149v3.795h-14.403V.44zM157.406.653c.477-.088.989-.159 1.536-.23.547-.07 1.094-.123 1.641-.176.548-.035 1.077-.07 1.607-.088.529-.018.988-.035 1.43-.035 1.006 0 2.012.105 3 .3.989.194 1.871.53 2.63 1.006a5.582 5.582 0 011.872 1.924c.459.812.706 1.818.706 3.018 0 .883-.089 1.66-.265 2.313a7.001 7.001 0 01-.724 1.73c-.3.511-.688.935-1.13 1.288a9.371 9.371 0 01-1.447.971l5.243 9.497h-4.925l-4.378-8.508h-2.542v8.508h-4.254V.653zm6.514 3.266c-.442 0-.865.017-1.289.035-.424.018-.759.07-.971.124v6.301h1.677c1.183 0 2.136-.264 2.895-.812.741-.53 1.112-1.43 1.112-2.665 0-.936-.282-1.66-.865-2.189-.6-.547-1.447-.794-2.559-.794zM206.513 14.863h3.407v6.213c-.671.477-1.5.848-2.524 1.112a12.61 12.61 0 01-3.16.406c-1.359 0-2.665-.194-3.901-.6a8.41 8.41 0 01-3.248-1.96c-.935-.9-1.677-2.064-2.241-3.512-.565-1.447-.83-3.177-.83-5.225 0-2.136.318-3.919.953-5.348.636-1.43 1.448-2.595 2.436-3.478a8.813 8.813 0 013.319-1.888C201.942.212 203.142 0 204.325 0c1.235 0 2.294.106 3.159.318.865.212 1.571.441 2.136.706v6.46h-3.407v-3.53a12.166 12.166 0 00-1.994-.159c-.812 0-1.554.141-2.242.441a4.88 4.88 0 00-1.818 1.377c-.512.618-.918 1.395-1.218 2.348-.3.953-.442 2.048-.442 3.336 0 1.112.142 2.136.406 3.054a7.18 7.18 0 001.183 2.383 5.125 5.125 0 001.889 1.536c.741.37 1.589.547 2.542.547.688 0 1.341-.07 1.994-.194v-3.76zM223.777 17.352h-6.478l-1.483 4.819h-4.254L218.57.44h4.254l6.99 21.73h-4.466l-1.571-4.82zm-5.507-3.407h4.66l-2.207-7.273h-.282l-2.171 7.273zM243.106 10.591l.158-3.39h-.194l-3.477 5.685h-.741l-3.637-5.684h-.159l.195 3.036v11.915h-4.043V.441h4.307l3.725 6.02h.123l3.69-6.02h4.289v21.73h-4.254V10.59h.018zM250.872.653c.865-.159 1.819-.3 2.878-.388a36.988 36.988 0 013.124-.141c1.077 0 2.154.088 3.248.264 1.094.177 2.065.53 2.93 1.06.865.529 1.571 1.253 2.118 2.206.548.935.83 2.171.83 3.671 0 1.324-.247 2.454-.724 3.39a7.002 7.002 0 01-1.888 2.33c-.777.617-1.677 1.059-2.684 1.341a11.502 11.502 0 01-3.124.424h-.494c-.23 0-.459 0-.706-.018-.247-.018-.494-.018-.724-.053-.229-.017-.406-.035-.512-.07v7.484h-4.254V.653h-.018zm6.32 3.142c-.406 0-.812.018-1.183.053s-.671.07-.9.106v7.043c.088.018.212.035.371.07.158.018.335.036.529.054.194.017.371.017.547.017h.389c.565 0 1.112-.053 1.659-.159a3.993 3.993 0 001.465-.582 3.17 3.17 0 001.041-1.165c.265-.494.389-1.147.389-1.96 0-.688-.124-1.253-.371-1.694a3.347 3.347 0 00-.971-1.077c-.388-.282-.865-.459-1.377-.565a7.815 7.815 0 00-1.588-.14z"
+          fill="#57595B"/>
+        <path
+          d="M63.904 42.329v-8.49h1.236v3.565h4.025v-3.566H70.4v8.491h-1.235v-3.866H65.14v3.866h-1.236zM74.62 36.557c.211-.106.423-.212.6-.283.194-.088.37-.158.564-.211.194-.053.388-.089.583-.124.194-.018.406-.035.653-.035.353 0 .67.035.97.106.3.07.548.212.76.388.212.176.37.424.494.706.124.3.177.653.177 1.095v4.13h-.989l-.141-.706h-.036c-.282.3-.582.512-.917.635a3.194 3.194 0 01-1.112.195c-.3 0-.583-.036-.848-.124a2.057 2.057 0 01-.67-.37 1.597 1.597 0 01-.442-.583 1.77 1.77 0 01-.159-.76c0-.67.265-1.164.795-1.517s1.218-.512 2.082-.512h1.219v-.547c0-.46-.124-.777-.353-.936-.23-.159-.548-.247-.954-.247-.23 0-.494.035-.794.123-.3.071-.653.23-1.024.442l-.459-.865zm3.6 2.842l-1.006.035c-.67.018-1.147.141-1.43.353-.282.212-.424.494-.424.794 0 .195.036.353.089.477.07.124.141.23.247.3.106.07.23.124.37.159.142.035.283.053.442.053.3 0 .6-.07.9-.212.3-.141.583-.37.812-.67v-1.29zM86.322 41.535a3.2 3.2 0 00.76-.089c.211-.07.423-.14.635-.247l.265.883c-.495.247-1.06.37-1.748.37-.459 0-.882-.07-1.288-.194a2.89 2.89 0 01-1.06-.617c-.3-.283-.53-.618-.706-1.024-.176-.406-.265-.883-.265-1.43 0-.512.089-.953.248-1.36.159-.405.388-.74.67-1.023a2.986 2.986 0 011.042-.653c.406-.159.847-.23 1.341-.23.283 0 .548.018.812.053.265.036.565.142.918.283l-.264.9a2.718 2.718 0 00-1.342-.353c-.653 0-1.183.212-1.589.618-.406.406-.6.988-.6 1.712 0 .459.07.847.194 1.147.124.3.3.548.495.742.211.176.44.317.706.406.23.07.494.106.776.106zM92.606 39.999v2.312h-1.165v-9.567h1.165v5.966l2.56-2.718h1.465l-2.595 2.665 2.718 3.672H95.36l-2.1-2.948-.654.618zM110.752 33.838v1.06h-2.665v7.449h-1.236v-7.45h-2.612v-1.059h6.513zM118.925 39.099c0 .53-.088 1.006-.247 1.43a2.936 2.936 0 01-.671 1.059 2.842 2.842 0 01-.988.653 3.5 3.5 0 01-1.236.23c-.441 0-.847-.071-1.218-.213a2.78 2.78 0 01-.971-.617 3.114 3.114 0 01-.653-1.007c-.159-.388-.229-.864-.229-1.376 0-.53.088-1.007.247-1.413a3.02 3.02 0 01.671-1.041 3.1 3.1 0 01.988-.653c.371-.141.794-.23 1.236-.23.441 0 .847.071 1.218.195.37.14.688.335.971.6.282.264.494.6.653 1.006.159.388.229.847.229 1.377zm-1.235.053c0-.424-.053-.777-.159-1.077-.106-.3-.247-.547-.424-.724a1.512 1.512 0 00-.6-.406 1.895 1.895 0 00-.689-.123c-.229 0-.458.035-.688.105-.229.071-.424.195-.6.371-.177.177-.3.424-.406.724-.106.3-.159.688-.159 1.147 0 .424.053.777.159 1.095.106.3.247.547.424.741.176.194.37.335.6.424.229.088.459.141.688.141.23 0 .459-.035.689-.106.229-.07.423-.212.6-.388.176-.177.3-.424.406-.724.106-.353.159-.741.159-1.2zM133.4 33.838v1.06h-2.666v7.449h-1.235v-7.45h-2.613v-1.059h6.514zM137.795 42.329h-1.183v-9.567h1.183v4.042c.3-.265.618-.477.988-.653.354-.177.76-.247 1.183-.247.353 0 .653.053.918.159.265.105.477.247.636.423.158.177.3.406.37.653.088.247.124.53.124.83v4.378h-1.183v-4.078c0-.494-.106-.83-.3-1.059-.194-.212-.494-.335-.9-.335-.3 0-.618.07-.918.23-.3.158-.618.37-.918.652v4.572zM151.422 39.293h-4.536v.053c0 .706.194 1.236.564 1.624.389.37.901.565 1.554.565.335 0 .653-.036.918-.089.264-.053.547-.14.865-.264l.247.882a4.02 4.02 0 01-.918.283c-.353.07-.741.106-1.147.106a4.38 4.38 0 01-1.289-.195 2.818 2.818 0 01-1.059-.582 2.76 2.76 0 01-.724-1.024c-.176-.406-.265-.9-.265-1.483 0-.494.071-.953.23-1.341a2.65 2.65 0 01.635-1.024c.265-.282.6-.512.971-.653.388-.159.812-.23 1.289-.23.406 0 .776.071 1.094.195.335.14.6.317.847.564.23.248.406.53.548.883.123.335.194.724.194 1.13v.6h-.018zm-1.218-.847c0-.23-.035-.46-.088-.654a1.49 1.49 0 00-.265-.53 1.324 1.324 0 00-.459-.37 1.647 1.647 0 00-.688-.141c-.495 0-.901.159-1.201.477-.317.317-.494.723-.582 1.235l3.283-.017zM165.296 33.838v1.024h-3.759v2.736h3.459v1.006h-3.459v3.707h-1.236v-8.49h4.995v.017zM172.693 35.992h1.182v6.337h-.935l-.159-.794h-.053c-.23.264-.53.476-.865.653a2.611 2.611 0 01-1.2.265c-.653 0-1.183-.195-1.607-.565-.406-.371-.617-.936-.617-1.695v-4.201h1.182v4.06c0 .265.035.494.106.688.071.194.159.336.265.46.106.105.247.194.406.246.159.053.318.071.494.071.353 0 .689-.07.971-.23.282-.158.565-.37.83-.635v-4.66zM181.201 36.874h-1.854v3.69c0 .317.071.53.23.635.159.106.37.159.618.159a3.758 3.758 0 001.165-.194l.194.9a3.7 3.7 0 01-.689.194 4.658 4.658 0 01-.882.088c-.636 0-1.095-.14-1.377-.405-.282-.265-.441-.671-.441-1.2v-3.849h-.936v-.883h.936v-2.03h1.182v2.03h1.854v.865zM189.179 35.992h1.183v6.337h-.935l-.159-.794h-.053c-.23.264-.53.476-.865.653a2.616 2.616 0 01-1.201.265c-.653 0-1.182-.195-1.606-.565-.406-.371-.618-.936-.618-1.695v-4.201h1.183v4.06c0 .265.035.494.106.688.07.194.159.336.265.46.106.105.247.194.406.246.159.053.317.071.494.071.353 0 .688-.07.971-.23.282-.158.565-.37.829-.635v-4.66zM194.334 42.329v-6.337h.882l.194 1.27c.159-.405.406-.74.759-.988.354-.247.76-.37 1.218-.37.23 0 .424.017.583.053.159.035.3.088.424.14l-.23 1.042a2.088 2.088 0 00-.353-.14 1.961 1.961 0 00-1.183.088c-.211.088-.406.229-.582.405-.159.177-.3.406-.388.671a2.844 2.844 0 00-.142.918v3.283h-1.182v-.035zM206.602 39.293h-4.554v.053c0 .706.194 1.236.582 1.624.388.37.9.565 1.553.565.336 0 .654-.036.918-.089.265-.053.547-.14.865-.264l.247.882a4.005 4.005 0 01-.918.283c-.353.07-.741.106-1.147.106-.459 0-.882-.071-1.288-.195a2.822 2.822 0 01-1.06-.582c-.3-.265-.547-.6-.723-1.024-.177-.424-.265-.9-.265-1.483 0-.494.071-.953.229-1.341.142-.406.353-.742.636-1.024.265-.282.6-.512.971-.653.388-.159.812-.23 1.288-.23.406 0 .777.071 1.095.195.335.14.618.317.847.564.229.248.406.53.547.883.124.335.194.724.194 1.13v.6h-.017zm-1.218-.847c0-.23-.036-.46-.089-.654a1.487 1.487 0 00-.264-.53 1.342 1.342 0 00-.459-.37 1.652 1.652 0 00-.689-.141c-.494 0-.9.159-1.2.477-.318.317-.494.723-.565 1.235l3.266-.017z"
+          fill="#818386"/>
+        <defs>
+          <linearGradient id="paint0_linear" x1="-3.068" y1="42.955" x2="79.759" y2="27.005"
+                          gradientUnits="userSpaceOnUse">
+            <stop stop-color="#EE771B"/>
+            <stop offset=".427" stop-color="#E62271"/>
+            <stop offset=".789" stop-color="#684997"/>
+            <stop offset="1" stop-color="#3E7ABC"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="hc-navbar__right mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+      <a
+        class="hc-link hc-link--decorated"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeDdZ5ZLSxS6lVXM4jshT8fBFQkMVww3jT5etoAPf8aK0yK0A/viewform"
+      >Chci se zapojit</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hc-code-bg">
+  <header id="top" class="hc-hero mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div
+        class="hc-hero__inner mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop"
+      >
+        <iframe
+          width="720"
+          height="405"
+          src="https://www.youtube-nocookie.com/embed/D76NzX1vOIw?hl=cs&modestbranding=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="aspect-ratio: 16/9; width: 100%; height: auto;"
+        ></iframe>
+        <h1>Hacker camp FAQs</h1>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="faq" class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Na co se můžu těšit?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Hacker Camp je na nás všech. Ale není to chaos. Inspiraci si bereme
+            z&nbsp;Barcampů. Takže program bude průběžně přibývat spolu s&nbsp;účastníky
+            :) Už teď se ale můžeš těšit na hudební produkci&nbsp;&ndash; kapely i&nbsp;DJs,
+            sportovní zábavu i&nbsp;přednášky a workshopy. Program je dynamický, pro teď
+            se můžeš mrknout na jeho pracovní verzi&nbsp;&ndash; <a
+              href="https://docs.google.com/spreadsheets/d/1yS_QmndaW3Ulo8zAsctCSzIG1pmfjybghicFTjC9WSk/edit#gid=0">tohle
+              nás přibližně čeká</a>.</p>
+
+          <p>Jako dobrý, ale chceš vědět víc? Zajímají tě přednášky a
+            workshopy? Co kdo bude říkat, jaký témata ho pálí? Podněty a témata se
+            všemi, kdo projevili zájem, řešíme. A&nbsp;nic si nebudeme nechávat jen pro
+            sebe. Sleduj slack #program a budeš v&nbsp;obraze. Zatím můžeme z&nbsp;programu
+            vybrat třeba nabídky od Martina Nedvěda na vyprávění nejen
+            o&nbsp;technologických trendech v&nbsp;hudebním průmyslu, nebo Petra Bartoše, který
+            chce sdílet, jak vypadá stavění startupů očima CTO. Jakub Císař a
+            Tomáš Dytrich vyberou zajímavosti z&nbsp;oblasti práva, které by vás neměli
+            minout (EXITy, ESOPy, vyjednávání)…</p>
+
+          <p>Jak už jsme řekli, jedeme barcampově. Takže pokud budeš mít nápad a
+            chuť na další přednáškové téma ještě na místě, bude na to čas
+            i&nbsp;prostor. A&nbsp;nezapomeň! Zapojení je na tobě. Program budeme postupně
+            zveřejňovat, můžeš ho průběžně sledovat a svůj nápad kdykoliv
+            upravit. Na to všechno ti postačí Slack. Pomůže nám, když se do slacku
+            zapojíš a budeš ho sledovat. @Ir tam řeší přednášky a workshopy, @Kája
+            sportovní program, co potrápí či potěší tvoje tělo, @Kuba a @Pavel
+            Kosina kapely, DJs a zábavu a @Jirka další doprovodný program. A&nbsp;když
+            nevíš kudy kam, zkus kanál #help_line&nbsp;:)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Můžu přijet jen na část programu?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Pamatuješ si na tábory? Taky jsme jezdili na celou dobu. Tohle je dost
+            podobná akce&nbsp;&ndash; vibem, místem i&nbsp;formátem:) Moc oceníme, když s&nbsp;náma
+            budeš od čtvrtka do sobotní závěrečné párty (takže do neděle do
+            rána). Uděláme vše proto, aby se ti nechtělo odjíždět. Ale pokud se
+            rozmýšlíš, jestli přijet od pátku ráno do soboty odpoledne, nebo vůbec,
+            raději přijeď. Slíbit, ale nemůžeme, že tě na místě nebudou zajímaví
+            lidé a super program i&nbsp;atmosféra držet déle, než plánuješ&nbsp;:)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Kdo tam bude?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Konkrétní jména lidí najdeš ve Slacku&nbsp;&ndash; koukni do kanálu
+            #kdo_prijede_na_cam&shy;p. Chybí mezi táborníky někdo, koho by camp bavil? Tak
+            ho pozvi. Můžeš to udělat stejně jako my. Ale pamatuj: Máš zodpovědnost
+            za toho, koho zveš. Takže vybírej, jestli to je někdo, s&nbsp;kým bys sám
+            chtěl strávit tři dny v&nbsp;jedné chatce či stanu. Jo a koukni na to, jak
+            vypadá areál Sobeňáku. Je tam i&nbsp;jeden bezbariérový pokoj. Pokud budeš
+            potřebovat ten, nebo máš nějaké další potřeby, prostě nám&nbsp;napiš.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Co když bude pršet?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Hlavní program bude probíhat v&nbsp;šapitó, kam se všichni vejdeme.
+            Současně budeme mít k&nbsp;dispozici táborovou jídelnu, kterou můžeme
+            využít nejen na snídaně. Většina dalších prostorů pro diskuze bude
+            také zastřešená, typicky ve formě stanů. A&nbsp;lehký déšť při večerním
+            koncertu na open air stage nás nerozhodí.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Co budeme dělat večer?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Hacker camp není jen technologický barcamp. Chceme ho říznout
+            i&nbsp;festivalem. Co si pod tím představit? Každý večer plánujeme jeden až
+            dva koncerty na open-air stage. Domluvený je už například Ventolín, který
+            přes den přednáší na UK a na Hacker campu zahraje svoje Disco Science pro
+            všechny mládenc a holkys. Mezi koncerty se můžete těšit třeba na stand-up
+            comedy v&nbsp;podání Nikoli Džokiče. Na pozdější hodiny se nám přihlásilo
+            už několik&nbsp;DJs.</p>
+
+          <p>Pokud si budeš chtít odpočinout od hudby, můžeš zavítat třeba do
+            TopMonks lounge a vyzkoušet elektronickou vodní dýmku. A&nbsp;navíc při tom
+            vytěžit pár hookacoins. Nebo si vyzkoušet sítotisk a obohatit svoje tričko
+            o&nbsp;logo Hacker campu. Nějakou chill out zónu vždycky najdeš. Třeba
+            u&nbsp;táboráku s&nbsp;buřty.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Budu se tam moct i&nbsp;hýbat, ať využiju pohyb na čerstvém vzduchu?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Jasně, od toho bude celá human hacking zóna. Naučíme tě třeba, jak
+            zapojit zdravý pohyb do každodenního života. Když budeš moc chtít, tak
+            tě po ránu vyženeme na východ slunce na Praze, pak si můžeš dát pár
+            tempíček v&nbsp;rybníku no a vypitý pivka během dne vypotíš u&nbsp;fotbálku. Je
+            to málo? Tak dobře, bude i&nbsp;atletickej trénink. A&nbsp;boxlakros. Asi
+            i&nbsp;železný koule na zvedání přivezeme. Je to moc? Tak fajn, dáme jógu.
+            Nebo je to pořád málo? Jestli jsi fakt hard style human hacker, můžeš si
+            k&nbsp;tomu střihnout fasting nebo si aspoň poslechnout, co to s&nbsp;tvým tělem
+            může udělat za zázraky. Takže jo, pohyb&nbsp;bude.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Co tam budu jíst a pít?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>S&nbsp;sebou si nemusíš brát nic. Snídaně jsou v&nbsp;ceně a postarají se
+            o&nbsp;ně Kuchařky bez domova z&nbsp;neziskovky Jako doma. Neboj se, pokud nejsi fanda
+            čistě rostlinných jídel, snídaně doplní typičtější nabídka
+            vajíček, párků, apod. Během dne bude dostupný “festivalový” catering
+            v&nbsp;několika stáncích, případně food trucks. Obdobně festivalově bude
+            zajištěn pitný režim&nbsp;&ndash; točené pivo, nepivo, vymazlené drinky,
+            hipsterská káva, čajovna a další pochutiny.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Jak se vlastně bude na campu spát? Jak vypadá ubytko a co
+        mám&nbsp;čekat?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Jedeme do areálu dětského tábora. K&nbsp;dispozici jsou různé typy
+            ubytování. Můžeš spát ve vlastním stanu, autě, přijet obytňákem, nebo
+            využít místní chatky a pokojíčky.</p>
+
+          <p>Chceš si vybrat a chceš mít víc soukromí? Nebo naopak jedeš na punk a
+            jsi ok s&nbsp;chatkou, kde není elektřina a společnými sprchami (jsou zvlášť
+            pro holky i&nbsp;kluky&nbsp;&ndash; zas takový punk to nebude)? Čím dřív zaplatíš
+            fakturu, tím dřív si vybereš, jak budeš na campu bydlet. Po zaplacení
+            faktury za vstup ti pošleme formulář, kde si budeš moct vybrat z&nbsp;těchto
+            možností:</p>
+
+          <ul>
+            <li>Přivezu si vlastní stan a budu v&nbsp;něm spát</li>
+
+            <li>Přijedu autem a budu v&nbsp;něm spát</li>
+
+            <li>Přivezu si vlastní obytňák a budu v&nbsp;něm spát</li>
+
+            <li>Jsem punk a budu spát pod širákem nebo v&nbsp;hamace někde v&nbsp;areálu</li>
+
+            <li>Chci postel v&nbsp;chatce pro 2 (4&nbsp;nebo 6) osob&nbsp;&ndash; tuto variantu pak budeš
+              řešit napřímo s <a
+                href="mailto:pavla.verflova&#64;czechitas.cz">pavla.verflova&#64;<!-- -->czechitas.cz</a>.
+              Kapacita chatek je omezená, proto neváhej se zaplacením vstupenek, ať
+              můžeš tento formát ubytování rezervovat&nbsp;:)</li>
+
+            <li>Využiji možnost ubytování v&nbsp;okolí (penzion, hotel)&nbsp;&ndash; tuto variantu
+              pak budeš řešit napřímo s&nbsp;<a
+                href="mailto:pavla.verflova&#64;czechitas.cz">pavla.verflova&#64;<!-- -->czechitas.cz</a></li>
+          </ul>
+
+          <p>Za loukou máme super rybník&nbsp;&ndash; ideální pro rybáře. Sprchu a hygienu
+            vyřešíš v&nbsp;hezkých sprchách s&nbsp;hafem horké i&nbsp;ledové vody v&nbsp;areálu
+            Sobeňáku. Chceš vědět, co Tě čeká? <a
+              href="https://www.sobenak.cz/ubytovani/">Koukni na fotky ubytování</a>! Na
+            těchto stránkách najdeš fotky domků, které mají největší ubytovací
+            kapacitu. A&nbsp;pokud bys chtěl být více tábornický a punk, níže najdeš
+            ještě interiér menších chatek.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Jak s dopravou a parkováním?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Jak řešíte bezpečnost areálu? Budu si mít kde zamknout&nbsp;věci?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Budeme mít na místě dobrovolníky. Většina chatek i&nbsp;pokojů se dají
+            zamykat. Areál bude hlídat klasická místní bezpečnostní agentura. Pro ty,
+            co budou mít stany, řešíme místo, kde si budeš moct zamknout či uschovat
+            svoje cennosti, nebo nabít telefon pod dohledem :) Blízko bude info stánek
+            i&nbsp;místo, kde si můžeš pořídit drobnosti, které by ti mohly v&nbsp;batohu
+            omylem chybět&nbsp;&ndash; kartáček, alkohol tester před cestou domů, špunty do
+            uší… Půjčíme ti tam i&nbsp;powerbanku&nbsp;:)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Jak bude probíhat komunikace?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Jakmile zaplatíš fakturu za vstup a případně nám dáš kontakty na
+            všechny táborníky, co s&nbsp;tebou jedou z&nbsp;týmu či firmy, pozveme tě (vás
+            všechny) na Slack. A&nbsp;tam budeme řešit vše, co potřebuješ vědět.
+            Automaticky s&nbsp;invitem budeš ve všech kanálech. Koukni na to, kdo jede, jak
+            vypadá program, jestli někdo neshání / nenabízí spolujízdu, či jaké
+            kapely nás kdy čekají.</p>
+
+          <p>Na Slacku máš taky kontakty na celou crew (náš org tým). Ozvi se, pokud
+            něco nenajdeš.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Je to tábor, znamená to, že můžu vzít děti?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Jednou možná ano. I&nbsp;někteří z&nbsp;nás mají sami děti. Řešili jsme,
+            zda dělat camp i&nbsp;pro ně, ale nakonec je nultý ročník bez nich. Oceníme
+            zpětnou vazbu&nbsp;&ndash; jak to vidíš ty pro další ročníky?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">A&nbsp;když jedu do lesa, můžu si vzít svého psa?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Nech svoje mazlíčky doma, prosím. Nepochybujeme, že jsou ti
+            nejúžasnější na světě, ale i&nbsp;v&nbsp;prostorném areálu Sobeńáku by mohl
+            být někdo s&nbsp;alergií. Snad to na pár dní vydržíš i&nbsp;bez&nbsp;nich…</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Za jakých opatření bude akce probíhat (vzhledem ke COVID-19&nbsp;pandemii),
+        budou mi vráceny peníze, pokud se z&nbsp;těchto důvodů akce nebude
+        moci&nbsp;konat?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Hacker camp bude probíhat podle v&nbsp;tu dobu platných COVID-19&nbsp;opatření.
+            Limit počtu účastníků hromadných akcí bychom měli bez problémů splnit.
+            Při vstupu budeme kontrolovat bezinfekčnost (očkování / test / prodělání
+            Covid-19). Pokud bys certifikát zapomněl nebo se chtěl během akce otestovat,
+            bude k&nbsp;dispozici mobilní tým zajišťující oficiální antigenní
+            testování (na pojišťovnu). V&nbsp;areálu budou stojany s&nbsp;dezinfekcí, možnost
+            zakoupení respirátorů případně speciální edice ručně šitých Hacker
+            camp roušek.</p>
+
+          <p>Pokud by se náhodou z&nbsp;důvodu další vlny Covid-19&nbsp;nemohl Hacker camp
+            uskutečnit, vrátíme ti plnou částku vstupenky.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Za co platím? Na co prachy půjdou?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Věříme, že za vaše peníze dostanete násobně vyšší hodnotu
+            v&nbsp;podobě nezapomenutelného zážitku&nbsp;&ndash; super akce se super lidmi na super
+            místě daleko od každodenních starostí a komerčního bullshitu.</p>
+
+          <p>Akce je nekomerční, nemáme žádné finanční sponzory a veškeré
+            peníze z&nbsp;lístků jdou na samotný Hacker camp. Tím, že nemáme sponzory, se
+            na akci musí složit samotní účastníci. Největší náklady jsou spojené
+            s&nbsp;pronájmem lokality, vybavení, pódií atp. Zde najdete předpokládaný
+            rozpočet celé&nbsp;akce.</p>
+
+          <p>Akce je nezisková, organizují ji dobrovolníci a případný zisk půjde do
+            dalšího ročníku nebo jej věnujeme vybraným neziskovým organizacím.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Jak je to s&nbsp;internetem a elektřinou?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Na místě je pokrytí LTE signálem a budou free wi-fi spoty, vzhledem
+            k&nbsp;poloze areálu je však internetové připojení značně omezené. Slack
+            vám pojede nejspíš v&nbsp;pohodě, videohovory nejspíš vůbec. Zkuste být
+            chvíli tady a teď, v&nbsp;lese, se super lidma, offline, i&nbsp;to je podle nás
+            součást kouzla Hacker Campu. Pro ty, kteří musí být online, plánujeme
+            stage dál od areálu, kterou pokrývá jiná BTSka, případně jsme domluveni
+            na rezervaci míst v&nbsp;zasíťovaných kavárnách v&nbsp;Rožmitále, kam jde
+            s&nbsp;námi lehce zařídit odvoz tam a&nbsp;zpět.</p>
+
+          <p>Elektřina v&nbsp;areálu samozřejmě je, zásuvky na nabíjení má však jen
+            ⅓ chatek. Dáme proto možnost nabíjet si zařízení v&nbsp;hlavním stanu,
+            v&nbsp;hlídané úschovně a na dalších místech, na recepci se budou dát
+            půjčit powerbanky na nabití telefonu (například na&nbsp;noc).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Storno podmínky vstupenek?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Pokud camp nezruší vyšší moc, nebo Covid nařízení vlády, Camp bude.
+            Pokud se akce zruší z&nbsp;důvodu COVID pandemie, vracíme celou částku.
+            Nemůžeš jet? Prosím, najdi si za sebe náhradu. Peníze za zakoupenou
+            vstupenku nevracíme, PROTOZE… Úplně v&nbsp;pohodě je, když si za sebe najdeš
+            náhradníka. Jen nám dej vědět. Vstupenku prostě můžeš převést na
+            někoho jiného (po schválení naší&nbsp;crew).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Co s sebou?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Pamatuješ, jak ses vždycky balil na tábor? Tak podobný seznam si udělej
+            i&nbsp;na náš Hacker Camp :) Níže pár typů a doporučení:</p>
+          <ul>
+            <li>Hygienické potřeby, oblečení do slunce (přibal opalovací krém a
+              plavky) i&nbsp;deště (přibal pláštěnku a holínky)</li>
+
+            <li>Sportovní oblečení, čelovku, repelent, špunty do uší</li>
+
+            <li>Hudební nástroj (pokud máš a chceš), těšíme se na táboráky</li>
+
+            <li>Ešus: v&nbsp;rámci stravování se budeme snažit o&nbsp;co nejudržitelnější
+              způsob odpadu (eko nádobí atd). Pokud si ale vezmeš svůj ešus, tato
+              varianta je vítaná&nbsp;:)</li>
+
+            <li>Power banku: určitě se ti bude hodit i&nbsp;tvoje vlastní, pokud nebudeš
+              mít, budeme mít k&nbsp;dispozici</li>
+
+            <li>Cokoliv dalšího, bez čeho se neobejdeš na našem festivalu&nbsp;:)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="hc-card mdc-layout-grid__cell mdc-layout-grid__cell--span-12" typeof="Question">
+      <h2 property="name">Co když něco zapomenu?</h2>
+      <div property="suggestedAnswer acceptedAnswer" typeof="Answer">
+        <div property="text">
+          <p>Nevadí. Máme více variant. V&nbsp;rámci areálu bude k&nbsp;dispozici stánek,
+            kde si budeš moct pořídit základní věci, které ztratíš, zapomeneš,
+            nebo ti budou chybět (kartáček, pasta, kapesníky, špunty, repelent,
+            žvejky, obyč pláštěnky a&nbsp;další)</p>
+
+          <p>A&nbsp;co v&nbsp;okolí? Za půl hodiny, svižnou chůzí, se z&nbsp;areálu dostaneš do
+            Rožmitálu pod Třemšínem. Zde jsou obchody s&nbsp;potravinami, drogerie a
+            další. Dopravit se můžeš samozřejmě i&nbsp;autem v&nbsp;rámci domlouvání
+            spolujízdy nebo ti odvoz zařídíme&nbsp;my.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="mdc-layout-grid">
+  <p style="text-align: center">© 2021 Hacker Camp</p>
+</footer>
+<script type="module">
+  const stylesheet = document.createElement("link");
+  stylesheet.rel = "stylesheet";
+  stylesheet.href = "/assets/css/main.css";
+  document.head.appendChild(stylesheet);
+</script>
+</body>
+</html>
