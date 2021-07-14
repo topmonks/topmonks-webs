@@ -188,8 +188,8 @@ const config = createSharedTaskConfig(__dirname, {
                   default: true
                 },
                 {
-                  value: accessories["Montáž na míru"][0].code,
-                  price: accessories["Montáž na míru"][0].price,
+                  value: accessories["Montáž na míru"]?.[0].code,
+                  price: accessories["Montáž na míru"]?.[0].price,
                   label: "ano"
                 }
               ]
