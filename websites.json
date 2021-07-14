@@ -160,7 +160,13 @@
         "assertions":{
           "uses-responsive-images": "warn",
           "errors-in-console": "warn",
-          "no-unload-listeners": "warn"
+          "no-unload-listeners": "warn",
+          "font-display": "warn",
+          "frame-title": "warn",
+          "inspector-issues": "warn",
+          "offscreen-images": "warn",
+          "third-party-facades": "warn",
+          "uses-text-compression": "warn"
         }
       },
       "upload": {
