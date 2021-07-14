@@ -2074,7 +2074,7 @@ __metadata:
     lws-request-monitor: ^2.0.0
     lws-rewrite: ^3.1.1
     lws-spa: ^3.0.0
-    lws-static: ^2.0.0
+    lws-static: ^3.0.0
     marked: ^2.1.3
     node-fetch: 3.0.0-beta.9
     npm-run-all: ^4.1.5
@@ -10104,6 +10104,15 @@ fsevents@^1.2.7:
   dependencies:
     koa-static: ^5.0.0
   checksum: 1a8a4a1559bdfc47d25f8f792cbaffa9d21cfc3785683946f7088444fb5218e7c31b7f5192a0c9a9b0c7fedafa5b1122bede2aa8accc3ed940d0da89ee9aba02
+  languageName: node
+  linkType: hard
+
+"lws-static@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "lws-static@npm:3.0.0"
+  dependencies:
+    koa-static: ^5.0.0
+  checksum: 203f2d92ff6a32ae7f0ad97f657fb101400c71d5347087c1880a4ea706bd6d22eee14958d07508c1d7d49a632e1848b45b1c20ef6df4d2da1dd2cefeaeb15333
   languageName: node
   linkType: hard
 
