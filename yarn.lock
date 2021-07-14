@@ -2066,7 +2066,7 @@ __metadata:
     lws-compress: ^3.0.0
     lws-conditional-get: ^2.0.0
     lws-cors: ^3.0.0
-    lws-index: ^2.0.0
+    lws-index: ^3.0.0
     lws-json: ^2.0.0
     lws-log: ^2.0.0
     lws-mime: ^2.0.0
@@ -10027,6 +10027,15 @@ fsevents@^1.2.7:
   dependencies:
     serve-index-75lb: ^2.0.1
   checksum: c4bccc811479de1e3dd014e14d961fccb99efb953bda25fb68c9140a4fbd6178c37c76b95224e270d90686b93e89797f577d64fc775d2d26cf2cd3b6efe7134a
+  languageName: node
+  linkType: hard
+
+"lws-index@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "lws-index@npm:3.0.1"
+  dependencies:
+    serve-index-75lb: ^2.0.1
+  checksum: b1259e673dee3df6a9d65489359f810eec37c76c2c496b49eaad16fd9ac1feb4e6ae5b4f766192ac51ca04cd84381d9dc23ccff4eebe9b0be1bfa09f5b4ec6b4
   languageName: node
   linkType: hard
 
